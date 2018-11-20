@@ -1,0 +1,113 @@
+\chapter{Theory and Implementation}
+\label{chapterlabel2}
+
+Intro - Recap denitration sequence as per literature
+% % This just dumps some pseudolatin in so you can see some text in place.
+% \blindtext
+
+\section{Introduction}
+
+%subject to change, based on the level of theory and depth etc
+\section{Electronic structure methods}
+Intro to the history spiel. What it is, where did it come from. 
+\subsection{The Schr\"{o}dinger Equation}
+\subsection{Born-Oppenheimer Approximation}
+\subsection{Hartree Fock}
+Hartree Fock \ac{HF}
+%Hartree Fock \nomenclature{HF}
+%this might need to be shifted
+\subsubsection{Variational Principle}
+
+\subsubsection{Open shell systems}
+[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
+The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted (RB3LYP) scheme. For systems without unpaired electrons, or “closed shell”, this treatment is sufficient. For radicals and other species with unpaired electron spin such as transition metal complexes, an alternative model allowing singly occupied orbitals must be adopted. The Restricted-Open (ROB3LYP) scheme maintains electron pairing within orbitals except in the case of the highest occupied molecular orbital (HOMO). This is singly occupied. An alternative model is Unrestricted (UB3LYP), where all electrons are unpaired and reside in their own orbitals (Figure 9). A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations where the bond has not completely broken.
+\subsection{Electron correlation}
+\subsection{Density functional theory}
+[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]\\
+Density functional theory derives from the Thomas-Femi-Dirac model, whereby the electron correlation is modelled via functionals of the electron density.38,39 
+The total energy is defined by functionals split into the following terms:
+\[E=E^T+E^V+ E^J+ E^XC\] %if you remove this comment for some reason it goes italic
+
+Where E$^{T}$ %ok, its the ^ that makes it go italic. 
+is the kinetic energy term, arising from electron motion; E$^{V}$
+is the potential energy term arising from nuclear-electron attraction and nuclear-nuclear repulsion; E$^{J}$ 
+is the columbic repulsion term arising from electron-electron repulsion and E^$^{XC}$  
+is the exchange correlation term containing the remainder of the electron-electron interactions. The first three terms are purely classical, and correspond to the classical energy of the charge distribution (ρ).
+The exchange term is non-classical encompasses the exchange energy due to the antisymmetry of the wavefunction, and dynamic correlation of electron motion. It can be further divided into the exchange and correlation components:
+\[E^XC (ρ)= E^X (ρ)+ E^C (ρ)\]
+In the context of this report, the B3LYP functional will be used where the exchange is described as follows:
+\[E_B3LYP^XC= E_LDA^X+ c_0 (E_HF^X-E_LDA^X )+ c_X ∆E_B88^X+E_VWN3^C+c_C (E_LYP^C-E_VWN3^C )\]
+
+Here c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
+The coefficient c$_{0}$ allows mixing of E$_{HF^X}$ (Hartree Fock) and E$_{LDA^X}$ (Local Density Approximation). E$_{VWN3^C}$ (VWN3 local correlation) is mixed with E$_{LYP^C}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^X}$ is Becke’s gradient-corrected exchange functional.
+
+{\textomega}B97x-d is a range separated hybrid with D (self consistent exchange). It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
+
+\subsubsection{Hohenburg-Kohn formalism}
+\subsubsection{Kohn-Sham Equations}
+\subsubsection{Exchange-correlation functionals}
+%Think this is the same as the above
+%\subsection{Hybrid functionals}
+\subsubsection{Dispersion correction}
+\subsection{Basis sets}
+[FIX ME]
+A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied (Table 1. Examples of split valence basis sets.).40,41 
+
+Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets. Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
+\subsection{Solvent models}
+%\subsection{Optimisation algorithms}
+\section{Analysis}
+\subsection{NMR, IR}
+\subsubsection{(Transition state searches)}
+[Maybe this goes into a smaller metholodogy section?]
+Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in GAUSSIAN attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
+The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state (Figure 10). It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
+
+%(within Gaussian? See if you end up using any)
+Frequency calculations
+\subsubsection{(Intrinsic Reaction Coordinate)}
+[Maybe this goes into a smaller metholodogy section?]
+IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
+IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
+
+
+
+%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
+\subsection{(PES Scans)}
+[Maybe this goes into a smaller metholodogy section?]
+Relaxed potential energy surface (PES) scans, or geometry scans are used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a PES of the explored pathway, presented in a reaction co-ordinate diagram (see Figure 17, section 2.4.1).
+An energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the points of interest are extracted and used for subsequent frequency calculations, transition state searches and validated using intrinsic reaction co-ordinate methods. 
+To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
+Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
+
+
+%Update this later, looking at Tom's thesis, when you get round to actually doing some of the stuff
+%\section{Molecular dynamics simulation methods}
+Intro to the history spiel.
+
+%Save this for the specific chapter?: \subsection{AMBER Forcefied}
+\section{Molecular mechanics}
+What are MM methods, e.g monte carlo
+
+\subsection{Interaction potentials}
+\subsubsection{Bonded terms}
+\subsubsection{Non-bonded terms}
+\subsubsection{Amber Force-field}
+Partial charges (?)
+Brief parameterisation spiel
+
+\subsection{Molecular Dynamics}
+verlet and leapfrog algorithms, thermostats and barostats
+\subsubsection{Ensembles}
+\subsubsection{Time integration algorithm}
+\subsubsection{Periodic boundary conditions}
+\subsubsection{Solvent models}
+\subsection{Optimisation algorithms}
+used in minimations - used in Monte carlo, DFT as well
+\subsubsection{Steepest descent algorithm}
+\subsubsection{Conjugate gradient algorithm}
+
+
+
+
+

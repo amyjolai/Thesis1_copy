@@ -19,11 +19,35 @@ Include further calculation details - such as transition state theory etc, in an
 
 Mention QTAIM if included in subsequent sections.
 
+[FIX ME]\\
+All electronic structure and reaction pathway calculations were implemented in GAUSSIAN 09 revision d01.43 Partial charges were obtained via PyRed (R.E.D. Server version 3.0).44,45 Molden 5.0.2 and Gaussview 5.0.8 packages were used for visualisation. 
+To circumvent the effects of BSSE, the largest computationally feasible basis sets are chosen and diffuse functions are included. A number of preliminary calculations were performed both with and without counterpoise correction (CP) to evaluate any inconsistencies.
+All studies were performed in the gaseous phase and initial structures were geometry optimised with B3LYP/6-311+G(d,p) and tight convergence criteria. Any incomplete or unconverged optimisations were restarted with generation of new internal co-ordinates via the geom=(newdefinition) keyword.  
+The fully nitrated dimer structure was used for MECH 1-2. For the mechanism involving protonation (MECH3), a hydronium cation was independently optimised to the same level. The dimer+cation complex was then optimised with and without CP correction for comparison. For the starting geometry of the intramolecular SN2 reaction (MECH4), the first ring of original dimer was manually adjusted to a boat conformation. Substituents were adjusted to appropriate axial and equatorial positions. 
+All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. Transition state searches were performed using UB3LYP/6-31+G(d). IRC calculations were performed using UB3LYP/6-31+G(d) and either the Hessian-based Predictor−Corrector (HPC), or the Euler integration predictor with the HPC corrector (EPC) algorithm.46
+
+Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
+Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
+
 \section{Truncating the polymer model}
 obvs mention Shukla's studies here.
 
 
 Looked at QTAIM for interaction with capping groups
+
+[FIX ME] \\
+The polymer structure was truncated to a dimer by Shukla et al. for the purposes of investigating the alkaline hydrolysis behaviour of NC.3,4,35 Comparisons between the monomer, dimer and trimer found the dimeric structure to be the smallest suitable model for the chemical behaviour of the polymer. This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
+The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (Figure 11
+
+The dimer ends are capped by methoxy groups rather than hydroxyl groups as were employed in Shukla’s study. From the perspective of partial charges, and to an extent steric considerations, methoxy groups are expected to provide a better approximation for the extended polysaccharide.
+
+Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. Thus, the nitrate group on C3 was used as the target site for degradation studies.
+
+\subsection{Denitration Sequence}
+
+Refer back to literature studies here. 
+
+How I picked which nitrate monomers to work with - just based on thermodynamics, and agreement with literature though, not experimental, or kinetic barrier work. But in the grand scheme of things, it doesn't matter too much, as I'd expect all to display a certain percentage of denitration / not being nitrated at all during synthesis (based on experimental evidence / fibre of the source cellulose etc) and the much more significant effect is how the post-denitration products go on to further react. 
 
 \section{Thermal decomposition mechanisms}
 i.e not in acid
@@ -31,13 +55,37 @@ Whilst the primary focus of this study is to explore the action of acids in the 
 
 \subsection{Homolytic fission}
 Comment on how you did it for PETN first, as a tester (but put the results in the appendices?)
+
+[FIX ME - this seems to be computational details stuff] A methyl nitrate tester molecule was used for preliminary homolytic fission calculations on an N-O ester linkage (MECH1) (Figure 13). The bonding distance between oxygen and nitrogen was increased by 0.1 Å for 20 steps, beyond the length expected for bond fission. The separation of N-O was scanned using ROB3LYP and UB3LYP/6-31+G(d). Both test cases presented good agreement with the expected reaction co-ordinate.
+
+
+This process was then replicated for the dimer, where the distance between oxygen 22 (O22) and nitrogen 23 (N23) of the nitrate ester on carbon 3 (C3) was increased (Figure 12). [THE REST SEEMS TO BE SPIEL. the graphics were nice though so maybe keep those]
+
+From results section:\\
+The methyl nitrate tester molecule presented an example of a successful geometry scan. A clear energy maximum corresponding to an expected transition state, is followed by a drop, suggestive of an intermediate or reaction product (Figure 17). The energy profile was obtained even though the scans were not able to complete the specified 20 steps. The UB3LYP process failed at step 16, whereas the ROB3LYP continued to step 19. At these end points, the presented energy value is not accurate but here have been included for context. The unrestricted and restricted-open cases show good agreement and near identical results for the steps where convergence was reached (1 – 15).\\
+[ALSO SPIEL]\\
+The reaction co-ordinate for the NC dimer did not present such a positive result. Again, the energy value at the final scan step (step 23) in both cases is not to be taken as accurate, with only partial convergence reached. Both the unrestricted and restricted-open techniques exhibited consistent results for the steps that did converge (steps 1-22) (Figure 18). Despite the unfavourable increase in energy, the observed bond breaking and formation during the course of the scan aligned with that expected of the mechanism. 
+Though the scans did not identify any transition states or intermediate products, inspection of the geometry as the scan progressed revealed crucial points during the evolution of bond order. As the NO2 group departed O22, a partial double bond formed between C3 and O22, at step 12 of the scan. The frequency calculation on this geometry revealed a single imaginary frequency of -135.01 cm-1, indicating a transition state.
+The attempt to optimise this using a TS search was not successful. Multiple IRC calculations with various step sizes and both the EPC and HPC algorithms were also unsuccessful.
+
+
 \subsection{Intramolecular elimination of \ce{HNO2}}
+
+[Fix all of this]
+It was expected that as O22 approached H44 the generated reaction-co-ordinate would exhibit the normal reactant  transition state  product pattern, followed by either an asymptotic increase in energy or termination of the geometry scan, when the two atoms became too close or collided. However, despite showing the correct bond rearrangements as the distance between the nitrate oxygen the α-hydrogen decreased, the PES diagram only presented a rapid increase in energy. 
+Frequency calculations on steps 7, 9 and 10 did not reveal any states possessing a lone imaginary frequency. Of the negative vibrations observed, none were illustrative of a proton transfer.
+Decreasing the C-O bond did not reveal any information on the transition state for MECH2. The C-O bond order increased to a triple bond after four steps, at a bond distance of 1.138 Å, in the both restricted-open and unrestricted cases. The expected approach of the peripheral oxygen towards the α-hydrogen was observed to be negligible.
+
 
 \section{Acid hydrolysis mechanism}
 \subsection{Protonation site}
 Denitration vs peeling off reaction, based on protonation site - it may be that peeling off is more favourable, but doesn't lead to mixed level of nitration - you can explain this and take it into account. Just proceed with having explained this / full understanding on future considerations.
 Thermodynamic numbers (in table)
 Scans of water approaching NC with the H coming off
+
+[FIX THIS] In all cases, stabilisation of the dimer-hydronium complex was not successful. It was found that the hydrogen of the hydronium ion immediately moved towards the nearest oxygen on the nitrate group. Despite these setbacks, the results could still be used to compare the effectiveness of CP correction for our system.
+THINK ABOUT COUNTERPOISE CORRECTION FOR LATER CALCS. 
+
 
 
 
@@ -46,8 +94,11 @@ Different DFT functionals and HF and MP2 (?)
 Scans of the nitrate leaving the protonated NC. 2D scans of the water donating proton and nitrate leaving.
 Can also mention the scans which don't have water in - just NO2 leaving.
 
+\subsubsection{Comparison of different methods}
+wb97x-d, restricted vs unrestricted - show their 2D gaussian scan.
+uwb97x-d/ 6-31+g*, couldn't complete due to computational limitations. Or perhaps this is more of an appendicies thing, dependnt on the rest of the work in this section.
 
-\section{ \textit{(Effects of acid concentration on the Degree of denitration)}}
+\section{ \textit{(Effects of acid concentration on the Degree of denitration) - Maybe sprout to another section}}
 Phase diagram of monomer and dimer of acid conc vs nitrocellulose conc, for the denitration direction AND the nitration direction. Denitration is more important to us here, but nitratio ties in more with the paper by Rafeev.
 Come up with a sequence for nitration and denitration.
 Comment on the effect of acid on the denitration / nitrations behaviour of NC.
