@@ -23,6 +23,8 @@ Hartree Fock \ac{HF}
 The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted (RB3LYP) scheme. For systems without unpaired electrons, or “closed shell”, this treatment is sufficient. For radicals and other species with unpaired electron spin such as transition metal complexes, an alternative model allowing singly occupied orbitals must be adopted. The Restricted-Open (ROB3LYP) scheme maintains electron pairing within orbitals except in the case of the highest occupied molecular orbital (HOMO). This is singly occupied. An alternative model is Unrestricted (UB3LYP), where all electrons are unpaired and reside in their own orbitals (Figure 9). A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations where the bond has not completely broken.
 \subsection{Electron correlation}
 \subsection{Density functional theory}
+See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
+Functional Theory: A Guide for the Perplexed
 [PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]\\
 Density functional theory derives from the Thomas-Femi-Dirac model, whereby the electron correlation is modelled via functionals of the electron density.38,39 
 The total energy is defined by functionals split into the following terms:
@@ -49,6 +51,7 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^X}$ (Hartree Fock) and E$_{LDA^X
 %Think this is the same as the above
 %\subsection{Hybrid functionals}
 \subsubsection{Dispersion correction}
+Grimme
 \subsection{Basis sets}
 [FIX ME]
 A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied (Table 1. Examples of split valence basis sets.).40,41 
@@ -57,15 +60,15 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 \subsection{Solvent models}
 %\subsection{Optimisation algorithms}
 \section{Analysis}
-\subsection{NMR, IR}
-\subsubsection{(Transition state searches)}
+
+\subsection{(Transition state searches)}
 [Maybe this goes into a smaller metholodogy section?]
 Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in GAUSSIAN attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
 The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state (Figure 10). It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
 
 %(within Gaussian? See if you end up using any)
 Frequency calculations
-\subsubsection{(Intrinsic Reaction Coordinate)}
+\subsection{(Intrinsic Reaction Coordinate)}
 [Maybe this goes into a smaller metholodogy section?]
 IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
 IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
@@ -74,18 +77,26 @@ IRC calculations are called via the IRC keyword, with specifications of whether 
 
 %not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
 \subsection{(PES Scans)}
-[Maybe this goes into a smaller metholodogy section?]
+[Maybe this goes into a smaller methodology section?]
 Relaxed potential energy surface (PES) scans, or geometry scans are used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a PES of the explored pathway, presented in a reaction co-ordinate diagram (see Figure 17, section 2.4.1).
 An energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the points of interest are extracted and used for subsequent frequency calculations, transition state searches and validated using intrinsic reaction co-ordinate methods. 
 To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
 Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
 
+\subsection{Nuclear Magnetic Resonance Spectra}
+Refer them to an actual resource, so you don't have to explain the theory of \ac{NMR}, but give an overview of the experimental, then give the theoretical detail about how Gaussian calculates it, and any discrepancies between experimental and calculated. 
+
+Comment on the different methods used to calculate NMR parameters - a tiny literature review, if you will, and say which you'll be using, why - even if it's becuase of the fact that it's built into Gaussian (obviously big it up, if that is the case) - and state any caveats. 
+
+Maybe have a look at: Accurate Calculation of NMR Chemical Shifts, Jurgen Gauss, 1995 as a basis, but you'll also need something more current. Any review papers out there?
+
+\subsection{Infra-Red Spectra}
 
 %Update this later, looking at Tom's thesis, when you get round to actually doing some of the stuff
 %\section{Molecular dynamics simulation methods}
 Intro to the history spiel.
 
-%Save this for the specific chapter?: \subsection{AMBER Forcefied}
+%Save this for the specific chapter?: \subsection{AMBER Forcefield}
 \section{Molecular mechanics}
 What are MM methods, e.g monte carlo
 
@@ -103,7 +114,7 @@ verlet and leapfrog algorithms, thermostats and barostats
 \subsubsection{Periodic boundary conditions}
 \subsubsection{Solvent models}
 \subsection{Optimisation algorithms}
-used in minimations - used in Monte carlo, DFT as well
+used in minimisations - used in Monte carlo, DFT as well
 \subsubsection{Steepest descent algorithm}
 \subsubsection{Conjugate gradient algorithm}
 
