@@ -14,7 +14,7 @@ ucl-latex-thesis-templates
 ├── Introduction.tex
 ├── LinksAndMetadata.tex
 ├── MANIFEST.md
-├── Main.tex
+├── Main.tex 
 ├── MainPackages.tex
 ├── Makefile
 ├── Preamble.tex
