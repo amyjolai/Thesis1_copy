@@ -458,6 +458,7 @@
 %    \begin{macrocode}
        \newcommand \makedeclaration {%
          \clearpage%
+            \chapter*{Declaration}%
 %         I, \@author , confirm that the work presented in this thesis is my own.
          I, Amy Lai , confirm that the work presented in this thesis is my own.
          Where information has been derived from other sources, I confirm that this has been indicated in the work.
@@ -548,8 +549,24 @@
 }
 %    \end{macrocode}
 %  \end{environment}
+%    \end{macrocode}
+%
+%  \subsection{Obscure Environments}
+%
+%  \begin{environment}{impact}
+%  Need to have an impact environment.
+%    \begin{macrocode}
+\newcommand \@impact{Impact Statement}
+\newenvironment{impact}{%
+    \chapter*{\@impact}%
+    \@mkboth{\@impact}{\@impact}%
+}{%
+}
+%    \end{macrocode}
+%  \end{environment}
+
 %  \begin{environment}{acknowledgement}
-%  Also need an environment for doing the acknowlegements.
+%  Also need an environment for doing the acknowledgements.
 %    \begin{macrocode}
 \newcommand \@acknowledgements{Acknowledgements}
 \newenvironment{acknowledgements}{%
