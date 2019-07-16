@@ -1,34 +1,87 @@
 \chapter{Building the Model}
 \label{chapterlabel3}
 
-\section{Introduction}
-The polysaccahride backbone of \ac{NC} presents numerous reactive sites. Myriad chemical processes contribute to a complex network of possible decomposition routes. This accounts for the large variation in experimentally observed products during low temperature degradation and ageing under ambient conditions. (REF degradation products paper).
+\section{Introduction}%%%%%%%%%%%%%%%%%%%%%%% 4 pages%%%%%%%%%%%%%%%
+%Why can't we model the whole polymer / why do we need to truncate?
+A wide range reaction products are experimentally observed during the low temperature degradation and slow ageing of \ac{NC}.%which ones?
+These can be partially attributed to the range of susceptible attack\/cleavage\/reactive sites points on the polysaccharide backbone, as well as the myriad of possible secondary reactions following denitration, depolymerisation or ring-cleavage. %REF something about the deg products or many secondary reactions
+%
+% The polysaccahride backbone of \ac{NC} presents numerous reactive sites. %Myriad chemical processes contribute to a complex network of possible decomposition routes. 
+% This in part accounts for the large variation in experimentally observed products, released during low temperature degradation and ageing under ambient conditions. %(REF degradation products paper).
+When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unweildy due to the large number of atoms. 
 
+In practical application, \textit{ab initio} and denisty functional methods used to determine the reaction energies are limited to between XX - XX atoms. %(REF max atoms for DFT and max atoms for wavefunction methods) 
+The \ac{NC} chain was truncated to a single-ring monomer by Shukla \textit{et al.} for the purposes of investigating alkaline hydrolysis. %[REF SHUKLA] 
+The study analysed the \acs{sn2} nucleophilic attack at the nitrate carbon, releasing the nitrate ion in favour of a hydroxyl group, at the C2, C3 and C6 nitrate sites (FIG. X). 
 
-When probing these individual chemical reactions%that can contribute to a decomposition pathway
-, the extended polymer structure becomes unweildy due to the large number of atoms. \textit{Ab initio} and denisty fucntional methods used to determine the reaction energies are limited to between XXXX atoms, thus limiting the size of system. (REF max atoms for DFT and max atoms for wavefunction methods)
-
-
-The \ac{NC} polymer structure was truncated to a single-ring monomer by Shukla \textit{et al.} for the purposes of investigating alkaline hydrolysis. [REF SHUKLA] The study analysed the \ac{S_{N}^{2}} nucleophlilic attack at the nitrate carbon, releasing the nitrate ion in favour of a hydroxyl group, at the C2, C3 and C6 nitrate sites. Comparisons between the monomer, dimer and trimer found %desingated
- the dimeric structure to be the minimum model required to accurately represent the chemical behaviour of NC in the alkaline hydrolysis pathway. 
+ *Insert fig X*
  
- %Maybe for th lit review:
- %The monomer model exhibited the C3 \rightarrow C2 \rightarrow C6 denitration order, contrary to the dimer and trimer order of C3 \rightarrow C6 \rightarrow C2. 
+Comparisons between the monomer, dimer and trimer found %desingated
+the dimeric structure to be the minimum model required to accurately represent the chemical behaviour of NC in the alkaline hydrolysis pathway. 
  
-
+ %Maybe for the lit review:
+ %The monomer model exhibited the C3 $\rightarrow$ C2 $\rightarrow$ C6 denitration order, contrary to the dimer and trimer order of C3 $\rightarrow$ C6 $\rightarrow$ C2. 
+%
+%
 % This bit can go in the lit review section %
 %This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
 %The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (Figure 11
 
+\section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Monomer, dimer and trimer starting structures were drawn as closely matching literature geometries as possible. %REF What literature structures did I use? Include crystal structure of cellulose (monomers - trimers) and another one of just generic Structures of NC, perhaps Shukla's one of all three
+
+In order to explore the limitations of different capping groups, chain ends were capped with either methoxy or hydroxy groups (FIG.), as were employed in Shukla's study. The differences in the charge distribution and intra-molecular interactions were probed using \ac{QTAIM} methods to look at critical points and the Laplacian of electron density. When regarding partial charges and to a limited extent, steric considerations, methoxy groups were expected to provide a better approximation for the extended polysaccharide.
+
+Strucutres underwent geometry optimisation in vacuum and implicit solvent, using various methods detailed in section XX .
+
+\subsection{Computational details}
+All geometry  % don't think this is true for all of these. Will have to check the log
+%\ac{MM} geometry optimisation using the COMPASSII forcefield(REF), performed in % Materials materials modelling package. Talk about cycles, and other settings etc?
+%Materials Studio (version?). Subsequent 
+optimisation was performed to the level of %6-31+g(2df,p)/ $\omega$B97X-D [This is only for the subsequent chapters. Here I used the TWORUN calculations. May have to explain basis set choice later, since I used less ]  
+%here I used b3lyp/6-311+g**. 
+% More basis functions on the valence e, but less polarisation. WHAT SIGNIFICANCE will this have on my results/ system?
+% ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
+ \acs{B3LYP}\/ 6-311+G(d,p), %except where otherwise stated, 
+ using \ac{G09}. %(REF). 
+ 
+ Structures were built either using z-matrix notation or using the \ac{Gview} graphical interface.
+ \ac{ESP} surface maps were also visualised using \ac{G09}, using the CubeGen utility.
+
+The \ac{QTAIM} analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6 %REF (alsom update your diagrams).
+
+Molden 5.0.2 and \ac{GView} packages were used for visualisation
+
+\section{Results \& Discussion}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Choice of functional}
+Discuss the validity and caveats of each methods, including solvent vs vacuum.
+\subsection{Electr}
+- Show the 
+
+[FIX ME]\\
+All electronic structure and reaction pathway calculations were implemented in GAUSSIAN 09 revision d01. Partial charges were obtained via PyRed (R.E.D. Server version 3.0).  
+To circumvent the effects of BSSE, the largest computationally feasible basis sets are chosen and diffuse functions are included. A number of preliminary calculations were performed both with and without counterpoise correction (CP) to evaluate any inconsistencies.
+All studies were performed in the gaseous phase and initial structures were geometry optimised with B3LYP/6-311+G(d,p) and tight convergence criteria. Any incomplete or unconverged optimisations were restarted with generation of new internal co-ordinates via the geom=(newdefinition) keyword.  
+The fully nitrated dimer structure was used for MECH 1-2. For the mechanism involving protonation (MECH3), a hydronium cation was independently optimised to the same level. The dimer+cation complex was then optimised with and without CP correction for comparison. For the starting geometry of the intramolecular SN2 reaction (MECH4), the first ring of original dimer was manually adjusted to a boat conformation. Substituents were adjusted to appropriate axial and equatorial positions. 
+All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. Transition state searches were performed using UB3LYP/6-31+G(d). IRC calculations were performed using UB3LYP/6-31+G(d) and either the Hessian-based Predictor−Corrector (HPC), or the Euler integration predictor with the HPC corrector (EPC) algorithm.46
+
+Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
+Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
+
+\section{Truncating the polymer model}
+obvs mention Shukla's studies here.
 
 
-Chains ends are capped by methoxy groups rather than hydroxyl groups as were employed in Shukla’s study. From the perspective of partial charges, and to an extent steric considerations, methoxy groups are expected to provide a better approximation for the extended polysaccharide.
+Looked at QTAIM for interaction with capping groups
 
+[FIX ME] \\
+The polymer structure was truncated to a dimer by Shukla et al. for the purposes of investigating the alkaline hydrolysis behaviour of NC.3,4,35 Comparisons between the monomer, dimer and trimer found the dimeric structure to be the smallest suitable model for the chemical behaviour of the polymer. This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
+The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (Figure 11
 
+The dimer ends are capped by methoxy groups rather than hydroxyl groups as were employed in Shukla’s study. From the perspective of partial charges, and to an extent steric considerations, methoxy groups are expected to provide a better approximation for the extended polysaccharide.
 
-\section{Computational details}
+Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. Thus, the nitrate group on C3 was used as the target site for degradation studies.
 
-\section{Results \& Discussion}
 
 \section{Summary}
 In this section 

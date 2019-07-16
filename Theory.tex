@@ -57,9 +57,17 @@ Grimme
 A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied (Table 1. Examples of split valence basis sets.).40,41 
 
 Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets. Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
+
+\subsection{(Transition State Theory \& Free Energy Calculations)}
+
 \subsection{Solvent models}
+%Their effect on free energies - use a free energy cycle to justify the lack of inclusion of solvation energy - though this might be best discussed in Chap 1
+
 %\subsection{Optimisation algorithms}
+
 \section{Analysis}
+
+
 
 \subsection{(Transition state searches)}
 [Maybe this goes into a smaller metholodogy section?]
@@ -97,26 +105,26 @@ Maybe have a look at: Accurate Calculation of NMR Chemical Shifts, Jurgen Gauss,
 Intro to the history spiel.
 
 %Save this for the specific chapter?: \subsection{AMBER Forcefield}
-\section{Molecular mechanics}
-What are MM methods, e.g monte carlo
+% \section{Molecular mechanics}
+% What are MM methods, e.g monte carlo
 
-\subsection{Interaction potentials}
-\subsubsection{Bonded terms}
-\subsubsection{Non-bonded terms}
-\subsubsection{Amber Force-field}
-Partial charges (?)
-Brief parameterisation spiel
+% \subsection{Interaction potentials}
+% \subsubsection{Bonded terms}
+% \subsubsection{Non-bonded terms}
+% \subsubsection{Amber Force-field}
+% Partial charges (?)
+% Brief parameterisation spiel
 
-\subsection{Molecular Dynamics}
-verlet and leapfrog algorithms, thermostats and barostats
-\subsubsection{Ensembles}
-\subsubsection{Time integration algorithm}
-\subsubsection{Periodic boundary conditions}
-\subsubsection{Solvent models}
-\subsection{Optimisation algorithms}
-used in minimisations - used in Monte carlo, DFT as well
-\subsubsection{Steepest descent algorithm}
-\subsubsection{Conjugate gradient algorithm}
+% \subsection{Molecular Dynamics}
+% verlet and leapfrog algorithms, thermostats and barostats
+% \subsubsection{Ensembles}
+% \subsubsection{Time integration algorithm}
+% \subsubsection{Periodic boundary conditions}
+% \subsubsection{Solvent models}
+% \subsection{Optimisation algorithms}
+% used in minimisations - used in Monte carlo, DFT as well
+% \subsubsection{Steepest descent algorithm}
+% \subsubsection{Conjugate gradient algorithm}
 
 
 

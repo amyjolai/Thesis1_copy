@@ -1,20 +1,32 @@
 % In order to set an abbreviation: \ac{ }
+% To force the shorthand version: \acs
+% See here for more info and options: http://ramibaddour.com/2017/01/18/latex-working-with-acronyms/
 
 \cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Abbreviations}
 \label{abbreviations}
 \abbreviations
 
 \begin{acronym}[CAM-B3LYP] % Give the longest label here so that the list is nicely aligned
-\acro{B3LYP}{Becke, 3-parameter, Lee-Yang-Parr Hybrid Functional}
-\acro{DFT}{Density Functional Theory}
-\acro{DOS}{Degree of Substitution}
-\acro{HF}{Hartree Fock Theory}
-\acro{MM}{Molecular Mechanics}
-\acro{MW}{Molecular Weight}
-\acro{NC}{Nitrocellulose}
-\acro{NG}{Nitroglycerine}
-\acro{NMR}{Nuclear Magnetic Resonance Spectroscopy}
-\acro{QM}{Quantum Mechanics}
+
+%Supress first
+\acro{B3LYP}{Becke, 3-parameter, Lee-Yang-Parr hybrid functional}
+\acro{CP}{critical point}
+\acro{DFT}{density functional theory}
+\acro{DOS}{degree of substitution}
+\acro{ESP}{electrostatic potential}
+\acro{G09}{Gaussian 09 D.01}
+\acro{GView}{Gauss View 5.0.8}
+\acro{HF}{Hartree Fock theory}
+\acro{MM}{molecular mechanics}
+\acro{MW}{molecular weight}
+\acro{NC}{nitrocellulose}
+\acro{NG}{nitroglycerine}
+\acro{NMR}{nuclear magnetic resonance spectroscopy}
+\acro{QM}{quantum mechanics}
+\acro{QTAIM}{quantum theory of atoms in molecules}
+% Quick fix: Supress the first expansion of this by using acs{} for SN2 specific ones. 
+\acro{sn2}[S\textsubscript{N}2]{bi-molecular nucleophilic substitution reaction}
+
 
 \end{acronym}
 
