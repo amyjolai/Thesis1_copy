@@ -33,12 +33,12 @@ The total energy is defined by functionals split into the following terms:
 Where E$^{T}$ %ok, its the ^ that makes it go italic. 
 is the kinetic energy term, arising from electron motion; E$^{V}$
 is the potential energy term arising from nuclear-electron attraction and nuclear-nuclear repulsion; E$^{J}$ 
-is the columbic repulsion term arising from electron-electron repulsion and E^$^{XC}$  
+is the columbic repulsion term arising from electron-electron repulsion and E$^{XC}$  
 is the exchange correlation term containing the remainder of the electron-electron interactions. The first three terms are purely classical, and correspond to the classical energy of the charge distribution (ρ).
 The exchange term is non-classical encompasses the exchange energy due to the antisymmetry of the wavefunction, and dynamic correlation of electron motion. It can be further divided into the exchange and correlation components:
 \[E^XC (ρ)= E^X (ρ)+ E^C (ρ)\]
 In the context of this report, the B3LYP functional will be used where the exchange is described as follows:
-\[E_B3LYP^XC= E_LDA^X+ c_0 (E_HF^X-E_LDA^X )+ c_X ∆E_B88^X+E_VWN3^C+c_C (E_LYP^C-E_VWN3^C )\]
+%\[E_B3LYP^XC= E_LDA^X+ c_0 (E_HF^X-E_LDA^X )+ c_X ∆E_B88^X+E_VWN3^C+c_C (E_LYP^C-E_VWN3^C )\]
 
 Here c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
 The coefficient c$_{0}$ allows mixing of E$_{HF^X}$ (Hartree Fock) and E$_{LDA^X}$ (Local Density Approximation). E$_{VWN3^C}$ (VWN3 local correlation) is mixed with E$_{LYP^C}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^X}$ is Becke’s gradient-corrected exchange functional.
