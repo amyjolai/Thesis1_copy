@@ -1,2 +1,3 @@
-FromC:\Users\amyjo\Documents\Thesis1_copy\Jupyter_notebooksCapping_groups.ipynb:
-Repeat capping group and system size in solvent too.
+From C:\Users\amyjo\Documents\Thesis1_copy\Jupyter_notebooksCapping_groups.ipynb:
+
+ Repeat capping group and system size  comparisons in solvent too.
