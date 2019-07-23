@@ -10,6 +10,15 @@
 
 All chemical species underwent an initial \ac{QM} geometry optimisation to the level of $\omega$B97X-D / 6-31G(2df,p) and except where otherwise stated, were performed in Gaussian 09 D.01 (REF). %[REMEMBER TO INCLUDE ANY NMR AND FREQ OPTIONS I USED]
 
+All studies were performed in the gaseous phase and initial structures were geometry optimised with B3LYP/6-311+G(d,p) and tight convergence criteria. 
+Any incomplete or unconverged optimisations were restarted with generation of new internal co-ordinates via the geom=(newdefinition) keyword.  
+% //REJIGG THE BELOW
+The fully nitrated dimer structure was used for MECH 1-2. For the mechanism involving protonation (MECH3), a hydronium cation was independently optimised to the same level. The dimer+cation complex was then optimised with and without CP correction for comparison. For the starting geometry of the intramolecular SN2 reaction (MECH4), the first ring of original dimer was manually adjusted to a boat conformation. Substituents were adjusted to appropriate axial and equatorial positions. 
+All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. Transition state searches were performed using UB3LYP/6-31+G(d). IRC calculations were performed using UB3LYP/6-31+G(d) and either the Hessian-based Predictor-Corrector (HPC), or the Euler integration predictor with the HPC corrector (EPC) algorithm.46
+
+Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
+Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
+
 \section{Results \& Discussion}
 
 \section{Summary}
