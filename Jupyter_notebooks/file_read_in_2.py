@@ -79,10 +79,10 @@ out_path=re.sub(r"\\(?:.(?!\\))+$","",mmer1)+"\\"
 #df.to_csv("dOH_CH3")
 
 # This will output in the same place as source text file
-final_file=(os.path.join(out_path,csv_name))
+final_file=((os.path.join(out_path,csv_name))+".csv")
 df.to_csv(final_file)
 #print(os.path.join(out_path,csv_name))
 
-print (csv_name+" saved to "+final_file+".csv")
+print (csv_name+" saved to "+final_file)
 
 f.close()
