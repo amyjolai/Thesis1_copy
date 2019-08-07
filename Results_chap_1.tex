@@ -155,11 +155,36 @@ The monomer starting structure was constructed from the geometry used by Shukla 
 
 In order to investigate the influence of different capping groups, the dimer structure was used as a reference, following the \textit{minimum complete structure} approximation established by Shukla.
 %suitable for accurate reproduction of wider system behaviour  (as per Shukla, above). %REF if necessary
-Chain ends were capped with hydroxyl groups or methoxy groups (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM}. 
+Chain ends were capped with hydroxyl groups or methoxy groups (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM} 
 
 
 \subsubsection{\ac{ESP} mapping}
-\subsubsection{Laplacian of electron density}
+\subsubsection{Topology analysis}
+QTAIM ref: A quantum theory of molecular structure and its applications (Bader, 1991)
+(table \ref{tab:cps})
+
+\begin{table}[htp]
+\caption{Features of different types of critical point from \ac{QTAIM} topological analysis.}
+\begin{center}
+\begin{tabular}{l c p{4cm} p{3cm} p{3cm}} 
+\toprule
+Critical Point & Label  & Derivation & Attribute & Representation \\
+\midrule
+Nuclear (\acs{NCP}) & (3,-3)  & All 3 eivalues of the Hessian matrix are negative & Local maximum & Atomic nuclei \\
+\hline
+Bonding (\acs{BCP}) & (3,-1) & 2 negative eigenvalues of Hessian matrix  & 2\textsuperscript{nd} order saddle point & Bonding site \\
+\hline
+Ring (\acs{RCP}) & (3,+1) & 1 negative eigenvalue of Hessian matrix & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
+\hline
+Cage (\acs{CCP}) & (3,+3) & No negative eigenvalue of Hessian matrix& Local minimum & Centre of cage system \\
+\bottomrule
+\end{tabular}
+\label{tab:cps}
+\end{center}
+\end{table}
+
+
+%\subsubsection{Laplacian of electron density}
 
 
 %A bit of extra detail practical implementation of the partial charges, ESP and lapacian
@@ -179,28 +204,30 @@ The \ac{B3LYP} density functional was chosen for initial exploration of electron
 for main group elements and for the current model system size, where the largest trimer extends to 76 atoms. 
 
 \subsubsection{Geometry optimisation}
-All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed to the level of \acs{B3LYP}\/ 6-311+G(d,p), using the \ac{G09} quantum chemistry suite. Minima were found using the Berny optimisation algorithm (REF), with tight convergence criteria(%(REF) %except where otherwise stated. 
+All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p), using the \ac{G09} quantum chemistry suite. Minima were found using the Berny optimisation algorithm (REF), with tight convergence criteria (table \ref{tab:convergence}).
 
-%\begin{table}
-%\centering
-%\begin{tabular}{ l c c c } 
-% \caption{Convergence criteria used in \ac{G09}.}
+\begin{table}[htp]
+\begin{center}
+\caption{Convergence criteria used in \ac{G09}.}
+\begin{tabular}{ l c c c } 
+\toprule
+Convergence criteria & Normal & Tight \\
+\hline
+ Maximum Force &  0.000450 & 0.000015 \\
+ RMS     Force & 0.000300 & 0.000010 \\
+ Maximum Displacement & 0.001800 & 0.000060 \\
+ RMS     Displacement & 0.001200 & 0.000040 \\
+\bottomrule
+\end{tabular}
+\label{tab:convergence}
+\end{center}
+\end{table}
+%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
+%& cell5 & cell6 \\ 
+%& cell8 & cell9 \\ 
 %\hline
-%Convergence criteria & Normal & Tight \\
-%\hline
-% Maximum Force &  0.000450 & 0.000015 \\
-% RMS     Force & 0.000300 & 0.000010 \\
-% Maximum Displacement & 0.001800 & 0.000060 \\
-% RMS     Displacement & 0.001200 & 0.000040 \\
-% \hline
 %\end{tabular}
-%\end{table}
-%%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
-%%& cell5 & cell6 \\ 
-%%& cell8 & cell9 \\ 
-%%\hline
-%%\end{tabular}
-%%\end{center}
+%\end{center}
 
  
 %6-31+g(2df,p)/ $\omega$B97X-D [This is only for the subsequent chapters. Here I used the TWORUN calculations. May have to explain basis set choice later, since I used less ]  
@@ -209,9 +236,8 @@ All electronic structure calculations, including geometry optimisation and therm
 % ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
  
 Structures were built using z-matrix notation or the \ac{GView} graphical interface. Molden 5.0.2 and \ac{GView} packages were used for visualisation.
-Electrostatic potential (\acs{ESP}) surface maps were also visualised using \ac{G09}, using the CubeGen utility. Electrostatic potential was mapped to the electron density, extracted from the formatted checkpoint file following 
-
-\ac{QTAIM} analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6 %REF (also update your diagrams).
+\acs{ESP} was mapped to the electron density, extracted from the formatted checkpoint file following optimisation. \acs{ESP} maps were visualised using \ac{G09}, using the CubeGen utility. Density and \ac{ESP} cubes were generated with 80 points per side. 
+\ac{QTAIM} analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6.  %REF (also update your diagrams).
 
 %Partial charges were obtained via PyRed (R.E.D. Server version 3.0). 
 
@@ -245,18 +271,8 @@ Electrostatic potential (\acs{ESP}) surface maps were also visualised using \ac{
 %- Variation in partial charges, with different capping groups
 %explain why you chose the dimers you did - it was based on Shukla's denitration sequence.
 
-Dimers at different levels of nitration were capped with methoxy groups (-OCH\textsubscript{3}) or a methoxy and hydroxyl group (-OH) at either C1 and C4 positions (Figure \ref{fig:capping-groups-all}).
+Dimers at different levels of nitration were capped with a methoxy group (-OCH\textsubscript{3}) or a hydroxyl group (-OH) at either C1 and C4 positions (Figure \ref{fig:capping-groups-all}). 
 
-
-%\begin{figure}[htp]
-%\centering
-%%\includegraphics[width=\linewidth]{NC}
-%\includegraphics[width=\linewidth]{CH3_CH3_cap}
-%%\includegraphics[scale=0.5]{CH3_OH_cap}
-%%\includegraphics[scale=0.5]{OH_CH3_cap}
-%\caption{a) b) c)}
-%\label{fig:Capping_groups}
-%\end{figure}
 
 %If there's time, align the captions to the left and float in the middle of the image. 
 \begin{figure}[htp]
@@ -302,13 +318,12 @@ Dimers at different levels of nitration were capped with methoxy groups (-OCH\te
 
 %On comparing surfaces - you need to compare ESPs directly, rather than visually (this is last resort) - you need a table. These aren't the same as partial charges. Can I get them from the cube files? 
 
-The \ac{ESP} maps for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped (\ac{CH3OH}) and hydroxy-methoxy capped (\ac{OHCH3}) dimers 
-
+The \ac{ESP} maps for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped dimer (\ac{CH3OH}) and hydroxy-methoxy capped dimer (\ac{OHCH3}) represent the charge density around the molecule. A more negative value (increasingly red) indicates an area of higher electron density, whilst a more positive value (increasingly blue) indicates an area of lower electron density. It can be seen that the areas with lowest electron density lie around the centre of the glucopyranose rings and at the C6 position of the side branches. This can be explained by the number of adjacent oxygens drawing the electron density away from the less electronegative alkyl groups. The most electron rich areas are the outermost oxygens of the nitrate groups.
+The presence of the hydroxyl capping group promotes a small decrease in electron density around the adjacent ring, illustrated by the slight deepening of the blue shading around the ring bonded to the hydroxyl. The hydroxy group itself presents the lowest concentration of electron density, suggesting that the terminating hydrogen would be suceptible to nucleophilic attack. The oxygen of each capping group exhibits a lower concentration of electron density than that of the bridging oxygen between the two rings. This deficiency is particularly pronouced in the case of the hydroxyl group, suggesting that the methoxy group provides a more representative approximation for the extended polymer. 
+ %reinforced by partial charges?
 %The trimer model's ESPs should reinforce that CH3 is a more chemically similar approximation - no concentration of charge 
 
-
-[CHECK THIS!]
-Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. %Thus, the nitrate group on C3 was used as the target site for degradation studies.
+%Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. %Thus, the nitrate group on C3 was used as the target site for degradation studies.
 
 
 \begin{figure}[htp]
@@ -329,10 +344,24 @@ Shukla’s work identified the nitrate group attached to carbon three (C3) as th
   \label{fig:cp-all}
 \end{figure}
 
-
-Observations about the CPs:
-
-When considering partial charges and to a lesser extent, steric considerations, methoxy groups were expected to provide a better approximation for the extended polysaccharide.
+%table of all bonds and angles in the appendicies, expansion on the one below? Optional
+%possible changes: relative ring planarity, forced closer interaction between nearby nitrate groups, twisting of the ring, and intramolecular interactions
+\begin{table}[htp]
+\begin{center}
+\caption{Changes in geometry with modification of the capping group in \ac{NC} dimers.}
+\begin{tabular}{ l c c c } 
+\toprule
+Capping & Dihedral & Tight \\
+\hline
+  &  0.000450 & 0.000015 \\
+ RMS     Force & 0.000300 & 0.000010 \\
+ Maximum Displacement & 0.001800 & 0.000060 \\
+ RMS     Displacement & 0.001200 & 0.000040 \\
+\bottomrule
+\end{tabular}
+\label{tab:convergence}
+\end{center}
+\end{table}
 
 
 
@@ -356,3 +385,7 @@ The optimised structures for the fully nitrated monomer, dimer and trimer were o
 
 \section{Summary}
 In this section 
+
+
+When considering electroststic potential and to a lesser extent steric considerations, methoxy groups were found to provide a better approximation for the extended polysaccharide with respect to both electronic and geometric properties. 
+
