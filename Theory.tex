@@ -60,6 +60,9 @@ A basis set is the collection of mathematical basis functions used in linear com
 
 Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets. Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
 
+\subsection{Thermochemistry}
+(And vibrational frequencies)
+
 \subsection{(Transition State Theory \& Free Energy Calculations)}
 
 \subsection{Solvent models}
@@ -68,6 +71,35 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 %\subsection{Optimisation algorithms}
 
 \section{Analysis}
+
+\subsection{\ac{QTAIM}}
+
+*paraphrase this:
+Topology analysis Theory
+
+Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wavefunction, ELF, LOL ...
+
+The topology analysis technique proposed by Bader was firstly used for analyzing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin, see Nature, 371, 683. In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
+
+(3,-3): All three eigenvalues of Hessian matrix of function are negative, namely the local maximum. For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
+
+(3,-1): Two eigenvalues of Hessian matrix of function are negative, namely the second-order saddle point. For electron density analysis, (3,-1) generally appears between attractive atom pairs and hence commonly called as bond critical point (BCP). The value of real space functions at BCP have great significance, for example the value of  and the sign of  at BCP are closely related to bonding strength and bonding type respectively in analogous bonding type (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); the potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies (Chem. Phys. Lett., 285, 170); local information entropy at BCP is a good indicator of aromaticity (Phys. Chem. Chem. Phys., 12, 4742).
+
+(3,+1): Only one eigenvalue of Hessian matrix of function is negative, namely first-order saddle point (like transition state in potential energy surface). For electron density analysis, (3,+1) generally appears in the center of ring system and displays steric effect, hence (3,+1) is often named as ring critical point (RCP).
+
+(3,+3): None of eigenvalues of Hessian matrix of function are negative, namely the local minimum. For electron density analysis, (3,+3) generally appears in the center of cage system (e.g. pyramid P4 molecule), hence is often referred to as cage critical point (CCP).
+
+The positions of CPs are searched by Newton method, one need to assign an initial guess point, then the Newton iteration always converge to the CP that is closest to the guess point. By assigning different guesses and doing iteration for each of them, all CPs could be found. Once searches of CPs are finished, one should use Poincaré-Hopf relationship to verify if all CPs may have been found, the relationship states that (for isolated system)
+
+n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
+
+If the relationship is unsatisfied, then some of CPs must be missing, you may need to try to search those CPs by different guesses. However even if the relationship is satisfied, it does not necessarily mean that all CPs have been found. Notice that the function spaces of ELF/LOL and Laplacian of  are much more complex than , it is very difficult to locate all CPs for these functions, especially for middle and large system, so, you can stop trying for searching CPs once all CPs that you are interested in have been found.
+
+ 
+
+The maximal gradient path linking BCP and associated two local maxima of density is termed as “bond path”, which reveals atomic interaction path for all kinds of bonding. The collection of bond paths is known as molecular graph, which provides an unambiguous definition of molecular structure. Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
+
+Let us see an example. In the complex shown below, the imidazole plane is vertical to magnesium porphyrin plane, the nitrogen in imidazole coordinated to magnesium. Magenta, orange and yellow spheres correspond to (3,-3), (3,-1) and (3,+1) critical points, brown lines denote bond paths.
 
 
 
@@ -93,12 +125,18 @@ An energy maximum followed by a trough indicates a transition state and intermed
 To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
 Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
 
+
+
+\section{Spectroscopy}
+
 \subsection{Nuclear Magnetic Resonance Spectra}
 Refer them to an actual resource, so you don't have to explain the theory of \ac{NMR}, but give an overview of the experimental, then give the theoretical detail about how Gaussian calculates it, and any discrepancies between experimental and calculated. 
 
 Comment on the different methods used to calculate NMR parameters - a tiny literature review, if you will, and say which you'll be using, why - even if it's becuase of the fact that it's built into Gaussian (obviously big it up, if that is the case) - and state any caveats. 
 
 Maybe have a look at: Accurate Calculation of NMR Chemical Shifts, Jurgen Gauss, 1995 as a basis, but you'll also need something more current. Any review papers out there?
+
+\subsubsection{Computational implementation}
 
 \subsection{Infra-Red Spectra}
 
@@ -127,6 +165,9 @@ Intro to the history spiel.
 % used in minimisations - used in Monte carlo, DFT as well
 % \subsubsection{Steepest descent algorithm}
 % \subsubsection{Conjugate gradient algorithm}
+
+\subsubsection{Computational implementation}
+Caveats and scaling factors. 
 
 
 

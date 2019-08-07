@@ -6,38 +6,95 @@
 %Why can't we model the whole polymer / why do we need to truncate?
 %What is contained in this chapter? What question is posed?
 
-A wide range reaction products are experimentally observed during the low temperature degradation and slow ageing of \ac{NC}. %REF and bit more detail which ones?
-These can be partially attributed to the range of susceptible attack sites %cleavage/ reactive/ points [DIAGRAM OF THESE ATTACK SITES PLEASE - and justify why they aren't so important for slow ageing] 
-on the polysaccharide backbone, as well as the myriad of possible secondary reactions following denitration, depolymerisation or ring-cleavage. %(REF something about the deg products or many secondary reactions)
+A wide range of reaction products are experimentally observed during the low temperature decomposition and slow ageing of \ac{NC}. %REF and bit more detail which ones?
+The generation of these products can be attributed to the range of susceptible attack sites %cleavage/ reactive/ points [DIAGRAM OF THESE ATTACK SITES PLEASE - and justify why they aren't so important for slow ageing] 
+along the polysaccharide backbone and at side groups, as well as the myriad of possible secondary reactions following denitration. These include depolymerisation and ring-cleavage, and can involve residual contaminants or acids remaining in the \ac{NC} matrix following synthesis, due to imperfect washing procedures. %(REF something about the deg products or many secondary reactions)
 
-%Move this bit to the literature review if appropriate
+%Move this bit to the literature review if appropriate:%%%%%%%%%%%%%%%%%%%%%%%
+[*Should this part be in the main intro instead?*]
+Storage conditions such as the choice of wetting solvent, temperature, pressure, humidity, as well as fluctuations in these conditions over time, also contribute to the spectrum of degradation products evolved. A practical example is the propellant stored under a pilot's seat for ejection from the cockpit, during emergencies. During the lifetime of the propellant, it will endure a great number of flights, each involving changing temperature and pressure cycles. The propellant formula will include an \ac{EM}:plasticiser:stabiliser mixture that adheres to established industry safety standards. This will incorporate a conservative estimation of the shelf-life and stability of the formulation under different environmental and storage conditions. %any pic of safety label etc. here?)
+Understanding of the ageing reactions will shed light on the possible interactions between the \ac{EM} and the stabilising mixture, facilitating better industrial practices, safety standards and product formulations with improved estimates of operating lifetime. 
+[*End*]
+
+In addition to environmental factors and contaminants, the degradation properties of \ac{NC} depend on the length of the polymer chain and its primary, secondary and tertiary structure. %pic of primary secondary and teritary structure pics for cell / NC please - chain twist, sheet, then fibre twisting? 
+These are properties are largely defined by the cellulose feedstock. \ac{SEM} images of \textit{Miscanthus} cellulose illustrate a bloating of the cellulose fibres following nitration, with almost full retention of the fibre structure integrity (figure \ref{fig:miscanthus} ).%REF 
+
+\begin{figure}[htp]
+\centering
+
+\includegraphics[width=\linewidth]{miscanthus}
+%(x400 magnification) but thats not what it says in the actual image. 
+%REF Nitrocellulose Synthesis from Miscanthus Cellulose, Gismatulina, 2018
+\caption{\ac{SEM} images of \textbf{a)} Miscanthus cellulose and after  nitration to \textbf{b)} Miscanthus \ac{NC}, from the work of Gismatulina \textit{et al.}}
+%\begin{subfigure}{0.66\linewidth}
+%    \includegraphics[width=\linewidth]{miscanthus}
+%	\caption{ }
+%  \end{subfigure}
+%    \begin{subfigure}[b]{0.33\linewidth}
+%    \includegraphics[width=\linewidth]{Miscanthus_sinensis}
+%   	\caption{ }
+%  \end{subfigure}
+%    \caption{\ac{SEM} images of \textbf{a)} Miscanthus cellulose and \textbf{b)} Miscanthus nitrocellulose  from the work of Gismatulina \textit{et al.}. \textbf{c)} Miscanthus Sinensis plant.}
+
+\label{fig:miscanthus}
+\end{figure}
+
+%It is anticipated that chains are usually end with a hydrogen, 
+
+It follows that a strains of \ac{NC} with a higher degree of polymerisation will require longer timescales to attain the same level of decomposition as a variety with lower degree of polymerisation. %REF?
+ %$\textalpha \textbeta$ celluose types, if not in the lit review earlier - which ones are more easier digested?
+Regions of crystallinity are more difficult to penetrate by solvent, thus are more resistant to hydrolytic decomposition methods; amorphous regions are more porous, exhibit less hydrogen bonding, and are more prone to digestion by both microbes and chemicals. %REF
+%also, any info on which types of cellulose have shorter/ longer chains, and are more / less suscpetible to certain types of degradation?
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%FIGURE of different fibre orientations and structures of cellulose / NC if I can find it, and if also not already done to death in the lit reviews
+
+%talk about polymer ends, and changes in properties that can arise from changing fibre lengths (in cellulose, which are then translated to nitrocellulose)
+
+%Quantum mechanical methods are routinely used to ...
+Wavefunction and density functional methods are routinely used to explore the energetics of small molecular reactions. %REF one of the S66 benchmark reaction papers, and another one for a slightly bigger system - maybe mine. And perhaps include one study on reactions of cellulose? 
+%include a one liners to give exmaples / demonstrate the use in literature. 
+% Include a bit about why we are using DFT and QM for looking at reaction eneriges in the first place. What are other ways of doing it, and why are we doing it this way?
+When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unwieldy due to the large number of atoms. %In practice, \textit{ab initio} quantum mechanical and semi-empirical
+%density functional methods are limited to between XX - XX atoms. %Respectively. %(REF max atoms for DFT and max atoms for wavefunction methods) {either refer to the theory section to talk about which methods are limited in which ways, but make mention of why you have you cap your model to a size that fits the methods available to probe the chemistry.)
+
 %Ways that other people have chopped down big polymer models. 
 % incl cellulose
 
-%Quantum mechanical methods are routinely used to ...
-Properties of \ac{NC} will also depend on the length of the polymer chain, which in turn, is dependent on the cellulose source. 
-When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unweildy due to the large number of atoms. 
-
-In practice, \textit{ab initio} and density functional methods used to determine the reaction energies are limited to between XX - XX atoms. %(REF max atoms for DFT and max atoms for wavefunction methods) {either refer to the theory section to talk abotu which methods are limited in which ways, but make mention of why you have you cap your model to a size that fits the methods available to probe the chemistry.)
-
-
 The polymer structure was truncated to a single-ring monomer by Shukla \textit{et al.} for the purposes of investigating the alkaline hydrolysis behaviour of \ac{NC}.\cite{Shukla2012} %[REF SHUKLA] 
-The study analysed the \acs{sn2} nucleophilic attack at the nitrate carbon, releasing the nitrate ion in favour of a hydroxyl group, at the C2, C3 and C6 nitrate sites (FIG. X). 
+The study analysed the \acs{sn2} nucleophilic attack at the nitrate-linking carbon, releasing the nitrate ion in favour of a hydroxyl group at the C2, C3 and C6 sites (figure \ref{fig:C2_C3_C6}). Findings suggested that alkaline hydrolytic denitration followed a sequence of C3$\rightarrow$C2$\rightarrow$C6 for the monomer, but C3$\rightarrow$C6$\rightarrow$C2 for the larger systems. The sequence of nitration and denitration is explored in [Results chap 2].
 
- *Insert fig X*
+\begin{figure}[htp]
+\centering
+%\includegraphics[width=\linewidth]{NC}
+%\includegraphics[width=\linewidth]{Shukla_11224_2012_9977_Fig1_HTML}
+\includegraphics[scale=0.4]{Shukla_11224_2012_9977_Fig1_HTML}
+\caption{\textbf{a)} Numbering scheme of 2,3,6-trinitro-$\textbeta$-D-glucopyranose, as monomer of \ac{NC}. \textbf{b)} Transition state showing S\textsubscript{N}2 (opposite side) attack by OH\textsuperscript{-} and \textbf{c)} angular attack (same side) by OH\textsuperscript{-} during the addition–elimination process at the C2 site of \ac{NC} from the work of Shukla \textit{et al.}}
+%REF Theoretical investigation of reaction mechanisms of alkaline hydrolysis of 2,3,6-trinitro-β-d-glucopyranose as a monomer of nitrocellulose
+\label{fig:C2_C3_C6}
+\end{figure}
 
-Comparisons between the monomer, dimer and trimer found the dimeric structure to be the smallest suitable model for the chemical behaviour of the polymer. This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
+Comparisons between the monomer, dimer and trimer found the dimeric structure to be the minimum repeat unit capturing the complete chemical behaviour of \ac{NC}. When considering the smallest unit encompassing all bonding interactions necessary for parameterisation of a forcefield, for implementation in molecular dynamics simulations, this is also observed. The two non-planar β-D-glucopyranose rings, whereby the two rings are joined by a 1$\rightarrow$4 glycosidic linkage. The alternate orientation of the second ring generates a different set of interactions between the rings within a dimer, than if the chain consisted of solely monomer repeat units. 
 
-In this chapter, the electronic properties of the monomer, dimer and trimer truncations of the polymer are compared.  
-The monomer model 
-The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (FIG XX). as in cellulose chains "observed during SEM / X-ray diff measurements" (FIG). %REF
+%FIG of dimer, with interactions highlighted, vs monomer
 
+%*A line segway-ing into the reaction coordinate of reactions, etc. May be easiest to talk about Shukla's work further (or Kuklja's?).*
+%
+%%what else did he/ others find  / use to make the polymer model workable?
+%
+%*Whilst Shukla demonstrated that the dimer model was the minimum "complete" unit; 
+%when considering degrees of freedom in the \ac{PES} in the search for transition state maxima, %\ac{TS}
+%%of reaction co-ordinates
+%finite computational resources restrict the ... it may be that the dimer is not the most appropriate for further studies.*
+
+
+In this chapter, the electronic properties of the monomer, dimer and trimer truncations of the \ac{NC} polymer are compared. The most suitable model for subsequent investigations is determined with consideration for apropriate allocation of computational effort. Hydroxyl and methoxy capping groups are tested to explore their interaction with the glucopyranose rings and effect on the distribution of charge on the chosen model.
  
-Comparisons between the monomer, dimer and trimer found %desingated
-the dimeric structure to be the minimum model required to accurately represent the chemical behaviour of NC in the alkaline hydrolysis pathway. 
-
-
-
+%Comparisons between the monomer, dimer and trimer found %desingated
+%the dimeric structure to be the minimum model required to accurately represent the chemical behaviour of NC in the alkaline hydrolysis pathway. 
 
  
  %Maybe for the lit review:
@@ -52,12 +109,58 @@ the dimeric structure to be the minimum model required to accurately represent t
 % An account of the procedures and techniques used in your research
 % ie. how were your results generated? %%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Monomer, dimer and trimer starting structures were drawn as closely matching literature geometries as possible. Starting with the oxygen of the glucopyranose ring in the chair position as atom 1, the hydroxy groups were substituted by nitrate groups at the C2, C3 and C6 positions, retaining their equatorial conformation. The sequence of nitration and denitration is explored in [Results chap 2].%REF What literature structures did I use? Include crystal structure of cellulose (monomers - trimers) and another one of just generic Structures of NC, perhaps Shukla's one of all three
-For dimer and trimer, individual saccharide rings were joined at the 1 - position, with alternating planarity (FIG above). %of highlihgted O's on alternating ring structures.
+%The monomer truncation (figure. X)
+%
+%The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (FIG XX). 
+
+The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). Counting from the oxygen of the ring as atom 1, hydroxyl groups were substituted by nitrate groups at the C2, C3 and C6 positions, retaining equatorial conformation in the case of C2 and C3. For dimer and trimer structures, individual glucopyranose rings were added at the 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}).
+%with addition of alternating glucopyranose rings for the dimer and trimer. 
+%Monomer, dimer and trimer starting structures were constructed matching literature geometries of similar species. 
+
+%talk about C6 brnach orientation / angles?
+
+ %REF What literature structures did I use? Include crystal structure of cellulose (monomers - trimers) and another one of just generic Structures of NC, perhaps Shukla's one of all three
+ %of highlihgted O's on alternating ring structures.
+
+%change to scale=0.4
+\begin{figure}[htp]
+  \begin{subfigure}[b]{\linewidth}
+  \centering
+	\caption{ }
+    \includegraphics[scale=0.5]{NC_mono_H}
+%    \caption{Fully nitrated NC dimer with methoxy capping groups in the C1 and C4 positions.}
+  \end{subfigure}
+  
+  
+  
+    \begin{subfigure}[b]{\linewidth}
+    \centering
+   	\caption{ }
+    \includegraphics[scale=0.5]{NC_di_H}
+%    \caption{Fully nitrated NC dimer with a methoxy capping group in the C1 and hydroxyl group in the C4 position.}
+  \end{subfigure}
+  
+  
+  
+    \begin{subfigure}[b]{\linewidth}
+    \centering
+	\caption{ }
+    \includegraphics[scale=0.5]{NC_tri_H}
+%    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
+  \end{subfigure}
+    \caption{Fully nitrated \acs{NC} truncated into \textbf{a)}  monomer, \textbf{b)} dimer and \textbf{c)} trimer units.}
+  \label{fig:models}
+\end{figure}
 
 
-In order to explore the limitations of different capping groups, the dimer structure was used as a reference, following the assumption that this was the minimum structure suitable for accurately reproducing the behaviour of the wider system (as per Shukla, above). %REF if necessary
-Chain ends were capped with either methoxy or hydroxy groups (FIG.), as were employed in Shukla's study. The differences in the charge distribution and intra-molecular interactions were probed using \ac{QTAIM} methods to look at critical points and the Laplacian of electron density. When regarding partial charges and to a limited extent, steric considerations, methoxy groups were expected to provide a better approximation for the extended polysaccharide.
+In order to investigate the influence of different capping groups, the dimer structure was used as a reference, following the \textit{minimum complete structure} approximation established by Shukla.
+%suitable for accurate reproduction of wider system behaviour  (as per Shukla, above). %REF if necessary
+Chain ends were capped with hydroxyl groups or methoxy groups (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM}. 
+
+
+\subsubsection{\ac{ESP} mapping}
+\subsubsection{Laplacian of electron density}
+
 
 %A bit of extra detail practical implementation of the partial charges, ESP and lapacian
 
@@ -72,8 +175,32 @@ Chain ends were capped with either methoxy or hydroxy groups (FIG.), as were emp
 % This would be useful for later probing the wider impact of the products of first stage degradation, to see how the products that are more likely to migrate further into the NC matrix will interact. But whilst I'm still looking at initial denitration, the smaller model will suffice. 
 
 \subsection{Computational details} %TECHNICAL DETAILS OF YOUR SETUP%%%%%%
-The \ac{B3LYP} density functional was chosen for initial exploration of electronic properties for the system. It is an efficient and well-benchmarked method for calculating electronic properties for main group elements and appropriate for the model system size, which would extend to around 80 atoms for the trimer. 
-All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed to the level of \acs{B3LYP}\/ 6-311+G(d,p), using \ac{G09}. %(REF) %except where otherwise stated. 
+The \ac{B3LYP} density functional was chosen for initial exploration of electronic properties of the system. It is an efficient and extensively benchmarked method %for calculating electronic properties 
+for main group elements and for the current model system size, where the largest trimer extends to 76 atoms. 
+
+\subsubsection{Geometry optimisation}
+All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed to the level of \acs{B3LYP}\/ 6-311+G(d,p), using the \ac{G09} quantum chemistry suite. Minima were found using the Berny optimisation algorithm (REF), with tight convergence criteria(%(REF) %except where otherwise stated. 
+
+%\begin{table}
+%\centering
+%\begin{tabular}{ l c c c } 
+% \caption{Convergence criteria used in \ac{G09}.}
+%\hline
+%Convergence criteria & Normal & Tight \\
+%\hline
+% Maximum Force &  0.000450 & 0.000015 \\
+% RMS     Force & 0.000300 & 0.000010 \\
+% Maximum Displacement & 0.001800 & 0.000060 \\
+% RMS     Displacement & 0.001200 & 0.000040 \\
+% \hline
+%\end{tabular}
+%\end{table}
+%%\multirow{3}{4em}{Multiple row} & cell2 & cell3 \\ 
+%%& cell5 & cell6 \\ 
+%%& cell8 & cell9 \\ 
+%%\hline
+%%\end{tabular}
+%%\end{center}
 
  
 %6-31+g(2df,p)/ $\omega$B97X-D [This is only for the subsequent chapters. Here I used the TWORUN calculations. May have to explain basis set choice later, since I used less ]  
@@ -82,11 +209,11 @@ All electronic structure calculations, including geometry optimisation and therm
 % ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
  
 Structures were built using z-matrix notation or the \ac{GView} graphical interface. Molden 5.0.2 and \ac{GView} packages were used for visualisation.
-Electrostatic potential (\acs{ESP}) surface maps were also visualised using \ac{G09}, using the CubeGen utility.
+Electrostatic potential (\acs{ESP}) surface maps were also visualised using \ac{G09}, using the CubeGen utility. Electrostatic potential was mapped to the electron density, extracted from the formatted checkpoint file following 
 
 \ac{QTAIM} analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6 %REF (also update your diagrams).
 
-Partial charges were obtained via PyRed (R.E.D. Server version 3.0). 
+%Partial charges were obtained via PyRed (R.E.D. Server version 3.0). 
 
 
 \section{Truncating the polymer}% RESULTS & DISCUSSION%%%%%%%%%%%%%%%%%%%%%
@@ -101,6 +228,7 @@ Partial charges were obtained via PyRed (R.E.D. Server version 3.0).
 %\subsection{Choice of functional}
 %Discuss the validity and caveats of each methods, including solvent vs vacuum.
 %(This is possibly for the next section, as you haven't done anything on this.)
+
 
 \subsection{Capping groups}
 % Graphics I need:
@@ -117,11 +245,12 @@ Partial charges were obtained via PyRed (R.E.D. Server version 3.0).
 %- Variation in partial charges, with different capping groups
 %explain why you chose the dimers you did - it was based on Shukla's denitration sequence.
 
-Dimers at different levels of nitration were capped with two methoxy groups (-OCH\textsubscript{3}) at C1 and C4, or a hydxroy group (-OH) and a methoxy group at either position (Figure \ref{fig:capping-groups-all}).
+Dimers at different levels of nitration were capped with methoxy groups (-OCH\textsubscript{3}) or a methoxy and hydroxyl group (-OH) at either C1 and C4 positions (Figure \ref{fig:capping-groups-all}).
+
 
 %\begin{figure}[htp]
 %\centering
-%%\includegraphics[width=\textwidth]{NC}
+%%\includegraphics[width=\linewidth]{NC}
 %\includegraphics[width=\linewidth]{CH3_CH3_cap}
 %%\includegraphics[scale=0.5]{CH3_OH_cap}
 %%\includegraphics[scale=0.5]{OH_CH3_cap}
@@ -133,37 +262,79 @@ Dimers at different levels of nitration were capped with two methoxy groups (-OC
 \begin{figure}[htp]
   \centering
   \begin{subfigure}[b]{0.5\linewidth}
-    \includegraphics[width=\linewidth]{CH3_CH3_cap}
 	\caption{ }
+    \includegraphics[width=\linewidth]{CH3_CH3_cap}
 %    \caption{Fully nitrated NC dimer with methoxy capping groups in the C1 and C4 positions.}
   \end{subfigure}
     \begin{subfigure}[b]{0.5\linewidth}
-    \includegraphics[width=\linewidth]{CH3_OH_cap}
    	\caption{ }
+    \includegraphics[width=\linewidth]{CH3_OH_cap}
 %    \caption{Fully nitrated NC dimer with a methoxy capping group in the C1 and hydroxyl group in the C4 position.}
   \end{subfigure}
       \begin{subfigure}[b]{0.5\linewidth}
-    \includegraphics[width=\linewidth]{OH_CH3_cap}
    	\caption{ }
+    \includegraphics[width=\linewidth]{OH_CH3_cap}
 %    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
   \end{subfigure}
-    \caption{Fully nitrated \acs{NC} dimer with a) methoxy groups capping chain ends on both ring 1 and ring 2, b) methoxy capping group on  ring 1 and hydroxyl on ring 2, c) hydroxyl group on ring 1 and methoxy capping group on ring 2.}
+    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)}  methoxy groups capping chain ends on both ring 1 and ring 2 (\ac{CH3CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\ac{CH3OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2(\ac{OHCH3}).}
   \label{fig:capping-groups-all}
+\end{figure}
+
+%split into two columns and have the CPS on the right hand side. 
+\begin{figure}[htp]
+  \centering
+	\includegraphics[width=0.8\linewidth]{scale_bar}
+    \begin{subfigure}[b]{0.6\linewidth}
+   		\caption{ }
+	    \includegraphics[width=\linewidth]{CH3_CH3-NC3_3_ESP_surface_w-5-287e-2}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.7\linewidth}
+   		\caption{ }
+	    \includegraphics[width=\linewidth]{CH3_OH_NC3_3_ESP_surface_w-5-287e-2}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.65\linewidth}
+	   	\caption{ }
+	    \includegraphics[width=\linewidth]{OH_CH3_NC3_3_ESP_surface_w-5-287e-2}
+  \end{subfigure}
+    \caption{Electrostatic potential maps of \textbf{a)} \ac{CH3CH3}, \textbf{b)} \ac{CH3OH}, \textbf{c)} \ac{CH3OH}. *UNITS?*}
+  \label{fig:ESP}
 \end{figure}
 
 %On comparing surfaces - you need to compare ESPs directly, rather than visually (this is last resort) - you need a table. These aren't the same as partial charges. Can I get them from the cube files? 
 
-Figure X and table X detail the partial charges for the 
+The \ac{ESP} maps for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped (\ac{CH3OH}) and hydroxy-methoxy capped (\ac{OHCH3}) dimers 
 
-Table X details the energies of each of the 
+%The trimer model's ESPs should reinforce that CH3 is a more chemically similar approximation - no concentration of charge 
 
-
-Looked at QTAIM for interaction with capping groups
-
-For the remainder of this study, dimer ends were capped by methoxy groups rather than hydroxyl groups as were employed in Shukla’s study. From the perspective of partial charges, and to an extent steric considerations, methoxy groups are expected to provide a better approximation for the extended polysaccharide.
 
 [CHECK THIS!]
 Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. %Thus, the nitrate group on C3 was used as the target site for degradation studies.
+
+
+\begin{figure}[htp]
+  \centering
+  \begin{subfigure}[b]{0.65\linewidth}
+	\caption{Critical points idenitified for the \acs{CH3CH3} dimer.}
+  \includegraphics[width=\linewidth]{CH3_CH3-dislin_crop}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.7\linewidth}
+    \caption{Critical points for the \acs{CH3OH} dimer.}
+    \includegraphics[width=\linewidth]{CH3_OH-dislin_crop}
+  \end{subfigure}
+      \begin{subfigure}[b]{0.65\linewidth}
+	  \caption{Critical points for \acs{OHCH3} dimer.}
+    \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
+  \end{subfigure}
+    \caption{All critical points identified by \ac{QTAIM} topology analysis. \ac{NCP} are  located at atomic nuclear sites, \ac{BCP} (orange points) lie on chemical bonds, or intramolecular bonding paths shown in orange; \ac{RCP} denote centres of steric interaction (yellow points) and the \ac{CCP}(green point) shows the centre of a cage-like system.}
+  \label{fig:cp-all}
+\end{figure}
+
+
+Observations about the CPs:
+
+When considering partial charges and to a lesser extent, steric considerations, methoxy groups were expected to provide a better approximation for the extended polysaccharide.
+
+
 
 \subsection{Model size}
 % Graphics I need:
@@ -171,14 +342,17 @@ Shukla’s work identified the nitrate group attached to carbon three (C3) as th
 	% ESP of each
 	% Partial charges of each
 
-% Want to say that partial charges / ESP / Laplacian / CP's do not look so different, across each of the model systems, but that the dimer is the best model for capturing all the interactions. The interaction between the rings is missing for the monomer, and this is a crucial aspect of the chemistry. 
+% Want to say that partial charges / ESP / Laplacian / CP's do not look so different, across each of the model systems, but that the dimer is the best model for capturing all the interactions based on the payoff between computational efficiency and accuracy of resutls. The interaction between the rings is missing for the monomer, and this is a crucial aspect of the chemistry. 
 
-- Variation in ESP with different capping groups
-- Variation in Critical bonding points with diff capping groups
+%C2 MONOMER ESP AND CPS
+%C2\_0 DIMER
+%C2\_0\_2 TRIMER
 
 And all of the above with different sized systems
+*MAKE SURE YOU KNOW HOW GOOD OF A MEASURE PARTIAL CHARGES ARE*
 
 %Repeat for solvent and vacuum, if there is time (there isn't)
+The optimised structures for the fully nitrated monomer, dimer and trimer were optimised and their partial charges compared. 
 
 \section{Summary}
 In this section 
