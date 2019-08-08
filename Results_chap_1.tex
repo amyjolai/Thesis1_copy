@@ -113,7 +113,7 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
 %
 %The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (FIG XX). 
 
-The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). Counting from the oxygen of the ring as atom 1, hydroxyl groups were substituted by nitrate groups at the C2, C3 and C6 positions, retaining equatorial conformation in the case of C2 and C3. For dimer and trimer structures, individual glucopyranose rings were added at the 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}).
+The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). Counting from the oxygen of the ring as atom 1, hydroxyl groups were substituted by nitrate groups at the C2, C3 and C6 positions, retaining equatorial conformation in the case of C2 and C3 (figure \ref{fig:labelling}). For dimer and trimer structures, individual glucopyranose rings were added at the 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}).
 %with addition of alternating glucopyranose rings for the dimer and trimer. 
 %Monomer, dimer and trimer starting structures were constructed matching literature geometries of similar species. 
 
@@ -147,42 +147,26 @@ The monomer starting structure was constructed from the geometry used by Shukla 
 	\caption{ }
     \includegraphics[scale=0.5]{NC_tri_H}
 %    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
-  \end{subfigure}
+  \end{subfigure} 
     \caption{Fully nitrated \acs{NC} truncated into \textbf{a)}  monomer, \textbf{b)} dimer and \textbf{c)} trimer units.}
   \label{fig:models}
 \end{figure}
 
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=\linewidth]{3_3_rot_label}
+	\caption{Numbering scheme for dimers used in this study. Ring 1 (R1) is the first ring whereby the oxygen of the glucopyranose ring is one bond separated from the glycosidic oxygen linking the two rings. Ring 2 (R2) is the glucopyranose oxygen two bonds separated from the linking oxygen.}
+  \label{fig:labelling}
+\end{figure}
+
+
 
 In order to investigate the influence of different capping groups, the dimer structure was used as a reference, following the \textit{minimum complete structure} approximation established by Shukla.
 %suitable for accurate reproduction of wider system behaviour  (as per Shukla, above). %REF if necessary
-Chain ends were capped with hydroxyl groups or methoxy groups (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM} 
+Chain ends were capped with hydroxyl groups (-OH)  or methoxy groups  (-OCH\textsubscript{3}) (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM} 
 
 
-\subsubsection{\ac{ESP} mapping}
-\subsubsection{Topology analysis}
-QTAIM ref: A quantum theory of molecular structure and its applications (Bader, 1991)
-(table \ref{tab:cps})
-
-\begin{table}[htp]
-\caption{Features of different types of critical point from \ac{QTAIM} topological analysis.}
-\begin{center}
-\begin{tabular}{l c p{4cm} p{3cm} p{3cm}} 
-\toprule
-Critical Point & Label  & Derivation & Attribute & Representation \\
-\midrule
-Nuclear (\acs{NCP}) & (3,-3)  & All 3 eivalues of the Hessian matrix are negative & Local maximum & Atomic nuclei \\
-\hline
-Bonding (\acs{BCP}) & (3,-1) & 2 negative eigenvalues of Hessian matrix  & 2\textsuperscript{nd} order saddle point & Bonding site \\
-\hline
-Ring (\acs{RCP}) & (3,+1) & 1 negative eigenvalue of Hessian matrix & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
-\hline
-Cage (\acs{CCP}) & (3,+3) & No negative eigenvalue of Hessian matrix& Local minimum & Centre of cage system \\
-\bottomrule
-\end{tabular}
-\label{tab:cps}
-\end{center}
-\end{table}
-
+%\subsubsection{\ac{ESP} mapping}
 
 %\subsubsection{Laplacian of electron density}
 
@@ -203,7 +187,7 @@ Cage (\acs{CCP}) & (3,+3) & No negative eigenvalue of Hessian matrix& Local mini
 The \ac{B3LYP} density functional was chosen for initial exploration of electronic properties of the system. It is an efficient and extensively benchmarked method %for calculating electronic properties 
 for main group elements and for the current model system size, where the largest trimer extends to 76 atoms. 
 
-\subsubsection{Geometry optimisation}
+%\subsubsection{Geometry optimisation}
 All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p), using the \ac{G09} quantum chemistry suite. Minima were found using the Berny optimisation algorithm (REF), with tight convergence criteria (table \ref{tab:convergence}).
 
 \begin{table}[htp]
@@ -236,8 +220,10 @@ Convergence criteria & Normal & Tight \\
 % ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
  
 Structures were built using z-matrix notation or the \ac{GView} graphical interface. Molden 5.0.2 and \ac{GView} packages were used for visualisation.
-\acs{ESP} was mapped to the electron density, extracted from the formatted checkpoint file following optimisation. \acs{ESP} maps were visualised using \ac{G09}, using the CubeGen utility. Density and \ac{ESP} cubes were generated with 80 points per side. 
-\ac{QTAIM} analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6.  %REF (also update your diagrams).
+\acs{ESP} was mapped to the electron density, extracted from the formatted checkpoint file following optimisation. \acs{ESP} maps were visualised using \ac{G09}, using the CubeGen utility. Density and \ac{ESP} cubes were generated with 80\textsuperscript{3} poitn grids. 
+
+\ac{QTAIM} topological analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6.  %REF (also update your diagrams).
+
 
 %Partial charges were obtained via PyRed (R.E.D. Server version 3.0). 
 
@@ -256,7 +242,7 @@ Structures were built using z-matrix notation or the \ac{GView} graphical interf
 %(This is possibly for the next section, as you haven't done anything on this.)
 
 
-\subsection{Capping groups}
+\subsection{Capping group}
 % Graphics I need:
 	% Laplacian of select dimer structures, with different cappign groups
 	% ESP of one dimer of one dimer of each nitration level
@@ -271,10 +257,30 @@ Structures were built using z-matrix notation or the \ac{GView} graphical interf
 %- Variation in partial charges, with different capping groups
 %explain why you chose the dimers you did - it was based on Shukla's denitration sequence.
 
-Dimers at different levels of nitration were capped with a methoxy group (-OCH\textsubscript{3}) or a hydroxyl group (-OH) at either C1 and C4 positions (Figure \ref{fig:capping-groups-all}). 
+Dimers with \ac{DOS}=3 were capped with a methoxy group or a hydroxyl group at either C1 and C4 positions (figure \ref{fig:capping-groups-all}). The electronic and steric properties of both capping groups and the effect on the whole dimer molecule was compared. The methoxy group was expcted to provide a more chemically accurate proxy for the extended polysaccharide, though the hydroxyl capping group was used more widely in literature. This may be due to its small size which reduces distortion to the wider structure of the model and does not introduce steric effects, whilst remaining relatively chemically benign. % and at slightly lower computational cost. 
+Upon substitution of a hydroxyl terminal group for a bulkier methoxy, the geometry of the floppy nitrate groups adjusted to accommodate. It can be seen in the case of \ac{CH3CH3} in figure \ref{fig:CPs}, a), that there is an additional \ac{BCP} along the NX and NX intramolecular bonding path.
+
+%(or put his with QTAM)
+%table of all bonds and angles in the appendicies, expansion on the one below? Optional
+%possible changes: relative ring planarity, forced closer interaction between nearby nitrate groups, twisting of the ring, and intramolecular interactions
+\begin{table}[htp]
+\begin{center}
+\caption{Changes in geometry with modification of the capping group in \ac{NC} dimers.}
+\begin{tabular}{ l c c c } 
+\toprule
+Capping & Dihedral & Tight \\
+\hline
+ blobl &  0.000450 & 0.000015 \\
+ narvao     Force & 0.000300 & 0.000010 \\
+ Maximum Displacement & 0.001800 & 0.000060 \\
+ RMS     Displacement & 0.001200 & 0.000040 \\
+\bottomrule
+\end{tabular}
+\label{tab:geomety_cap}
+\end{center}
+\end{table}
 
 
-%If there's time, align the captions to the left and float in the middle of the image. 
 \begin{figure}[htp]
   \centering
   \begin{subfigure}[b]{0.5\linewidth}
@@ -292,9 +298,37 @@ Dimers at different levels of nitration were capped with a methoxy group (-OCH\t
     \includegraphics[width=\linewidth]{OH_CH3_cap}
 %    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
   \end{subfigure}
-    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)}  methoxy groups capping chain ends on both ring 1 and ring 2 (\ac{CH3CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\ac{CH3OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2(\ac{OHCH3}).}
+    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)} methoxy groups capping chain ends on both ring 1 and ring 2 (\ac{CH3CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\ac{CH3OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2(\ac{OHCH3}).}
   \label{fig:capping-groups-all}
 \end{figure}
+
+
+%appendix - list of all CPs?
+\begin{figure}[htp]
+  \centering
+  \begin{subfigure}[b]{0.65\linewidth}
+	\caption{Critical points idenitified for the \acs{CH3CH3} dimer.}
+  \includegraphics[width=\linewidth]{CH3_CH3-dislin_crop}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.7\linewidth}
+    \caption{Critical points for the \acs{CH3OH} dimer.}
+    \includegraphics[width=\linewidth]{CH3_OH-dislin_crop}
+  \end{subfigure}
+      \begin{subfigure}[b]{0.65\linewidth}
+	  \caption{Critical points for \acs{OHCH3} dimer.}
+    \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
+  \end{subfigure}
+    \caption{All critical points identified by \ac{QTAIM} topology analysis. \ac{NCP} are  located at atomic nuclear sites, \ac{BCP} (orange points) lie on chemical bonds, or intramolecular bonding paths shown in orange; \ac{RCP} denote centres of steric interaction (yellow points) and the \ac{CCP}(green point) shows the centre of a cage-like system.}
+  \label{fig:cp-all}
+\end{figure}
+
+
+
+
+
+
+
+
 
 %split into two columns and have the CPS on the right hand side. 
 \begin{figure}[htp]
@@ -316,6 +350,8 @@ Dimers at different levels of nitration were capped with a methoxy group (-OCH\t
   \label{fig:ESP}
 \end{figure}
 
+
+
 %On comparing surfaces - you need to compare ESPs directly, rather than visually (this is last resort) - you need a table. These aren't the same as partial charges. Can I get them from the cube files? 
 
 The \ac{ESP} maps for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped dimer (\ac{CH3OH}) and hydroxy-methoxy capped dimer (\ac{OHCH3}) represent the charge density around the molecule. A more negative value (increasingly red) indicates an area of higher electron density, whilst a more positive value (increasingly blue) indicates an area of lower electron density. It can be seen that the areas with lowest electron density lie around the centre of the glucopyranose rings and at the C6 position of the side branches. This can be explained by the number of adjacent oxygens drawing the electron density away from the less electronegative alkyl groups. The most electron rich areas are the outermost oxygens of the nitrate groups.
@@ -326,42 +362,10 @@ The presence of the hydroxyl capping group promotes a small decrease in electron
 %Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. %Thus, the nitrate group on C3 was used as the target site for degradation studies.
 
 
-\begin{figure}[htp]
-  \centering
-  \begin{subfigure}[b]{0.65\linewidth}
-	\caption{Critical points idenitified for the \acs{CH3CH3} dimer.}
-  \includegraphics[width=\linewidth]{CH3_CH3-dislin_crop}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.7\linewidth}
-    \caption{Critical points for the \acs{CH3OH} dimer.}
-    \includegraphics[width=\linewidth]{CH3_OH-dislin_crop}
-  \end{subfigure}
-      \begin{subfigure}[b]{0.65\linewidth}
-	  \caption{Critical points for \acs{OHCH3} dimer.}
-    \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
-  \end{subfigure}
-    \caption{All critical points identified by \ac{QTAIM} topology analysis. \ac{NCP} are  located at atomic nuclear sites, \ac{BCP} (orange points) lie on chemical bonds, or intramolecular bonding paths shown in orange; \ac{RCP} denote centres of steric interaction (yellow points) and the \ac{CCP}(green point) shows the centre of a cage-like system.}
-  \label{fig:cp-all}
-\end{figure}
 
-%table of all bonds and angles in the appendicies, expansion on the one below? Optional
-%possible changes: relative ring planarity, forced closer interaction between nearby nitrate groups, twisting of the ring, and intramolecular interactions
-\begin{table}[htp]
-\begin{center}
-\caption{Changes in geometry with modification of the capping group in \ac{NC} dimers.}
-\begin{tabular}{ l c c c } 
-\toprule
-Capping & Dihedral & Tight \\
-\hline
-  &  0.000450 & 0.000015 \\
- RMS     Force & 0.000300 & 0.000010 \\
- Maximum Displacement & 0.001800 & 0.000060 \\
- RMS     Displacement & 0.001200 & 0.000040 \\
-\bottomrule
-\end{tabular}
-\label{tab:convergence}
-\end{center}
-\end{table}
+
+
+
 
 
 
@@ -377,6 +381,7 @@ Capping & Dihedral & Tight \\
 %C2\_0 DIMER
 %C2\_0\_2 TRIMER
 
+\ac{NC} with nitrate substituion C2 wsa because ...........
 And all of the above with different sized systems
 *MAKE SURE YOU KNOW HOW GOOD OF A MEASURE PARTIAL CHARGES ARE*
 

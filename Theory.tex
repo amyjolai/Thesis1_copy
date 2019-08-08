@@ -72,7 +72,7 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 
 \section{Analysis}
 
-\subsection{\ac{QTAIM}}
+\subsection{Topology analysis using \ac{QTAIM}}
 
 *paraphrase this:
 Topology analysis Theory
@@ -88,6 +88,30 @@ The topology analysis technique proposed by Bader was firstly used for analyzing
 (3,+1): Only one eigenvalue of Hessian matrix of function is negative, namely first-order saddle point (like transition state in potential energy surface). For electron density analysis, (3,+1) generally appears in the center of ring system and displays steric effect, hence (3,+1) is often named as ring critical point (RCP).
 
 (3,+3): None of eigenvalues of Hessian matrix of function are negative, namely the local minimum. For electron density analysis, (3,+3) generally appears in the center of cage system (e.g. pyramid P4 molecule), hence is often referred to as cage critical point (CCP).
+
+
+(table \ref{tab:cps})
+
+\begin{table}[htp]
+\caption{Features of different types of critical point from \ac{QTAIM} topological analysis.}
+\begin{center}
+\begin{tabular}{l c p{4cm} p{3cm} p{3cm}} 
+\toprule
+Critical Point & Label  & Derivation & Attribute & Representation \\
+\midrule
+Nuclear (\acs{NCP}) & (3,-3)  & All 3 eivalues of the Hessian matrix are negative & Local maximum & Atomic nuclei \\
+\hline
+Bonding (\acs{BCP}) & (3,-1) & 2 negative eigenvalues of Hessian matrix  & 2\textsuperscript{nd} order saddle point & Bonding site \\
+\hline
+Ring (\acs{RCP}) & (3,+1) & 1 negative eigenvalue of Hessian matrix & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
+\hline
+Cage (\acs{CCP}) & (3,+3) & No negative eigenvalue of Hessian matrix& Local minimum & Centre of cage system \\
+\bottomrule
+\end{tabular}
+\label{tab:cps}
+\end{center}
+\end{table}
+
 
 The positions of CPs are searched by Newton method, one need to assign an initial guess point, then the Newton iteration always converge to the CP that is closest to the guess point. By assigning different guesses and doing iteration for each of them, all CPs could be found. Once searches of CPs are finished, one should use Poincaré-Hopf relationship to verify if all CPs may have been found, the relationship states that (for isolated system)
 
