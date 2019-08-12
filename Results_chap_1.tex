@@ -148,12 +148,26 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
 %This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
 %The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (Figure 11
 
-\section{Methodology}%HOW YOU DID EACH CALCULATION%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% An account of the procedures and techniques used in your research
+\section{Methodology}%HOW YOU DID EACH CALCULATION%An account of the procedures and techniques used in your research%%%
 % ie. how were your results generated? 
-%The monomer truncation (figure. X)
-%
 %The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (FIG XX). 
-\begin{figure}[hbp]
+
+\subsection{Geomtry optimisation of \ac{NC} units}
+
+%The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). 
+Monomer, dimer and trimer structures were drawn and capped with either methoxy or hydroxyl groups, then \acs{QM} geometry optimised. Side chains were drawn as closely matching literature orientations as possible. For dimer and trimer structures, individual glucopyranose rings were added to the first ring in the 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}).
+In some instances, it was found that the final optimised geometries varied according to the input starting geometry. In the cases of more than one possible converged geometry for the same species, the conformer with lowest absolute energy was chosen. Select dimer and trimer molecules were pre-optimised with a \ac{MM} geometry optimisation using UFF or MMFF94 forcefields to determine whether any improvements could be achieved with respect to identification of the global minimum structure or reduction of \ac{QM} optimisation time. 
+%To see whether they helped i finding the global minimum easier / sped up optimisation.
+Following \ac{MM} pre-optimisation, the dimer cases did not show any noteable speed-up or improvement in convergence success during optimisation, or any significant difference in the final optimised geometry. Further investigations did not implement \ac{MM} pre-optimisation for dimer geometries. 
+%also, conversion of file formats was timely and labour intensive, with some loss of bonding in formation that had to be restored later on - had to re-draw in nitrate bonds at times.
+Convergence of trimer geometries posed more challenging, oftentimes with convergence failure. Pre-optimisation on the ni-methoxyl capped trimer structure was used to generate a reasonable starting input geometry for \ac{QM} optimisation.  This enabled convergence of the final structure, and reduced the number of steps required.
+However, it was found that the lowest energy trimer conformer was derived from the fully optimised dimer structure with duplication of the first ring. Thus, rather than construction of a new trimer geometry ''from scratch'', the trimer structures used in this study were cosntructed from extension of the fully optimised dimer structures.
+
+\subsection{Labelling system}
+
+The numbering scheme for structures is detailed in figure \ref{fig:labelling}. Counting from the oxygen of the glucopyranose ring as atom 1 (O1), the numbering of carbons proceeds in a clockwise direction following the Cahn-Ingold-Prelog rules\cite{cahn1966}. For simplicity, the nitrate groups are numbered 1 - 3, also moving clockwise around the ring. The oxygen linking the nitrate to the polysaccharide backbone is labelled (Ox). Oxygen on the terminal ends of the nitrate group are labelled (Ot). Identical oxygen labelling is applied across all nitrate groups. Labels are denominated from the largest structure to the smallest: [Ring; Moiety; Attached atoms]. For example, a terminal oxygen (Ot) on the nitrate at the C6 position (N3) of the second ring (R2), would be referred to as R2N3Ot. When referring to only the nitrogen of this nitrate, the label would be R2N3. For the carbon at the C6 position on the second ring, the label would be R2C6.
+
+\begin{figure}[t]
 	\centering
 	\includegraphics[width=0.75\linewidth]{3_3_rot_label_caption}
 	\caption{The numbering scheme for dimers used in this study. Ring 1 (R1) is the first ring, whereby oxygen (O1) is \textit{one bond} separated from the glycosidic oxygen linking the two rings. Ring 2 (R2) is where O1 is \textit{two bonds} separated from the glycosidic oxygen. 
@@ -162,18 +176,13 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
   \label{fig:labelling}
 \end{figure}
 
-%The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). 
-Monomer, dimer and trimer structures were drawn and capped with either methoxy or hydroxyl groups, then underwent a \acs{QM} geometry optimisation. For dimer and trimer structures, individual glucopyranose rings were added to the first ring in the 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}).
-Trimer and select dimer molecules were pre-optimised with a \ac{MM} optimisation using either UFF or MMFF94 forcefields. The dimer cases did not show any noteable improvement in the speed or frequency of attaining convergence during optimisation, or any significant difference in final optimised structures following \ac{MM} pre-optimisation. Further investigations did not implement \ac{MM} pre-optimisation for dimer geometries. 
-Pre-optimisation on trimer structures reduced the number of steps required for \ac{QM} optimisation by improving the starting structure. Final optimised structures varied according to the input starting structure; in these cases the structure with lowest energy was selected. 
-The numbering scheme for structures is detailed in figure \ref{fig:labelling}. Counting from the oxygen of the glucopyranose ring as atom 1, the numbering of carbons proceeds in a clockwise direction. For simplicity, the nitrate groups are numbered 1 - 3 moving clockwise. The oxygen linking the nitrate to the polysaccharide is labelled (Ox). Oxygen on the terminal ends of the nitrate group are labelled (Ot). Oxygen labelling is applied across all nitrate groups. For example, a \textit{terminal oxygen} on the nitrate at the C6 position of the \textit{second ring}, would be referred to as R2N3Ot.
-With increasing nitration level, hydroxyl groups were substituted by nitrate groups at the C2, C3 and C6 positions in reverse order of denitration according to the study by Shukla \textit{et al.}\cite{shukla2012a},  C2$\rightarrow$C6$\rightarrow$C3. The original conformation was conserved; equatorial in the case of C2 and C3.
-%talk about C6 brnach orientation / angles?
-
+\subsection{System size and chain ends}
 In order to investigate the influence of different capping groups, the fully nitrated dimer structure was used as a reference, following the minimum complete structure approximation established by Shukla \textit{et al.}. %suitable for accurate reproduction of wider system behaviour  (as per Shukla, above). %REF if necessary
-Chain ends were capped with a combination of methoxy groups , or a combination of a methoxy and a hydroxyl group (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM}.
-When considering the model size, the \ac{ESP} and topology analyses were compared across monomer, dimer and trimer models. Nitration was reduced to C2 sites to explore interactions at lower levels of nitrations, and to further simplifiy the optimisation of the trimer structure. The monomer was nitrated only at C2, the dimer nitrated only at R1C2 and the trimer nitrated at R1C2 and R3C2.
-
+Chain ends were capped with methoxy groups, or a combination of a methoxy and a hydroxyl group (figure \ref{fig:capping-groups-all}). The differences in charge distribution and the nature of intra-molecular interactions were probed using \ac{QTAIM} and analysis of the \ac{ESP} around the molecule.
+When considering the system size, the \ac{ESP} and topology analyses were compared across monomer, dimer and trimer models. Nitration was limited to C2 sites, to explore interactions at lower levels of nitration and to simplifiy the optimisation of the trimer structure. The monomer was nitrated only at C2, the dimer nitrated only at R1C2 and the trimer nitrated at R1C2 and R3C2.
+%
+%With increasing nitration level, hydroxyl groups were substituted by nitrate groups at the C2, C3 and C6 positions in reverse order of denitration according to the study by Shukla \textit{et al.}\cite{shukla2012a},  C2$\rightarrow$C6$\rightarrow$C3. The original conformation was conserved; equatorial in the case of C2 and C3.
+%%talk about C6 brnach orientation / angles?
 
 %\subsubsection{\ac{ESP} mapping}
 
@@ -194,15 +203,13 @@ When considering the model size, the \ac{ESP} and topology analyses were compare
 
 \subsection{Computational details} %TECHNICAL DETAILS OF YOUR SETUP%%%%%%
 The \ac{B3LYP} density functional was chosen for initial exploration of electronic properties of the system. It is an efficient and extensively benchmarked method %for calculating electronic properties 
-for main group elements and for the current model system size, where the largest trimer extends to 76 atoms. 
-
+for main group elements and appropraite for the current model system size, where the largest trimer extends to 76 atoms. 
 %\subsubsection{Geometry optimisation}
-All electronic structure calculations, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p) %with tight convergence criteria, 
-using the \ac{G09} quantum chemistry suite. Minima were found using the Berny optimisation algorithm (REF), with tight convergence criteria (table \ref{tab:convergence}).
+All electronic structure calculations in this section, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p) with tight convergence criteria. Minima were located using the Berny optimisation algorithm\cite{Schlegel1982}, implimented in the \ac{G09} quantum chemistry suite\cite{frisch2013}.
 
 \begin{table}[hbp]
 \begin{center}
-\caption{Convergence criteria used in \ac{G09}.}
+\caption{Convergence criteria used in \ac{G09}. Units in Hartree/Bohr.}
 \begin{tabular}{ l c c c } 
 \toprule
 Convergence criteria & Normal & Tight \\
@@ -228,8 +235,9 @@ Convergence criteria & Normal & Tight \\
 % More basis functions on the valence e, but less polarisation. WHAT SIGNIFICANCE will this have on my results/ system?
 % ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
  
-Structures were built using z-matrix notation or the \ac{GView} graphical interface. Molden 5.0.2 and \ac{GView} packages were used for visualisation. Avogadro molecular editor was used for \ac{MM} pre-optimisation. \ac{MM} optimisation forcield... etc
-\acs{ESP} was mapped to the electron density, extracted from the formatted checkpoint file following optimisation. \acs{ESP} maps were visualised using \ac{G09}, using the CubeGen utility. Density and \ac{ESP} cubes were generated with 80\textsuperscript{3} point grids. 
+Structures were built using %z-matrix notation or 
+the \ac{GView} graphical user interface. Molden 5.0.2 and \ac{GView} packages were used for visualisation. Avogadro molecular editor was used for \ac{MM} pre-optimisation. UFF or MMFF94 forcefields were applied with Steepest Descent algorithm\cite{cauchy1857,meza2010}, 500 steps and convergence of 10e\textsuperscript{-7}.
+\acs{ESP} was mapped to the electron density, extracted from the \ac{G09} formatted checkpoint file following optimisation. \acs{ESP} maps were visualised using \ac{GView}, using the CubeGen utility. Density and \ac{ESP} cubes were generated with 80\textsuperscript{3} point grids. 
 \ac{QTAIM} topological analyses, including generation of Laplacian electron density maps and \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6.  %REF (also update your diagrams).
 
 
@@ -250,7 +258,7 @@ Structures were built using z-matrix notation or the \ac{GView} graphical interf
 %(This is possibly for the next section, as you haven't done anything on this.)
 
 
-\subsection{Capping group}
+\subsection{Comparison of capping groups}
 % Graphics I need:
 	% Laplacian of select dimer structures, with different cappign groups
 	% ESP of one dimer of one dimer of each nitration level
@@ -265,7 +273,7 @@ Structures were built using z-matrix notation or the \ac{GView} graphical interf
 %- Variation in partial charges, with different capping groups
 %explain why you chose the dimers you did - it was based on Shukla's denitration sequence.
 
-Dimers with \ac{DOS}=3 were capped with methoxy or hydroxyl groups at C1 and C4 positions (figure \ref{fig:capping-groups-all}). The electronic and steric properties of both capping groups and the effect on the whole dimer molecule was compared. The methoxy group was expected to provide a more chemically accurate proxy for the extended polysaccharide, though the hydroxyl capping group has demonstrated  wider usage in literature. This may be due to its smaller radius which reduces distortion to the wider structure of the model and limits the introduction of steric effects. It remains relatively chemically benign and it can be argued that it corresponds instead to polysaccharide chain endings. % resf? and at slightly lower computational cost. [bit of a weak sentence]
+Dimers with \acs{DOS}=3 were bi-capped with methoxy (\ac{CH3CH3}), methoxy-hydroxy (\ac{CH3OH}) or hydroxy-methoxy (\ac{OHCH3}) groups at C1 and C4 positions, (figure \ref{fig:capping-groups-all}).
 
 \begin{figure}[htp]
   \centering
@@ -284,14 +292,35 @@ Dimers with \ac{DOS}=3 were capped with methoxy or hydroxyl groups at C1 and C4 
     \includegraphics[width=\linewidth]{OH_CH3_cap}
 %    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
   \end{subfigure}
-    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)} methoxy groups capping chain ends on both ring 1 and ring 2 (\ac{CH3CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\ac{CH3OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2(\ac{OHCH3}).}
+    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)} methoxy groups capping chain ends on both ring 1 and ring 2 (\acs{CH3CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\acs{CH3OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2(\acs{OHCH3}).}
   \label{fig:capping-groups-all}
 \end{figure}
 
+The electronic and steric properties of both capping groups and the effect on the whole dimer molecule was compared. The methoxy group was expected to provide a more chemically and sterically accurate proxy for the extended polysaccharide, though the hydroxyl capping group has demonstrated wider usage in literature. This may be due to its smaller atomic radius which minimises distortion to the wider structure of the model and limits the introduction of artificial steric effects. The hydrogen of the hydroxyl remains relatively chemically benign and it can be argued that it corresponds to polysaccharide chain endings. % resf? and at slightly lower computational cost. [bit of a weak sentence] non-reducing end?
+The topology analysis of all dimers reveals notable intermolecular interactions across the two rings, in particular where the C6 side chain is able to interact with the nearest nitrate group on the opposite ring. All three structures exhibited similar characteristics; nuclear critial points (\acs{NCP}) lay at all nuclear sites and each chemical bond was described by a \ac{BCP}. Ring critical points (\acs{RCP}) lay at ring centres and in points of steric interference between side chain moieties. A single \ac{CCP} was observed in the region between R1C5 - R1C6 - R2N2 where the arrangement of the side chains formed a pseudo cage-like environment  (table \ref{tab:table_cp}). 
 
-\begin{table}[htp!]
+%appendix - list of all CPs?
+\begin{figure}[htp]
+  \centering
+  \begin{subfigure}[b]{0.65\linewidth}
+	\caption{Critical points idenitified for the \acs{CH3CH3} dimer.}
+  \includegraphics[width=\linewidth]{CH3_CH3-dislin_crop}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.7\linewidth}
+    \caption{Critical points for the \acs{CH3OH} dimer.}
+    \includegraphics[width=\linewidth]{CH3_OH-dislin_crop}
+  \end{subfigure}
+      \begin{subfigure}[b]{0.65\linewidth}
+	  \caption{Critical points for \acs{OHCH3} dimer.}
+    \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
+  \end{subfigure}
+    \caption{All critical points identified by \ac{QTAIM} topology analysis. \ac{NCP} are located at atomic nuclear sites, \ac{BCP} (orange points) lie on chemical bonds, or intramolecular bonding paths shown in orange; \ac{RCP} denote centres of steric interaction (yellow points) and the \ac{CCP}(green point) show the centre of a cage-like system.}
+  \label{fig:cp-all}
+\end{figure}
+
+\begin{table}[htp]
 \begin{center}
-\caption{Topology analysis of dimers with different capping groups. *only present in CH3CH3, CH3OH **only present in CH3CH3, *** intramolecular steric centres located between R1 and R2, and between nitrate groups and nearest hydrogen on the glucpyranose ring.}
+\caption{Topology analysis of dimers with different capping groups. * Only present in CH3CH3 and CH3OH; ** Only present in CH3CH3; *** Intramolecular steric centres located between R1 and R2, and between nitrate groups and nearest &\alpha&-hydrogen on the glucopyranose ring.}
 \begin{tabular}{ l c c c l} 
 \toprule
 Dimer & CP type & Number & Interacting atoms & Intramolecular bonding\\
@@ -319,10 +348,8 @@ Dimer & CP type & Number & Interacting atoms & Intramolecular bonding\\
 \end{center}
 \end{table}
 
-The topology analysis of all dimers reveals notable intermolecular interactions across the two rings, in particular where the C6 side chain is able to interact with the nearest nitrate group on the opposite ring (table \ref{tab:table_cp}). All three structures exhibited similar characteristics; \ac{NCP} lay at all nuclear sites and each chemical bond was described by a \ac{BCP}. \ac{RCP} lay at ring centres and in points of steric interference. A single \ac{CCP} was observed between R1C5 - R1C6 - R2N2 where the arrangement of the side chains constructed a pseudo cage-like environment. 
-
-Hydrogen bonding was observed between within the nitrate groups directly connected to the ring and associated $\alpha$-hydrogens (figure \ref{fig:alpha}). N1 and N2 nitrates are orientated in the eclipsed position relative to the  $\alpha$-hydrogen, bringing the terminal oxygen within H-bonding distance and generating a steric critical point (table \ref{tab:Hconformation}). 
-This was not the case for C6 nitrates, which are not directly connected to the ring. The flexbility of the C6 alkyl chain allows for gauche orientation of the \ce{CH2} group relative to the nitrate. The increased distance between the terminal oxygen of the nitrate and the $\alpha$-hydrogens exceeded H-bonding distance and redued steric crowding in the region.
+Hydrogen bonding was observed between within the nitrate groups directly connected to the ring and their associated $\alpha$-hydrogens (figure \ref{fig:alpha}). N1 and N2 nitrates are orientated in the eclipsed conformation relative to the  $\alpha$-hydrogen, bringing the terminal nitrate oxygen within H-bonding distance and generating a steric critical point between the oxygen and $\alpha$-hydrogen (table \ref{tab:Hconformation}). 
+This was not the case for C6 nitrates, which are not directly connected to the ring. The flexbility of the C6 alkyl chain allows for relaxation of the nitrate to the gauche orientation, relative to the \ce{CH2} group. The increased distance between the terminal oxygen of the nitrate and the $\alpha$-hydrogens exceeded H-bonding distance and redued steric crowding.% in the region.
 
 \begin{figure}[H]
 \centering
@@ -449,7 +476,8 @@ OHCH3 & -176.4909 \\
 %
 %On comparing surfaces - you need to compare ESPs directly, rather than visually (this is last resort) - you need a table. These aren't the same as partial charges. Can I get them from the cube files? 
 
-The \ac{ESP} maps for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped dimer (\ac{CH3OH}) and hydroxy-methoxy capped dimer (\ac{OHCH3}) represent the charge density around the molecule (figure \ref{fig:ESP}). A more negative value (increasingly red) indicates an area of higher electron density, whilst a more positive value (increasingly blue) indicates an area of lower electron density. It can be seen that the areas with lowest electron density lie around the centre of the glucopyranose rings and at the C6 position of the side branches. This can be explained by the number of adjacent oxygens drawing the electron density away from the less electronegative alkyl groups. The most electron rich areas are the outermost oxygens of the nitrate groups (Ot positions).
+The \ac{ESP} maps % for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped dimer (\ac{CH3OH}) and hydroxy-methoxy capped dimer (\ac{OHCH3}) 
+represent the charge density around the molecule (figure \ref{fig:ESP}). A more negative value (increasingly red) indicates an area of higher electron density, whilst a more positive value (increasingly blue) indicates an area of lower electron density. It can be seen that the areas with lowest electron density lie around the centre of the glucopyranose rings and at the C6 position of the side branches. This can be explained by the number of adjacent oxygens drawing the electron density away from the less electronegative alkyl groups. The most electron rich areas are the outermost oxygens of the nitrate groups (Ot positions).
 The presence of the hydroxyl capping group promotes a small decrease in electron density around the adjacent ring, illustrated by the slight deepening of the blue shading around the nearest ring bonded to the hydroxyl. The hydroxy group itself presents the lowest concentration of electron density, suggesting that the terminating hydrogen would be suceptible to nucleophilic attack. 
 The oxygen of both methoxy and hydroxy capping groups exhibit a lower concentration of electron density than that of the bridging oxygen between the two rings. This deficiency is particularly pronouced in the case of the hydroxyl group, suggesting that the methoxy group provides a more representative approximation for the extended polymer with respect to charge density. 
  %reinforced by partial charges?
@@ -516,26 +544,6 @@ The electrostatic potential and topology analysis of a mononer, dimer and trimer
 \end{figure}
 
 %If the other trimer I get has a similar energy but completely different geomtry, can tabulate it and comment on how many degrees of freedom - difficult to find local minimum, even with initial MM optimisation. This counts for dimer too
-
-
-%appendix - list of all CPs?
-\begin{figure}[htp!]
-  \centering
-  \begin{subfigure}[b]{0.65\linewidth}
-	\caption{Critical points idenitified for the \acs{CH3CH3} dimer.}
-  \includegraphics[width=\linewidth]{CH3_CH3-dislin_crop}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.7\linewidth}
-    \caption{Critical points for the \acs{CH3OH} dimer.}
-    \includegraphics[width=\linewidth]{CH3_OH-dislin_crop}
-  \end{subfigure}
-      \begin{subfigure}[b]{0.65\linewidth}
-	  \caption{Critical points for \acs{OHCH3} dimer.}
-    \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
-  \end{subfigure}
-    \caption{All critical points identified by \ac{QTAIM} topology analysis. \ac{NCP} are  located at atomic nuclear sites, \ac{BCP} (orange points) lie on chemical bonds, or intramolecular bonding paths shown in orange; \ac{RCP} denote centres of steric interaction (yellow points) and the \ac{CCP}(green point) show the centre of a cage-like system.}
-  \label{fig:cp-all}
-\end{figure}
 
 
 \section{Summary}
