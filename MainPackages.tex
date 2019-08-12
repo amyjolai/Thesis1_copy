@@ -43,6 +43,9 @@
 %  fractions for unit specifications.
 %\usepackage{units}
 
+% SI units - mostly angstrom
+\usepackage{siunitx}
+
 
 % The setspace package lets you use 1.5-sized or double line spacing.
 \usepackage{setspace}
@@ -81,7 +84,7 @@
 
 % Again, prettier tables
 \usepackage{booktabs}
-
+\usepackage{makecell}
 % The mhchem package provides chemistry formula typesetting commands
 %  e.g. \ce{H2O}
 \usepackage[version=3]{mhchem}
@@ -159,3 +162,7 @@
 
 %font, doesn't work though. But UCL suggests sans-serif fonts
 %\renewcommand{\sfdefault}{arial}
+
+% List of words that should not be split across lines:
+%\hyphenation{-OCH\textsubscript{3}}
+%\hyphenation{-OH} 	
