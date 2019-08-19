@@ -1,14 +1,27 @@
 \chapter{Denitration Mechanisms}
 \label{chapterlabel5}
+\graphicspath{ {./R_chap_3_pics/} }
 
 \section{Introduction}
+% It is agreed that the most likely first step of decomposition is denitration - find a few references
+% Shukla said it was lower energy than ring fission or depolyerisation/ peeling off
+% O-N bond is weak and susceptible to attack / homolytic fission / UV damage (find example papers for each type of breakdown)
+% Kuklja studied the breakdown routes of PETN.  HOMOFiss and ELim hono most significant, and they are the only two really relelvant for NC
+% Other ester degradation schemes in other papers
+% hydrolysis reactions and mechanisms
 
 Intro to the topic
 Stepwise denitration, peeling off, or alternative reactions dominate? Which in which conditions?
 
 Camera's equations and most others agree that first stage of degradation in the presence of "spent" (?) acids involves hydrolysis, removing the nitrate group and forming the alcohol. [Here just reiterate the reactions you will be looking at. The actual literature should already have been covered in the lit review in the intro.] 
 
-\section{Computational details}
+In this section the possible mechanisms for nitrate release from \ac{NC} are explored. The energies of intramolecular and acid hydrolysis reactions are compared in order to determine the   
+
+\section{Methodology}
+The homolytic and elimination of \ce{HNO2} reactions of \ac{PETN} were reproduced using the geometries published by Kuklja\cite{Tsyshevsky2013}. 
+
+
+\subsection{Computational details}
 \ac{NC} monomer and dimer structures underwent an initial \ac{MM} geometry optimisation using the COMPASSII forcefield(REF), performed in % Materials materials modelling package. Talk about cycles, and other settings etc?
 Materials Studio (version?). Subsequent \ac{QM} geometry optimisations to the level of 6-31+g(2df,p) / wB9X-D, except where otherwise stated, were performed in Gaussian 09 D.01 (REF). [REMEMBER TO INCLUDE NMR AND FREQ OPTIONS I USED]
 
@@ -28,26 +41,6 @@ All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. T
 
 Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
 Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
-
-\section{Truncating the polymer model}
-obvs mention Shukla's studies here.
-
-
-Looked at QTAIM for interaction with capping groups
-
-[FIX ME] \\
-The polymer structure was truncated to a dimer by Shukla et al. for the purposes of investigating the alkaline hydrolysis behaviour of NC.3,4,35 Comparisons between the monomer, dimer and trimer found the dimeric structure to be the smallest suitable model for the chemical behaviour of the polymer. This is also observed when considering the minimum unit encompassing all bonding interactions necessary for parameterisation for a forcefield, for implementation in molecular dynamics simulations. 
-The fully nitrated dimer structure used in this study consists of two non-planar β-D-glucopyranose rings joined by a glycosidic bond, with six nitrate groups attached at the 2,3,6 positions on each ring (Figure 11
-
-The dimer ends are capped by methoxy groups rather than hydroxyl groups as were employed in Shukla’s study. From the perspective of partial charges, and to an extent steric considerations, methoxy groups are expected to provide a better approximation for the extended polysaccharide.
-
-Shukla’s work identified the nitrate group attached to carbon three (C3) as the most susceptible to denitration and the first to be removed. This is supported by the distribution of partial charges in the molecule, with disregard of the capping groups. Thus, the nitrate group on C3 was used as the target site for degradation studies.
-
-\subsection{Denitration Sequence}
-
-Refer back to literature studies here. 
-
-How I picked which nitrate monomers to work with - just based on thermodynamics, and agreement with literature though, not experimental, or kinetic barrier work. But in the grand scheme of things, it doesn't matter too much, as I'd expect all to display a certain percentage of denitration / not being nitrated at all during synthesis (based on experimental evidence / fibre of the source cellulose etc) and the much more significant effect is how the post-denitration products go on to further react. 
 
 \section{Thermal decomposition mechanisms}
 i.e not in acid
