@@ -10,7 +10,27 @@
 % Other ester degradation schemes in other papers
 % hydrolysis reactions and mechanisms
 
-Intro to the topic
+%general nitrate ester decomoposition should have been well covered in the lit review, so only summarize / cover the bits relevent to understanding the chapter contents, here.  
+The first stage of thermolytic decomposition for nitrate esters is widely considered to be homolytic fission at the O-N bond linking the nitrate to the alkyl chain, leading to the loss of \ce{NO2.}. %REF 
+The weak O-N bond (enthalpy of XX ) is easily cleaved when exposed to elevated temperatures, UV light or impact. %REF for all three of these. Might have to omit the last if I can't find anythign to support. 
+%Much work has studied the thermolysis of \ac{NC}, with a number of studies.. but ambient?
+Ambient ageing conditions differ from externally stimulated decomposition routes. %REF How?
+Under acidification, hydrolysis plays a significant role. %Alkaline hydrolysis should already have been done to death in the intro?
+Hu \textit{et al.} found that whilst primary and secondary nitrates were resilient to hydrolysis for pH > 0, tertiary nitrates underwent hydrolytic nucleophilic substition, reacting with water and sulfate to form alcohols and organosulfates\cite{hu2011}. 
+
+\begin{figure}[h]
+  \centering
+	\includegraphics[width=0.8\linewidth]{tertiary_nitrate_Hu2011}
+\caption{The hydrolysis of 1,3,4-trihydroxy-2-methylbutan-2-yl nitrate via nucleophilic subsitution, in the solvated aerosol phase. Adapted from the work of Hu \textit{et al.}\cite{hu2011}.}
+\end{figure}
+
+Spent acids remain in the \ac{NC} matrix following synthesis even with thorough washing procedures. %but how much acid? What concentrations? %REF one of those declassified studies. 
+Acids are also generated via the reactions of \ce{NO2.}, following homolysis. 
+
+Nitrate homolysis is an endothermic reaction; released products go on to react with other species in the system in exothermic processes that serve to accelerate further decomposition via further reaction or heating the system. 
+Tsyshevsky \textit{et al.}\cite{Tsyshevsky2013} studied the intramolecular reactions in \ac{PETN} under vacuum and in the bulk crystal. It was found that the elmination of \ce{HNO2} produced the most energetically favourable denitration pathway, but that homolytic fission dominated preliminary decomposition steps due to its low activation barrier. Global decomposition processes were determined by the interplay between the two mechanisms, with initial homolysis products facilitating wider decomposition,
+
+
 Stepwise denitration, peeling off, or alternative reactions dominate? Which in which conditions?
 
 Camera's equations and most others agree that first stage of degradation in the presence of "spent" (?) acids involves hydrolysis, removing the nitrate group and forming the alcohol. [Here just reiterate the reactions you will be looking at. The actual literature should already have been covered in the lit review in the intro.] 
@@ -18,7 +38,7 @@ Camera's equations and most others agree that first stage of degradation in the 
 In this section the possible mechanisms for nitrate release from \ac{NC} are explored. The energies of intramolecular and acid hydrolysis reactions are compared in order to determine the   
 
 \section{Methodology}
-The homolytic and elimination of \ce{HNO2} reactions of \ac{PETN} were reproduced using the geometries published by Kuklja\cite{Tsyshevsky2013}. 
+The homolysis and elimination of \ce{HNO2} reactions of \ac{PETN} were reproduced using the geometries published by Tsyshevsky \textit{et al.}\cite{Tsyshevsky2013}. 
 
 
 \subsection{Computational details}
@@ -42,11 +62,12 @@ All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. T
 Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
 Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
 
-\section{Thermal decomposition mechanisms}
+\section{Results and discussion}
+\subsection{Thermal decomposition mechanisms}
 i.e not in acid
 Whilst the primary focus of this study is to explore the action of acids in the aging processes of  \ac{NC} , the thermolytic degradation routes must also be considered. These pathways are confluent with the reactions in the acid hydrolysis pathway and will dominate at elevated temperatures, due to their intramolecular character and therefore rapid, nature.
 
-\subsection{Homolytic fission}
+\subsubsection{Homolytic fission}
 Comment on how you did it for PETN first, as a tester (but put the results in the appendices?)
 
 [FIX ME - this seems to be computational details stuff] A methyl nitrate tester molecule was used for preliminary homolytic fission calculations on an N-O ester linkage (MECH1) (Figure 13). The bonding distance between oxygen and nitrogen was increased by 0.1 Å for 20 steps, beyond the length expected for bond fission. The separation of N-O was scanned using ROB3LYP and UB3LYP/6-31+G(d). Both test cases presented good agreement with the expected reaction co-ordinate.
@@ -61,8 +82,12 @@ The reaction co-ordinate for the NC dimer did not present such a positive result
 Though the scans did not identify any transition states or intermediate products, inspection of the geometry as the scan progressed revealed crucial points during the evolution of bond order. As the NO2 group departed O22, a partial double bond formed between C3 and O22, at step 12 of the scan. The frequency calculation on this geometry revealed a single imaginary frequency of -135.01 cm-1, indicating a transition state.
 The attempt to optimise this using a TS search was not successful. Multiple IRC calculations with various step sizes and both the EPC and HPC algorithms were also unsuccessful.
 
+%Shukla on the influence of bulk water:
+%calculation in bulk water solution modeled using the PCM approach [26]. Important structural parameters of geometries involved in these reactions are shown in Fig. 2 while the computed energies of the reactions are presented in the 1. It is clear from Fig. 2 that bulk water does not usually have signifi- cant influence on the geometry of species at various stages of the alkaline hydrolysis reaction, but the energetics are quite different from the gas phase results. Such change in the reaction energies including enthalpies and free energies are due to the stabilization/destabilization of reactant complexes, transition states, reaction intermediates and products consequent to the water solvation relative to the corresponding gas phase reaction species. Significant role of entropies in water solution is also evident from the large change in the free energies of reactions compared to that in the gas phase. The
 
-\subsection{Intramolecular elimination of \ce{HNO2}}
+%ie. Make sure you understand the influence of entropy and how it plays a part!
+
+\subsubsection{Intramolecular elimination of \ce{HNO2}}
 
 [Fix all of this]
 It was expected that as O22 approached H44 the generated reaction-co-ordinate would exhibit the normal reactant $\rightarrow$  transition state $\rightarrow$ product pattern, followed by either an asymptotic increase in energy or termination of the geometry scan, when the two atoms became too close or collided. However, despite showing the correct bond rearrangements as the distance between the nitrate oxygen the α-hydrogen decreased, the PES diagram only presented a rapid increase in energy. 
@@ -89,19 +114,21 @@ THINK ABOUT COUNTERPOISE CORRECTION FOR LATER CALCS.
 Different DFT functionals and HF and MP2 (?)
 Scans of the nitrate leaving the protonated NC. 2D scans of the water donating proton and nitrate leaving.
 Can also mention the scans which don't have water in - just NO2 leaving.
-
-\subsubsection{Comparison of different methods}
-wb97x-d, restricted vs unrestricted - show their 2D gaussian scan.
-uwb97x-d/ 6-31+g*, couldn't complete due to computational limitations. Or perhaps this is more of an appendicies thing, dependnt on the rest of the work in this section.
-
-\section{ \textit{(Effects of acid concentration on the Degree of denitration) - Maybe sprout to another section}}
-Phase diagram of monomer and dimer of acid conc vs nitrocellulose conc, for the denitration direction AND the nitration direction. Denitration is more important to us here, but nitratio ties in more with the paper by Rafeev.
-Come up with a sequence for nitration and denitration.
-Comment on the effect of acid on the denitration / nitrations behaviour of NC.
-
-\subsection{ \textit{(Monomeric NC model)}}
-\subsection{ \textit{(Dimeric NC model)}}
+%
+%\subsubsection{Comparison of different methods}
+%wb97x-d, restricted vs unrestricted - show their 2D gaussian scan.
+%uwb97x-d/ 6-31+g*, couldn't complete due to computational limitations. Or perhaps this is more of an appendicies thing, dependnt on the rest of the work in this section.
+%
+%\section{ \textit{(Effects of acid concentration on the Degree of denitration) - Maybe sprout to another section}}
+%Phase diagram of monomer and dimer of acid conc vs nitrocellulose conc, for the denitration direction AND the nitration direction. Denitration is more important to us here, but nitratio ties in more with the paper by Rafeev.
+%Come up with a sequence for nitration and denitration.
+%Comment on the effect of acid on the denitration / nitrations behaviour of NC.
+%
+%\subsection{ \textit{(Monomeric NC model)}}
+%\subsection{ \textit{(Dimeric NC model)}}
 
 \section{Summary}
-Found that Homolytic fission faster than elimination of HNO2, but the latter is more likely at etc... same as for PETN
-Phase diagram shows that with the increase in acid concentration, the degree of substitution increases by some modelling factor
+Found that Homolytic fission faster than elimination of HNO2, but the latter is more likely at etc... same as for PETN.
+Protonation is most likely on the X site. 
+
+%Phase diagram shows that with the increase in acid concentration, the degree of substitution increases by some modelling factor
