@@ -2,24 +2,104 @@
 \label{chapterlabel6}
 
 \section{Introduction}
+%secondary reactions
+%autocatalytic rate 
+%detailed list of possible reactions products - due to ageing or otherwise listed
+Following the initial denitration step, products are evolved as gases or remain in the \ac{NC} matrix. Reactive species include the acidic products from the elimination fo \ce{HNO2} and 
 
-\section{Computational details}
+In this section, secondary and extended reaction schemes for the low temperature ageing of \ac{NC} are explored. Mechanisms proposed by Camera \textit{et al.} and Aellig \textit{et al.} are probed to determine the reactions responsible for the experimentally observed degradation products.
+
+\section{Methodology}
+The species reactions proposed by Camera and Aellig \textit{et al.} were geometry optimised using \ac{wb97xd}, and \ac{B3LYP} functionals. The reactions were initally modelled using ethyl nitrate as a test system before expansion to the full C2 
+monomer. 
+
+\subsection{Computational details}
+All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and \ac{B3LYP} functionals. Optimisations were repeated with the \ac{PCM} to introduce solvent effects. 
 
 \section{Thermodynamics of Ethyl Nitrate reactions}
 For an in ital comparison of the methods you used, you could do a diagram like the one Kuklja did (kuja2014.pdf, page 89, fig 3.7).
 She also makes mention of the overestimation of activation barriers for pure DFT methods. Make sure you know the background surrounding this - why does this occur, and what is done to remedy it?
 
+%\begin{figure}[h]
+%  \centering
+%	\includegraphics[width=0.8\linewidth]{name}
+%\caption{\cite{}.}
+%\end{figure}
+
+
+Camera' equations \\
+Hydrolysis \\
+\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} \\
+\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} \\
+\ce{NO2+ + 2H2O <=>[\text{fast}] HNO3 + H3O+} \\
+
+Initiation \\
+\ce{CH3CH2OH + HNO3  CH3CH=O + H2O + HNO2} \\
+
+Propagation \\
+\ce{HNO2 + HNO3 <-> N2O4 + H2O} \\
+\ce{N2O4 <-> 2 .NO2} \\
+\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2} \\
+\ce{CH3^{.}CHOH + HNO3 -> CH3CHO + H2O + ^{.}NO2} \\
+
+Aellig's equations\\
+Initiation \\
+\ce{4HNO3 <=> 4NO2 + 2H2O + O2} \\
+\ce{2NO2 + H2O <=> N2O4 + H2O} \\
+\ce{N2O4 + H2O -> HNO3 + HNO2} \\
+
+Propagation\\
+\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O} \\
+\ce{CH3CH2ONO -> CH3CH=O + HNO} \\
+\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO} \\
+\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2} \\
+
+Termination \\
+\ce{HNO + HNO -> HON=NOH} \\
+\ce{HON=NOH -> N2O + H2O} \\
+
+%Ionic reactions
+%
+%\ce{NO2+ + 2 H2O <-> HNO3 + H3O+}
+%
+%
+%Acid reactions
+%
+%\ce{CH3CH2OH + HNO3 -> CH3CH=O + H2O + HNO2}
+%
+%\ce{HNO2 + HNO3 <-> N2O4 + H2O}
+%\ce{N2O4 <-> 2 ^{.}NO2}
+%
+%\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O}
+%\ce{CH3CH2ONO -> CH3CH=O + HNO}
+%
+%\ce{HNO + HNO -> HON=NOH}
+%
+%\ce{HON=NOH -> N2O + H2O}
+%
+%Radical reactions
+%
+%\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}
+%\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+%
+%Didn't go:
+%
+%\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2}
+%\ce{CH3^{.}CHOH + HNO3 -> CH3CHO + H2O + ^{.}NO2}
+
+
+
 \subsection{Radical mechanistic route}
 
 \subsection{Ionic mechanistic route}
 
-\section{Thermodynamics of Nitrocellulose Monomer}
+\section{Reactions of Nitrocellulose Monomer}
 
-\section{ \textit{(Kinetics of Ethyl Nitrate)}}
-\subsection{Radical mechanistic route}
-\subsection{Ionic mechanistic route}
-
-\section{ \textit{(Kinetics of Nitrocellulose Monomer)}}
+%\section{ \textit{(Kinetics of Ethyl Nitrate)}}
+%\subsection{Radical mechanistic route}
+%\subsection{Ionic mechanistic route}
+%
+%\section{ \textit{(Kinetics of Nitrocellulose Monomer)}}
 
 
 
