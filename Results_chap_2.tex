@@ -1,24 +1,50 @@
 \chapter{Nitration \/ Denitration Sequence of Nitrocellulose}
 \label{chapterlabel4}
+\graphicspath{ {./R_chap_2_pics/} }
 
 \section{Introduction}
+\label{chapter4:intro}
+This section utlises the numbering scheme introduced in section \ref{sect:labellingsystem}.
 
-\section{Computational details}
-%Programme, method (e.g. functional/ FF), settings(basis sets, thermostats, ensembles etc)
+Moniruzzaman \textit{et al.} used the UV absoprtion of \ac{SB59} (figure \ref{fig:anthraquinone_SB59}) to analyse the activation energies for the removal of the nitrate at the C2, C3, C6 sites on \ac{NC}\cite{moniruzzaman2014}.
+The reaction of NO\textsubscript{x} with the \ac{SB59} dye mimics the action of stabilisers within \ac{NC} formulations, as the dye consumes any NO\textsubscript{x} released in the system. This eliminates the possibility of further reactions leading to the generation of acids which in turn contribute to autocatalytic processes. %REF autocatalytic processes, and possibly evidence that stabilisers behave by absorbing NOx sepcies. Maybe even some examples of stabilisers that do this?
+Unaged \ac{NC} thin films and films aged at 40\textdegree C, 50\textdegree C, 60\textdegree C and 70\textdegree C for different timescales of up to 2000hrs for 40\textdegree C, were compared.
+%include their graph?
+%[CHECK THIS - they also mention the nitration of the dye - they may have used the nitration of the dye at the marker] 
+The reactant \ac{NC} was of 12.15\%N by mass, indicating that rings were of non-uniform, mixed nitration level.  Mean \ac{DOS} was 2.307. 
 
-%Include further calculation details - such as transition state theory etc, in another subsection (e.g. Transtion state theory) under this header.
+\begin{figure}[h]
+  \centering
+	\includegraphics[width=0.8\linewidth]{SB59_NOx_reaction}
+\caption{Proposed reaction pathway for anthraquinone dye (\ac{SB59}) with NOx from the work of Moniruzzaman \textit{et al.}\cite{moniruzzaman2014}.}
+\label{fig:anthraquinone_SB59}
+\end{figure}
 
-All chemical species underwent an initial \ac{QM} geometry optimisation to the level of $\omega$B97X-D / 6-31G(2df,p) and except where otherwise stated, were performed in Gaussian 09 D.01 (REF). %[REMEMBER TO INCLUDE ANY NMR AND FREQ OPTIONS I USED]
+Initial conclusions %from literature considering both experimental and QM studies
+stated that the nitrate at the C3 position would be most reactive, followed by C2 and C6 as the most stable site.  %,  based on what data/ conclusions? Gotta click through the literature rabbit holes 
+This contrasts with the work of Shukla \textit{et al.} which determined that denitration via alkyaline hydrolysis followed the order of C3$\rightarrow$C6$\rightarrow$C2\cite{Shukla2012,Shukla2012a}. However, Shukla's study considered only the fully nitrated system. There is evidence that nitration and denitration is influenced by the presence of a nitrate group at adjacent carbon sites. %REF
+This suggests that the denitration order could vary with the mechanism of denitration, \ac{DOS} of the \ac{NC}, and distribution of the nitrate groups across the polymer rings.
 
-All studies were performed in the gaseous phase and initial structures were geometry optimised with B3LYP/6-311+G(d,p) and tight convergence criteria. 
-Any incomplete or unconverged optimisations were restarted with generation of new internal co-ordinates via the geom=(newdefinition) keyword.  
-% //REJIGG THE BELOW
-The fully nitrated dimer structure was used for MECH 1-2. For the mechanism involving protonation (MECH3), a hydronium cation was independently optimised to the same level. The dimer+cation complex was then optimised with and without CP correction for comparison. For the starting geometry of the intramolecular SN2 reaction (MECH4), the first ring of original dimer was manually adjusted to a boat conformation. Substituents were adjusted to appropriate axial and equatorial positions. 
-All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. Transition state searches were performed using UB3LYP/6-31+G(d). IRC calculations were performed using UB3LYP/6-31+G(d) and either the Hessian-based Predictor-Corrector (HPC), or the Euler integration predictor with the HPC corrector (EPC) algorithm.46
+%% Note: nitration is via electrophilic subsitition of :OH by NO2+, and denitration via the reverse - hydrolysis / nucleophilic subsitition. We do not consider the other mechanisms of denitraiton here. 
+%In this section the nitration and denitration order of a fully nitrated \ac{NC} monomer at thermal equilibrium is determined. The results are compared against experimental observations using simluated NMR and IR spectra, in order to deconflict contradictory views presented in literature on the order of subsitution. 
 
-Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
-Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
-
-\section{Results \& Discussion}
-
-\section{Summary}
+%\section{Methodology}
+%\subsection{Computational details}
+%%Programme, method (e.g. functional/ FF), settings(basis sets, thermostats, ensembles etc)
+%
+%%Include further calculation details - such as transition state theory etc, in another subsection (e.g. Transtion state theory) under this header.
+%
+%All chemical species underwent an initial \ac{QM} geometry optimisation to the level of $\omega$B97X-D / 6-31G(2df,p) and except where otherwise stated, were performed in Gaussian 09 D.01 (REF). %[REMEMBER TO INCLUDE ANY NMR AND FREQ OPTIONS I USED]
+%
+%All studies were performed in the gaseous phase and initial structures were geometry optimised with B3LYP/6-311+G(d,p) and tight convergence criteria. 
+%Any incomplete or unconverged optimisations were restarted with generation of new internal co-ordinates via the geom=(newdefinition) keyword.  
+%% //REJIGG THE BELOW
+%The fully nitrated dimer structure was used for MECH 1-2. For the mechanism involving protonation (MECH3), a hydronium cation was independently optimised to the same level. The dimer+cation complex was then optimised with and without CP correction for comparison. For the starting geometry of the intramolecular SN2 reaction (MECH4), the first ring of original dimer was manually adjusted to a boat conformation. Substituents were adjusted to appropriate axial and equatorial positions. 
+%All geometry scans were performed at 6-31+G(d) using either UB3LYP or ROB3LYP. Transition state searches were performed using UB3LYP/6-31+G(d). IRC calculations were performed using UB3LYP/6-31+G(d) and either the Hessian-based Predictor-Corrector (HPC), or the Euler integration predictor with the HPC corrector (EPC) algorithm.46
+%
+%Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
+%Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
+%
+%\section{Results \& Discussion}
+%
+%\section{Summary}
