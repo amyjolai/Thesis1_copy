@@ -16,18 +16,16 @@ Following the initial denitration step, products are evolved as gases or remain 
 Reactive nitrogen dioxide radicals generated from homolysis of the O-N bond not evolved as \ce{NO2} gas, are likely to migrate within the bulk and attack other sites in the polymer and free species. Nitrous acid released from intramolecular reactions within the polymer contribute to the acidity of the overall system, lowering the pH and further stimulating hydrolysis processes. %(who? et al
 
 The neutral and alkaline hydrolysis reactions follow a pseudo-first order process. The degradation of cellulose also follows a pseudo-first order rate\cite{Calvini2008}.
-
 As described in section \ref{chapter4:intro}, Moniruzzaman \textit{et al.} analysed the reaction of nitrates with anthraquinone dye \acs{SB59} to probe the reactivity at each of the C2, C3 and C6 sites on \ac{NC}, using \ac{UVVIS} and H NMR spectra (figure \ref{fig:SB59_NOx}).
-In the study, the presence of secondary reaction products following the liberation of the nitrate group was observed in the \ac{UVVIS} absorption spectra. Samples with longer ageing time presented spectra dominated by consecutive products. 
+In the study, the presence of secondary reaction products following the liberation of the nitrate group was observed in the \ac{UVVIS} absorption spectra. Samples with longer ageing time presented spectra dominated by consecutive products. Though figure \ref{fig:SB59_NOx} illustrates the reaction of the dye with NO groups, the study makes no indication of the source of NO\textsubscript{x}, except that they are products of thermolysis of \ac{NC}. %Whether these are 
 
 \begin{figure}[h]
   \centering
-	\includegraphics[width=0.6\linewidth]{SB59_NOx_reaction}
+	\includegraphics[width=0.5\linewidth]{SB59_NOx_reaction}
 \caption{Proposed reaction pathway for anthraquinone dye (\ac{SB59}) with NOx released as a result of denitration,  from the work of Moniruzzaman \textit{et al.}\cite{moniruzzaman2014}. }
 \label{fig:SB59_NOx}
 \end{figure}
 
-Though figure \ref{fig:SB59_NOx} illustrates the reaction of the dye with NO groups, the study makes no indication of the source of NO\textsubscript{x}, except that they are products of thermolysis of \ac{NC}. Whether these are 
 
 %Discuss the work of Camera, Aellig and Chin 2007
 
@@ -38,7 +36,7 @@ The species reactions proposed by Camera and Aellig \textit{et al.} were geometr
 monomer. 
 
 \subsection{Computational details}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and \ac{B3LYP} functionals. Optimisations were repeated with the \ac{PCM} to introduce solvent effects. 
+All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and \ac{B3LYP} functionals. Optimisations were repeated with \ac{PCM} to introduce solvent effects. 
 
 \section{Results and Discussion}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Thermodynamics of Ethyl Nitrate reactions}%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,16 +48,37 @@ All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and
 %	\includegraphics[width=0.8\linewidth]{name}
 %\caption{\cite{}.}
 %\end{figure}
+%$\Delta$-G\textsubscript{r}
+%$\textDelta$H\textsubscript{r}
+
+\begin{table}[htp]
+\begin{center}
+\caption{Free energies of protonation at different oxygens sites on ethyl nitrate.}
+\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+\toprule
+\multirow{2}{*}{}& \multirow{2}{*}{\ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O}} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\cline{3-6} \\
+  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+\hline
+1 & Terminal O &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
+2 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+3 & 
+\bottomrule
+\end{tabular}
+\label{tab:reactions}
+\end{center}
+\end{table}
 
 \begin{table}[htp]
 \begin{center}
 \caption{Reaction energies of reactions following denitration. Calculations carried out at 6-31+G(2df,p) level and solvent \acs{PCM} was implemented.}
-\begin{tabular}{ c c c c c } 
+\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
 \toprule
-\multirow{2}{1em}{Index}& Reaction & \multicolumn{2}{c}{\Delta G\textsubscript{r}} \\ %& \multicolumn{4}{c}{ $\textDelta$H\textsubscript{r}} \\
- & & wb97xd & PCM \\% & \acs{B3LYP} & PCM & \acs{wb97xd} & PCM& \acs{B3LYP} & PCM \\
+\multirow{2}{*}{}& \multirow{2}{*}{Reaction} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\cline{3-6} \\
+  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \hline
-1 & CH3CH2ONO2 +H2O->	CH3CH2OH	+HNO3 &  0.000450 & 0.000015  \\
+1 & \ce{CH3CH2ONO2 + H2O -> CH3CH2OH + HNO3} &  0.007232 & 0.008311 & 0.00635 & 0.007715\\
+2 & \ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O} &	-0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+3 & 
 \bottomrule
 \end{tabular}
 \label{tab:reactions}
