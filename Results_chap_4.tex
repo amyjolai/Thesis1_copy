@@ -5,19 +5,25 @@
 \label{chapterlabel6}
 \graphicspath{ {./R_chap_4_pics/} }
 
-\section{Introduction}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-[Excerpt from Section \ref{chapter4:intro} added above, so the below paragraph makes sense.]
+% In this chapter:
+% Which reactions happen post denitration, and which don't (based on pure thermodynamics)
+% Which ones contribute to the end products seen in literature, and which much be consumed in subsequent reactions
+% {Mention that this list is not likely to be exhaustive, but cover some of the more ''obvious'' ones}
 
+\section{Introduction}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %secondary reactions
 %autocatalytic rate 
-%detailed list of possible reactions products - due to ageing or otherwise listed
-Following the initial denitration step, products are evolved as gases or remain in the \ac{NC} matrix. 
+	
+Following the primary denitration step, products are evolved as gases or remain in the \ac{NC} matrix. 
 %Reactive species include %the acidic products from the elimination of \ce{HNO2} and 
-Reactive nitrogen dioxide radicals generated from homolysis of the O-N bond not evolved as \ce{NO2} gas, are likely to migrate within the bulk and attack other sites in the polymer and free species. Nitrous acid released from intramolecular reactions within the polymer contribute to the acidity of the overall system, lowering the pH and further stimulating hydrolysis processes. %(who? et al
+Reactive nitrogen dioxide radicals generated from homolysis of the O-N bond %not evolved as \ce{NO2} gas, 
+are likely to migrate within the bulk and attack other sites in the polymer 
+% and free species
+. Nitrous acid released from intramolecular reactions within the polymer contribute to the acidity of the overall system, lowering the pH and further stimulating hydrolysis processes. %(who? et al
 
-The neutral and alkaline hydrolysis reactions follow a pseudo-first order process. The degradation of cellulose also follows a pseudo-first order rate\cite{Calvini2008}.
-As described in section \ref{chapter4:intro}, Moniruzzaman \textit{et al.} analysed the reaction of nitrates with anthraquinone dye \acs{SB59} to probe the reactivity at each of the C2, C3 and C6 sites on \ac{NC}, using \ac{UVVIS} and H NMR spectra (figure \ref{fig:SB59_NOx}).
-In the study, the presence of secondary reaction products following the liberation of the nitrate group was observed in the \ac{UVVIS} absorption spectra. Samples with longer ageing time presented spectra dominated by consecutive products. Though figure \ref{fig:SB59_NOx} illustrates the reaction of the dye with NO groups, the study makes no indication of the source of NO\textsubscript{x}, except that they are products of thermolysis of \ac{NC}. %Whether these are 
+Neutral and alkaline hydrolysis reactions follow a pseudo-first order process. %The degradation of cellulose also follows a pseudo-first order rate\cite{Calvini2008}.
+As described in section \ref{chapter4:intro}, Moniruzzaman \textit{et al.} used the reaction of nitrates with anthraquinone dye \acs{SB59} to probe the reactivity at each of the C2, C3 and C6 sites on \ac{NC}, using \ac{UVVis} and \textsuperscript{1}H NMR spectroscopy (figure \ref{fig:SB59_NOx}).
+High concentrations of secondary reaction products following the liberation of the nitrate group were observed. Samples with longer ageing time presented spectra dominated by consecutive products. Though figure \ref{fig:SB59_NOx} illustrates the reaction of the dye with NO groups, the study makes no indication of the source of NO\textsubscript{x}, except that they are products of thermolysis of \ac{NC}. %Whether these are 
 
 \begin{figure}[h]
   \centering
@@ -54,36 +60,57 @@ All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and
 \begin{table}[htp]
 \begin{center}
 \caption{Free energies of protonation at different oxygens sites on ethyl nitrate.}
-\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+\begin{tabular}{ l *{4}{S[table-format = 2.4]}} 
 \toprule
-\multirow{2}{*}{}& \multirow{2}{*}{\ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O}} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\cline{3-6} \\
-  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+\multirow{2}{*}{protonation site } & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\\\cline{2-5}
+  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \hline
-1 & Terminal O &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
-2 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\
-3 & 
+ Terminal (up) O \ce{CH3CH3ONO2H+} &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
+ Terminal (down) O  & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\ 
+ Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+% \ce{CH3CH3ONOOH+} 
+% \ce{CH3CH3ONO(H+)O} 
+% \ce{CH3CH3O(H+)NOO} 
 \bottomrule
 \end{tabular}
 \label{tab:reactions}
 \end{center}
 \end{table}
 
-\begin{table}[htp]
-\begin{center}
-\caption{Reaction energies of reactions following denitration. Calculations carried out at 6-31+G(2df,p) level and solvent \acs{PCM} was implemented.}
-\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
-\toprule
-\multirow{2}{*}{}& \multirow{2}{*}{Reaction} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\cline{3-6} \\
-  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
-\hline
-1 & \ce{CH3CH2ONO2 + H2O -> CH3CH2OH + HNO3} &  0.007232 & 0.008311 & 0.00635 & 0.007715\\
-2 & \ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O} &	-0.019487 & 0.014003 & -0.021877 & 0.010113 \\
-3 & 
-\bottomrule
-\end{tabular}
-\label{tab:reactions}
-\end{center}
-\end{table}
+
+%\begin{table}[htp]
+%\begin{center}
+%\caption{Free energies of protonation at different oxygens sites on ethyl nitrate.}
+%\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+%\toprule
+% \multicolumn{2}{c}{\multirow{2}{*}{\ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O}}} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\\\cline{3-6}
+%  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+%\hline
+%1 & Terminal O &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
+%2 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+%3 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\ 
+%\bottomrule
+%\end{tabular}
+%\label{tab:reactions}
+%\end{center}
+%\end{table}
+
+%\begin{table}[htp]
+%\begin{center}
+%\caption{Reaction energies of reactions following denitration. Calculations carried out at 6-31+G(2df,p) level and solvent \acs{PCM} was implemented.}
+%\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+%\toprule
+%\multirow{2}{*}{}& \multirow{2}{*}{Reaction} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\\\cline{3-6} 
+%  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+%\hline
+%1 & \ce{CH3CH2ONO2 + H2O -> CH3CH2OH + HNO3} &  0.007232 & 0.008311 & 0.00635 & 0.007715\\
+%2 & \ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O} &	-0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+%3 & 
+%\bottomrule
+%\end{tabular}
+%\label{tab:reactions}
+%\end{center}
+%\end{table}
 
 
 
