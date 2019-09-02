@@ -29,6 +29,13 @@
 %  and also adds the option to *force* LaTeX to put the float
 %  HERE, with the [H] option to the float environment.
 \usepackage{float}
+% Just for the scheme thing, tbh.
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[
+  fileext = los ,
+  listname = {List of Schemes} ,
+  name = Scheme
+]{scheme}
 
 % The amsmath package enhances the various ways of including
 %  maths, including adding the align environment for aligned
@@ -55,6 +62,15 @@
 % That just does body text -- if you want to expand *everything*,
 %  including footnotes and tables, use this instead:
 %\renewcommand{\baselinestretch}{1.5}
+
+% The command \renewcommand{\thefootnote}{\roman{footnote}} sets the number styles to lowercase roman. Other possible styles are:
+%
+% \arabic Arabic numerals. (The default)
+% \Roman Upper case Roman numerals.
+% \alph Alphabetic lower case.
+% \Alph Alphabetic upper case.
+% \fnsymbol A set of 9 special symbols.
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 
 % PGFPlots is either a really clunky or really good way to add graphs

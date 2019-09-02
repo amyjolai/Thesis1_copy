@@ -5,26 +5,38 @@
 \label{chapterlabel4}
 \graphicspath{ {./R_chap_2_pics/} }
 
-[Added as preamble for Chapter 4 below]
+[Added as preamble for Chapter 4 below]\newline
+[Review usage of NO\textsubscript{x} for consistency with the whole text. Maybe just stick to "nitrous oxides" for the whole document.]
+
 % [ Fix decimal places etc https://tex.stackexchange.com/questions/111670/scientific-notation-only-for-large-numbers
 % and table formatting https://tex.stackexchange.com/questions/425414/missing-number-treated-as-zero-using-booktabssiunits?noredirect=1&lq=1]
 
 \section{Introduction}
 \label{chapter4:intro}
-
+% Read through an introduce more, the relevant peak intensities, etc. 
 %This section utlises the numbering scheme introduced in section \ref{sect:labellingsystem}.
-Moniruzzaman \textit{et al.} used the UV absorption of an anthraquinone dye to determine the activation energies for the removal of the nitrate at C2, C3, C6 sites on \ac{NC} (figure \ref{fig:anthraquinone_SB59})\cite{moniruzzaman2014}. \acs{UVVis} was chosen as an efficient, non-destructive method of monitoring the decomposition process.
-The reaction of the \ac{SB59} with NO\textsubscript{x} released by denitration mimics the action of stabilisers within \ac{NC} formulations. The dye consume any nitrates released in the system, eliminating the possibility of successive reactions generating acidic species. Decreasing peak intensity of the dye and appearance of new absorption regions gave insight into the extent of denitration and the presence of secondary reaction products.  The presence of acid has been linked to autocatalytic rates of degradation during later stages of \ac{NC} degradation\cite{Edge1990,FernandezdelaOssa2011,Baker1952,Binke1999}. %REF autocatalytic processes, and possibly evidence that stabilisers behave by absorbing NOx sepcies. Maybe even some examples of stabilisers that do this?
+Moniruzzaman \textit{et al.} used the \acs{UV} absorption of an anthraquinone dye to determine the activation energies for the removal of the nitrate at C2, C3, C6 sites on \ac{NC} (figure \ref{fig:anthraquinone_SB59})\cite{Moniruzzaman2008,Moniruzzaman2014}. \acs{UVVis} was chosen as an efficient, non-destructive method of monitoring the decomposition process.
+The reaction of the \ac{SB59} with NO\textsubscript{x} released by denitration, mimics the action of stabilisers such as \ac{DPA} and \ac{2NDPA} commonly used in \ac{NC} formulations. 
+%https://www.islandpyrochemical.com/nitrocellulose-based-propellants/
+The secondary amine groups of the dye consume any nitrates in the system, eliminating the possibility of successive reactions generating acidic species. The presence of acid has been linked to autocatalytic rates of degradation during later stages of \ac{NC} degradation\cite{Edge1990,FernandezdelaOssa2011,Baker1952,Binke1999}. %REF autocatalytic processes, and possibly evidence that stabilisers behave by absorbing NOx sepcies. Maybe even some examples of stabilisers that do this?
 
 \begin{figure}[ht!]
   \centering
 	\includegraphics[width=0.35\linewidth]{anthraquinone_SB59}
-\caption{\acf{SB59} used to probe the release of nitrates from \ac{NC} using UV-Vis and \textsuperscript{1}H NMR spectroscopy\cite{moniruzzaman2014}. %The action of nitrate absorption by the dye imitates that of stabilisers commonly used with nitrate ester formulations. 
-Following reaction with NO\textsubscript{x}, the UV absorption peak of the dye is depleted.}
+\caption{\acf{SB59} used to probe the release of nitrates from \ac{NC} using \ac{UVVis} and \textsuperscript{1}H NMR spectroscopy\cite{Moniruzzaman2014}. %The action of nitrate absorption by the dye imitates that of stabilisers commonly used with nitrate ester formulations. 
+%Following reaction with NO\textsubscript{x}, the UV absorption peak of the dye is depleted.
+}
 \label{fig:anthraquinone_SB59}
 \end{figure}
 
-Un-aged \ac{NC} thin films and films aged at 40\textdegree C, 50\textdegree C, 60\textdegree C and 70\textdegree C for timescales of up to 2000hrs for 40\textdegree C, were compared.
+\begin{figure}[h]
+  \centering
+	\includegraphics[width=0.75\linewidth]{monirazzuman-UV}
+\caption{\acs{UV} spectra of \ac{NC} thin films with and without accelerated ageing at 60 °C, over a total time of 37 days, from the work of Moniruzzaman \textit{et al.}\cite{Moniruzzaman2008}. The unaged peak demonstrates a strong absorbance in the region corresponding to the \ac{SB59} dye (. This decreases as the dye is consumed in the reaction of NO\textsubscript{x} released upon \ac{NC} denitration.}
+\label{fig:monirazzuman-UV}
+\end{figure}
+
+Un-aged \ac{NC} thin films and films aged at 40\textdegree C, 50\textdegree C, 60\textdegree C and 70\textdegree C for timescales of up to 2000hrs for 40\textdegree C, were compared. Decreasing absorption peak intensity of the dye and appearance of new absorption regions gave insight into the extent of denitration and the presence of secondary reaction products (figure \ref{fig:monirazzuman-UV}).  
 %include their graph?
 %[CHECK THIS - they also mention the nitration of the dye - they may have used the nitration of the dye at the marker] 
 The \ac{NC} starting material was 12.15\%N by mass,  with mean \ac{DOS}=2.307, indicating that individual glucopyranose rings were of mixed nitration level with non-uniform distribution of nitrate groups along the polymer. % they could all be uniformly nitrated at say, C6, an C2, but some would have C3 and some woudl not, etc.
@@ -36,38 +48,70 @@ In this case, the study only considered the fully nitrated system. There is evid
 %Explain the pattern of behaviour you see in the table, and what each of the columns mean - remove the ones that don't concern you! / you don't understand or know how to explain!
 It was suggested that the trend in reactivity could be explained by the inductive effect of nitrate groups. %, which influences reactivity based on the proximity of the groups. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Note, in Monirazz's paper, Bohn also did some modelling, to reach teh C6 > C2 > C3 conclusion (in addition to rate calcs.)
+% Make sure that you compare the modelling they did to Shukla - method, structures,  and explain the differences in results.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 % Check the units for log A
  %*{3}{S[table-format = 2.4]}
 %T\textsubscript{C}, \degree C &
 \begin{table}[htp]
 \begin{center}
-\caption{Comparison of the rate constants of decomposition, for various polynitrate esters at 140\degree C. Collated from various literature sources by Matveev \textit{et al.}\cite{Matveev2003}.}
+\caption{Comparison of rate constants of decomposition for various polynitrate esters at 140\degree C. Collated from literature sources by Matveev \textit{et al.}\cite{Matveev2003}.
+% $\Delta$T is the aging temperature range (check this),  $E$ is the energy barrier to ...  log$A$ is the pre-expoenential factor (Check this), $k$\textsubscript{expt} is the rate constant for denitration.
+}
 %\begin{tabular}{ l c {S[table-format = 2.1]} {S[table-format = 2.1]} {S[table-format = 2.1]}} 
-\begin{tabular}{l p{15em} c c c c} 
+\begin{tabular}{p{15em} c c c c} 
 \toprule
-\multirow{2}{1em}{}	&\multirow{2}{10em}{Compound	}	&	 $\Delta$T	&  $E$							&  log$A$ 				& $k$\textsubscript{expt} \\ %$k\subscript{exp}
- 						& 										&	/ \degree C & / kcal mol\textsuperscript{-1}	&[s\textsuperscript{-1}]	&  / \SI{e-6}s\textsuperscript{-1} \\
-\hline
-a)	& \multirow{2}{*}{\ce{O2NOCH2CH2ONO2}}	&	-	 	& 	-	& 	-	& 4.7 \\
- 	& (nitroglycol) 								&			&		&		&	\\
-b) 	& \ce{O2NOCH2CH2CH2ONO2}				& 72–140 	& 39.1 	& 14.9 	& 1.7 \\
-c)	& \ce{O2NOCH2CH(ONO2)(CH3)}				& 72–140 	& 40.3	& 15.8 	& 3.0 \\ 
-d)	& \ce{O2NOCH2CH(OH)(CH2ONO2)}			& 80–140 	& 42.4 	& 16.8 	& 2.3 \\
-e)	& \ce{O2NOCH2CH2CH2CH2ONO2}			& 100–140 	& 39.0 	& 14.7 	& 1.1 \\
-f)	& \ce{O2NOCH(CH3)CH(CH3)ONO2}			& 72–140 	& 40.3	& 14.9 	& 5.0 \\
-g)	& \ce{O2NOCH2CH2OCH2CH2ONO2}			& 80–140 	& 42.0 	& 16.5 	& 1.9 \\
-h)	& \ce{O2NOCH2CH2(NNO2)CH2CH2ONO2}	& 80–140 	& 41.5	& 16.5 	& 3.5 \\
-i)	& \ce{[(O2NOCH2)CH(ONO2)CH(ONO2)]2}	& 80–140 	& 38.0	& 15.9 	& 63.0 \\
- 	&	 (hexanitromannite)							&			&		&		&	\\
-j)	& \ce{(O2NOCH2)4C (TEN)} 					& 145–171	& 39.0 & 15.6 	& 9.3 \\
-k)	& \ce{(O2NOCH2)2CHONO2} 				&		-	&	-	&	-	& 13.0 \\
+\multirow{2}{10em}{Compound	}	&	 $\Delta T$	&  $E$							&  log$A$ 				& $k$\textsubscript{expt} \\ %$k\subscript{exp}
+ 										&	/ \degree C & / kcal mol\textsuperscript{-1}	&[s\textsuperscript{-1}]	&  / \SI{e-6}s\textsuperscript{-1} \\
+\midrule
+\ce{O2NOCH2CH2CH2ONO2}					& 72–140 	& 39.1 	& 14.9 	& 1.7 \\
+\ce{O2NOCH2CH2CH2CH2ONO2}			& 100–140 	& 39.0 	& 14.7 	& 1.1 \\
+\ce{O2NOCH(CH3)CH(CH3)ONO2}			& 72–140 	& 40.3	& 14.9 	& 5.0 \\
+%\ce{O2NOCH2CH2(NNO2)CH2CH2ONO2}		& 80–140 	& 41.5	& 16.5 	& 3.5 \\
+\\
+\ce{O2NOCH2CH2OCH2CH2ONO2}			& 80–140 	& 42.0 	& 16.5 	& 1.9 \\
+\ce{O2NOCH2CH(OH)(CH2ONO2)}			& 80–140 	& 42.4 	& 16.8 	& 2.3 \\
+\\
+\ce{O2NOCH2CH(ONO2)(CH3)}				& 72–140 	& 40.3	& 15.8 	& 3.0 \\ 
+\ce{[(O2NOCH2)CH(ONO2)CH(ONO2)]2}		& 80–140 	& 38.0	& 15.9 	& 63.0 \\
+	 (hexanitromannite)							&			&		&		&	\\
+%j)	& \ce{(O2NOCH2)4C (TEN)} 					& 145–171	& 39.0 & 15.6 	& 9.3 \\
+%k)	& \ce{(O2NOCH2)2CHONO2} 					&		-	&	-	&	-	& 13.0 \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%a)	& \ce{O2NOCH2CH2ONO2}						&	-	 	& 	-	& 	-	& 4.7 \\
+%% 	& (nitroglycol) 									&			&		&		&	\\
+%%b)
+%	& \ce{O2NOCH2CH2CH2ONO2}					& 72–140 	& 39.1 	& 14.9 	& 1.7 \\
+%%e)
+%	& \ce{O2NOCH2CH2CH2CH2ONO2}			& 100–140 	& 39.0 	& 14.7 	& 1.1 \\
+%%f)
+%	& \ce{O2NOCH(CH3)CH(CH3)ONO2}			& 72–140 	& 40.3	& 14.9 	& 5.0 \\
+%%h)	& \ce{O2NOCH2CH2(NNO2)CH2CH2ONO2}		& 80–140 	& 41.5	& 16.5 	& 3.5 \\
+%\\
+%%g)
+%	& \ce{O2NOCH2CH2OCH2CH2ONO2}			& 80–140 	& 42.0 	& 16.5 	& 1.9 \\
+%%d)
+%	& \ce{O2NOCH2CH(OH)(CH2ONO2)}			& 80–140 	& 42.4 	& 16.8 	& 2.3 \\
+%\\
+%%c)
+%	& \ce{O2NOCH2CH(ONO2)(CH3)}				& 72–140 	& 40.3	& 15.8 	& 3.0 \\ 
+%%i)
+%	& \ce{[(O2NOCH2)CH(ONO2)CH(ONO2)]2}		& 80–140 	& 38.0	& 15.9 	& 63.0 \\
+% 	&	 (hexanitromannite)							&			&		&		&	\\
+%%j)	& \ce{(O2NOCH2)4C (TEN)} 					& 145–171	& 39.0 & 15.6 	& 9.3 \\
+%%k)	& \ce{(O2NOCH2)2CHONO2} 					&		-	&	-	&	-	& 13.0 \\
 \bottomrule
 \end{tabular}
 \label{tab:reactions}
 \end{center}
 \end{table}
 
-The inductive effect arises when a difference in the electronegativity between atoms connected by a $\sigma$-bond leads to a polarisation, or permanent dipole, in the bond. Electron donating groups % are of lower electronegativity than  
+The inductive effect arises when a difference in the electronegativity between atoms connected by a $\sigma$ bond leads to a polarisation, or permanent dipole, in the bond. Electron donating groups % are of lower electronegativity than  
 increase the $\delta$- partial charge on neighbouring atoms through the release of electrons, whilst electron withdrawing groups pull electron density away from neighbouring atoms generating a $\delta$+ charge on connected atoms. %pushing electron density towards the  %HOW DOES THIS LINK WITH DESHIELDLING - NMR shifts
 %The characteristic step-wise removal of nitrate groups was also attributed to this property.   (Don't really understand why this is)
 %Nitrates are electron donating? whilst O are withdrawing? Thus the presence of a second nitrate group in the vicinity would push electron density towards the C linking the nitrate to the ring (or perhaps the linking O), leading to stabilisation of charge in the form of a carbocation or at least increased nucleophilicity, for subsequent reactions / taking OH from  water, etc. 
