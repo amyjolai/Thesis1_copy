@@ -77,13 +77,14 @@ Chapter 3, the remaining residues are available for further reaction with the po
 \\
 % Fix alignment left, please
 %%Chin's equations \\
+\begin{scheme}[htp]
 \noindent\textbf{Thermolysis}
 
 \textit{Initiation:}
 \begin{equation}
 %\textit{Initiation}
 %\begin{block_indent}{1cm}
-\ce{RONO2 -> RO^{.} + ^{.}NO2 }
+\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 }
 %\end{block_indent}
 \label{equ:chinT1}
 \end{equation}
@@ -97,7 +98,7 @@ Chapter 3, the remaining residues are available for further reaction with the po
 %\ce{RO^{.} + ^{.}NO2 ->[\ce{RONO2}] RONO2 + NO + N2O4 + ^{.}NO2}\\
 %								\ce{ + H2O  + N2O + CO2 + CO } \\ 
 %								\ce{+ C2H2O +} \text{other organic fragments}
-\ce{RO^{.} + ^{.}NO2 ->[\ce{RONO2}]} & \ce{ RONO2 + NO + N2O4 + ^{.}NO2}\\
+\ce{R-O^{.} + ^{.}NO2 ->[\ce{R-ONO2}]} & \ce{ R-ONO2 + ^{.}NO + N2O4 + ^{.}NO2}\\
 								& \ce{ + H2O  + N2O + CO2 + CO } \\
 								& \ce{+ C2H2O +} \text{other organic fragments}
 %\end{multline}
@@ -111,7 +112,7 @@ Chapter 3, the remaining residues are available for further reaction with the po
 \label{equ:chinT3}
 \end{equation}
 \begin{equation}
-\ce{2^{.}NO2 <-> N2O4}
+\ce{2^{.}NO2 <=> N2O4}
 \label{equ:chinT4}
 %\end{block_indent}
 \end{equation}
@@ -123,11 +124,11 @@ Chapter 3, the remaining residues are available for further reaction with the po
 \textit{Initiation:}
 %\begin{block_indent}{1cm}
 \begin{equation}
-\ce{R-ONO2 + H2O -> ROH + HNO3} 
+\ce{R-ONO2 + H2O -> R-OH + HNO3} 
 \label{equ:chinH1}
 \end{equation}
 \begin{equation}
-\ce{R-OH + HNO3 -> R-CHO + HNO2 + H2O}
+\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
 \label{equ:chinH2}
 \end{equation}
 %\end{block_indent}
@@ -136,11 +137,11 @@ Chapter 3, the remaining residues are available for further reaction with the po
 %\textit{Propagation}
 %\begin{block_indent}{1cm}
 \begin{equation}
-\ce{HNO3 + HNO2 -> N2O4 + H2O} 
+\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
 \label{equ:chinH3}
 \end{equation}
 \begin{equation}
-\ce{N2O4 -> 2^{.}NO2}
+\ce{N2O4 <=> 2^{.}NO2}
 \label{equ:chinH4}
 \end{equation}
 \begin{equation}
@@ -148,9 +149,10 @@ Chapter 3, the remaining residues are available for further reaction with the po
 \label{equ:chinH5}
 \end{equation}
 \begin{equation}
-\ce{^{.}R-OH + HNO3 -> RCH=O + H2O + NO2}
+\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
 \label{equ:chinH6}
 \end{equation}
+\end{scheme}
 %\end{block_indent}
 
 %%Chin's equations \\
@@ -208,9 +210,99 @@ Chapter 3, the remaining residues are available for further reaction with the po
 %%\end{equation}
 %\end{block_indent}
 
-The hydrolysis equations were modified from an earlier work by Camera \textit{et al.}, where the scheme was presented with ethyl nitrate as the organonitrate (where R = \ce{CH3CH2}) \cite{Camera1982}. The rate-determining nature of equation \ref{equ:chinH2}
+The hydrolysis equations were modified from an earlier work by Camera \textit{et al.}, where the scheme was presented with ethyl nitrate (where R = \ce{CH3CH2}) \cite{Camera1982}. 
+The oxidation of alchol by nitric acid (equation \ref{equ:chinH2}) is slow, thus rate-limiting, and likely to occur \textit{via} a series of intermediate reactions where the mechanism is not known.  Following the generation of nitrous acid, subsequent oxidations occur rapidly. Equations \ref{equ:chinH3} - \ref{equ:chinH6} describe a possible branched radical chain mechanism, fed by the nitrous and nitric acids produced during the hydrolysis and alchohol oxidation reactions during the initiation stages. 
+The reactions in the branched radical chain mechanism for thermomlysis are poorly characterised, only defined by the observable products.
+%but eventually, everything feeds back into that equation of just radical deg, esp for the species contianing carbon 
+%Who actually did the measureing? 
+%measured by \ac{IR}, liquid \cite{Bluhm1977}, ion \cite{lopezlopez2011} and gas chromatography \cite{Huwei1988},  ignition loss determination \cite{Bluhm1977}. %and others
+Termination reactions were not emaphised in the schemes, for these cases. 
 
+Aellig \textit{et al.} presented an alternative scheme when determining the decomposition of benzyl nitrate (\ce{PhCH2ONO2}, R = \ce{PhCH2}), involving more interaction with the solvent  \cite{Aellig2012}:\\
 
+%{Aellig's equations}
+\textit{Initiation}
+\begin{equation}
+\ce{4HNO3 <=> 4NO2 + 2H2O + O2}
+\end{equation}
+\begin{equation}
+\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
+\end{equation}
+\begin{equation}
+\ce{N2O4 + H2O -> HNO3 + HNO2}
+\end{equation}
+
+\textit{Propagation}
+\begin{equation}
+\ce{R-OH + HNO2 <=> R-ONO + H2O}
+\end{equation}
+\begin{equation}
+\ce{R-ONO -> R=O + HNO}
+\end{equation}
+\begin{equation}
+\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}
+\end{equation}
+\begin{equation}
+\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\end{equation}
+
+\textit{Termination}
+\begin{equation}
+\ce{2HNO -> HON=NOH}
+\end{equation}
+\begin{equation}
+\ce{HON=NOH -> N2O + H2O}
+\end{equation}
+
+However, for the initiation reactions Aellig prescribes the use of an amberlyst catalyst,
+The propagation reactions are acid catalysed by\ce{HNO2}. 
+
+Both the Camera/Chin and Aellig schemes above produce final end products observed in the decomposition of \ac{NC}. In particular, Aeelig’s scheme accounts for the production of \ce{N2O}, which forms a XXXX part of the decomposition eluent. 
+
+Collation of the above schemes to fit the starting products from denitration:
+\begin{scheme}[htp]
+\centering
+\schemestart
+% Example
+%\chemfig{A}\arrow(aa--bb)[-30,1.5]\chemfig{B}
+%\arrow(@aa--cc)[-150,1.5]\chemfig{C}
+%\arrow(cc--dd){0}[-90,0]\chemfig{D}
+%
+%This seems to give the same results
+%A\arrow(aa--bb)[-30,1.5]B
+%\arrow(@aa--cc)[-150,1.5]C
+%\arrow(cc--dd){0}[-90,0]D
+%
+%\ce{R - O^{.} + ^{.}NO2}\arrow(aa--bb)[0,1]\ce{R - O^{.}} havoc
+%\arrow(@aa--cc)[-90,1]\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
+%\arrow(cc--dd){0}[-90,0.1]\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}
+%\arrow(dd--ee)[-150]\ce{N2O4 + H2O -> HNO3 + HNO2}
+%\arrow(@dd--ff)[-15,2]\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
+%\arrow(@ee--gg)[-90,1]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+%\arrow(gg--hh)[-90,1]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
+%\arrow(hh--ii){0}[-90,0.1]\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
+%\arrow(@gg--jj)\ce{R-ONO -> R=O + HNO}
+%\arrow(jj--kk)[-90,1]\ce{2HNO -> HON=NOH}
+%\arrow(kk--ll){0}[-90,0.1]\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}
+%\arrow(kk--ll)[-90,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\textbf{\ce{R-ONO2}}\arrow(xx--aa){->[\textbf{homolysis}]}\textbf{\ce{R - O^{.} + ^{.}NO2}}
+\arrow(aa--bb)\chemname{\ce{R - O^{.} + ^{.}NO2}}{Thermolyic fragmentation\\(equation \ref{equ:chinT2})}
+\arrow(@aa--cc)[-135,1.5]\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
+\arrow(cc--dd){0}[-90,0.1]\ce{^{.}NO2 + R-OH -> ^{.}R-OH + HNO2}
+\arrow(@dd--ee)[-90,1]\ce{N2O4 + H2O -> HNO3 + HNO2}
+\merge>(dd)(ee)--(ff)\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
+%\arrow(@dd--ff)[-10,2.5]\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
+%\arrow(@ee--@ff)
+\arrow(@ee--gg)[-90,1]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+\arrow(@ee--hh)[-16,3.5]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
+\arrow(hh--ii){0}[-90,0.1]\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
+\arrow(@gg--jj)[-90,1]\ce{R-ONO -> R=O + HNO}
+\arrow(jj--kk)[-90,1]\ce{2HNO -> HON=NOH}
+\arrow(kk--ll){0}[-90,0.1]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(kk--ll)[-90,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\schemestop 
+\caption{Proposed degradation pathway starting from the homolysis products of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
+\end{scheme}
 
 
 %autocatalytic rate 
@@ -249,42 +341,42 @@ Matveev2003,Hu2011} %ETC refine this list later
 %\ce{NO2+ + 2H2O <=>[\text{fast}] HNO3 + H3O+} \\
 %\end{block_indent}
 
-\textit{Initiation}
-\begin{block_indent}{1cm}
-\ce{CH3CH2OH + HNO3  -> CH3CH=O + H2O + HNO2} \\
-\end{block_indent}
+%\textit{Initiation}
+%\begin{block_indent}{1cm}
+%\ce{CH3CH2OH + HNO3  -> CH3CH=O + H2O + HNO2} \\
+%\end{block_indent}
+%
+%\textit{Propagation}
+%\begin{block_indent}{1cm}
+%\ce{HNO2 + HNO3 <-> N2O4 + H2O} \\
+%\ce{N2O4 <-> 2 .NO2} \\
+%\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2} \\
+%\ce{CH3^{.}CHOH + HNO3 -> CH3CH=O + H2O + ^{.}NO2} \\
+%\end{block_indent}
 
-\textit{Propagation}
-\begin{block_indent}{1cm}
-\ce{HNO2 + HNO3 <-> N2O4 + H2O} \\
-\ce{N2O4 <-> 2 .NO2} \\
-\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2} \\
-\ce{CH3^{.}CHOH + HNO3 -> CH3CH=O + H2O + ^{.}NO2} \\
-\end{block_indent}
-
-\subsection*{Aellig's equations}
-\textit{Initiation}
-\begin{block_indent}{1cm}
-\ce{4HNO3 <=> 4NO2 + 2H2O + O2} \\
-\ce{2^{.}NO2 + H2O <=> N2O4 + H2O} \\
-\ce{N2O4 + H2O -> HNO3 + HNO2} \\
-\end{block_indent}
-
-\textit{Propagation}
-\begin{block_indent}{1cm}
-\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O} \\
-\ce{CH3CH2ONO -> CH3CH=O + HNO} \\
-\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO} \\
-\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2} \\
-\end{block_indent}
-
-\textit{Termination}
-\begin{block_indent}{1cm}
-\ce{HNO + HNO -> HON=NOH} \\
-\ce{HON=NOH -> N2O + H2O} \\
-\end{block_indent}
-
-
+%\subsection*{Aellig's equations}
+%\textit{Initiation}
+%\begin{block_indent}{1cm}
+%\ce{4HNO3 <=> 4NO2 + 2H2O + O2} \\
+%\ce{2^{.}NO2 + H2O <=> N2O4 + H2O} \\
+%\ce{N2O4 + H2O -> HNO3 + HNO2} \\
+%\end{block_indent}
+%
+%\textit{Propagation}
+%\begin{block_indent}{1cm}
+%\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O} \\
+%\ce{CH3CH2ONO -> CH3CH=O + HNO} \\
+%\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO} \\
+%\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2} \\
+%\end{block_indent}
+%
+%\textit{Termination}
+%\begin{block_indent}{1cm}
+%\ce{HNO + HNO -> HON=NOH} \\
+%\ce{HON=NOH -> N2O + H2O} \\
+%\end{block_indent}
+%
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -313,6 +405,8 @@ All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and
 %\end{figure}
 %$\Delta$-G\textsubscript{r}
 %$\textDelta$H\textsubscript{r}
+
+The reaction energies for the proposed schemes 
 
 %Change units to kcal/mol
 \begin{table}[htp]
