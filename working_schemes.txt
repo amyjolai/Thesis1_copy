@@ -1,0 +1,142 @@
+Working version of the scheme:
+
+\begin{scheme}[htp]
+\centering
+\schemestart
+%% Worked example
+%%\chemfig{A}\arrow(aa--bb)[-30,1.5]\chemfig{B}
+%%\arrow(@aa--cc)[-150,1.5]\chemfig{C}
+%%\arrow(cc--dd){0}[-90,0]\chemfig{D}
+%%
+%%This seems to give the same results
+%%A\arrow(aa--bb)[-30,1.5]B
+%%\arrow(@aa--cc)[-150,1.5]C
+%%\arrow(cc--dd){0}[-90,0]D
+%
+%\ce{R - O^{.} + ^{.}NO2}\arrow(aa--bb)[0,1]\ce{R - O^{.}} havoc
+%\arrow(@aa--cc)[-90,1]\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
+%\arrow(cc--dd){0}[-90,0.1]\ce{R-OH + ^{.}NO2 -> ^{.}ROH + HNO2}
+%\arrow(dd--ee)[-150]\ce{N2O4 + H2O -> HNO3 + HNO2}
+%\arrow(@dd--ff)[-15,2]\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
+%\arrow(@ee--gg)[-90,1]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+%\arrow(gg--hh)[-90,1]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
+%\arrow(hh--ii){0}[-90,0.1]\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
+%\arrow(@gg--jj)\ce{R-ONO -> R=O + HNO}
+%\arrow(jj--kk)[-90,1]\ce{2HNO -> HON=NOH}
+%\arrow(kk--ll){0}[-90,0.1]\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}
+%\arrow(kk--ll)[-90,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+% No colours
+\textbf{\ce{R-ONO2}}\arrow(xx--aa){->[\textbf{homolysis}]}\textbf{\ce{R - O^{.} + ^{.}NO2}}
+\arrow(aa--bb)[-25,2]Thermolyic fragmentation (equation \ref{equ:chinT2})
+\arrow(@aa--cc)[-90,2]\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
+\arrow(cc--dd){0}[-90,0.2]\ce{^{.}NO2 + R-OH -> ^{.}R-OH + HNO2}
+\arrow(@dd--ee)[-90,1.5]\ce{N2O4 + H2O -> HNO3 + HNO2}
+\merge>(dd)(ee)--(ff)\ce{^{.}R-OH + HNO3}
+\arrow(@ff--nn)[90,1]\ce{R=O + H2O + ^{.}NO2}
+%\arrow(@dd--ff)[-10,2.5]\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}
+%\arrow(@ee--@ff)
+\arrow(@ee--gg)[-90,1]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+\arrow(@ee--hh)[-25,3.5]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
+\arrow(hh--ii){0}[-90,0.2]\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
+\arrow(@gg--jj)[-90,1.5]\ce{R-ONO -> R=O + HNO}
+\arrow(jj--kk)[-90,1]\ce{2HNO -> HON=NOH}
+\arrow(kk--ll){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(ll--oo)[-90,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\arrow(@kk--mm)\ce{HON=NOH ->N2O + H2O}
+\schemestop 
+\caption{Proposed degradation pathway starting from the homolysis products of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
+\label{sch:homolytic}
+\end{scheme}
+
+\begin{scheme}[htp]
+\centering
+\schemestart
+\textbf{\ce{R-ONO2}}\arrow(xx--aa){->[\textbf{Elimination}]}[,1.5]\textbf{\ce{R=O + HNO2}}
+\arrow(@aa--bb)[-140,2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+\arrow(bb--cc)[-90]\ce{R-ONO -> R=O + HNO}
+\arrow(cc--dd)[-90]\ce{2HNO -> HON=NOH}
+\arrow(dd--gg){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(gg--ee)[-90]\ce{HON=NOH -> N2O + H2O}
+%\arrow(@aa--ff)[-35,2]\ce{R=O}
+%\arrow(@gg--hh)\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\schemestop 
+\caption{Proposed degradation pathway starting from the elimination of \ce{HNO2} from a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
+\label{sch:elimination}
+\end{scheme}
+
+\begin{scheme}[htp]
+\centering
+\schemestart
+\textbf{\ce{R-ONO2 + H+}}\arrow(xx--aa){->[\textbf{Hydrolysis}]}[,1.5]\textbf{\ce{R-OH + NO2+}}
+\arrow(@aa--bb)[-150,2]\ce{NO2+ + 2H2O <=> HNO3 + H3O+}
+%\merge>(@aa--@bb)
+%\arrow(@aa--cc)[-30,2]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
+\arrow(@bb--cc)[-30,2]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
+\arrow(@aa--@cc)[-90]
+\arrow(@cc--dd)[-90]\ce{HNO2 + HNO3 <=> N2O4 + H2O} 
+\arrow(@dd--ee){0}[-90,0.2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+\arrow(@dd--ff)[180]\ce{N2O4 + H2O -> HNO3 + HNO2}
+\arrow(ff--gg){0}[-90,0.2]\ce{N2O4 <=> 2^{.}NO2}
+\arrow(@ee--hh)[-90]\ce{R-ONO -> R=O + HNO}
+\arrow(hh--ii)[-90]\ce{2HNO -> HON=NOH}
+\arrow(ii--kk){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(kk--jj)[-90]\ce{HON=NOH -> N2O + H2O}
+\arrow(@kk--ll)[180,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\schemestop 
+\caption{Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
+\label{sch:hydrolysis}
+\end{scheme}
+
+\begin{table}[h]
+\begin{center}
+\caption{Energies of nitrate ester decomposition reactions proposed by Camera \cite{Camera1982}, Chin \cite{Chin2007} and Aellig \cite{2012}. R = \ce{CH3CH2} for ethyl nitrate, and R = \ce{(H3CO)2C6H9O3} (bi-methoxy capped glucopyraonse monomer unit).}
+\begin{tabular} { l *{4}{S[table-format = 2.4]}} 
+\toprule
+\multirow{2}{*}{Reaction}	& \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kcal mol\textsuperscript{-1}}
+\\\cline{2-5}
+			& \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+\midrule
+%\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} &
+%\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} & 14.930370&-2.247210&16.012710&-4.038930\\
+%[\text{fast}]
+\ce{NO2+ + 2H2O <=> HNO3 + H3O+}& -0.896490 & -1.338750 & 1.770300 & 2.464560\\
+%\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 } \\ Homolysis
+\ce{2^{.}NO + O2 -> 2^{.}NO2} &-20.77047&	-21.97314&-21.16044&-22.15899
+ \\
+\ce{2^{.}NO2 <=> N2O4} &-0.122220&	-1.310400	&0.541800	&0.155610
+\\
+\ce{HNO3 + HNO2 <=> N2O4 + H2O} 	&	-2.251620	&	-1.854090	&	-5.131350	&	-4.180050 \\
+\ce{N2O4 <=> 2^{.}NO2}	&	0.123480&	1.461600&	-0.539280&	-0.155610
+ \\
+\ce{4HNO3 <=> 4NO2 + 2H2O + O2}&53.35029&58.36446&42.60942&46.93563\\
+\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}&-0.12222&-1.4616&0.53928&0.15561\\
+\ce{N2O4 + H2O -> HNO3 + HNO2}&2.25162&1.85409&5.13135&4.18005\\
+\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}&-28.21644&-28.66815&-27.32688&-27.6255\\
+\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}&-59.89473&-60.47244&-60.46866&-60.99597\\
+\ce{2HNO -> HON=NOH}&-38.96928&-39.71583&-36.62757&-37.40814\\
+\ce{HON=NOH -> N2O + H2O}&-48.08286&-48.18429&-50.55309&-50.74902\\
+\midrule
+Ethyl nitrate ( R = \ce{CH3CH2} )\\
+\hline
+%\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	4.556160	&	5.235930	&	4.000500	&	4.860450 \\ Hydrolysis
+\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}	&	-34.062210	&	-38.427480	&	-37.593990	&	-41.770260 \\
+\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	16.376220	&	13.923000	&	15.887340	&	13.699350 \\
+\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}&-50.438430&-52.35048&-53.48133&-55.4715\\
+\ce{R-OH + HNO2 <=> R-ONO + H2O}&-3.20544&-3.276&-2.64096&-2.94903\\
+\ce{R-ONO -> R=O + HNO}&-1.49625&-5.82183&-4.36716&-8.50122\\
+\midrule
+\ac{NC} monomer ( R = \ce{(H3CO)2C6H9O3} )\\
+\hline
+\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	0.67536	&	5.63094	&	0.61236	&	-0.70119 \\
+%RONO2 &+&H3O+& <->&RONO2H+&+&H2O&(see protonation section)&&&-30.87756&3.5464&-31.98636&-0.24507
+%\ce{R-OH + HNO3 -> R=O + HNO2 + H2O} &	-36.72522&	-38.34306	&	-41.71419	&	-41.70411 \\ Hydrolysis
+\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	14.71302	&	11.15163	&	13.03407	&	23.20983 \\
+\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2} &
+-51.438240	&-49.494690	&-54.748260 &	-56.369250 \\
+\ce{R-OH + HNO2 <=> R-ONO + H2O}&-4.43142&-7.30233&-4.30605&-0.17829\\
+\ce{R-ONO -> R=O + HNO}&-2.93328&	-1.71108	&-6.82227&	-11.20581
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}

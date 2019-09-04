@@ -10,7 +10,7 @@
 % Which ones contribute to the end products seen in literature, and which much be consumed in subsequent reactions
 % {Mention that this list is not likely to be exhaustive, but cover some of the more ''obvious'' ones}
 
-[Fix the arrows of the reaction schemes? So that eluting products leave with a u shaped arrow?]
+%[Fix the arrows of the reaction schemes? So that eluting products leave with a u shaped arrow?]
 
 \section{Introduction}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %secondary reactions
@@ -43,7 +43,7 @@ In the case of the 70\degree C treated run, the final measurement (indicated by 
 
 
 % Insert blank line between top and bottom rows, if you can - LATER
-\begin{figure}[htp]
+\begin{figure}[htp!]
 \centering
   \begin{subfigure}[b]{0.42\linewidth}
 	\caption{\ac{NC} film aged at 40\degree C.}
@@ -68,12 +68,12 @@ In the case of the 70\degree C treated run, the final measurement (indicated by 
 \label{fig:UV_all}
 \end{figure}
 
-\begin{scheme}[htp]
+\begin{scheme}[htp!]
   \centering
 	\includegraphics[width=0.55\linewidth]{SB59_NOx_reaction}
 \caption{Proposed pathway for the reaction of \acs{SB59} dye with $^{.}$NO released as a result of denitration of \ac{NC} \cite{Moniruzzaman2014}. }
 \label{sch:SB59_NOx}
-\end{scheme} \\
+\end{scheme}
 
 %Following the possible denitration routes outlined in section \ref{chapter5:intro}Chapter 3, 
 Following cleavage of the nitrate ester via homolytic fission, elimination of nitrous acid, or hydrolysis, the resulting residues are available for further reaction with the polymer or other free molecules in the system. Chin \textit{et al.} proposed schemes for the propagation of such reactions initated by both the thermolysis and hydrolysis of nitrate esters \cite{Chin20007} :
@@ -214,11 +214,11 @@ Following cleavage of the nitrate ester via homolytic fission, elimination of ni
 %%\end{equation}
 %\end{block_indent}
 
-The hydrolysis scheme was adapted from an earlier work by Camera \textit{et al.} involving the nitrate ester decomposition and subsequent reactions of ethyl nitrate (where R = \ce{CH3CH2} for the scheme above) \cite{Camera1982}. The original study included the hydrolysis steps pertaining to ethyl nitrate:
+The hydrolysis scheme was adapted from an earlier work by Camera \textit{et al.} involving the nitrate ester decomposition and subsequent reactions of ethyl nitrate (where R = \ce{CH3CH2} for the scheme above) \cite{Camera1982}. The original study included the expansion of the hydrolysis step (equation \ce{PhCH2ONO2}, ), where the involvement of \ce{NO2+} can be seen:  %pertaining to ethyl nitrate:
 \\
 %\subsection*{Camera's equations}
 \begin{scheme}[h]
-\textit{Hydrolysis}
+\textbf{Hydrolysis}
 %\begin{block_indent}{1cm}
 %\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} \\
 %\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} \\
@@ -236,23 +236,22 @@ The hydrolysis scheme was adapted from an earlier work by Camera \textit{et al.}
 \label{sch:cameraschema}
 \end{scheme}
 
-It was highlighted by Camera, that the oxidation of alchol by nitric acid (equation \ref{equ:chinH2}) is slow and thus rate-limiting. The mechanism is likely to occur \textit{via} a series of intermediate reactions of which the details are not known.  Following the generation of nitrous acid, subsequent oxidations occur rapidly. %why and how?
+It was highlighted by Camera, that the oxidation of alchol by nitric acid (equation \ref{equ:chinH2}) is slow and thus rate-limiting. The mechanism is likely to occur \textit{via} a series of intermediate reactions of which the details are not known.  However, following the generation of nitrous acid, subsequent oxidations occur rapidly. %why and how?
 Equations \ref{equ:chinH3} - \ref{equ:chinH6} describe a possible branched radical chain mechanism, fed by the nitrous and nitric acids produced during the hydrolysis and alchohol oxidation reactions during the initiation stages. 
  
-By contrast, the propagation reactions in the branched radical chain mechanism for thermolysis are poorly characterised (equation \ref{equ:chinT2}), defined only by the observable products. This is likely due to their rapid and varied nature, with 
-
+By contrast, the propagation reactions in the branched radical chain mechanism for thermolysis are poorly characterised (equation \ref{equ:chinT2}), defined only by the observable products. This is likely due to their rapid and varied nature, rendering it difficult to follow spectroscopically. 
 %but eventually, everything feeds back into that equation of just radical deg, esp for the species contianing carbon 
 %Who actually did the measureing? 
 %measured by \ac{IR}, liquid \cite{Bluhm1977}, ion \cite{lopezlopez2011} and gas chromatography \cite{Huwei1988},  ignition loss determination \cite{Bluhm1977}. %and others
 Termination reactions were not emaphised in the schemes, for these cases. 
 
-Aellig \textit{et al.} presented an alternative scheme when determining the decomposition of benzyl nitrate (\ce{PhCH2ONO2}, R = \ce{PhCH2}), involving more interaction with the solvent  \cite{Aellig2012}:\\
+Aellig \textit{et al.} presented an alternative scheme when determining the decomposition of benzyl nitrate (R = \ce{PhCH2}), involving more interaction with the solvent  \cite{Aellig2012}:\\ %\ce{PhCH2ONO2}, 
 
 %{Aellig's equations}
 \begin{scheme}[h]
 \textit{Initiation}
 \begin{equation}
-\ce{4HNO3 <=> 4NO2 + 2H2O + O2}
+\ce{4HNO3 <=> 4^{.}NO2 + 2H2O + O2}
 \end{equation}
 \begin{equation}
 \ce{2^{.}NO2 + H2O <=> N2O4 + H2O}
@@ -369,9 +368,9 @@ In this section, secondary and extended reaction schemes for the low temperature
 The reactions found to be energetically feasible from the proposed routes will be scrutinised to determine whether an autocatalytic pathway can be formed from the energitcally validated reaction schemes. 
 
 \section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The reaction schemes proposed by Chin, Camera and Aellig \textit{et al.} were applied to the degradation of \ac{NC} as the subsequent steps following denitration \textit{via} homolytic fission, intramolecular elimination of \ce{HNO2} or acid hydrolysis. 
+The equations proposed by Chin, Camera and Aellig \textit{et al.} were applied to the degradation of \ac{NC}. The products of homolytic fission, intramolecular elimination of \ce{HNO2} and acid hydrolysis as the starting point for forward propagation of
 
-Scheme \ref{sch:homolytic} - \ref{sch:hydrolysis}
+Schemes \ref{sch:homolytic} - \ref{sch:hydrolysis} were constructed based on the step-wise progression of each stage of decomposition
 
 The species reactions  were geometry optimised using \ac{wb97xd}, and \ac{B3LYP} functionals, in both vacuum and solvent. The reactions were modelled using ethyl nitrate as a test system before expansion to the full C2 monomeric model. 
 The \ac{DG} were used to determine the feasibility of a reaction. 
@@ -397,8 +396,7 @@ All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and
 
 The reaction energies for the proposed schemes 
 
-%Change units to kcal/mol
-%note, terminal up is 
+%note, terminal up is right, terminal down is left
 \begin{table}[htp]
 \begin{center}
 \caption{Free energies of protonation for each oxygen site on ethyl nitrate.}
@@ -409,12 +407,9 @@ The reaction energies for the proposed schemes
   & & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \midrule
 % Right is up, left is down, with ethanol in an “m” shape. 
- Terminal (up) & \ce{CH3CH3ONO2H+} &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
- Terminal (down) & \ce{CH3CH3ONO2H+}  & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\ 
- Bridging & \ce{CH3CH3O(H+)NO2} &-0.019487 & 0.014003 & -0.021877 & 0.010113 \\
-% \ce{CH3CH3ONOOH+} 
-% \ce{CH3CH3ONO(H+)O} 
-% \ce{CH3CH3O(H+)NOO} 
+ Terminal (up) & \ce{CH3CH3ONO2H+} & -12.276810	& 8.821890 & -13.782510 & 5.625270\\
+ Terminal (down) & \ce{CH3CH3ONO2H+}  &-9.475200 &	9.459450	&-11.132100	&5.646060 \\ 
+ Bridging & \ce{CH3CH3O(H+)NO2} &-9.322740	& 9.058140	& -15.309630 &	6.673590 \\
 \bottomrule
 \end{tabular}
 \label{tab:reactions}
@@ -561,8 +556,10 @@ Collation of the above schemes to fit the starting products from denitration:
 \arrow(@aa--bb)[-140,2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
 \arrow(bb--cc)[-90]\ce{R-ONO -> R=O + HNO}
 \arrow(cc--dd)[-90]\ce{2HNO -> HON=NOH}
-\arrow(dd--ee)[-90]\ce{HON=NOH -> N2O + H2O}
-\arrow(@aa--ff)[-35,2]\ce{R=O}
+\arrow(dd--gg){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(gg--ee)[-90]\ce{HON=NOH -> N2O + H2O}
+%\arrow(@aa--ff)[-35,2]\ce{R=O}
+%\arrow(@gg--hh)\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
 \schemestop 
 \caption{Proposed degradation pathway starting from the elimination of \ce{HNO2} from a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
 \label{sch:elimination}
@@ -582,14 +579,17 @@ Collation of the above schemes to fit the starting products from denitration:
 \arrow(@dd--ff)[180]\ce{N2O4 + H2O -> HNO3 + HNO2}
 \arrow(ff--gg){0}[-90,0.2]\ce{N2O4 <=> 2^{.}NO2}
 \arrow(@ee--hh)[-90]\ce{R-ONO -> R=O + HNO}
-\arrow(hh--ii)[-90]\ce{2HNO -> HON=NOH}
-\arrow(ii--jj)[-90]\ce{HON=NOH -> N2O + H2O}
+\arrow(hh--ii)[-90]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(ii--kk){0}[-90,0.2]\ce{2HNO -> HON=NOH}
+%\arrow(@gg--ii)[-45]
+\arrow(@kk--jj)[-90]\ce{HON=NOH -> N2O + H2O}
+\arrow(@ii--ll)[180,1]\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
 \schemestop 
 \caption{Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{2011}.}
 \label{sch:hydrolysis}
 \end{scheme}
 
-\begin{table}[htp]
+\begin{table}[h]
 \begin{center}
 \caption{Energies of nitrate ester decomposition reactions proposed by Camera \cite{Camera1982}, Chin \cite{Chin2007} and Aellig \cite{2012}. R = \ce{CH3CH2} for ethyl nitrate, and R = \ce{(H3CO)2C6H9O3} (bi-methoxy capped glucopyraonse monomer unit).}
 \begin{tabular} { l *{4}{S[table-format = 2.4]}} 
@@ -618,7 +618,7 @@ Collation of the above schemes to fit the starting products from denitration:
 \ce{2HNO -> HON=NOH}&-38.96928&-39.71583&-36.62757&-37.40814\\
 \ce{HON=NOH -> N2O + H2O}&-48.08286&-48.18429&-50.55309&-50.74902\\
 \midrule
-Ethyl nitrate (R = \ce{CH3CH2})\\
+Ethyl nitrate ( R = \ce{CH3CH2} )\\
 \hline
 %\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	4.556160	&	5.235930	&	4.000500	&	4.860450 \\ Hydrolysis
 \ce{R-OH + HNO3 -> R=O + HNO2 + H2O}	&	-34.062210	&	-38.427480	&	-37.593990	&	-41.770260 \\
@@ -627,7 +627,7 @@ Ethyl nitrate (R = \ce{CH3CH2})\\
 \ce{R-OH + HNO2 <=> R-ONO + H2O}&-3.20544&-3.276&-2.64096&-2.94903\\
 \ce{R-ONO -> R=O + HNO}&-1.49625&-5.82183&-4.36716&-8.50122\\
 \midrule
-\ac{NC} monomer (R = \ce{(H3CO)2C6H9O3})\\
+\ac{NC} monomer ( R = \ce{(H3CO)2C6H9O3} )\\
 \hline
 \ce{R-ONO2 + H2O -> R-OH + HNO3}	&	0.67536	&	5.63094	&	0.61236	&	-0.70119 \\
 %RONO2 &+&H3O+& <->&RONO2H+&+&H2O&(see protonation section)&&&-30.87756&3.5464&-31.98636&-0.24507
@@ -654,6 +654,9 @@ Ethyl nitrate (R = \ce{CH3CH2})\\
 %\subsection{Ionic mechanistic route}
 %
 %\section{ \textit{(Kinetics of Nitrocellulose Monomer)}}
+
+Insights into the reaction energies
+“HNO cannot be stored or concentrated and is typically studied using donor species that release HNO as a decomposition product.” (paper since retracted)
 
 
 
