@@ -331,49 +331,6 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
 \label{sch:homolytic}
 \end{scheme}
 
-\begin{scheme}[ht!]
-\centering
-\schemestart
-\textbf{\ce{R-ONO2}}\arrow(xx--aa){->[\textbf{Elimination}]}[,1.5]\textbf{\ce{R=O + HNO2}}
-\arrow(@aa--bb)[-140,2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
-\arrow(bb--cc)[-90]\ce{R-ONO -> R=O + HNO}
-\arrow(cc--dd)[-90]\ce{2HNO -> HON=NOH}
-%\arrow(dd--gg){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
-\arrow(dd--ee)[-90]\ce{HON=NOH -> N2O + H2O}
-%\arrow(@aa--ff)[-35,2]\ce{R=O}
-%\arrow(@gg--hh)\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
-\schemestop 
-\caption{Proposed degradation pathway starting from the elimination of \ce{HNO2} from a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{Aellig2011}.}
-\label{sch:elimination}
-\end{scheme}
-
-\begin{scheme}[ht!]
-\centering
-\schemestart
-\textbf{\ce{R-ONO2 + H+}}\arrow(xx--aa){->[\textbf{Hydrolysis}]}[,1.5]\textbf{\ce{R-OH + NO2+}}
-\arrow(@aa--bb)[-150,2]\ce{NO2+ + 2H2O <=> HNO3 + H3O+}
-%\merge>(@aa--@bb)
-%\arrow(@aa--cc)[-30,2]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
-\arrow(@bb--cc)[-30,2]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
-\arrow(@aa--@cc)[-90]
-\arrow(@cc--dd)[-90]\ce{HNO2 + HNO3 <=> N2O4 + H2O} 
-\arrow(@dd--ee){0}[-90,0.2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
-%\arrow(@dd--ff)[180]\ce{N2O4 + H2O -> HNO3 + HNO2}
-%\arrow(ff--gg){0}[-90,0.2]\ce{N2O4 <=> 2^{.}NO2}
-\arrow(@dd--gg)[180]\ce{N2O4 <=> 2^{.}NO2}
-\arrow(@ee--hh)[-90]\ce{R-ONO -> R=O + HNO}
-\arrow(hh--ii)[-90]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
-\arrow(ii--kk){0}[-90,0.2]\ce{2HNO -> HON=NOH}
-\arrow(@gg--ii)[-50,3.3]
-\arrow(@kk--jj)[-90]\ce{HON=NOH -> N2O + H2O}
-\arrow(@ii--ll)[180,1]\ce{2 ^{.}NO + O2}
-\arrow(@ll--mm)[180,0.5]\ce{2^{.}NO2}
-\schemestop 
-\caption{Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{Aellig2011}.}
-\label{sch:hydrolysis}
-\end{scheme}
-
-
 %\subsection{Thermodynamics of Ethyl Nitrate reactions}%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %For an initial comparison of the methods you used, you could do a diagram like the one Kuklja did (kuja2014.pdf, page 89, fig 3.7).
@@ -443,6 +400,67 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
 Due to the availability of oxygen sites on the ethyl nitrate molecule, the optimal site for protonation was determined for inclusion in the reaction scheme for the first stage of hydrolysis. Table \ref{tab:reactions} shows the protonation energies for the three different oxygen sites on ethyl nitrate. Despite the upper terminal oxygen possessing the most thermodynamically favourable energy of protonation, inspection of the reaction geometries shows that the bridging structure most resembles that expected for the liberation of the \ce{NO2+} group at the next step. Though appearing less thermodynamically favourable when compared to protonation at the terminal upper oxygen site, the higher energy of reaction likely arises from the instability of the protonated complex. The elongation of the O--\ce{NO2} bond allows to stabilisation of the proton at the bridging site, such that the departure of \ce{NO2+} is easily facilitated. Subsequent calculation involving the energy of the protonated ethyl nitrate will employ the values associated with the protonated bridging site. %The \ce{CO---NO2} bond lengths are (a) \num[round-mode=places,round-precision=4]{1.27787} \AA (b) \num[round-mode=places,round-precision=4]{1.27863} \AA (c) \num[round-mode=places,round-precision=4]{1.97967} \AA
 %Comment on the diff between wb97xd and B3LYP.%
 
+%something about why the energy of the HNO3 reaction looks so rubbish (but that it stilll degrades at room temp, appaz. But check the literature)
+For the decomposition of \ce{HNO3} to \ce{{.}NO2},  \ce{2H2O} and \ce{O2}, Aellig prescribes the use of an amberlyst catalyst (amberlyst-15).
+%\cite{Ellis2007,Robertson1955}
+%The propagation reactions are acid catalysed by \ce{HNO2}. 
+%
+%\subsubsection{Radical mechanistic route}
+%
+%\subsubsection{Ionic mechanistic route}
+%
+%\subsection{Reactions of Nitrocellulose Monomer}
+%\section{ \textit{(Kinetics of Ethyl Nitrate)}}
+%\subsection{Radical mechanistic route}
+%\subsection{Ionic mechanistic route}
+%
+%\section{ \textit{(Kinetics of Nitrocellulose Monomer)}}
+
+%Insights into the reaction energies
+%“HNO cannot be stored or concentrated and is typically studied using donor species that release HNO as a decomposition product.” (paper since retracted)
+
+\begin{scheme}[ht!]
+\centering
+\schemestart
+\textbf{\ce{R-ONO2}}\arrow(xx--aa){->[\textbf{Elimination}]}[,1.5]\textbf{\ce{R=O + HNO2}}
+\arrow(@aa--bb)[-140,2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+\arrow(bb--cc)[-90]\ce{R-ONO -> R=O + HNO}
+\arrow(cc--dd)[-90]\ce{2HNO -> HON=NOH}
+%\arrow(dd--gg){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(dd--ee)[-90]\ce{HON=NOH -> N2O + H2O}
+%\arrow(@aa--ff)[-35,2]\ce{R=O}
+%\arrow(@gg--hh)\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+\schemestop 
+\caption{Proposed degradation pathway starting from the elimination of \ce{HNO2} from a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{Aellig2011}.}
+\label{sch:elimination}
+\end{scheme}
+
+\begin{scheme}[ht!]
+\centering
+\schemestart
+\textbf{\ce{R-ONO2 + H+}}\arrow(xx--aa){->[\textbf{Hydrolysis}]}[,1.5]\textbf{\ce{R-OH + NO2+}}
+\arrow(@aa--bb)[-150,2]\ce{NO2+ + 2H2O <=> HNO3 + H3O+}
+%\merge>(@aa--@bb)
+%\arrow(@aa--cc)[-30,2]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
+\arrow(@bb--cc)[-30,2]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
+\arrow(@aa--@cc)[-90]
+\arrow(@cc--dd)[-90]\ce{HNO2 + HNO3 <=> N2O4 + H2O} 
+\arrow(@dd--ee){0}[-90,0.2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+%\arrow(@dd--ff)[180]\ce{N2O4 + H2O -> HNO3 + HNO2}
+%\arrow(ff--gg){0}[-90,0.2]\ce{N2O4 <=> 2^{.}NO2}
+\arrow(@dd--gg)[180]\ce{N2O4 <=> 2^{.}NO2}
+\arrow(@ee--hh)[-90]\ce{R-ONO -> R=O + HNO}
+\arrow(hh--ii)[-90]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+\arrow(ii--kk){0}[-90,0.2]\ce{2HNO -> HON=NOH}
+\arrow(@gg--ii)[-50,3.3]
+\arrow(@kk--jj)[-90]\ce{HON=NOH -> N2O + H2O}
+\arrow(@ii--ll)[180,1]\ce{2 ^{.}NO + O2}
+\arrow(@ll--mm)[180,0.5]\ce{2^{.}NO2}
+\schemestop 
+\caption{Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{Aellig2011}.}
+\label{sch:hydrolysis}
+\end{scheme}
+
 \begin{table}[h]
 \begin{center}
 \caption{Energies of nitrate ester decomposition reactions proposed by Camera \cite{Camera1982}, Chin \cite{Chin2007} and Aellig \cite{Aellig2011}. R = \ce{CH3CH2} for ethyl nitrate, and R = \ce{(H3CO)2C6H9O3} (bi-methoxy capped glucopyraonse monomer unit).}
@@ -496,29 +514,6 @@ Ethyl nitrate ( R = \ce{CH3CH2} )\\
 \end{tabular}
 \end{center}
 \end{table}
-
-%something about why the energy of the HNO3 reaction looks so rubbish (but that it stilll degrades at room temp, appaz. But check the literature)
-For the decomposition of \ce{HNO3} to \ce{{.}NO2},  \ce{2H2O} and \ce{O2}, Aellig prescribes the use of an amberlyst catalyst (amberlyst-15).
-%\cite{Ellis2007,Robertson1955}
-%The propagation reactions are acid catalysed by \ce{HNO2}. 
-
-%
-%\subsubsection{Radical mechanistic route}
-%
-%\subsubsection{Ionic mechanistic route}
-%
-%\subsection{Reactions of Nitrocellulose Monomer}
-
-%\section{ \textit{(Kinetics of Ethyl Nitrate)}}
-%\subsection{Radical mechanistic route}
-%\subsection{Ionic mechanistic route}
-%
-%\section{ \textit{(Kinetics of Nitrocellulose Monomer)}}
-
-%Insights into the reaction energies
-%“HNO cannot be stored or concentrated and is typically studied using donor species that release HNO as a decomposition product.” (paper since retracted)
-
-
 
 \section{Summary}
 %
