@@ -1,4 +1,4 @@
-Working version of the scheme:
+Working version of the reaction schemes:
 
 \begin{scheme}[htp]
 \centering
@@ -140,3 +140,172 @@ Ethyl nitrate ( R = \ce{CH3CH2} )\\
 \end{tabular}
 \end{center}
 \end{table}
+
+
+Saved tables:
+%\begin{table}[htp]
+%\begin{center}
+%\caption{Free energies of protonation at different oxygens sites on ethyl nitrate.}
+%\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+%\toprule
+% \multicolumn{2}{c}{\multirow{2}{*}{\ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O}}} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\\\cline{3-6}
+%  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+%\hline
+%1 & Terminal O &  0.007232 & 0.008311 &  0.00635  & 0.007715\\
+%2 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+%3 & Bridging O & -0.019487 & 0.014003 & -0.021877 & 0.010113 \\ 
+%\bottomrule
+%\end{tabular}
+%\label{tab:reactions}
+%\end{center}
+%\end{table}
+
+%\begin{table}[htp]
+%\begin{center}
+%\caption{Reaction energies of reactions following denitration. Calculations carried out at 6-31+G(2df,p) level and solvent \acs{PCM} was implemented.}
+%\begin{tabular}{ c l *{4}{S[table-format = 2.4]}} 
+%\toprule
+%\multirow{2}{*}{}& \multirow{2}{*}{Reaction} & \multicolumn{2}{c}{$\Delta$G\textsubscript{r}} & \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }\\\cline{3-6} 
+%  &  & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+%\hline
+%1 & \ce{CH3CH2ONO2 + H2O -> CH3CH2OH + HNO3} &  0.007232 & 0.008311 & 0.00635 & 0.007715\\
+%2 & \ce{CH3CH2ONO2 + H3O+ <-> CH3CH2ONO2H+ + H2O} &	-0.019487 & 0.014003 & -0.021877 & 0.010113 \\
+%3 & 
+%\bottomrule
+%\end{tabular}
+%\label{tab:reactions}
+%\end{center}
+%\end{table}
+
+%Ionic reactions
+%
+%\ce{NO2+ + 2 H2O <-> HNO3 + H3O+}
+%
+%
+%Acid reactions
+%
+%\ce{CH3CH2OH + HNO3 -> CH3CH=O + H2O + HNO2}
+%
+%\ce{HNO2 + HNO3 <-> N2O4 + H2O}
+%\ce{N2O4 <-> 2 ^{.}NO2}
+%
+%\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O}
+%\ce{CH3CH2ONO -> CH3CH=O + HNO}
+%
+%\ce{HNO + HNO -> HON=NOH}
+%
+%\ce{HON=NOH -> N2O + H2O}
+%
+%Radical reactions
+%
+%\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}
+%\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}
+%
+%Didn't go:
+%
+%\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2}
+%\ce{CH3^{.}CHOH + HNO3 -> CH3CHO + H2O + ^{.}NO2}
+
+Original equations: 
+
+%\subsection*{Camera's equations}
+%\subsubsection*{Hydrolysis}
+%\begin{block_indent}{1cm}
+%\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} \\
+%\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} \\
+%\ce{NO2+ + 2H2O <=>[\text{fast}] HNO3 + H3O+} \\
+%\end{block_indent}
+
+%\textit{Initiation}
+%\begin{block_indent}{1cm}
+%\ce{CH3CH2OH + HNO3  -> CH3CH=O + H2O + HNO2} \\
+%\end{block_indent}
+%
+%\textit{Propagation}
+%\begin{block_indent}{1cm}
+%\ce{HNO2 + HNO3 <-> N2O4 + H2O} \\
+%\ce{N2O4 <-> 2 .NO2} \\
+%\ce{CH3CH2OH + ^{.}NO2 -> CH3^{.}CHOH + HNO2} \\
+%\ce{CH3^{.}CHOH + HNO3 -> CH3CH=O + H2O + ^{.}NO2} \\
+%\end{block_indent}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection*{Aellig's equations}
+%\textit{Initiation}
+%\begin{block_indent}{1cm}
+%\ce{4HNO3 <=> 4NO2 + 2H2O + O2} \\
+%\ce{2^{.}NO2 + H2O <=> N2O4 + H2O} \\
+%\ce{N2O4 + H2O -> HNO3 + HNO2} \\
+%\end{block_indent}
+%
+%\textit{Propagation}
+%\begin{block_indent}{1cm}
+%\ce{CH3CH2OH + HNO2 <-> CH3CH2ONO + H2O} \\
+%\ce{CH3CH2ONO -> CH3CH=O + HNO} \\
+%\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO} \\
+%\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2} \\
+%\end{block_indent}
+%
+%\textit{Termination}
+%\begin{block_indent}{1cm}
+%\ce{HNO + HNO -> HON=NOH} \\
+%\ce{HON=NOH -> N2O + H2O} \\
+%\end{block_indent}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%Chin's equations \\ 
+%\noindent Thermolysis
+%
+%\textit{Initiation:}
+%%\begin{equation}
+%\begin{block_indent}{1cm}
+%\ce{RONO2 -> RO^{.} + ^{.}NO2 } \\
+%\end{block_indent}
+%%\end{equation}
+%
+%\textit{Propagation:}
+%\begin{block_indent}{1cm}
+%%\begin{equation}
+%%\begin{aligned}
+%\ce{RO^{.} + ^{.}NO2 ->[\ce{RONO2}] RONO2 + NO + N2O4 + ^{.}NO2 + H2O  + N2O + CO2 + CO + C2H2O +} other organic fragments \\
+%%\end{aligned}
+%%\end{equation}
+%%\begin{equation}
+%\ce{2^{.}NO + O2 -> 2^{.}NO2} \\
+%%\end{equation}
+%%\begin{equation}
+%\ce{2^{.}NO2 <-> N2O4}\\
+%\end{block_indent}
+%%\end{equation}
+%
+%\noindent Hydrolysis
+%%\subsubsection*{Hydrolysis}
+%%\textit{Initial}
+%
+%\textit{Initiation:}
+%\begin{block_indent}{1cm}
+%%\begin{equation}
+%\ce{R-ONO2 + H2O -> ROH + HNO3} \\
+%%\end{equation}
+%%\begin{equation}
+%\ce{R-OH + HNO3 -> R-CHO + HNO2 + H2O}\\
+%%\end{equation}
+%\end{block_indent}
+%
+%\textit{Propagation:}
+%\begin{block_indent}{1cm}
+%%\begin{equation}
+%\ce{HNO3 + HNO2 -> N2O4 + H2O} \\
+%%\end{equation}
+%%\begin{equation}
+%\ce{N2O4 -> 2^{.}NO2}\\
+%%\end{equation}
+%%\begin{equation}
+%\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}\\
+%%\end{equation}
+%%\begin{equation}
+%\ce{^{.}R-OH + HNO3 -> RCH=O + H2O + NO2}\\
+%%\end{equation}
+%\end{block_indent}
