@@ -4,6 +4,8 @@
 
 %ISSUE: expansion of acronyms in the list of figures - not what we want, obvs, so find a way to not expand in the list of figs, OR go back and remove all teh acros in the figure captions.
 
+%Tighten up the spacings between acronyms
+
 \cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Abbreviations}
 \label{abbreviations}
 \abbreviations
@@ -11,6 +13,7 @@
 \begin{acronym}[CAM-B3LYP] % Give the longest label here so that the list is nicely aligned
 
 %Supress first
+\acro{wf}[$\psi$]{wavefunction}
 \acro{pN}[\%N]{percentage nitrogen by mass}
 \acro{2NDPA}[2-NDPA]{2-Nitrodiphenylamine}
 %\acro{DG}[$\Delta G$]{change in Gibb's free energy}

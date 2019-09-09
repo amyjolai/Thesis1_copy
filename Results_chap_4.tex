@@ -290,19 +290,20 @@ The schemes were modelled with both ethyl nitrate and the \ac{NC} monomer. Free 
 %Energetically feasible reactions were added to the decomposition pathway 
 
 \subsection{Computational details}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-All geometry optimisations were performed in \ac{G09}, using the \ac{wb97xd} and \ac{B3LYP} functionals. Optimisations were to the level of 6-31+G(2df,p) with tight convergence criteria (table \ref{tab:convergence}). Chemical species were constructed using \ac{GView} and for molecules of more than 3 atoms, the “Clean” function was used to re-order atoms to a preliminary reasonable geometry. Optimisations were performed in both vacuum and with \ac{PCM} to introduce implicit solvent effects. Energies of optimised structures were checked against values listed on NIST Computational Chemistry Comparison and Benchmark Database \cite{JohnsonIII2018} where available.
+All geometry optimisations were performed in \ac{G09}, using the \acs{wb97xd} and \acs{B3LYP} functionals. Optimisations were to the level of 6-31+G(2df,p) with tight convergence criteria (table \ref{tab:convergence}). Chemical species were constructed using \ac{GView} and for molecules of more than 3 atoms, the “Clean” function was used to re-order atoms to a preliminary reasonable geometry. Optimisations were performed in both vacuum and with \ac{PCM} to introduce implicit solvent effects. Energies of optimised structures were checked against values listed on NIST Computational Chemistry Comparison and Benchmark Database \cite{JohnsonIII2018} where available.
 
 \section{Results and Discussion}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Collation of the above schemes to fit the starting products from denitration:
 %The reaction energies for the proposed schemes 
 
-Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic fission, elimination of \ce{HNO2} or acid hydrolysis are illustrated in schemes \ref{sch:homolytic} - \ref{sch:hydrolysis}. For the reactions starting from the products of homolytic fission, the propagation reactions are dominated by radical reactions. \ce{HNO2} and \ce{^{.}NO2} are consumed and regenerated, supporting the theory that these may be species contributing to the observed autocatalytic rate of decay, following a first-order rate induction period \cite{Rodger1963,Lindblom2002,Volltrauer1981}.  \ce{R=O} and \ce{N2O} are terminating species, though they may go on to participate in wider reactions outside the scope of the proposed reactions.  
+Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic fission, elimination of \ce{HNO2} or acid hydrolysis are illustrated in schemes \ref{sch:homolytic} - \ref{sch:hydrolysis}. For the reactions starting from the products of homolytic fission, the propagation reactions are dominated by radical interactions. \ce{^{.}NO2} and \ce{HNO2} are consumed and regenerated, supporting the theory that these may be species contributing to the observed autocatalytic rate of decomposition, following a first-order rate induction period \cite{Rodger1963,Lindblom2002,Volltrauer1981}.  \ce{R=O} and \ce{N2O} are terminating species, which may go on to participate in wider reactions outside the scope of the proposed reactions. %why are they terminating species? - they do not go on to react and regenerate HNO2 and .NO2?
 
 \textcolor{red}{Still to mention:\\
  - Describe the other two schemes\\
  - Describe the energies in the table\\
  - Discuss why some of the values may be positive. \\
  - Include enthalpies of reaction, zero point energies, and any experimental proxies I can find for the reaction enthalpies too. \\
+ NOTE: ZPE energy correction means that you REMOVE the ZPE, so that you only compare the actual energy available for the reaction. 
  -  ?}
 
 \begin{scheme}[htp!]
@@ -343,7 +344,7 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
 %\end{figure}
 %$\Delta$-G\textsubscript{r}
 %$\textDelta$H\textsubscript{r}
-
+ 
 %note, terminal up is right, terminal down is left
 %\begin{scheme}[htp]
 %\begin{table}

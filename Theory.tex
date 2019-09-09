@@ -1,17 +1,74 @@
 \chapter{Theory and Implementation}
 \label{chapterlabel2}
 
-Intro - Recap denitration sequence as per literature
-% % This just dumps some pseudolatin in so you can see some text in place.
-% \blindtext
+%The theoretical basis for methods used in this thesis and more widely in compuational chemistry is described in this chapter.
 
-\section{Introduction}
-
-%subject to change, based on the level of theory and depth etc
 \section{Electronic structure methods}
-Intro to the history spiel. What it is, where did it come from. 
-\subsection{The Schr\"{o}dinger Equation}
+%Intro to the history spiel. What it is, where did it come from. 
+%Wave particle duality. 
+% Dodgy first sentence, change it. 
+Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron movement and position, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. The probability density is given by $|\Psi^{2}|$, such that the integral of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found in that region. Therefore, for $|\Psi^{2}|$ that has been normalised, integrating over all space gives the probability of 1.
+%Therefore, for $|\Psi^{2}|$ that has been normalised, the integral over all space is equal to 1, indicating that the probability of finding the system in the space is equal to 1.  %[REF] 
+
+Operators acting on $\Psi$ yield observable properties of the system. The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
+Erwin Schr\"{o}dinger first proposed his equation for the description of a quantum system using its wavefunction in 1929 \cite{schrodinger1929}. The time-independent %Schr\"{o}dinger's 
+equation is given in short-form: %(equation \ref{equ:schrodinger}).
+
+%\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
+\begin{equation}
+%\centering
+\mathbf{H}\Psi=E\Psi
+\label{equ:schrodinger}
+\end{equation}
+
+%where $\mathbf{H}$ is the Hamiltonian operator and $E$ is the energy of the system. $\mathbf{H}$ is called the eigenvalue, $\Psi$ the eigenfunction and $E$ is scalar. 
+
+where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue, the wavefucntion $\Psi$ is the eigenfunction and $E$ is a scalar denoting the energy of the system. The general form of the Hamiltonian is given by:
+
+\begin{equation}
+\mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_i^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
+\label{equ:hamiltonian}
+\end{equation}
+
+where all electrons are encompassed by $i$ and $j$, and all nuclei by $k$ and $l$. 
+%$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei.
+$\hbar$ %= \frac{h}{2\pi}$
+is the reduced Planck's constant ($\hbar = \frac{h}{2\pi}$), $m_e$ is the mass of an electron, $m_k$ is the mass of the nucleus $k$, $e$ is the charge of an electron, $Z_k$ is the atomic number of $k$ and $r_{xy}$ is the distance between particles $x$ and $y$. $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field.% What does this really mean, in a practical sense? 
+In Cartesian space, this is defined as the second derivative of the gradient in the three dimensions: % Does it refer to the change in electronic position, in this case?
+
+\begin{equation}
+\nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
+\label{equ:laplace}
+\end{equation}
+
+The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron - nuclear attraction is described by the third term, followed by the interelectronic and internuclear repulsive terms. The attractive and repulsive terms are potential energy terms and can be described classically. The kinetic energy terms are expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
+
+\begin{equation}
+\mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
+\label{equ:KE}
+\end{equation}
+
+When using \ac{au}, the electronic mass, charge and reduced Planck's constant are reduced to 1. 
+Equation \ref{equ:hamiltonian} can therefore be written as:
+
+\begin{equation}
+\mathbf{H} = \mathbf{T}_{e} + \mathbf{T}_{nuc} + \mathbf{V}_{e-nuc}+ \mathbf{V}_{e-e} + \mathbf{V}_{nuc-nuc}
+\label{equ:Htot}
+\end{equation}
+
+%$\hat{H}$
+%
+%Dirac’s equations [REF] present the most complete description of a whole N-electron system by accounting fully for special relativity in the context of quantum mechanics, however many layers of approximation must be adopted in order to arrive at a model that is pliable within computational limitations. In the context of quantum electronic structure calculations it is usually appropriate to exclude the contribution of relativistic effects and nuclear motion, thus applying the Born-Oppenheimer approximation. 
+%This presents the time independent Schrödinger’s equation \ref{equ:schrodinger}, which the Hartree-Fock approximation and many other electronic structure wavefunction based methods aim to solve. 
+%
+%The Hamiltonian operator (Eq. 3) acting on the wavefunction produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
+%
 \subsection{Born-Oppenheimer Approximation}
+
+The motion of elections and nuclei are coupled in real systems, as electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is defined by the pairwise attractive and repulsive terms of the Schr\''{o}dinger’s equation. However, this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
+
+The Born-Oppenheimer approximation fixes nuclear positions, such that the motion of electrons and nuclei may be decoupled. The nuclear kinetic energy term of the Schr\''{o}dinger’s equation becomes then independent of the electronic term, the electron - nuclear interaction term disappears, and the nuclear - nuclear repulsive term becomes a constant.  
+
 \subsection{Hartree Fock}
 Hartree Fock \ac{HF}
 %Hartree Fock \nomenclature{HF}
@@ -21,8 +78,15 @@ Hartree Fock \ac{HF}
 \subsubsection{Open shell systems}
 [PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted (RB3LYP) scheme. For systems without unpaired electrons, or “closed shell”, this treatment is sufficient. For radicals and other species with unpaired electron spin such as transition metal complexes, an alternative model allowing singly occupied orbitals must be adopted. The Restricted-Open (ROB3LYP) scheme maintains electron pairing within orbitals except in the case of the highest occupied molecular orbital (HOMO). This is singly occupied. An alternative model is Unrestricted (UB3LYP), where all electrons are unpaired and reside in their own orbitals (Figure 9). A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations where the bond has not completely broken.
+
 \subsection{Electron correlation}
+
+\subsection{Post-Hartree Fock methods}
+\subsubsection{MP2}
+
 \subsection{Density functional theory}
+Solutions to the Schr\''{o}dinger's equation using reference
+
 See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
 Functional Theory: A Guide for the Perplexed
 [PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]\\
@@ -34,9 +98,9 @@ Where E$^{T}$ %ok, its the ^ that makes it go italic.
 is the kinetic energy term, arising from electron motion; E$^{V}$
 is the potential energy term arising from nuclear-electron attraction and nuclear-nuclear repulsion; E$^{J}$ 
 is the columbic repulsion term arising from electron-electron repulsion and E$^{XC}$  
-is the exchange correlation term containing the remainder of the electron-electron interactions. The first three terms are purely classical, and correspond to the classical energy of the charge distribution (ρ).
+is the exchange correlation term containing the remainder of the electron-electron interactions. The first three terms are purely classical, and correspond to the classical energy of the charge distribution ($\rho$).
 The exchange term is non-classical encompasses the exchange energy due to the antisymmetry of the wavefunction, and dynamic correlation of electron motion. It can be further divided into the exchange and correlation components:
-\[E^XC (ρ)= E^X (ρ)+ E^C (ρ)\]
+%$E\^XC (\rho)= E\^X (\rho)+ E\^C (\rhos)$
 In the context of this report, the B3LYP functional will be used where the exchange is described as follows:
 %\[E_B3LYP^XC= E_LDA^X+ c_0 (E_HF^X-E_LDA^X )+ c_X ∆E_B88^X+E_VWN3^C+c_C (E_LYP^C-E_VWN3^C )\]
 
@@ -70,6 +134,7 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 
 %\subsection{Optimisation algorithms}
 
+
 \section{Analysis}
 
 \subsection{Topology analysis using \ac{QTAIM}}
@@ -83,7 +148,7 @@ The topology analysis technique proposed by Bader was firstly used for analyzing
 
 (3,-3): All three eigenvalues of Hessian matrix of function are negative, namely the local maximum. For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
 
-(3,-1): Two eigenvalues of Hessian matrix of function are negative, namely the second-order saddle point. For electron density analysis, (3,-1) generally appears between attractive atom pairs and hence commonly called as bond critical point (BCP). The value of real space functions at BCP have great significance, for example the value of  and the sign of  at BCP are closely related to bonding strength and bonding type respectively in analogous bonding type (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); the potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies (Chem. Phys. Lett., 285, 170); local information entropy at BCP is a good indicator of aromaticity (Phys. Chem. Chem. Phys., 12, 4742).
+(3,-1): Two eigenvalues of Hessian matrix of function are negative, namely the second-order saddle point. For electron density analysis, (3,-1) generally appears between attractive atom pairs and hence commonly called as bond critical point (BCP). The value of real space functions at BCP have great significance, for example the value of XXX and the sign of  at BCP are closely related to bonding strength and bonding type respectively in analogous bonding type (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); the potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies (Chem. Phys. Lett., 285, 170); local information entropy at BCP is a good indicator of aromaticity (Phys. Chem. Chem. Phys., 12, 4742).
 
 (3,+1): Only one eigenvalue of Hessian matrix of function is negative, namely first-order saddle point (like transition state in potential energy surface). For electron density analysis, (3,+1) generally appears in the center of ring system and displays steric effect, hence (3,+1) is often named as ring critical point (RCP).
 
@@ -117,7 +182,7 @@ The positions of CPs are searched by Newton method, one need to assign an initia
 
 n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 
-If the relationship is unsatisfied, then some of CPs must be missing, you may need to try to search those CPs by different guesses. However even if the relationship is satisfied, it does not necessarily mean that all CPs have been found. Notice that the function spaces of ELF/LOL and Laplacian of  are much more complex than , it is very difficult to locate all CPs for these functions, especially for middle and large system, so, you can stop trying for searching CPs once all CPs that you are interested in have been found.
+If the relationship is unsatisfied, then some of CPs must be missing, you may need to try to search those CPs by different guesses. However even if the relationship is satisfied, it does not necessarily mean that all CPs have been found. Notice that the function spaces of ELF/LOL and Laplacian of XX are much more complex than XXX, it is very difficult to locate all CPs for these functions, especially for middle and large system, so, you can stop trying for searching CPs once all CPs that you are interested in have been found.
 
  
 
