@@ -20,7 +20,7 @@
 The first stage of thermolytic decomposition for nitrate esters is widely considered to be homolytic fission at the O-N bond linking the nitrate to the alkyl chain, leading to the loss of \ce{NO2.} \cite{Oxley2003}. %many refs, tally them up here pls 
 The weak O-N bond (enthalpy of XX ) is easily cleaved when exposed to elevated temperatures, UV light or impact. %REF for all three of these. Might have to omit the last if I can't find anythign to support. 
  
- Under 100\degree C, nitrate ester decomposition is largely due to hydrolytic processes, whilst \> 100\degree C, thermolysis prevails / dominates. 
+ Under 100\degree C, nitrate ester decomposition is largely due to hydrolytic processes, whilst $\>$ 100\degree C, thermolysis prevails / dominates. 
 
 Kuklja made mention of some peroxy intermediates / transition states in the denitration of PETN.
 In their work looking into the atmoshperic reactions methyl nitrate methylperoxy nitrate Arenas (2007) suggested it was possible for the homolytic denitration reaction of methyl nitrate to share a common peroxy intermediate with the peroxide. This could account for some of the different/lower order NO\textsubscript{x} generated (just \ce{^{.}NO}, tbh, or maybe perhaps how NO3 may get generated?).
@@ -83,11 +83,31 @@ Following each successful scan, a low-level frequency calculation was performed 
 Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
 
 \section{Results and discussion}
-\subsection{Thermal decomposition mechanisms}
+\subsection{Thermolytic decomposition mechanisms}
 i.e not in acid
 Whilst the primary focus of this study is to explore the action of acids in the aging processes of  \ac{NC} , the thermolytic degradation routes must also be considered. These pathways are confluent with the reactions in the acid hydrolysis pathway and will dominate at elevated temperatures, due to their intramolecular character and therefore rapid, nature.
 
 \subsubsection{Homolytic fission}
+\begin{equation}
+\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 }
+\label{equ:homofiss}
+\end{equation}
+
+%\begin{scheme}
+%\centering
+%\schemestart
+%\ce{R-ONO2}\arrow(aa--bb)\ce{R-O^{.} + ^{.}NO2}
+%\schemestop 
+%\label{sch:homofiss}
+%\end{scheme}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.75\linewidth]{homofiss}
+\caption{Removal of nitrate group \texit{via} homolytic fission of \ac{NC}}
+\label{fig:homofiss
+\end{figure}
+
 Comment on how you did it for PETN first, as a tester (but put the results in the appendices?)
 
 [FIX ME - this seems to be computational details stuff] A methyl nitrate tester molecule was used for preliminary homolytic fission calculations on an N-O ester linkage (MECH1) (Figure 13). The bonding distance between oxygen and nitrogen was increased by 0.1 Å for 20 steps, beyond the length expected for bond fission. The separation of N-O was scanned using ROB3LYP and UB3LYP/6-31+G(d). Both test cases presented good agreement with the expected reaction co-ordinate.
@@ -108,6 +128,24 @@ The attempt to optimise this using a TS search was not successful. Multiple IRC 
 %ie. Make sure you understand the influence of entropy and how it plays a part!
 
 \subsubsection{Intramolecular elimination of \ce{HNO2}}
+\begin{equation}
+\ce{R-ONO2 -> R=O + HNO2}
+\label{equ:elimhono}
+\end{equation}
+%\begin{scheme}
+%\centering
+%\schemestart
+%\arrow(aa--bb)\ce{R=O + HNO2}
+%\schemestop 
+%\label{sch:homofiss}
+%\end{scheme}
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.75\linewidth]{elimhono}
+\caption{Removal of nitrate group \texit{via} elminiation of \ce{HNO2} of \ac{NC}}
+\label{fig:homofiss
+\end{figure}
 
 [Fix all of this]
 It was expected that as O22 approached H44 the generated reaction-co-ordinate would exhibit the normal reactant $\rightarrow$  transition state $\rightarrow$ product pattern, followed by either an asymptotic increase in energy or termination of the geometry scan, when the two atoms became too close or collided. However, despite showing the correct bond rearrangements as the distance between the nitrate oxygen the $\alpha$-hydrogen decreased, the PES diagram only presented a rapid increase in energy. 

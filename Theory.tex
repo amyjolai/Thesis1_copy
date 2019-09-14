@@ -1,64 +1,74 @@
 \chapter{Theory and Implementation}
 \label{chapterlabel2}
-
 %The theoretical basis for methods used in this thesis and more widely in compuational chemistry is described in this chapter.
 
 \section{Electronic structure methods}
 %Intro to the history spiel. What it is, where did it come from. 
 %Wave particle duality. 
 % Dodgy first sentence, change it. 
-Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron movement and position, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. The probability density is given by $|\Psi^{2}|$, such that the integral of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found in that region. Values of $\Psi$ are chosen to be othonormal. Therefore, for $|\Psi^{2}|$ integrating over all space gives the probability of 1.
+Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. The probability density is given by multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within.
+%, such that the integral of over a region of space returns the probability that a system will be found within. %in that region.$|\Psi^{*}\Psi|$ 
+%In Born's statistical interpretation in non-relativistic quantum mechanics,[8][9][10] the squared modulus of the wave function, |ψ|2, is a real number interpreted as the probability density of measuring a particle's being detected at a given place – or having a given momentum – at a given time, and possibly having definite values for discrete degrees of freedom. The integral of this quantity, over all the system's degrees of freedom, must be 1 in accordance with the probability interpretation. This general requirement that a wave function must satisfy is called the normalization condition. Since the wave function is complex valued, only its relative phase and relative magnitude can be measured—its value does not, in isolation, tell anything about the magnitudes or directions of measurable observables; one has to apply quantum operators, whose eigenvalues correspond to sets of possible results of measurements, to the wave function ψ and calculate the statistical distributions for measurable quantities.
+%From Wikipedia: https://en.wikipedia.org/wiki/Wave_function
+%Read the page, it's pretty good. 
+Values of $\Psi$ are chosen to be othonormal. Therefore, integrating $|\Psi^{2}|$ over all space gives the probability of 1:
+\begin{equation}
+\braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
+\end{equation}
+Where all electrons are represented by $i$ and $j$, and:
+\begin{center}
+$\delta_{ij}=0$ for $i\neq j$\\
+$\delta_{ij}=1$ for $i=j$
+\end{center}
 %that has been normalised,
 %Therefore, for $|\Psi^{2}|$ that has been normalised, the integral over all space is equal to 1, indicating that the probability of finding the system in the space is equal to 1.  %[REF] 
-
-Operators acting on $\Psi$ yield observable properties of the system. The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
+Operators acting on $\Psi$ yield the observable properties of the system. The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
 Erwin Schr\"{o}dinger first proposed his equation for the description of a quantum system using its wavefunction in 1929 \cite{schrodinger1929}. The time-independent %Schr\"{o}dinger's 
-equation is given in short-form: %(equation \ref{equ:schrodinger}).
-
+equation is:
+%Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
 %\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
 \begin{equation}
 %\centering
 \mathbf{H}\Psi=E\Psi
 \label{equ:schrodinger}
 \end{equation}
-
 %where $\mathbf{H}$ is the Hamiltonian operator and $E$ is the energy ofm the system. $\mathbf{H}$ is called the eigenvalue, $\Psi$ the eigenfunction and $E$ is scalar. 
-where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue, the wavefucntion $\Psi$ is the eigenfunction and $E$ is a scalar denoting the energy of the system. The general form of the Hamiltonian is given by:
-
+where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue of %the eigenfunction, 
+the wavefunction 
+$\Psi$, and $E$ is a scalar denoting the energy of the system. 
+%Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
+The general form of the Hamiltonian is given by:
 \begin{equation}
 \mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_i^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
 \label{equ:hamiltonian}
 \end{equation}
-
 where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l$. 
-%$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei.
+%$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
-is the reduced Planck's constant ($\hbar = \frac{h}{2\pi}$), $m_e$ is the mass of an electron, $m_k$ is the mass of the nucleus $k$, $e$ is the charge of an electron, $Z_k$ is the atomic number of $k$ and $r_{xy}$ is the distance between particles $x$ and $y$. When using \ac{au}, the electronic mass, charge and reduced Planck's constant are reduced to 1. $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field.% What does this really mean, in a practical sense? 
-In Cartesian space, this is defined as the second derivative of the gradient in the three dimensions: % Does it refer to the change in electronic position, in this case?
-
+is the reduced Planck's constant ($\hbar = \frac{h}{2\pi}$), $m_e$ is the mass of an electron, $m_k$ is the mass of the nucleus $k$, $e$ is the charge of an electron, $Z_k$ is the atomic number of $k$ and $r_{xy}$ is the distance between particles $x$ and $y$. When using \ac{au}, the electronic mass, charge and reduced Planck's constant are reduced to a value of 1. $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % What does this really mean, in a practical sense? 
+In Cartesian space, this is defined as the second derivative of the gradient in the three dimensions: % Does it refer to the change in electronic position, in this case? Do I even need to mention much about Laplacian?
 \begin{equation}
 \nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
 \label{equ:laplace}
 \end{equation}
-
-The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron - nuclear attraction is described by the third term, followed by the interelectronic and internuclear repulsive terms. The attractive and repulsive terms are potential energy terms are described as in classical mechanics. 
+The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term, followed by the interelectronic and internuclear repulsive terms. The three latter potential energy terms are described just as in classical mechanics. %appear the same as in classical mechanics. %analogous with classical mechanics.
+% attractive and repulsive terms are% potential energy terms that are
+% described as in classical mechanics. 
 %coloumbic interactions
 The kinetic energy terms are expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
-
 \begin{equation}
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
 \end{equation}
-
-Equation \ref{equ:hamiltonian} can therefore be written in terms of the kinetic energy and potential energy operators:
-
+The Hamiltonian %Equation \ref{equ:hamiltonian}
+can therefore be written in terms of the kinetic energy and potential energy operators:
 \begin{equation}
-\mathbf{H} = \mathbf{T}_{e} + \mathbf{T}_{nuc} + \mathbf{V}_{e-nuc}+ \mathbf{V}_{e-e} + \mathbf{V}_{nuc-nuc}
+\mathbf{H} = \mathbf{T}_{e} + \mathbf{T}_{N} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
 \label{equ:Htot}
 \end{equation}
-
+where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first two terms denoting the kinetic energy of the electrons and nuclei, and the latter three terms detailing the electron-nuclear interactions.
+%Was there really any point in rewriting it?
 %The Hamiltonian for the full system is represented in terms of the kinetic energy and potential energy operators. 
-
 %$\hat{H}$
 %
 %Dirac’s equations [REF] present the most complete description of a whole N-electron system by accounting fully for special relativity in the context of quantum mechanics, however many layers of approximation must be adopted in order to arrive at a model that is pliable within computational limitations. In the context of quantum electronic structure calculations it is usually appropriate to exclude the contribution of relativistic effects and nuclear motion, thus applying the Born-Oppenheimer approximation. 
@@ -66,40 +76,60 @@ Equation \ref{equ:hamiltonian} can therefore be written in terms of the kinetic 
 %
 %The Hamiltonian operator (Eq. 3) acting on the wavefunction produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
 %
-\subsection{Born-Oppenheimer Approximation}
 
-In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\''{o}dinger’s equation. However, this interdependency means that the wavefuction of such a system is difficult to define. 
+\subsection{Born-Oppenheimer Approximation}
+In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency results in a wavefuction that is difficult to define. 
+%of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
 Relative to electronic motion, nuclei move far more slowly, owing to their mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
-The difference is such that the nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
+The difference is such, that the nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
 %Owing to this difference in relative  
-Born-Oppenheimer approximation fixes nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. The nuclear kinetic energy term (\mathbf{T}_{nuc}) of the Schr\''{o}dinger’s equation becomes then independent of electronic motion; the electron - nuclear interaction term (\mathbf{V}_{e-nuc}) disappears, and the nuclear - nuclear repulsive term (\mathbf{V}_{nuc-nuc}) becomes a constant.  
-The equation is reduced to its electronic components and nuclear constants, written as:
-
+Born-Oppenheimer approximation fixes the nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. The nuclear kinetic energy term ($\mathbf{T}_{N}$) of the Hamiltonian is removed, as the nuclei are frozen. % becomes then independent of electronic motion; 
+%The electron-nuclear interaction term ($\mathbf{V}_{e-N}$) disappears, and 
+The nuclear-nuclear repulsive term ($\mathbf{V}_{NN}$) becomes a constant.  
+The equation is reduced to its electronic components and nuclear constants as:
+%
+%\begin{equation}
+%\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
+%\label{equ:BO}
+%\end{equation}
+% With AU:
 \begin{equation}
-(\mathbf{H}_{el} + \mathbf{V}_{nuc})\Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E_{el}(\mathbf{q}_{i};\mathbf{q}_{k})
+\mathbf{H}= - \frac{1}{2} \sum \nabla_i^{2} - \sum_{i} \sum_{k} \frac{Z_{k}}{r_{ik}} + \sum_{i<j} \frac{1}{r_{ij}} + \mathbf{V}_{NN}
+\label{equ:hamiltonian}
+\end{equation}
+%
+The Schr\"{o}dinger’s equation only dependent on the electronic coordinates is as follows: 
+%
+\begin{equation}
+(\mathbf{H}_{el}% + \mathbf{V}_{NN})
+\Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E_{el}(\mathbf{q}_{i};\mathbf{q}_{k})
 \label{equ:elec_schro}
 \end{equation}
+where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nucelar attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
+The electronic coordinates are given by $\mathbf{q}_{i}$, and the nuclear positions, $\mathbf{q}_{k}$.
+$E_{el}$ is the electronic energy of the system, which is now only dependent on the electronic coordinates.
 
-where \mathbf{H}_{el} is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nucelar attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. \mathbf{V}_{nuc}) is the kinetic energy of the nuclei, constant for the fixed positions. %And so can be an additive term at the end. 
- The electronic coordinates are given by \mathbf{q}_{i}, and the nuclear positions, \mathbf{q}_{k}.
+\subsection{Variational Principle}
+The variational theorem states that the calculated energy of any guess wavefunction can only be greater than or equal to the real ground-state energy of the system. % The concept of \''lower bound'' is a property of wavefunctions? How is this derived, and where does it stem from?
+This provides a criterion for selection of the best guess wavefunction.
 
-E_{el} is the electronic 
 
 \subsection{Hartree Fock}
 Hartree Fock \ac{HF}
 %Hartree Fock \nomenclature{HF}
 %this might need to be shifted
-\subsubsection{Variational Principle}
 
-\subsubsection{Open shell systems}
+
+\subsection{Open shell systems}
 [PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted (RB3LYP) scheme. For systems without unpaired electrons, or “closed shell”, this treatment is sufficient. For radicals and other species with unpaired electron spin such as transition metal complexes, an alternative model allowing singly occupied orbitals must be adopted. The Restricted-Open (ROB3LYP) scheme maintains electron pairing within orbitals except in the case of the highest occupied molecular orbital (HOMO). This is singly occupied. An alternative model is Unrestricted (UB3LYP), where all electrons are unpaired and reside in their own orbitals (Figure 9). A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations where the bond has not completely broken.
 
 \subsection{Electron correlation}
 
 \subsection{Post-Hartree Fock methods}
+
 \subsubsection{MP2}
 
 \subsection{Density functional theory}
