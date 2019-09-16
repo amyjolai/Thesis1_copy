@@ -6,12 +6,14 @@
 %Intro to the history spiel. What it is, where did it come from. 
 %Wave particle duality. 
 % Dodgy first sentence, change it. 
-Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. The probability density is given by multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within.
+Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. %Need a linking sentence here - What is the wavefunction, and why do we need to look at the probablility densiy instead?
+In a non-relativistic system, the probability of a particle possessing a given momentum, or residing in a particular place, is given by the probability density. This can be obtained by  multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. %Born interpretation. Ref? 
+Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within.
 %, such that the integral of over a region of space returns the probability that a system will be found within. %in that region.$|\Psi^{*}\Psi|$ 
 %In Born's statistical interpretation in non-relativistic quantum mechanics,[8][9][10] the squared modulus of the wave function, |ψ|2, is a real number interpreted as the probability density of measuring a particle's being detected at a given place – or having a given momentum – at a given time, and possibly having definite values for discrete degrees of freedom. The integral of this quantity, over all the system's degrees of freedom, must be 1 in accordance with the probability interpretation. This general requirement that a wave function must satisfy is called the normalization condition. Since the wave function is complex valued, only its relative phase and relative magnitude can be measured—its value does not, in isolation, tell anything about the magnitudes or directions of measurable observables; one has to apply quantum operators, whose eigenvalues correspond to sets of possible results of measurements, to the wave function ψ and calculate the statistical distributions for measurable quantities.
 %From Wikipedia: https://en.wikipedia.org/wiki/Wave_function
 %Read the page, it's pretty good. 
-Values of $\Psi$ are chosen to be othonormal. Therefore, integrating $|\Psi^{2}|$ over all space gives the probability of 1:
+Values of $\Psi$ are chosen to be othonormal; integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \begin{equation}
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
 \end{equation}
@@ -23,7 +25,7 @@ $\delta_{ij}=1$ for $i=j$
 %that has been normalised,
 %Therefore, for $|\Psi^{2}|$ that has been normalised, the integral over all space is equal to 1, indicating that the probability of finding the system in the space is equal to 1.  %[REF] 
 Operators acting on $\Psi$ yield the observable properties of the system. The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
-Erwin Schr\"{o}dinger first proposed his equation for the description of a quantum system using its wavefunction in 1929 \cite{schrodinger1929}. The time-independent %Schr\"{o}dinger's 
+Erwin Schr\"{o}dinger first proposed his equation for the description of the wavefunction of a quantum system in 1926 \cite{schrodinger1926}. The time-independent %Schr\"{o}dinger's 
 equation is:
 %Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
 %\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
@@ -77,7 +79,7 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first
 %The Hamiltonian operator (Eq. 3) acting on the wavefunction produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
 %
 
-\subsection{Born-Oppenheimer Approximation}
+\subsection{Born-Oppenheimer approximation}
 In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency results in a wavefuction that is difficult to define. 
 %of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
@@ -103,21 +105,24 @@ The equation is reduced to its electronic components and nuclear constants as:
 The Schr\"{o}dinger’s equation only dependent on the electronic coordinates is as follows: 
 %
 \begin{equation}
-(\mathbf{H}_{el}% + \mathbf{V}_{NN})
+(\mathbf{H}_{el} + \mathbf{V}_{NN})
 \Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E_{el}(\mathbf{q}_{i};\mathbf{q}_{k})
 \label{equ:elec_schro}
 \end{equation}
 where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nucelar attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
 The electronic coordinates are given by $\mathbf{q}_{i}$, and the nuclear positions, $\mathbf{q}_{k}$.
 $E_{el}$ is the electronic energy of the system, which is now only dependent on the electronic coordinates.
-
-\subsection{Variational Principle}
+%
+%\subsection{Slater determinant}
+%In order to 
+%
+\subsection{Variational principle}
 The variational theorem states that the calculated energy of any guess wavefunction can only be greater than or equal to the real ground-state energy of the system. % The concept of \''lower bound'' is a property of wavefunctions? How is this derived, and where does it stem from?
 This provides a criterion for selection of the best guess wavefunction.
 
 
 \subsection{Hartree Fock}
-Hartree Fock \ac{HF}
+Hartree Fock \ac{HF} 
 %Hartree Fock \nomenclature{HF}
 %this might need to be shifted
 
@@ -157,6 +162,8 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^X}$ (Hartree Fock) and E$_{LDA^X
 
 {\textomega}B97x-d is a range separated hybrid with D (self consistent exchange). It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
 
+%remember to talk about the underestimation of the reaction barriers
+
 \subsubsection{Hohenburg-Kohn formalism}
 \subsubsection{Kohn-Sham Equations}
 \subsubsection{Exchange-correlation functionals}
@@ -167,6 +174,8 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^X}$ (Hartree Fock) and E$_{LDA^X
 \subsubsection{Dispersion correction}
 Grimme
 \subsection{Basis sets}
+%make sure you know the caveats - ins and outs of the bases you used in combination with the methods you used. 
+%You know pople's one's aren't as stable as the aug- ones. State why you chose them. Also, MP2 will react differently with these bases as opposed to the aug- ones. 
 [FIX ME]
 A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied (Table 1. Examples of split valence basis sets.).40,41 
 

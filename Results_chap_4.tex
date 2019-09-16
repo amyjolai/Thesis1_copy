@@ -25,6 +25,7 @@ Products of the preliminary denitration step of \ac{NC} can be evolved as gases 
 Reactive nitrous oxide radicals generated from homolysis of the O-N bond %not evolved as \ce{NO2} gas, 
 are likely to migrate within the bulk and attack other sites on the polysaccharide. %REF
 % and free species
+Reacting  adicals could generate branching radical chain reactions, leading to deeper decomposition of the polymer; chain scission and eventually complete disintegration of the molecules could be achieved by a radical chain reaction assisted by products released by ongoing acid hydrolysis. 
 Nitrous and nitric acids released directly from denitration, or via transformation of released NO\textsubscript{x} species, contribute to the acidity of the overall system, lowering the pH and stimulating further hydrolysis processes \cite{Hu2011}. 
 
 %As described in section \ref{chapter4:intro}, Moniruzzaman \textit{et al.} used the reaction of nitrates with an anthraquinone dye (\acs{SB59}) to probe the reactivity at each of the C2, C3 and C6 sites on \ac{NC}, using \acs{UVVis} and \textsuperscript{1}H NMR spectroscopy (figure \ref{fig:SB59_NOx}).
@@ -267,7 +268,8 @@ Neutral and alkaline hydrolysis reactions follow a pseudo-first order process, h
 % Introducing the decondary reaction products %%%%%%%%%%%%%%%%%%%%
 %Discuss the work of Camera, Aellig and Chin 2007
 Multiple studies have addressed the decomposition reactions of nitrate esters following the initial scission of the nitrate group \cite{Baker1952,Camera1982,Camera1983,Matveev2003,Hu2011} %ETC refine this list later
-
+%Kuklja made mention of some peroxy intermediates / transition states in the denitration of PETN.
+In their work looking into the atmospheric reactions methyl nitrate methylperoxy nitrate Arenas (2007) suggested it was possible for the homolytic denitration reaction of methyl nitrate to share a common peroxy intermediate with the peroxide. This could account for some of the different/lower order NO\textsubscript{x} generated (just \ce{^{.}NO}, tbh, or maybe perhaps how NO3 may get generated?).
 %Baker1950
 
 
@@ -277,9 +279,10 @@ In this section, secondary and extended reaction schemes for the low temperature
 The reactions found to be energetically feasible from the proposed routes will be scrutinised to determine whether an autocatalytic pathway can be formed from the thermodynamically validated reaction schemes. 
 
 \section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The reactions proposed by Chin, Camera and Aellig \textit{et al.} were used to construct degradation routes for \ac{NC}. %Proceeding on from the initial denitration step, 
-The products of homolytic fission, elimination of \ce{HNO2} and acid hydrolysis of \ac{NC} were used as starting points.%, generating a for each proposed degradation pathway. 
-Schemes were constructed based on the propagation of the given reactions in a step-wise fashion; subsequent reactions were dependent on the products generated in prior steps, in addition to the assumed availability of other reactants in the system. 
+The reactions proposed by Chin, Camera and Aellig \textit{et al.} were used to construct possible degradation routes for \ac{NC}. %Proceeding on from the initial denitration step, 
+The products of homolytic fission, elimination of \ce{HNO2} and acid hydrolysis of \ac{NC} were used as the starting point.
+%, generating a for each proposed degradation pathway. 
+Schemes were constructed based on the propagation of the given reactions in a step-wise fashion; subsequent reactions were dependent on the products generated in prior stages, in addition to the assumed availability of other reactants in the system. %These were at constant concentration
 An abundance of water and oxygen were assumed present in the system, attributed to air exposure or the wetted storage conditions of \ac{NC}. Unsubsitutued alcohol moieties (R-OH) were also presumed available, due to incomplete nitration during the synthesis of \ac{NC} \cite{Wolf1997}, or re-generation following denitration \textit{via} hydrolysis. 
 The schemes were modelled with both ethyl nitrate and the \ac{NC} monomer. Free energies of reaction ($\Delta$ G) were used to determine the feasibility of a reaction. %Where the choice of method lead to a variation in the result of a reaction, the geometries around the reaction centres were further scrutinised in order to ensure no spurious behaviour due to artefacts from functional choice. [Bit of a dodgy sentence, how would you know what to say was right / wrong?]
 
@@ -290,13 +293,15 @@ The schemes were modelled with both ethyl nitrate and the \ac{NC} monomer. Free 
 %Energetically feasible reactions were added to the decomposition pathway 
 
 \subsection{Computational details}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-All geometry optimisations were performed in \ac{G09}, using the \acs{wb97xd} and \acs{B3LYP} functionals. Optimisations were to the level of 6-31+G(2df,p) with tight convergence criteria (table \ref{tab:convergence}). Chemical species were constructed using \ac{GView} and for molecules of more than 3 atoms, the “Clean” function was used to re-order atoms to a preliminary reasonable geometry. Optimisations were performed in both vacuum and with \ac{PCM} to introduce implicit solvent effects. Energies of optimised structures were checked against values listed on NIST Computational Chemistry Comparison and Benchmark Database \cite{JohnsonIII2018} where available.
+%What you should’ve - geometry optimisations with whatever method, to a reasonably high level, then taken whichever geometry had the lowest energy. Then done the thermochemistry to an even higher level, using whatever methods you wanted, using the geometry of whatever method opt’d previously. 
+All geometry optimisations were conducted in \ac{G09}, using the \acs{wb97xd} and \acs{B3LYP} functionals. Optimisations and thermochemistry calculations were performed to the level of 6-31+G(2df,p) with tight convergence criteria (table \ref{tab:convergence}).  Calculations were performed in both vacuum and with \ac{PCM} to introduce implicit solvent effects. Chemical species were constructed using \ac{GView} and for molecules of more than 3 atoms, the “Clean” function was used to re-order atoms to a preliminary starting geometry. Energies of optimised structures were checked against values listed on NIST Computational Chemistry Comparison and Benchmark Database \cite{JohnsonIII2018} if analogous molecules to a similar level of theory were available.
 
 \section{Results and Discussion}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Collation of the above schemes to fit the starting products from denitration:
 %The reaction energies for the proposed schemes 
 
-Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic fission, elimination of \ce{HNO2} or acid hydrolysis are illustrated in schemes \ref{sch:homolytic} - \ref{sch:hydrolysis}. For the reactions starting from the products of homolytic fission, the propagation reactions are dominated by radical interactions. \ce{^{.}NO2} and \ce{HNO2} are consumed and regenerated, supporting the theory that these may be species contributing to the observed autocatalytic rate of decomposition, following a first-order rate induction period \cite{Rodger1963,Lindblom2002,Volltrauer1981}.  \ce{R=O} and \ce{N2O} are terminating species, which may go on to participate in wider reactions outside the scope of the proposed reactions. %why are they terminating species? - they do not go on to react and regenerate HNO2 and .NO2?
+Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic fission, elimination of \ce{HNO2} or acid hydrolysis are illustrated in schemes \ref{sch:homolytic} - \ref{sch:hydrolysis}. When starting from the products of homolytic fission, the propagation reactions are dominated by radical interactions. \ce{^{.}NO2} and \ce{HNO2} were consumed and regenerated, supporting the theory that these may be species contributing to the observed autocatalytic rate of decomposition, following a first-order rate induction period \cite{Rodger1963,Lindblom2002,Volltrauer1981}. For all schemes, \ce{R=O} and \ce{N2O} were terminating species, which may go on to participate in wider reactions outside the scope of the proposed reactions. %why are they terminating species? - they do not go on to react and regenerate HNO2 and .NO2?
+Table \ref{tab:post_energies} shows the energies for the reactions in all schemes, for both ethyl nitrate and the \ac{NC} monomer. 
 
 \textcolor{red}{Still to mention:\\
  - Describe the other two schemes\\
@@ -332,6 +337,61 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
 \label{sch:homolytic}
 \end{scheme}
 
+\begin{table}[h]
+\begin{center}
+\caption{Energies of nitrate ester decomposition reactions proposed by Camera \cite{Camera1982}, Chin \cite{Chin2007} and Aellig \cite{Aellig2011}. R = \ce{CH3CH2} for ethyl nitrate, and R = \ce{(H3CO)2C6H9O3} (bi-methoxy capped glucopyraonse monomer unit).}
+\begin{tabular} { l *{4}{S[table-format = 2.4]}} 
+\toprule
+\multirow{2}{*}{Reaction}	& \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kcal mol\textsuperscript{-1}}
+\\\cline{2-5}
+			& \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
+\midrule
+%\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} &
+%\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} & 14.930370&-2.247210&16.012710&-4.038930\\
+%[\text{fast}]
+\ce{NO2+ + 2H2O <=> HNO3 + H3O+}& -0.896490 & -1.338750 & 1.770300 & 2.464560\\
+%\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 } \\ Homolysis
+\ce{2^{.}NO2 <=> N2O4} &-0.122220&	-1.310400	&0.541800	&0.155610
+\\
+\ce{N2O4 <=> 2^{.}NO2}	&	0.123480&	1.461600&	-0.539280&	-0.155610
+ \\
+ \ce{2^{.}NO2 + H2O <=> N2O4 + H2O}&-0.12222&-1.4616&0.53928&0.15561\\
+\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}&-28.21644&-28.66815&-27.32688&-27.6255\\
+ \ce{2^{.}NO + O2 -> 2^{.}NO2} &-20.77047&	-21.97314&-21.16044&-22.15899
+ \\
+\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}&-59.89473&-60.47244&-60.46866&-60.99597\\
+\ce{HNO3 + HNO2 <=> N2O4 + H2O} 	&	-2.251620	&	-1.854090	&	-5.131350	&	-4.180050 \\
+\ce{N2O4 + H2O -> HNO3 + HNO2}&2.25162&1.85409&5.13135&4.18005\\
+\ce{4HNO3 <=> 4NO2 + 2H2O + O2}&53.35029&58.36446&42.60942&46.93563\\
+\ce{2HNO -> HON=NOH}&-38.96928&-39.71583&-36.62757&-37.40814\\
+\ce{HON=NOH -> N2O + H2O}&-48.08286&-48.18429&-50.55309&-50.74902\\
+\midrule
+Ethyl nitrate ( R = \ce{CH3CH2} )\\
+\hline
+\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	4.556160	&	5.235930	&	4.000500	&	4.860450 \\ %Hydrolysis
+\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}	&	-34.062210	&	-38.427480	&	-37.593990	&	-41.770260 \\
+\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	16.376220	&	13.923000	&	15.887340	&	13.699350 \\
+\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}&-50.438430&-52.35048&-53.48133&-55.4715\\
+\ce{R-OH + HNO2 <=> R-ONO + H2O}&-3.20544&-3.276&-2.64096&-2.94903\\
+\ce{R-ONO -> R=O + HNO}&-1.49625&-5.82183&-4.36716&-8.50122\\
+\midrule
+\ac{NC} monomer ( R = \ce{(H3CO)2C6H9O3} )\\
+\hline
+\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	0.67536	&	5.63094	&	0.61236	&	-0.70119 \\
+%RONO2 &+&H3O+& <->&RONO2H+&+&H2O&(see protonation section)&&&-30.87756&3.5464&-31.98636&-0.24507
+%\ce{R-OH + HNO3 -> R=O + HNO2 + H2O} &	-36.72522&	-38.34306	&	-41.71419	&	-41.70411 \\ Hydrolysis
+\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	14.71302	&	11.15163	&	13.03407	&	23.20983 \\
+\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2} &
+-51.438240	&-49.494690	&-54.748260 &	-56.369250 \\
+\ce{R-OH + HNO2 <=> R-ONO + H2O}&-4.43142&-7.30233&-4.30605&-0.17829\\
+\ce{R-ONO -> R=O + HNO}&-2.93328&	-1.71108	&-6.82227&	-11.20581
+\\
+\bottomrule
+\end{tabular}
+\end{center}
+\label{tab:post_energies}
+\end{table}
+
 %\subsection{Thermodynamics of Ethyl Nitrate reactions}%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %For an initial comparison of the methods you used, you could do a diagram like the one Kuklja did (kuja2014.pdf, page 89, fig 3.7).
@@ -354,7 +414,7 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
 \caption{Free energies of protonation for each oxygen site on ethyl nitrate.}
 \begin{tabular}{ l l *{4}{S[table-format = 2.4]}} 
 \toprule
-\multicolumn{2}{l}{\multirow{2}{*}{Protonated site}} & \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kcal mol\textsuperscript{-1}} %& \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }
+\multicolumn{2}{l}{\multirow{2}{*}{Protonated site}} & \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kCal mol\textsuperscript{-1}} %& \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }
 \\\cline{3-6}
   & & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \midrule
@@ -397,7 +457,6 @@ Simplified schemes for the ageing reactions of \ac{NC} beginning from homolytic 
  \label{fig:en_protonation}
 \end{figure}
 %\end{scheme}
-
 Due to the availability of oxygen sites on the ethyl nitrate molecule, the optimal site for protonation was determined for inclusion in the reaction scheme for the first stage of hydrolysis. Table \ref{tab:reactions} shows the protonation energies for the three different oxygen sites on ethyl nitrate. Despite the upper terminal oxygen possessing the most thermodynamically favourable energy of protonation, inspection of the reaction geometries shows that the bridging structure most resembles that expected for the liberation of the \ce{NO2+} group at the next step. Though appearing less thermodynamically favourable when compared to protonation at the terminal upper oxygen site, the higher energy of reaction likely arises from the instability of the protonated complex. The elongation of the O--\ce{NO2} bond allows to stabilisation of the proton at the bridging site, such that the departure of \ce{NO2+} is easily facilitated. Subsequent calculation involving the energy of the protonated ethyl nitrate will employ the values associated with the protonated bridging site. %The \ce{CO---NO2} bond lengths are (a) \num[round-mode=places,round-precision=4]{1.27787} \AA (b) \num[round-mode=places,round-precision=4]{1.27863} \AA (c) \num[round-mode=places,round-precision=4]{1.97967} \AA
 %Comment on the diff between wb97xd and B3LYP.%
 
@@ -462,59 +521,7 @@ For the decomposition of \ce{HNO3} to \ce{{.}NO2},  \ce{2H2O} and \ce{O2}, Aelli
 \label{sch:hydrolysis}
 \end{scheme}
 
-\begin{table}[h]
-\begin{center}
-\caption{Energies of nitrate ester decomposition reactions proposed by Camera \cite{Camera1982}, Chin \cite{Chin2007} and Aellig \cite{Aellig2011}. R = \ce{CH3CH2} for ethyl nitrate, and R = \ce{(H3CO)2C6H9O3} (bi-methoxy capped glucopyraonse monomer unit).}
-\begin{tabular} { l *{4}{S[table-format = 2.4]}} 
-\toprule
-\multirow{2}{*}{Reaction}	& \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kcal mol\textsuperscript{-1}}
-\\\cline{2-5}
-			& \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
-\midrule
-%\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} &
-%\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} & 14.930370&-2.247210&16.012710&-4.038930\\
-%[\text{fast}]
-\ce{NO2+ + 2H2O <=> HNO3 + H3O+}& -0.896490 & -1.338750 & 1.770300 & 2.464560\\
-%\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 } \\ Homolysis
-\ce{2^{.}NO + O2 -> 2^{.}NO2} &-20.77047&	-21.97314&-21.16044&-22.15899
- \\
-\ce{2^{.}NO2 <=> N2O4} &-0.122220&	-1.310400	&0.541800	&0.155610
-\\
-\ce{HNO3 + HNO2 <=> N2O4 + H2O} 	&	-2.251620	&	-1.854090	&	-5.131350	&	-4.180050 \\
-\ce{N2O4 <=> 2^{.}NO2}	&	0.123480&	1.461600&	-0.539280&	-0.155610
- \\
-\ce{4HNO3 <=> 4NO2 + 2H2O + O2}&53.35029&58.36446&42.60942&46.93563\\
-\ce{2^{.}NO2 + H2O <=> N2O4 + H2O}&-0.12222&-1.4616&0.53928&0.15561\\
-\ce{N2O4 + H2O -> HNO3 + HNO2}&2.25162&1.85409&5.13135&4.18005\\
-\ce{^{.}NO2 + HNO -> HNO2 + ^{.}NO}&-28.21644&-28.66815&-27.32688&-27.6255\\
-\ce{2 ^{.}NO + O2 -> 2 ^{.}NO2}&-59.89473&-60.47244&-60.46866&-60.99597\\
-\ce{2HNO -> HON=NOH}&-38.96928&-39.71583&-36.62757&-37.40814\\
-\ce{HON=NOH -> N2O + H2O}&-48.08286&-48.18429&-50.55309&-50.74902\\
-\midrule
-Ethyl nitrate ( R = \ce{CH3CH2} )\\
-\hline
-%\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	4.556160	&	5.235930	&	4.000500	&	4.860450 \\ Hydrolysis
-\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}	&	-34.062210	&	-38.427480	&	-37.593990	&	-41.770260 \\
-\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	16.376220	&	13.923000	&	15.887340	&	13.699350 \\
-\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2}&-50.438430&-52.35048&-53.48133&-55.4715\\
-\ce{R-OH + HNO2 <=> R-ONO + H2O}&-3.20544&-3.276&-2.64096&-2.94903\\
-\ce{R-ONO -> R=O + HNO}&-1.49625&-5.82183&-4.36716&-8.50122\\
-\midrule
-\ac{NC} monomer ( R = \ce{(H3CO)2C6H9O3} )\\
-\hline
-\ce{R-ONO2 + H2O -> R-OH + HNO3}	&	0.67536	&	5.63094	&	0.61236	&	-0.70119 \\
-%RONO2 &+&H3O+& <->&RONO2H+&+&H2O&(see protonation section)&&&-30.87756&3.5464&-31.98636&-0.24507
-%\ce{R-OH + HNO3 -> R=O + HNO2 + H2O} &	-36.72522&	-38.34306	&	-41.71419	&	-41.70411 \\ Hydrolysis
-\ce{R-OH + ^{.}NO2 -> ^{.}R-OH + HNO2}	&	14.71302	&	11.15163	&	13.03407	&	23.20983 \\
-\ce{^{.}R-OH + HNO3 -> R=O + H2O + ^{.}NO2} &
--51.438240	&-49.494690	&-54.748260 &	-56.369250 \\
-\ce{R-OH + HNO2 <=> R-ONO + H2O}&-4.43142&-7.30233&-4.30605&-0.17829\\
-\ce{R-ONO -> R=O + HNO}&-2.93328&	-1.71108	&-6.82227&	-11.20581
-\\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
+
 
 \section{Summary}
 %
