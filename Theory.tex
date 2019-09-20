@@ -188,6 +188,8 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 
 \subsection{Solvent models}
 %Their effect on free energies - use a free energy cycle to justify the lack of inclusion of solvation energy - though this might be best discussed in Chap 1
+%How they are modelled.
+%PCM vs SMD, why is SMD better for free energies. Are they similar in terms of compuational demand
 
 %\subsection{Optimisation algorithms}
 
@@ -270,6 +272,11 @@ Relaxed potential energy surface (PES) scans, or geometry scans are used to prob
 An energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the points of interest are extracted and used for subsequent frequency calculations, transition state searches and validated using intrinsic reaction co-ordinate methods. 
 To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
 Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
+
+A rigid scan consists of a single point energy calculation of the structure at each of step the scan. % change in coo-rdinates.
+A relaxed scans calls for a geometry optmisation at each of these points. 
+Two-dimensional scans may be used to probe simultaenous processes in thte system. These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
+
 
 
 

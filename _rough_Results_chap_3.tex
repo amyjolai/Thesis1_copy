@@ -23,13 +23,13 @@ Under 100\degree C, nitrate ester decomposition is largely due to hydrolytic pro
 %Much work has studied the thermolysis of \ac{NC}, with a number of studies.. but ambient?
 Ambient ageing conditions differ from externally stimulated decomposition routes. %REF How?
 Under acidification, hydrolysis plays a significant role. %Alkaline hydrolysis should already have been done to death in the intro?
-Hu \textit{et al.} found that whilst primary and secondary nitrates were resilient to hydrolysis for pH > 0, tertiary nitrates underwent hydrolytic nucleophilic substition, reacting with water and sulfate to form alcohols and organosulfates\cite{hu2011}. 
+Hu \textit{et al.} found that whilst primary and secondary nitrates were resilient to hydrolysis for pH > 0, tertiary nitrates underwent hydrolytic nucleophilic substition, reacting with water and sulfate to form alcohols and organosulfates\cite{Hu2011}. 
 
 %
 %\begin{figure}[h]
 %  \centering
 %	\includegraphics[width=0.8\linewidth]{tertiary_nitrate_Hu2011}
-%\caption{The hydrolysis of 1,3,4-trihydroxy-2-methylbutan-2-yl nitrate via nucleophilic subsitution, in the solvated aerosol phase. Adapted from the work of Hu \textit{et al.}\cite{hu2011}.}
+%\caption{The hydrolysis of 1,3,4-trihydroxy-2-methylbutan-2-yl nitrate via nucleophilic subsitution, in the solvated aerosol phase. Adapted from the work of Hu \textit{et al.}\cite{Hu2011}.}
 %\end{figure}
 
 Spent acids remain in the \ac{NC} matrix following synthesis even with thorough washing procedures. %but how much acid? What concentrations? %REF one of those declassified studies. 
@@ -199,6 +199,60 @@ Can also mention the scans which don't have water in - just NO2 leaving.
 %
 %\subsection{ \textit{(Monomeric NC model)}}
 %\subsection{ \textit{(Dimeric NC model)}}
+
+%maybe even include a matrix of all the scans you did, and highlight the ones of note
+
+NOTE: may be that Gaussian does not allow change of spin during the course of a scan - even if I use unrestricted methods. Once it has decided the compound is a singlet, then it stays that way, even if in reality fission would occur and you'd get a triplet. What you most likely have to do, is a manual scan, whereby you generate each separation and optimise/relax each step yourself. But then you have to be the one watching out for the point where the spin is supposed to change, in order to change it manually. 
+An alternative might've been to do the scan in singlet state, as you have done, but the starting with the geometries at the final step, do a reverse scan, with the triplet spin state instead. Where the two PES cross over, is where you may be able to align them / cleavage point of the bond. HOWEVER for the protonated species, there should be no change of spin, but just a charge separation between the two species. Gaussian coudln't seem to accomodate this kind of separation either, and the energy just kept going up.  
+
+Rigid scans monomer:
+-NO2 leaving, with nothing allowed to relax other than elongation of the O-NO2 bond. To look at the energetics. Energy just keeps rising. ((protonated)HO-N-scan and XL-HO-N-scan - 50 steps instead of 20. Still see the same thing, although the energy starts to plateau a little, after around 20 steps) (uwb97xd)6-31+g(d)
+	- solv-HO-N-scan (40 steps instead of usual 20). Same again, tbh.
+- (same as above) Nothing allowed to relax, just looking at the energy of NO2 coming off. Yup, just goes up. (NO2-C2-scan not protonated)(uwb97xd)	
+		- solv-NO2-C2-scan 20 steps. same same. 
+	
+- NO2 leaving, with relaxation of NO2 internal angle ((protonated at bridging site - but really the capping site)floppy_HO-N-scan and (not protonated)floppy_NO2-C2-scan). Despite scanning over 4\AA and using an unrestricted method, the energy just kept rising and NO2 didn't break off.  (uwb97xd)
+- NO2 allowed to relax, with remainder of molecule frozen (not protonated - freenitr-NO2-C2-scan) NO2 bond doesn't really straighten out, energy just goes up. (uwb97xd)
+
+- Scan of just H (H-in-scan) (thought technically the ''bridging'' isomer) moving from the capping site to the nitrate with everything else frozen, just to look at the energetics. Though an expected energy increase - as nothing else is able to relax - there is a dip as the H approches the bonding distance with the nitrate bridging oxygen. This could be the TS geometry of that particular (O-H) bond.(uwb97xd)
+
+
+
+Relaxed scans monomer:
+
+
+Relaxed scan ethyl nitrate:
+- ** NO2 departure from bridge-protonated ethyl nitrate. Though energy continues to increase, the fragments start to rotate as NO2 reaches 2.67967\AA. It can be seen that they are rotating so that an oxygen is able to react with the hydroxyl group left behind. This may lead to peroxy formation, or interaction with the proton only? (uB3LYP, uwb97xd, uMP2) Funnily enough, the wb97xd scan starting with the same input parameters and coordinates, did not exhibit this behavour, just got futher away.
+MP2 shows an intial lowering of the energy - the NO2 clearly wanted to be further away. (Perhaps if left to optimise here they would have preferred to be two separate species). But beyond 2.37967 \AA, the energy started increasing again. At 2.87190 \AA the fragments rotated such at the ethanol O was at right angles to the NO2, with the NO2 O as the nearest atom.  However the nitrate was out of plane to the H. This again may suggest some sort of peroxy compound instead of HNO2 removal. 
+Same thing was observed of the final step of CCSD, though the scan was not able to complete (And so coudl only see geo of the last step to finish, which looks a lot like the MP2 one)
+
+- continuation of the above scan (cont_CH3CH2ONO2H+bridge-PESscan) shows that the NO2 oxygen does indeed align itself for peroxy, however due to the nature of the scan, the O-N bond keeps increasing, so it cannot form. %probably one to follow up with a optimisation here, or a opt=ts of sorts? (uB3LYP)
+
+Rigid ethyl nitrate:
+- NO2 departure with allowign relaxtion of NO2 internal angle, elongating the O-N bond, but also relaxing the hydroxyl proton's bond to the O, and its angle. Energy increases, as per. See relaxation in the NO2 angle (clearly wants to leave as NO2+) but otherwise marginal adjustments in the H position and bond length. (Protonated CH3CH2ONO2H+bridge-scan)(uB3LYP, uwb97xd uMP2 and uCCSD also - same behaviour. Though CCSD did not finish due to hitting the maximum number of cycles at step 12)
+
+Optimisation:
+- (failed) solv-C2-water tried to optimise a water next to C2, with H in bridging position. C2 was frozen,  only allowing the H2O to optimse around it. Was not able to converge. Ditto it's continued calc %future tip, stick in a water cluster instead. wb97xd & PCM
+- (failed) C2-water as above, but in vacuum
+- C2-water-zfrz - just optimised the HOH-ONO2 distance, with everything frozen. Converged, but not too useful. 
+ - total water flexibility - all failed to converge.
+
+Dualscans
+ -less_O-in_N-out-dualscan (10step) (HO-N-dualscan is the same but with frequency too), half_O-in_N-out-dualscan (5step) - freezing everything, apart from scanning N-O bond and allowing NO2 to relax, and H to move towards O18 (''bridge'' - but really cap -  protonated didn't fin. uwb97xd/6-31+g*  (The half one did, but only showed upwards, featuresless PES)
+ 
+ - R_less_O-in_N-out-dualscan - as above but restricted wb97xd/6-31+g* - shows a morre distint dip than in previous scan. The dip is at halfway point of the H moving onto the bridging O (1.08 \AA), O-N (1.62366 \AA)
+  
+- O-in_N-out-dualscan, simpl_O-in_N-out-dualscan(this one no freq) (again freezing everything, apart from scanning N-O bond and allowing NO2 to relax, and H to move towards O18) at lower level of uwb97xd/3-21g - completed, the PES isn't in super high resolution, but shows a distinct channel upwards. Will attempt to opt TS at the first dip in the fold, to see whether the TS can be isolated here, and could potentially lead to an alternative channel down (one that allows for dissociation, but woudl cross over / feed intot this PES - via another dimension?)
+
+- R_simpl_O-in_N-out-dualscan - as above, but restricted wb97xd/3-21g instead. TS dip in a similar place (literally same as in the restricte one above, with the polarisation 1.08 \AA), O-N (1.62366 \AA), 
+
+
+Analogous scans were done in B3LYP and in solvent. 
+Things to discuss 
+	- which scan settings gave best resolution of  PES
+	- How did inclusion of implicit solvent change things?
+	- How did different functionals compare?
+
 
 \section{Summary}
 Found that Homolytic fission faster than elimination of HNO2, but the latter is more likely at etc... same as for PETN.
