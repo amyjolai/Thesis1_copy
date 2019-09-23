@@ -206,12 +206,13 @@ NOTE: may be that Gaussian does not allow change of spin during the course of a 
 An alternative might've been to do the scan in singlet state, as you have done, but the starting with the geometries at the final step, do a reverse scan, with the triplet spin state instead. Where the two PES cross over, is where you may be able to align them / cleavage point of the bond. HOWEVER for the protonated species, there should be no change of spin, but just a charge separation between the two species. Gaussian coudln't seem to accomodate this kind of separation either, and the energy just kept going up.  
 
 Rigid scans monomer:
--NO2 leaving, with nothing allowed to relax other than elongation of the O-NO2 bond. To look at the energetics. Energy just keeps rising. ((protonated)HO-N-scan and XL-HO-N-scan - 50 steps instead of 20. Still see the same thing, although the energy starts to plateau a little, after around 20 steps) (uwb97xd)6-31+g(d)
+`Neutral hydrolysis'
+--NO2 leaving, with nothing allowed to relax other than elongation of the O-NO2 bond. To look at the energetics. Energy just keeps rising. ((protonated)HO-N-scan and XL-HO-N-scan - 50 steps instead of 20. Still see the same thing, although the energy starts to plateau a little, after around 20 steps) (uwb97xd)6-31+g(d)
 	- solv-HO-N-scan (40 steps instead of usual 20). Same again, tbh.
 - (same as above) Nothing allowed to relax, just looking at the energy of NO2 coming off. Yup, just goes up. (NO2-C2-scan not protonated)(uwb97xd)	
 		- solv-NO2-C2-scan 20 steps. same same. 
 	
-- NO2 leaving, with relaxation of NO2 internal angle ((protonated at bridging site - but really the capping site)floppy_HO-N-scan and (not protonated)floppy_NO2-C2-scan). Despite scanning over 4\AA and using an unrestricted method, the energy just kept rising and NO2 didn't break off.  (uwb97xd)
+- NO2 leaving, with relaxation of NO2 internal angle, and all those pertaining to its orientation with the rest of the molecule ((protonated at bridging site - but really the capping site)floppy_HO-N-scan and (not protonated)floppy_NO2-C2-scan). Despite scanning over 4\AA and using an unrestricted method, the energy just kept rising and NO2 didn't break off.  (uwb97xd)
 - NO2 allowed to relax, with remainder of molecule frozen (not protonated - freenitr-NO2-C2-scan) NO2 bond doesn't really straighten out, energy just goes up. (uwb97xd)
 
 - Scan of just H (H-in-scan) (thought technically the ''bridging'' isomer) moving from the capping site to the nitrate with everything else frozen, just to look at the energetics. Though an expected energy increase - as nothing else is able to relax - there is a dip as the H approches the bonding distance with the nitrate bridging oxygen. This could be the TS geometry of that particular (O-H) bond.(uwb97xd)
