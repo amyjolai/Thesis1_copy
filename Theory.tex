@@ -256,6 +256,8 @@ Let us see an example. In the complex shown below, the imidazole plane is vertic
 Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in GAUSSIAN attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
 The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state (Figure 10). It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
 
+`“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimiza- tion` - Yao2018
+
 %(within Gaussian? See if you end up using any)
 Frequency calculations
 \subsection{(Intrinsic Reaction Coordinate)}

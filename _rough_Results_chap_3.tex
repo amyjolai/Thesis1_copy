@@ -112,6 +112,57 @@ Comment on how you did it for PETN first, as a tester (but put the results in th
 
 This process was then replicated for the dimer, where the distance between oxygen 22 (O22) and nitrogen 23 (N23) of the nitrate ester on carbon 3 (C3) was increased (Figure 12). [THE REST SEEMS TO BE SPIEL. the graphics were nice though so maybe keep those]
 
+% These energies don't seem to reflect the excel sheet... update
+\begin{table}%[htp]
+\begin{center}
+%\par\bigskip
+\caption[Calculated free energies of reaction for the intramolecular reactions of PETN and the \ac{NC} monomer.]{Calculated free energies of reaction ($\Delta G_{r}$), reaction enthalpies ($\Delta H_{r}$), activation barriers ($E_{a}$)  with zero-point correction ($^{ZPE}$) for the intramolecular reactions of PETN, and the \ac{NC} monomer. Values expressed in kCal mol$^{-1}$.}
+% Remember, these have not been scaled. Yao2018 : B3LYP/6-31+G(d,p) level and are scaled by a factor of 0.98, for the ZPE
+\begin{tabular}{ l *{5}{S[table-format = 2.1]}} 
+%\begin{tabular}{ l l l l l l} 
+\toprule
+Reaction				& $\Delta G_{r}$	&$\Delta G_{r}^{ZPE}$ 	& $\Delta H_{r}$	&	${E_{a}}$	& ${{E_{a}}^{ZPE}}$ \\
+\toprule
+PETN					& \multicolumn{5}{l}{}\\
+\midrule
+\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	21.50946  $^{b}$ 	&16.55804 	 \\
+						& ${(41.2)}^{a}$	 &	${  (35.8)}$ 	&					&${(41.2)}$ 	& ${(35.8)}$ \\
+%\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	\textendash 	& \textendash 	 \\
+%						& ${(41.2)}^{a}$	 &	${  (35.8)}$ 	&					&	\textendash\  	& \textendash\  \\
+\rule{0pt}{4ex}   
+\ce{HNO2} loss		& -23.62626	 	 &	-26.212190		& -20.39247	& 41.2902		& 36.28071  \\
+						& ${(-18.6)}$		 &						&					&	${(47.3)}$	& ${(42.7)}$ \\
+%\rule{0pt}{4ex}   
+\toprule
+\ac{NC} monomer	& \multicolumn{5}{l}{} \\
+\midrule
+\ce{^{.}NO2} loss	& 23.25456 		& 18.68672 		& 36.26343 	& 23.25456 	&	18.68672 \\
+\rule{0pt}{4ex}   
+\ce{HNO2} loss		& -36.04986 		& -39.42322		&-22.85892 	& 40.69863 	& 37.32527  \\
+%Reaction			& \multicolumn{2}{l}{$\Delta G_{r}$} 	& \multicolumn{2}{l}{$\Delta G_{r}^{ZPE}$}		&$\Delta H_{r}$	&	\multicolumn{2}{l}{${E_{a}}$	}	&  \multicolumn{2}{l}{${{E_{a}}^{ZPE}}$} \\
+%\toprule
+%PETN	& \multicolumn{9}{l}{}\\
+%\midrule
+%%\ce{^{.}NO2} loss	& 	21.50946	 &${  (41.2)}^{a}$	&16.55804 		&	${  (35.8)}$ 		&	35.61579	& 	21.50946 &${(41.2)}^{a}$	&16.55804 	& ${(35.8)}$ \\
+%\ce{^{.}NO2} loss	& 	21.50946	 & ${(41.2)}^{a}$	&16.55804 		&	${  (35.8)}$ 		&	35.61579	& 	21.50946 &${(41.2)}$	&16.55804 	& ${(35.8)}$ \\
+%%\ce{^{.}NO2} loss	& 	21.50946	 &${  (41.2)}^{a}$	&16.55804 		&	${  (35.8)}$ 	&	35.61579	&\multicolumn{2}{c}{${\textendash}$} 	&\multicolumn{2}{c}{${\textendash}$} \\
+%\ce{HNO2} loss		& -23.62626	 &${(-18.6)}$		&	-26.212190	&						& -20.39247	& 41.2902	&	${(47.3)}$		& 36.28071 	& ${(42.7)}$ \\
+%\toprule
+%\ac{NC} monomer	& \multicolumn{9}{l}{} \\
+%\midrule
+%\ce{^{.}NO2} loss	& 23.25456 	&						& 18.68672 		& 						&36.26343 	& 23.25456 	&						&	18.68672 &	\\
+%\ce{HNO2} loss		& -36.04986 &						& -39.42322		& 						&-22.85892 	& 40.69863 	&						& 37.32527 	&	\\
+\bottomrule
+\end{tabular}
+\label{tab:intramolec}
+\end{center}
+$^a$ values from the work of Tsyshevsky \textit{et al.} \cite{Tsyshevsky2013}.\\
+$^b$ values for the activation energy and total energy of reaction are the same 
+for bond dissociation via homolytic fission.
+%when treating homolytic fission as a barrierless process. 
+\end{table}
+
+
 From results section:\\
 The methyl nitrate tester molecule presented an example of a successful geometry scan. A clear energy maximum corresponding to an expected transition state, is followed by a drop, suggestive of an intermediate or reaction product (Figure 17). The energy profile was obtained even though the scans were not able to complete the specified 20 steps. The UB3LYP process failed at step 16, whereas the ROB3LYP continued to step 19. At these end points, the presented energy value is not accurate but here have been included for context. The unrestricted and restricted-open cases show good agreement and near identical results for the steps where convergence was reached (1 – 15).\\
 %[ALSO SPIEL]\\
@@ -212,8 +263,11 @@ Rigid scans monomer:
 - (same as above) Nothing allowed to relax, just looking at the energy of NO2 coming off. Yup, just goes up. (NO2-C2-scan not protonated)(uwb97xd)	
 		- solv-NO2-C2-scan 20 steps. same same. 
 	
-- NO2 leaving, with relaxation of NO2 internal angle, and all those pertaining to its orientation with the rest of the molecule ((protonated at bridging site - but really the capping site)floppy_HO-N-scan and (not protonated)floppy_NO2-C2-scan). Despite scanning over 4\AA and using an unrestricted method, the energy just kept rising and NO2 didn't break off.  (uwb97xd)
-- NO2 allowed to relax, with remainder of molecule frozen (not protonated - freenitr-NO2-C2-scan) NO2 bond doesn't really straighten out, energy just goes up. (uwb97xd)
+- NO2 leaving, with relaxation of NO2 internal angle, and all those pertaining to its orientation with the rest of the molecule ((protonated at bridging site - but really the capping site)floppy_HO-N-scan and
+(not protonated)floppy_NO2-C2-scan). 
+Despite scanning over 4\AA and using an unrestricted method, the energy just kept rising and NO2 didn't break off.  (uwb97xd)
+
+- NO2 allowed to relax, with remainder of molecule frozen (not protonated - freenitr-NO2-C2-scan) NO2 bond doesn't really straighten out, energy just goes up. (uwb97xd) [ the angle didnt really rela though, probs cos it was still in reference to another part of the molecule]
 
 - Scan of just H (H-in-scan) (thought technically the ''bridging'' isomer) moving from the capping site to the nitrate with everything else frozen, just to look at the energetics. Though an expected energy increase - as nothing else is able to relax - there is a dip as the H approches the bonding distance with the nitrate bridging oxygen. This could be the TS geometry of that particular (O-H) bond.(uwb97xd)
 
