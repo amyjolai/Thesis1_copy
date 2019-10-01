@@ -3,28 +3,42 @@
 \graphicspath{ {./Conclusion_pics/} }
 
 \section{Conclusion}
-\section{Future Work}
+In this thesis, the degradation processes in \ac{NC} were explored using computational methods to elucidate the dominant processes and key reactants involved in ambient ageing. 
+In the first section, the polymeric structure of \ac{NC} was introduced. Different sized truncations were tested as models for the polysaccharide by inspecting the partial charges, \ac{ESP} and critical interaction points for monomeric, dimeric and trimeric \textbeta-glucopyranose structures. The dimer was found to be the minimum structure capturing the full properties of \ac{NC} within a repeat unit. However, due to its flexibility and high degrees of freedom, the monomeric structure was instead chosen for subsequent mechanistic studies, to simplify geometry optimisations and already challenging \ac{TS} searches. Comparison of the charge densities around the monomer and dimer revealed that the former exhibited an acceptable level of deviation from the dimer properties, and so was implemented in further investigations.
+Hydroxyl and methoxyl capping group ends were also compared, finding that the methoxyl groups provided a more similar charge and geometry profile to the extended polymer than the small hydroxyl groups. 
 
-Other transition structures including more waters or water clusters, and cyclic transition states involving the proton located on the capping group, possibly leading to the peeling off reaction. 
+Using the monomer model, the primary steps of decomposition were explored. Thermolytic denitration reactions were investigated. Homolytic fission of the nitrate \ce{O-NO2} bond, and elimination of \ce{HNO2} were tested with both the monomer model and PETN, finding good agreement with literature values for the reaction energies and activation energies, in case of \ce{HNO2} elimination. For the acid hydrolysis facilitated denitration, possible protonation sites in the monomer were analysed. It was found that the proton sat most favourably at the ''bridging'' oxygen site of the nitrate, by a small margin. Inspection of the optimised geometry showed that it very closely resembled the same geometry of the capping group site. Further investigations considered denitration routes beginning from all three possible protonation isomers.
+The denitration step was then explored \textit{via} a series of \ac{PES} scans, probing the stability of different possible \ac{TS} ring strucutres, and the nature of the \ce{NO2} leaving group. No stable \ac{TS} structures presenting the correct vibration for denitration were isolated, however scans confirmed that the \ce{NO2} was released as \ce{NO2+}, with possible formation of \ce{HNO2} at greater separations.
 
-A natural extension to the study of secondary reactions driving decomposition is the expansion to a wider range of possible reactions, including the mechansims studied for glucose.  
-\begin{figure}[htp]
+Proposed decomposition routes following on from the primary denitration step were compiled from nitrate ester reactions in literature. Using \ac{EN} as an initial test case, the energies of each reaction were evaluated to determine whether it were a viable step in the extended network of secondary reactions following liberation of the \ce{^{.}NO2}, \ce{NO2+} or \ce{HNO2} from first stage decomposition. Possible decomposition schemes were constructed, mapping from the point of \ce{NO2} liberation to the oxidation of the alcohol group on the sugar ring to a ketone. The reaction energies were determined for the \ac{NC} monomer. It was found that the energies were largely favourable from a thermodynamic equilibrium perspective. 
+
+Whilst this work has not exhausted the myriad reactions that may occur in the complex ageing procedures of \ac{NC}, it has shed light on the early stages of degradation, with presentation of a functional approximation of the polymeric structure, suitable for further study into the topic. Key competing reactions for the denitration step, the identity of nitrite species released and their role in the longer-range decomposition process has been brought to attention. %This project takes pause / set the stage for 
+The conclusion of this project sets the stage for subsequent investigation into the secondary reaction processes that lead to deeper degradation of the \ac{NC} structure.
+
+\section{Further Work}
+
+A natural extension to the study of the secondary reactions driving decomposition, is the expansion to a wider range of possible reactions. These may include the widely documented mechanisms studied for glucose (figure \ref{fig:glucose_hmf}).   
+\begin{figure}[h]
 \centering
-\begin{subfigure}[b][0.4\linewidth]
+\begin{subfigure}[b]{0.8\linewidth}
 \centering
-\includegraphics{conv_glucos_furan}
+\includegraphics[width=\linewidth]{conv_glucos_furan}
 \caption{Conversion of glucose A to HMF C via a furan aldehyde intermediate B.}
 \label{fig:hmf}
-\end{subfigure}
+\end{subfigure}\\
 \hfill
-\begin{subfigure}[b][0.4\linewidth]
+
+\hfill
+\begin{subfigure}[b]{0.8\linewidth}
 \centering
-\includegraphics{glucos_mech}
-\caption{The protonation of C2–OH on \textbeta-d-glucose (CV3), the subsequent breakage of the C2–O2 Bond (CV2), and the formation of the C2–O5 bond during glucose conversion to \ac{HMF} (CV1).}
+\includegraphics[width=0.4\linewidth]{glucos_mech}
+\caption{Protonation of C2–OH on \textbeta-d-glucose (CV3), the subsequent breakage of the C2–O2 Bond (CV2), and the formation of the C2–O5 bond during glucose conversion to \acs{HMF} (CV1).}
 \label{fig:hmf_mech}
 \end{subfigure}
-\caption{The conversion of glucose to \ac{HMF} (hydroxymethylfurfurl) with \ref{fig:hmf} showing the proposed reaction scheme, and  \ref{fig:hmf_mech} displaying a possible mechanistic pathway, from the \textit{ab initio} \ac{MD} study by Qian \cite{Qian2011}.}
+\caption{The conversion of glucose to \ac{HMF} with \ref{fig:hmf}  showing the proposed reaction scheme, and  \ref{fig:hmf_mech} displaying a possible mechanistic pathway, from the \textit{ab initio} \ac{MD} study by Qian \cite{Qian2011}.}
 \label{fig:glucose_hmf}
 \end{figure}
 
-
+Another avenue of interest is in the exploration of other transition structures for the denitration stage, and for further degradation following formation of the ketone. 
+The inclusion of additional explicit water molecules or water clusters may stabilise \ac{TS} that were previously not viable. 
+A cyclic transition state involving the proton located on the capping group should be probed in the possibility that it leads to a facile route to the peeling off individual glucopyraonse units, perhaps even preserving the nitrate group. 
