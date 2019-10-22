@@ -1,63 +1,152 @@
 \chapter{Introduction}
 \label{chapterlabel1}
 \graphicspath{ {./Intro_pics/} }
-
+% Just to fix lack of space after the TM symbol in introduction tbh!
+\let\OldTexttrademark\texttrademark
+\renewcommand{\texttrademark}{\OldTexttrademark\xspace}%
 % Includes the justification for your research, the hypothesis behind the
 % study and an explicit statement of your objectives.
 % A detailed account of scholarly work that has already been done on
 % your chosen subject.
-
-\section{The modern history of Nitrocellulose}
-%Cracking review and intro here:  A review of the synthesis, chemistry and analysis of nitrocellulose - Saunders 1990
-%LATER: Rejig to include some of his stuff
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\section{The modern history of Nitrocellulose}
+\section{A brief history of Nitrocellulose}  
+%What is NC, and why is it relevant%%%%%%%%%%%%%%%%%%%%%%%%%
 %Just find one of the historical review texts, and reword, and update with new developments and applications (just an overview)
-\ac{NC}, cellulose nitrate, or "guncotton" is a nitrated cellulose derivative that has been widely utilised in the manufacture of plastics, inks, propellant formulations and thin films
-since it's discovery in 1833 by Braconnot. %REF braconnot pls [PICTURE!] %(REF R Shorts' thesis, see references 1-5).
+\acs{NC}, cellulose nitrate, or "guncotton" is a nitrated cellulose derivative that has been widely utilised in the manufacture of plastics, inks, propellant formulations and thin films since its discovery in 1833 by Henri Braconnot \cite{Braconnot1833}. %(REF R Shorts' thesis, see references 1-5).
+
 %"micro-electronics as a resist material"
 %a low-order explosive
-%\ac{EM}
-\begin{figure}[hbp]
-\centering
-\includegraphics[width=0.4\linewidth]{natureflex_compare}
-\caption{Comparison of degradation times for Natureflex\texttrademark  with conventional plastic packaging, from The Mindful Chef blog \cite{Parker2018}.}
-%\caption{Comparison of degradation times for Natureflex\texttrademark with conventional plastic packaging, and examples of cellulose wrappings from \cite{Parker2018,Buttermilk2018, }}
-\label{fig:natureflex}
-\end{figure}
-Cellulose is the primary component of plant cell walls and is the most abundant polymer in nature \cite{Klemm2005}. % (REF for first and second points) 
-Cotton is almost entirely comprised of cellulose. % (FIGX). %cotton plant
-It can be considered an almost inexhaustible ingredient in manufacturing. As environmental concerns drive the shift towards renewable raw materials and carbon neutral industrial processes, interest and innovation in the use of bio-materials has also skyrocketed \cite{Ghaderi2014,MaterialDistrict,BioMassPackaging,Parker2018}. 
-Bio-plastic products utilising thin films made of cellulose fibres, such as Natureflex\texttrademark \cite{Futamura2019}. % and Bio-Flex\texttrademark \cite{}
-, have emerged in the consumer market offering attractive replacements to traditional crude-oil plastics (figure \ref{fig:natureflex})%
-%shows a thin film made of cellulose fibres, as a replacement for traditional crude-oil plastics%REF Ghaderi, 2014. 
-%Bio-plastic products such as Natureflex %\texttrademark %REF http://www.biomasspackaging.com/brands/natureflex/ , http://www.futamuragroup.com/divisions/cellulose-films/products/natureflex/ 
-%and Bio-Flex %https://fkur.com/en/brands/bio-flex-3/
-These alternatives provide biodegradable food packing films, 3D printing elements, wound dressings and film-blown plastics spanning almost the full range of current applications, with the added benefit of compostability, for use as a fertiliser for agricultural applications, creating a circular carbon economy \cite{King2013}. 
-%Cellulose has also seen application in wound dressings ''Biotextiles as Medical Implants'' \cite{King2013}
-%seipermeable memebranes as they mentioned in baranova2011 (but they didnt cite)
-
-It was found by Braconnot % Henri Braconnot found that when he mixed wood fibres or starch with nitric acid a lightweight explosive material was produced, he named this substance xyloïdine | Analytical Techniques in the Study of Highly-Nitrated Nitrocellulose. 
-that when cellulose fibres, in the form of sawdust, cotton, linen and paper were treated with nitric acid, the product burned rapidly and in the absence of the thick black smoke that was characteristic of gunpowder of the era \cite{Worden1911}. 
-In his Berlin laboratory in 1845, Dr. Schönbein serendipitously discovered that acid treated cotton wool burned violently without the accompanying black smoke that was typical of gunpowders of the time \cite{Greenberg1925}. He was granted a U.S. patent the following year. 
-
-Today \ac{NC} is present in adhesives, paints and lacquer coatings \cite{Gholamiyan2018}. Varieties of high %percentage nitrogen by weight 
-\ac{pN} are used for its explosive properties, such as in rocket and gun propellants. Since Schönbein’s day \ac{NC} has seen applications in dynamite, artificial silks and printing inks.  Reels of historical cinematographic film were made of \ac{NC} which were notoriously flammable, not premitted on public transport, and requiring storage and use only within in fire-proof projection boxes \cite{Edge1990,Kodak2019,InternationalFederationofFilmArchives1991,Konstantinidou2016}.
-Collodin, a solution of \ac{NC} in either ether or ethanol, is used both in surgical dressings and in theatrical make-up. The non-flexible variety is applied to skin, which puckers as the solvent evaporates, effectively creating the appearance of scarred tissue.% [PICTURE!]
-
-\ac{NC} of above 12.5 \ac{pN} is considered explosive. The theoretical maximum level of nitration is 14.14 \ac{pN}, corresponding to a \ac{DOS} of three, where every free hydroxyl group has been replaced by a nitrate ester. In practice, a maximum of 13.6 \ac{pN} is achieved \cite{DowWolffCellulosics1998}.
-When \ac{NC} is the only energetic component in an explosive mixture, it is termed a single-base propellant. \ac{NC} mixtures with one or more \ac{EM} %energetic materials 
-such as \ac{NG}, where \ac{NG} also acts as a plasticiser, are classed as double or triple-base propellants. Due to the degradation of \ac{NC} over time, stabilisers are necessary to neutralise the decomposition products that facilitate further reactions.
-% Background story and industrial applications and properties of \ac{NC}.
-% Briefly explain why we need to know more about its degradation processes. 
-%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-\section{Synthesis and structure}
-\begin{figure}[htp]
+%If you have time, make the atom text size 16 and line thickness 0.55mm
+%
+\begin{figure}[h]
 \centering
 %\includegraphics[width=\textwidth]{NC}
 \includegraphics[scale=0.5]{NC}
 \caption{The structure of Nitrocellulose.}
 \label{fig:NCstructure}
 \end{figure}
-Nitrocellulose is derived from the nitration of cellulose. A common nitrating mixture of nitric and sulfuric acids generate the nitronium ion (equation \ref{equ:nitronium}). The nitronium ion is then attacked by the lone pair on the oxygen of the alcohol group on cellulose, leading to nitration (equation \ref{equ:nitration} and figure \ref{sch:cellulose_nitration}).
+
+Cellulose is the primary component of plant cell walls and the most abundant polymer in nature \cite{Klemm2005,Zhao2007}. % (REF for first and second points) 
+An example is cotton, which is almost entirely comprised of cellulose \cite{Kettering1942}. % (FIGX). %Table 1 Cellulose Found in Alcohol Extracted Cotton Fiber, Kettering, if I feel like it. 
+It can be considered an almost inexhaustible ingredient in manufacturing. As environmental concerns drive the shift towards renewable raw materials and carbon neutral industrial processes, interest and innovation in the use of bio-materials has also skyrocketed \cite{Ghaderi2014,MaterialDistrict,BioMassPackaging,Parker2018}. 
+Bio-plastic products utilising thin films made of cellulose derivatives, such as Natureflex\texttrademark \cite{Futamura2019}% and Bio-Flex\texttrademark \cite{}
+, have emerged in the consumer market offering attractive replacements to traditional crude-oil plastics (figure \ref{fig:natureflex}). 
+%
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.4\linewidth]{natureflex_compare}
+\caption{Comparison of degradation times for Natureflex\texttrademark bioplastic against conventional plastic packaging, from The Mindful Chef blog \cite{Parker2018}.}
+%GET PERMISSION FOR THIS
+%\caption{Comparison of degradation times for Natureflex\texttrademark with conventional plastic packaging, and examples of cellulose wrappings from \cite{Parker2018,Buttermilk2018, }}
+\label{fig:natureflex}
+\end{figure}
+%Bio-plastic products such as Natureflex %\texttrademark %REF http://www.biomasspackaging.com/brands/natureflex/ , http://www.futamuragroup.com/divisions/cellulose-films/products/natureflex/ 
+%and Bio-Flex %https://fkur.com/en/brands/bio-flex-3/
+These alternatives provide biodegradable food packing films, 3D printing elements, wound dressings and film-blown plastics, spanning almost the full range of current applications. Whilst the durability of cellulose-based products may not meet that of their plastic counterparts, they come with the key advantage of compostability. This facilitates their secondary use as an organic feedstock, such as in fertiliser for agricultural applications, fostering a circular carbon economy \cite{King2013}. 
+%Cellulose has also seen application in wound dressings ''Biotextiles as Medical Implants'' \cite{King2013}
+%seipermeable memebranes as they mentioned in baranova2011 (but they didnt cite)
+
+It was found by Braconnot % Henri Braconnot found that when he mixed wood fibres or starch with nitric acid a lightweight explosive material was produced, he named this substance xyloïdine | Analytical Techniques in the Study of Highly-Nitrated Nitrocellulose. 
+that when fibres of cellulose in the form of sawdust, cotton, linen and paper were treated with nitric acid, the product burned rapidly and in the absence of the thick black smoke that was characteristic of gunpowder of the era \cite{Worden1911}. He named this material xyloidine \cite{FernandezdelaOssa2011}. 
+In his Berlin laboratory in 1845, Dr. Schönbein serendipitously discovered that acid treated cotton wool burned violently, and was the first to obtain a stable product using a mixture of nitric and sulfuric acids %without the accompanying black smoke that was typical of gunpowders of the time 
+\cite{Greenberg1925}. He was granted a U.S. patent the following year, and variations of his techique are currently still used in the commercial manufacture of \ac{NC}  \cite{Saunders1990,Schonbein1846}.  
+\\
+\\
+\noindent Subsequent progress in the synthesis of stable \ac{NC} products followed his discovery:
+\begin{description}
+\item 1855 - George Audemars pulls a \ac{NC} filament from solution of ether and alcohol \cite{Saunders1990}.
+
+\item 1864 - Baron Lenk patents a method for producing ''improved guncotton'' %, reigniting interest 
+\cite{Lenk1864}.
+
+\item 1866 - British chemist Frederick Abel patents another method for manufacturing \ac{NC}, this time removing impurities and generating a more stable product, establishing its commercial importance \cite{Abel1866}.
+
+\item 1868 - John Wesley Hyatt combines \ac{NC} with camphor to produce one of the first plastics, celluloid. This is later used to make billiard balls, which were previously made from ivory \cite{Saunders1990}. 
+
+\item 1883 - Whilst working on an early version of the lightbulb, Joseph Swan develops a method of extruding nitrocellulose into filaments \cite{Saunders1990}. 
+
+\item 1884 - Paul Vielle invents the first \ac{NC}-based smokeless gunpowder \cite{FernandezdelaOssa2011}. 
+\leavevmode \\
+\end{description}
+
+%more for the later referenced applications of NC?
+%You spent half your intro talking about Cellulose. 
+%Also focus on the significance of NC in history and expand on a few case studies  -e.g. it's development during war time, it's use in plastics, it's current uses. Perhaps a bit more on the current sourcing issues. 
+%perhaps expand on the signficance of NC cinematographic film
+%
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+\section{Applications of \ac{NC}}
+%Summary table of applications / motivations?
+% Medical
+% Conservation work of muesum artifacts and historical films
+% Military applications - propellants
+% Propellants and explosives, in genera - plane ejection seat explosives
+% Disposal methods of historical
+% Biological research
+%
+%Draw a nice info graphic of stats all the uses of NC, and a paper interest graph demonstrating the increased mention of Nitrocellulose in publications, since the war. 
+%(thought the latter is more a niche thing)*
+%
+%\ac{NC} has been used widely in manufacturing, as a feedstock for lacquers, coatings, propellants and ....., It continues to be used in industry today, due to it's low cost and versatility.  However, new 
+%\subsection{(Explosive,  non-explosive}
+%Cf. plane seat ejector propellant formulation - important to know whether it can withstand humidity and temperature cycling. Work by Wang \textit{et al.} showed that the thermal history of a sample of \ac{NC} would modify its rate of degradation, attributed to its autocatalytic nature \cite{Wang2015}.
+
+\ac{NC} is commonly found in adhesives, paints and lacquer coatings \cite{Gholamiyan2018,Shashoua1992}. Since Schönbein’s day, \ac{NC} has seen applications in dynamite, artificial silks and printing inks.  Reels of historical cinematographic film made from \ac{NC} were notoriously flammable, banned on public transport, and permitted storage and use only within fire-proof projection boxes \cite{Edge1990,Kodak2019,InternationalFederationofFilmArchives1991,Konstantinidou2016}. Conservation efforts attempted to preserve these material \textit{via} cold storage or duplication onto more stable cellulose triacetate or polyester film. 
+For heavily deteriorated film, its destruction was recommended due to fire and safety hazards \cite{Calhoun1967,Edge1989}.
+Today, the information of \ac{NC} films can be digitised \cite{Matusiak2014}. 
+Collodin, a solution of \ac{NC} in either ether or ethanol, is used both in surgical dressings and in theatrical make-up. To create special effects, a non-flexible variety of colloidin is applied to skin, which puckers as the solvent evaporates, effectively creating the appearance of scarred tissue. % [PICTURE!]
+Tonkinson and Stillman produced a review on the merits of \ac{NC} as a microporous blotting membrane, used in genomic experiments for decades \cite{Tonkinson2002}. Finding that it could bind DNA-RNA duplexes in solution, the first application of \ac{NC} in molecular biology was as a sieve to separate DNA duplexes from free RNA. Later work exploited this property to study protein-DNA interactions. 
+
+Varieties of high %percentage nitrogen by weight 
+\ac{pN} are used for their energetic properties, such as in rocket and gun propellants.
+\ac{NC} of above 12.5 \ac{pN} is considered explosive. The theoretical maximum level of nitration is 14.14 \ac{pN}. This corresponds to a \ac{DOS} of three (equation \ref{equ:DOS}), where each of the three free hydroxyl groups has been replaced by a nitrate ester. In practice, only a maximum of 13.6 - 13.8 \ac{pN} (\ac{DOS}=2.9) is routinely achieved \cite{DowWolffCellulosics1998,Alinat2014}, though higher, unstable levels of nitration have been obtained at high temperatures \cite{FernandezdelaOssa2011}.
+%make sure you know where this came from 
+\begin{equation}
+\centering
+\text{Degree of substitution (DOS)} = \frac{3.6 \times \text{nitrogen content (\%)}}{31.13 - \text{nitrogen content (\%)}}
+\label{equ:DOS}
+\end{equation}
+
+\begin{table}[hbp!]
+\begin{center}
+\caption{\ac{DOS} in \ac{NC} and the corresponding \acf{pN}. }
+\begin{tabular}{ c c c } 
+\toprule
+\ac{DOS}	& \ac{pN} 		& Description \\
+\hline
+ 1				& 6.76 	& Cellulose mononitrate \\%One nitrate group per ring \\
+% 1.1 - 1.9 	& 0.000300 	& Between one and two nitrate groups per ring. Non-uniform nitration across the monomers. \\
+2				& 11.11 	& Cellulose dinitrate \\%Two nitrate groups per ring \\
+%2.1 - 2.9		& 0.001200 	& Between two and three nitrate groups per ring. Non-uniform nitration across the monomers. \\
+3				& 14.14	& Cellulose trinitrate\\%Three nitrate groups per ring \\
+\bottomrule
+\end{tabular}
+\label{tab:DOS}
+\end{center}
+\end{table}
+
+A non-integer value for \ac{DOS} indicates a non-uniform level of nitration on individual glucopyranose rings throughout the polymer structure. 
+%NB: Talk about difference levels of nitration, nitration rates , distribution of nitrates through the matrix, in a later section
+When \ac{NC} is the only energetic component in an explosive mixture, it is termed a single-base propellant. \ac{NC} mixtures with one or more \ac{EM} %energetic materials 
+such as \ac{NG}, where \ac{NG} also acts as a plasticiser, are classed as double or triple-base propellants. Due to the degradation of \ac{NC} over time, stabilisers are necessary to neutralise the decomposition products that facilitate further reactions.
+
+%Try and include a royalty free pic of Seat Ejection too
+\begin{figure}[hbp!]
+\centering
+\includegraphics[width=0.9\linewidth]{uses}
+\caption[Applications of \ac{NC} at different \ac{pN}.]{Left: The \acf{pN} of \ac{NC} showing the number of nitrate groups at each \acf{DOS}.\\ 
+Right: \ac{NC} with lower levels of nitration play an important role in the manufacture of paints and lacquer coatings, whilst $<$12.5\ac{pN} is used in the production of explosives and propellants.}
+\label{fig:uses}
+\end{figure}
+
+The behaviour of \ac{NC} within product formulations depends on the structure and degree of nitration of the material itself, in addition to the environmental and storage conditions, age, and interactions with any plasticisers and stabilisers in the product mixture. %The properties of bulk \ac{NC} are heavily dependent on the 
+ % One paragraph / sentence to close the section. 
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+\section{Synthesis and structure}
+%What does NC look like, and what are the different ways of making it %%%%%%%%
+Nitrocellulose is derived from the nitration of cellulose. A common nitrating mixture of nitric and sulfuric acids generate the nitronium ion (equation \ref{equ:nitronium}). The nitronium ion is then attacked by the lone pair on the oxygen of the alcohol group on cellulose, leading to the formation of a nitrate ester (equation \ref{equ:nitration} and figure \ref{sch:cellulose_nitration}).
+
 %
 \begin{equation}
 \centering
@@ -68,9 +157,12 @@ Nitrocellulose is derived from the nitration of cellulose. A common nitrating mi
 \centering
 \ce{R-OH + NO2+ +H2O -> R-ONO2 + H3O+}
 \label{equ:nitration}
+ 	\begin{gathered}
+	\text{R = Cellulosic backbone of \ac{NC}}
+	\end{gathered}
 \end{equation}
 %\caption{The mechanism of nitration of cellulose by nitric and sulfuric acids.}
-The R group here refers to the polysaccharide backbone of cellulose. 
+%The R group here refers to the polysaccharide backbone of cellulose. 
 
 \begin{figure}[htp]
 \centering
@@ -83,13 +175,21 @@ The R group here refers to the polysaccharide backbone of cellulose.
 %
 Biological variation in cellulose has implications on the quality and properties of the \ac{NC} produced. During synthesis, the backbone of cellulose is largely preserved \cite{Prask1980,Prask1982}.  
 Wood pulp and cotton linters are two major sources of starting material for \ac{NC} production; though more expensive, cotton linters are preferred for their uniformity. 
-A polysaccharide cellulose chain is comprised of glucose units linked via \textbeta-1,4-glycosidic bonds, resulting in the alternating orientation of the individual monomers (figure \ref{fig:NCstructure}). Each glucose A single strand of cellulose is estimated to contain between 100 - 200 glucose units, representing a \ac{MW} of 20,000-40,000 daltons \cite{Saunders1990}. 
+A polysaccharide cellulose chain is comprised of glucose units linked via \textbeta-1,4-glycosidic bonds, resulting in the alternating orientation of the individual monomers (figure \ref{fig:NCstructure}). A single strand of cellulose is estimated to contain between 100 - 200 glucose units, representing a \ac{MW} of 20,000-40,000 daltons \cite{Saunders1990}. 
 
 %Include spectroscopic studies here
 %Include structural studies of nitrocellulose here.
 %See https://www.sciencedirect.com/science/article/pii/0032386190900484,  - this is more about bulk mechanical relaxation about a \ac{NC} NG mixture, when rolled out into strips. Not so useful here. They do talk about two types of bulk realxations though - one is the glass transition, and the other one due to thermolytic movement of NC molecules. May consider this later. 
 %MEh, same-ish, https://www.sciencedirect.com/science/article/pii/0032386184900120 and \\
 %https://www.sciencedirect.com/science/article/pii/0032386187902539\hspace{4pt}.
+%
+% Autocatalysis in other EM:
+% The discrepancies observed in the global kinetic measurements of the thermal decomposition of HMX were attributed to the history and characteristics of the samples, variations in the experimental conditions,(29) different heating rates, and the potentially strong effects of autocatalytic reactions.
+% It is also known that clustering of HMX molecules occurs in the gas phase, even at low pressure,(31) so it was even proposed that isolated molecules are probably not decomposing. -  if the synergstic effect  / catalysis is so influencial, then a lone monomer may take much linger to degrade than if it is in the bulk NC
+%
+%\section{Reactions of Nitrate Esters}
+%\label{sect:reactions_nitrates}
+%Reactions of all nitrate esters in general, not just NC.
 
 % **********Do these at the end!**********
 %cf Magnus Bergh - supramolecular structure
@@ -104,41 +204,30 @@ Each monomeric repeat unit in the chain has three hydroxyl groups that form hydr
 
 %figs Later
 In ordered regions of the cellulose matrix, the hydrogen bonds allow the chains to arrange in a sheet or fibril structure.
+%Talk about the different varieties of cellulose (See Sanders 1990)
+
+
+
+The IR and C$^{13}$ \ac{NMR} studies coupled with roentgenographs of the \ac{NC} structure at different levels of nitration showed that the cellulose backbone became more ordered with accumulating levels of nitrogen \cite{Baranova2011} Globular structures in bulk \ac{NC} with 8 \ac{pN} were converted to fibrils as the nitrogen content increased. 
+A relatively high degree of ordering within the bulk is observed at 13\ac{pN}, facilitating significant interaction between chains, contributing to increased hydrogen bonding between chains.
 %or XXX structures, as in figure X. %cutout of cellulose beta sheet or alpha sheets, and other crystallographically significant hydrogen bonding patterns - add another sentence or more. 
+
 In the disordered regions of the structure, these hydroxyl groups may be free or only weakly bonded, without a long-range hydrogen bonding network. Water may also interact with these hydroxyl groups in the disordered region, introducing a susceptibility to hydrolysis in the chain. 
 The oxygen in the glycosidic linkage between monomer units allows for rotation, introducing flexibility in the polymer chain via twisting and bending motions. 
-
 %Secondary structure - fibrils and sheets?
 
+As in the case of its parent molecule cellulose, \ac{NC} is largely insoluble in water, though recent studies have successfully synthesised a ''high solubility'' variety using unconventional cellulose feedstocks \cite{Gismatulina2018}. Due to the insolubility of cellulose esters in general, the addition of plasticisers are necessary to encourage malleability for processing \cite{Golubev2017}. The properties of a \ac{NC} formulation therefore depend on extent of nitration, the molar mass, and crucially, the plasticiser level \cite{Gilbert2016}.
+\ac{NC} is extremely flammable when dry and so is usually kept in solvent to prevent detonation when under storage \cite{Miles1929,Wolf1997}. Mixed with at least 25 \% of water or alcohol, \ac{NC} is completely stabilised \cite{Kim1999}. %Why crucially?
+%Accidents [He He Liu 2017 has a reference to an accident at TianJin, but you can find the news article]
+This has facilitated the use of aqueous solvents as dispersion and transport mediums in manufacturing processes, leading to small \ac{NC} fibres, or ''fines'', in output streams. Demilitarisation activities have resulted in large volumes of \ac{NC} waste which regulatory action now prevents the disposal of via incineration \cite{Wilkinson2006,Alleman1994,Auer2005,Kim1997}.
+A high level of side group substitution relative to cellulose, in addition to its insolubility, contributes to resistance to microbial degradation \cite{Brodman1981,Duran1994}. 
+As a result, \ac{NC} exhibits poor mobility and a long lifetime in the environment. 
 %DOS corresponding to different percentage of N, and mixed levels of nitration on individual sites.
-In addition to molecular and microstructural properties leading to variation in the decomposition of \ac{NC}, it was shown by Wei \textit{et al.} that the macroscopic bulk preparation of \ac{NC} as soft fibres or as chips also changed the reactivity \cite{Wei2017}. The soft fibre structure was found to be more easily ignited, possibly due to the less compact preparation leading to increased surface exposure to oxygen, higher porosity to reactants and easier penetration of the environmental effects, such as increased rate of heating due to lower density. This highlights the holistic perspective that must be taken when evaluating the spectrum of factors and properties responsible for the decomposition behaviour of any given sample of \ac{NC}. %Wei also has cracking SEM pictures of the fibres at different density of preparation
+In addition to molecular and microstructural properties leading to variation in the decomposition of \ac{NC}, it was shown by Wei \textit{et al.} that the macroscopic bulk preparation of \ac{NC} as soft fibres or as chips also changed the reactivity \cite{Wei2017}. The soft fibre structure was found to be more easily ignited, possibly due to the less compact preparation leading to increased surface exposure to oxygen, higher porosity to reactants and easier penetration of the environmental effects, such as increased rate of heating due to lower density. This highlights the holistic % I hate this sentence
+perspective that must be taken when evaluating the spectrum of factors and properties responsible for the decomposition behaviour of any given sample of \ac{NC}. %Wei also has cracking SEM pictures of the fibres at different density of preparation
 % If you're going to speculate, do it coherently.... likely due to the less compact preparation, leading to higher porosity and increased exposure to the environment, and oxygen.  	
 
-%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\section{Applications}
-%*Talk about the renewed interest in \ac{NC}- see:
-%
-%https://medium.com/@pandevedashri/global-nitrocellulose-market-is-estimated-to-grow-at-a-cagr-of-6-5-during-the-period-2019-2025-800e2942f316 
-%
-%and
-%
-%https://medium.com/photography-and-film/thoughts-on-celluloid-c1a6744312bb
-%
-%Draw a nice info graphic of stats all the uses of NC, and a paper interest graph demonstrating the increased mention of Nitrocellulose in publications, since the war. 
-%
-%(thought the latter is more a niche thing)*
-%\ac{NC} has been used widely in manufacturing, as a feedstock for lacquers, coatings, propellants and ....., It continues to be used in industry today, due to it's low cost and versatility.  However, new 
-%\subsection{(Explosive,  non-explosive}
-%Cf. plane seat ejector propellant formulation - important to know whether it can withstand humidity and temperature cycling. Work by Wang \textit{et al.} showed that the thermal history of a sample of \ac{NC} would modify its rate of degradation, attributed to its autocatalytic nature \cite{Wang2015}.
 
-% Autocatalysis in other EM:
-% The discrepancies observed in the global kinetic measurements of the thermal decomposition of HMX were attributed to the history and characteristics of the samples, variations in the experimental conditions,(29) different heating rates, and the potentially strong effects of autocatalytic reactions.
-% It is also known that clustering of HMX molecules occurs in the gas phase, even at low pressure,(31) so it was even proposed that isolated molecules are probably not decomposing. -  if the synergstic effect  / catalysis is so influencial, then a lone monomer may take much linger to degrade than if it is in the bulk NC
-
-%
-%\section{Reactions of Nitrate Esters}
-%\label{sect:reactions_nitrates}
-%Reactions of all nitrate esters in general, not just NC.
 
 % Already covered in chap 3: Hu \textit{et al.} \cite{Hu2011} found that primary and secondary organitrates in gaseous aerosol conditions were susecptible to hydrolysis only for pH < 0, but teritary organonitrates reacted readily under ambient conditions, with water and sulfate via nucleophilic substitution to form organosulfates. 
 %The present work indicates that the standard state free energies of hydrolysis are  negative  for  all  studied  organonitrates  and  organosulfates,  including all potential isoprene-derived organonitrate and organosulfate isomers.  Therefore, the thermodynamics results suggest that all possible isoprene-derived organosulfates and primary organonitrates are metastable species with respect  to  the  corresponding  alcohols  and  provide  further support  for  the  contention  that  kinetic  barriers  are  responsible for the observation of isoprene-derived organosulfates and organonitrates in SOA. Two caveats:  (1) other catalysts may be present in ambient SOA (such as metals) which might facilitate a faster attainment equilibration (i.e. conversion to alcohols) of primary and secondary systems and (2) for SOA with verylow water content and very high nitrate or sulfate content –conditions very different than standard state – it may be pos-sible for tertiary organonitrates and organosulfates to be ther-modynamically stable; however, without accurate−T1Shydvalues for the isoprene-derived species, it is not possible toquantitatively predict the conditions required for such stabil-ity.
@@ -148,8 +237,9 @@ In addition to molecular and microstructural properties leading to variation in 
 %
 %\subsection{Hydrolysis reactions}
 
-
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Nitrocellulose degradation}
+% Why is the breakdown of NC important, and what are the ways it happens?
 %Now, which of the above are relevant to NC, and what additional ones happen in \ac{NC}/ are unique to NC?
 %
 %Think - secondary reactions, synergy between different nitrate groups and other properties linked to the degradation of sugar / organic polymers. 
@@ -157,20 +247,30 @@ In addition to molecular and microstructural properties leading to variation in 
 %Review of Degradation studies
 %Intro to experimental studies - When, why, what, where, who and how. 
 %In subsequent sections, make sure to go into the "so what?"
-As in the case of its parent molecule cellulose, \ac{NC} is largely insoluble in water, though recent studies have successfully synthesised a ''high solubility'' variety using unconventional cellulose feedstocks \cite{Gismatulina2018}. Due to the insolubility of cellulose esters in general, the addition of plasticisers are necessary to encourage malleability for processing \cite{Golubev2017}. The properties of an \ac{NC} formulation therefore depend on extent of nitration, the molar mass and crucially, the plasticiser level \cite{Gilbert2016}.
-\ac{NC} is extremely flammable when dry and so is usually kept in solvent to prevent detonation when under storage.18,19 Mixed with at least 25 \% of water or alcohol, \ac{NC} is completely stabilised \cite{Kim1999}.
-%Accidents [He He Liu 2017 has a reference to an accident at TianJin, but you can find the news article]
-This has facilitated the use of aqueous solvents as dispersion and transport mediums in manufacturing processes, leading to small \ac{NC} fibres, or ''fines'', in output streams. Demilitarisation activities have resulted in large volumes of \ac{NC} waste which regulatory action now prevents the disposal of via incineration \cite{Wilkinson2006,Alleman1994,Auer2005,Kim1997}.
-A high level of side group substitution relative to cellulose, in addition to its insolubility, contributes to resistance to microbial degradation \cite{Brodman1981,Duran1994}. 
-As a result, \ac{NC} exhibits poor mobility and a long lifetime in the environment. 
-A detailed understanding of the degradation mechanisms is imperative in the design of efficient and economical processes for \ac{NC} disposal. Whilst many studies in the past century have shed light on the various decomposition schemes, a review of the literature reveals conflicting conclusions on the general mechanisms of decomposition via alkaline hydrolysis, acidic hydrolysis, thermolysis and biodegradation treatments. Most notably, a distinct lack of mechanistic detail hinders improvement of the processing and storage treatments, or effective redirection of degradation products to more useful substances, such as plant fertiliser \cite{Wilkinson2006,Bissett1976}.
-Understanding of the mechanism is also crucial for control of the potential harmful materials released into the atmosphere as part of the ageing process. \ce{N2O} is a potent greenhouse gas but is a known decomposition product. It can be produced via a number of potential routes, including oxidation of released nitrate species. Knowledge of the key formation pathways would allow influence of formulations and storage conditions to limit \ce{N2O} release.
+Even under optimal storage conditions, \ac{NC} undergoes slow decomposition over time. 
+A detailed understanding of the degradation mechanisms is imperative in the design of efficient and economical processes for \ac{NC} disposal. Whilst many studies in the past century have shed light on the various decomposition schemes, a review of the literature reveals conflicting conclusions on the general mechanisms of decomposition. Most notably, a distinct lack of mechanistic detail hinders improvement of the processing and storage treatments, or effective redirection of degradation products to more useful substances, such as plant fertiliser \cite{Wilkinson2006,Bissett1976}.
+
+Understanding of the mechanism is also crucial for control of the potential harmful materials released into the atmosphere as part of the ageing process. Traditional methods of disposal usually include incineration of waste \ac{NC}. \ce{N2O} is a potent greenhouse gas but is a known decomposition product. It can be produced via a number of potential routes, including oxidation of liberated nitrate species. Knowledge of the key formation pathways would allow manipulation of product formulations and storage conditions to limit \ce{N2O} release.
+
+ though alkaline hydrolysis, acidic hydrolysis, thermolysis, photochemical and biodegradation treatments. 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.6\linewidth]{Ganev_pic}
+\label{fig:ganev}
+\caption{The fate of waste \ac{NC} powders discarded from military stocks, from the work of Ganev \textit{et al.} \cite{Ganev2001}.}
+\end{figure}
+
+%Though its insolubility inhibits biodegradation, \ac{NC} is generally regarded as unstable. The facile loss of \ce{NO2} delivers 
+
 % READ THE WOLFROM SERIES:
 % I - VII
 %Conflicting views in literature on the order of breakdown processes involved:
-The computational studies of Shukla determined that denitration occurred before the peeling off reaction of monomeric units, or rupture of the glucopyranose rings \cite{Shukla2012,Shukla2012a}. %(He may have even made mention which comes first - ring fission or chain scission?)
-%contrary to autocatalysis?
-Whilst IR spectra recorded by Pfeil and Eisenreich showed that slow heating of 1.4\% \ce{H2O}, 13.3\%N \ac{NC} induced no self-heating, and rather, exhibited a decrease in the molecular weight before any decrease in the nitrate peak was observed \cite{Pfeil1985}. This directly contradicts the conclusions of Shukla, as it would suggest that the peeling off reaction, or chain scission of the polymer, occurs before any denitration. They state that while the decay of the concentration of the nitrate is autocatalytic, as its decay up to 450 K is small, it can be treated as first order. %'quote: ''The findings suggest that the decomposition of one segment (nitrated 8-glucose anhydride unit) leads to the scission of‘the chain. As a consequence, the split-off of the nitrate group is the rate determining step.
+%Mechanism of denitration*****************************************
+%The computational studies of Shukla determined that denitration occurred before the peeling off reaction of monomeric units, or rupture of the glucopyranose rings \cite{Shukla2012,Shukla2012a}. %(He may have even made mention which comes first - ring fission or chain scission?)
+%%contrary to autocatalysis?
+%%[Tweak this to include some experimental study that says denitration before peeling off, instead, rather than computational.] 
+%Whilst IR spectra recorded by Pfeil and Eisenreich showed that slow heating of 1.4\% \ce{H2O}, 13.3\%N \ac{NC} induced no self-heating, and rather, exhibited a decrease in the molecular weight before any decrease in the nitrate peak was observed \cite{Pfeil1985}. This directly contradicts the conclusions of Shukla, as it would suggest that the peeling off reaction, or chain scission of the polymer, occurs before any denitration. They state that while the decay of the concentration of the nitrate is autocatalytic, as its decay up to 450 K is small, it can be treated as first order. %'quote: ''The findings suggest that the decomposition of one segment (nitrated 8-glucose anhydride unit) leads to the scission of‘the chain. As a consequence, the split-off of the nitrate group is the rate determining step.
 
 %\subsection{Industrial disposal methods}
 %This can be a tack on, at the end to highlight the relevance of the NC system, applications and current modes of usage.  
@@ -183,11 +283,36 @@ Whilst IR spectra recorded by Pfeil and Eisenreich showed that slow heating of 1
 %More detail on the studies that look at this.
 %Include computational studies where relevant(maybe maKing reference to the computational section) .
 %The introduction of acetate groups also increases the solubility of cellulose (mixed) esters, improving the flexibility of polymer chains \cite{Liu2019} Can't find text to cite it with. Also the original is in chinese. http://www.energetic-materials.org.cn/hncl/ch/reader/view_abstract.aspx?doi=10.11943/CJEM2018131, https://www.scopus.com/record/display.uri?eid=2-s2.0-85071768534&origin=resultslist&sort=plf-f&src=s&st1=nitrocellulose&st2="cellulose+nitrate"&searchTerms=%c2%a0%c2%a0immun*%3f%21"*%24medicine%3f%21"*%24cpam%3f%21"*%24dna%3f%21"*%24gel%3f%21"*%24"thin+film"%3f%21"*%24membrane%3f%21"*%24&sid=4faf70add60bada348f3d224500c2d55&sot=b&sdt=b&sl=283&s=%28TITLE-ABS-KEY%28nitrocellulose%29+AND+TITLE-ABS-KEY%28"cellulose+nitrate"%29+AND+NOT+TITLE-ABS-KEY%28%c2%a0%c2%a0immun*%29+AND+NOT+TITLE-ABS-KEY%28medicine%29+AND+NOT+TITLE-ABS-KEY%28cpam%29+AND+NOT+TITLE-ABS-KEY%28dna%29+AND+NOT+TITLE-ABS-KEY%28gel%29+AND+NOT+TITLE-ABS-KEY%28"thin+film"%29+AND+NOT+TITLE-ABS-KEY%28membrane%29%29&relpos=0&citeCnt=0&searchTerm=
-The alkaline hydrolysis reactions of \ac{NC} have undergone thorough study due to their central role in large-scale \ac{NC} disposal from manufacturing waste streams. It was realised early on by Kenyon and Gray that the action of alkalis on \ac{NC} did not just yield cellulose and the corresponding metal nitrate salt, but a whole mixture of highly variable organic and inorganic products \cite{Kenyon1936}. Miles observed that whilst acid and alkaline hydrolysis both produced similar products, the rate of the latter reaction was much greater \cite{Miles1955}. 
-Typically,\ac{NC} is treated with concentrated sodium hydroxide and heating. Though other alkalis maybe used, such as. barium hydroxide, calcium hydroxide or sodium carbonate, these alternative alkalis require longer contact and heating times in addition to a larger measure of alkali to dissolve the \ac{NC} \cite{Wendt1976}. In 1976 Wendt and Kaplan reported that a sodium hydroxide solution of 3 \% by weight at 95\degree C was able to effectively degrade \ac{NC} of 12.6-13.4 \ac{pN} to completion, in only 30 minutes. Su and Christodoulatos observe a similar rate, with 90 \% of digestion occurring within 35 minutes, in 2 \% sodium hydroxide at 70\degree C for \ac{NC} of 12.2 \ac{pN} \cite{Su1996}. Multiple studies demonstrate that microbial biodegradation is an effective method of degrading \ac{NC} \cite{Bluhm1977}. Wendt and Kaplan’s study presented a bench-scale continuous treatment process involving initial degradation by alkaline hydrolysis followed by biological digestion using naturally occurring microbes in raw wastewater, for which they acquired a patent a year earlier \cite{Wendt1975}. It was noted by Fan \textit{et al.} that highly substituted cellulose derivatives are resistant to direct biodegradation and require pre-treatment. Work on the enzymatic hydrolysis of cellulose revealed that increasing the crystallinity of the substrate reduced its digestibility \cite{Fan1987}. %Fix the Fan references - no details
+\subsection{Hydrolysis methods}
+%Determination of the nitrogen content of nitrocellulose by capillary electrophoresis after alkaline denitration.
+
+The alkaline hydrolysis reactions of \ac{NC} have undergone thorough study due to their central role in large-scale \ac{NC} disposal from manufacturing waste streams. It was realised early on by Kenyon and Gray that the action of alkalis on \ac{NC} did not just yield cellulose and the corresponding metal nitrate salt, but a whole mixture of highly variable organic and inorganic products \cite{Kenyon1936}. Miles observed that whilst acid and alkaline hydrolysis both produced similar products, the rate of the latter reaction was much greater \cite{Miles1955}. Baker and Easty stated that alkaline hydrolysis was on the order of 480 times faster than acid hydrolysis \cite{Baker1952}. 
+Typically,\ac{NC} is treated with concentrated sodium hydroxide and heated. Though other alkalis maybe used, such as barium hydroxide, calcium hydroxide or sodium carbonate, these alternative alkalis require longer contact and heating times in addition to a larger measure of alkali to dissolve the \ac{NC} \cite{Wendt1976}. In 1976 Wendt and Kaplan reported that a sodium hydroxide solution of 3 \% by weight at 95\degree C was able to effectively degrade \ac{NC} of 12.6-13.4 \ac{pN} to completion, in only 30 minutes. Su and Christodoulatos observe a similar rate, with 90 \% of digestion occurring within 35 minutes, in 2 \% sodium hydroxide at 70\degree C for \ac{NC} of 12.2 \ac{pN} \cite{Su1996}.  %Shukla showed this to be an SN2 process. Do I mention that here?
+
+Though less studied than alkaline hydrolysis and deemed a slower process, the acid hydrolysis mechanism is extremely important for the understanding of decomposition and ageing processes of \ac{NC}. ``Spent'' of residual acids always remains in the system from synthesis. Products liberated via other breakdown routes also go on to form acidic species within the environment, and contribute to more extensive decomposition via secondary reactions and autocatalysis \cite{Brill1997}. Assary stated that acid catalysed decomposition of sugars in aqueous medium were initiated by protonation at hydroxyl groups \cite{Assary2012}. This is later was later observed computationally by Feng \textit{et al.}, where intramolecular hydrogen transfers, dehydration reactions, and ring-opening processes resulted from protonation of hydroxyl groups at specific sites on various sugars \cite{Feng2013}. %Regarding the deprotonation processes (pKa), we found that the sugars’ anomeric hydroxyls exhibit the highest acidity. The
+
+%\subsection{Acid hydrolysis}
+%here introduce hydrolysis reactions in the context of NC, and talk about both types. It should arise that most work has been on alkaline, and that there is a knowledge gap for acid
+
+%All the detail in literature that you can find on this. 
+%Summary of all acid hydrolysis reactions, including kinetics.
+%Include computational studies where relevant.
+%Elaborate on how acid is always present in the system and may be the main contributor to accelerated ageing.
+%Why is this important to know about?
+
+The study of Kim et al. explored the possibility of combining acid hydrolysis with biodegradation on an industrial scale  \cite{Kim1999}. Feasibility of the hydrolysis reaction using hydrochloric acid with heat, was thoroughly investigated. 
+Kim achieved denitration by treatment with acid more dilute than that initially used to synthesise the \ac{NC} sample. The study assumed that the nitrate group of C6 reacted the fastest, reasoning that groups on C2 and C3 experience more steric hindrance. 
+%[I think I mention this elswhere also, but since I'm not going to focus on the denitration order until later, may have to slot this into the fin al chapter.] The much later computational study by Shukla disagreed, finding that the C3 nitrate is the first to be liberated \cite{Shukla2012,Shukla2012a}. 
+A lower concentration of acid promoted shift of the equilibrium towards denitration. Though glucose was the major product of the monitored denitration process, it was stated that the rate of denitration was more rapid than the peeling-off reaction. In theory, it should be possible to regenerate strands of cellulose under the appropriate conditions. However, results only focussed on the retrieval of end-stage hydrolysis products such as glucose, nitrates, nitrites and ammonia. In addition, acid catalysed side reactions may introduce complications. 
+
+
+
+\subsection{Biological methods}
+Multiple studies demonstrate that microbial biodegradation is an effective method of degrading \ac{NC} \cite{Bluhm1977}. Wendt and Kaplan’s study presented a bench-scale continuous treatment process involving initial degradation by alkaline hydrolysis followed by biological digestion using naturally occurring microbes in raw wastewater, for which they acquired a patent a year earlier \cite{Wendt1975}. It was noted by Fan \textit{et al.} that highly substituted cellulose derivatives were resistant to direct biodegradation and require pre-treatment. Work on the enzymatic hydrolysis of cellulose revealed that increasing the crystallinity of the substrate reduced its digestibility \cite{Fan1987}. %Fix the Fan references - no details
 This is reinforced in the study by Mittal et al. involving alkaline and liquid-ammonia treatments on crystalline cellulose \cite{Mittal2011}. Substitution of hydroxyl groups to increase solubility of cellulose derivatives lead to increased enzymatic hydrolysis, up to complete solubilisation. After this point, susceptibility slowly decreased. As solubility was no longer the limiting property, further increase in substitution began to inhibit digestion. It may be that as the levels of substitution increase, polymer geometries become less suited to the active sites of enzymes involved in degradation. % so does it get less, or more crystlalline?
 
 %More degradation studies:
+% Follow on from the Kim study above
 %Screening of mycelial fungi for nitrocellulose degradation Sundaram 1995
 %Degradation of nitrocellulose by fungi Auer2005
 %Degradation of nitrocellulose-based paint by Desulfovibrio desulfuricans ATCC 13541 Giacomucci2012
@@ -198,22 +323,7 @@ This is reinforced in the study by Mittal et al. involving alkaline and liquid-a
 %Effect of the D. desulfuricans bacterium and UV radiation on nitrocellulose oxidation Khryachkov2017
 %Biotransformation of explosive-grade nitrocellulose under denitrifying and sulfidogenic conditions Freedman2002
 % Rehashed from Baranova2011
-The IR and C$^{13}$ \ac{NMR} studies coupled with roentgenographs of the \ac{NC} structure at different levels of nitration showed that the cellulose backbone became more ordered with accumulating levels of nitrogen \cite{Baranova2011} Globular structures in bulk \ac{NC} with 8 \ac{pN} were converted to fibrils as the nitrogen content increased. 
-A relatively high degree of ordering within the bulk is observed at 13\ac{pN}, facilitating significant interaction between chains, contributing to increased hydrogen bonding between chains.
-Kim et al. explored the possibility of combining acid hydrolysis with biodegradation on an industrial scale. Feasibility of the hydrolysis reaction using hydrochloric acid with heat, was thoroughly investigated \cite{Kim1999}. The study assumes that the nitrate group of C6 reacts the fastest, reasoning that groups on C2 and C3 experience more steric hindrance. The much later computational study by Shukla disagrees, finding that the C3 nitrate is the first to be liberated \cite{Shukla2012,Shukla2012a}. 
-
-Kim achieved denitration by treatment with acid more dilute than that initially used to synthesise the \ac{NC} sample. A lower concentration of acid promoted shift of the equilibrium towards denitration. Though glucose was the major product of the monitored denitration process, it was stated that the rate of denitration was more rapid than the peeling-off reaction. In theory, it should be possible to regenerate strands of cellulose under the appropriate conditions. However, results only focussed on the retrieval of end-stage hydrolysis products such as glucose, nitrates, nitrites and ammonia. In addition, acid catalysed side reactions may introduce complications. 
-However, Baker and Easty stated that alkaline hydrolysis was on the order of 480 times faster than acid hydrolysis \cite{Baker1952}. 
-Though less studied than alkaline hydrolysis and deemed a slower process, the acid hydrolysis mechanism is extremely important for the understanding of decomposition and ageing processes of \ac{NC}, as a residual amount of acid always remains in the system. Products liberated via other breakdown routes also go on to form acidic species within the environment and contribute to further decomposition via secondary reactions and autocatalysis \cite{Brill1997}. Assary stated that acid catalysed decomposition of sugars in aqueous medium were initiated by protonation at hydroxyl groups \cite{Assary2012}. This is later was later observed computationally by Feng \textit{et al.}, where intramolecular hydrogen transfers, dehydration reactions, and ring-opening processes resulted from protonation of hydroxyl groups at specific sites on the sugars \cite{Feng2013}. %Regarding the deprotonation processes (pKa), we found that the sugars’ anomeric hydroxyls exhibit the highest acidity. The
-
-%\subsection{Acid hydrolysis}
-%here introduce hydrolysis reactions in the context of NC, and talk about both types. It should arise that most work has been on alkaline, and that there is a knowledge gap for acid
-
-%All the detail in literature that you can find on this. 
-%Summary of all acid hydrolysis reactions, including kinetics.
-%Include computational studies where relevant.
-%Elaborate on how acid is always present in the system and may be the main contributor to accelerated ageing.
-%Why is this important to know about?
+\subsection{Mechanical methods}
 
 \subsection{Computational Studies}
 A review of published works yields very few \ac{NC} mechanistic degradation studies involving computational methods. Due to the nature of the topic, many of the referenced works above are linked with private or military organisations. Thus, their release may be restricted until declassified many years later, or completely withheld. The timeline of much of the material reviewed here ranges from mid to late 1900s, before the widespread use of computational methods in chemical research. Consequently, it is to be expected that more \ac{NC} computational studies will appear in the near future.
@@ -238,7 +348,7 @@ was most favourable due to the fastest rate of reaction. The competing eliminati
 
 %LATER but very much required
 %\subsubsection{Autocatalysis} 
-%
+%Utilisation of waste nitrocellulose powders and environmental pollution in their destruction
 %[Dauermen1968, REF] suggests it is NO2+ that is the catalytic species, which is reinforce by Knight and Barry [REF] who found that the elevated catalytic degradation rate was not observed for cellulose acetate. (Though it is postulated to undergo similar hydrolysis steps? [REF]) 
 %
 %
@@ -247,13 +357,20 @@ was most favourable due to the fastest rate of reaction. The competing eliminati
 %Include computational studies where relevant.
 
 %\section{Environmental impact of \ac{NC} decomposition.}
+%
+%Waste \ac{NC} from obsolete military equipment, industrial output streams or ...
 
+%--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \section{Motivation}
-Despite its long history, \ac{NC} is still an essential ingredient in many propellant and lacquer formulations. 
-%Its versatility means that we come into contact with it in some shape or form everyday, in printing ink we use, tupperware etc. 
+Despite its long history, \ac{NC} is still an essential ingredient in many propellant and lacquer 
+formulations today, with its versatility spanning an extensive range of products and applications. 
+% manufacturing and biological research applications.  
+The diversity of its use means that we come into contact with it in some shape or form everyday. %, in printing ink we use, tupperware etc. 
 %NOTE: it might be that they substituted \ac{NC}for other reasons too. Bohn didnt say, but find out. 
-Efforts have been made to substitute it with other polymeric binders in attempt to reduce the manufacturing risk it poses due to its volatility, but this has only been partly successful \cite{Bohn2007}. 
-\ac{NC}, amongst other \ac{EM} have caused many thermal runaway reactions, leading to accidents and explosions worldwide. Insufficient understanding of the internal processes leading to the roto causes of thermal instability has lead to accidents in the past, sometimes resulting in property damaged and in the most severe cases, lives lost \cite{Zhao2016,Jin2015,He2017,Wei2017,Chai2019,Wang2015}	. %(REF Tianjin, and AWE fire report)
+Whilst efforts have been made to substitute it with other polymeric binders in attempt to reduce the manufacturing risk it poses due to its volatility, this has only been partly successful \cite{Bohn2007}. 
+
+\ac{NC}, amongst other \ac{EM} have caused many thermal runaway reactions, leading to accidents and explosions worldwide. Insufficient understanding of the internal processes has lead to unintended explosions during storage and at nitration industrial plants, and in the most severe cases, lives lost \cite{Zhao2016,Jin2015,He2017,Wei2017,Chai2019,Wang2015}	. %(REF Tianjin, and AWE fire report)
+%leading to the  causes of thermal instability has lead to accidents in the past, sometimes resulting in 
 % Taken from Rigas, Sebos, Doulia, 1997:
 % "The nitration of organic compounds is a potentially
 % dangerous process, since nitrations are exothermic
@@ -284,12 +401,13 @@ Efforts have been made to substitute it with other polymeric binders in attempt 
 % may be attributed to a variety of reasons (Federation
 % of European Explosives Manufacturers, 1988), namely,
 % the following...."
-It is therefore imperative that we seek to clarify our understanding of the ageing mechanisms to inform the reduction of associated risks, whilst more effectively preserving existing \ac{NC} stock.
+It is therefore imperative that we seek to clarify the understanding of the ageing mechanisms to inform the reduction of associated risks, whilst more effectively preserving existing \ac{NC} stock.
 %, strive to eliminate associated risks,  
+\ac{NC} disintegration is also of relevance in the preservation of historical artefacts and cinematographic film, where knowledge of the decomposition processes are crucial to the maintenance of items of historical value \cite{Edge1989,Reilly1991}. 
 
 Changing policy on the use of \ac{GM} crops may impact the \ac{NC} supply chain. Cotton linters provide the highest grade cellulose for military and industrial grade production. As this feedstock diminishes in availability or quality, alternative sources, such as lower quality softwood pulp, may be substituted.
 Experimental studies over the past 100 years %REF%
-have shed light on the macroscopic degradation behaviour of bulk \ac{NC}. However, the fine mechanistic details of degradation have only been alluded to, and are as yet unvalidated. Identifying a clear map of the possible reactions that occur during ageing will promote adaptability against a variable cellulose feedstock, and facilitate understanding of the possible changes in chemical properties for different batch lines. 
+have shed light on the macroscopic degradation behaviour of bulk \ac{NC}. However, the fine mechanistic details of degradation have only been alluded to, and are as yet unvalidated. Identifying a clear map of the possible reactions that occur during ageing will promote adaptability against a variable cellulose feedstock, and facilitate better understanding of the possible changes in chemical properties for different batch lines. 
 % REF The origin and type of cellulose utilized in the manufacture of Nitrocellulose over the last thirty years, Wolfgang JF Schimansky
 
 %The present work...
@@ -299,7 +417,7 @@ In this study we will elucidate the dominant degradation schemes in \ac{NC} with
 This will be achieved via the application of computational techniques to give insight where it has been restricted by the limitations of laboratory experimentation in the past. %the resolution of
 
 \section{Research objectives}
-In this thesis the dominating degradation reactions that occur in \ac{NC} are investigated. The objectives of this study is as follows:
+In this thesis the dominant degradation reactions that occur in \ac{NC} are investigated. The objectives of this study is as follows:
 
 \begin{enumerate}
 	\item Determine a representative system for modelling the degradation chemistry of \ac{NC}.
@@ -308,6 +426,4 @@ In this thesis the dominating degradation reactions that occur in \ac{NC} are in
 	\item Map the secondary reactions that occur in \ac{NC} and shed light on the processes responsible for the autocatalytic rate of degradation. 
 %	\item Map the secondary reactions that occur in \ac{NC} and explain the change from pseudo first-order to autocatalytic rate of degradation. %relate to experimentally observed products?
 \end{enumerate}
-
 %Point out the areas that are lacKing in our knowledge, why we hit the limitations of experiment and why computational studies are required. 
-

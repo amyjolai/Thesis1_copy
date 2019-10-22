@@ -62,6 +62,9 @@
 %  There are quite a few useful ones, so we've put them in a 
 %   separate file.
 \input{MainPackages}
+% Just for the TM trademark fix
+\let\OldTexttrademark\texttrademark
+\renewcommand{\texttrademark}{\OldTexttrademark\xspace}
 
 % Sets up links within your document, for e.g. contents page entries
 %  and references, and also PDF metadata.
@@ -105,15 +108,15 @@
 % At last, content! Remember filenames are case-sensitive and 
 %  *must not* include spaces.
 %\include{List-of-all}
-\include{Preamble}
-\include{Abbreviations} %NOTE: abbreviations come out funny unless you compile both Abbreviations and Preamble
+%\include{Preamble}
+\include{Abbreviations}
 \include{Introduction}
 %\include{Theory}
-\include{Results_chap_1}
+%\include{Results_chap_1}
 %\include{Results_chap_2}
-\include{Results_chap_3}
-\include{Results_chap_4}
-\include{Conclusions}
+%\include{Results_chap_3}
+%\include{Results_chap_4}
+%\include{Conclusions}
 %\include{Appendices} 
 % You could separate these out into different files if you have
 %  particularly large appendices.
@@ -125,7 +128,8 @@
 \cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Bibliography}
 
 % Actually generates your bibliography.
-\bibliography{Thesis_refs}
+%\bibliography{Thesis_refs}
+%\bibliographystyle{rsc} %the RSC's .bst file
 
 % All done. \o/
 \end{document}
@@ -140,6 +144,11 @@
 %	
 % Scheme: 		more than one equation of any kind [AVOID THESE for image based things. and replace with figure label] - may not appear in list of figs otherwise, and makes for unsightly repeated numbers
 
+%CONVERSION FACTORS:  (note, these are from wiki.... but reinforced by https://cccbdb.nist.gov/hartreex.asp)
+% H to kJ / mol: 		2625.4996
+% H to kCal / mol: 	627.5095
+% Present all data as 2 dp
+% Exceptions may exist when presenting the raw hartree energies 
 			 	
 
 %Colour scheme:

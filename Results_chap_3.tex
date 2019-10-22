@@ -199,7 +199,8 @@ Zero-point corrected energies \acs{ZPE} were determined by addition of individua
 \end{equation}
 %IRC step ,maxpoints=256,maxcycle=256 , stepsize the default of  0.1 Bohr
 \ac{PES} scans were performed to the level of \ac{wb97xd}/6-31+g(d), or using unrestricted \ac{wb97xd}, in the case of \ce{O-^{.}NO2} dissociation. 
-Rigid scans were carried out by fixing bond lengths, angles and dihedral values as constants. Only the variable of interest was allowed to change, with the exception of  relaxation of other specified coordinates required for accommodation of the new geometry, following each step of the scan.  %(semi-rigid scans). 
+Rigid scans were carried out by fixing bond lengths, angles and dihedral values as constants. Only the variable of interest was allowed to change, %evolved
+with the exception of  relaxation of other specified coordinates required for accommodation of the new geometry, following each step of the scan.  %(semi-rigid scans). 
 For example, in the homolysis of the nitrate \ce{O-NO2} bond, as the \ce{NO2} group departed, the internal \ce{O\textendash N\textendash O} angle was also allowed to relax, in addition to the angle of the departing \ce{NO2} with respect to the remainder of the molecule.
 In two-dimensional scans, two variables are scanned. For the same reaction, the elongation of a the \ce{O-NO2} bond was scanned with simultaneous approach of a proton, to monitor the effect of protonation for the same reaction. %In this case, both the internal angle within  \ce{O-NO2} and the angle was allowed to relax. 
 Relaxed scans were performed in Gaussian using the \''modredundant\'' function, whereby the whole structure was geometry optimised after each step of the scan. 
@@ -348,16 +349,21 @@ The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}
 \\\cline{2-5}
   & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \midrule
-% Note, using unconverged energies here :( the B3LYP solvent bridging one
- Bridging 	&  -30.87756 	&  0.85365 & -31.98636 	& -0.24507 \\
- Terminal	& -23.12541 	& 9.99558 	& -24.06285 	& 10.97397 \\
- Capping 	& -30.43404 	& 0.85491 	& -31.98447 	& 0.64386 \\  
+%% Note, using unconverged energies here :( the B3LYP solvent bridging one
+% Bridging 	&  -30.87756 	&  0.85365 & -31.98636 	& -0.24507 \\
+% Terminal	& -23.12541 	& 9.99558 	& -24.06285 	& 10.97397 \\
+% Capping 	& -30.43404 	& 0.85491 	& -31.98447 	& 0.64386 \\  
+% 
+ Bridging 	&  -26.04105 	& 4.02759    & -28.67067 	& 11.29338  \\
+ Terminal	 (Upper)& -29.84814 	&   24.28650	& -31.18500 	&  15.32916 \\
+ Terminal (Lower)	& -20.53548 &   10.44288	& -22.40595	& 11.66634  \\
+ Capping 	& -29.84877	&   3.61683	& -31.18563 	&  -1.16235 \\  
 	\bottomrule
 \end{tabular}
 \label{tab:reactions}
 \end{center}
 \end{table}
-%
+% Repeat these diagrams with the MP2 and B3LYP too, with a separate analysis (table) on the bonds and angles, in order to compare why the MP2 energies are a bit out there. 
 \begin{figure}[htp]
 \centering
 \begin{subfigure}[t]{0.3\linewidth}
@@ -386,7 +392,7 @@ The mechanism of protonation was not explored in depth here; it was assumed that
 \centering
 \includegraphics[width=0.25\linewidth]{neutral_hydro_1}
 \label{fig:neutral_prot}
-\caption{The attempted geometry of single water coordination to the \ac{NC} monomer.}
+\caption{The attempted geometry of a single water molecule in coordination with the \ac{NC} monomer.}
 \end{figure}
 Water as the protonating species was attempted, by optimisation of one, two and three water molecules in coordination with the nitrate site in the \ac{NC} monomer, however no stable complex could be isolated. It is anticipated that a much larger network of waters around both the region surrounding the nitrate and the wider molecule would be required to achieve a stable water coordination in order for further investigation into the nature of neutral hydrolysis (figure \ref{fig:neutral_prot}). %The optimisation of \ce{H3O} in coordination with the fully nitrated monomer was also tested, but was only possible up to the level HF/6-31g.  
 %to see whether it was possible to stabilise in coordination.  
@@ -417,7 +423,10 @@ Following the protonation step, possible transition states for the removal of th
 \includegraphics[width=\linewidth]{NO2_leave-prot_arrow_2d}
 \label{fig:h-come-no2-leave}
 \end{subfigure}
-\caption{The scanned coordinates of \ref{fig:h-approach}) proton approach, \ref{fig:no2-leave}) dissociation of \ce{NO2} and \ref{fig:h-come-no2-leave}) concerted protonation and \ce{NO2} dissociation.}
+\caption{The scanned coordinates of %\ref{fig:h-approach}
+a) proton approach, %\ref{fig:no2-leave}
+b) dissociation of \ce{NO2} and %\ref{fig:h-come-no2-leave}
+c) concerted protonation and \ce{NO2} dissociation.}
 \label{fig:scan_coords}
 \end{figure}
 The relaxed \ac{PES} scan of \ce{NO2} removal from ethyl nitrate protonated at the bridging site was used as a preliminary test for the mechanism of denitration following protonation (figure \ref{fig:PES_EN_scan}). 
@@ -450,6 +459,7 @@ Unrestricted \ac{wb97xd} was used, with 20 steps of 0.1 \AA, however bond dissoc
 \caption{Geometries from steps 1, 7, 11 and 26 of the \ac{PES} scan of \ac{EN}}
 \label{fig:PES_EN_scan}
 \end{figure}
+%%%% POSSIBLY EXPLORE PEROXY deg routes in the next chapter, OR whether the H is snatched back for HNO2?
 %
 % Actually, you only allowed internal angles and one orienation one to relax, in the case of the monomer - so the below is bogus - you weren't able to gauge anything from these very restricted scans, because the no2 wasnt' allowed to fully turn to planar. 
 %Similar scans were also performed on the \ac{NC} monomer protonated at the bridging site, where the \ce{O-NO2} bond was elongated in order to determine nature of the lost \ce{NO2}. Initially, the whole monomer was held rigid, as only the \ce{O-NO2} was incrimentally increased to produce an energy profile of the bond separation. Subsequently, the internation angle within \ce{NO2} and those pertaining to it orientation with respect to the wider monomer structure were allowed to relax. Despite increasing the scanning distance to 4 \AA. , with only the nitrate and proton, with internal angles allowed to relax.  The same was repeated in implicit solvent. 
@@ -463,6 +473,7 @@ Proposed 4-membered ring and 6-membered ring \ac{TS} were investigated in order 
 \begin{subfigure}[t]{0.25\linewidth}
 \caption{}
 \centering
+%The bonds in the 4 mem ring TS are longer than those in the 6-rings. Sort this if you have time. 
 \includegraphics[width=\linewidth]{4mem-terminal}
 %\caption{4-membered ring transition state with protonation at the terminal nitrate oxygen.}
 \end{subfigure}
@@ -562,7 +573,7 @@ Enthalpies of reaction energies show that this processes was more exothermic in 
 %Scans showed the energy profiles involved (again, was HNO2 ever seen to be formed? )
 The protonation sites on the \ac{NC} monomer were probed for the most favourable position. It was found that the bridging site was energetically preferred, though inspection of the optimised geometry showed that it was very close to that of protonation at the capping site. As protonation and subsequent reaction would more likely lead to chain scission in the case of capping protonation, this avenue was disregarded in further studies focussing on the acid hydrolysis pathway. Optimisation of [water - monomer] and [hydronium - monomer] complexes were attempted, in order to obtain information on the nature and orientation of the protonation complex. However, it was not possible to isolate any stable structures, implying that a larger stabilising network of waters is likely required.
 
-Removal of \ce{NO2} from the protonated analogues of ethyl nitrate and the \ac{NC} monomer was scanned using a variety of rigid and relaxed \ac{PES} schemes. In the removal of \ce{NO2} from ethyl nitrate the released of \ce{NO2+} was indicated by the change of geometry around the nitrate from bent to linear, as the \ce{O-NO2} bond elongated. Rotation of the remaining ethanol and complexed \ac{NO2+} showed orientation suitable for formation of a peroxide. This rotation was not observed in the case of the monomer, however the leaving group still presented as \ce{NO2+}.
+Removal of \ce{NO2} from the protonated analogues of ethyl nitrate and the \ac{NC} monomer was scanned using a variety of rigid and relaxed \ac{PES} schemes. In the removal of \ce{NO2} from ethyl nitrate the released of \ce{NO2+} was indicated by the change of geometry around the nitrate from bent to linear, as the \ce{O-NO2} bond elongated. Rotation of the remaining ethanol and complexed \ce{NO2+} showed orientation suitable for formation of a peroxide. This rotation was not observed in the case of the monomer, however the leaving group still presented as \ce{NO2+}.
 4 and 6 membered \ac{TS} were also tested for the denitration reaction. Unexpectedly, it was found that none of the 6-membered ring structures could be isolated, regardless of prior protonation of concerted protonation-denitration. In the case of the bridging-protonated \ac{NC} with formation of the 4-membered ring \ac{TS} at the C2 nitrate, it was possible to relax the \ac{NC} monomer structure around the ring so long as the ring geometry itself was frozen. As the leaving group moved further from the remainder of the molecule, the hydroxyl group located at C2 formed a ketone, losing the proton to the departing \ce{NO2+}, to form \ce{HNO2} in later stages of the scan. Eventually ring fission occurred, as the \ce{HNO2} move sufficient distance away, and the formation of the ketone forced the adjacent \ce{C-C} bond in the ring to stretch, and then break. %However, as the energy barrier associated with this are much higher than that of  - dont' expect it, should solely be denitration then peeling off first
 
 % 

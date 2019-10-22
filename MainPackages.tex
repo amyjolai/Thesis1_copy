@@ -23,7 +23,7 @@
 \usepackage{subcaption}
 %\captionsetup[subfigure]{font={bf,small}, skip=1pt, singlelinecheck=false}
 % Get subfigure labels to the left of the image
-\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false,subrefformat=parens}
 
 % The float package improves LaTeX's handling of floats,
 %  and also adds the option to *force* LaTeX to put the float
@@ -52,8 +52,10 @@
 %  fractions for unit specifications.
 %\usepackage{units}
 
-% Just for the tesxt symbols
+% Just for the text symbols
 \usepackage{wasysym}
+% Just to fix lack of space after the TM symbol in introduction tbh!
+\usepackage{xspace}
 
 % SI units - mostly angstrom
 %\usepackage[round-mode=places,round-precision=4]{siunitx}
