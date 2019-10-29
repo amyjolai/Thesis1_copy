@@ -7,13 +7,16 @@
 %Wave particle duality. 
 % Dodgy first sentence, change it. 
 Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wavefunction ($\Psi$) holds the description of a quantum system. %Need a linking sentence here - What is the wavefunction, and why do we need to look at the probablility densiy instead?
-In a non-relativistic system, the probability of a particle possessing a given momentum, or residing in a particular place, is given by the probability density. This can be obtained by  multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. %Born interpretation. Ref? 
+In a non-relativistic system, % So what happens in a relativistic system?
+the probability of a particle possessing a given momentum, or residing in a particular location, is given by the probability density. This can be obtained by  multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. %Born interpretation. Ref? 
+%Make sure you know what a complex conjugate is.
 Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within.
 %, such that the integral of over a region of space returns the probability that a system will be found within. %in that region.$|\Psi^{*}\Psi|$ 
 %In Born's statistical interpretation in non-relativistic quantum mechanics,[8][9][10] the squared modulus of the wave function, |ψ|2, is a real number interpreted as the probability density of measuring a particle's being detected at a given place – or having a given momentum – at a given time, and possibly having definite values for discrete degrees of freedom. The integral of this quantity, over all the system's degrees of freedom, must be 1 in accordance with the probability interpretation. This general requirement that a wave function must satisfy is called the normalization condition. Since the wave function is complex valued, only its relative phase and relative magnitude can be measured—its value does not, in isolation, tell anything about the magnitudes or directions of measurable observables; one has to apply quantum operators, whose eigenvalues correspond to sets of possible results of measurements, to the wave function ψ and calculate the statistical distributions for measurable quantities.
 %From Wikipedia: https://en.wikipedia.org/wiki/Wave_function
 %Read the page, it's pretty good. 
-Values of $\Psi$ are chosen to be othonormal; integrating $|\Psi^{2}|$ over all space gives the probability of 1:
+Values of $\Psi$ are chosen to be othonormal; % that is, orthogonal and normalised, such that integration of ...
+integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \begin{equation}
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
 \end{equation}
@@ -22,11 +25,15 @@ Where all states are represented by $i$ and $j$, and:
 $\delta_{ij}=0$ for $i\neq j$\\
 $\delta_{ij}=1$ for $i=j$
 \end{center}
-%that has been normalised,
+%What does the delta refer to??
 %Therefore, for $|\Psi^{2}|$ that has been normalised, the integral over all space is equal to 1, indicating that the probability of finding the system in the space is equal to 1.  %[REF] 
-Operators acting on $\Psi$ yield the observable properties of the system. The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
-Erwin Schr\"{o}dinger first proposed his equation for the description of the wavefunction of a quantum system in 1926 \cite{schrodinger1926}. The time-independent %Schr\"{o}dinger's 
-equation is:
+Operators acting on $\Psi$ yield the observable properties of the system. 
+% How, and why?
+The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
+Erwin Schr\"{o}dinger %first 
+proposed his equation in 1926, describing a quantum system using its wavefunction \cite{schrodinger1926}. %Check this is accurate. Does the equation use the wavefunction to describe the (energy of the) system, or does the equation just describe the wavefunction itself?
+%The time-independent %Schr\"{o}dinger's 
+Schr\"{o}dinger's time independent equation is:
 %Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
 %\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
 \begin{equation}
@@ -38,6 +45,7 @@ equation is:
 where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue of %the eigenfunction, 
 the wavefunction 
 $\Psi$, and $E$ is a scalar denoting the energy of the system. 
+
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
 The general form of the Hamiltonian is given by:
 \begin{equation}
@@ -47,17 +55,30 @@ The general form of the Hamiltonian is given by:
 where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l$. 
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
-is the reduced Planck's constant ($\hbar = \frac{h}{2\pi}$), $m_e$ is the mass of an electron, $m_k$ is the mass of the nucleus $k$, $e$ is the charge of an electron, $Z_k$ is the atomic number of $k$ and $r_{xy}$ is the distance between particles $x$ and $y$. When using \ac{au}, the electronic mass, charge and reduced Planck's constant are reduced to a value of 1. $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % What does this really mean, in a practical sense? 
+is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^(-34)$), 
+$m_e$ is the mass of an electron, 
+$m_k$ is the mass of the nucleus $k$, 
+$e$ is the charge of an electron, 
+%$\mathsf{e}$ is the charge of an electron %Change to sans serif, to differentiate from the exponential symbol? If so, change the equation too. 
+$Z_k$ is the atomic number of $k$ and %$r_{xy}$ is the distance between particles $x$ and $y$.
+$r_{ik}$ is the distance between particles $i$ and $k$. 
+When using \ac{au}, %the electronic mass, charge and reduced Planck's constant 
+$m_e$, $\hbar$ are reduced to a value of 1. %Give the simplified equation here?
+
+$\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % What does this really mean, in a practical sense? 
 In Cartesian space, this is defined as the second derivative of the gradient in the three dimensions: % Does it refer to the change in electronic position, in this case? Do I even need to mention much about Laplacian?
 \begin{equation}
 \nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
 \label{equ:laplace}
 \end{equation}
-The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term, followed by the interelectronic and internuclear repulsive terms. The three latter potential energy terms are described just as in classical mechanics. %appear the same as in classical mechanics. %analogous with classical mechanics.
+The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term; %followed by the interelectronic and internuclear repulsive terms. 
+the fourth term describes interelectronic repulsion and the final term the internuclear repulsion. 
+The final three potential energy terms are the same as in classical mechanics. %analogous with classical mechanics.
 % attractive and repulsive terms are% potential energy terms that are
 % described as in classical mechanics. 
 %coloumbic interactions
-The kinetic energy terms are expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
+The kinetic energy terms %are 
+can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
 \begin{equation}
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
@@ -79,13 +100,16 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first
 %The Hamiltonian operator (Eq. 3) acting on the wavefunction produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
 %
 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Born-Oppenheimer approximation}
-In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency results in a wavefuction that is difficult to define. 
+In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency makes defining a wavefunction difficult. 
+% results in a wavefuction that is difficult to define. 
 %of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
 Relative to electronic motion, nuclei move far more slowly, owing to their mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
-The difference is such, that the nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
+%The difference is such, that the 
+Nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
 %Owing to this difference in relative  
 Born-Oppenheimer approximation fixes the nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. The nuclear kinetic energy term ($\mathbf{T}_{N}$) of the Hamiltonian is removed, as the nuclei are frozen. % becomes then independent of electronic motion; 
 %The electron-nuclear interaction term ($\mathbf{V}_{e-N}$) disappears, and 
@@ -115,18 +139,21 @@ $E_{el}$ is the electronic energy of the system, which is now only dependent on 
 %
 %\subsection{Slater determinant}
 %In order to 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%LATER
+
+%\subsection{Hartree Fock}
+%Hartree Fock \ac{HF} 
+%%Hartree Fock \nomenclature{HF}
 %
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Variational principle}
 The variational theorem states that the calculated energy of any guess wavefunction can only be greater than or equal to the real ground-state energy of the system. % The concept of \''lower bound'' is a property of wavefunctions? How is this derived, and where does it stem from?
 This provides a criterion for selection of the best guess wavefunction.
 
-%LATER
-%\subsection{Hartree Fock}
-%Hartree Fock \ac{HF} 
-%%Hartree Fock \nomenclature{HF}
-%%this might need to be shifted
 
-
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Open shell systems}
 %[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted scheme. %, (e.g. R\acs{B3LYP}).  You haven't describd functionals yet
@@ -140,7 +167,7 @@ A caveat of the unrestricted model is its susceptibility to spin contamination, 
 %\subsection{Post-Hartree Fock methods}
 %
 %\subsubsection{MP2}
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Density functional theory}
 %Solutions to the Schrödinger's equation using reference
 %
@@ -162,6 +189,23 @@ The exchange term is non-classical encompasses the exchange energy due to the an
 E^{XC}(\rho) = E^{X}(\rho) + E^{C}(\rho)
 \end{equation}
 
+%\ac{wb97xd} is a range separated hybrid with D (self consistent exchange). 
+%It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
+
+%remember to talk about the underestimation of the reaction barriers
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\subsubsection{Hohenburg-Kohn formalism}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\subsubsection{Kohn-Sham Equations}%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\subsubsection{Exchange-correlation functionals}
+LDA, GGA etc and development of functionals. The different treatment of exchange. 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%%\subsection{Hybrid functionals}
+%\subsubsection{Dispersion correction}
+%Grimme
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\ac{B3LYP}
+
 In the context of this report, the \ac{B3LYP} functional will be used where the exchange is described as follows:
 \begin{equation}
 \centering
@@ -170,22 +214,9 @@ E_{B3LYP^{XC}} = E_{LDA^{X}} + c_{0} (E_{HF^{X}}-E_{LDA^{X}} ) + c_{X} \Delta E_
 
 Where c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
 The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree Fock) and E$_{LDA^{X}}$ (Local Density Approximation). E$_{VWN3^{C}}$ (VWN3 local correlation) is mixed with E$_{LYP^{C}}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^{X}}$ is Becke’s gradient-corrected exchange functional.
-
-
-%\ac{wb97xd} is a range separated hybrid with D (self consistent exchange). 
-%It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
-
-%remember to talk about the underestimation of the reaction barriers
-
-%\subsubsection{Hohenburg-Kohn formalism}
-%\subsubsection{Kohn-Sham Equations}
-%\subsubsection{Exchange-correlation functionals}
-%\ac{B3LYP}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\ac{wb97xd}
-%%Think this is the same as the above
-%%\subsection{Hybrid functionals}
-%\subsubsection{Dispersion correction}
-%Grimme
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Basis sets}
 %make sure you know the caveats - ins and outs of the bases you used in combination with the methods you used. 
 %You know pople's one's aren't as stable as the aug- ones. State why you chose them. Also, MP2 will react differently with these bases as opposed to the aug- ones. 
@@ -193,29 +224,55 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree Fock) and E$_{LDA
 A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied. % (Table 1. Examples of split valence basis sets.).40,41 
 
 Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets.% Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsection{Thermochemistry}
 %(And vibrational frequencies)
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsection{(Transition State Theory \& Free Energy Calculations)}
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsection{Solvent models}
 %%Their effect on free energies - use a free energy cycle to justify the lack of inclusion of solvation energy - though this might be best discussed in Chap 1
 %%How they are modelled.
 %%PCM vs SMD, why is SMD better for free energies. Are they similar in terms of compuational demand
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %%\subsection{Optimisation algorithms}
 
-
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \section{Analysis}
+%
+\subsection{Transition state searches}
+%[Maybe this goes into a smaller metholodogy section?]
+Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in \ac{G09} attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
+The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
+It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
+“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
 
+%(within Gaussian? See if you end up using any)
+%Frequency calculations
+\subsection{Intrinsic Reaction Coordinate}
+%[Maybe this goes into a smaller metholodogy section?]
+IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
+IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
+
+%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
+\subsection{PES Scans}
+%[Maybe this goes into a smaller methodology section?]
+Relaxed potential energy surface (PES) scans, or geometry scans are used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a PES of the explored pathway, presented in a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
+An energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the points of interest are extracted and used for subsequent frequency calculations, transition state searches and validated using intrinsic reaction co-ordinate methods. 
+To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
+Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
+
+A rigid scan consists of a single point energy calculation of the structure at each of step the scan. % change in coo-rdinates.
+A relaxed scans calls for a geometry optimisation at each of these points. 
+Two-dimensional scans may be used to probe simultaneous processes in the system. These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Topology analysis using \ac{QTAIM}}
 %*paraphrase this:
 %Topology analysis Theory
 %
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wavefunction, ELF, LOL ...
 %BELOW IS ALL COPY & PASTED - pls change this DO NOT SUBMIT LIKE THIS
-The topology analysis technique proposed by Bader was firstly used for analyzing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
+The topology analysis technique proposed by Bader was firstly used for analysing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
 In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
 
 (3,-3): All three eigenvalues of Hessian matrix of function are negative, namely the local maximum. For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
@@ -260,33 +317,7 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 
  The maximal gradient path linking BCP and associated two local maxima of density is termed as “bond path”, which reveals atomic interaction path for all kinds of bonding. The collection of bond paths is known as molecular graph, which provides an unambiguous definition of molecular structure. Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
 %Let us see an example. In the complex shown below, the imidazole plane is vertical to magnesium porphyrin plane, the nitrogen in imidazole coordinated to magnesium. Magenta, orange and yellow spheres correspond to (3,-3), (3,-1) and (3,+1) critical points, brown lines denote bond paths.
-
-\subsection{Transition state searches}
-%[Maybe this goes into a smaller metholodogy section?]
-Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in \ac{G09} attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
-The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
-It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
-“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
-
-%(within Gaussian? See if you end up using any)
-%Frequency calculations
-\subsection{Intrinsic Reaction Coordinate}
-%[Maybe this goes into a smaller metholodogy section?]
-IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
-IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
-
-%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
-\subsection{PES Scans}
-%[Maybe this goes into a smaller methodology section?]
-Relaxed potential energy surface (PES) scans, or geometry scans are used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a PES of the explored pathway, presented in a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
-An energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the points of interest are extracted and used for subsequent frequency calculations, transition state searches and validated using intrinsic reaction co-ordinate methods. 
-To explore the predicted degradation mechanisms, the scanning parameter was assigned to the bond undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
-Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
-
-A rigid scan consists of a single point energy calculation of the structure at each of step the scan. % change in coo-rdinates.
-A relaxed scans calls for a geometry optimisation at each of these points. 
-Two-dimensional scans may be used to probe simultaneous processes in the system. These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
-
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\section{Spectroscopy}
 %
 %\subsection{Nuclear Magnetic Resonance Spectra}
@@ -295,14 +326,15 @@ Two-dimensional scans may be used to probe simultaneous processes in the system.
 %Comment on the different methods used to calculate NMR parameters - a tiny literature review, if you will, and say which you'll be using, why - even if it's becuase of the fact that it's built into Gaussian (obviously big it up, if that is the case) - and state any caveats. 
 %
 %Maybe have a look at: Accurate Calculation of NMR Chemical Shifts, Jurgen Gauss, 1995 as a basis, but you'll also need something more current. Any review papers out there?
-%
-%\subsubsection{Computational implementation}
-%
-%\subsection{Infra-Red Spectra}
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%\subsection{Infra-Red spectra}
+% Already covered in the thermochemistry section? Maybe just refer to that, but the include the scaling factors in here
+%\subsection{Nuclear Magnetic Resonance spectra}
+
 %%Update this later, looking at Tom's thesis, when you get round to actually doing some of the stuff
 %%\section{Molecular dynamics simulation methods}
 %Intro to the history spiel.
+
 
 %Save this for the specific chapter?: \subsection{AMBER Forcefield}
 % \section{Molecular mechanics}
@@ -325,9 +357,11 @@ Two-dimensional scans may be used to probe simultaneous processes in the system.
 % used in minimisations - used in Monte carlo, DFT as well
 % \subsubsection{Steepest descent algorithm}
 % \subsubsection{Conjugate gradient algorithm}
-%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsubsection{Computational implementation}
 %Caveats and scaling factors. 
+% Computational chemistry now forms a fundamental part of chemical research either in conjunction with laboratory experimentation or independently. 
+
 
 
 
