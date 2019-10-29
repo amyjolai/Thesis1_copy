@@ -53,6 +53,7 @@ The general form of the Hamiltonian is given by:
 \label{equ:hamiltonian}
 \end{equation}
 where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l$. 
+%where electrons are labelled $i=1,2,3.....j$
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
 is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^(-34)$), 
@@ -73,7 +74,9 @@ In Cartesian space, this is defined as the second derivative of the gradient in 
 \end{equation}
 The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term; %followed by the interelectronic and internuclear repulsive terms. 
 the fourth term describes interelectronic repulsion and the final term the internuclear repulsion. 
-The final three potential energy terms are the same as in classical mechanics. %analogous with classical mechanics.
+The final three potential energy terms are %the same 
+as in classical mechanics. %analogous with classical mechanics.
+%identical to their expression / representation in classical mechanics. 
 % attractive and repulsive terms are% potential energy terms that are
 % described as in classical mechanics. 
 %coloumbic interactions
@@ -106,7 +109,7 @@ In a real system, the motion of elections and nuclei are coupled. Electron densi
 % results in a wavefuction that is difficult to define. 
 %of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
-Relative to electronic motion, nuclei move far more slowly, owing to their mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
+Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
 %The difference is such, that the 
 Nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
@@ -223,6 +226,8 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree Fock) and E$_{LDA
 %[FIX ME]
 A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied. % (Table 1. Examples of split valence basis sets.).40,41 
 
+%DO a mini test for this?
+
 Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets.% Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsection{Thermochemistry}
@@ -267,18 +272,23 @@ A relaxed scans calls for a geometry optimisation at each of these points.
 Two-dimensional scans may be used to probe simultaneous processes in the system. These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Topology analysis using \ac{QTAIM}}
-%*paraphrase this:
-%Topology analysis Theory
-%
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wavefunction, ELF, LOL ...
 %BELOW IS ALL COPY & PASTED - pls change this DO NOT SUBMIT LIKE THIS
-The topology analysis technique proposed by Bader was firstly used for analysing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
-In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
+Topology analysis is a method of obtaining useful properties from the 3D representation of ...%the electron density derived during a quantum mechanical calculation. 
+Bader proposed a technique to analyse the electron density in the \ac{QTAIM \cite{Bader1991}.
+ %, which also extended to other real space functions, such as the \ac{LOL} and \ac{ELF}. - Only include these if you can describe them, also. 
+ %
+%The topology analysis technique proposed by Bader was firstly used for analysing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
+The points in the topological landscape at which the gradient norm is zero, excluding points at infinity, %does infinity happen?
+signify a stationary point. These are deemed Critical Points (\acs{CP}).  In the context of electron density, these point can be classified into four types:
+%In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
 
-(3,-3): All three eigenvalues of Hessian matrix of function are negative, namely the local maximum. For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
+(3,-3): All three eigenvalues of Hessian matrix of the function are negative, also known as the local maximum. %For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
+As the position of (3,-3) are generally located at nuclear positions, these are referred to as a \ac{NCP}. The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as a greater number of \ac{NCP} for \ce{Li2) or a lower number for \ce{KrH+}. %Why???
 
-(3,-1): Two eigenvalues of Hessian matrix of function are negative, namely the second-order saddle point. For electron density analysis, (3,-1) generally appears between attractive atom pairs and hence commonly called as bond critical point (BCP). The value of real space functions at BCP have great significance. %, for example the value of XXX and 
+(3,-1): Two eigenvalues of Hessian matrix of function are negative, or a second-order saddle point. (3,-1) usually appears between attractive atom pairs and so are referred to as a \ac{bcp}. %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
 The sign of  at BCP is closely related to bonding strength and bonding type respectively in analogous bonding type. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
+\cite{Matta2007}
 The potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies% (Chem. Phys. Lett., 285, 170)
 ; local information entropy at BCP is a good indicator of aromaticity.% (Phys. Chem. Chem. Phys., 12, 4742).
 
