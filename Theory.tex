@@ -47,7 +47,7 @@ the wavefunction
 $\Psi$, and $E$ is a scalar denoting the energy of the system. 
 
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
-The general form of the Hamiltonian is given by:
+The general form of the Hamiltonian is given by \cite{Cramer2004}:
 \begin{equation}
 \mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_k^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
 \label{equ:hamiltonian}
@@ -56,7 +56,7 @@ where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l
 %where electrons are labelled $i=1,2,3.....j$
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
-is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^(-34)$), 
+is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^{-34}$), 
 $m_e$ is the mass of an electron, 
 $m_k$ is the mass of the nucleus $k$, 
 $e$ is the charge of an electron, 
@@ -64,28 +64,38 @@ $e$ is the charge of an electron,
 $Z_k$ is the atomic number of $k$ and %$r_{xy}$ is the distance between particles $x$ and $y$.
 $r_{ik}$ is the distance between particles $i$ and $k$. 
 When using \ac{au}, %the electronic mass, charge and reduced Planck's constant 
-$m_e$, $\hbar$ are reduced to a value of 1. %Give the simplified equation here?
+the value of $e$, $m_e$ and $\hbar$ are reduced to 1. %Give the simplified equation here?
 
-$\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % What does this really mean, in a practical sense? 
-In Cartesian space, this is defined as the second derivative of the gradient in the three dimensions: % Does it refer to the change in electronic position, in this case? Do I even need to mention much about Laplacian?
+$\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % It describes how the gradient (the gradient of a function of space) diverges over a function. Field or function? I guess if its a 3D plane function, you can call it a field.
+%Laplacian of the electron density, is therefore the rate of change / divergence of the electron density, over that bit of space / cartesian coord?
+% +ve is electron density deficient, -ve is electron density rich
+%See the wiki: https://en.wikipedia.org/wiki/Laplace_operator
+In Cartesian space, this is defined as the sum of the second derivatives of the gradient with respect to each of the three dimensions ($x$,$y$,$z$): % Does it refer to the change in electronic position, in this case? Do I even need to mention much about Laplacian?
+
 \begin{equation}
 \nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
 \label{equ:laplace}
 \end{equation}
+
+
+%Maybe I should label the equation itself
 The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term; %followed by the interelectronic and internuclear repulsive terms. 
-the fourth term describes interelectronic repulsion and the final term the internuclear repulsion. 
-The final three potential energy terms are %the same 
-as in classical mechanics. %analogous with classical mechanics.
+the fourth term describes inter-electronic repulsion and the final term the inter-nuclear repulsion. 
+The final three potential energy terms are identical to their expression in classical mechanics. %the same as in classical mechanics. 
+%analogous with classical mechanics.
 %identical to their expression / representation in classical mechanics. 
 % attractive and repulsive terms are% potential energy terms that are
 % described as in classical mechanics. 
 %coloumbic interactions
+
+
 The kinetic energy terms %are 
 can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
 \begin{equation}
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
 \end{equation}
+
 The Hamiltonian %Equation \ref{equ:hamiltonian}
 can therefore be written in terms of the kinetic energy and potential energy operators:
 \begin{equation}
@@ -112,12 +122,12 @@ In a real system, the motion of elections and nuclei are coupled. Electron densi
 Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
 %The difference is such, that the 
-Nuclear positions appear essentially stationary compared to the electrons. Exploiting this property, the 
+Nuclear positions therefore appear essentially stationary when compared to that of the electrons. Exploiting this property, the 
 %Owing to this difference in relative  
-Born-Oppenheimer approximation fixes the nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. The nuclear kinetic energy term ($\mathbf{T}_{N}$) of the Hamiltonian is removed, as the nuclei are frozen. % becomes then independent of electronic motion; 
+Born-Oppenheimer approximation fixes the nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. Dependency on the nuclear kinetic energy term ($\mathbf{T}_{N}$) of the Hamiltonian is removed, as the nuclei are frozen. % becomes then independent of electronic motion; 
 %The electron-nuclear interaction term ($\mathbf{V}_{e-N}$) disappears, and 
-The nuclear-nuclear repulsive term ($\mathbf{V}_{NN}$) becomes a constant.  
-The equation is reduced to its electronic components and nuclear constants which in atomic units can be written as:
+The nuclear-nuclear repulsive term ($\mathbf{V}_{NN}$) becomes a constant for the specified geometry.  
+Equation \ref{equ:hamiltonian} is reduced to its electronic components and nuclear constants which in atomic units can be written as:
 %
 %\begin{equation}
 %\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
@@ -129,16 +139,30 @@ The equation is reduced to its electronic components and nuclear constants which
 \label{equ:hamiltonian_BO}
 \end{equation}
 %
-The Schr\"{o}dinger’s equation only dependent on the electronic coordinates is as follows: 
+Or in terms of the operators:
+\begin{equation}
+\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
+\label{equ:hamiltonian_BO_op}
+\end{equation}
+%
+The electronic terms can be factorised into one term, to simplify notation:
+\begin{equation}
+\mathbf{H}= \mathbf{H}_{el}+ \mathbf{V}_{NN}
+\label{equ:hamiltonian_BO_simp}
+\end{equation}
+%
+Thus, the Schr\"{o}dinger’s equation, dependent only on the electronic coordinates, is as follows: 
 %
 \begin{equation}
 (\mathbf{H}_{el} + \mathbf{V}_{NN})
 \Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E_{el}(\mathbf{q}_{i};\mathbf{q}_{k})
 \label{equ:elec_schro}
 \end{equation}
-where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
-The electronic coordinates are given by $\mathbf{q}_{i}$, and the nuclear positions, $\mathbf{q}_{k}$.
-$E_{el}$ is the electronic energy of the system, which is now only dependent on the electronic coordinates.
+%where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
+where the electronic coordinates are given by $\mathbf{q}_{i}$, the fixed nuclear positions by $\mathbf{q}_{k}$ and 
+$E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. 
+Calculation of $E_{el}$ for all possible nuclear coordinates allows the construction of a \ac{PES}. 
+% and thus appear following a semicolon rather than a comma in the variable list for \Psi
 %
 %\subsection{Slater determinant}
 %In order to 
@@ -243,7 +267,10 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 %%\subsection{Optimisation algorithms}
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-\section{Analysis}
+\section{Implementation \& Analysis}
+%
+%Unless specified otherwies, all calcs run in G09 D.01 though perhaps make mention of materials studio, orca - no, Gview and Avogadro for quick cleanup. PyRed, what did I use to make the PBDs?
+%Visualisation done in avogadro, molden, Gview
 %
 \subsection{Transition state searches}
 %[Maybe this goes into a smaller metholodogy section?]
@@ -273,21 +300,29 @@ Two-dimensional scans may be used to probe simultaneous processes in the system.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Topology analysis using \ac{QTAIM}}
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wavefunction, ELF, LOL ...
-%BELOW IS ALL COPY & PASTED - pls change this DO NOT SUBMIT LIKE THIS
 Topology analysis is a method of obtaining useful properties from the 3D representation of ...%the electron density derived during a quantum mechanical calculation. 
-Bader proposed a technique to analyse the electron density in the \ac{QTAIM \cite{Bader1991}.
+Bader proposed a technique to analyse the electron density in the \ac{QTAIM} \cite{Bader1991}.
  %, which also extended to other real space functions, such as the \ac{LOL} and \ac{ELF}. - Only include these if you can describe them, also. 
+ % Real-space calculation...when all operators (T^,V^,J^,K^) are evaluated on a grid.
  %
 %The topology analysis technique proposed by Bader was firstly used for analysing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
 The points in the topological landscape at which the gradient norm is zero, excluding points at infinity, %does infinity happen?
+% wiki: a norm is a function that assigns a strictly positive length or size to each vector in a vector space—except for the zero vector, which is assigned a length of zero.
+% A bit like modulus but referers to specific scenarios: https://www.physicsforums.com/threads/what-is-the-difference-between-norm-and-modulus.181812/
 signify a stationary point. These are deemed Critical Points (\acs{CP}).  In the context of electron density, these point can be classified into four types:
 %In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
 
-(3,-3): All three eigenvalues of Hessian matrix of the function are negative, also known as the local maximum. %For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
-As the position of (3,-3) are generally located at nuclear positions, these are referred to as a \ac{NCP}. The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as a greater number of \ac{NCP} for \ce{Li2) or a lower number for \ce{KrH+}. %Why???
+%At this point you shoudl have already explained what the hessian matrix is
+%please explaint the (3,X) labelling
+\ac{NCP}: All three eigenvalues of Hessian matrix of the function are negative, also known as the local maximum. %For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
+As the position of (3,-3) are generally located at nuclear positions, these are referred to as Nuclear Critical Points (\acs{NCP}). The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as a greater number of \ac{NCP} for \ce{Li2} or a lower number for \ce{KrH+}. %Why???
 
-(3,-1): Two eigenvalues of Hessian matrix of function are negative, or a second-order saddle point. (3,-1) usually appears between attractive atom pairs and so are referred to as a \ac{bcp}. %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
-The sign of  at BCP is closely related to bonding strength and bonding type respectively in analogous bonding type. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
+%Btw real space.... just means space. As in actual 3D space. Not virtual space. 
+%In a electronic structure (specifically DFT) code, a "real space code" means using atom orbitals as basis functions rather than plane waves.
+% https://chemistry.stackexchange.com/questions/84098/what-are-the-differences-between-the-hilbert-space-and-real-space-representation
+(3,-1): Two eigenvalues of Hessian matrix of function are negative, or a second-order saddle point. (3,-1) usually appears between attractive atom pairs and so are referred to as a Bonding Critical Points (\acs{BCP}). %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
+As the electron density af 
+ \ac{BCP} is closely related to bonding strength and bonding type respectively in analogous bonding type. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
 \cite{Matta2007}
 The potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies% (Chem. Phys. Lett., 285, 170)
 ; local information entropy at BCP is a good indicator of aromaticity.% (Phys. Chem. Chem. Phys., 12, 4742).
