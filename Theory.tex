@@ -1,7 +1,9 @@
 \chapter{Theory and Implementation}
 \label{chapterlabel2}
 %The theoretical basis for methods used in this thesis and more widely in compuational chemistry is described in this chapter.
+% include a physical constants page, with the numbers and roundings I used
 
+% The rate at which you move through the topics is probably too slow. Can skip bits. They'll get it (although I'm not sure I will.)
 \section{Electronic structure methods}
 %Intro to the history spiel. What it is, where did it come from. 
 %Wave particle duality. 
@@ -20,10 +22,14 @@ integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \begin{equation}
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
 \end{equation}
+%The above equation just means an integral of Psi_i and Psi_j over 3D Cartesian space. Or something to that effect.  
 Where all states are represented by $i$ and $j$, and:
 \begin{center}
 $\delta_{ij}=0$ for $i\neq j$\\
 $\delta_{ij}=1$ for $i=j$
+%  δij is the Kronecker delta 
+% Read Cramer page 107 for more clarfication
+the integral is one.
 \end{center}
 %What does the delta refer to??
 %Therefore, for $|\Psi^{2}|$ that has been normalised, the integral over all space is equal to 1, indicating that the probability of finding the system in the space is equal to 1.  %[REF] 
@@ -45,6 +51,8 @@ Schr\"{o}dinger's time independent equation is:
 where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue of %the eigenfunction, 
 the wavefunction 
 $\Psi$, and $E$ is a scalar denoting the energy of the system. 
+A given system may have many acceptable values for $\Psi$, each with an associated value for $E$
+%(Cramer pg 107)
 
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
 The general form of the Hamiltonian is given by \cite{Cramer2004}:
@@ -88,7 +96,7 @@ The final three potential energy terms are identical to their expression in clas
 % described as in classical mechanics. 
 %coloumbic interactions
 
-
+%Probably don't need this section ----------------------------------------------------------------%
 The kinetic energy terms %are 
 can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
 \begin{equation}
@@ -115,6 +123,8 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Born-Oppenheimer approximation}
+%This maybe should be a paragraph rather than a whole multi-page section
+%Get the original refrence - might be libo `s reference [27]
 In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency makes defining a wavefunction difficult. 
 % results in a wavefuction that is difficult to define. 
 %of such a system 
@@ -138,7 +148,7 @@ Equation \ref{equ:hamiltonian} is reduced to its electronic components and nucle
 \mathbf{H}= - \frac{1}{2} \sum \nabla_i^{2} - \sum_{i} \sum_{k} \frac{Z_{k}}{r_{ik}} + \sum_{i<j} \frac{1}{r_{ij}} + \mathbf{V}_{NN}
 \label{equ:hamiltonian_BO}
 \end{equation}
-%
+% Probably don't need this section ----------------------------------------------------------%
 Or in terms of the operators:
 \begin{equation}
 \mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
@@ -151,7 +161,7 @@ The electronic terms can be factorised into one term, to simplify notation:
 \label{equ:hamiltonian_BO_simp}
 \end{equation}
 %
-Thus, the Schr\"{o}dinger’s equation, dependent only on the electronic coordinates, is as follows: 
+The Schr\"{o}dinger’s equation can now be written in terms of only the electronic coordinates: 
 %
 \begin{equation}
 (\mathbf{H}_{el} + \mathbf{V}_{NN})
@@ -159,27 +169,62 @@ Thus, the Schr\"{o}dinger’s equation, dependent only on the electronic coordin
 \label{equ:elec_schro}
 \end{equation}
 %where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
-where the electronic coordinates are given by $\mathbf{q}_{i}$, the fixed nuclear positions by $\mathbf{q}_{k}$ and 
+where the electronic coordinates are given by $\mathbf{q}_{i}$, the stationary nuclear positions by $\mathbf{q}_{k}$ and 
 $E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. 
-Calculation of $E_{el}$ for all possible nuclear coordinates allows the construction of a \ac{PES}. 
+%significance of this?
 % and thus appear following a semicolon rather than a comma in the variable list for \Psi
-%
-%\subsection{Slater determinant}
-%In order to 
+% so that the  Schr\"{o}dinger’s equation can be solved for the electrons alone. 
+
+%CHECK this section
+Given the example of a diatomic molecule, a potential energy curve can be obtained by calculating the value of $E_{el}$ for a particular inter-nuclear separation, increasing the separation distance and again calculating the energy. 
+%(\ref{elements of physical chemistry})
+A series of these calculations along different fixed nuclear separations generates a potential energy profile, allowing identification of an equilibrium bond length at the minimum of the curve. 
+Calculation of $E_{el}$ for all possible nuclear coordinates allows the construction of a \ac{PES}. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
+
+Molecular structure theories adopt the Born-Oppenheimer approximation for its effective simplification of the coupled nuclear-electronic motion problem, in addition to its relative accuracy; this assumption works well for ground state molecules and only introduces very small errors. %CHECK THIS, and what happens for excited ones?? / refs / examples
+This model breaks down in the situation where there are multiple \ac{PES}, similar in energy %proximity 
+to one another, or even intersecting. %CHECK / ref/ give examples
+%See Jensen for clarification
+In these cases the coupled equations must be considered. 
+However for the work within this study, the Born-Oppenheimer approximation is successfully applied for all electronic structure calculations. 
+
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-%LATER
+\subsection{Slater determinants}
+% A paragrah to talk about how exchange is the difficult bit to solve?
+%In a system of two or more electrons, each electron is indistinguishable. 
+The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that no electrons may have an identical set of quantum numbers. %say what they are?
+When considering two indistinguishable electrons, the wavefunction of the system must be antisymmetric with respect to the exchange of their coordiates. 
+%must therefore change sign upon the interchange of their coordinates
+%permutation of their coordinates. %is this an imprecise statement?
 
-%\subsection{Hartree Fock}
-%Hartree Fock \ac{HF} 
-%%Hartree Fock \nomenclature{HF}
-%
+%https://www.chem.tamu.edu/rgroup/hughbanks/courses/673/handouts/antisymmetry.pdf
+\begin{equation}
+\Psi(1,2..i,...j..N) = - \Psi(1,2..i,...j..N)
+\end{equation}
 
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%or
+%\begin{equation}
+%\Phi(\mathbf{X}_{1},\mathbf{X}_{2}) = - Phi(\mathbf{X}_{2},\mathbf{X}_{1})
+%\end{equation} 
+
+These antisymmetry requirements are fulfilled by expressing the wavefunction as a Slater determinant, which changes sign with permutation of the coordinates of two electrons. 
+%What is a determinant anyway
+
+In the case of a multi-electronic system, the generalised Slater determinant is as follows:
+
+\begin{equation}
+ 
+
+%SCF?
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Variational principle}
+
 The variational theorem states that the calculated energy of any guess wavefunction can only be greater than or equal to the real ground-state energy of the system. % The concept of \''lower bound'' is a property of wavefunctions? How is this derived, and where does it stem from?
 This provides a criterion for selection of the best guess wavefunction.
-
-
+\subsection{Hartree Fock}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Hartree Fock \ac{HF} 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Open shell systems}
 %[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
@@ -196,6 +241,8 @@ A caveat of the unrestricted model is its susceptibility to spin contamination, 
 %\subsubsection{MP2}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Density functional theory}
+There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons.  \textit{Ab initio} methods generate solutions from ``first principles'', where calculations are performed
+By contrast, semi-epirical methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
 %Solutions to the Schrödinger's equation using reference
 %
 %See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
@@ -375,7 +422,7 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 %\subsection{Infra-Red spectra}
 % Already covered in the thermochemistry section? Maybe just refer to that, but the include the scaling factors in here
 %\subsection{Nuclear Magnetic Resonance spectra}
-
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %%Update this later, looking at Tom's thesis, when you get round to actually doing some of the stuff
 %%\section{Molecular dynamics simulation methods}
 %Intro to the history spiel.
