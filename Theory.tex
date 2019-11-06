@@ -1,6 +1,11 @@
 \chapter{Theory and Implementation}
 \label{chapterlabel2}
-%The theoretical basis for methods used in this thesis and more widely in compuational chemistry is described in this chapter.
+%References:
+% Jensen
+% Cramer
+% Leach
+%
+%The theoretical basis for methods used in this thesis and more widely in computational chemistry is described in this chapter.
 % include a physical constants page, with the numbers and roundings I used
 
 % The rate at which you move through the topics is probably too slow. Can skip bits. They'll get it (although I'm not sure I will.)
@@ -38,7 +43,7 @@ Operators acting on $\Psi$ yield the observable properties of the system.
 The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
 Erwin Schr\"{o}dinger %first 
 proposed his equation in 1926, describing a quantum system using its wavefunction \cite{schrodinger1926}. %Check this is accurate. Does the equation use the wavefunction to describe the (energy of the) system, or does the equation just describe the wavefunction itself?
-%The time-independent %Schr\"{o}dinger's 
+%The time-independent %Schr\"{o}dinger 
 Schr\"{o}dinger's time independent equation is:
 %Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
 %\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
@@ -51,16 +56,45 @@ Schr\"{o}dinger's time independent equation is:
 where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue of %the eigenfunction, 
 the wavefunction 
 $\Psi$, and $E$ is a scalar denoting the energy of the system. 
-A given system may have many acceptable values for $\Psi$, each with an associated value for $E$
+A given system may have many acceptable values for $\Psi$, each with an associated value for $E$.
 %(Cramer pg 107)
 
+SEPARATION OF THE WAVEFUNCTION:\\
+The $\Psi$ turns to $\psi$, and $\partial$ turns to d, after separation of terms. I don't really know why we changed the notation. But basically, once you start working with the time indepedent Schr, then switch to $\psi$, only. \\
+[Note, time-\textbf{dependent} Schrodinger in one dimension ($x$), and time-independent potential energy for a single particle.]
+The wavefunction evolves in time $\Psi(r_{1}, r_{2}....t)$  according to:
+\begin{equation}
+\textit{i}\hbar \frac{\partial \Psi}{\partial t} = H\Psi
+\end{equation}
+
+One dimension with time dependency:
+\begin{equation}
+H\Psi = - \frac{\hbar^{2}}{2m}\frac{\partial^{2} \Psi}{\partial x^{2}} + V(x)\Psi = \textit{i}\hbar \frac{\partial \Psi}{\partial t}
+\end{equation}
+
+Separation of variables:
+\begin{equation}
+\Psi(x,t) = \psi(x)\theta(t)
+\end{equation}
+
+Now:
+\begin{equation}
+ - \frac{\hbar^{2}}{2m}\theta \frac{d^{2} \psi}{d x^{2}} + V(x)\psi \theta = \textit{i}\hbar \psi \frac{d\theta}{dt}
+\end{equation}
+
+Simplifying by dividing by $\psi \theta$:
+\begin{equation}
+ - \frac{\hbar^{2}}{2m}\frac{1}{\psi} \frac{d^{2} \psi}{d x^{2}} + V(x)= \textit{i}\hbar \frac{1}{\theta} \frac{d\theta}{dt}
+\end{equation}
+
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
-The general form of the Hamiltonian is given by \cite{Cramer2004}:
+%\textbackslash underbrace\{x+y\}\]\{|A|\
+The general form of the Hamiltonian is given by 
 \begin{equation}
 \mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_k^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
 \label{equ:hamiltonian}
 \end{equation}
-where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l$. 
+where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l$ \cite{Cramer2004}. 
 %where electrons are labelled $i=1,2,3.....j$
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
@@ -72,7 +106,7 @@ $e$ is the charge of an electron,
 $Z_k$ is the atomic number of $k$ and %$r_{xy}$ is the distance between particles $x$ and $y$.
 $r_{ik}$ is the distance between particles $i$ and $k$. 
 When using \ac{au}, %the electronic mass, charge and reduced Planck's constant 
-the value of $e$, $m_e$ and $\hbar$ are reduced to 1. %Give the simplified equation here?
+the value of $e$, $m_e$ and $\hbar$ are reduced to 1. %Give the simplified equation here? %see Leah pg 29 for physical constants
 
 $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % It describes how the gradient (the gradient of a function of space) diverges over a function. Field or function? I guess if its a 3D plane function, you can call it a field.
 %Laplacian of the electron density, is therefore the rate of change / divergence of the electron density, over that bit of space / cartesian coord?
@@ -125,11 +159,11 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first
 \subsection{Born-Oppenheimer approximation}
 %This maybe should be a paragraph rather than a whole multi-page section
 %Get the original refrence - might be libo `s reference [27]
-In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger’s equation. However, this interdependency makes defining a wavefunction difficult. 
+In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger equation. However, this interdependency makes defining a wavefunction difficult. 
 % results in a wavefuction that is difficult to define. 
 %of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
-Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass. %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
+Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass (the mass of a proton is around 1836 times larger than that of the electron). %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
 %The difference is such, that the 
 Nuclear positions therefore appear essentially stationary when compared to that of the electrons. Exploiting this property, the 
@@ -179,7 +213,7 @@ $E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ 
 Given the example of a diatomic molecule, a potential energy curve can be obtained by calculating the value of $E_{el}$ for a particular inter-nuclear separation, increasing the separation distance and again calculating the energy. 
 %(\ref{elements of physical chemistry})
 A series of these calculations along different fixed nuclear separations generates a potential energy profile, allowing identification of an equilibrium bond length at the minimum of the curve. 
-Calculation of $E_{el}$ for all possible nuclear coordinates allows the construction of a \ac{PES}. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
+Calculation of $E_{el}$ for all possible nuclear coordinates allows the construction of the \ac{PES}	, a hypersurface on which nuclear motion occurs, with the potential energy defined by the nuclear geometry. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
 
 Molecular structure theories adopt the Born-Oppenheimer approximation for its effective simplification of the coupled nuclear-electronic motion problem, in addition to its relative accuracy; this assumption works well for ground state molecules and only introduces very small errors. %CHECK THIS, and what happens for excited ones?? / refs / examples
 This model breaks down in the situation where there are multiple \ac{PES}, similar in energy %proximity 
@@ -190,13 +224,16 @@ However for the work within this study, the Born-Oppenheimer approximation is su
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Slater determinants}
+% A method of expressing the wavefunction, such that it obeys Pauli's
+%Summed up as - antisymmetry and 
+Equation \ref{equ:elec_schro} can be solved exactly in only a few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. 
+
 % A paragrah to talk about how exchange is the difficult bit to solve?
-%In a system of two or more electrons, each electron is indistinguishable. 
-The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that no electrons may have an identical set of quantum numbers. %say what they are?
-When considering two indistinguishable electrons, the wavefunction of the system must be antisymmetric with respect to the exchange of their coordiates. 
+In a system of multiple electrons, each electron is indistinguishable. If the positions of two electrons is swapped, the distribution of electron density in the system remains the same. %\cite{Leach2001}. 
+The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that none may have an identical set of quantum numbers. %say what they are?
+As a result, for two indistinguishable electrons, the wavefunction of the system is antisymmetric with respect to the exchange of their coordinates. 
 %must therefore change sign upon the interchange of their coordinates
 %permutation of their coordinates. %is this an imprecise statement?
-
 %https://www.chem.tamu.edu/rgroup/hughbanks/courses/673/handouts/antisymmetry.pdf
 \begin{equation}
 \Psi(1,2..i,...j..N) = - \Psi(1,2..i,...j..N)
@@ -207,24 +244,68 @@ When considering two indistinguishable electrons, the wavefunction of the system
 %\Phi(\mathbf{X}_{1},\mathbf{X}_{2}) = - Phi(\mathbf{X}_{2},\mathbf{X}_{1})
 %\end{equation} 
 
-These antisymmetry requirements are fulfilled by expressing the wavefunction as a Slater determinant, which changes sign with permutation of the coordinates of two electrons. 
+%These antisymmetry 
+This requirement is fulfilled by expressing the wavefunction as a Slater determinant, which changes sign with permutation of the coordinates of two electrons. 
 %What is a determinant anyway
-
-In the case of a multi-electronic system, the generalised Slater determinant is as follows:
+In the case of a multi-electronic system, the generalised Slater determinant for $N$ total electrons is as follows: 
 
 \begin{equation}
- 
+\psi_{SD} = \frac{1}{\sqrt{N!}}
+\begin{vmatrix}
+\chi_{1}(1) 	& \chi_{2}(1) 	&\cdots 	& \chi_{N}(1) \\
+\chi_{1}(2) 	& \chi_{2}(2) 	&\cdots 	& \chi_{N}(2) \\
+\vdots 		& \vdots 			& \ddots 	& \vdots 		   \\
+\chi_{1}(N) & \chi_{2}(N) 	&\cdots 	& \chi_{N}(N) 
+\end{vmatrix}
+\end{equation}
 
-%SCF?
+where $\chi_{n}$ represents single electron wavefunctions, or spin-orbitals \cite{Slater1929}. %which are orthonormal
+In the context of a molecule, the single electron wavefunctions are molecular orbitals. 
+%Rows are labelled by the electrons: (1), (2) $\cdots$ ($N$), whereas columns are labelled by the orbitals: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
+%Rows are labelled by the coordinates of each electron: (1), (2) $\cdots$ ($N$)
+Rows are labelled by the coordinates of each electron: $\textbf{x}_{1}$,$ \textbf{x}_{2}\cdots \textbf{x}_{N}$, whereas each column uses a different orbital function: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
+%The orbitals increase along the columns, whilst electron coordinates run down the rows. 
+%If the labels of (1) and (2) are exchanged, the rows of the determinant are exchanged
+If the labels of $\textbf{x}_{1}$ and $\textbf{x}_{2}$ are exchanged, the rows of the determinant are exchanged; a general property of determinants is that the interchange of two rows leads to a change of sign. The expanded form of the determinant ($\psi_{SD}$) will therefore have the opposite sign when when a pair of electron coordinates are switched, by switching rows within the determinant. 
+In the disallowed case of two electrons occupying the same spin-orbital, two columns would be identical \cite{Dykstra1994}. The evaluation of the determinant would then be zero. 
+Application of the Slater determinant therefore fulfils the Pauli exclusion principle. 
 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Hartree Fock self-consistent field method}
+%Need some preamble here, how did we get from slater and BO, to Hartree's method? 
+%Not sure what this means, nor which they refer to:
+% The product form of an electronic wavefunction is only obtainable \textit{via} and approximation. 
+%The electronic Hamiltonian (equation \ref\label{equ:hamiltonian_BO_op}) is not separable for individual electrons. 
+%This is prevented by the electron-electron repulsion term/ operator - an exact wavefunction cannot be determined as a product of the one electron function (from Slater's ?). 
+%The electron-electron repulsion term 
+The \ac{SCF} method was developed by Hartree 
+
+ Hartree approximation neglects electron-electron interaction, describing the energy of electrons as individual particles without the effect of the surrounding fermions. 
+
+Fock and Slater improved upon this by introducing electron exchange. This assumption places a static spherical potential around the electron, derived from the average effect of the nucleus and other electrons in the system. 
+
+%Numerical solutions of the Schr\"{o}dinger equation present the best atomic orbitals \cite{Atkins2011} %Check this statement. 
+The \ac{HF} method starts
+
+\begin{equation}
+E=\frac{\int\psi^{*}(\textbf{x}) H \psi(\textbf{x})d\textbf{x}}{\int\psi^{*}(\textbf{x}) \psi(\textbf{x})d\textbf{x}}
+\label{equ:HF}
+\end{equation}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Variational principle}
-
+%Expand on this later
 The variational theorem states that the calculated energy of any guess wavefunction can only be greater than or equal to the real ground-state energy of the system. % The concept of \''lower bound'' is a property of wavefunctions? How is this derived, and where does it stem from?
-This provides a criterion for selection of the best guess wavefunction.
-\subsection{Hartree Fock}
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-%Hartree Fock \ac{HF} 
+This provides a criterion for selection of the best guess wavefunction, as the energy is always bound from below: 
+
+%make sure you know what this means and whether the hat is appropriate
+%\begin{equation}
+%E_{exact} \leq {\langle \Psi | \hat{H} | \Psi \rangle}
+%\end{equation}
+\begin{equation}
+E_{exact} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
+\end{equation}
+
+
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Open shell systems}
 %[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
@@ -243,7 +324,7 @@ A caveat of the unrestricted model is its susceptibility to spin contamination, 
 \subsection{Density functional theory}
 There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons.  \textit{Ab initio} methods generate solutions from ``first principles'', where calculations are performed
 By contrast, semi-epirical methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
-%Solutions to the Schrödinger's equation using reference
+%Solutions to the Schrödinger equation using reference
 %
 %See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
 %Functional Theory: A Guide for the Perplexed
