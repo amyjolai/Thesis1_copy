@@ -6,23 +6,26 @@
 %Why can't we model the whole polymer / why do we need to truncate?
 %What is contained in this chapter? What question is posed?
 
-A wide range of reaction products are experimentally observed during the low temperature decomposition and slow ageing of \ac{NC}. Small gaseous species such as \ce{CO2}, \ce{CO}, \ce{CH2O}, \ce{N2O}, \ce{NO2} are idenitified using IR spectroscopy, whilst the presence of larger species such as glycolic acid and oxalate are alluded to in the spectra of the complex reaction mixture. \cite{Jin2015,Bluhm1977}
+A wide range of reaction products are experimentally observed during the low temperature decomposition and slow ageing of \ac{NC}. Small gaseous species such as \ce{CO2}, \ce{CO}, \ce{CH2O}, \ce{N2O}, \ce{NO2} are identified using IR spectroscopy, whilst the presence of larger species such as glycolic acid and oxalate are alluded to in the spectra of the complex reaction mixture \cite{Jin2015,Bluhm1977}.
+% Jin's paper also stated that \ac{NC} of different macroscopic structures - aerogel vs fibres, decomposed differently. TG/FTIR showed that the \ac{NC} aerogel decomposed \textit{via} initial splitting of the urethane bond (where was that supposed to be? No C=O present?), followed by denitration. In the aerogel, chain scission begins at the  C-O-C in the ring, whereas in the fibres, the glycosisid bond breaks first. 
+% Ossa2012 gives high temp proof of these products by many techniques
+%Good table of degradation studies - pyrolysis, mechanochemical, biological etc FernandezdelaOssa2011
 The generation of these products can be attributed to the range of susceptible attack sites along the polysaccharide backbone and at side groups, as well as the multitude of possible secondary reactions following denitration. These include depolymerisation and ring-cleavage, and can involve contaminants or acids remaining in the \ac{NC} matrix following synthesis, due to imperfect washing procedures\cite{Chin2007,Edge1990}. %(REF something about the deg products or many secondary reactions) \cite{gun'ko2014}
 
 %[Move this bit to the literature review if appropriate:%%%%%%%%%%%%%%%%%%%%%%%]
-Storage conditions such as the choice of wetting solvent, temperature, pressure, humidity, as well as fluctuations in these conditions over time, also contribute to the spectrum of products evolved. A practical application is the propellant stored under a pilot's seat for ejection from the cockpit during emergencies\cite{MinistryofDefence2001,SBIR2013}. During the lifetime of the propellant, it will endure a great number of flights, each involving variable temperature and pressure cycles. The propellant device will include an \ac{EM}:plasticiser:stabiliser mixture that adheres to established industry safety standards. This will incorporate a conservative estimation of the shelf-life and stability of the formulation under different environmental and storage conditions (figure \ref{fig:cartridge}). 
-Understanding of the ageing reactions will shed light on the possible interactions between the \ac{EM} and the stabilising mixture, informing better industrial practices, safety standards and product formulations with improved estimates of service life. 
-
-\begin{figure}[htp]
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.65\linewidth]{HBEA-P15-0021-crop}
+\includegraphics[width=0.5\linewidth]{HBEA-P15-0021-crop}
 \caption{Markings on the side of a charge bag, with a cartridge containing $\acs{NC}$ propellant. The shelf-life of the product can be calculated from its manufacture date, with consideration of storage conditions.}
 \label{fig:cartridge}
 \end{figure}
 
-%[*End*]%%%%%%%%%%%%%%%%%%%%%%%]
+Storage conditions such as the choice of wetting solvent, temperature, pressure, humidity, as well as fluctuations in these conditions over time, also contribute to the spectrum of products evolved. This has implications for the shelf life of \ac{NC} products; a practical example is the propellant stored under a pilot's seat for emergency ejection from the cockpit \cite{MinistryofDefence2001,SBIR2013}. During the lifetime of the propellant, it will endure a great number of flights, each involving variable temperature and pressure cycles. The propellant device will include an \ac{EM}, plasticiser and stabiliser mixture in ratios adhering to established industry safety standards. %REF
+This will incorporate a conservative estimation of the shelf-life and stability of the formulation under different environmental and storage conditions (figure \ref{fig:cartridge}). 
+Understanding of the ageing reactions will shed light on the possible interactions between the \ac{EM} and the stabilising mixture, informing better industrial practices, safety standards and product formulations with improved estimates of service life. 
 
-\begin{figure}[htp]
+%[*End*]%%%%%%%%%%%%%%%%%%%%%%%]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.75\linewidth]{Cellulose}
 \caption{The primary, secondary, tertiary and quaternary structure of cellulose fibres\cite{onlinetextileacademy2016}.}
@@ -35,8 +38,10 @@ These properties are largely defined by the cellulose feedstock (figure \ref{fig
 Hydrogen bonding networks determine the supramoleular arrangement of the cellulose polysaccharide chains, and variation leads to a mixture of crystalline and amorphous regions\cite{Nishiyama2002,Nishiyama2003}. 
 Regions of crystallinity are more difficult to penetrate by solvent, thus are more resistant to hydrolytic decomposition methods; amorphous regions are more porous, exhibit less hydrogen bonding, and are more prone to digestion by both microbes and chemicals\cite{chundawat2011}. %REF
 %also, any info on which types of cellulose have shorter/ longer chains, and are more / less suscpetible to certain types of degradation?
+Hydrolysis in \ac{NC} is largely attributed to the presence of spent acids in the system. Small amounts of moisture present in the bulk or from the air, have also been suspected to accelerate hydrolytic ageing. %REF / Facilitating it? Because if its just in water it doesn't really break down. 
+The interplay of reactions between small acid species, water and the polysaccharide, in particular at the nitrate sites, are therefore of critical importance for interpreting the mechanistic pathways leading to widespread degradation throughout the material. 
 
-\begin{figure}[hbp]
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.75\linewidth]{miscanthus}
 %(x400 magnification) but thats not what it says in the actual image. 
@@ -68,11 +73,17 @@ Regions of crystallinity are more difficult to penetrate by solvent, thus are mo
 Density functional methods are routinely used to explore the energetics of small molecular reactions\cite{rezac2011,Parthiban2001,Bento2008}. %REF one of the S66 benchmark reaction papers, and another one for a slightly bigger system - maybe mine. And perhaps include one study on reactions of cellulose? 
 %include a one liners to give exmaples / demonstrate the use in literature. 
 % Include a bit about why we are using DFT and QM for looking at reaction eneriges in the first place. What are other ways of doing it, and why are we doing it this way?
-When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unwieldy due to the large number of atoms. %In practice, \textit{ab initio} quantum mechanical and semi-empirical
+When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unwieldy due to the large number of atoms. It is therefore necessary to reduce the system to a representative model within a manageable scale.
+%In practice, \textit{ab initio} quantum mechanical and semi-empirical
 %density functional methods are limited to between XX - XX atoms. %Respectively. %(REF max atoms for DFT and max atoms for wavefunction methods) {either refer to the theory section to talk about which methods are limited in which ways, but make mention of why you have you cap your model to a size that fits the methods available to probe the chemistry.)
-
 %Ways that other people have chopped down big polymer models. 
 % incl cellulose
+
+Shukla \textit{et al.} truncated the polymer structure to a single-ring monomer for the purposes of investigating the alkaline hydrolysis behaviour of \ac{NC}\cite{Shukla2012}.
+The study analysed the \acs{sn2} nucleophilic attack at the nitrate-carbon site, leading to release of the nitrate ion in favour of a hydroxyl group (figure \ref{fig:C2_C3_C6}). Findings suggested that denitration via alkaline hydrolysis starting from a fully nitrated monomer followed a sequence of C3$\rightarrow$C2$\rightarrow$C6. 
+Later studies applying the same reaction to the dimer and trimer found that the sequence instead followed C3$\rightarrow$C6$\rightarrow$C2 for the larger systems \cite{Shukla2012a}. %The sequence of nitration and denitration is explored in \ref{chapterlabel4}
+Comparisons between the monomer, dimer and trimer structures found the dimeric structure to be the minimum repeat unit encompassing all bonding and non-bonding interactions, and the smallest acceptable model to accurately describe the denitration behaviour of the polymer. This can be attributed to the 1$\rightarrow$4 glycosidic linkage between each of the $\beta$-D-glucopyranose rings. The angle of the glycosidic oxygen leads to an alternating, non-planar orientation for each additional ring added (figure \ref{fig:models}). The unique interactions between the alternate rings are represented in the dimer and trimer, but lacking in the monomer. 
+
 \begin{figure}[htp]
 \centering
 %\includegraphics[width=\linewidth]{NC}
@@ -83,16 +94,11 @@ When probing the details of individual chemical reactions using computational me
 \label{fig:C2_C3_C6}
 \end{figure}
 
-Shukla \textit{et al.} truncated the polymer structure to a single-ring monomer for the purposes of investigating the alkaline hydrolysis behaviour of \ac{NC}\cite{Shukla2012}.
-The study analysed the \acs{sn2} nucleophilic attack at the nitrate-carbon site, leading to release of the nitrate ion in favour of a hydroxyl group (figure \ref{fig:C2_C3_C6}). Findings suggested that denitration via alkaline hydrolysis starting from a fully nitrated monomer followed a sequence of C3$\rightarrow$C2$\rightarrow$C6. 
-Later studies applying the same reaction to the dimer and trimer found that the sequence instead followed C3$\rightarrow$C6$\rightarrow$C2\cite{Shukla2012a} for the larger systems. %The sequence of nitration and denitration is explored in \ref{chapterlabel4}
-Comparisons between the monomer, dimer and trimer found the dimeric structure to be the minimum repeat unit encompassing all bonding and non-bonding interactions, and the smallest acceptable model to accurately demonstrate the denitration behaviour of the polymer. This can be attributed to the 1$\rightarrow$4 glycosidic linkage between each of the $\beta$-D-glucopyranose rings. The angle of the glycosidic oxygen leads to an alternating, non-planar orientation for each additional ring added (figure \ref{fig:models}). The unique interactions between the alternate rings are represented in the dimer and trimer, but lacking in the monomer. 
-
 %The addition of a second ring generates further interactions between the rings within a dimer, than if the chain consisted of solely monomer repeat units. 
 %for implementation in molecular dynamics simulations, this is also observed. 
-
+%
 %FIG of dimer, with interactions highlighted, vs monomer
-
+%
 %*A line segway-ing into the reaction coordinate of reactions, etc. May be easiest to talk about Shukla's work further (or Kuklja's?).*
 %
 %%what else did he/ others find  / use to make the polymer model workable?
@@ -101,13 +107,8 @@ Comparisons between the monomer, dimer and trimer found the dimeric structure to
 %when considering degrees of freedom in the \ac{PES} in the search for transition state maxima, %\ac{TS}
 %%of reaction co-ordinates
 %finite computational resources restrict the ... it may be that the dimer is not the most appropriate for further studies.*
-
-
-In this chapter, the electronic properties of the monomer, dimer and trimer truncations of the \ac{NC} polymer are compared. The most suitable model for subsequent investigations is determined with consideration for accurate representation of the chemistry of the full system, alongside conservation of computational effort% during the exploratory phase of the study
-. Hydroxyl  (-OH) and methoxy  (-OCH\textsubscript{3}) capping groups are tested at chain ends in the C1, C4 positions, to explore their interaction with the glucopyranose rings and effect on the distribution of charge on the chosen model.
-
-%change to scale=0.4
-\begin{figure}[ht]
+%Make this constructive wrt to how I built up the trimer from the monomer and dimer
+\begin{figure}[htp]
   \begin{subfigure}[b]{\linewidth}
   \centering
 	\caption{Monomer with \acs{DOS}=3. }
@@ -137,10 +138,11 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
   \label{fig:models}
 \end{figure}
  
+In this chapter, the electronic properties of the monomer, dimer and trimer truncations of the \ac{NC} polymer are compared. The most suitable model for subsequent investigations is determined with consideration for accurate representation of the chemistry of the full system, alongside conservation of computational effort% during the exploratory phase of the study
+. Hydroxyl  (-OH) and methoxy  (-OCH\textsubscript{3}) capping groups are tested at chain ends in the C1, C4 positions, to explore their interaction with the glucopyranose rings and effect on the distribution of charge on the chosen model.
 %Comparisons between the monomer, dimer and trimer found %desingated
 %the dimeric structure to be the minimum model required to accurately represent the chemical behaviour of NC in the alkaline hydrolysis pathway. 
-
- 
+% 
  %Maybe for the lit review:
  %The monomer model exhibited the C3 $\rightarrow$ C2 $\rightarrow$ C6 denitration order, contrary to the dimer and trimer order of C3 $\rightarrow$ C6 $\rightarrow$ C2. 
 %
@@ -156,22 +158,25 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
 %NOTE%% ESP surface was calculated using the Gaussian charges, not AIM. I'm not sure whether AIM ones are better, or whether the ones I used from G09 were simply based off Mulliken. I don't think so , but Milliken is poor, esp with diffuse functions (I also don't know why this is). So this might all be rubbish.
 %
 \subsection{Geometry optimisation}
-
 %The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). 
-Monomer, dimer and trimer structures were constructed with side chains as closely matching literature orientations as possible. Units were capped with either methoxy or hydroxyl groups, followed by \ac{QM} geometry optimisation.  For dimer and trimer structures, individual glucopyranose rings were appended to the first ring in a 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}). 
+Monomer, dimer and trimer structures were constructed with side chains as closely matching literature orientations as possible. %ref
+Units were capped with either methoxy or hydroxyl groups, followed by quantum mechanical %\ac{QM}
+quantum mechanical geometry optimisation. %Ref intro section of relevance?
+For dimer and trimer structures, individual glucopyranose rings were appended to the first ring in a 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}). 
 In some instances, it was found that the final optimised geometries varied according to the input starting geometry. In the cases of more than one possible converged geometry for the same species, the conformer with lowest absolute energy was chosen. 
 
-Select dimer and trimer molecules were pre-optimised with a \ac{MM} geometry optimisation using UFF or MMFF94 forcefields to determine whether any improvements could be achieved with respect to identification of the global minimum structure or reduction of \ac{QM} optimisation time. 
+Selected dimer and trimer molecules were pre-optimised with a \ac{MM} geometry optimisation using UFF or MMFF94 forcefields to determine whether any improvements could be achieved with respect to identification of the global minimum structure or reduction of \ac{QM} optimisation time. 
 %To see whether they helped i finding the global minimum easier / sped up optimisation.
 Following \ac{MM} pre-optimisation, the dimer cases did not show any noteable speed-up or increase in convergence success during optimisation, or any significant difference in the final optimised geometry. Further investigations did not implement \ac{MM} pre-optimisation for dimer geometries. 
 %also, conversion of file formats was timely and labour intensive, with some loss of bonding in formation that had to be restored later on - had to re-draw in nitrate bonds at times.
-Optimisation of trimer geometries posed more challenging, oftentimes with convergence failure. Pre-optimisation of the bi-methoxy capped trimer structure generated a reasonable starting input geometry for \ac{QM} optimisation.  This enabled convergence of a final structure, and reduced the number of steps required.
-However, it was found that a trimer input geometry derived from an already-optimised dimer structure, with duplication of the first ring and addition to the end of the chain, provided a lower energy conformer and more stable optimisation procedure. Thus, rather than construction of a new trimer geometry ''from scratch'', the trimer structures used in this study were constructed from extension of the fully optimised dimer structures.
+
+Optimisation of trimer geometries proved more challenging, oftentimes with convergence failure. Pre-optimisation of the bi-methoxy capped trimer structure generated a reasonable starting input geometry for \ac{QM} optimisation. This enabled convergence to a final structure, and reduced the number of steps required.
+However, it was found that a trimer input geometry derived from an already-optimised dimer structure, with duplication of the first ring and appending it to the end of the chain, provided a lower energy conformer and more stable optimisation procedure. Thus, rather than construction of a new trimer geometry ``from scratch'', the trimer structures used in the study were constructed from extension of the fully optimised dimer structures.
 
 \subsection{Labelling system}
 \label{sect:labellingsystem}
 
-The numbering scheme for structures is detailed in figure \ref{fig:labelling}. Counting from the oxygen of the first glucopyranose ring as atom 1 (O1), the numbering of carbons proceeds in a clockwise direction following the Cahn-Ingold-Prelog rules\cite{Cahn1966}. For simplicity, the nitrate groups are numbered 1 - 3, also moving clockwise around the ring. The oxygen linking the nitrate to the polysaccharide backbone is labelled (Ox). Oxygen on the terminal ends of the nitrate group are labelled (Ot). Identical oxygen labelling is applied across all nitrate groups. Labels are given from the largest structure to the smallest: [ring; moiety; attached atoms]. For example, a terminal oxygen (Ot) on the nitrate at the C6 position (N3) of the second ring (R2), would be referred to as R2N3Ot. When referring to only the nitrogen of this nitrate, the label would be R2N3. For the carbon at the C6 position on the second ring, the label would be R2C6.
+The numbering scheme for structures is detailed in figure \ref{fig:labelling}. Counting from the oxygen of the first glucopyranose ring as atom 1 (O1), the numbering of carbons proceeds in a clockwise direction following the Cahn-Ingold-Prelog rules\cite{Cahn1966}, whereby heavier atoms have greater priority. For simplicity, the nitrate groups are numbered 1 - 3, also moving clockwise around the ring. The oxygen linking the nitrate to the polysaccharide backbone is labelled (Ox). Oxygen on the terminal ends of the nitrate group are labelled (Ot). Identical oxygen labelling is applied across all nitrate groups. Labels are given from the largest structure to the smallest: [ring; substituent group; component atoms]. For example, a terminal oxygen (Ot) on the nitrate at the C6 position (N3) of the second ring (R2), would be referred to as R2N3Ot. When referring to only the nitrogen of this nitrate, the label would be R2N3. For the carbon at the C6 position on the second ring, the label would be R2C6.
 
 % Change the colour from Magenta to green, or something?
 \begin{figure}[t]
