@@ -1,7 +1,8 @@
-\chapter{Building the model}
+\chapter{Model building and validation}
 \label{chapterlabel3}
 \graphicspath{ {./R_chap_1_pics/} }
-
+%Emilias corrections implemented up to pg 6. 
+%Stll yet to inorporate Grahams?
 \section{Introduction}%%%%%%%%%%%%%%%%%%%%%%% 4 pages%%%%%%%%%%%%%%%
 %Why can't we model the whole polymer / why do we need to truncate?
 %What is contained in this chapter? What question is posed?
@@ -17,7 +18,7 @@ The generation of these products can be attributed to the range of susceptible a
 \begin{figure}[b]
 \centering
 \includegraphics[width=0.5\linewidth]{HBEA-P15-0021-crop}
-\caption{Markings on the side of a charge bag, with a cartridge containing $\acs{NC}$ propellant. The shelf-life of the product can be calculated from its manufacture date, with consideration of storage conditions.}
+\caption[A cartridge containing $\acs{NC}$ propellant.]{Markings on the side of a charge bag, with a cartridge containing $\acs{NC}$ propellant. The shelf-life of the product can be calculated from its manufacture date, with consideration of storage conditions. Image from a pamphlet  issued at the end of the Second World War, to enable safe identification of German ammunition \cite{WarOffice24May19452015}. }
 \label{fig:cartridge}
 \end{figure}
 
@@ -81,17 +82,22 @@ When probing the details of individual chemical reactions using computational me
 %Ways that other people have chopped down big polymer models. 
 % incl cellulose
 
-Shukla \textit{et al.} truncated the polymer structure to a single-ring monomer for the purposes of investigating the alkaline hydrolysis behaviour of \ac{NC}\cite{Shukla2012}.
-The study analysed the \acs{sn2} nucleophilic attack at the nitrate-carbon site, leading to release of the nitrate ion in favour of a hydroxyl group (figure \ref{fig:C2_C3_C6}). Findings suggested that denitration via alkaline hydrolysis starting from a fully nitrated monomer followed a sequence of C3$\rightarrow$C2$\rightarrow$C6. 
+Shukla \textit{et al.} truncated the polymer structure to a single-ring monomer for the purposes of investigating the alkaline hydrolysis behaviour of \ac{NC} using \ac{DFT} \cite{Shukla2012}.
+The study analysed the \acs{sn2} nucleophilic attack at the nitrate-carbon site, leading to release of the nitrate ion in favour of a hydroxyl group (figure \ref{fig:C2_C3_C6}). Findings suggested that when starting from a fully nitrated monomer, denitration \textit{via} alkaline hydrolysis followed a sequence starting from carbon 3 (C3), followed by the carbon 2 (C2) and the carbon 6 (C6) site. 
+%C3$\rightarrow$C2$\rightarrow$C6. 
 Later studies applying the same reaction to the dimer and trimer found that the sequence instead followed C3$\rightarrow$C6$\rightarrow$C2 for the larger systems \cite{Shukla2012a}. %The sequence of nitration and denitration is explored in \ref{chapterlabel4}
-Comparisons between the monomer, dimer and trimer structures found the dimeric structure to be the minimum repeat unit encompassing all bonding and non-bonding interactions, and the smallest acceptable model to accurately describe the denitration behaviour of the polymer. This can be attributed to the 1$\rightarrow$4 glycosidic linkage between each of the $\beta$-D-glucopyranose rings. The angle of the glycosidic oxygen leads to an alternating, non-planar orientation for each additional ring added (figure \ref{fig:models}). The unique interactions between the alternate rings are represented in the dimer and trimer, but lacking in the monomer. 
+Comparisons between the monomer, dimer and trimer structures found the dimeric structure to be the smallest repeat unit encompassing all bonding and non-bonding interactions, and the minimum model that should be adopted in order to accurately describe the denitration behaviour of the polymer. This can be attributed to the 1$\rightarrow$4 glycosidic linkage between each of the $\beta$-D-glucopyranose rings. The angle of the glycosidic oxygen leads to an alternating, non-planar orientation for each additional ring added (figure \ref{fig:models}). The unique interactions between the alternate rings are represented in the dimer and trimer, but lacking in the monomer. 
 
 \begin{figure}[b]
 \centering
 %\includegraphics[width=\linewidth]{NC}
 %\includegraphics[width=\linewidth]{Shukla_11224_2012_9977_Fig1_HTML}
-\includegraphics[scale=0.4]{Shukla_11224_2012_9977_Fig1_HTML}
-\caption{\textbf{a)} Numbering scheme of 2,3,6-trinitro-$\beta$-D-glucopyranose, as monomer of \ac{NC}. \textbf{b)} Transition state showing S\textsubscript{N}2 (opposite side) attack by OH\textsuperscript{-} and \textbf{c)} angular attack (same side) by OH\textsuperscript{-} during the addition–elimination process at the C2 site of \ac{NC} from the work of Shukla \textit{et al.}}
+\includegraphics[scale=0.4]{Shukla_11224_2012_9977_Fig1_HTML}\quad
+  
+  {\textcolor{red}{\CIRCLE} oxygen \quad \textcolor{blue}{\CIRCLE} nitrogen \quad  \textcolor{gray}{\CIRCLE} carbon \quad $\bigcirc$ hydrogen}
+\caption{\textbf{a)} Numbering scheme of 2,3,6-trinitro-$\beta$-D-glucopyranose, as monomer of \ac{NC}. 
+			\textbf{b)} Transition state showing S\textsubscript{N}2 (opposite side) attack by OH\textsuperscript{-} and 
+			\textbf{c)} angular attack (same side) by OH\textsuperscript{-} during the addition–elimination process at the C2 site of \ac{NC} from the work of Shukla \textit{et al.} The solid arrow indicates nucleophilic attack and the dashed arrow the leaving group.}
 %REF Theoretical investigation of reaction mechanisms of alkaline hydrolysis of 2,3,6-trinitro-$\beta$-d-glucopyranose as a monomer of nitrocellulose
 \label{fig:C2_C3_C6}
 \end{figure}
