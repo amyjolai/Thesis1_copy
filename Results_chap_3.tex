@@ -1,21 +1,34 @@
-\chapter{Mechanisms of denitration}
+\chapter{Mechanisms of denitration under ambient conditions}
 \label{chapterlabel5}
 \graphicspath{ {./R_chap_3_pics/} }
 
 \section{Introduction}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \label{chapter5:intro}
+\subsection{Thermolytic reactions}
+
 The first stage of thermolytic decomposition for nitrate esters is generally agreed to be homolytic fission of the O-N bond linking the nitrate to the alkyl chain, leading to the loss of \ce{^{.}NO2} (equation \ref{equ:homofiss}) \cite{Oxley2003,Foltz2009,Shepodd1997}. %many refs
 Though nitrate homolysis is an endothermic reaction, the weak O-N bond has a typical dissociation enthalpy of 42 kcal mol\textsuperscript{-1} and is easily cleaved when exposed to elevated temperatures, UV light or impact. %REF UV \cite{Zaki2016}
 Whilst the thermolytic degradation of energetic materials has been widely studied experimentally, the ambient, slow ageing mechanisms are less well documented. %REF
 Low-temperature decomposition routes are influenced by many factors over a protracted lifetime, and in practical use, materials are usually subject to evolving environmental conditions. %Changes in pressure, humidity, stress and temperature cycles induce changes in the degradation patterns of energetic materials to a varying degree. %ref?
-External changes in pressure, humidity, stress and temperature cycling induce variation in the degradation patterns of energetic materials. %ref?
+External changes in pressure, humidity, stress and temperature cycling introduce variation in the degradation patterns of energetic materials. %ref?
 %The array of products produced as a result of slow ageing may therefore vary greatly from those obtained from thermolysis; a general observation is that the number of different species is far smaller. %REF
-
 The presence of moisture has been observed to lower the activation energy and accelerate decomposition %of energetic materials 
 \cite{Foltz2009}.  %PETN
-Internal factors including impurities, residual solvent, and crystal growth within the bulk, also alter decomposition behaviour.  
-%experimental studies
-%computational studies
+Internal factors including impurities, residual solvent, and crystal growth within the bulk, also alter decomposition behaviour. 
+
+\begin{scheme}[h]
+\begin{equation}
+\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 }
+\label{equ:homofiss}
+\end{equation}
+%redraw this as a scheme with mechanism
+\begin{equation}
+%\ce{\textcolor{red}{\ce{H}}}
+\ce{R\textcolor{red}{\ce{H}}-ONO2 -> R=O + \ce{\textcolor{red}{\ce{H}}NO2 }}
+\label{equ:hno2_elim}
+\end{equation}
+\end{scheme}
+%
 \begin{figure}[h]
 %\begin{center}
 \begin{tabular}{ p{0.5\textwidth} p{0.5\textwidth} }
@@ -43,42 +56,29 @@ Internal factors including impurities, residual solvent, and crystal growth with
 \label{fig:PETN_react}
 %\end{center}
 \end{figure}
-
-It was found that the two dominating decomposition reactions were homolysis of the nitrate ester \ce{O-NO2} bond (equation \ref{equ:homofiss}) and intramolecular elimination of \ce{HNO2} (equation \ref{equ:hno2_elim}).
 %
-The degradation of nitrate esters at temperatures over 100\degree C is primarily \textit{via} thermolytic processes, whilst under 100\degree C, decomposition is thought to largely be the result of hydrolysis \cite{Moniruzzaman2014}. 
+The degradation of nitrate esters at temperatures over 100\degree C is primarily \textit{via} thermolytic processes, whilst under 100\degree C, decomposition is largely thought to be the result of hydrolysis \cite{Moniruzzaman2014}. 
 Tsyshevsky \textit{et al.} studied the intramolecular reactions leading to denitration in \acf{PETN} in both the vacuum and the bulk crystal \cite{Tsyshevsky2013} (figure \ref{fig:PETN_react}). 
 %
-\begin{scheme}[h]
-\begin{equation}
-\ce{R-ONO2 -> R-O^{.} + ^{.}NO2 }
-\label{equ:homofiss}
-\end{equation}
-%redraw this as a scheme with mechanism
-\begin{equation}
-%\ce{\textcolor{red}{\ce{H}}}
-\ce{R\textcolor{red}{\ce{H}}-ONO2 -> R=O + \ce{\textcolor{red}{\ce{H}}NO2 }}
-\label{equ:hno2_elim}
-\end{equation}
-\end{scheme}
-%
-Seven mechanisms for the removal of \ce{NO2} were explored, corresponding to the labels in figure \ref{fig:PETN_react}:
+Seven mechanisms for the removal of \ce{NO2} were explored. Corresponding to the labels in figure \ref{fig:PETN_react}:
 % (1)  (2) (3) (4) (5) (6) 						 (7)
-(1) homolytic cleavage of the \ce{O-NO2} bond, (2) the elimination of nitrous acid (\ce{HNO2}), which is usually considered a competing reaction to homolytic fission, (3) the nitro-peroxynitrite rearrangement (\ce{O-ONO}), (4) \textgamma-attack of the terminating nitrate oxygen atom and the bridging nitrate oxygen at their relative \textgamma-carbon sites, (5) the homolytic \ce{C-O} bond cleavage, (6) and (7) two variations of the homolytic \ce{C-C} bond cleavage. 
+(1) homolytic cleavage of the \ce{O-NO2} bond, (2) the elimination of nitrous acid (\ce{HNO2}) which is usually considered a competing reaction to homolytic fission, (3) the nitro-peroxynitrite rearrangement (\ce{O-ONO}), (4) \textgamma-attack of the terminating nitrate oxygen atom and the bridging nitrate oxygen at their relative \textgamma-carbon sites, (5) the homolytic \ce{C-O} bond cleavage, (6) and (7) two variations of the homolytic \ce{C-C} bond cleavage. 
 
+It was found that the two most significant decomposition reactions were homolysis of the nitrate ester \ce{O-NO2} bond (equation \ref{equ:homofiss}) and intramolecular elimination of \ce{HNO2} (equation \ref{equ:hno2_elim}).
 Whilst elimination of \ce{HNO2} was found to be the most energetically favourable denitration pathway, homolytic fission dominated preliminary decomposition steps due to the lower activation barrier and faster rate of reaction. It was suggested that global decomposition processes were determined by the interplay between these two mechanisms. Initial homolysis facilitated wide-spread denitration, complemented by exothermic \ce{HNO2} elimination, promoting self-heating of the system and further bond dissociations. 
-The presence of \ce{^{.}NO2} and \ce{HNO2} were previously linked to the autocatalytic rates observed for later-stage decomposition of nitrate esters \cite{Rodger1963,Lindblom2002,Volltrauer1981}, though some studies solely attribute it to the presence of acids \cite{Edge1990,FernandezdelaOssa2011,Baker1952,Binke1999}. %CHECK THESE ARE FACT
-Other studies yet also implicate the action of \ce{^{.}NO} in addition to \ce{^{.}NO2}, \ce{HNO2} and \ce{HNO3} \cite{Zayed2012,Trache2018}. 
+The presence of \ce{^{.}NO2} and \ce{HNO2} have previously been linked to the autocatalytic rates observed for later-stage decomposition of nitrate esters \cite{Rodger1963,Lindblom2002,Volltrauer1981}, though some studies solely attribute it to the presence of acids \cite{Edge1990,FernandezdelaOssa2011,Baker1952,Binke1999}. %CHECK THESE ARE FACT
+Other studies also implicate the action of \ce{^{.}NO} and \ce{HNO3}, in addition to \ce{^{.}NO2} and \ce{HNO2} \cite{Zayed2012,Trache2018}. 
 %avanced stage decomp? Rodger actualy assumes NO2 is confirmed for PETN
 % The presence of acid has been linked to autocatalytic rates of degradation during later stages of \ac{NC} degradation\cite{Edge1990,FernandezdelaOssa2011,Baker1952,Binke1999}. 
-Inspection of the products that are generated from initial processes, with observation of the species permeating through to later stages, will shed light on the most likely contributors to the autocatalysis. 
+Inspection of these products generated from initial processes, with observation of the species permeating through to later stages, will shed light on the most likely contributors to  autocatalysis. 
 %However, from these initial processes it is not possible to determine which is the species resposible % (this topic is further discussed in the next chapter.) %\ref{chapterlabel6}.) %REF
+\subsection{Acid hydrolysis reactions}
 
 Spent acids remain in the \ac{NC} matrix following synthesis even with thorough washing procedures. %but how much acid? What concentrations? %REF
-Acids are further generated via the subsequent reactions of \ce{^{.}NO2} following homolysis. %, Any residual sulfuric acid from the nitration process catalyses the protonation of \ce{HNO3}, thereby the formation of nitronium (\ce{NO2+}) and hydronium (\ce{H3O}). 
-The acidic species proceed to react with other moieties in the system, such as unsubstituted alcohol side chains on the polysaccharide, or small molecules free in the bulk. 
+Additional acidic species are released via the subsequent reactions of \ce{^{.}NO2} following homolysis. %, Any residual sulfuric acid from the nitration process catalyses the protonation of \ce{HNO3}, thereby the formation of nitronium (\ce{NO2+}) and hydronium (\ce{H3O}). 
+These acids proceed to react with other moieties in the system, such as unsubstituted alcohol side chains on the polysaccharide, or small molecules free in the bulk. 
 
-When exploring the interaction of nitroglycol and nitroglycerin in acid solution, Camera proposed a protonation-denitration scheme whereby initial protonation at the nitrate is rapid, but the subsequent release of the nitronium ion was slow and rate determining (scheme \ref{sch:cameraschema}).
+When exploring the interaction of nitroglycol and nitroglycerin in acid solution, Camera proposed a protonation-denitration scheme (scheme \ref{sch:cameraschema}) whereby initial protonation at the nitrate is rapid (equation \ref{equ:cam_1}), but the subsequent release of the nitronium ion was slow and rate determining (equation \ref{equ:cam_2}).
 \begin{scheme}[htp!]
 \centering
 %\textbf{Hydrolysis scheme for ethyl nitrate}
@@ -89,11 +89,22 @@ When exploring the interaction of nitroglycol and nitroglycerin in acid solution
 %\end{block_indent}
 \begin{equation}
 \ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+}% \\
+\label{equ:cam_1}
 \end{equation}
+%
 \begin{equation}
 \ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2OH + NO2+} %\\
-\label{equ:camera_first}
+\label{equ:cam_2}
 \end{equation}
+%%Using generic R groups instead
+%\begin{equation}
+%\ce{RONO2 + H+ <=>[\text{fast}] RONO2H+}% \\
+%\label{equ:cam_1}
+%\end{equation}
+%\begin{equation}
+%\ce{RONO2H+ <=>[\text{slow}] ROH + NO2+} %\\
+%\label{equ:cam_2}
+%\end{equation}
 %\begin{equation}
 %\ce{NO2+ + 2H2O <=>[\text{fast}] HNO3 + H3O+} \\
 %\end{equation}
@@ -101,11 +112,13 @@ When exploring the interaction of nitroglycol and nitroglycerin in acid solution
 \label{sch:cameraschema}
 \end{scheme}
 
-\ac{NC} in storage is kept wetted with solvents to prevent self-ignition. Material with 12.6\acs{pN} or lower must be stored in 25\% water by mass, or a controlled mixture of solvents, stabilisers and plasticisers. % Something about the surfaces exposed to water? Faster NO'2 release or something?
+\ac{NC} in storage is kept wetted with solvents to prevent self-ignition. Material with 12.6\acs{pN} or lower must be stored in 25\% water by mass, or in a controlled mixture of solvents, stabilisers and plasticisers. The material is therefore always exposed to water, with the fast-exchange of protons expected at inter-facial surfaces. % Something about the surfaces exposed to water? Faster NO'2 release or something?
 %Fast exchange is expected for groups exposed to water within the bulk, with the dissociation of \ce{NO2+} to generate the alcohol as the rate determining step. %ref back to lit review, about having to store it in water for stability.
+%more info on why the second step may be slow / what we expect to see?
 In the study of organonitrates and organosulfates %in the acid phase 
-generated from isoprene in the aerosol phase,% as secondary organic aerosol, %\ac{SOA}, 
+generated from isoprene in the aerosol phase, % as secondary organic aerosol, %\ac{SOA}, 
 Hu \textit{et al.} found that primary and secondary nitrates were resilient to hydrolysis for pH $>$ 0, whilst tertiary nitrates underwent hydrolytic nucleophilic substitution easily, reacting with water to form alcohols \cite{Hu2011}. %and sulfate to form alcohols and organosulfates
+
 \begin{scheme}[htp!]
 %\begin{figure}
 \centering
@@ -113,19 +126,26 @@ Hu \textit{et al.} found that primary and secondary nitrates were resilient to h
 %\end{figure}
 \caption[Hydrolysis of a tertiary nitrate, originally derived from the reaction of isoprene in the aerosol phase.]{Hydrolysis of a tertiary nitrate derived from the reaction of isoprene in the aerosol phase, from the work of Hu \textit{et al.} \cite{Hu2011}.}
 \end{scheme}
-In tertiary nitrates, the carbon is fully substituted with no attached hydrogens. This group is usually sterically hindered and stabilising to carbocations, condition on the other substituents. 
+
+In tertiary nitrates, the carbon is fully substituted with no attached hydrogens. This group is usually sterically hindered and stabilising to carbocations, condition on the electron donation ability of the substituents remaining after nitrate removal. 
 If formation of a carbocation intermediate is involved in the hydrolysis mechanism, this may explain why the tertiary nitrates exhibited highly efficient denitration, even under neutral conditions.
 
-Though no specific mechanistic detail is given, the action of a protonated transition state during hydrolysis is alluded to by Hu \textit{et al.}, through the contrast between the rate of acid-catalysed and neutral hydrolysis reactions. Neutral hydrolysis of the tertiary nitrates occured rapidly, but hydrolysis only occurred for primary and secondary nitrates under strongly acid catalysing conditions at much lower rate.   % Adjacent OH groups did not slow down the acid cat hydrolysis of nitrates, but they did for the sulfates. OH groups slowed down hydrolysis for the primary and secondary nitrates.
+Though no specific mechanistic detail is given, the action of a protonated transition state during hydrolysis is alluded to by Hu \textit{et al.}, through the contrast between the rate of acid-catalysed and neutral hydrolysis reactions. Neutral hydrolysis of the tertiary nitrates occured rapidly, but hydrolysis only occurred for primary and secondary nitrates under strongly acid catalysing conditions, and at a much slower rate.   % Adjacent OH groups did not slow down the acid cat hydrolysis of nitrates, but they did for the sulfates. OH groups slowed down hydrolysis for the primary and secondary nitrates.
 % in Neutral hydrolysis for tertiary nitrates, more OH meant slowdown in rate of hydrolysis. This primary and secondary nitrates did not experinece this. 
-It was found that the presence of adjacent OH groups hampered the rate of hydrolyis for some aerosol dispersed organonitrates. In the neutral hydrolysis of tertiary nitrates, increasing the number of adjacent \ce{OH} groups lead to protracted hydrolysis lifetimes.
-Interestingly, the retardation effect of adjacent \ce{OH} groups was not observed for the the acid catalysed cases. Hu proposed that this could be due to the interaction of \ce{OH} with the transition state of the neutral hydrolysis system, compared to the protonated transition state of the acid catalysed system, impeding the reaction only in the former case. % The neutral case happens much faster than the acid case - could it be that by having an OH next door, it is imparting some ''acid-like'' features to the reaction of the neutral process?
+%It was found that t
+Additionally, the presence of adjacent OH groups hampered the rate of hydrolysis for some aerosol dispersed organonitrates. In the neutral hydrolysis of tertiary nitrates, increasing the number of adjacent \ce{OH} groups lead to protracted hydrolysis lifetimes.
+Interestingly, the retardation effect of adjacent \ce{OH} groups was not observed for the the acid catalysed cases. Hu proposed that this could be due to the interaction of \ce{OH} with the transition state of the neutral hydrolysis system, compared to the protonated transition state of the acid catalysed system, impeding the reaction only in the former case. 
+%Pretty weak sentence
+The cause of this effect is unclear, and without understanding of the %transition states 
+mechanisms involved, it is difficult to explain. % The neutral case happens much faster than the acid case - could it be that by having an OH next door, it is imparting some ''acid-like'' features to the reaction of the neutral process? %Need a bit more explanation here
+
 There is evidence that nitration and denitration of nitrate esters is also influenced by the presence of nitrate groups at neighbouring positions. Matveev \textit{et al.} demonstrated that for poly-nitroesters the rate of liquid-phase decomposition did not increase linearly with number of nitrate reaction centres. It was found to mainly dependend on individual structures (table \ref{tab:reactions}) \cite{Matveev2003}.
 % it really looks like the more stabilising the substituted group is - with respect to being able to  sustain a 
-\begin{table}[b]
+\begin{table}[t]
 \begin{center}
-\caption[Comparison of rate constants of decomposition for various polynitrate esters at 140\degree C.]{Comparison of rate constants of decomposition for various polynitrate esters at 140\degree C. Collated from literature sources by Matveev \textit{et al.}\cite{Matveev2003}.
-$\Delta$T is the decomposition temperature range,  $E$ is the experimental activation barrier for decomposition, log$A$ is the pre-exponential factor, $T_{c}$ is the combustion temperature, $k$\textsubscript{expt} is the rate constant for decomposition.
+\caption[Comparison of rate constants of decomposition for various polynitrate esters at 140\degree C.]{Comparison of rate constants of decomposition for various polynitrate esters at 140\degree C.
+$\Delta$T is the decomposition temperature range,  $E$ is the experimental activation barrier for decomposition, log$A$ is the pre-exponential factor, $T_{c}$ is the combustion temperature, $k$\textsubscript{expt} is the rate constant for decomposition. 
+Collated from literature sources by Matveev \textit{et al.}\cite{Matveev2003}.
 }
 %\begin{tabular}{ l c {S[table-format = 2.1]} {S[table-format = 2.1]} {S[table-format = 2.1]}} 
 \begin{tabular}{p{15em} c c c c} 
@@ -149,29 +169,41 @@ $\Delta$T is the decomposition temperature range,  $E$ is the experimental activ
 \label{tab:reactions}
 \end{center}
 \end{table}
-
-It was suggested that the trend in reactivity could be partially explained by the inductive effect of the nitro groups \cite{Oxley2003}. %actually he talks about nitro (NO2), not nitrate...
+%
+%It was suggested that 
+The trend in reactivity could be partially explained by the inductive effect of the nitro groups \cite{Oxley2003}. %actually he talks about nitro (NO2), not nitrate...
 The inductive effect arises when a difference in the electronegativity between atoms connected by a $\sigma$ bond leads to a polarisation, or permanent dipole, in the bond. Electron donating groups % are of lower electronegativity than  
-increase the $\delta$- partial charge on neighbouring atoms through the release of electrons, whilst electron withdrawing groups pull electron density away from neighbouring atoms generating a $\delta$+ charge on connected atoms. However, the $\pi$ donation by lone pairs on the oxygen and nitrogen plays a significant role in increasing electron density of neighbouring atoms, known as the resonance effect. 
+increase the $\delta^{-}$ partial charge on neighbouring atoms through the release of electrons, whilst electron withdrawing groups pull electron density away, %from neighbouring atoms
+generating a $\delta^{+}$ charge on connected atoms. 
+%However, the 
+%%$\pi$ donation by lone pairs on oxygen and nitrogen also plays a significant role in increasing electron density at adjacent atoms %, known as 
+%through the resonance effect. 
 %Nitrate ester moieties
-\ce{NO3} presents a stronger electron donating effect via $\pi$ donation than \ce{OH}. %, though both groups are activating.  OH is actually electron withdrawing for aliphaic alkyles?
-It would therefore be expected that both increase the rate of hydrolysis for nearby leaving groups.  %(electron donating via \pi donation) 
+The \ce{NO3} presents a stronger electron withdrawing effect than \ce{OH}, which is a donating group. %%The \ce{NO3} presents a stronger electron donating effect via $\pi$ donation than \ce{OH}. In the case of the saturated polysaccharide ring, the \ce{OH} does not exhibit any $\pi$ donation properties, and instead acts as a % though both groups are activating. %, in the context of the polysaccharide ring.  %ref?  
+%%OH is actually electron withdrawing for aliphatic alkyles? ``In organic chemistry, an alkyl substituent is an alkane missing one hydrogen.'' %ref? - SO maybe the OH is deactivating here. 
+%%It would therefore be expected that both increase the rate of hydrolysis for nearby leaving groups. %(electron donating via \pi donation) 
 The presence of an adjacent nitrate appears to facilitate denitration, whereas the presence of hydroxyl groups hinders this process, for neutral hydrolytic schemes. 
-This suggests that the proposed interaction of the hydroxyl group with the neutral transition state supersedes its resonance effect. 
+The resonance effect, arising from $\pi$ donation by lone pairs on oxygen and nitrogen is negligible %does not come into play 
+between substituents at different sites on the polysaccharide ring, as the ring is saturated. 
+%This suggests that the proposed interaction of the hydroxyl group with the neutral transition state supersedes its resonance effect. 
 %OH - tertiary, neutral hydro: slow down, - primary, secondary, acid cat hydro: no effect
-As a result, it is ambiguous whether any apparent rate increase due to the presence of adjacent nitrate groups arises as a result of the resonance effect of the nitrate, or whether it is solely due to the absence of a neighbouring hydroxyl. 
+%As a result, it is ambiguous whether any apparent rate increase due to the presence of adjacent nitrate groups arises as a result of the resonance effect of the nitrate, or whether it is solely due to the absence of a neighbouring hydroxyl. 
 
-The investigation by Hu \textit{et al.} exclusively focused on nitrates generated from an isoprene precursor, upon dispersion as an aerosol. The nitrate groups present in \ac{NC} are either of primary (C6) or secondary (C2, C3) structure, indicating that ambient hydrolysis is unlikely according to this scheme. However, solvent effects are expected to differ for condensed-phase reactions and aerosol phases. A greater build-up of acid concentration can be achieved in a closed, condensed system, and the lifetime of an aerosol is relatively short-lived when considering the timescale of slow ageing processes in \ac{NC}. Thus, the work of Hu \textit{et al.} does not provide a direct comparison for the \ac{NC} polymer but highlights the the possible contribution from both neutral and acid-catalysed hydrolysis routes and of increasing levels of substitution on the wider structure.%Though ordinarily it would be expected that reactions in aerosol would exhibit a rate increase due to a larger reaction surface, this may skew/increase the rate of specific reactions that do not rely on the diffusion of solvent or other species that move/migrate more slowly through the material. %Where is this even coming from. Some sort of literature proof please. 
+The investigation by Hu \textit{et al.} exclusively focused on nitrates generated from an isoprene precursor, upon dispersion as an aerosol. The nitrate groups present in \ac{NC} are either of primary (C6) or secondary (C2, C3) structure, indicating that ambient hydrolysis is unlikely according to this scheme. However, solvent effects are expected to differ for condensed-phase reactions and aerosol phases. A greater build-up of acid concentration can be achieved in a closed, condensed system, and the lifetime of an aerosol is relatively short-lived when considering the timescale of slow ageing processes in \ac{NC}. Thus, the work of Hu \textit{et al.} does not provide a direct comparison for the \ac{NC} polymer but highlights the possible contribution from both neutral and acid-catalysed hydrolysis routes, and effect of increasing levels of substitution on the wider structure.%Though ordinarily it would be expected that reactions in aerosol would exhibit a rate increase due to a larger reaction surface, this may skew/increase the rate of specific reactions that do not rely on the diffusion of solvent or other species that move/migrate more slowly through the material. %Where is this even coming from. Some sort of literature proof please. 
+
 
 In this section, the possible mechanisms for nitrate removal from the \ac{NC} backbone are explored. The homolytic fission and \ce{HNO2} elimination thermolytic processes suggested by Tsyshevsky will be compared to the acid hydrolysis scheme. %The energies of reactions will be compared, with derivation of the reaction rate where it is possible to isolate a transition state. 
-Though the relative rates of reaction were not compared, the extended timescales involved in ambient ageing imply that the dominating reactions correspond to those most thermodynamically favourable.
+Though the relative rates of reaction are not compared, the extended timescales involved in ambient ageing imply that the dominating reactions correspond to those most thermodynamically favourable.
 
 \section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Thermolytic reactions
-The energies of homolytic fission and elimination of \ce{HNO2} were calculated for PETN, as a test system before extension to the \ac{NC} monomer. The reaction energies were calculated according to equations \ref{equ:homofiss} and \ref{equ:hno2_elim} to reproduce the work of Tsyshevsky \textit{et al.}; the literature geometries of PETN and its derivatives were obtained from the authors. A single point energy and frequency calculation were performed on each of the relevant structures to determine the reaction energies; no geometry optimisation was performed on the given structures except for in the case the \ce{^{.}NO2} molecule, where the geometry was not given.
+The energies of homolytic fission and elimination of \ce{HNO2} were calculated for PETN, as a test system before extension to the \ac{NC} monomer. The reaction energies were calculated according to equations \ref{equ:homofiss} and \ref{equ:hno2_elim} to reproduce the work of Tsyshevsky \textit{et al.}; the published, geometries of PETN and its derivatives were obtained from the authors. A single point energy and frequency calculation were performed on each of the species to determine the reaction energies; no geometry optimisation was performed on the given structures except for in the case the \ce{^{.}NO2} molecule, where the geometry was not given.
 
 The intramolecular reactions of the \ac{NC} monomer were modelled according to scheme \ref{sch:intra_NC}. % \ref{fig:homofiss_NC} and \ref{fig:elim_NC}.
-\begin{scheme}[htp!]
+Rigid and relaxed \ac{PES} scans were attempted in order to locate transition states for both reactions for the \ac{NC} monomer. 
+Where the scans were unable to identify a valid transition state geometry, guess transition state geometries were constructed and optimised. 
+
+\begin{scheme}[h]
 \centering
 %\begin{figure} Change to C2 instead of C3 in the diagrams
   	\begin{subfigure}[b]{0.75\linewidth}
@@ -191,16 +223,14 @@ The intramolecular reactions of the \ac{NC} monomer were modelled according to s
 \caption{The proposed intramolecular reactions for the initial denitration step during \ac{NC} degradation.}	
 \label{sch:intra_NC}
 \end{scheme}
-Rigid and relaxed \ac{PES} scans were attempted in order to locate transition states for both reactions for the \ac{NC} monomer. 
-Where the scans were unable to identify a valid transition state geometry, guess transition state geometries were constructed and optimised. 
 
 The possible protonation sites for the \ac{NC} monomer were explored by placing a proton at each of the different oxygen sites surrounding the nitrate group. The structures were then geometry optimised and energies of protonation were compared. \ce{H3O+} was modelled as the donating species; as \ac{NC} is usually stored wetted in water, the hydronium ion is the most likely source of protons. %ref precentage water i storage? Pop it in lit review
-It is also possible that the proton is donated by other acidic species in the system, particularly \ce{HNO2} or \ce{HNO3}. This is more likely at later stages of degradation when a higher concentration of acid has been generated by secondary reactions.%REF 
-The effects of tunneling were not accounted for. % Explain the caveats of this. 
+It is also possible that the proton is donated by other acidic species in the system, particularly \ce{HNO2} or \ce{HNO3}. This is more likely at later stages of degradation when a higher concentration of acid has been generated by secondary reactions. %REF 
+% Explain the caveats of this. 
 %pKA H3O+ –1.74, HNO3 –1.3, HNO2 3.3. All weak acids, but H3O+ is most acidic. 
 
 \subsection{Computational details} %%%%%%%%%%%%%%%%%%%%%%%%
-All geometry optimisation, thermochemistry calculations and \ac{PES} scans were performed in \ac{G09}. 
+All geometry optimisations, thermochemistry calculations and \ac{PES} scans were performed in \ac{G09}. 
 Geometry optimisation and thermal calculations were to the level of 6-31+G(2df,p). \ac{NC} monomer structures were optimised using \ac{wb97xd}, \ac{B3LYP} and \ac{MP2}. 
 $\Delta G$ values were obtained by the difference between the thermally corrected free energies of products and reactants. 
 Zero-point corrected energies \acs{ZPE} were determined by addition of individual \ac{ZPE} to the free energy:
@@ -211,13 +241,14 @@ Zero-point corrected energies \acs{ZPE} were determined by addition of individua
 \end{equation}
 %IRC step ,maxpoints=256,maxcycle=256 , stepsize the default of  0.1 Bohr
 \ac{PES} scans were performed to the level of \ac{wb97xd}/6-31+g(d), or using unrestricted \ac{wb97xd}, in the case of \ce{O-^{.}NO2} dissociation. 
-Rigid scans were carried out by fixing bond lengths, angles and dihedral values as constants. Only the variable of interest was allowed to change, %evolved
-with the exception of  relaxation of other specified coordinates required for accommodation of the new geometry, following each step of the scan.  %(semi-rigid scans). 
+Rigid scans were carried out by fixing bond lengths, angles and dihedral values as constants. 
+Only the variable of interest was allowed to change. %evolved
+This was with the exception of relaxation of other specified coordinates required for accommodation of the new geometry, following each step of the scan.  %(semi-rigid scans). 
 For example, in the homolysis of the nitrate \ce{O-NO2} bond, as the \ce{NO2} group departed, the internal \ce{O\textendash N\textendash O} angle was also allowed to relax, in addition to the angle of the departing \ce{NO2} with respect to the remainder of the molecule.
-In two-dimensional scans, two variables are scanned. For the same reaction, the elongation of a the \ce{O-NO2} bond was scanned with simultaneous approach of a proton, to monitor the effect of protonation for the same reaction. %In this case, both the internal angle within  \ce{O-NO2} and the angle was allowed to relax. 
-Relaxed scans were performed in Gaussian using the \''modredundant\'' function, whereby the whole structure was geometry optimised after each step of the scan. 
+In two-dimensional scans, two variables were scanned simultaneously. For the same reaction, the elongation of a the \ce{O-NO2} bond was scanned with simultaneous approach of a proton, to monitor the effect of protonation for the same reaction. %In this case, both the internal angle within  \ce{O-NO2} and the angle was allowed to relax. 
+Relaxed scans were performed in Gaussian using the ``modredundant'' function, whereby the whole structure was geometry optimised after each step of the scan. 
 Scans were performed with step size of 0.1 \AA. The number of steps varied with the property investigated, though the majority of the phenomena were observed within 20 steps (2 \AA).
-Scans were attempted in vacuum, and for some cases, \ac{PCM} implicit solvent \cite{Miertus1981}.
+Scans were attempted in vacuum, and for the protonation cases, implicit solvent using \ac{PCM} \cite{Miertus1981}.
 %Following each successful scan, a low-level frequency calculation was performed on the obtained transition state. If singular imaginary vibration matching the key bond transformation for the reaction step persisted, then a transition state search was performed using this geometry.
 %Where possible, the intermediate “product” geometry obtained from the successful scan was also optimised to B3LYP/6-311+G(d,p) for use in transition state searching using QST2 and QST3 methods.
 
@@ -239,6 +270,7 @@ Reaction				& $\Delta G_{r}$	&$\Delta G_{r}^{ZPE}$ 	& $\Delta H_{r}$	&	${E_{a}}$
 \toprule
 PETN					& \multicolumn{5}{l}{}\\
 \midrule
+% Do I double these up??
 \ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	21.50946  $^{b}$ 	&16.55804 	 \\
 						& ${(41.2)}^{a}$	 &	${  (35.8)}$ 	&					&${(41.2)}$ 	& ${(35.8)}$ \\
 %\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	\textendash 	& \textendash 	 \\
@@ -333,7 +365,8 @@ In the case of the \ac{NC} monomer, both rigid and relaxed scans failed to captu
 
 \subsection{Acid hydrolysis mechanism}
 \subsubsection{Protonation site}
-The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}. The bridging oxygen (Ox) linking the nitrate to the remainder of the molecule, the capping group oxygen, and the interchangeable terminal nitrate oxygen sites were protonated in order to compare their relative energies for determination the site most likely to stabilise the proton at thermal equilibrium. Protonation also occurs on other sites in the molecule, such as at unsubstituted hydroxyl oxygen sites, the capping group oxygen on C4 and O1 in the glucose ring. Though it is a possibility that protonation at further sites in the monomer would contribute to degradation, these processes would occur \textit{via} alternative mechanisms without the involvement of denitration. For the purposes of studying acid hydrolysis, only the sites peripheral to the nitrate leaving group were explored. %REf if there is any evidence - peeling off? 
+The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}. The bridging oxygen (Ox) linking the nitrate to the remainder of the molecule, the capping group oxygen, and the interchangeable terminal nitrate oxygen sites were protonated in order to compare their relative energies for determination the site most likely to stabilise the proton at thermal equilibrium. Protonation also occurs on other sites in the molecule, such as at unsubstituted hydroxyl oxygen sites, the capping group oxygen on C4 and O1 in the glucose ring. Though it is a possibility that protonation at further sites in the monomer would contribute to degradation, these processes would occur \textit{via} alternative mechanisms without the involvement of denitration. For the purposes of studying acid hydrolysis, only the sites peripheral to the nitrate leaving group were explored. %REf if there is any evidence - peeling off?
+
 \begin{figure}[htp]
 \centering
 \begin{subfigure}[t]{0.3\linewidth}
@@ -376,7 +409,7 @@ The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}
  Terminal	 (Upper)& -29.84814 	&   24.28650	& -31.18500 	&  15.32916 \\
  Terminal (Lower)	& -20.53548 &   10.44288	& -22.40595	& 11.66634  \\
  Capping 	& -29.84877	&   3.61683	& -31.18563 	&  -1.16235 \\  
-	\bottomrule
+\bottomrule
 \end{tabular}
 \label{tab:reactions}
 \end{center}
@@ -403,7 +436,8 @@ The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}
 \label{fig:proton_site_full}
 \end{figure}
 %
-The mechanism of protonation was not explored in depth here; it was assumed that protons in the system would be in fast exchange with the solvent. The process has been studied computationally by Jebber and Liu \textit{et al.} \cite{Jebber1996,Liu2010}. It can be seen that the bridging and capping values are very similar using both \ac{wb97xd} and \ac{B3LYP}.  Inspection of the geometries reveal that the optimised bridging and capping structures are extremely similar (figures \ref{fig:proton_site_bridge} and \ref{fig:proton_site_cap}). The difference in energies between the gaseous and implicit solvent values can be explained as \ce{H3O+} is highly unstable in vacuum and prefers to lose the proton to exist as water, whereas when solvated, the positive charged is stabilised. Thus the energy gain from losing the proton is less pronounced when in solvent. 
+%The mechanism of protonation was not explored in depth here; 
+It was assumed that protons in the system would be in fast exchange with the solvent. The process has been studied computationally by Jebber and Liu \textit{et al.} \cite{Jebber1996,Liu2010}. Any effects of tunneling were included within this assumption. It can be seen that the bridging and capping values are very similar using both \ac{wb97xd} and \ac{B3LYP}.  Inspection of the geometries reveal that the optimised bridging and capping structures are extremely similar (figures \ref{fig:proton_site_bridge} and \ref{fig:proton_site_cap}). The difference in energies between the gaseous and implicit solvent values can be explained as \ce{H3O+} is highly unstable in vacuum and prefers to lose the proton to exist as water, whereas when solvated, the positive charged is stabilised. Thus the energy gain from losing the proton is less pronounced when in solvent. 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.25\linewidth]{neutral_hydro_1}
