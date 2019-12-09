@@ -112,13 +112,6 @@ When exploring the interaction of nitroglycol and nitroglycerin in acid solution
 \label{sch:cameraschema}
 \end{scheme}
 
-\ac{NC} in storage is kept wetted with solvents to prevent self-ignition. Material with 12.6\acs{pN} or lower must be stored in 25\% water by mass, or in a controlled mixture of solvents, stabilisers and plasticisers. The material is therefore always exposed to water, with the fast-exchange of protons expected at inter-facial surfaces. % Something about the surfaces exposed to water? Faster NO'2 release or something?
-%Fast exchange is expected for groups exposed to water within the bulk, with the dissociation of \ce{NO2+} to generate the alcohol as the rate determining step. %ref back to lit review, about having to store it in water for stability.
-%more info on why the second step may be slow / what we expect to see?
-In the study of organonitrates and organosulfates %in the acid phase 
-generated from isoprene in the aerosol phase, % as secondary organic aerosol, %\ac{SOA}, 
-Hu \textit{et al.} found that primary and secondary nitrates were resilient to hydrolysis for pH $>$ 0, whilst tertiary nitrates underwent hydrolytic nucleophilic substitution easily, reacting with water to form alcohols \cite{Hu2011}. %and sulfate to form alcohols and organosulfates
-
 \begin{scheme}[htp!]
 %\begin{figure}
 \centering
@@ -126,6 +119,13 @@ Hu \textit{et al.} found that primary and secondary nitrates were resilient to h
 %\end{figure}
 \caption[Hydrolysis of a tertiary nitrate, originally derived from the reaction of isoprene in the aerosol phase.]{Hydrolysis of a tertiary nitrate derived from the reaction of isoprene in the aerosol phase, from the work of Hu \textit{et al.} \cite{Hu2011}.}
 \end{scheme}
+
+\ac{NC} in storage is kept wetted with solvents to prevent self-ignition. Material with 12.6\acs{pN} or lower must be stored in 25\% water by mass, or in a controlled mixture of solvents, stabilisers and plasticisers. The material is therefore always exposed to water, with the fast-exchange of protons expected at inter-facial surfaces. % Something about the surfaces exposed to water? Faster NO'2 release or something?
+%Fast exchange is expected for groups exposed to water within the bulk, with the dissociation of \ce{NO2+} to generate the alcohol as the rate determining step. %ref back to lit review, about having to store it in water for stability.
+%more info on why the second step may be slow / what we expect to see?
+In the study of organonitrates and organosulfates %in the acid phase 
+generated from isoprene in the aerosol phase, % as secondary organic aerosol, %\ac{SOA}, 
+Hu \textit{et al.} found that primary and secondary nitrates were resilient to hydrolysis for pH $>$ 0, whilst tertiary nitrates underwent hydrolytic nucleophilic substitution easily, reacting with water to form alcohols \cite{Hu2011}. %and sulfate to form alcohols and organosulfates
 
 In tertiary nitrates, the carbon is fully substituted with no attached hydrogens. This group is usually sterically hindered and stabilising to carbocations, condition on the electron donation ability of the substituents remaining after nitrate removal. 
 If formation of a carbocation intermediate is involved in the hydrolysis mechanism, this may explain why the tertiary nitrates exhibited highly efficient denitration, even under neutral conditions.
@@ -198,10 +198,13 @@ Though the relative rates of reaction are not compared, the extended timescales 
 
 \section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Thermolytic reactions
-The energies of homolytic fission and elimination of \ce{HNO2} were calculated for PETN, as a test system before extension to the \ac{NC} monomer. The reaction energies were calculated according to equations \ref{equ:homofiss} and \ref{equ:hno2_elim} to reproduce the work of Tsyshevsky \textit{et al.}; the published geometries of PETN and its derivatives were obtained from the authors. A single point energy and frequency calculation were performed on each of the species to determine the reaction energies; no geometry optimisation was performed on the given structures except for in the case the \ce{^{.}NO2} molecule, where the geometry was not supplied. A separate \ce{^{.}NO2} molecule was independently geometry optimised.
+The energies of homolytic fission and elimination of \ce{HNO2} were calculated for PETN, as a test system before extension to the \ac{NC} monomer. 
+The reaction energies were calculated according to equations \ref{equ:homofiss} and \ref{equ:hno2_elim} to reproduce the work of Tsyshevsky \textit{et al.}; the published geometries of PETN and its derivatives were obtained from the authors. 
+Whilst only the denitrated radical product geometry was provided in the case of the homolysis reaction, the product of \ce{HNO2} elimination was given as a complex of the \ce{HNO2} leaving group and the newly formed aldehyde. 
+A single point energy and frequency calculation were performed on each of the species to determine the reaction energies; no geometry optimisation was performed on the given structures except for in the case the \ce{^{.}NO2} molecule, where the geometry was not supplied. A separate \ce{^{.}NO2} molecule was independently geometry optimised.
 
 The intramolecular reactions of the \ac{NC} monomer were modelled according to scheme \ref{sch:intra_NC}. % \ref{fig:homofiss_NC} and \ref{fig:elim_NC}.
-Rigid and relaxed \ac{PES} scans were attempted in order to locate transition states for both reactions for the \ac{NC} monomer. 
+Rigid and relaxed \ac{PES} scans were attempted for both reactions for the \ac{NC} monomer to obtain an energy profile, and in the case of \ce{HNO2} elimination, identify a transition state. The homolysis reaction was treated as barrierless.  
 Where the scans were unable to identify a valid transition state geometry, guess transition state geometries were constructed and optimised. 
 
 \begin{scheme}[h]
@@ -229,6 +232,7 @@ The possible protonation sites for the \ac{NC} monomer were explored by placing 
 It is also possible that the proton is donated by other acidic species in the system, particularly \ce{HNO2} or \ce{HNO3}. This is more likely at later stages of degradation when a higher concentration of acid has been generated by secondary reactions. %REF 
 % Explain the caveats of this. 
 %pKA H3O+ –1.74, HNO3 –1.3, HNO2 3.3. All weak acids, but H3O+ is most acidic. 
+% SOME MORE INFO ON the later stage stuff you did on hydrolysis mechanism
 
 \subsection{Computational details} %%%%%%%%%%%%%%%%%%%%%%%%
 All geometry optimisations, thermochemistry calculations and \ac{PES} scans were performed in \ac{G09}. 
@@ -257,11 +261,12 @@ Scans were attempted in vacuum, and for the protonation cases, implicit solvent 
 
 \section{Results and discussion}%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Thermolytic decomposition mechanisms}
-The energies of homolytic fission and intramolecular elimination of \ce{HNO2} from a \ac{PETN} nitrate group are shown in table \ref{tab:intramolec}. The energy values published by Tsyshevsky \textit{et al.} are denoted in parenthesis.
-\begin{table}[htp]
+The energies of homolytic fission and intramolecular elimination of \ce{HNO2} from a \ac{PETN} nitrate group are shown in table \ref{tab:intramolec}. The energy values published by Tsyshevsky \textit{et al.} are denoted in parenthesis. The $\Delta G_{r}$ and $E_{a}$ values are the same.
+
+\begin{table}[b]
 \begin{center}
 %\par\bigskip
-\caption[Calculated free energies of reaction for the intramolecular reactions of PETN and the \ac{NC} monomer.]{Calculated free energies of reaction ($\Delta G_{r}$), reaction enthalpies ($\Delta H_{r}$), activation barriers ($E_{a}$)  with zero-point correction ($^{ZPE}$) for the intramolecular reactions of PETN, and the \ac{NC} monomer. Values expressed in kCal mol$^{-1}$.}
+\caption[Calculated free energies of reaction for the intramolecular reactions of PETN and the \ac{NC} monomer.]{Calculated free energies of reaction ($\Delta G_{r}$), reaction enthalpies ($\Delta H_{r}$), activation barriers ($E_{a}$)  with zero-point correction ($^{ZPE}$) for the intramolecular reactions of PETN, and the \ac{NC} monomer. Values expressed in kCal mol$^{-1}$. }
 % Remember, these have not been scaled. Yao2018 : B3LYP/6-31+G(d,p) level and are scaled by a factor of 0.98, for the ZPE (And only certain components are scaled? Drama)
 %FIX THE FOOTNOTES
 \begin{tabular}{ l *{5}{S[table-format = 2.1]}} 
@@ -272,7 +277,7 @@ Reaction				& $\Delta G_{r}$	&$\Delta G_{r}^{ZPE}$ 	& $\Delta H_{r}$	&	${E_{a}}$
 PETN					& \multicolumn{5}{l}{}\\
 \midrule
 % Do I double these up??
-\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	21.50946  $^{b}$ 	&16.55804 	 \\
+\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	21.50946  $ ^{b}$ 	&16.55804 	 \\
 						& ${(41.2)}^{a}$	 &	${  (35.8)}$ 	&					&${(41.2)}$ 	& ${(35.8)}$ \\
 %\ce{^{.}NO2} loss	& 	21.50946		 &16.55804 		&	35.61579	& 	\textendash 	& \textendash 	 \\
 %						& ${(41.2)}^{a}$	 &	${  (35.8)}$ 	&					&	\textendash\  	& \textendash\  \\
@@ -296,19 +301,39 @@ for bond dissociation via homolytic fission.
 %when treating homolytic fission as a barrierless process. 
 \end{table}
 %
-Despite using the author supplied geometries, same method and basis, it can be seen that the obtained PETN reaction energy in the case of homolytic fission (\ce{^{.}NO2} loss) varies greatly from the published value found by Tsyshevsky \textit{et al.}
-It was expected that the supplied geometries were those used to generate the energy values quoted in their study. Inspection of the forces for the given structures showed that they were in fact not converged. 
-
+Despite using the author supplied geometries, same method and basis, it can be seen that the obtained PETN reaction energy in the case of homolytic fission (\ce{^{.}NO2} loss) varies greatly from the value published by Tsyshevsky \textit{et al.}
+It was assumed that the supplied geometries were those used to generate the energy values quoted in their study. Inspection of the forces for the given structures showed that they were %in fact 
+not converged. 
 As the same structures were used to calculate values listed in table \ref{tab:intramolec}, the unconverged geometries do not explain the large discrepancy between the published energies and values obtained here.
+% or do they? Perhaps because forces are not converged, it is unclear what will happen when you just calculate the associated energy -though I'm sure its also fine. The calc uses whatever structure is given. And tbh I don't know the intricacies of its calculation/ integration loops/ whether it will really make a difference
 % , though a possible explanation may be that different geometries were used for the values presented in the study.  (maybe this is too obvious to say)
-A contribution may arise from a different compilation of the \ac{G09} program, leading to fluctuations in the exact values obtained. These differences are amplified %when deriving
-during the calculation of reaction energies, though these are not expected to account for the 20 kCal mol$^{-1}$ deficiency %discrepancy
-in the homolysis reaction energy. 
-A possible explanation is that the products of homolytic fission remain complexed following bond breaking, which was not discussed in the original publication nor explicit in the supplied geometries. %from the authors. 
-In the calculations above, the \ce{^{.}NO2} leaving group was separately geometry optimised and its energy taken into consideration additively%reaction energy
-; it was assumed the product and reactant species would move apart following fission. It may be that the \ce{^{.}NO2} was not further geometry optimised, but left in its complexed position. This is relevant in the scenario where the \ce{^{.}NO2} has not yet moved far enough from the remainder of the \ac{PETN} molecule to fully relax. 
+A contribution may arise from different compilations of the \ac{G09} program, leading to fluctuations in the exact values obtained. 
+%small difference in the method of calculation 
+%Semi-empirical methods are also known to over-estimate reaction barriers (and underestimate reaction energies). CHECK THIS AND FIND REF
+These differences would be amplified %when deriving
+when combining individual energies during the calculation of reaction energy values, but are still not expected to %do not 
+account for the 20 kCal mol$^{-1}$ deficiency %discrepancy
+in the case of homolysis. % reaction energy. 
 
-The same reaction was  applied to \ac{NC} monomer
+A possible explanation is that the products of homolytic fission were treated as a complex, rather than individual molecules, though % remain complexed 
+%following bond breaking, 
+this was not highlighted %discussed 
+in the original publication nor explicit in the supplied geometries. %from the authors. 
+In the current study, %the homolysis %\ce{^{.}NO2} loss 
+%calculations conducted, %listed in table \ref{tab:intramolec}, 
+the \ce{^{.}NO2} leaving group was independently geometry optimised, with its energy contributing additively to the products %energies 
+of the reaction. 
+Under this assumption, the product species would move apart immediately following fission. 
+If the energy of the product species were calculated separately in the original study, it could be that the departing \ce{^{.}NO2} was not geometry optimised, but left in its complexed geometry.
+%In the quoted study, it , even if the leaving group and molecule were not calculated together. 
+This is relevant in the scenario where the \ce{^{.}NO2} has not yet moved far enough from the remainder of the \ac{PETN} molecule to fully relax. 
+Whilst the calculated $\Delta G_{r}$ %free energy of reaction 
+deviates greatly from the value in Tsyshevsky's study, % by almost half, %shit sentence CHECK
+the $\Delta H _{r}$ %enthalpy 
+falls within 7kCal mol$^{-1}$ of the literature value for \ce{O-NO2} homolysis of alkanes (%35.62 kCal mol$^{-1}$ to
+42$\pm$0.3 kCal mol$^{-1}$) \cite{Luo2004}. %scaling factor for wb97xd CHECK
+%How does inclusion of zero point energy affect the enthalpy values?
+
 %This was tested against the \ac{NC} monomer 
 %However these details were omitted from both the literature and the supplied geometries. (Does it matter though - the following paragraphs confirms the mechanism as proof of concept that it actually happens - that way) so I can get away with it.)   
  %Additional explanations may be that %and the obvious suggestion that perhaps alternative geometries were used ,....  in addition to a different compilation of Gaussian
@@ -320,7 +345,31 @@ The same reaction was  applied to \ac{NC} monomer
 %Add in the PETN geomtries that I did myself (from scratch - which are slightly off).
 % These energies don't seem to reflect the excel sheet... update
 %
-\begin{figure}[ht]
+
+The homolytic fission reaction was applied to a \ac{NC} monomer singly nitrated at C2 (figure \ref{fig:homol_scan}). 
+% freenitr-NO2-C2-scan
+% floppy_NO2-C2-scan ***
+%get an react coord pic if you can (not v interesting though)
+% one scan was complete freeze except with the O-NO2
+% the other one alloed relaxation aroud the NO2 and its orientation
+%multireference character, vs DFT
+% Check Yao2018, and read up on multireference characters. 
+%
+%Scan of the PES
+The \ce{O-NO2} bond was incrementally stretched using geometry scanning, to obtain an energy profile of the reaction. 
+%The energy profile of the reaction was obtained via %\ac{PES} 
+%geometry scans of the \ce{O-NO2} bond elongation, as \ce{NO2} moved away from the \ac{NC} monomer. 
+For the rigid scan (figure \ref{fig:homofiss_graph}), only the internal angle of the departing %\ce{^{.}NO2}
+\ce{NO2} and coordinates referencing its orientation relative to the rest of the molecule were allowed to relax. %Include the details of this calc, which coords allowed to relax, in the appendicies?
+As the scan progressed, the \ce{NO2} internal angle increased from 129.2$\degree$ to 134.6$\degree$, at maximum separation of 5 $\text{\AA}$ from the bridging oxygen (Ox). This corresponds to the literature value for the \ce{O-N-O} internal angle (134.3\degree) confirming the formation of a \ce{^{.}NO2} radical. %\cite{Trostchansky2010}
+%Nevertheless, it is known that the activation energy for bond dissociation is equivalent to the bond enthalpy. 
+%SO what?
+%This confirms the formation of the radical species via homolytic fission, and that at a separation of 4 $\text{\AA}$ the radical is fully formed and relaxed. 
+%
+%The energy of reaction (table \ref{tab:intramolec}) is %2kCal mol${-1} 
+%higher than that of PETN, which may be expected
+
+\begin{figure}[t]
 \centering
 %\begin{subfigure}[0.3\linewidth]
 %\includegraphics[width=\linewidth]{EN_NO2_leave_prot_arrow}
@@ -337,34 +386,28 @@ The same reaction was  applied to \ac{NC} monomer
 \caption{The \ce{O-NO2} bond was elongated during rigid and relaxed \ac{PES} scan to simulate homolytic fission for the \ac{NC} monomer.}
 \label{fig:homol_scan}
 \end{figure}
-% freenitr-NO2-C2-scan
-% floppy_NO2-C2-scan ***
-%get an react coord pic if you can (not v interesting though)
-% one scan was complete freeze except with the O-NO2
-% the other one alloed relaxation aroud the NO2 and its orientation
-%multireference character, vs DFT
-% Check Yao2018, and read up on multireference characters. 
-
-%Scan of the PES
-The energy profile of homolytic fission was obtained via a %\ac{PES}
-rigid geometry scan of \ce{^{.}NO2} leaving the \ac{NC} monomer (figure \ref{fig:homol_scan}). The internal angle of the departing \ce{^{.}NO2} was allowed to relax, in addition to the coordinates referencing its orientation relative to the rest of the molecule. As the scan progressed, the \ce{^{.}NO2} internal angle increased from 129.2$\degree$ to 134.6$\degree$ at a maximum separation of $\text{\AA}$ from the bridging oxygen (Ox). This corresponds to the literature value for the \ce{O-N-O} internal angle (134.3\degree) and confirms the formation of a \ce{^{.}NO2} radical. %Ref the bond angle later. Wherefrom???
-%Nevertheless, it is known that the activation energy for bond dissociation is equivalent to the bond enthalpy. 
-%This confirms the formation of the radical species via homolytic fission, and that at a separation of 4 $\text{\AA}$ the radical is fully formed and relaxed. 
-
-\begin{figure}[b]
+%The weird little bump is step 14, ie. bond separation 2.69233 angle 137.286
+%After this bump is where the angle starts to decrease (even though the energy is still rising)
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.65\linewidth]{ONOangle_HOMOFISS_scan}
-\caption[The change in \ce{O-N-O} internal angle with homolytic fission.]{The relaxation of the \ce{O-N-O} internal angle as the \ce{NO2} group is pulled away from the \ac{NC} monomer during a geometry scan of homolytic fission.}
-\lable{fig:homofiss_graph}
+\caption[The change in \ce{O-N-O} internal angle with homolytic fission.]{The relaxation of the \ce{O-N-O} internal angle as the \ce{NO2} group is pulled away from the \ac{NC} monomer during a rigid geometry scan of homolytic fission.}
+\label{fig:homofiss_graph}
 \end{figure}
 
-The values obtained for \ce{HNO2} elimination of PETN match the results given by Tsyshevsky much more closely. The energies fall within 5 kCal mol$^{-1}$ and 6 kCal mol$^{-1}$ for the Gibbs free energy of reaction and activation barrier, respectively. This is within a reasonable margin of error for comparing with experimentally obtained values, though larger than expected for those derived using the same method, basis and structure.
+The values obtained for \ce{HNO2} elimination of PETN follow the results given by Tsyshevsky much more closely. 
+The energies fall within 5 kCal mol$^{-1}$ and 6 kCal mol$^{-1}$ for the Gibbs free energy of reaction and activation barrier, respectively. 
+This is within a reasonable margin of error for comparing with experimentally obtained values, though still larger than expected for those derived using the same method, basis and structure. %DO you have any experimental values for this reaction?
 
 % Nevertheless, it still falls inside the range of experimentally measured PETN degradation activation barriers. %REF and check?
 %I think the below actually goes into the methodology
-In the case of the \ac{NC} monomer, both rigid and relaxed scans failed to capture the \ac{TS} for cleavage of the nitrate group via interaction with the \textalpha-hydrogen. A guess transition state was constructed based on the \ac{TS} of the analogous reaction for PETN, and optimised to produce the structure of the correct imaginary vibration. 
+In the case of the \ac{NC} monomer, both rigid and relaxed scans failed to capture the \ac{TS} for cleavage of the nitrate group via interaction with the \textalpha-hydrogen. A guess transition state was constructed based on the \ac{TS} of the analogous reaction for PETN (figure \ref{fig:elim_ts_NC}), and optimised %using opt=TS 
+to produce the structure of the correct imaginary vibration. 
+
+The pattern for the \ac{NC} monomer resembles that found for \ac{PETN}; homolysis is endothermic but with lower activation barrier, whilst \ce{HNO2} elimination is exothermic, but with a much higher barrier. It is anticipated therefore, that the rate of homolytic fission will be faster, whilst \ce{HNO2} loss will happen more slowly, whilst contributing to system heating and increasing acid concentration. 
+%Kinetics??? CHECK - should be a quick calc
 %more details on what you found 
-%dashed lined heavier, please
+%dashed lined heavier, please, and PETN is missing the C-H bond
 \begin{figure}[htp!]
 \centering
 \begin{subfigure}[t]{0.4\linewidth}
@@ -381,14 +424,22 @@ In the case of the \ac{NC} monomer, both rigid and relaxed scans failed to captu
 \end{subfigure}\\
 
 {\textcolor{red}{\CIRCLE} oxygen \quad \textcolor{blue}{\CIRCLE} nitrogen \quad  \textcolor{gray}{\CIRCLE} carbon \quad $\bigcirc$ hydrogen}
-\caption[\ac{TS} for the elimination of \ce{HNO2} in \ref{fig:elim_ts_PETN} PETN and \ref{fig:elim_ts_NC} \ce{NC}.] {\ac{TS} for the elimination of \ce{HNO2} by removal of the \textalpha hydrogen by the \ce{NO2} leaving group in \ref{fig:elim_ts_PETN} PETN and \ref{fig:elim_ts_NC} \ce{NC}. Orange dashed lines indicate bonds breaking and blue dashed lines indicate bonds forming.}
+\caption[\ac{TS} for the elimination of \ce{HNO2} in \ref{fig:elim_ts_PETN} PETN and \ref{fig:elim_ts_NC} \ce{NC}.] {\ac{TS} for the elimination of \ce{HNO2} by removal of the \textalpha-hydrogen by the \ce{NO2} leaving group in \ref{fig:elim_ts_PETN} PETN and \ref{fig:elim_ts_NC} \ce{NC}. Orange dashed lines indicate bonds breaking and blue dashed lines indicate bonds forming.}
 \label{fig:elim_ts}
 \end{figure}
+%Summary Sentence - why are the energies of interest, here?
 %comment on the significance of the energies and descibe a bit more of what you see geometrically and via the discovered energies
 
 \subsection{Acid hydrolysis mechanism}
 \subsubsection{Protonation site}
-The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}. The bridging oxygen (Ox) linking the nitrate to the remainder of the molecule, the capping group oxygen, and the interchangeable terminal nitrate oxygen sites were protonated in order to compare their relative energies for determination the site most likely to stabilise the proton at thermal equilibrium. Protonation also occurs on other sites in the molecule, such as at unsubstituted hydroxyl oxygen sites, the capping group oxygen on C4 and O1 in the glucose ring. Though it is a possibility that protonation at further sites in the monomer would contribute to degradation, these processes would occur \textit{via} alternative mechanisms without the involvement of denitration. For the purposes of studying acid hydrolysis, only the sites peripheral to the nitrate leaving group were explored. %REf if there is any evidence - peeling off?
+%Why do we need to look at protonation?
+In a polar, protic solvent such as water, the fast-exchange of protons with the monomer is expected. %Acid species are also expected to protonate 
+This process in glucose was studied computationally by Jebber and Liu \textit{et al.} \cite{Jebber1996,Liu2010}. %And what did they find?
+%Fast-exchange of protons between the monomer and solvent 
+Key findings demonstrated that the most favoured protonation site in glucose was influenced by the orientation of the C6 side branch, and that the lowest energy site for protonation whilst the C6 hydroxymethyl chain was in the gauche position, was the oxygen of the C1 hydroxy group. 
+The analogous group in the \ac{NC} monomer with the C6 nitrate in the gauche position, is the C1 capping group oxygen.   
+The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}. The bridging oxygen (Ox)% linking the nitrate to the remainder of the molecule
+, the C1 capping group oxygen, and the terminal nitrate oxygen sites (Ot) were protonated and their relative energies compared, to determine the site most likely to stabilise the proton at thermal equilibrium. Protonation also occurs on other sites in the molecule, such as at unsubstituted hydroxyl oxygen sites, the capping group oxygen on C4 and O1 in the glucose ring. Though it is a possibility that protonation at further sites in the monomer would contribute to degradation, these processes would occur \textit{via} alternative mechanisms without the involvement of denitration. For the purposes of studying acid hydrolysis, only the sites peripheral to the nitrate leaving group were explored. %REf if there is any evidence - peeling off?
 
 \begin{figure}[htp]
 \centering
@@ -416,22 +467,23 @@ The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}
 %
 \begin{table}[htp]
 \begin{center}
-\caption{Free energies of protonation at each of the oxygen sites of interest on \ac{CH3CH3} C2 monomer of \ac{NC}.}
+\caption[Free energies of protonation for \ac{NC} monomer.]{Free energies of protonation, for each of the oxygen sites of interest on \acs{CH3CH3} monomer of \ac{NC}, nitrated at the C2 site.}
 \begin{tabular}{ l *{4}{S[table-format = 2.4]}} 
 \toprule
 \multirow{2}{*}{Protonation site} & \multicolumn{4}{c}{$\Delta$G\textsubscript{r} /kcal mol\textsuperscript{-1}} %& \multicolumn{2}{c}{$\Delta$H\textsubscript{r} }
 \\\cline{2-5}
   & \acs{wb97xd} & PCM & \acs{B3LYP} & PCM\\
 \midrule
-%% Note, using unconverged energies here :( the B3LYP solvent bridging one
-% Bridging 	&  -30.87756 	&  0.85365 & -31.98636 	& -0.24507 \\
-% Terminal	& -23.12541 	& 9.99558 	& -24.06285 	& 10.97397 \\
-% Capping 	& -30.43404 	& 0.85491 	& -31.98447 	& 0.64386 \\  
-% 
- Bridging 	&  -26.04105 	& 4.02759    & -28.67067 	& 11.29338  \\
- Terminal	 (Upper)& -29.84814 	&   24.28650	& -31.18500 	&  15.32916 \\
- Terminal (Lower)	& -20.53548 &   10.44288	& -22.40595	& 11.66634  \\
- Capping 	& -29.84877	&   3.61683	& -31.18563 	&  -1.16235 \\  
+%% Note, using unconverged energies here 
+% Bridging 				&  -26.04105 	& 4.02759   	& -28.67067 	& 11.29338  \\
+% Terminal	 (Upper)& -29.84814	&   24.28650	& -31.18500 	&  15.32916 \\
+% Terminal (Lower)	& -20.53548	&   10.44288	& -22.40595	& 11.66634  \\
+% Capping 				& -29.84877	&   3.61683	& -31.18563 	&  -1.16235 \\    
+% Corrected on 08/12/19
+ Bridging 				&  -26.04105 	& 4.29786    	& -28.67067 	& 11.29338  \\
+ Terminal	 (Upper)& -29.84814 	& 13.41459	& -31.18500 	&  15.32916 \\
+ Terminal (Lower)	& -20.53548 	& 11.15415	& -22.40595	& 11.66634  \\
+ Capping 				& -29.84877	& 1.01556		& -31.18563 	&  -1.16235 \\  
 \bottomrule
 \end{tabular}
 \label{tab:reactions}
@@ -460,25 +512,30 @@ The protonated \ac{NC} monomer species are shown in figure \ref{fig:proton_site}
 \end{figure}
 %
 %The mechanism of protonation was not explored in depth here; 
-It was assumed that protons in the system would be in fast exchange with the solvent. The process has been studied computationally by Jebber and Liu \textit{et al.} \cite{Jebber1996,Liu2010}. Any effects of tunneling were included within this assumption. It can be seen that the bridging and capping values are very similar using both \ac{wb97xd} and \ac{B3LYP}.  Inspection of the geometries reveal that the optimised bridging and capping structures are extremely similar (figures \ref{fig:proton_site_bridge} and \ref{fig:proton_site_cap}). The difference in energies between the gaseous and implicit solvent values can be explained as \ce{H3O+} is highly unstable in vacuum and prefers to lose the proton to exist as water, whereas when solvated, the positive charged is stabilised. Thus the energy gain from losing the proton is less pronounced when in solvent. 
+%It was assumed that protons in the system would be in fast exchange with the solvent. 
+%Any effects of tunneling were included within this assumption. 
+It can be seen that the bridging and capping values are very similar using both \ac{wb97xd} and \ac{B3LYP}.  
+Inspection of the geometries revealed that the optimised bridging and capping structures were extremely similar (figures \ref{fig:proton_site_bridge} and \ref{fig:proton_site_cap}). 
+The difference in energies between the gaseous and implicit solvent values are explained by the instability of \ce{H3O+} in vacuum, where it prefers to lose the proton and exist as water, whereas when solvated, its positive charged is stabilised. Thus, the energy gained from losing the proton is negative, %less pronounced 	
+when in solution. 
 \begin{figure}[htp]
 \centering
 \includegraphics[width=0.25\linewidth]{neutral_hydro_1}
 \label{fig:neutral_prot}
 \caption{The attempted geometry of a single water molecule in coordination with the \ac{NC} monomer.}
 \end{figure}
-Water as the protonating species was attempted, by optimisation of one, two and three water molecules in coordination with the nitrate site in the \ac{NC} monomer, however no stable complex could be isolated. It is anticipated that a much larger network of waters around both the region surrounding the nitrate and the wider molecule would be required to achieve a stable water coordination in order for further investigation into the nature of neutral hydrolysis (figure \ref{fig:neutral_prot}). %The optimisation of \ce{H3O} in coordination with the fully nitrated monomer was also tested, but was only possible up to the level HF/6-31g.  
+Water as the protonating species was attempted, by optimisation of one, two and three water molecules in coordination with the nitrate site in the \ac{NC} monomer, however no stable complex could be isolated. It is anticipated that a much larger network of waters around both the regions surrounding the nitrate moiety, and the wider molecule, are be required to achieve a stable water coordination structure. This would be of interest for further investigation into the mechanism of neutral hydrolysis (figure \ref{fig:neutral_prot}). %The optimisation of \ce{H3O} in coordination with the fully nitrated monomer was also tested, but was only possible up to the level HF/6-31g.  
+%Dragrams of the water coord geometrties you tried, pls?
 %to see whether it was possible to stabilise in coordination.  
 %Thus, omitting entropy effects. 
-%Explain a bit about the study pls
  %also include the function of hydrolysis in the degradation of sugars, in the lit review
 Evaluation of the energy of protonation at each site found that the bridging and capping sites most likely. However, all possible structures will be explored for the subsequent denitration stage.  \\
 %Big table of all the scans I did (for hydrolysis TS) \\
 %Columns:  \\
 %Scanned co-ordinate. Distance scanned. Observation. (TS found? etc)\\
 
-\subsection{Denitration by hydrolysis}
-Following the protonation step, possible transition states for the removal of the nitrate were investigated. Direct dissociation of \ce{NO2} from the protonated species was explored, along with the simultaneous approach of a proton and cleavage of the \ce{NO2} (figure \ref{fig:scan_coords}). The scan of the proton moving towards the bridging site was also completed to gain insight to the energy profile of the process. 
+\subsubsection{Denitration by hydrolysis}
+Following the protonation step, possible transition states for the removal of the nitrate were investigated. Direct dissociation of \ce{NO2} from the protonated species was explored, along with the simultaneous approach of a proton and cleavage of the \ce{NO2} (figure \ref{fig:scan_coords}). The scan of the proton moving towards the bridging site was also completed to gain insight to the energy profile of the process. %any scans to show? 
 \begin{figure}[htp]
 \centering
 \begin{subfigure}[b]{0.25\linewidth}
@@ -592,8 +649,8 @@ Proposed 4-membered ring and 6-membered ring \ac{TS} were investigated in order 
 Optimisations were attempted with both full geometry relaxation, and various frozen coordiate schemes for each proposed \ac{TS}. The R groups were simplified to methyl nitrate ( R = \ce{CH3}) in effort to limit degrees of freedom during optimisation of the \ac{TS} structures, however no fully relaxed structures were able to achiever convergence. Fixing of the bulk molecule with relaxation only around the nitrate and coordinating species, or relaxation of the wider molecule with fixed coordinates around the nitrate, allowed sequential optimisation of different moieties, increasing chances of global energy minimisation.  % with expansion to ethyl nitrate and the \ca{NC} monomer, following 
 It was possible to optimise the 4-membered ring bridging \ac{TS} on the \ac{NC} monomer with frozen \ac{TS} ring geometry \textit{via} preliminary optimisation of the ring structure with methyl nitrate. The optimised ring geometry was then placed on the monomer, with fixing of thee coordinates, allowing the remainder of the molecule to relax. 
 % and relaxation of the remaining molecule (figure \ref{fig:4mem_b}). %actually we opt the ring with methyl nitrate first then reattached it to ring
-A rigid scan was then performed of the 4-membered ring transition starting from the bridging site protonated monomer. It was revealed that as the nitrate moved away from the system, the proton moved to the capping group site rather than remain on the bridging oxygen as a hydroxyl, as was expected. Instead, a ketone group was formed between the bridging oxygen and the ring. At subsequent steps, the ketone group causes the C2 - C3 bond to elongate and break. The scan eventually revealed the \ce{NO2} leaving group reclaiming the proton from the capping group oxygen, leading to ring fission. The activation and kinetic barrier involved in ring fission is much higher than that of denitration, %REF
-so the product of the scan is likely due to the geometric constraints placed on the geometry of the departing \ce{NO2} group, rather than a physically energetic process. However, it sheds light on the scheme by which ring fission occurs, with has been implied in previous work involving the prior formation of a ketone. %REf that oldschool paper with the diagrams
+A rigid scan was then performed of the 4-membered ring transition starting from the bridging site protonated monomer. It was revealed that as the nitrate moved away from the system, the proton moved to the capping group site rather than remain on the bridging oxygen as a hydroxyl, as was expected. Instead, a ketone group was formed between the bridging oxygen and the ring. At subsequent steps, the ketone group causes the C2 - C3 bond to elongate and break. The scan eventually revealed the \ce{NO2} leaving group reclaiming the proton from the capping group oxygen, leading to ring fission. The activation and kinetic barrier involved in ring fission is much higher than that of denitration; a study on the acid hydrolysis of glucose and xylose demonstrated that ring-opening intermediates were either extremely short lived, or not observed at all \cite{Qian2005}. 
+The open-chain product of the scan is likely due to the geometric constraints placed on the geometry of the departing \ce{NO2} group, rather than a physically energetic process. However, it sheds light on the scheme by which ring fission occurs, with has been implied in previous work involving the formation of a ketone at earlier stages of the reaction. %REf that oldschool paper with the diagrams
 %include distances as before, later
 \begin{figure}[htp]
 \centering

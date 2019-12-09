@@ -588,6 +588,15 @@
 %    \end{macrocode}
 %  \end{environment}
 
+%ditto Quotes
+%    \begin{macrocode}
+\newcommand \@quotes{Quotes}
+\newenvironment{quotes}{%
+    \chapter*{\@quotes}%
+    \@mkboth{\@quotes}{\@quotes}%
+}{%
+}
+
 %  \Finale
 \endinput
 %%
