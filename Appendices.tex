@@ -1,5 +1,5 @@
 \addcontentsline{toc}{chapter}{Appendices}
-
+\graphicspath{ {./Appendicies_pics/} }
 % The \appendix command resets the chapter counter, and changes the chapter numbering scheme to capital letters.
 
 %Split appendicies by theme. E.g. One section is extra data, one section is working scripts, final one is notes and details about the working details of the calculations I did. 
@@ -12,13 +12,49 @@
 %\centering
 
 \chapter{Supplementary Data}
-\label{appendixlabel2}
+\label{appendixlabel1}
 \section{Energies of \ac{NC} species with different capping groups}
 Extra data tables etc.
 
+\section{Chapter 4}
+\label{AH_Protonation_QTAIM}
+\begin{figure}[htp]
+\centering
+\begin{subfigure}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=\linewidth]{corr_s_H_terminal_up}
+%\caption{Terminal(Upper) optimised with \ac{wb97xd}/6-31+G(2df,p) with implicit solvent.  }
+%\label{fig:proton_site_terminal}
+\end{subfigure}
+\begin{subfigure}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=\linewidth]{B3LYP_s_C2_NC3-CH3_corr-OH_up-hi}
+%\caption{Terminal(Upper) optimised with \ac{B3LYP}/6-31+G(2df,p) with implicit solvent.}
+%\label{fig:proton_site_cap}
+\caption{\ac{CP} analysis of \ac{NC} monomers protonated at the terminal oxygen (upper) site, with \ac{PCM} implicit solvent.}
+\label{fig:terminal_upper_same}
+\end{subfigure}
+\begin{subfigure}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=\linewidth]{s_C2_NC3-CH3_corr-OH_up-hi-CP}
+\caption{Terminal(Upper) optimised with \ac{wb97xd}/6-31+G(2df,p) with implicit solvent.  }
+%\label{fig:proton_site_terminal}
+\end{subfigure}
+\begin{subfigure}[t]{0.4\linewidth}
+\centering
+\includegraphics[width=\linewidth]{B3LYP_s_C2_NC3-CH3_corr-OH_up-hi-CP}
+\caption{Terminal(Upper) optimised with \ac{B3LYP}/6-31+G(2df,p) with implicit solvent.}
+%\label{fig:proton_site_cap}
+\end{subfigure}
+\caption{\{CP} analysis of \ac{NC} monomers protonated at the terminal oxygen (upper) site, with \ac{PCM} implicit solvent.}
+\label{fig:terminal_upper_same}
+\end{figure}
+Figure \ref{fig:terminal_upper_same} shows the \ac{QTAIM} \ac{CP} analysis for the \ac{NC} monomer nitrated at the C2 position, protonated at the terminal (upper) oxygen of the nitrate group. Though the two different functionals produced significantly different values for reaction energy (\ac{wb97xd} 12.79 kcal mol$^{-1}$ and 3.72 kcal mol$^{-1}$) 
+the difference was not reflected in the geometry of the optimised structures or \ac{CP} analysis, which was extremely similar for both. 
+
 \chapter{Working scripts}
 %\chapter{Appendix}
-\label{appendixlabel1}
+\label{appendixlabel2}
 Analysis \& working scripts.
 (Optional?)
 %Just literally copypasta.
