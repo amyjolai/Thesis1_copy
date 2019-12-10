@@ -112,7 +112,7 @@ When exploring the interaction of nitroglycol and nitroglycerin in acid solution
 \label{sch:cameraschema}
 \end{scheme}
 
-\begin{scheme}[htp!]
+\begin{scheme}[hb]
 %\begin{figure}
 \centering
 \includegraphics[width=0.8\linewidth]{tertiary_nitrate_Hu2011}
@@ -518,42 +518,7 @@ The protonated \ac{NC} monomers explored in this section are shown in figure \re
 %Redo this graphic to depict the new structures (4 pics)
 % Pics in and out of solvent too, if poss
 
-%
-%The mechanism of protonation was not explored in depth here; 
-%It was assumed that protons in the system would be in fast exchange with the solvent. 
-%Any effects of tunneling were included within this assumption. 
-The energies for the optimised protonated monomer conformers are listed in table \ref{tab:reactions}. 
-There is good agreement between \ac{wb97xd} and \ac{B3LYP} values in the vacuum, with \ac{B3LYP} predicting a lower reaction energy in all cases. % WHY % and solvent, with \ac{B3LYP} . 
-The most thermodynamically favoured protonation sites in the gaseous phase are at the terminal (upper) and capping positions. %The energy of each of the protonated species is identical. 
-Inspection of the optimised geometries explains the similarity of their $\Delta G_{r}$ values. The protonated terminal (upper) and capping monomers (figures \ref{fig:tu_vac}) and \ref{fig:cap_vac})) present nearly identical geometries in vacuum. In the terminal (upper) case, the proton has moved towards the capping group oxygen. 
-This is in contrast to the solvent phase, where the protonated nitrate group is rotated perpendicularly to the ring and the proton remains on the terminal Ot. %,  the solvent presents stabilisation for the protonated Ox. 
-This indicates that the terminal (upper) site is is only likely to remain protonated in solvent, and that protonation at the site in vacuum is highly unstable. 
-%It can be seen that the bridging and capping values show good agreement, in both \ac{wb97xd} and \ac{B3LYP} methods.  
-%Inspection of the geometries revealed that the optimised bridging and capping structures were extremely similar % (figures \ref{fig:proton_site_bridge} and \ref{fig:proton_site_cap}). 
-
-The large difference in the reaction energies between the gaseous and implicit solvent values are explained by the instability of \ce{H3O+} in vacuum, where it prefers to lose the proton and exist as water. Ionic species exhibit much greater reactivity in the gaseous phase compared with their neutral counterparts \cite{Pliego2001,Pliego2002,Chandrasekha1984}. 
-When in solution, the positive charge is solvent stabilised% and the reactivity of the  \ce{H3O+}ion is attenuated by the solvent
-; the proton is less readily released. %OR rather, a solvent shell will form around it, allowing the charge to be stabilised by the polar water molecules. Proton exchange will occur, but essentially it is more stable. Reaction with anothes molecule requires disruption of the solvent shell. Overall more stabilised and less easy to react. 
-% In the real system, rapid proton exchange 
-
-%Thus, the energy gained from losing the proton is negative, %less pronounced 	when in solution. 
-
-%Appendicies, the  
-%You wasted all this time because you did an excel cell error.
-%FIXED
-%For the solvated results, the two functionals perform similarly, except in the case of the Terminal (Upper) structure. Inspection of the geometries and \ac{QTAIM} analysis did not uncover any significance differences in structure or critical points (see appendix \ref{AH_Protonation_QTAIM}). 
-
-Water as the protonating species was attempted, by optimisation of one, two and three water molecules in coordination with the nitrate site in the \ac{NC} monomer, however no stable complex could be isolated (figure \ref{fig:neutral_prot}). It is anticipated that a much larger network of waters around both the regions surrounding the nitrate moiety, and the wider molecule, are be required to achieve a stable water coordination structure. This would be of interest for further investigation into the mechanism of neutral hydrolysis. %The optimisation of \ce{H3O} in coordination with the fully nitrated monomer was also tested, but was only possible up to the level HF/6-31g.  
-%Dragrams of the water coord geometrties you tried, pls?
-%to see whether it was possible to stabilise in coordination.  
-%Thus, omitting entropy effects. 
- %also include the function of hydrolysis in the degradation of sugars, in the lit review
-Evaluation of the energy of protonation at each site found that the bridging and capping oxygens the most likely sites. However, all possible structures will be explored for the subsequent denitration stage.  \\
-%Big table of all the scans I did (for hydrolysis TS) \\
-%Columns:  \\
-%Scanned co-ordinate. Distance scanned. Observation. (TS found? etc)\\
-%add in B3LYP too, if you can be bothered
-\begin{figure}[htp]
+\begin{figure}[hp]
 \centering
 \begin{subfigure}[t]{0.35\linewidth}
 \centering
@@ -578,6 +543,7 @@ Evaluation of the energy of protonation at each site found that the bridging and
 \centering
 \includegraphics[width=\linewidth]{corr_s_H_terminal_up}
 \caption{Terminal (Upper) [solvated]}
+\label{fig:tu_solv}
 \end{subfigure}
 
 \begin{subfigure}[t]{0.35\linewidth}
@@ -609,6 +575,50 @@ Evaluation of the energy of protonation at each site found that the bridging and
 \label{fig:proton_site_full}
 \end{figure}
 %B3LYP ones in appendicies
+%
+%The mechanism of protonation was not explored in depth here; 
+%It was assumed that protons in the system would be in fast exchange with the solvent. 
+%Any effects of tunneling were included within this assumption. 
+The energies for the optimised protonated monomer conformers are listed in table \ref{tab:reactions}. 
+There is good agreement between \ac{wb97xd} and \ac{B3LYP} values in the vacuum, with \ac{B3LYP} predicting a lower reaction energy in all cases. % WHY % and solvent, with \ac{B3LYP} . 
+The large difference in the reaction energies between the gaseous and implicit solvent values are explained by the instability of \ce{H3O+} in vacuum, where it prefers to lose the proton and exist as water. Ionic species exhibit much greater reactivity in the gaseous phase compared with their neutral counterparts \cite{Pliego2001,Pliego2002,Chandrasekha1984}. 
+When in solution, the positive charge is solvent stabilised% and the reactivity of the  \ce{H3O+}ion is attenuated by the solvent
+; the proton is less readily released. %OR rather, a solvent shell will form around it, allowing the charge to be stabilised by the polar water molecules. Proton exchange will occur, but essentially it is more stable. Reaction with anothes molecule requires disruption of the solvent shell. Overall more stabilised and less easy to react. 
+% In the real system, rapid proton exchange 
+
+In the gaseous phase, the most thermodynamically favoured protonation sites are at the terminal (upper) and capping positions. %The energy of each of the protonated species is identical. 
+Inspection of the optimised geometries explains the similarity of their $\Delta G_{r}$ values. The protonated terminal (upper) and capping monomers (figures \ref{fig:tu_vac}) and \ref{fig:cap_vac})) present nearly identical geometries in vacuum. In the terminal (upper) case, the proton has moved towards the capping group oxygen, effectively undergoing a proton transfer and generating the same structure as the protonated capping monomer. 
+This is in contrast to the solvent phase (figure \ref{fig:tu_solv})), where the protonated nitrate group is rotated perpendicularly to the ring and the proton remains on the terminal oxygen; the solvent presents stabilisation for the protonated Ot. 
+This indicates that the terminal (upper) site is is only likely to remain protonated in solvent, and that protonation at the site in vacuum is highly unstable.
+The remainder of the monomers exhibit only minor changes in geometry between vacuum and solvent. Under solvent conditions, the most stable site for protonation is the capping group (which unlikely to lead to denitration), followed by the bridging oxygen. %explaining the energy difference between the terminal (upper) site protonation and capping group protonation between vacuum and solvent 
+
+% Though $\Delta G_{r}$ values are positive in all cases apart from the capping group .... protonation is still going to happen, but it may tell us that the proton may not spend much time on the O
+%
+%Thus, the energy gained from losing the proton is negative, %less pronounced 	when in solution. 
+%
+%Appendicies, the  
+%You wasted all this time because you did an excel cell error.
+%FIXED
+%For the solvated results, the two functionals perform similarly, except in the case of the Terminal (Upper) structure. Inspection of the geometries and \ac{QTAIM} analysis did not uncover any significance differences in structure or critical points (see appendix \ref{AH_Protonation_QTAIM}). 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.25\linewidth]{neutral_hydro_1}
+\caption{The attempted geometry of a single water molecule in coordination with the \ac{NC} monomer.}
+\label{fig:neutral_prot}
+\end{figure}
+
+Water as the protonating species was also attempted (figure \ref{fig:neutral_prot}), by optimisation of one, two and three water molecules in coordination with the nitrate site in the \ac{NC} monomer, however no stable complex could be isolated. It is anticipated that a much larger network of waters around both the regions surrounding the nitrate moiety, and the wider molecule, are be required to achieve a stable water coordination structure. This would be of interest for further investigation into the mechanism of neutral hydrolysis involving the autoionsation of water \cite{DaSilva2013}. %The optimisation of \ce{H3O} in coordination with the fully nitrated monomer was also tested, but was only possible up to the level HF/6-31g.  
+%Dragrams of the water coord geometrties you tried, pls?
+%to see whether it was possible to stabilise in coordination.  
+%Thus, omitting entropy effects. 
+ %also include the function of hydrolysis in the degradation of sugars, in the lit review
+Evaluation of the energy of protonation at each site found that the bridging and capping
+oxygens were the most likely sites; with only the bridging isomer likely to contribute to denitration. However, protonation at the terminal structures will also be explored as the starting point for the subsequent denitration stage.  \\
+%Big table of all the scans I did (for hydrolysis TS) \\
+%Columns:  \\
+%Scanned co-ordinate. Distance scanned. Observation. (TS found? etc)\\
+%add in B3LYP too, if you can be bothered
 
 %SMD energies look ridiculous
 %\begin{table}[htp]
@@ -630,24 +640,14 @@ Evaluation of the energy of protonation at each site found that the bridging and
 %\end{center}
 %\end{table}
 %
-\begin{figure}[htp]
-\centering
-\includegraphics[width=0.25\linewidth]{neutral_hydro_1}
-\caption{The attempted geometry of a single water molecule in coordination with the \ac{NC} monomer.}
-\label{fig:neutral_prot}
-\end{figure}
 
 \subsubsection{Denitration by hydrolysis}
-Following the protonation step, possible transition states for the removal of the nitrate were investigated. Direct dissociation of \ce{NO2} from the protonated species was explored, along with the simultaneous approach of a proton and cleavage of the \ce{NO2} (figure \ref{fig:scan_coords}). The scan of the proton moving towards the bridging site was also conducted, to determiner whether any elongation of the \ce{O-NO2} occurred as a result of the formation of the proton-oxygen bond.
+Following the protonation step, possible transition states for the removal of the nitrate were investigated. Direct dissociation of \ce{NO2} from the protonated species was explored (figure \ref{fig:no2-leave})), along with the simultaneous approach of a proton and cleavage of the \ce{NO2}(figure \ref{fig:h-come-no2-leave})). %(figure \ref{fig:scan_coords}). 
+The scan of the proton moving towards the bridging site was also conducted, to determine whether any elongation of the \ce{O-NO2} occurred as a result of the formation of the proton-oxygen bond (figure \ref{fig:h-approach})). 
  
 %was also completed to gain insight to the energy profile of the process. %any scans to show? 
-\begin{figure}[htp]
+\begin{figure}[ht]
 \centering
-\begin{subfigure}[b]{0.25\linewidth}
-\centering
-\includegraphics[width=\linewidth]{H_bridge-approach_arrow}
-\label{fig:h-approach}
-\end{subfigure}
 \begin{subfigure}[b]{0.25\linewidth}
 \centering
 \includegraphics[width=\linewidth]{NO2_leave-prot_arrow}
@@ -658,6 +658,11 @@ Following the protonation step, possible transition states for the removal of th
 \includegraphics[width=\linewidth]{NO2_leave-prot_arrow_2d}
 \label{fig:h-come-no2-leave}
 \end{subfigure}
+\begin{subfigure}[b]{0.25\linewidth}
+\centering
+\includegraphics[width=\linewidth]{H_bridge-approach_arrow}
+\label{fig:h-approach}
+\end{subfigure}
 \caption{The scanned coordinates of %\ref{fig:h-approach}
 a) proton approach, %\ref{fig:no2-leave}
 b) dissociation of \ce{NO2} and %\ref{fig:h-come-no2-leave}
@@ -665,10 +670,20 @@ c) concerted protonation and \ce{NO2} dissociation.}
 \label{fig:scan_coords}
 \end{figure}
 
-The relaxed \ac{PES} scan of \ce{NO2} removal from ethyl nitrate protonated at the bridging site was used as a preliminary test for the mechanism of denitration following protonation (figure \ref{fig:PES_EN_scan}). 
-Unrestricted \ac{wb97xd} was used, with 20 steps of 0.1 $\text{\AA}$, however bond dissociation was not illustrated in the energy profile even when extending the scan distance to a maximum of 6.4 $\text{\AA}$. Instead, a steady increase in the energy was observed. It can be seen that as the nitrate departs, the whole molecule rotates and the \ce{NO2} leaving group aligns with the hydroxyl in an orientation suitable for formation of a peroxy group. The internal angle of the leaving group increases to 180$\degree$, confirming that \ce{NO2} leaves as \ce{NO2+}. This was the expected outcome for hydrolysis, as it is anticipated that the \ce{NO2+} will further react to produce acids conducive to further hydrolysis. 
+The relaxed \ac{PES} scan of \ce{NO2} removal from ethyl nitrate protonated at the bridging site was used as a preliminary test for the mechanism of denitration, following protonation (figure \ref{fig:PES_EN_scan}). 
+Unrestricted \ac{wb97xd} was used in case of the formation of  \ce{^{.}NO2} instead of the expected \ce{NO2+}, with 20 steps of 0.1 $\text{\AA}$. However, bond dissociation was not illustrated in the energy profile even when extending the scan distance to a maximum of 6.4 $\text{\AA}$. Instead, a steady increase in the energy was observed. %fig?
+It can be seen that as the nitrate departs, the internal angle of the leaving group increased to 180$\degree$, confirming the formation of \ce{NO2+}. It is anticipated that the departing \ce{NO2+} will further react with water in the system, to produce acids conducive to further hydrolysis. 
+As the scan proceeded, the molecule rotated and the \ce{NO2+} leaving group aligned with the hydroxyl in an orientation suitable for peroxy group formation (figure \ref{fig:EN_pero}).  %This was the expected outcome for hydrolysis, as 
+This mechanism was previously considered in the degradation reactions of \ac{PETN}; %section ref
+it was found that the energy of this process was higher than that of \ac{HNO2} elimination, where the nitrate was not initially protonated. The formation of the peroxy bond was not facilitated by the scan parameters due to forced increase of the \ce{O-N} distance, but further studies may explore this process for the \ac{NC} monomer. As the formation of the peroxy geometry required re-orientation of the whole molecule, is it unlikely that the energy of this process would be favourable for the bulky \ac{NC} unit. In the real polymeric system, it may induce distortion of the sugar ring, proving even more energetically demanding.  
+
+%2D scan + pics
+%H approach scans
+
+%did I apply this to my monomer?
+%I didnt get a TS out of this, regardless....
 %This may be due to the specification of the spin  /charge?
-\begin{figure}[htp]
+\begin{figure}[hb]
 \centering
 \begin{subfigure}[b]{0.3\linewidth}
 \centering
@@ -691,8 +706,9 @@ Unrestricted \ac{wb97xd} was used, with 20 steps of 0.1 $\text{\AA}$, however bo
 \centering
 \includegraphics[width=\linewidth]{EN_NO2_leave_prot_step_cont5-BL}
 \caption{}
+\label{fig:EN_pero}
 \end{subfigure}
-\caption{Geometries from steps 1, 7, 11 and 26 of the \ac{PES} scan of \ac{EN}}
+\caption{Geometries from steps 1, 7, 11 and 26 of the geometry scan of Ox protonated \ac{EN} denitration.}
 \label{fig:PES_EN_scan}
 \end{figure}
 %%%% POSSIBLY EXPLORE PEROXY deg routes in the next chapter, OR whether the H is snatched back for HNO2?
@@ -702,9 +718,9 @@ Unrestricted \ac{wb97xd} was used, with 20 steps of 0.1 $\text{\AA}$, however bo
 % leaving group is lost as \ce{NO2}, and the nature of the monomer following denitration. 
 %probe the generated denitration products.
 % to simulate the removal of \ce{NO2}. 
-Proposed 4-membered ring and 6-membered ring \ac{TS} were investigated in order to determine whether they energetically and geometrically reasonable structures.  
+Proposed 4-membered ring and 6-membered ring \ac{TS} were also investigated in order to determine whether they formed energetically and geometrically reasonable structures facilitating nitrate removal, with reformation of the alcohol group on the sugar ring (\ref{fig:all_da_TS}).  
 %
-\begin{figure}[htp]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}[t]{0.25\linewidth}
 \caption{}
@@ -750,15 +766,17 @@ Proposed 4-membered ring and 6-membered ring \ac{TS} were investigated in order 
 %\caption{Concerted protonation-denitration, under acid hydrolysis conditions.}
 \end{subfigure}
 \caption[Proposed 4-member and 6-member ring transition states for the denitration of a nitrate ester.]{Proposed 4-member and 6-member ring transition states for the denitration of a nitrate ester, under various hydrolytic conditions. R = \ce{CH3} in the case of methyl nitrate, R = \ce{CH2CH3} in the case of ethyl nitrate and R = \ce{(H3CO)2C6H9O3} for the monomer.}
+\label{fig:all_da_TS}
 \end{figure}
 %
-Optimisations were attempted with both full geometry relaxation, and various frozen coordiate schemes for each proposed \ac{TS}. The R groups were simplified to methyl nitrate ( R = \ce{CH3}) in effort to limit degrees of freedom during optimisation of the \ac{TS} structures, however no fully relaxed structures were able to achiever convergence. Fixing of the bulk molecule with relaxation only around the nitrate and coordinating species, or relaxation of the wider molecule with fixed coordinates around the nitrate, allowed sequential optimisation of different moieties, increasing chances of global energy minimisation.  % with expansion to ethyl nitrate and the \ca{NC} monomer, following 
+Optimisations were attempted with both full geometry relaxation, and various frozen coordiate schemes for each proposed \ac{TS}. R groups were %simplified 
+truncated further, to methyl nitrate ( R = \ce{CH3}) in effort to limit degrees of freedom during challenging optimisation of the \ac{TS} structures, however no fully relaxed structures were able to achieve convergence. Fixing of the bulk molecule with relaxation only around the nitrate and coordinating species, or relaxation of the wider molecule with fixed coordinates around the nitrate, allowed sequential optimisation of different moieties, increasing chances of global energy minimisation.  % with expansion to ethyl nitrate and the \ca{NC} monomer, following 
 It was possible to optimise the 4-membered ring bridging \ac{TS} on the \ac{NC} monomer with frozen \ac{TS} ring geometry \textit{via} preliminary optimisation of the ring structure with methyl nitrate. The optimised ring geometry was then placed on the monomer, with fixing of thee coordinates, allowing the remainder of the molecule to relax. 
 % and relaxation of the remaining molecule (figure \ref{fig:4mem_b}). %actually we opt the ring with methyl nitrate first then reattached it to ring
 A rigid scan was then performed of the 4-membered ring transition starting from the bridging site protonated monomer. It was revealed that as the nitrate moved away from the system, the proton moved to the capping group site rather than remain on the bridging oxygen as a hydroxyl, as was expected. Instead, a ketone group was formed between the bridging oxygen and the ring. At subsequent steps, the ketone group causes the C2 - C3 bond to elongate and break. The scan eventually revealed the \ce{NO2} leaving group reclaiming the proton from the capping group oxygen, leading to ring fission. The activation and kinetic barrier involved in ring fission is much higher than that of denitration; a study on the acid hydrolysis of glucose and xylose demonstrated that ring-opening intermediates were either extremely short lived, or not observed at all \cite{Qian2005}. 
 The open-chain product of the scan is likely due to the geometric constraints placed on the geometry of the departing \ce{NO2} group, rather than a physically energetic process. However, it sheds light on the scheme by which ring fission occurs, with has been implied in previous work involving the formation of a ketone at earlier stages of the reaction. %REf that oldschool paper with the diagrams
 %include distances as before, later
-\begin{figure}[htp]
+\begin{figure}[ht]
 \centering
 \begin{subfigure}[b]{0.5\linewidth}
 \centering
