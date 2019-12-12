@@ -468,12 +468,14 @@ The protonated \ac{NC} monomers explored in this section are shown in figure \re
 \caption{Bridging}
 \label{fig:proton_site_bridge}
 \end{subfigure}
+\hfill
 \begin{subfigure}[t]{0.3\linewidth}
 \centering
 \includegraphics[width=\linewidth]{H_terminal_b}
 \caption{Terminal}
 \label{fig:proton_site_terminal}
 \end{subfigure}
+\hfill
 \begin{subfigure}[t]{0.3\linewidth}
 \centering
 \includegraphics[width=\linewidth]{H_cap_b}
@@ -601,6 +603,7 @@ The remainder of the monomers exhibit only minor changes in geometry between vac
 %FIXED
 %For the solvated results, the two functionals perform similarly, except in the case of the Terminal (Upper) structure. Inspection of the geometries and \ac{QTAIM} analysis did not uncover any significance differences in structure or critical points (see appendix \ref{AH_Protonation_QTAIM}). 
 
+%Draw the two water one too
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.25\linewidth]{neutral_hydro_1}
@@ -619,7 +622,7 @@ oxygens were the most likely sites; with only the bridging isomer likely to cont
 %Columns:  \\
 %Scanned co-ordinate. Distance scanned. Observation. (TS found? etc)\\
 %add in B3LYP too, if you can be bothered
-
+%
 %SMD energies look ridiculous
 %\begin{table}[htp]
 %\begin{center}
@@ -650,16 +653,21 @@ The scan of the proton moving towards the bridging site was also conducted, to d
 \centering
 \begin{subfigure}[b]{0.25\linewidth}
 \centering
+\caption{}
 \includegraphics[width=\linewidth]{NO2_leave-prot_arrow}
 \label{fig:no2-leave}
 \end{subfigure}
+\hfill
 \begin{subfigure}[b]{0.25\linewidth}
 \centering
+\caption{}
 \includegraphics[width=\linewidth]{NO2_leave-prot_arrow_2d}
 \label{fig:h-come-no2-leave}
 \end{subfigure}
+\hfill
 \begin{subfigure}[b]{0.25\linewidth}
 \centering
+\caption{}
 \includegraphics[width=\linewidth]{H_bridge-approach_arrow}
 \label{fig:h-approach}
 \end{subfigure}
@@ -672,10 +680,10 @@ c) concerted protonation and \ce{NO2} dissociation.}
 
 The relaxed \ac{PES} scan of \ce{NO2} removal from ethyl nitrate protonated at the bridging site was used as a preliminary test for the mechanism of denitration, following protonation (figure \ref{fig:PES_EN_scan}). 
 Unrestricted \ac{wb97xd} was used in case of the formation of  \ce{^{.}NO2} instead of the expected \ce{NO2+}, with 20 steps of 0.1 $\text{\AA}$. However, bond dissociation was not illustrated in the energy profile even when extending the scan distance to a maximum of 6.4 $\text{\AA}$. Instead, a steady increase in the energy was observed. %fig?
-It can be seen that as the nitrate departs, the internal angle of the leaving group increased to 180$\degree$, confirming the formation of \ce{NO2+}. It is anticipated that the departing \ce{NO2+} will further react with water in the system, to produce acids conducive to further hydrolysis. 
+It was observed that as the nitro group distance increased, its internal angle increased to 180$\degree$, confirming the formation of \ce{NO2+}. It is anticipated that the departing \ce{NO2+} will further react with water in the system to produce acids conducive to further hydrolysis. 
 As the scan proceeded, the molecule rotated and the \ce{NO2+} leaving group aligned with the hydroxyl in an orientation suitable for peroxy group formation (figure \ref{fig:EN_pero}).  %This was the expected outcome for hydrolysis, as 
 This mechanism was previously considered in the degradation reactions of \ac{PETN}; %section ref
-it was found that the energy of this process was higher than that of \ac{HNO2} elimination, where the nitrate was not initially protonated. The formation of the peroxy bond was not facilitated by the scan parameters due to forced increase of the \ce{O-N} distance, but further studies may explore this process for the \ac{NC} monomer. As the formation of the peroxy geometry required re-orientation of the whole molecule, is it unlikely that the energy of this process would be favourable for the bulky \ac{NC} unit. In the real polymeric system, it may induce distortion of the sugar ring, proving even more energetically demanding.  
+it was found that the energy of this process was higher than that of \ac{HNO2} elimination, where the nitrate was not initially protonated. The formation of the peroxy bond was not facilitated by the scan parameters due to forced increase of the \ce{O-N} distance. The same process was not observed when the scan was applied to the \ac{NC} monomer. As the formation of the peroxy geometry required re-orientation of the whole molecule, the energy of this rearrangement was not favourable for the bulky \ac{NC} unit. In the real polymeric system, it may induce distortion of the sugar ring, proving even more energetically demanding.  %This was also done n both B3LYP and wb97xd. (MP2 too, but lets leave that)
 
 %2D scan + pics
 %H approach scans
@@ -718,7 +726,7 @@ it was found that the energy of this process was higher than that of \ac{HNO2} e
 % leaving group is lost as \ce{NO2}, and the nature of the monomer following denitration. 
 %probe the generated denitration products.
 % to simulate the removal of \ce{NO2}. 
-Proposed 4-membered ring and 6-membered ring \ac{TS} were also investigated in order to determine whether they formed energetically and geometrically reasonable structures facilitating nitrate removal, with reformation of the alcohol group on the sugar ring (\ref{fig:all_da_TS}).  
+Proposed 4-membered ring and 6-membered ring \ac{TS} were also investigated in order to determine whether they formed energetically and geometrically reasonable structures facilitating nitrate removal, with reformation of the alcohol group on the sugar ring (figure \ref{fig:all_da_TS}).  
 %
 \begin{figure}[ht]
 \centering
@@ -770,12 +778,15 @@ Proposed 4-membered ring and 6-membered ring \ac{TS} were also investigated in o
 \end{figure}
 %
 Optimisations were attempted with both full geometry relaxation, and various frozen coordiate schemes for each proposed \ac{TS}. R groups were %simplified 
-truncated further, to methyl nitrate ( R = \ce{CH3}) in effort to limit degrees of freedom during challenging optimisation of the \ac{TS} structures, however no fully relaxed structures were able to achieve convergence. Fixing of the bulk molecule with relaxation only around the nitrate and coordinating species, or relaxation of the wider molecule with fixed coordinates around the nitrate, allowed sequential optimisation of different moieties, increasing chances of global energy minimisation.  % with expansion to ethyl nitrate and the \ca{NC} monomer, following 
+truncated even further to methyl nitrate ( R = \ce{CH3}), in effort to limit degrees of freedom during challenging optimisation of the \ac{TS} structures, however no fully relaxed structures were able to achieve convergence. Fixing of the bulk molecule with relaxation only around the nitrate and coordinating species, or relaxation of the wider molecule with fixed coordinates around the nitrate allowed sequential optimisation of different moieties, increasing chances of global energy minimisation.  % with expansion to ethyl nitrate and the \ca{NC} monomer, following 
 It was possible to optimise the 4-membered ring bridging \ac{TS} on the \ac{NC} monomer with frozen \ac{TS} ring geometry \textit{via} preliminary optimisation of the ring structure with methyl nitrate. The optimised ring geometry was then placed on the monomer, with fixing of thee coordinates, allowing the remainder of the molecule to relax. 
 % and relaxation of the remaining molecule (figure \ref{fig:4mem_b}). %actually we opt the ring with methyl nitrate first then reattached it to ring
-A rigid scan was then performed of the 4-membered ring transition starting from the bridging site protonated monomer. It was revealed that as the nitrate moved away from the system, the proton moved to the capping group site rather than remain on the bridging oxygen as a hydroxyl, as was expected. Instead, a ketone group was formed between the bridging oxygen and the ring. At subsequent steps, the ketone group causes the C2 - C3 bond to elongate and break. The scan eventually revealed the \ce{NO2} leaving group reclaiming the proton from the capping group oxygen, leading to ring fission. The activation and kinetic barrier involved in ring fission is much higher than that of denitration; a study on the acid hydrolysis of glucose and xylose demonstrated that ring-opening intermediates were either extremely short lived, or not observed at all \cite{Qian2005}. 
-The open-chain product of the scan is likely due to the geometric constraints placed on the geometry of the departing \ce{NO2} group, rather than a physically energetic process. However, it sheds light on the scheme by which ring fission occurs, with has been implied in previous work involving the formation of a ketone at earlier stages of the reaction. %REf that oldschool paper with the diagrams
+A rigid scan was then performed of the 4-membered ring transition starting from the bridging site protonated monomer. It was revealed that as the nitrate moved away from the system, the proton moved to the capping group site rather than remain on the bridging oxygen as a hydroxyl, %(even when solvated)
+as was initially expected. Instead, a ketone group was formed between the bridging oxygen and the ring. At subsequent steps, the ketone group caused the C2 - C3 bond to elongate and break. The scan eventually showed the \ce{NO2} leaving group reclaiming the proton from the capping group oxygen, leading to ring fission. The activation and kinetic barrier involved in ring fission is much higher than that of denitration; a study on the acid hydrolysis of glucose and xylose demonstrated that ring-opening intermediates were either extremely short lived, or not observed at all \cite{Qian2005}. 
+The open-chain product of the scan is likely due to the geometric constraints placed on the geometry of the departing \ce{NO2} group, rather than a likely physical %energetic 
+process. However, it sheds light on the scheme by which ring fission may occur under conditions of elevated temperature or pressure, which has been implied in previous work involving the formation of a ketone at earlier stages of the reaction. %REf that oldschool paper with the diagrams
 %include distances as before, later
+%shorten the captions. they silly. Put them in the body of text / big caption at the bottom
 \begin{figure}[ht]
 \centering
 \begin{subfigure}[b]{0.5\linewidth}
@@ -792,7 +803,7 @@ The open-chain product of the scan is likely due to the geometric constraints pl
 \caption{Relaxed scan of \ce{NO2} departure, starting with the 4-membered ring structure. }
 \end{figure}
 %
-Attempts to isolate the other \ac{TS} structures were unsuccessful, even when simplifying the side chain to methyl nitrate and applying implicit solvent in the case it stabilised the charges on the strained structures. 
+Attempts to isolate the other \ac{TS} structures were unsuccessful, even when simplifying the side chain to methyl nitrate and under implicit solvent conditions. %in the case it stabilised the charges on the strained structures. 
 %Dualscan - compare different methods. This was the final nail in the head that we woudln't be able to isolate an actual TS
 
 %It was found that none of the above structures were able to be optimised for the monomer and was attempted with a reduced methyl nitrate test system. 
@@ -817,18 +828,30 @@ Attempts to isolate the other \ac{TS} structures were unsuccessful, even when si
 \section{Summary}
 
 %Homolysis is fastest, for the monomer too, with HNO2 coming in second due to slower rate / energetics. (Check if I did anything to actually find this out - may just have to compare energetics.)
-Thermolytic cleavage of the nitrate was modelled \textit{via} homolysis and elimination of \ce{HNO2}. In the case of \ac{PETN} it was found that the reaction energies were lower than expected when comparing with literature values. This may be due to differing geometries of the modelled reaction products, or due to the separate evaluation of the \ac{PETRIN} radical and \ce{^{.}NO2} engergies, where they should have remained in complex following the reaction. The same process was repeated for the \ac{NC} monomer, singly nitrated at the C2 site. The energy of homolytic fission was in good agreement with the expected value based on the outcome of the \ac{PETN} product. 
-\ac{PES} scans of homolysis confirmed the loss of \ce{^{.}NO2} for both the case of \ac{PETN} and the \ac{NC} monomer. 
+Thermolytic cleavage of the nitrate was modelled \textit{via} homolysis and elimination of \ce{HNO2}. In the case of \ac{PETN} it was found that the reaction energies were lower than expected when comparing with literature values. For homolytic fission, this may be  %due to treatment of the modelled reaction products as separate molecules instead of a complex, in the case of homolytic fission, or 
+due to the separate evaluation of the \ac{PETRIN} radical and \ce{^{.}NO2} energies, where they should have remained in complex following the reaction. %Contributions may also have arisen as a result of differing software compilations. 
+The same process was repeated for the \ac{NC} monomer, singly nitrated at the C2 site. The energy of homolytic fission was in good agreement with the expected value based on the outcome of the \ac{PETN} product. 
+\ac{PES} scans of homolysis confirmed the loss of \ce{^{.}NO2} for %both the case of \ac{PETN} and 
+the \ac{NC} monomer. 
 
-The elimination of \ce{HNO2} \textit{via} intramolecular \textalpha-H attack was also explored. Compared to the homolysis reaction, the energy of reaction and activation energy values gave better agreement to literature in the case of \ac{PETN}. Calculated \ac{NC} values were also within anticipated values, based on the reaction for \ac{PETN}. \ac{PES} scans were unable to location a \ac{TS} for the \ac{NC} monomer, however, a successful guess geometry was generated based on the analogous structure in the reaction for the \ac{PETN}. %In general, the energies of activation are higher for \ac{NC} than for \ac{PETN}, though this is reasonable, and neighbouring \ce{-ONO2} groups are said to destabilise ...
-Enthalpies of reaction energies show that this processes was more exothermic in the case of \ac{NC}, then for \ac{PETN}.
+The elimination of \ce{HNO2} \textit{via} intramolecular \textalpha-H transfer was also explored. Compared with homolysis, the energy of reaction and activation energy values gave better agreement with literature in the case of \ac{PETN}. Calculated \ac{NC} values were also within anticipated ranges, based on the reaction for \ac{PETN}. \ac{PES} scans were unable to locate a \ac{TS} for the \ac{NC} monomer, however, a successful guess geometry was generated based on the analogous structure in the reaction for the \ac{PETN}. %In general, the energies of activation are higher for \ac{NC} than for \ac{PETN}, though this is reasonable, and neighbouring \ce{-ONO2} groups are said to destabilise ...
+Enthalpies of reaction energies show that this processes was more exothermic in the case of \ac{NC}, than for \ac{PETN} and showed that the elimination of \ce{HNO2} was more thermodynamically favourable in \ac{NC}, though homolysis may occur more rapidly, as is the case for \ac{PETN}.
 
 %Scans did confirm that \ce{^{.}NO2} left as a radical.
 %Scans showed the energy profiles involved (again, was HNO2 ever seen to be formed? )
-The protonation sites on the \ac{NC} monomer were probed for the most favourable position. It was found that the bridging site was energetically preferred, though inspection of the optimised geometry showed that it was very close to that of protonation at the capping site. As protonation and subsequent reaction would more likely lead to chain scission in the case of capping protonation, this avenue was disregarded in further studies focussing on the acid hydrolysis pathway. Optimisation of [water - monomer] and [hydronium - monomer] complexes were attempted, in order to obtain information on the nature and orientation of the protonation complex. However, it was not possible to isolate any stable structures, implying that a larger stabilising network of waters is likely required.
+The protonation sites on the \ac{NC} monomer were probed for the most favourable position. It was found that in the gas phase, capping and bridging site protonation lead to the same protonated final structure. 
+In the solvent phase the capping site was energetically preferred, seconded by the bridging site. %, though inspection of the optimised geometry showed that it was very close to that of protonation at the capping site. 
+As protonation and subsequent reaction would more likely lead to chain scission in the case of capping protonation, this avenue was disregarded in further studies focussing on the acid hydrolysis pathway. 
+Optimisation of [water - monomer] and [hydronium - monomer] complexes were attempted, in order to obtain information on the nature and orientation of the protonation complex. However, it was not possible to isolate any stable structures, implying that a larger stabilising network of waters is likely required.
 
-Removal of \ce{NO2} from the protonated analogues of ethyl nitrate and the \ac{NC} monomer was scanned using a variety of rigid and relaxed \ac{PES} schemes. In the removal of \ce{NO2} from ethyl nitrate the released of \ce{NO2+} was indicated by the change of geometry around the nitrate from bent to linear, as the \ce{O-NO2} bond elongated. Rotation of the remaining ethanol and complexed \ce{NO2+} showed orientation suitable for formation of a peroxide. This rotation was not observed in the case of the monomer, however the leaving group still presented as \ce{NO2+}.
-4 and 6 membered \ac{TS} were also tested for the denitration reaction. Unexpectedly, it was found that none of the 6-membered ring structures could be isolated, regardless of prior protonation of concerted protonation-denitration. In the case of the bridging-protonated \ac{NC} with formation of the 4-membered ring \ac{TS} at the C2 nitrate, it was possible to relax the \ac{NC} monomer structure around the ring so long as the ring geometry itself was frozen. As the leaving group moved further from the remainder of the molecule, the hydroxyl group located at C2 formed a ketone, losing the proton to the departing \ce{NO2+}, to form \ce{HNO2} in later stages of the scan. Eventually ring fission occurred, as the \ce{HNO2} move sufficient distance away, and the formation of the ketone forced the adjacent \ce{C-C} bond in the ring to stretch, and then break. %However, as the energy barrier associated with this are much higher than that of  - dont' expect it, should solely be denitration then peeling off first
+Removal of \ce{NO2} from the protonated analogues of ethyl nitrate and the \ac{NC} monomer was scanned using a variety of rigid and relaxed \ac{PES} schemes. In the removal of \ce{NO2} from ethyl nitrate the released of \ce{NO2+} was indicated by the change of geometry around the nitrate from bent to linear, as the \ce{O-NO2} bond elongated. 
+Rotation of the remaining ethanol and complexed \ce{NO2+} showed orientation suitable for formation of a peroxide. This rotation was not observed in the case of the monomer, however the leaving group still presented as \ce{NO2+}.
+4 and 6 membered ring \ac{TS} were also tested for the denitration reaction. 
+%https://www.ch.imperial.ac.uk/rzepa/blog/?p=10015 see here for some rings that are supposed to work...
+Unexpectedly, it was found that none of the 6-membered ring structures could be isolated, regardless of truncation of the system to a protonated methyl nitrate model, or using the un-protonated monomer to simulate concerted protonation-denitration. 
+%prior protonation using methyl nitrate geometries. 
+In the case of the bridge-protonated \ac{NC} with formation of the 4-membered ring \ac{TS} at the C2 nitrate, it was possible to relax the \ac{NC} monomer structure around the ring so long as the ring geometry itself was frozen. As the leaving group moved further from the remainder of the molecule, the hydroxyl group located at C2 formed a ketone, losing the proton to the departing \ce{NO2+}, to form \ce{HNO2} in later stages of the scan. Eventually ring fission occurred, as the \ce{HNO2} move sufficient distance away, and the formation of the ketone forced the adjacent \ce{C-C} bond in the ring to stretch, and then break. It is known that the energy required for this process is much higher than that of denitration, so is unlikely to contribute to initial stages of ambient ageing.
+%However, as the energy barrier associated with this are much higher than that of  - dont' expect it, should solely be denitration then peeling off first
 
 % 
 %AH rate was not able to be compared as a TS was not found.
@@ -836,10 +859,8 @@ Removal of \ce{NO2} from the protonated analogues of ethyl nitrate and the \ac{N
 %
 %TS were not able to be isolated for the denitration step, even with coordination with water in different orientation and both 4 and 6 mem ring TS. 2D scans did reveal a possible TS but it did not lead to the desired denitration pathway. 
 %See water clusters around NC by \cite{Gunko2014}.
-
-
-
+%
 %alternate story if given more time to correct geometies - do the scans and TS with the reactified structure, plus the additional of on the interaction with the capping site. 
-
+%
 %Determine whether 
-
+%Overall, the formation of \ce{^{.}NO2} for the homolytic reaction, and \ce{NO2} for the elimination of ce{HNO2} and in the initial stages of acid hydrolysis reactions was confirmed. But we have no idea of any rates, etc

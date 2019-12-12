@@ -13,7 +13,11 @@
 %Intro to the history spiel. What it is, where did it come from. 
 %Wave particle duality. 
 % Dodgy first sentence, change it. 
-Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. At the most fundamental level, the wave function ($\Psi$) holds the description of a quantum system. %Need a linking sentence here - What is the wave function, and why do we need to look at the probablility densiy instead?
+Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. 
+Despite the long history of research and use of \ac{NC} in industry, experimental analysis has failed to distinguish the fine mechanistic details of \ac{NC} decomposition, in part owing to the variation arising from \ac{NC} source material, but also the complexity due to the interplay of many different and simultaneous degradation interactions. Electronic structure methods provide a means to %avenue for exploration/ opportunity 
+untangle the individual facets of decomposition. %and study each in . 
+
+At the most fundamental level, the wave function ($\Psi$) holds the description of a quantum system. %Need a linking sentence here - What is the wave function, and why do we need to look at the probablility densiy instead?
 In a non-relativistic system, % So what happens in a relativistic system?
 the probability of a particle possessing a given momentum, or residing in a particular location, is given by the probability density. This can be obtained by  multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. %Born interpretation. Ref? 
 %Make sure you know what a complex conjugate is.
@@ -28,7 +32,7 @@ integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
 \end{equation}
 %The above equation just means an integral of Psi_i and Psi_j over 3D Cartesian space. Or something to that effect.  
-Where all states are represented by $i$ and $j$, and:
+where all states are represented by $i$ and $j$, and:
 \begin{center}
 $\delta_{ij}=0$ for $i\neq j$\\
 $\delta_{ij}=1$ for $i=j$
@@ -44,7 +48,7 @@ The operator returning the energy of the system is called the the Hamiltonian op
 Erwin Schr\"{o}dinger %first 
 proposed his equation in 1926, describing a quantum system using its wave function \cite{schrodinger1926}. %Check this is accurate. Does the equation use the wave function to describe the (energy of the) system, or does the equation just describe the wave function itself?
 %The time-independent %Schr\"{o}dinger 
-Schr\"{o}dinger's time independent equation is:
+Schr\"{o}dinger's time-independent equation is:
 %Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
 %\subsection{The Schr\"{o}dinger Equation} time independent schrodingers
 \begin{equation}
@@ -89,7 +93,7 @@ A given system may have many acceptable values for $\Psi$, each with an associat
 
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
 %\textbackslash underbrace\{x+y\}\]\{|A|\
-The general form of the Hamiltonian is given by 
+The general form of the Hamiltonian is given b:y 
 \begin{equation}
 \mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_k^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
 \label{equ:hamiltonian}
@@ -99,7 +103,7 @@ where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
 is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^{-34}$), 
-$m_e$ is the mass of an electron, 
+$m_e$ is the mass of an electron, %Numbers and ref for all these please
 $m_k$ is the mass of the nucleus $k$, 
 $e$ is the charge of an electron, 
 %$\mathsf{e}$ is the charge of an electron %Change to sans serif, to differentiate from the exponential symbol? If so, change the equation too. 
@@ -107,18 +111,16 @@ $Z_k$ is the atomic number of $k$ and %$r_{xy}$ is the distance between particle
 $r_{ik}$ is the distance between particles $i$ and $k$. 
 When using \ac{au}, %the electronic mass, charge and reduced Planck's constant 
 the value of $e$, $m_e$ and $\hbar$ are reduced to 1. %Give the simplified equation here? %see Leah pg 29 for physical constants
-
 $\nabla^{2}$ refers to the Laplacian operator, which describes the divergence of the gradient of a field. % It describes how the gradient (the gradient of a function of space) diverges over a function. Field or function? I guess if its a 3D plane function, you can call it a field.
 %Laplacian of the electron density, is therefore the rate of change / divergence of the electron density, over that bit of space / cartesian coord?
 % +ve is electron density deficient, -ve is electron density rich
 %See the wiki: https://en.wikipedia.org/wiki/Laplace_operator
 In Cartesian space, this is defined as the sum of the second derivatives of the gradient with respect to each of the three dimensions ($x$,$y$,$z$): % Does it refer to the change in electronic position, in this case? Do I even need to mention much about Laplacian?
-
+%
 \begin{equation}
 \nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
 \label{equ:laplace}
 \end{equation}
-
 
 %Maybe I should label the equation itself
 The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term; %followed by the interelectronic and internuclear repulsive terms. 
@@ -137,7 +139,7 @@ can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$)
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
 \end{equation}
-
+%Don't know really know why being able to do the above, is important. 
 The total, non-relativistic Hamiltonian %Equation \ref{equ:hamiltonian}
 can therefore be written in terms of the kinetic energy and potential energy operators:
 \begin{equation}
@@ -190,7 +192,7 @@ Equation \ref{equ:hamiltonian} is reduced to its electronic components and nucle
 %\label{equ:hamiltonian_BO_op}
 %\end{equation}
 %
-The electronic terms can be collected into one term, to simplify notation:
+and the electronic terms can be collected into one term, to simplify notation:
 \begin{equation}
 \mathbf{H}= \mathbf{H}_{el}+ \mathbf{V}_{NN}
 \label{equ:hamiltonian_BO_simp}
@@ -206,8 +208,9 @@ The Schr\"{o}dinger’s equation can now be written in terms of only the electro
 \end{equation}
 %where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
 where the electronic coordinates are given by $\mathbf{q}_{i}$, the stationary nuclear positions by $\mathbf{q}_{k}$ and 
-$E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. 
-%significance of this?
+$E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. %Set parameters
+% SO HOW DO WE CALCULATE Eel?
+%significance of this? caveats of this?
 % and thus appear following a semicolon rather than a comma in the variable list for \Psi
 % so that the  Schr\"{o}dinger’s equation can be solved for the electrons alone. 
 
@@ -217,23 +220,38 @@ Given the example of a diatomic molecule, a potential energy curve can be obtain
 %(\ref{elements of physical chemistry})
 A series of these calculations %along different fixed nuclear separations 
 generates a potential energy profile, allowing identification of an equilibrium bond length at the minimum of the curve. 
-Calculation of $E_{el}$ for all possible nuclear coordinates in a system of three or more atoms allows the construction of a \ac{PES}. This is a hypersurface on which nuclear motion occurs, with the potential energy defined by the nuclear geometry. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
+Calculation of $E_{el}$ for all possible nuclear coordinates in a system of three or more atoms facilitates the construction of a hypersurface %on which all nuclear motion occurs, 
+%with 
+on which the potential energy is defined by the nuclear geometry, called a \ac{PES}. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
+%This last section may be a bit dodgy/ inaccurate/ CHECK
+Exploration of the \ac{PES} allows for discovery of global and local minimum energy structures, intermediate products on a reaction coordinate and transition states, through scrutiny of the %second derivative of the 
+gradient at a particular set of nuclear coordinates. 
+%The matrix of second partial derivatives is referred to as the Hessian matrix. 
+%
+%If $  x_0  $  is a critical point and $ 
+%f^{\prime\prime}(x_0) < 0  $  , then is a local maximum.
+%If $  x_0  $  is a critical point and $ 
+%f^{\prime\prime}(x_0) > 0  $  , then is a local minimum.
+%If the second derivative is positive at a point, the graph is concave up. If the second derivative is positive at a critical point, then the critical point is a local minimum.
+%If the second derivative is negative at a point, the graph is concave down. If the second derivative is negative at a critical point, then the critical point is a local maximum.
+%An inflection point marks the transition from concave up and concave down. The second derivative will be zero at an inflection point.
 
 Molecular structure theories adopt the Born-Oppenheimer approximation for its effective simplification of the coupled nuclear-electronic motion problem, in addition to its %relative
 accuracy; this assumption works well for ground state molecules and only introduces very small errors. %CHECK THIS, and what happens for excited ones?? / refs / examples
-The model breaks down in the situation where there are multiple \ac{PES}, similar in energy %proximity 
-to one another, or even intersecting. %CHECK / ref/ give examples
+The model breaks down in the situation where there are multiple \ac{PES} close in energy %proximity 
+to one another, %In what kind of systems?
+or even intersecting. %CHECK / ref/ give examples
 %See Jensen for clarification
 In these cases the coupled equations must be considered. 
-However for the work within this study, the Born-Oppenheimer approximation is successfully applied for all electronic structure calculations. 
+However for the work within this study, the Born-Oppenheimer approximation is successfully applied for all calculations involving electronic structure determination. 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Variational principle}
 %https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
-In order to determine the ground state energy of a system, %They aren't really looking for the ground state, in an excited state / ground state sense. But rather a placement of electrions, sense. Not sure if this terminology is correct here...
-the wave function giving the lowest energy must be found. Within the Born-Oppenheimer approximation, this corresponds to the electronic configuration with smallest value of $E_{el}$.
+In order to obtain the ground state energy of a system, %They aren't really looking for the ground state, in an excited state / ground state sense. But rather a placement of electrions, sense. Not sure if this terminology is correct here...
+the wave function giving the lowest energy must be found. %Within the Born-Oppenheimer approximation, 
+This corresponds to the electronic configuration with lowest value of $E_{el}$. Difficulty then arises, as ground state energy cannot be computed exactly. 
 The variational theorem states that the calculated energy of any guess wave function can only be greater than or equal to the real ground-state energy ($E_{0}$) of the system. % The concept of \''lower bound'' is a property of wave functions? How is this derived, and where does it stem from?
 This provides a criterion for selection of the best guess wave function, as the energy is always bounded from below, where: 
-
 %make sure you know what this means and whether the hat is appropriate
 %\begin{equation}
 %E_{exact} \leq {\langle \Psi | \hat{H} | \Psi \rangle}
@@ -243,8 +261,11 @@ E_{0} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
 % Normalised
 %E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle} \leq E_{0} 
 \end{equation}
+for a normalised wave function. % in the Born-Oppenheimer approximation. 
+Thus, when choosing between different trial wavefunctions, the solution with the lowest energy is the one closest to the exact value. 
 
-for a normalised wave function.% in the Born-Oppenheimer approximation. 
+%Thus, when choosing a trial wavefunction, the expectation value (${\langle \Psi | \mathbf{H} | \Psi \rangle}$) is minimised ...
+%This is called the variational principle, whereby the lowest energy 
 %%Jensen pg 87
 %The energy of an approximate wave function can be calculated as the expectation
 %value of the Hamiltonian operator, divided by the norm of the wave function.
@@ -257,12 +278,12 @@ for a normalised wave function.% in the Born-Oppenheimer approximation.
 \subsection{Slater determinants}
 % A method of expressing the wave function, such that it obeys Pauli's
 %Summed up as - antisymmetry and 
-Equation \ref{equ:elec_schro} can be solved exactly in only a few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. 
+Equation \ref{equ:elec_schro} can be solved \textit{exactly} in only very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. %VIVA: Why?
 
 % A paragrah to talk about how exchange is the difficult bit to solve?
 In a system of multiple electrons, each electron is indistinguishable. If the positions of two electrons are swapped, the distribution of electron density in the system remains the same. %\cite{Leach2001}. 
-The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that none may have an identical set of quantum numbers. %say what they are?
-As a result, for two indistinguishable electrons, the wave function of the system is antisymmetric with respect to the exchange of their coordinates. 
+The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that none may have the same set of quantum numbers. %say what they are?
+As a result, for two equivalent electrons, the wave function of the system is antisymmetric with respect to the exchange of their coordinates: 
 %must therefore change sign upon the interchange of their coordinates
 %permutation of their coordinates. %is this an imprecise statement?
 %https://www.chem.tamu.edu/rgroup/hughbanks/courses/673/handouts/antisymmetry.pdf
@@ -279,32 +300,33 @@ As a result, for two indistinguishable electrons, the wave function of the syste
 This requirement is fulfilled by expressing the wave function as a Slater determinant, which changes sign with permutation of the coordinates of two electrons. 
 %What is a determinant anyway
 In the case of a multi-electronic system, the generalised Slater determinant for $N$ total electrons is as follows: 
-
 \begin{equation}
 \psi_{SD} = \frac{1}{\sqrt{N!}}
 \begin{vmatrix}
 \chi_{1}(1) 	& \chi_{2}(1) 	&\cdots 	& \chi_{N}(1) \\
 \chi_{1}(2) 	& \chi_{2}(2) 	&\cdots 	& \chi_{N}(2) \\
-\vdots 		& \vdots 			& \ddots 	& \vdots 		   \\
+\vdots 		& \vdots 			& \ddots 	& \vdots 		   \\ 
 \chi_{1}(N) & \chi_{2}(N) 	&\cdots 	& \chi_{N}(N) 
 \end{vmatrix}
-\end{equation}
+\end{equation}\\
 %\frac{1}{\sqrt{N!}} is a normalisation factor - Mats linder thesis 2012
-
 where $\chi_{n}$ represents single electron wave functions, or spin-orbitals \cite{Slater1929}. %which are orthonormal
 In the context of a molecule, the single electron wave functions are molecular orbitals. 
-%Rows are labelled by the electrons: (1), (2) $\cdots$ ($N$), whereas columns are labelled by the orbitals: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
+Rows are labelled by the coordinates of each electron: (1), (2) $\cdots$ ($N$), whereas each column uses a different orbital function: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
+%
 %Rows are labelled by the coordinates of each electron: (1), (2) $\cdots$ ($N$)
-
-Rows are labelled by the coordinates of each electron: $\textbf{x}_{1}$,$ \textbf{x}_{2}\cdots \textbf{x}_{N}$, whereas each column uses a different orbital function: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
+%Rows are labelled by the coordinates of each electron: $\textbf{x}_{1}$,$ \textbf{x}_{2}\cdots \textbf{x}_{N}$, whereas each column uses a different orbital function: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
 %The orbitals increase along the columns, whilst electron coordinates run down the rows. 
 %If the labels of (1) and (2) are exchanged, the rows of the determinant are exchanged
-If the labels of $\textbf{x}_{1}$ and $\textbf{x}_{2}$ are exchanged, the rows of the determinant are exchanged; a general property of determinants is that the interchange of two rows leads to a change of sign. The expanded form of the determinant ($\psi_{SD}$) will have the opposite sign when when a pair of electronic coordinates are switched, by switching rows within the determinant, thereby fulfilling the antisymmetry requirement. 
-In the disallowed case of two electrons occupying the same spin-orbital, two columns would be identical \cite{Dykstra1994}. The evaluation of the determinant would then be zero, indicating that the probability of two electrons with identical spin occupying the same orbital to be zero. 
+%If the labels of $\textbf{x}_{1}$ and $\textbf{x}_{2}$ are exchanged, 
+If the labels of (1) and (2) are exchanged, 
+the rows of the determinant are exchanged; a general property of determinants is that the interchange of two rows leads to a change of sign. The expanded form of the determinant ($\psi_{SD}$) will have the opposite sign when a pair of electronic coordinates are switched, by switching rows within the determinant, thereby fulfilling the antisymmetry requirement. 
+In the dis-allowed case of two equivalent electrons occupying the same spin-orbital, two columns would be identical \cite{Dykstra1994}. The evaluation of the determinant would then be zero, indicating that the probability of two electrons with identical spin occupying the same orbital was zero. 
 %Application of the Slater determinant therefore fulfils the Pauli exclusion principle. 
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Hartree Fock self-consistent field method}
+\subsection{Hartree-Fock self-consistent field method}
+The Hartree-Fock approximation was the first practically applicable method for calculation of the ground-state energy of atoms with fixed nuclear positions.  
 %Need some preamble here, how did we get from slater and BO, to Hartree's method? 
 %Not sure what this means, nor which they refer to:
 % The product form of an electronic wave function is only obtainable \textit{via} and approximation. 
@@ -312,21 +334,30 @@ In the disallowed case of two electrons occupying the same spin-orbital, two col
 %This is prevented by the electron-electron repulsion term/ operator - an exact wave function cannot be determined as a product of the one electron function (from Slater's ?). 
 %The electron-electron repulsion term 
 %As the schrodingers equation cannot be solved analytically for systems with more than one electrion, 
-The \ac{SCF} method was proposed by Hartree in 1928. %REF
-Starting with an initial guess wave functions for occupied orbitals, solution of the one-electron Schr\''{o}dinger equation 
-a set of orbitals minimising the energy of the wave function was determined iteratively, until the difference between the 
-
- treating the interaction of each electron as in a static field of all other electrons in the system.
-
 %The \ac{SCF} method iteratively determines a set of molecular orbitals that minimises the energy of the wave function, treating the interaction of each electron as in a static field of all other electrons in the system.
-and developed further by Fock %in XX REF
-to include the effects of electronic exchange. %(On the Coloumb replusion. Cramer pg 126)
+%
+The \ac{SCF} method was proposed by Hartree in 1928 \cite{Hartree1928,Hartree1929}.
+%https://repository.upenn.edu/cgi/viewcontent.cgi?article=3638&context=edissertations
+The method is an independent-particle model. %Each electron  % all electronic interactions treated are instead averaged into a static field. 
+The Hartree approximation neglects electron-electron interaction, describing the energy of electrons as individual particles moving independently of any dynamics of other fermions in the system. 
+The calculated Hartree wavefunction alone does not include any contribution from electronic exchange, and incorrectly implies that the electrons are distinguishable. 
+%without the effect of the surrounding fermions. 
+Fock and Slater developed this further by introducing electron exchange. %REF and when
+%This assumption places a static spherical potential around the electron, derived from the average effect of the nucleus and other electrons in the system. 
+%(On the Coloumb replusion. Cramer pg 126)
+%This is also referred to as the Mean-Field approximation; 
+The effective interaction of one electron with all other fermions is averaged and applied as a static external field, in the form of a spherical potential around the electron. 
+In this way, the $N$-body problem is reduced to a 1-body problem. 
 
-In the first step, guess wave functions for the occupied \ac{MO}s
+%In the first step, guess wave functions for the occupied \ac{MO}s
+Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a new set of orbitals, minimising the energy of the wave function. %CHECK
+This process iterates using the new orbitals for the next optmisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus ``self-consistent''. 
+The core Hamiltonian consisting of the kinetic energy terms can be solved exactly, but the electron-electron repulsion must apply the mean-field approximation. 
+$N$ electrons are treated as independent particles occupying single-electron spin orbitals.
 
- Hartree approximation neglects electron-electron interaction, describing the energy of electrons as individual particles without the effect of the surrounding fermions. 
+ trial wavefunctions ($\Psi_{T}$)
 
-Fock and Slater improved upon this by introducing electron exchange. This assumption places a static spherical potential around the electron, derived from the average effect of the nucleus and other electrons in the system. 
+
 
 %Numerical solutions of the Schr\"{o}dinger equation present the best atomic orbitals \cite{Atkins2011} %Check this statement. 
 The \ac{HF} method starts
@@ -369,13 +400,13 @@ A caveat of the unrestricted model is its susceptibility to spin contamination, 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\subsection{Electron correlation}
 %
-%\subsection{Post-Hartree Fock methods}
+%\subsection{Post-Hartree-Fock methods}
 %
 %\subsubsection{MP2}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Density functional theory}
-There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons.  \textit{Ab initio} methods generate solutions from ``first principles'', where calculations are performed
-By contrast, semi-epirical methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
+There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons.  \textit{Ab initio} methods generate solutions from ``first principles'', without information gained from experimental results. 
+By contrast, \textit{Semi-empirical} methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
 %Solutions to the Schrödinger equation using reference
 %
 %See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
@@ -420,7 +451,7 @@ E_{B3LYP^{XC}} = E_{LDA^{X}} + c_{0} (E_{HF^{X}}-E_{LDA^{X}} ) + c_{X} \Delta E_
 \end{equation}
 
 Where c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
-The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree Fock) and E$_{LDA^{X}}$ (Local Density Approximation). E$_{VWN3^{C}}$ (VWN3 local correlation) is mixed with E$_{LYP^{C}}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^{X}}$ is Becke’s gradient-corrected exchange functional.
+The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree-Fock) and E$_{LDA^{X}}$ (Local Density Approximation). E$_{VWN3^{C}}$ (VWN3 local correlation) is mixed with E$_{LYP^{C}}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^{X}}$ is Becke’s gradient-corrected exchange functional.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\ac{wb97xd}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -460,6 +491,11 @@ Transition state searches are called through the Opt=TS, QST or QST3 keywords. T
 The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
 It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
 “Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
+
+%Imaginary frequencies and the Hessian
+%If the second derivative is positive at a point, the graph is concave up. If the second derivative is positive at a critical point, then the critical point is a local minimum.
+%If the second derivative is negative at a point, the graph is concave down. If the second derivative is negative at a critical point, then the critical point is a local maximum.
+%An inflection point marks the transition from concave up and concave down. The second derivative will be zero at an inflection point.
 
 %(within Gaussian? See if you end up using any)
 %Frequency calculations
