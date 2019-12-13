@@ -90,7 +90,7 @@ A given system may have many acceptable values for $\Psi$, each with an associat
 %\begin{equation}
 % - \frac{\hbar^{2}}{2m}\frac{1}{\psi} \frac{d^{2} \psi}{d x^{2}} + V(x)= \textit{i}\hbar \frac{1}{\theta} \frac{d\theta}{dt}
 %\end{equation}
-
+%
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
 %\textbackslash underbrace\{x+y\}\]\{|A|\
 The general form of the Hamiltonian is given b:y 
@@ -121,7 +121,6 @@ In Cartesian space, this is defined as the sum of the second derivatives of the 
 \nabla_i^{2} = \frac{\partial^{2}}{\partial x_{i}^{2}} + \frac{\partial^{2}}{\partial y_{i}^{2}} + \frac{\partial^{2}}{\partial z_{i}^{2}}
 \label{equ:laplace}
 \end{equation}
-
 %Maybe I should label the equation itself
 The first and second terms of equation (\ref{equ:hamiltonian}) correspond to the kinetic energy of the electrons and the nuclei, respectively. Electron-nuclear attraction is described by the third term; %followed by the interelectronic and internuclear repulsive terms. 
 the fourth term describes inter-electronic repulsion and the final term the inter-nuclear repulsion. 
@@ -131,7 +130,7 @@ The final three potential energy terms are identical to their expression in clas
 % attractive and repulsive terms are% potential energy terms that are
 % described as in classical mechanics. 
 %coloumbic interactions
-
+%
 %Probably don't need this section ----------------------------------------------------------------%
 The kinetic energy terms %are 
 can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
@@ -224,9 +223,11 @@ Calculation of $E_{el}$ for all possible nuclear coordinates in a system of thre
 %with 
 on which the potential energy is defined by the nuclear geometry, called a \ac{PES}. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
 %This last section may be a bit dodgy/ inaccurate/ CHECK
-Exploration of the \ac{PES} allows for discovery of global and local minimum energy structures, intermediate products on a reaction coordinate and transition states, through scrutiny of the %second derivative of the 
-gradient at a particular set of nuclear coordinates. 
+Exploration of the \ac{PES} allows for discovery of global and local minimum energy structures, intermediate products on a reaction coordinate and transition states, through scrutiny of the %second derivatives of the gradient 
+%maxima and minima 
+at a particular set of nuclear coordinates. 
 %The matrix of second partial derivatives is referred to as the Hessian matrix. 
+%Contained within a Hessian matrix
 %
 %If $  x_0  $  is a critical point and $ 
 %f^{\prime\prime}(x_0) < 0  $  , then is a local maximum.
@@ -244,36 +245,7 @@ or even intersecting. %CHECK / ref/ give examples
 %See Jensen for clarification
 In these cases the coupled equations must be considered. 
 However for the work within this study, the Born-Oppenheimer approximation is successfully applied for all calculations involving electronic structure determination. 
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Variational principle}
-%https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
-In order to obtain the ground state energy of a system, %They aren't really looking for the ground state, in an excited state / ground state sense. But rather a placement of electrions, sense. Not sure if this terminology is correct here...
-the wave function giving the lowest energy must be found. %Within the Born-Oppenheimer approximation, 
-This corresponds to the electronic configuration with lowest value of $E_{el}$. Difficulty then arises, as ground state energy cannot be computed exactly. 
-The variational theorem states that the calculated energy of any guess wave function can only be greater than or equal to the real ground-state energy ($E_{0}$) of the system. % The concept of \''lower bound'' is a property of wave functions? How is this derived, and where does it stem from?
-This provides a criterion for selection of the best guess wave function, as the energy is always bounded from below, where: 
-%make sure you know what this means and whether the hat is appropriate
-%\begin{equation}
-%E_{exact} \leq {\langle \Psi | \hat{H} | \Psi \rangle}
-%\end{equation}
-\begin{equation}
-E_{0} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
-% Normalised
-%E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle} \leq E_{0} 
-\end{equation}
-for a normalised wave function. % in the Born-Oppenheimer approximation. 
-Thus, when choosing between different trial wavefunctions, the solution with the lowest energy is the one closest to the exact value. 
 
-%Thus, when choosing a trial wavefunction, the expectation value (${\langle \Psi | \mathbf{H} | \Psi \rangle}$) is minimised ...
-%This is called the variational principle, whereby the lowest energy 
-%%Jensen pg 87
-%The energy of an approximate wave function can be calculated as the expectation
-%value of the Hamiltonian operator, divided by the norm of the wave function.
-%\begin{equation}
-%E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle}
-%\end{equation}
-%For a normalized wave function the denominator is 1, and therefore $E_{el} = {\langle \psi | \mathbf{H} | \psi \rangle}$.
-%
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Slater determinants}
 % A method of expressing the wave function, such that it obeys Pauli's
@@ -323,10 +295,39 @@ If the labels of (1) and (2) are exchanged,
 the rows of the determinant are exchanged; a general property of determinants is that the interchange of two rows leads to a change of sign. The expanded form of the determinant ($\psi_{SD}$) will have the opposite sign when a pair of electronic coordinates are switched, by switching rows within the determinant, thereby fulfilling the antisymmetry requirement. 
 In the dis-allowed case of two equivalent electrons occupying the same spin-orbital, two columns would be identical \cite{Dykstra1994}. The evaluation of the determinant would then be zero, indicating that the probability of two electrons with identical spin occupying the same orbital was zero. 
 %Application of the Slater determinant therefore fulfils the Pauli exclusion principle. 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Variational principle}
+%https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
+In order to obtain the ground state energy of a system, %They aren't really looking for the ground state, in an excited state / ground state sense. But rather a placement of electrions, sense. Not sure if this terminology is correct here...
+the wave function giving the lowest energy must be found. %Within the Born-Oppenheimer approximation, 
+This corresponds to the electronic configuration with lowest value of $E_{el}$. Difficulty then arises, as ground state energy cannot be computed exactly. 
+The variational theorem states that the calculated energy of any guess wave function can only be greater than or equal to the real ground-state energy ($E_{0}$) of the system. % The concept of \''lower bound'' is a property of wave functions? How is this derived, and where does it stem from?
+This provides a criterion for selection of the best guess wave function, as the energy is always bounded from below, where: 
+%make sure you know what this means and whether the hat is appropriate
+%\begin{equation}
+%E_{exact} \leq {\langle \Psi | \hat{H} | \Psi \rangle}
+%\end{equation}
+\begin{equation}
+E_{0} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
+% Normalised
+%E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle} \leq E_{0} 
+\end{equation}
+for a normalised wave function. % in the Born-Oppenheimer approximation. 
+Thus, when choosing between different trial wave functions, the solution with the lowest energy is the one closest to the exact value. % The best wave function is therefore when the energy is at a minimum and the first derivative of the energy is equal to zero (\textdelta E = 0.) 
 
+%Thus, when choosing a trial wavefunction, the expectation value (${\langle \Psi | \mathbf{H} | \Psi \rangle}$) is minimised ...
+%This is called the variational principle, whereby the lowest energy 
+%%Jensen pg 87
+%The energy of an approximate wave function can be calculated as the expectation
+%value of the Hamiltonian operator, divided by the norm of the wave function.
+%\begin{equation}
+%E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle}
+%\end{equation}
+%For a normalized wave function the denominator is 1, and therefore $E_{el} = {\langle \psi | \mathbf{H} | \psi \rangle}$.
+%
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hartree-Fock self-consistent field method}
-The Hartree-Fock approximation was the first practically applicable method for calculation of the ground-state energy of atoms with fixed nuclear positions.  
+The \ac{HF} approximation was the first practically applicable method for calculation of the ground-state energy of atoms with fixed nuclear positions.  
 %Need some preamble here, how did we get from slater and BO, to Hartree's method? 
 %Not sure what this means, nor which they refer to:
 % The product form of an electronic wave function is only obtainable \textit{via} and approximation. 
@@ -336,36 +337,82 @@ The Hartree-Fock approximation was the first practically applicable method for c
 %As the schrodingers equation cannot be solved analytically for systems with more than one electrion, 
 %The \ac{SCF} method iteratively determines a set of molecular orbitals that minimises the energy of the wave function, treating the interaction of each electron as in a static field of all other electrons in the system.
 %
-The \ac{SCF} method was proposed by Hartree in 1928 \cite{Hartree1928,Hartree1929}.
+The \ac{SCF} method was proposed by Hartree in 1928 \cite{Hartree1928,Hartree1929}. 
 %https://repository.upenn.edu/cgi/viewcontent.cgi?article=3638&context=edissertations
-The method is an independent-particle model. %Each electron  % all electronic interactions treated are instead averaged into a static field. 
-The Hartree approximation neglects electron-electron interaction, describing the energy of electrons as individual particles moving independently of any dynamics of other fermions in the system. 
-The calculated Hartree wavefunction alone does not include any contribution from electronic exchange, and incorrectly implies that the electrons are distinguishable. 
-%without the effect of the surrounding fermions. 
-Fock and Slater developed this further by introducing electron exchange. %REF and when
-%This assumption places a static spherical potential around the electron, derived from the average effect of the nucleus and other electrons in the system. 
-%(On the Coloumb replusion. Cramer pg 126)
+%The method is an independent-particle model. %Each electron  % all electronic interactions treated are instead averaged into a static field. 
+$N$ electrons are treated as individual particles occupying single-electron spin orbitals and moving independently of the dynamics of any other fermions in the system. 
+%%without the effect of the surrounding fermions. 
 %This is also referred to as the Mean-Field approximation; 
 The effective interaction of one electron with all other fermions is averaged and applied as a static external field, in the form of a spherical potential around the electron. 
 In this way, the $N$-body problem is reduced to a 1-body problem. 
+%This assumption places a static spherical potential aroun	d the electron, derived from the average effect of the nucleus and other electrons in the system. 
+%(On the Coloumb replusion. Cramer pg 126)
+The approximation neglects exchange in the electron-electron interaction; %describing the energy of electrons as individual particles moving independently of the dynamics of any other fermions in the system. 
+the calculated Hartree wavefunction alone does not include any contribution from electron correlation, and incorrectly implies that the electrons are distinguishable. 
+Fock developed this further by introducing Slater determinantal wave functions \cite{Fock1930}. 
+The effects of exchange on the Coulomb repulsion were included, achieved by taking the trial wave function as a single Slater determinant. 
 
+% trial wave functions ($\Psi_{T}$)
+For an electron in orbital $\chi_{i}$ in the field of nuclei $M$ and other electrons $\chi_{j}$, the Hamiltonian operator is comprised of three terms, corresponding to the three contributions to the energy. 
+%Say what each contribution means, what each term means. then do the equations up until you get to the Fock operator, and then get it to the eigenvalue form
+
+The core Hamiltonian operator, $\mathbf{H}^{core}(1)$ comprises of the kinetic energy of each electron, and the electron-nuclear interaction: % `` the energy of each electron moving in the field of the bar nuclei'')
+%
+\begin{equation}
+\mathbf{H}^{core}(1)= - \frac{1}{2} \nabla^{2}_{1} - \sum^{M}_{A=1}\frac{Z_{A}}{r_{1A}}
+\end{equation}
+%
+where %$\mathbf{H}^{core}$ is the core Hamiltonian operator, ($M$ are all the nuclei)
+%$A$ is the nucleus / normalisation constant?, 
+$Z_{A}$ is the nuclear charge and $r_{1A}$ is the %normalised electron-nuclear separation. 
+interaction of electron (1) with nucleus A.
+In a mono-electronic system, this would be the only operator present. 
+
+The coulomb operator, $\mathbf{J}_{j}(1)$ corresponds to the averaged interaction potential  between each pair of electrons in the same orbital, and with other electrons in other orbitals $\chi_{j}$:
+%
+\begin{equation}
+\mathbf{J}_{j}(1)=\int d\tau_{2}\chi_{j}(2)\frac{1}{r_{12}}\chi_{j}(2)
+\end{equation}
+%(Now electrons are the big numbers and the little i and j's are the orbitals)
+where $d\tau_{i}$ indicates the integration is over the spatial and spin coordinates of electron $i$ and $r_{12}$ is the distance between the two electrons. 
+%corresponding to the averaged interaction potential due to an electron in orbital $\chi_{j}$.
+
+The exchange operator $\mathbf{K}_{j}(1)$, is only non-zero for electrons with the same spin: % - Leach pg 46, also see ``repulsive contribution'' on pg 206. As two nuclei move closer, electrons of the same spin move out of the way, causing a depletion of electron density in the internuclear space, thus increasing the internuclear repulsion due to deshielding. At short distances the interaction energy increases as $1/r$, at large distances the energy decays exponentially as $e^{-2r/a_{0}}$ however ($a_{0}$ is the Bohr radius). 
+\begin{equation}
+\mathbf{K}_{j}(1)\chi_{i}(1)=\Big[\int d\tau_{2}\chi_{j}(2)\frac{1}{r_{12}}\chi_{j}(2)\Big]\chi_{j}(1)
+\end{equation}
+defined in terms of its effect when acting on $\chi_{i}$. 
+% \ac{HF} 
+The Hamiltonian operator % for electron in $\chi_{i}$ 
+can therefore be written as:
+\begin{equation}
+\Big[\mathbf{H}^{core}(1)+\sum^{N}_{j=1}\{\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}\Big]\chi_{i}(1)=\sum^{N}_{j=1}\varepsilon_{ij}\chi_{j}(1)
+\end{equation}
+and simplified to:
+\begin{equation}
+\textbf{F}_{i}\chi_{i}=\sum_{j}\varepsilon_{ij}\chi_{j}
+\end{equation}
+where $\textbf{F}_{i}$ is the Fock operator. 
+In a closed shell system, the operator has the form:
+\begin{equation}
+\textbf{F}_{i}(1)=\Big[\mathbf{H}^{core}(1)+\sum^{N/2}_{j=1}\{2\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}\Big]
+\end{equation}
+			
 %In the first step, guess wave functions for the occupied \ac{MO}s
-Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a new set of orbitals, minimising the energy of the wave function. %CHECK
-This process iterates using the new orbitals for the next optmisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus ``self-consistent''. 
+Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a set of orbitals.
+% minimising the energy of the wave function. %CHECK
+Applying the variational principle, the spin orbitals are varied to minimise %to find the lowest 
+the energy. This process iterates using the newly generated orbitals for the next optimisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus, is ``self-consistent''. 
 The core Hamiltonian consisting of the kinetic energy terms can be solved exactly, but the electron-electron repulsion must apply the mean-field approximation. 
-$N$ electrons are treated as independent particles occupying single-electron spin orbitals.
-
- trial wavefunctions ($\Psi_{T}$)
-
-
+The lowest possible energy is the \ac{HF} approximation for the ground state energy, ignoring electron correlation. 
 
 %Numerical solutions of the Schr\"{o}dinger equation present the best atomic orbitals \cite{Atkins2011} %Check this statement. 
-The \ac{HF} method starts
-
-\begin{equation}
-E=\frac{\int\psi^{*}(\textbf{x}) H \psi(\textbf{x})d\textbf{x}}{\int\psi^{*}(\textbf{x}) \psi(\textbf{x})d\textbf{x}}
-\label{equ:HF}
-\end{equation}
+%The \ac{HF} method starts
+%
+%\begin{equation}
+%E=\frac{\int\psi^{*}(\textbf{x}) H \psi(\textbf{x})d\textbf{x}}{\int\psi^{*}(\textbf{x}) \psi(\textbf{x})d\textbf{x}}
+%\label{equ:HF}
+%\end{equation}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%%[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 \subsection{Open shell systems}
 The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted scheme. %, (e.g. R\acs{B3LYP}).  You haven't describd functionals yet
