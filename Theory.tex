@@ -343,20 +343,21 @@ The \ac{SCF} method was proposed by Hartree in 1928 \cite{Hartree1928,Hartree192
 $N$ electrons are treated as individual particles occupying single-electron spin orbitals and moving independently of the dynamics of any other fermions in the system. 
 %%without the effect of the surrounding fermions. 
 %This is also referred to as the Mean-Field approximation; 
-The effective interaction of one electron with all other fermions is averaged and applied as a static external field, in the form of a spherical potential around the electron. 
+The effective interaction of one electron with all other fermions is averaged and applied as a static external field, in the form of a spherical potential around the electron (called the mean-field approximation). 
 In this way, the $N$-body problem is reduced to a 1-body problem. 
 %This assumption places a static spherical potential aroun	d the electron, derived from the average effect of the nucleus and other electrons in the system. 
 %(On the Coloumb replusion. Cramer pg 126)
 The approximation neglects exchange in the electron-electron interaction; %describing the energy of electrons as individual particles moving independently of the dynamics of any other fermions in the system. 
 the calculated Hartree wavefunction alone does not include any contribution from electron correlation, and incorrectly implies that the electrons are distinguishable. 
 Fock developed this further by introducing Slater determinantal wave functions \cite{Fock1930}. 
-The effects of exchange on the Coulomb repulsion were included, achieved by taking the trial wave function as a single Slater determinant. 
+The effects of exchange on the Coulomb repulsion were incorporated, achieved by taking the trial wave function as a single Slater determinant. 
 
 % trial wave functions ($\Psi_{T}$)
 For an electron in orbital $\chi_{i}$ in the field of nuclei $M$ and other electrons $\chi_{j}$, the Hamiltonian operator is comprised of three terms, corresponding to the three contributions to the energy. 
 %Say what each contribution means, what each term means. then do the equations up until you get to the Fock operator, and then get it to the eigenvalue form
 
-The core Hamiltonian operator, $\mathbf{H}^{core}(1)$ comprises of the kinetic energy of each electron, and the electron-nuclear interaction: % `` the energy of each electron moving in the field of the bar nuclei'')
+The core Hamiltonian operator, $\mathbf{H}^{core}$ %(1)$ 
+comprises of the kinetic energy of each electron, and the electron-nuclear interaction: % `` the energy of each electron moving in the field of the bar nuclei'')
 %
 \begin{equation}
 \mathbf{H}^{core}(1)= - \frac{1}{2} \nabla^{2}_{1} - \sum^{M}_{A=1}\frac{Z_{A}}{r_{1A}}
@@ -365,47 +366,62 @@ The core Hamiltonian operator, $\mathbf{H}^{core}(1)$ comprises of the kinetic e
 where %$\mathbf{H}^{core}$ is the core Hamiltonian operator, ($M$ are all the nuclei)
 %$A$ is the nucleus / normalisation constant?, 
 $Z_{A}$ is the nuclear charge and $r_{1A}$ is the %normalised electron-nuclear separation. 
-interaction of electron (1) with nucleus A.
+separation of electron (1) with nucleus A. %halved to remove duplicity / double counting 
 In a mono-electronic system, this would be the only operator present. 
 
-The coulomb operator, $\mathbf{J}_{j}(1)$ corresponds to the averaged interaction potential  between each pair of electrons in the same orbital, and with other electrons in other orbitals $\chi_{j}$:
+The coulomb operator, $\mathbf{J}_{j}$ %(1)$ 
+corresponds to the averaged interaction potential between each pair of electrons in the same orbital, and with other electrons in other orbitals $\chi_{j}$:
+%electron-electron repulsion
 %
 \begin{equation}
 \mathbf{J}_{j}(1)=\int d\tau_{2}\chi_{j}(2)\frac{1}{r_{12}}\chi_{j}(2)
 \end{equation}
 %(Now electrons are the big numbers and the little i and j's are the orbitals)
-where $d\tau_{i}$ indicates the integration is over the spatial and spin coordinates of electron $i$ and $r_{12}$ is the distance between the two electrons. 
+where $d\tau_{i}$ indicates the integration is over the spatial and spin coordinates of electron $i$, and $r_{12}$ is the distance between the two electrons. 
 %corresponding to the averaged interaction potential due to an electron in orbital $\chi_{j}$.
 
-The exchange operator $\mathbf{K}_{j}(1)$, is only non-zero for electrons with the same spin: % - Leach pg 46, also see ``repulsive contribution'' on pg 206. As two nuclei move closer, electrons of the same spin move out of the way, causing a depletion of electron density in the internuclear space, thus increasing the internuclear repulsion due to deshielding. At short distances the interaction energy increases as $1/r$, at large distances the energy decays exponentially as $e^{-2r/a_{0}}$ however ($a_{0}$ is the Bohr radius). 
+The exchange operator $\mathbf{K}_{j}$ %(1)$ 
+, is only non-zero for electrons with the same spin arising due to the antisymmetry of the wavefunction: % - Leach pg 46, also see ``repulsive contribution'' on pg 206. As two nuclei move closer, electrons of the same spin move out of the way, causing a depletion of electron density in the internuclear space, thus increasing the internuclear repulsion due to deshielding. At short distances the interaction energy increases as $1/r$, at large distances the energy decays exponentially as $e^{-2r/a_{0}}$ however ($a_{0}$ is the Bohr radius). 
 \begin{equation}
 \mathbf{K}_{j}(1)\chi_{i}(1)=\Big[\int d\tau_{2}\chi_{j}(2)\frac{1}{r_{12}}\chi_{j}(2)\Big]\chi_{j}(1)
 \end{equation}
 defined in terms of its effect when acting on $\chi_{i}$. 
 % \ac{HF} 
 The Hamiltonian operator % for electron in $\chi_{i}$ 
-can therefore be written as:
+written in terms of its core, coulomb and exchange contributions: %K is negative because of antisymmetry
 \begin{equation}
 \Big[\mathbf{H}^{core}(1)+\sum^{N}_{j=1}\{\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}\Big]\chi_{i}(1)=\sum^{N}_{j=1}\varepsilon_{ij}\chi_{j}(1)
 \end{equation}
-and simplified to:
+%WHAT is \varepsilon_{ij}?
+can be simplified to:
 \begin{equation}
 \textbf{F}_{i}\chi_{i}=\sum_{j}\varepsilon_{ij}\chi_{j}
 \end{equation}
-where $\textbf{F}_{i}$ is the Fock operator. 
-In a closed shell system, the operator has the form:
+where $\textbf{F}_{i}$ is the Fock operator, and $\varepsilon_{ij}$ is the energy of orbital $\chi_{j}$. 
+%  $\varepsilon$ is the diagonal matrix of orbital energies. Each of its elements $\varepsilon_{i}$ is the energy of  orbital $\chi_{i}$.
+The operator is a one electron Hamiltonian for an electron in a multi-electron system. 
+For ``closed shell'' problems where there are no unpaired electrons, the operator has the form:
 \begin{equation}
-\textbf{F}_{i}(1)=\Big[\mathbf{H}^{core}(1)+\sum^{N/2}_{j=1}\{2\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}\Big]
+\textbf{F}_{i}(1)=\mathbf{H}^{core}(1)+\sum^{N/2}_{j=1}\{2\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}
 \end{equation}
-			
+%Localised orbitals and setting the langrange multipliers (\varepsilon) to 0 unless i = j :
+%Applying Slater's rearranging for localised orbitals
+Rearranging to the standard eigenvalue form:
+%(Of which I'm 100% taking as a black box, here)
+\begin{equation}
+\textbf{F}_{i}\chi_{i}=\varepsilon_{i}\chi_{i}
+\end{equation}
 %In the first step, guess wave functions for the occupied \ac{MO}s
-Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a set of orbitals.
+%The core Hamiltonian 
+$\mathbf{H}^{core}$ consisting of the kinetic energy terms can be solved exactly, the electron-electron repulsion $\mathbf{J}_{j}$ must apply the mean-field approximation but the exchange component $\mathbf{K}_{j}$ is solved iteratively. %CHECK - is J solved iteratively too?
+Starting with an initial guess solutions for the occupied orbitals $\chi_{i}$, solution of the one-electron \ac{HF} eigenvalue equations generates a new set of orbitals. 
+%Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a set of orbitals.
 % minimising the energy of the wave function. %CHECK
+%Trial wavefunctions / solutions to \chi_{i} are chosen and used for \ac{HF} eigenvalue equations obtained. These then used to calculate the coulomb and exchange opertors.  Solve HF equations, gnerating new set of solutions for \chi_{i}, which are then used in the next iteration. This is repeated with each iteration refining to a lower energy until results for every electron is the same as the previous iteration /converges. 
 Applying the variational principle, the spin orbitals are varied to minimise %to find the lowest 
-the energy. This process iterates using the newly generated orbitals for the next optimisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus, is ``self-consistent''. 
-The core Hamiltonian consisting of the kinetic energy terms can be solved exactly, but the electron-electron repulsion must apply the mean-field approximation. 
-The lowest possible energy is the \ac{HF} approximation for the ground state energy, ignoring electron correlation. 
+the energy. This process propagates using the newly generated orbitals for the next optimisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus, is ``self-consistent''. 
 
+%The lowest possible energy is the \ac{HF} approximation for the ground state energy, ignoring electron correlation. 
 %Numerical solutions of the Schr\"{o}dinger equation present the best atomic orbitals \cite{Atkins2011} %Check this statement. 
 %The \ac{HF} method starts
 %
@@ -415,16 +431,17 @@ The lowest possible energy is the \ac{HF} approximation for the ground state ene
 %\end{equation}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%%[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 \subsection{Open shell systems}
-The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted scheme. %, (e.g. R\acs{B3LYP}).  You haven't describd functionals yet
-For systems without unpaired electrons, called ``closed shell'', this treatment is appropriate. For species with unpaired electron spin such as in transition metal complexes or radicals, an alternative model allowing singly occupied orbitals must be adopted.
+The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted scheme. %, (e.g. R\acs{B3LYP}).  You haven't described functionals yet
+For closed shell systems, this treatment is appropriate. For species with unpaired electron spin such as in transition metal complexes or radicals, an alternative model allowing singly occupied orbitals must be adopted.
 
 The Restricted-Open %e.g.RO\asc{B3LYP}, 
 scheme maintains electron pairing within orbitals except in the case of the \ac{HOMO}, which is singly occupied.
 An alternative model is the Unrestricted scheme, %(U\acs{B3LYP}), 
-where all electrons are unpaired and reside in their own orbitals.% (Figure 9). 
-A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations. % where the bond has not completely broken.
+where all electrons are unpaired and reside in their own orbitals. % (Figure 9). 
+A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations. 
+% where the bond has not completely broken.
 %Explain what spin contamination is, and whether we have to deal with it here. It was not super prevalent in our study - whilst we did looking at bond breaking, the energy at large separations was only used as a quantitative indication that a reaction was likely to take place / give a suggestion of the geometry of the product complex. 
-
+%DO I NEED ANY OF THE EQUATIONS HERE?
 %\begin{figure}[h]
 %\centering
 %\begin{modiagram}
@@ -503,14 +520,29 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree-Fock) and E$_{LDA
 %\ac{wb97xd}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Basis set approximation}
+%Slater (difficult) -> Gaussian (easier) -> Combination (more accurate) -> Diffuse and polarisation
 %make sure you know the caveats - ins and outs of the bases you used in combination with the methods you used. 
 %You know pople's one's aren't as stable as the aug- ones. State why you chose them. Also, MP2 will react differently with these bases as opposed to the aug- ones. 
-%[FIX ME]
-A basis set is the collection of mathematical basis functions used in linear combination to construct the molecular orbitals. The individual function are derived from the hydrogen atomic orbitals, as it is 
+A basis set is the collection of mathematical basis functions, used in linear combination, to construct the molecular orbitals. An individual molecular orbital can be defined as: %The individual function are derived from the hydrogen atomic orbitals, as it is 
+\begin{equation}
+\psi_{i}=\sum^{K}_{\mu=1} c_{\mu i} \chi_{\mu}
+\end{equation}
+where $c_{\mu i}$ is the molecular orbital expansion coefficient and $\chi_{\mu}$ corresponds to the one-electron occupied orbitals, often atomic orbitals, also called \textit{basis functions}. %I don't see why we don't just call it \chi_{i} again. So it's not 
+%$\Nu$
+%{\mathrm{N}}
+$K$ is the total number of basis functions, which are all chosen to be normalised. 
+The convention is that Roman subscripts are used for molecular orbital functions, but Greek used on the basis functions. 
+%Roman subscripts on MO functions and Greek on basis functions
+The smallest possible basis set is a single basis per occupied orbital on each atom in a molecular system, termed the ``minimal basis''. The \ac{HF} limit is when the addition of further bases does not lower the energy of the system any further. 
 
-Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied. % (Table 1. Examples of split valence basis sets.).40,41 
+\ac{STO} with exponential dependence $Ae^{-\alpha r}$, were the first choice for atomic functions; $\alpha$  controls how quickly the function decays (radial extent), with higher values for higher effective nuclear charge. They are extremely similar in their mathematical expression to the real atomic orbital, however, are difficult to implement in molecular orbital calculations. 
+% http://theses.gla.ac.uk/925/1/2009davin1phd.pdf
+% (size - radial extent) - higher values for higher effective nuclear charge (Jamie Platts)
+%Challenging intergrals when atomic orbitals are centered on different nuclei
+\ac{GTO} of dependence $Ae^{-\alpha r^{2}}$, offered a more practically viable approximation.  
+%Diagram
 
-%DO a mini test for this?
+Split valence basis sets describe the core electrons with fewer basis functions than the interacting valence electrons, as they are not as significant in bonding or intermolecular interactions. In this study, the widely used Pople basis sets will be applied. %REF % (Table 1. Examples of split valence basis sets.).40,41 
 
 Basis set superposition error (BSSE) is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at long separations and the complex at short distances. The effect is particularly pronounced for smaller basis sets.% Counterpoise correction I used to circumvent BSSE, at the expense of higher computational resources required for the calculation.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -544,14 +576,14 @@ It is widely acknowledged that transition state searching is challenging; in add
 %If the second derivative is negative at a point, the graph is concave down. If the second derivative is negative at a critical point, then the critical point is a local maximum.
 %An inflection point marks the transition from concave up and concave down. The second derivative will be zero at an inflection point.
 
-%(within Gaussian? See if you end up using any)
-%Frequency calculations
-\subsection{Intrinsic Reaction Coordinate}
-%[Maybe this goes into a smaller metholodogy section?]
-IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
-IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
-
-%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
+%%(within Gaussian? See if you end up using any)
+%%Frequency calculations
+%\subsection{Intrinsic Reaction Coordinate}
+%%[Maybe this goes into a smaller metholodogy section?]
+%IRC calculations begin at the saddle point and descend the PES in both the forwards and backwards direction of the reaction co-ordinate dictated by the normal mode of the imaginary frequency. In a similar manner to a geometry scan, geometry optimisations are performed at each step point. Its purpose is to connect the two minima leading to the found transition state, thereby confirming whether the found transition state corresponds to your reactants and products of interest. 
+%IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
+%
+%%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
 \subsection{PES Scans}
 %[Maybe this goes into a smaller methodology section?]
 Relaxed potential energy surface (PES) scans, or geometry scans are used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a PES of the explored pathway, presented in a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
