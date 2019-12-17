@@ -23,7 +23,7 @@ At the most fundamental level, the wave function ($\Psi$) holds the description 
 In a non-relativistic system, % So what happens in a relativistic system?
 the probability of a particle possessing a given momentum, or residing in a particular location, is given by the probability density. This can be obtained by  multiplication of $\Psi$ with its complex conjugate,  $|\Psi^{2}|$. %Born interpretation. Ref? 
 %Make sure you know what a complex conjugate is.
-Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within.
+Integration of $|\Psi^{2}|$ over a region of space returns the probability that a system will be found within, called the Born interpretation. %Ref
 %, such that the integral of over a region of space returns the probability that a system will be found within. %in that region.$|\Psi^{*}\Psi|$ 
 %In Born's statistical interpretation in non-relativistic quantum mechanics,[8][9][10] the squared modulus of the wave function, |ψ|2, is a real number interpreted as the probability density of measuring a particle's being detected at a given place – or having a given momentum – at a given time, and possibly having definite values for discrete degrees of freedom. The integral of this quantity, over all the system's degrees of freedom, must be 1 in accordance with the probability interpretation. This general requirement that a wave function must satisfy is called the normalization condition. Since the wave function is complex valued, only its relative phase and relative magnitude can be measured—its value does not, in isolation, tell anything about the magnitudes or directions of measurable observables; one has to apply quantum operators, whose eigenvalues correspond to sets of possible results of measurements, to the wave function ψ and calculate the statistical distributions for measurable quantities.
 %From Wikipedia: https://en.wikipedia.org/wiki/Wave_function
@@ -32,6 +32,7 @@ Values of $\Psi$ are chosen to be othonormal; % that is, orthogonal and normalis
 integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \begin{equation}
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
+\label{equ:born}
 \end{equation}
 %The above equation just means an integral of Psi_i and Psi_j over 3D Cartesian space. Or something to that effect.  
 where all states are represented by $i$ and $j$, and:
@@ -551,13 +552,13 @@ Currently, it forms the most widely used approach for \ac{QM} problems. %REF? fa
 % CHECK the below statement, its a bit dodgy: https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf %protocols
 %Useless trivia
 %All known \ac{DFT} methods make use of parameters extracted from empirical expressions; whilst the formalism is exact, it is not strictly \textit{ab initio}. 
-When compared to \ac{HF} and post-\ac{HF} methods, \ac{DFT} provides much improved computational efficiency. Modern hybrid functionals are able to produce results on the order of \acs{MP2} accuracy, utilising only the resource of a \ac{HF} calculation. %ref 17
-The \ac{NC} monomers, dimer and trimers comprising of between 30 - 75 atoms were examined in this study using \ac{DFT}. 
+When compared to \ac{HF} and post-\ac{HF} methods, \ac{DFT} provides increased computational efficiency. Modern hybrid functionals are able to produce results on the order of \acs{MP2} accuracy, utilising only the resource of a \ac{HF} calculation. %ref 17
+The \ac{NC} monomers, dimer and trimer models examined in this study consist of between 30 - 75 atoms; \ac{DFT} provided the best pay-off between accuracy and efficiency for application on a system of this size. 
 
 \subsection{Hohenberg-Kohn formalism}
 Modern \ac{DFT} is based on two fundamental theorems proposed by Hohenberg and Kohn in 1964 \cite{Hohenberg1964}. %REF 
 The first theorem states that for the ground state of system, there exists a unique energy and non-degenerate electron density. The density can therefore be used to determine the Hamiltonian of a system, thereby also describing its ground state energy $E[\rho(r)]$%$E_{g}$
-, wave function and other properties of the system. The energy is functional of the density: %ref and other properties
+, wave function and other properties of the system. The energy is a functional of the density: %ref and other properties
 %https://pureadmin.qub.ac.uk/ws/portalfiles/portal/137543092/thesis.pdf
 \begin{equation}
 %E[\rho]=\mathbf{T_{e}[\rho]+\mathbf{V}_{e-e}[\rho]+\mathbf{V}_{e-N}[\rho]
@@ -565,21 +566,109 @@ The first theorem states that for the ground state of system, there exists a uni
 E[\rho(r)]=\int \rho(r) V(r) \,d(r) + F[\rho(r)]
 \label{equ:DFT}
 \end{equation}
-$V(r)$ is the external potential; the first term arises from interaction of electrons with $V(r)$, usually a coulombic attraction between electrons and nuclei. $F[\rho(r)]$ is a universal functional of the density, representing the total kinetic energy and electron-electron repulsion. %Bowlers notes
+where $V(r)$ is the external potential, with the first term of the equation arising from the interaction of electrons with $V(r)$ (usually a coulombic attraction between electrons and nuclei). $F[\rho(r)]$ is a universal functional of the density, representing the total kinetic energy and electron-electron repulsion. %Bowlers notes
+It is not possible to explicitly express $F[\rho(r)]$ in terms of $\rho(r)$, so its exact form is not known. 
 %, $V(r)$ is the external potential uniquely determined by $\rho(r)$.  NO, that is V_(ext), silly. vext(r) is the potential representing the total nuclear attraction of the electrons in addition to any other external potential
 %where the energy of the system $E[\rho]$ can be obtained \textit{via} the sum of the kinetic energy of the electrons $\mathbf{T_{e}[\rho]$, electron-electron repulsion $\mathbf{V}_{e-e}[\rho]$ and electron-nucleus attraction $\mathbf{V}_{e-N}[\rho]$ derived as a function of the electron density. 
 %https://pdfs.semanticscholar.org/b0de/c00cd81492b681c897249672ee8f42c79d34.pdf 
-The second theorem states that the ground state energy can be obtained \textit{via} minimisation of $E[\rho(r)]$. Since equation \ref{equ:DFT} gives the exact energy of the original Hamiltonian, by applying the variational principle, the lowest possible value of $E[\rho(r)]$ gives the exact solution for energy and therefore $E[\rho(r)]$. However, it is not possible to explicitly express $F[\rho(r)]$ in terms of $\rho(r)$, so its exact form is not known. It is not possible to verify that the found density giving lowest value for $E[\rho(r)]$ corresponds to a wave function obeying the Pauli exclusion principle requirements for antisymmetry. These issues were addressed by the Kohn and Sham. 
+
+The second theorem states that the ground state energy can be obtained \textit{via} minimisation of $E[\rho(r)]$. Since equation \ref{equ:DFT} gives the exact energy of the original Hamiltonian, by applying the variational principle, the lowest possible value of $E[\rho(r)]$ gives the real solution for the ground state energy, and therefore $\rho(r)$. 
+It is not possible to verify that the found $\rho(r)$ giving the lowest value of $E[\rho(r)]$ corresponds to a wave function obeying the Pauli exclusion principle requirement for antisymmetry. This problem and the unknown identity of $F[\rho(r)]$ were addressed by the Kohn-Sham equations. 
 %\ac{wb97xd} is a range separated hybrid with D (self consistent exchange). 
 %It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
 
 %remember to talk about the underestimation of the reaction barriers
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-\subsection{Kohn-Sham Equations}
-F
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsubsection{Exchange-correlation functionals}
-%LDA, GGA etc and development of functionals. The different treatment of exchange. 
+\subsection{Kohn-Sham \ac{DFT}}
+%https://pdfs.semanticscholar.org/b0de/c00cd81492b681c897249672ee8f42c79d34.pdf
+The Kohn-Sham scheme establishes a system with $N$ non-interacting electrons, in a similar manner to \ac{HF} \cite{Kohn1965}. 
+The wave function is described by a single Slater determinant of one-electron orbitals, and the electron density is set to be identical to that of the exact ground state wave function. 
+Using this approximation, the energy of the system can again be divided up into its component contributions: 
+\begin{equation}
+E[\rho]=E_{KE}[\rho(r)]+E_{H}[\rho(r)]+E_{V}[\rho(r)]+E_{XC}[\rho(r)]
+\label{equ:KS}
+\end{equation}
+%Leach pg 128
+where $E_{KE}$ is the kinetic energy of the non-interacting electrons, $E_{H}$ the Hartree electrostatic energy corresponding to the electron-electron repulsion between electrons, $E_{V}$ the interaction between the electrons and the external potential due to the nuclei, and $E_{XC}$ the exchange-correlation energy, encapsulating non-classical exchange and correlation contributions not accounted for by the other terms. 
+%and correction for the self-interaction included in the Coulomb term and the portion of the kinetic energy which corresponds to the differences between the non-interacting and the real system.
+%
+%NOTE: for all the other terms and all the other times, the evaluation of the observable (eg kinetic energy  / electron-nuclear interaction) was achieved by the getting the expectation value of the operator. for $E_{KE}$ this is NOT the case. See Bowlers notes Lecture 5
+%
+%Using equation \ref{equ:DFT} , we can also define $F[\rho(r)]$ as:
+%\begin{equation}
+%F[\rho(r)]=E_{KE}[\rho(r)]+E_{H}[\rho(r)]+E_{XC}[\rho(r)]
+%\end{equation}
+Referring back to the Born interpretation (equation \ref{equ:born}), the density can be obtained from the sum of the square moduli of the wave function:
+%of a set of one-electron othernormal orbitals
+\begin{equation}
+\rho(r)=\sum_{i=1}^{N}|\psi_{i}(r)|^{2} = |\Psi|^2
+\end{equation}
+%http://theses.gla.ac.uk/925/1/2009davin1phd.pdf
+Aside from the kinetic energy term in equation \ref{equ:KS}, the remaining terms can be summarised into an effective potential $\nu_{eff}$: 
+\begin{equation}
+\nu_{eff}=\nu_{H}(r)+\nu_{V}(r)+\nu_{XC}(r)
+\label{equ:eff}
+\end{equation}
+where $\nu_{H}(r)$ is the electron repulsion potential and $\nu_{V}(r)$ the electron-ion potential. % and $\nu_{XC}(r)$ the exchange-correlation potential. Also, why not just nucleus instead of ion potential?
+The exchange-correlation potential $\nu_{XC}(r)$ is the functional derivative of $E_{XC}$. If $E_{XC}$ is known then $\nu_{XC}(r)$ can be computed from the following equation: 
+\begin{equation}
+\nu_{XC}(r)=\frac{\delta E_{XC}}{\delta\rho}
+\label{equ:xc}
+\end{equation} 
+
+%$\nu_{eff}$ is chosen such that the ground state energy 
+The kinetic energy term in equation \ref{equ:KS} %of the non-interacting system ?
+can be expressed in terms of the one-electron wave function:
+\begin{equation}
+E_{KE}[\rho(r)]=-\frac{1}{2}\nabla^{2}\sum^{N}_{i=1}\braket{\psi_{i}|\nabla^{2}|\psi_{i}}
+%-\frac{\hbar}{2m}
+\label{equ:KE}
+\end{equation}
+Combining equations \ref{equ:eff} and \ref{equ:KE}, a new Hamiltonian can be written, only considering the non-interacting system:
+\begin{equation}
+\mathbf{H}=%-\frac{\hbar^{2}}{2m}\nabla^{2}+\nu_{eff}
+%-\frac{1}}{2}\sum^{N}_{i}\nabla^{2}_{i} + \nu_{eff}
+-\frac{\nabla^{2}}{2}+\nu_{eff}
+\end{equation}
+%Is the -ve appropriate - yes it cancels out with teh Veff I think? or just go with Emilia's one, that is not in A.u.? See page 129 in Leach , also
+%http://theses.gla.ac.uk/925/1/2009davin1phd.pdf Pg 32 Says it should be -ve
+Using the Kohn-Sham formulation of the  Schr\"{o}dinger equation, the one-electron orbitals $\psi_{i}(r)$ have the form:
+\begin{equation}
+\Big(-\frac{\nabla^{2}}{2}+\nu_{eff}(r)\Big)\psi_{i}(r)=\varepsilon_{i}\psi_{i}(r)
+\label{equ:KS_schr}
+\end{equation}
+where $\nu_{eff}(r)$ is the effective potential, $\psi_{i}(r)$ the Kohn-Sham orbitals and $\varepsilon_{i}$ the Kohn-Sham orbital energies. %aka eigenvalues
+
+The Kohn-Sham equations are solved self-consistently. Evaluation of equation \ref{equ:KS} gives the total electronic energy. A guess density is supplied for the evaluation of equation \ref{equ:KS_schr}, to generate a set of orbitals. This in turn informs the next iteration with an improved density value, until convergence is reached. 
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Exchange-correlation functionals}
+%There exchange potential term $\nu_{XC}(r)$ 
+In practice, the exact solution for $E_{XC}$ in equation \ref{equ:eff} is not known, so an approximation is used. The simplest method is the \ac{LDA}, based upon a uniform electron gas. $\varepsilon_{XC}$ is calculated per electron as function of the density, and integration over all space gives the $E_{XC}$ for the whole system:
+\begin{equation}
+E_{XC}^{LDA}[\rho(r)]=\int\rho(r)\varepsilon_{XC}[\rho(r)]\,dr	
+\end{equation}
+%the exchange part is from uniform gas, the correlation part is from quantum monte carlo
+This method has demonstrated good results for structural properties such as bond lengths and lattice constants, often improving on \ac{HF} results. %REF
+The model falls down when considering systems with many molecules, overestimating binding energies and atomisation energies, and performing worse than \ac{HF} for open shell atoms. %Van der Waals forces. %REF
+%https://www.diva-portal.org/smash/get/diva2:164957/FULLTEXT01.pdf
+
+To account for inhomogenous electron density present in real systems, the local gradient of the density $\nabla\rho$ is taken into account at each coordinate, on top of the existing dependency on the density $\rho$. 
+This gradient corrected approach is called the \ac{GGA}: 
+\begin{equation}
+E_{XC}^{GGA}[\rho(r)]=\int\rho(r)\nabla\rho(r)\,dr	
+\end{equation}
+The results obtained using \ac{GGA} greatly improve upon the \ac{LDA}, such as in the calculation of bond dissociation energies. 
+The \ac{GGA} is split into its exchange and correlation contributions, which can be solved individually:
+\begin{equation}
+E_{XC}^{GGA}=E_{X}^{GGA} + E_{C}^{GGA}
+\end{equation}
+The function of $\nabla\rho(r)$ is not uniquely defined; further developments saw the proposal of numerous gradient correction schemes, often fitting to experimental parameters. Popular functionals include:
+\begin{itemize}
+\item B88: is the exchange functional developed by Becke, and contains a parameter $\beta$ that was fitted to give the best agreement with the \ac{HF} energies of the noble gases \cite{Becke1988}. %($\beta$=0.0042). 
+\item LYP: is the most widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
+Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988}. %REF
+\item PBE: is the functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as solids and surfaces. %ref PBE sol, RPBE , PBE WC
+\end{itemize}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %%\subsection{Hybrid functionals}
 %\subsubsection{Dispersion correction}
