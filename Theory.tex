@@ -1,5 +1,6 @@
 \chapter{Theory and Implementation}
 \label{chapterlabel2}
+\graphicspath{ {./Theory_pics/} }
 %References:
 % Jensen
 % Cramer
@@ -14,7 +15,8 @@
 %Wave particle duality. 
 % Dodgy first sentence, change it. 
 Electronic structure methods apply the principles of quantum mechanics to the evaluation of electron position and movement, thereby allowing chemists to derive the properties and interactions of molecules. 
-Despite the long history of research and use of \ac{NC} in industry, experimental analysis has failed to distinguish the fine mechanistic details of \ac{NC} decomposition, in part owing to the variation arising from \ac{NC} source material, but also the complexity due to the interplay of many different and simultaneous degradation interactions. Electronic structure methods provide a means to %avenue for exploration/ opportunity 
+Despite the long history of research and use of \ac{NC} in industry, experimental analysis has failed to distinguish the fine mechanistic details of its decomposition. This is partly owed to the variation arising from biodiverse \ac{NC} source materials, combined with the complexity due to the interplay of many different %myriad
+and simultaneous degradation interactions. Electronic structure methods provide a means to %avenue for exploration/ opportunity 
 untangle the individual facets of decomposition. %and study each in . 
 
 At the most fundamental level, the wave function ($\Psi$) holds the description of a quantum system. %Need a linking sentence here - What is the wave function, and why do we need to look at the probablility densiy instead?
@@ -56,6 +58,14 @@ Schr\"{o}dinger's time-independent equation is:
 \mathbf{H}\Psi=E\Psi
 \label{equ:schrodinger}
 \end{equation}
+and the energy of the system is given by the expectation value of the Hamiltonian operator:
+%The observable, A, of any operator, Aˆ, is given by its expectation value,
+%https://pureadmin.qub.ac.uk/ws/portalfiles/portal/137543092/thesis.pdf pg24
+% can be evaluated
+\begin{equation} 
+E=\braket{\Psi|\mathbf{H}|\Psi} 
+\end{equation}
+%MAKE SURE YOU KNOW WHAT THIS MEANS
 %where $\mathbf{H}$ is the Hamiltonian operator and $E$ is the energy ofm the system. $\mathbf{H}$ is called the eigenvalue, $\Psi$ the eigenfunction and $E$ is scalar. 
 where the Hamiltonian operator $\mathbf{H}$ is an eigenvalue of %the eigenfunction, 
 the wave function 
@@ -93,7 +103,7 @@ A given system may have many acceptable values for $\Psi$, each with an associat
 %
 %Perhaps straight away reduce it down to atomic units. ie. When working in \ac{au}, the general form of the Hamiltonian is given by: And delete the line later about it getting reduced to 1. 
 %\textbackslash underbrace\{x+y\}\]\{|A|\
-The general form of the Hamiltonian is given b:y 
+The general form of the Hamiltonian is given by: 
 \begin{equation}
 \mathbf{H}= - \sum \frac{\hbar^{2}}{2m_e}\nabla_i^{2} - \sum \frac{\hbar^{2}}{2m_k}\nabla_k^{2} - \sum_{i} \sum_{k} \frac{e^{2}Z_{k}}{r_{ik}} + \sum_{i<j} \frac{e^{2}}{r_{ij}} + \sum_{k<l} \frac{e^{2}Z_{k}Z_{l}}{r_{kl}}
 \label{equ:hamiltonian}
@@ -138,14 +148,21 @@ can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$)
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
 \end{equation}
+% NO, keep it generic so you can apply it to the nuclear one (term 2, too)
+%\begin{equation}
+%\mathbf{T}=-\frac{\hbar^{2}}{2m}\sum^{N}_{i=1}\nabla^{2}_{i}
+%\label{equ:KE}
+%\end{equation}
 %Don't know really know why being able to do the above, is important. 
 The total, non-relativistic Hamiltonian %Equation \ref{equ:hamiltonian}
 can therefore be written in terms of the kinetic energy and potential energy operators:
 \begin{equation}
-\mathbf{H} = \mathbf{T}_{e} + \mathbf{T}_{N} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
+\mathbf{H} = \mathbf{T}_{e} + \mathbf{T}_{N} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{n-n}
 \label{equ:Htot}
 \end{equation}
-where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first two terms denoting the kinetic energy of the electrons and nuclei, and the latter three terms detailing the electron-nuclear interactions.
+where the terms are as they were in equation \ref{equ:hamiltonian}. $\mathbf{T}_{e}$ corresponds to the kinetic energy of the electrons, $\mathbf{T}_{N}$ the kinetic energy of the nuclei, $\mathbf{V}_{e-N}$ the coulombic interaction between electron and nuclei, $\mathbf{V}_{e-e}$ the electron-electron repulsion and $\mathbf{V}_{n-n}$ the nuclear-nuclear interaction. 
+%the nuclear-nuclear coulomb interaction. 
+%, the first two terms denoting the kinetic energy of the electrons and nuclei, and the latter three terms detailing the electron-nuclear interactions.
 %Was there really any point in rewriting it?
 %The Hamiltonian for the full system is represented in terms of the kinetic energy and potential energy operators. 
 %$\hat{H}$
@@ -155,16 +172,15 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. %, the first
 %
 %The Hamiltonian operator (Eq. 3) acting on the wave function produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
 %
-
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \subsection{Born-Oppenheimer approximation}
 %This maybe should be a paragraph rather than a whole multi-page section
-%Get the original refrence - might be libo `s reference [27]
+%Get the original reference - might be libo `s reference [27]
 In a real system, the motion of elections and nuclei are coupled. Electron density flows dynamically in response to the change in nuclear position and repulsion from other electrons. The correlated motion of particles is described by the pairwise attractive and repulsive terms of the Schr\"{o}dinger equation. However, this interdependency makes defining a wave function difficult. 
 % results in a wavefuction that is difficult to define. 
 %of such a system 
 %this representation is unworkable owing to the complexity of considering the interdependent movement of all particles in the system. 
-Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass (the mass of a proton is around 1836 times larger than that of the electron). %The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
+Relative to electronic motion, nuclei move far more slowly, owing to their much greater mass (the mass of a proton is around 1836 times larger than that of the electron). %REF The relaxation time of electrons may be treated as instantaneous, when comparing against that of the nuclei. 
 %This difference in electronic and nuclear motion leads
 %The difference is such, that the 
 Nuclear positions therefore appear essentially stationary when compared to that of the electrons. Exploiting this property, the 
@@ -172,28 +188,29 @@ Nuclear positions therefore appear essentially stationary when compared to that 
 Born-Oppenheimer approximation fixes the nuclear positions. In this way, the motion of electrons and nuclei can be decoupled, and the electronic properties of the system may be calculated for the given nuclear coordinates. Dependency on the nuclear kinetic energy term ($\mathbf{T}_{N}$) %of the Hamiltonian 
 is removed, as the nuclei are frozen. % becomes then independent of electronic motion; 
 %The electron-nuclear interaction term ($\mathbf{V}_{e-N}$) disappears, and 
-The nuclear-nuclear repulsive term ($\mathbf{V}_{NN}$) becomes a constant for the specified geometry.  
+The nuclear-nuclear repulsive term ($\mathbf{V}_{n-n}$) becomes a constant for the specified geometry.  
 Equation \ref{equ:hamiltonian} is reduced to its electronic components and nuclear constants which in atomic units can be written as:
 %
 %\begin{equation}
-%\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
+%\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{n-n}
 %\label{equ:BO}
 %\end{equation}
 % With AU:
 \begin{equation}
-\mathbf{H}= - \frac{1}{2} \sum \nabla_i^{2} - \sum_{i} \sum_{k} \frac{Z_{k}}{r_{ik}} + \sum_{i<j} \frac{1}{r_{ij}} + \mathbf{V}_{NN}
+%\mathbf{H}= - \frac{1}{2} \sum \nabla_i^{2} - \sum_{i} \sum_{k} \frac{Z_{k}}{r_{ik}} + \sum_{i<j} \frac{1}{r_{ij}} + \mathbf{V}_{n-n}
+\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{n-n}
 \label{equ:hamiltonian_BO}
 \end{equation}
 % Probably don't need this section ----------------------------------------------------------%
 %Or in terms of the operators:
 %\begin{equation}
-%\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{NN}
+%\mathbf{H} = \mathbf{T}_{e} + \mathbf{V}_{e-N}+ \mathbf{V}_{e-e} + \mathbf{V}_{n-n}
 %\label{equ:hamiltonian_BO_op}
 %\end{equation}
 %
 and the electronic terms can be collected into one term, to simplify notation:
 \begin{equation}
-\mathbf{H}= \mathbf{H}_{el}+ \mathbf{V}_{NN}
+\mathbf{H}= \mathbf{H}_{el}+ \mathbf{V}_{n-n}
 \label{equ:hamiltonian_BO_simp}
 \end{equation}
 %
@@ -201,13 +218,16 @@ The Schr\"{o}dinger’s equation can now be written in terms of only the electro
 %CHECK THIS IS ACCURATE
 %
 \begin{equation}
-(\mathbf{H}_{el} + \mathbf{V}_{NN})
+(\mathbf{H}_{el} + \mathbf{V}_{n-n})
+%Should the E have the el? When H_el and VNN are added, surely it gives the BO approx for E rather than just E_el? But then the wavefucntion is el too.. hmmm
+%If I do change it, make sure to propagate through subsequent paragraph
+%\Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E(\mathbf{q}_{i};\mathbf{q}_{k})
 \Psi_{el}(\mathbf{q}_{i};\mathbf{q}_{k})=E_{el}(\mathbf{q}_{i};\mathbf{q}_{k})
 \label{equ:elec_schro}
 \end{equation}
-%where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{NN}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
+%where $\mathbf{H}_{el}$ is the pure electronic Hamiltonian, that is, only including the electronic kinetic energy , electron-nuclear attractive term, and electron-electron repulsion term from the total Hamiltonian given in \ref{equ:hamiltonian}. $\mathbf{V}_{n-n}$ is the nuclear-nuclear repulsion, constant for the fixed positions. %And so can be an additive term at the end. 
 where the electronic coordinates are given by $\mathbf{q}_{i}$, the stationary nuclear positions by $\mathbf{q}_{k}$ and 
-$E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. %Set parameters
+$E_{el}$ is the electronic energy of the system. The values of $\mathbf{q}_{i}$ are independent variables, whereas the values of $\mathbf{q}_{k}$ are parameters. %Set parameters WAIT DID I EVEN COPY THIS RIGHT, WHAT DOES IT MEAN AND AM I MISSING A \Psi
 % SO HOW DO WE CALCULATE Eel?
 %significance of this? caveats of this?
 % and thus appear following a semicolon rather than a comma in the variable list for \Psi
@@ -250,8 +270,6 @@ However for the work within this study, the Born-Oppenheimer approximation is su
 \subsection{Slater determinants}
 % A method of expressing the wave function, such that it obeys Pauli's
 %Summed up as - antisymmetry and 
-Equation \ref{equ:elec_schro} can be solved \textit{exactly} in only very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. %VIVA: Why?
-
 % A paragrah to talk about how exchange is the difficult bit to solve?
 In a system of multiple electrons, each electron is indistinguishable. If the positions of two electrons are swapped, the distribution of electron density in the system remains the same. %\cite{Leach2001}. 
 The Pauli exclusion principle states that no two identical fermions, such as electrons, may simultaneously occupy the same quantum state within the same system. When considering an atom with two or more electrons, this means that none may have the same set of quantum numbers. %say what they are?
@@ -282,7 +300,7 @@ In the case of a multi-electronic system, the generalised Slater determinant for
 \end{vmatrix}
 \end{equation}\\
 %\frac{1}{\sqrt{N!}} is a normalisation factor - Mats linder thesis 2012
-where $\chi_{n}$ represents single electron wave functions, or spin-orbitals \cite{Slater1929}. %which are orthonormal
+where $\chi_{N}$ represents single electron wave functions, or spin-orbitals \cite{Slater1929}. %which are orthonormal
 In the context of a molecule, the single electron wave functions are molecular orbitals. 
 Rows are labelled by the coordinates of each electron: (1), (2) $\cdots$ ($N$), whereas each column uses a different orbital function: $\chi_{1}$, $\chi_{2} \cdots$, $\chi_{N}$.
 %
@@ -297,6 +315,7 @@ In the dis-allowed case of two equivalent electrons occupying the same spin-orbi
 %Application of the Slater determinant therefore fulfils the Pauli exclusion principle. 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Variational principle}
+\label{sect:variational_principle}
 %https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
 In order to obtain the ground state energy of a system, %They aren't really looking for the ground state, in an excited state / ground state sense. But rather a placement of electrions, sense. Not sure if this terminology is correct here...
 the wave function giving the lowest energy must be found. %Within the Born-Oppenheimer approximation, 
@@ -308,7 +327,8 @@ This provides a criterion for selection of the best guess wave function, as the 
 %E_{exact} \leq {\langle \Psi | \hat{H} | \Psi \rangle}
 %\end{equation}
 \begin{equation}
-E_{0} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
+E = \langle \Psi | \mathbf{H} | \Psi \rangle \geq E_{0}
+%E_{0} \leq {\langle \Psi | \mathbf{H} | \Psi \rangle}
 % Normalised
 %E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle} \leq E_{0} 
 \end{equation}
@@ -327,6 +347,9 @@ Thus, when choosing between different trial wave functions, the solution with th
 %
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hartree-Fock self-consistent field method}
+In practice, equation \ref{equ:elec_schro} can only be solved \textit{exactly} in very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. %VIVA: Why? - the correlated interaction between the partices which cannot be calculated exactly. 
+For systems of complexity greater than one electron, further approximations must be made. %like what?
+
 The \ac{HF} approximation was the first practically applicable method for calculation of the ground-state energy of atoms with fixed nuclear positions.  
 %Need some preamble here, how did we get from slater and BO, to Hartree's method? 
 %Not sure what this means, nor which they refer to:
@@ -340,7 +363,7 @@ The \ac{HF} approximation was the first practically applicable method for calcul
 The \ac{SCF} method was proposed by Hartree in 1928 \cite{Hartree1928,Hartree1929}. 
 %https://repository.upenn.edu/cgi/viewcontent.cgi?article=3638&context=edissertations
 %The method is an independent-particle model. %Each electron  % all electronic interactions treated are instead averaged into a static field. 
-$N$ electrons are treated as individual particles occupying single-electron spin orbitals and moving independently of the dynamics of any other fermions in the system. 
+$N$ electrons are treated as individual particles occupying single-electron spin orbitals and move independently of the dynamics of any other fermions in the system. 
 %%without the effect of the surrounding fermions. 
 %This is also referred to as the Mean-Field approximation; 
 The effective interaction of one electron with all other fermions is averaged and applied as a static external field, in the form of a spherical potential around the electron (called the mean-field approximation). 
@@ -348,14 +371,13 @@ In this way, the $N$-body problem is reduced to a 1-body problem.
 %This assumption places a static spherical potential aroun	d the electron, derived from the average effect of the nucleus and other electrons in the system. 
 %(On the Coloumb replusion. Cramer pg 126)
 The approximation neglects exchange in the electron-electron interaction; %describing the energy of electrons as individual particles moving independently of the dynamics of any other fermions in the system. 
-the calculated Hartree wavefunction alone does not include any contribution from electron correlation, and incorrectly implies that the electrons are distinguishable. 
-Fock developed this further by introducing Slater determinantal wave functions \cite{Fock1930}. 
-The effects of exchange on the Coulomb repulsion were incorporated, achieved by taking the trial wave function as a single Slater determinant. 
+the calculated Hartree wavefunction alone does not include any contribution from electron correlation, and incorrectly implies that the electrons are distinguishable. %if you don't know why this is, omit it. 
+%NOTE the difference between exchange - the non-classical effect of electrons of differing spin, and correlation, which is due to the instantaneous interactions that are not captured by the static models. (And which every other contribution to the difference to the ``real'' energy is lumped in.)
+Fock developed this idea by introducing Slater determinant wave functions \cite{Fock1930}. 
+The effects of exchange on the coulombic repulsion were incorporated, achieved by taking the trial wave function as a single Slater determinant. %again, if you don't know how or why this is, omit it. 
 
 % trial wave functions ($\Psi_{T}$)
 For an electron in orbital $\chi_{i}$ in the field of nuclei $M$ and other electrons $\chi_{j}$, the Hamiltonian operator is comprised of three terms, corresponding to the three contributions to the energy. 
-%Say what each contribution means, what each term means. then do the equations up until you get to the Fock operator, and then get it to the eigenvalue form
-
 The core Hamiltonian operator, $\mathbf{H}^{core}$ %(1)$ 
 comprises of the kinetic energy of each electron, and the electron-nuclear interaction: % `` the energy of each electron moving in the field of the bar nuclei'')
 %
@@ -369,7 +391,7 @@ $Z_{A}$ is the nuclear charge and $r_{1A}$ is the %normalised electron-nuclear s
 separation of electron (1) with nucleus A. %halved to remove duplicity / double counting 
 In a mono-electronic system, this would be the only operator present. 
 
-The coulomb operator, $\mathbf{J}_{j}$ %(1)$ 
+The coulomb operator, $\mathbf{J}_{j}$ %(1)$ average coulomb potential
 corresponds to the averaged interaction potential between each pair of electrons in the same orbital, and with other electrons in other orbitals $\chi_{j}$:
 %electron-electron repulsion
 %
@@ -380,25 +402,28 @@ corresponds to the averaged interaction potential between each pair of electrons
 where $d\tau_{i}$ indicates the integration is over the spatial and spin coordinates of electron $i$, and $r_{12}$ is the distance between the two electrons. 
 %corresponding to the averaged interaction potential due to an electron in orbital $\chi_{j}$.
 
-The exchange operator $\mathbf{K}_{j}$ %(1)$ 
-, is only non-zero for electrons with the same spin arising due to the antisymmetry of the wavefunction: % - Leach pg 46, also see ``repulsive contribution'' on pg 206. As two nuclei move closer, electrons of the same spin move out of the way, causing a depletion of electron density in the internuclear space, thus increasing the internuclear repulsion due to deshielding. At short distances the interaction energy increases as $1/r$, at large distances the energy decays exponentially as $e^{-2r/a_{0}}$ however ($a_{0}$ is the Bohr radius). 
+The exchange operator $\mathbf{K}_{j}$ %(1)$  non-local exchange potential
+, is only non-zero for electrons with the same spin, arising due to the antisymmetry of the wavefunction: % / Slater dterminant - Leach pg 46, also see ``repulsive contribution'' on pg 206. As two nuclei move closer, electrons of the same spin move out of the way, causing a depletion of electron density in the internuclear space, thus increasing the internuclear repulsion due to deshielding. At short distances the interaction energy increases as $1/r$, at large distances the energy decays exponentially as $e^{-2r/a_{0}}$ however ($a_{0}$ is the Bohr radius). 
 \begin{equation}
 \mathbf{K}_{j}(1)\chi_{i}(1)=\Big[\int d\tau_{2}\chi_{j}(2)\frac{1}{r_{12}}\chi_{j}(2)\Big]\chi_{j}(1)
 \end{equation}
 defined in terms of its effect when acting on $\chi_{i}$. 
 % \ac{HF} 
 The Hamiltonian operator % for electron in $\chi_{i}$ 
-written in terms of its core, coulomb and exchange contributions: %K is negative because of antisymmetry
+written in terms of its core, coulomb and exchange contributions is as follows: %K is negative because of antisymmetry
 \begin{equation}
 \Big[\mathbf{H}^{core}(1)+\sum^{N}_{j=1}\{\mathbf{J}_{j}(1)-\mathbf{K}_{j}(1)\}\Big]\chi_{i}(1)=\sum^{N}_{j=1}\varepsilon_{ij}\chi_{j}(1)
 \end{equation}
 %WHAT is \varepsilon_{ij}?
-can be simplified to:
+and can be simplified to:
 \begin{equation}
 \textbf{F}_{i}\chi_{i}=\sum_{j}\varepsilon_{ij}\chi_{j}
 \end{equation}
 where $\textbf{F}_{i}$ is the Fock operator, and $\varepsilon_{ij}$ is the energy of orbital $\chi_{j}$. 
 %  $\varepsilon$ is the diagonal matrix of orbital energies. Each of its elements $\varepsilon_{i}$ is the energy of  orbital $\chi_{i}$.
+%The approximation, therefore, lacks any electron correlation (other than in the average sense) and may lead to large errors in the energy:
+%for example, band gaps in some semiconductors and bond-length in some molecules are badly
+%described. https://pureadmin.qub.ac.uk/ws/portalfiles/portal/137543092/thesis.pdf
 The operator is a one electron Hamiltonian for an electron in a multi-electron system. 
 For ``closed shell'' problems where there are no unpaired electrons, the operator has the form:
 \begin{equation}
@@ -406,20 +431,21 @@ For ``closed shell'' problems where there are no unpaired electrons, the operato
 \end{equation}
 %Localised orbitals and setting the langrange multipliers (\varepsilon) to 0 unless i = j :
 %Applying Slater's rearranging for localised orbitals
-Rearranging to the standard eigenvalue form:
-%(Of which I'm 100% taking as a black box, here)
-\begin{equation}
-\textbf{F}_{i}\chi_{i}=\varepsilon_{i}\chi_{i}
-\end{equation}
+%Rearranging to the standard eigenvalue form:
+%%(Of which I'm 100% taking as a black box, here)
+%\begin{equation}
+%\textbf{F}_{i}\chi_{i}=\varepsilon_{i}\chi_{i}
+%\end{equation}
 %In the first step, guess wave functions for the occupied \ac{MO}s
 %The core Hamiltonian 
 $\mathbf{H}^{core}$ consisting of the kinetic energy terms can be solved exactly, the electron-electron repulsion $\mathbf{J}_{j}$ must apply the mean-field approximation but the exchange component $\mathbf{K}_{j}$ is solved iteratively. %CHECK - is J solved iteratively too?
-Starting with an initial guess solutions for the occupied orbitals $\chi_{i}$, solution of the one-electron \ac{HF} eigenvalue equations generates a new set of orbitals. 
+Starting with an initial guess %solutions 
+wave functions for the occupied for the occupied orbitals $\chi_{i}$, solution of the one-electron \ac{HF} eigenvalue equations generates a new set of orbitals. 
 %Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a set of orbitals.
 % minimising the energy of the wave function. %CHECK
 %Trial wavefunctions / solutions to \chi_{i} are chosen and used for \ac{HF} eigenvalue equations obtained. These then used to calculate the coulomb and exchange opertors.  Solve HF equations, gnerating new set of solutions for \chi_{i}, which are then used in the next iteration. This is repeated with each iteration refining to a lower energy until results for every electron is the same as the previous iteration /converges. 
 Applying the variational principle, the spin orbitals are varied to minimise %to find the lowest 
-the energy. This process propagates using the newly generated orbitals for the next optimisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold, thus, is ``self-consistent''. 
+the energy. This process propagates using the newly generated orbitals for the next optimisation, until the difference between the final solution and its previous iteration falls within an acceptable threshold and is ``self-consistent''. 
 
 %The lowest possible energy is the \ac{HF} approximation for the ground state energy, ignoring electron correlation. 
 %Numerical solutions of the Schr\"{o}dinger equation present the best atomic orbitals \cite{Atkins2011} %Check this statement. 
@@ -431,17 +457,33 @@ the energy. This process propagates using the newly generated orbitals for the n
 %\end{equation}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%%[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]
 \subsection{Open shell systems}
-The forced pairing of electrons of opposing spin into a shared orbital is referred to as the Restricted scheme. %, (e.g. R\acs{B3LYP}).  You haven't described functionals yet
+The forced pairing of electrons of opposing spin into a shared orbital is referred to as the \textit{restricted} scheme (figure \ref{fig:RHF_ROHF_UHF}). %, (e.g. R\acs{B3LYP}).  You haven't described functionals yet
 For closed shell systems, this treatment is appropriate. For species with unpaired electron spin such as in transition metal complexes or radicals, an alternative model allowing singly occupied orbitals must be adopted.
 
-The Restricted-Open %e.g.RO\asc{B3LYP}, 
+The \textit{restricted-open} %e.g.RO\asc{B3LYP}, 
 scheme maintains electron pairing within orbitals except in the case of the \ac{HOMO}, which is singly occupied.
-An alternative model is the Unrestricted scheme, %(U\acs{B3LYP}), 
+An alternative model is the \textit{unrestricted} scheme, %(U\acs{B3LYP}), 
 where all electrons are unpaired and reside in their own orbitals. % (Figure 9). 
 A caveat of the unrestricted model is its susceptibility to spin contamination, which has consequences at large bond separations. 
 % where the bond has not completely broken.
 %Explain what spin contamination is, and whether we have to deal with it here. It was not super prevalent in our study - whilst we did looking at bond breaking, the energy at large separations was only used as a quantitative indication that a reaction was likely to take place / give a suggestion of the geometry of the product complex. 
-%DO I NEED ANY OF THE EQUATIONS HERE?
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.6\linewidth]{Jensen_pg120}
+\caption[Restricted \acf{HF}, \acf{ROHF} and \acf{UHF} methods of calculation.]{The electron ordering schemes corresponding to the restricted \acf{HF}, \acf{ROHF} and \acf{UHF} methods of calculation for closed and open shell systems \cite{Jensen2007}.}
+\label{fig:RHF_ROHF_UHF}
+\end{figure}
+% CHECK add in later - SPIN CONTAMINATION
+%For the unrestricted case, the $\alpha$ and $\beta$ electrons are in different orbitals, leading to two molecular orbital expansion coefficients : 
+%\begin{equation}
+%\psi_{i}^{\alpha}=\sum^{K}_{\mu=1} c_{\mu i}^{\alpha} \chi_{\mu}
+%\end{equation}
+%\begin{equation}
+%\psi_{i}^{\beta} =\sum^{K}_{\mu=1} c_{\mu i}^{\beta} \chi_{\mu}
+%\end{equation}
+%
+%Spin contamination arises as whilst the two sets of orbitals 
 %\begin{figure}[h]
 %\centering
 %\begin{modiagram}
@@ -459,63 +501,99 @@ A caveat of the unrestricted model is its susceptibility to spin contamination, 
 %\end{modiagram}
 %\caption{}
 %\end{figure}
-
-%This diagram is essentially lifted from Introduction to Comp Chem by Jensen
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-%\subsection{Electron correlation}
+\subsection{Electron correlation}
+The energy difference between the real energy and the result obtained from \ac{HF} is called the correlation energy, $E_{corr.}$. % \textit{correlation energy}.
+\begin{equation}
+E_{corr.}=E_{exact}-E_{HF}
+\end{equation}
+The $E_{corr.}$ term can be divided into two components. The static correlation component arises as a system cannot be fully described by a single set of \ac{MO}s, %from the imperfect of a single set of molecular orbitals in describing a system,
+and the dynamic correlation contribution derives from the neglect of instantaneous electron repulsion interactions. % of the same spin, beyond exchange. 
+The latter includes the description of instantaneous dipolar interactions, leading to Van der Waals forces, which are lost when the electron repulsion terms are averaged. 
+%when non-bonding interactions are involved, such as in hydrogen bonding systems and during bond fission where the dissociating species are at a large separation, instantaneous dipolar effects. Van der Waals. 
+Post-\ac{HF} methods such as perturbation theory and coupled-cluster techniques aim to %redress this dis %close this gap, 
+account for the difference by inclusion of the contribution from correlation as an additive term, or \textit{via} multi-electron wave functions. %NOT multi reference - this is for excited states / CI and REF
+However, these methods become prohibitively expensive with increasing numbers of electrons, such that the system size is limited to small molecules for calculations of high accuracy. 
+The high computational demand associated with %working with
+handling a many-electron wave function is circumvented in \ac{DFT}, by expression of the total energy in terms of electron density. % ($\rho(r)$). 
+%they use configuration state functions (CSF), a symmetry-adapted linear combination of Slater determinants
+%\begin{modiagram}
+%\EnergyAxiss[title=E]
+%\end{modiagram}
 %
+%This missing term is small at equlibrium bond lengths (why?) but its absence contributes a large error to evaluation of the energy w
+%For example, at least one quarter of the strength of hydrogen bonds between water molecules are due to correlation interactions [37].%
+%libo's thesis
 %\subsection{Post-Hartree-Fock methods}
 %
 %\subsubsection{MP2}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Density functional theory}
-There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons.  \textit{Ab initio} methods generate solutions from ``first principles'', without information gained from experimental results. 
-By contrast, \textit{Semi-empirical} methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
+\section{Density functional theory}
+%FIX THIS PARAGRAPH
+There are two approaches for solving the Schr\"{o}dinger equation for a polyatomic system with many electrons. %Obtaining the energy, if this first sentence is imprecise for DFT
+\textit{Ab initio} methods generate solutions from ``first principles'', without information gained from experimental results. 
+By contrast, \textit{semi-empirical} methods deal with parameters fitted to experimental quantities, such as enthalpies of formation or dipole moments. %ref if you can  
 %Solutions to the Schrödinger equation using reference
 %
 %See here for a nice sum of the weaknesses: Some Fundamental Issues in Ground-State Density, Perdew 2009 (https://pubs.acs.org/doi/10.1021/ct800531s)
 %Functional Theory: A Guide for the Perplexed
-%[PLEASE REVAMP ALL OF THIS AND FILL IN DETAIL]\\
-Density functional theory derives from the Thomas-Femi-Dirac model, whereby the electron correlation is modelled via functionals of the electron density.%38,39 
-The total energy is defined by functionals split into the following terms:
-\[E=E^T+E^V+ E^J+ E^XC\] %if you remove this comment for some reason it goes italic
+%
+%Scaling: https://pureadmin.qub.ac.uk/ws/portalfiles/portal/137543092/thesis.pdf
+% MP2 scaling $O(N^{5})$ DFT scales between $O(N^{4})$ and $O(N)$
+%Linear scaling DFT can be used for millions of atoms (but with accuracy payoff, obvs)
+\ac{DFT} derives from the Thomas-Femi-Dirac model, whereby electron correlation is modelled via functionals of the electron density, $\rho(r)$. %38,39  REF What is this model
+Electron density has reduced dimensionality when compared with the wave function, %How 
+and can be obtained both \textit{via} theoretical methods as well as experimentally, such as through x-ray diffraction. %REF
+%https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
+Currently, it forms the most widely used approach for \ac{QM} problems. %REF? family of protocols
+%, with the \acs{B3LYP} functional considered the gold-standard / lots of paramterised data bases etc.
+%\ac{DFT} provides an avenue for the calculation of the total energy of the system, avoiding the complicated many-electron wave function.
+% CHECK the below statement, its a bit dodgy: https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf %protocols
+%Useless trivia
+%All known \ac{DFT} methods make use of parameters extracted from empirical expressions; whilst the formalism is exact, it is not strictly \textit{ab initio}. 
+When compared to \ac{HF} and post-\ac{HF} methods, \ac{DFT} provides much improved computational efficiency. Modern hybrid functionals are able to produce results on the order of \acs{MP2} accuracy, utilising only the resource of a \ac{HF} calculation. %ref 17
+The \ac{NC} monomers, dimer and trimers comprising of between 30 - 75 atoms were examined in this study using \ac{DFT}. 
 
-Where E$^{T}$ %ok, its the ^ that makes it go italic. 
-is the kinetic energy term, arising from electron motion; E$^{V}$
-is the potential energy term arising from nuclear-electron attraction and nuclear-nuclear repulsion; E$^{J}$ 
-is the columbic repulsion term arising from electron-electron repulsion and E$^{XC}$  
-is the exchange correlation term containing the remainder of the electron-electron interactions. The first three terms are purely classical, and correspond to the classical energy of the charge distribution ($\rho$).
-The exchange term is non-classical encompasses the exchange energy due to the antisymmetry of the wave function, and dynamic correlation of electron motion. It can be further divided into the exchange and correlation components:
+\subsection{Hohenberg-Kohn formalism}
+Modern \ac{DFT} is based on two fundamental theorems proposed by Hohenberg and Kohn in 1964 \cite{Hohenberg1964}. %REF 
+The first theorem states that for the ground state of system, there exists a unique energy and non-degenerate electron density. The density can therefore be used to determine the Hamiltonian of a system, thereby also describing its ground state energy $E[\rho(r)]$%$E_{g}$
+, wave function and other properties of the system. The energy is functional of the density: %ref and other properties
+%https://pureadmin.qub.ac.uk/ws/portalfiles/portal/137543092/thesis.pdf
 \begin{equation}
-\centering
-E^{XC}(\rho) = E^{X}(\rho) + E^{C}(\rho)
+%E[\rho]=\mathbf{T_{e}[\rho]+\mathbf{V}_{e-e}[\rho]+\mathbf{V}_{e-N}[\rho]
+%E_{g}
+E[\rho(r)]=\int \rho(r) V(r) \,d(r) + F[\rho(r)]
+\label{equ:DFT}
 \end{equation}
-
+$V(r)$ is the external potential; the first term arises from interaction of electrons with $V(r)$, usually a coulombic attraction between electrons and nuclei. $F[\rho(r)]$ is a universal functional of the density, representing the total kinetic energy and electron-electron repulsion. %Bowlers notes
+%, $V(r)$ is the external potential uniquely determined by $\rho(r)$.  NO, that is V_(ext), silly. vext(r) is the potential representing the total nuclear attraction of the electrons in addition to any other external potential
+%where the energy of the system $E[\rho]$ can be obtained \textit{via} the sum of the kinetic energy of the electrons $\mathbf{T_{e}[\rho]$, electron-electron repulsion $\mathbf{V}_{e-e}[\rho]$ and electron-nucleus attraction $\mathbf{V}_{e-N}[\rho]$ derived as a function of the electron density. 
+%https://pdfs.semanticscholar.org/b0de/c00cd81492b681c897249672ee8f42c79d34.pdf 
+The second theorem states that the ground state energy can be obtained \textit{via} minimisation of $E[\rho(r)]$. Since equation \ref{equ:DFT} gives the exact energy of the original Hamiltonian, by applying the variational principle, the lowest possible value of $E[\rho(r)]$ gives the exact solution for energy and therefore $E[\rho(r)]$. However, it is not possible to explicitly express $F[\rho(r)]$ in terms of $\rho(r)$, so its exact form is not known. It is not possible to verify that the found density giving lowest value for $E[\rho(r)]$ corresponds to a wave function obeying the Pauli exclusion principle requirements for antisymmetry. These issues were addressed by the Kohn and Sham. 
 %\ac{wb97xd} is a range separated hybrid with D (self consistent exchange). 
 %It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
 
 %remember to talk about the underestimation of the reaction barriers
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsubsection{Hohenburg-Kohn formalism}
+\subsection{Kohn-Sham Equations}
+F
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsubsection{Kohn-Sham Equations}%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsubsection{Exchange-correlation functionals}
-LDA, GGA etc and development of functionals. The different treatment of exchange. 
+%LDA, GGA etc and development of functionals. The different treatment of exchange. 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %%\subsection{Hybrid functionals}
 %\subsubsection{Dispersion correction}
 %Grimme
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\ac{B3LYP}
-
-In the context of this report, the \ac{B3LYP} functional will be used where the exchange is described as follows:
-\begin{equation}
-\centering
-E_{B3LYP^{XC}} = E_{LDA^{X}} + c_{0} (E_{HF^{X}}-E_{LDA^{X}} ) + c_{X} \Delta E_{B88^{X}} + E_{VWN3^{C}} + c_{C} (E_{LYP^{C}} -E_{VWN3^{C}} )
-\end{equation}
-
-Where c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
-The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree-Fock) and E$_{LDA^{X}}$ (Local Density Approximation). E$_{VWN3^{C}}$ (VWN3 local correlation) is mixed with E$_{LYP^{C}}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^{X}}$ is Becke’s gradient-corrected exchange functional.
+%In the context of this report, the \ac{B3LYP} functional will be used where the exchange is described as follows:
+%\begin{equation}
+%\centering
+%E_{B3LYP^{XC}} = E_{LDA^{X}} + c_{0} (E_{HF^{X}}-E_{LDA^{X}} ) + c_{X} \Delta E_{B88^{X}} + E_{VWN3^{C}} + c_{C} (E_{LYP^{C}} -E_{VWN3^{C}} )
+%\end{equation}
+%
+%Where c$_{0}$ = 0.2, c$_{X}$ = 0.72 and c$_{C}$ = 0.81.
+%The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree-Fock) and E$_{LDA^{X}}$ (Local Density Approximation). E$_{VWN3^{C}}$ (VWN3 local correlation) is mixed with E$_{LYP^{C}}$ (Lee, Yang, Parr correlation function) via c$_{C}$. E$_{B88^{X}}$ is Becke’s gradient-corrected exchange functional.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\ac{wb97xd}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -523,7 +601,7 @@ The coefficient c$_{0}$ allows mixing of E$_{HF^{X}}$ (Hartree-Fock) and E$_{LDA
 %Slater (difficult) -> Gaussian (easier) -> Combination (more accurate) -> Diffuse and polarisation
 %make sure you know the caveats - ins and outs of the bases you used in combination with the methods you used. 
 %You know pople's one's aren't as stable as the aug- ones. State why you chose them. Also, MP2 will react differently with these bases as opposed to the aug- ones. 
-A basis set is the collection of mathematical basis functions, used in linear combination, to construct the molecular orbitals. An individual molecular orbital can be defined as: %The individual function are derived from the hydrogen atomic orbitals, as it is 
+A basis set is the collection of mathematical basis functions, used in linear combination, to construct the \ac{MO}. An individual \ac{MO} can be defined as: %The individual function are derived from the hydrogen atomic orbitals, as it is 
 \begin{equation}
 \psi_{i}=\sum^{K}_{\mu=1} c_{\mu i} \chi_{\mu}
 \end{equation}
@@ -567,7 +645,8 @@ Basis set superposition error (BSSE) is a false lowering of the energy that can 
 \subsection{Transition state searches}
 %[Maybe this goes into a smaller metholodogy section?]
 Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in \ac{G09} attempts to optimise the given “guess” geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
-The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method42. Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
+The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method. %42 REF. 
+Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
 It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
 “Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
 
