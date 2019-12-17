@@ -655,22 +655,30 @@ The model falls down when considering systems with many molecules, overestimatin
 To account for inhomogenous electron density present in real systems, the local gradient of the density $\nabla\rho$ is taken into account at each coordinate, on top of the existing dependency on the density $\rho$. 
 This gradient corrected approach is called the \ac{GGA}: 
 \begin{equation}
-E_{XC}^{GGA}[\rho(r)]=\int\rho(r)\nabla\rho(r)\,dr	
+E_{XC}^{GGA}[\rho(r)]=\int\rho(r)\nabla[\rho(r)]\,dr	
 \end{equation}
 The results obtained using \ac{GGA} greatly improve upon the \ac{LDA}, such as in the calculation of bond dissociation energies. 
 The \ac{GGA} is split into its exchange and correlation contributions, which can be solved individually:
 \begin{equation}
 E_{XC}^{GGA}=E_{X}^{GGA} + E_{C}^{GGA}
 \end{equation}
-The function of $\nabla\rho(r)$ is not uniquely defined; further developments saw the proposal of numerous gradient correction schemes, often fitting to experimental parameters. Popular functionals include:
+The function of $\nabla\rho(r)$ is not uniquely defined and no true form is known; further developments saw the proposal of numerous gradient correction schemes, often fitting to experimental parameters. Functionals that have been well established in literature include:
 \begin{itemize}
-\item B88: is the exchange functional developed by Becke, and contains a parameter $\beta$ that was fitted to give the best agreement with the \ac{HF} energies of the noble gases \cite{Becke1988}. %($\beta$=0.0042). 
-\item LYP: is the most widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
+\item B88: the exchange functional developed by Becke, and contains an empirical parameter $\beta$=0.0042 fitted to give the best agreement with the \ac{HF} energies of the noble gases \cite{Becke1988}. %($\beta$=0.0042). 
+\item LYP: the most widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
 Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988}. %REF
-\item PBE: is the functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as solids and surfaces. %ref PBE sol, RPBE , PBE WC
+\item PBE: the exchange-correlation functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as solids and surfaces \cite{Hammer1999,Perdew2008,Wu2006}. %ref PBE sol, RPBE , PBE WC
 \end{itemize}
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%%\subsection{Hybrid functionals}
+Meta-\ac{GGA} employs further parameterisation of the exchange-correlation functional; the laplacian (second derivative) of the electron density, $nabla^2$, is included as an additional degree of freedom. %Or loacl kinetic energy density. 
+These have made improvements on \ac{LDA} and \ac{GGA} performance, but has not seen as popular use as the efficient hybrid \ac{DFT} functionals.%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Hybrid functionals} 
+%Self interaction error!
+The exchange contribution to $E_{XC}$ is significantly larger than that of correlation. 
+In hybrid \ac{DFT}, a portion of exact exchange is introduced into the \ac{DFT} exchange energy \textit{via} linear combinations of \ac{HF} and \ac{GGA} exchange. 
+This assists to counteract the self-interaction problem, a significant source of error in most approximate exchange-correlation functionals for Kohn-Sham \ac{DFT} calculations. This spurious interaction of an electron with itself does not appear in \ac{HF} as  \cite{Bao2018}. 
+
+The most widely used functional of this category, is undoubtedly the \ac{B3LYP}. 	
+
 %\subsubsection{Dispersion correction}
 %Grimme
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -841,32 +849,10 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 % Already covered in the thermochemistry section? Maybe just refer to that, but the include the scaling factors in here
 %\subsection{Nuclear Magnetic Resonance spectra}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-%%Update this later, looking at Tom's thesis, when you get round to actually doing some of the stuff
-%%\section{Molecular dynamics simulation methods}
-%Intro to the history spiel.
+s% Partial charges (?)
 
-
-%Save this for the specific chapter?: \subsection{AMBER Forcefield}
-% \section{Molecular mechanics}
-% What are MM methods, e.g monte carlo
-
-% \subsection{Interaction potentials}
-% \subsubsection{Bonded terms}
-% \subsubsection{Non-bonded terms}
-% \subsubsection{Amber Force-field}
-% Partial charges (?)
-% Brief parameterisation spiel
-
-% \subsection{Molecular Dynamics}
-% verlet and leapfrog algorithms, thermostats and barostats
-% \subsubsection{Ensembles}
-% \subsubsection{Time integration algorithm}
-% \subsubsection{Periodic boundary conditions}
 % \subsubsection{Solvent models}
 % \subsection{Optimisation algorithms}
-% used in minimisations - used in Monte carlo, DFT as well
-% \subsubsection{Steepest descent algorithm}
-% \subsubsection{Conjugate gradient algorithm}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsubsection{Computational implementation}
 %Caveats and scaling factors. 
@@ -874,6 +860,6 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 
 
 
-
+%Solvent
 
 
