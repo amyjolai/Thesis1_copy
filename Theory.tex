@@ -144,7 +144,7 @@ The final three potential energy terms are identical to their expression in clas
 %
 %Probably don't need this section ----------------------------------------------------------------%
 The kinetic energy terms %are 
-can be expressed as the eigenvalue of the kinetic energy operator ($\mathbf{T}$):
+can be expressed as the eigenvalues of the kinetic energy operator ($\mathbf{T}$):
 \begin{equation}
 \mathbf{T}=-\frac{\hbar^{2}}{2m}\nabla^{2}
 \label{equ:KE}
@@ -440,7 +440,7 @@ For ``closed shell'' problems where there are no unpaired electrons, the operato
 %The core Hamiltonian 
 $\mathbf{H}^{core}$ consisting of the kinetic energy terms can be solved exactly, the electron-electron repulsion $\mathbf{J}_{j}$ must apply the mean-field approximation but the exchange component $\mathbf{K}_{j}$ is solved iteratively. %CHECK - is J solved iteratively too?
 Starting with an initial guess %solutions 
-wave functions for the occupied for the occupied orbitals $\chi_{i}$, solution of the one-electron \ac{HF} eigenvalue equations generates a new set of orbitals. 
+wave functions for the occupied orbitals $\chi_{i}$, solution of the one-electron \ac{HF} eigenvalue equations generates a new set of orbitals. 
 %Starting with an initial guess of the wave functions for occupied orbitals, solution of the one-electron Schr\"{o}dinger equation generates a set of orbitals.
 % minimising the energy of the wave function. %CHECK
 %Trial wavefunctions / solutions to \chi_{i} are chosen and used for \ac{HF} eigenvalue equations obtained. These then used to calculate the coulomb and exchange opertors.  Solve HF equations, gnerating new set of solutions for \chi_{i}, which are then used in the next iteration. This is repeated with each iteration refining to a lower energy until results for every electron is the same as the previous iteration /converges. 
@@ -628,7 +628,7 @@ Combining equations \ref{equ:eff} and \ref{equ:KE}, a new Hamiltonian can be wri
 %-\frac{1}}{2}\sum^{N}_{i}\nabla^{2}_{i} + \nu_{eff}
 -\frac{\nabla^{2}}{2}+\nu_{eff}
 \end{equation}
-%Is the -ve appropriate - yes it cancels out with teh Veff I think? or just go with Emilia's one, that is not in A.u.? See page 129 in Leach , also
+%Is the -ve appropriate - yes it cancels out with the Veff I think? or just go with Emilia's one, that is not in A.u.? See page 129 in Leach , also
 %http://theses.gla.ac.uk/925/1/2009davin1phd.pdf Pg 32 Says it should be -ve
 Using the Kohn-Sham formulation of the  Schr\"{o}dinger equation, the one-electron orbitals $\psi_{i}(r)$ have the form:
 \begin{equation}
@@ -672,7 +672,7 @@ Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988
 Meta-\ac{GGA} employs further parameterisation of the exchange-correlation functional; the laplacian (second derivative) of the electron density, $\nabla^{2}$, is included as an additional degree of freedom. %Or loacl kinetic energy density. 
 These have made improvements on \ac{LDA} and \ac{GGA} performance, but are still considered relatively new. Whilst they have not been as extensively benchmarked as hybrid \ac{DFT} functionals such as \ac{B3LYP}, the existing results are promising \cite{Zhao2005,Zhao2005a,Zhao2006}.
 %seen as popular use as the efficient hybrid \ac{DFT} functionals
-%Make sure you know how the above functionals differ from teh hybrids %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+%Make sure you know how the above functionals differ from the hybrids %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hybrid functionals} 
 %Self interaction error!
 In \ac{DFT}, the influence of the exchange contribution to $E_{XC}$ is significantly larger than that of correlation, which only adds minor corrections \cite{Grafenstein2009}. 
@@ -719,7 +719,6 @@ f_{damp}(R_{ij})=\frac{1}{1+a(R_{ij}/R_{r})^{-12}}
 The function decreases to 1 as $R_{ij}$ increases, but also diminishes quickly at small values of $R_{ij}$ to prevent the divergence observed for the undamped case (figure \ref{fig:damp}). $R_{r}$ is the sum of the \ac{vdw} radii of the atoms $ij$, whilst $a$ determines the strength of the dispersion corrections. % a is the only on linear paramter. 
 %https://onlinelibrary.wiley.com/doi/epdf/10.1002/jcc.20495
 %After two years of carefultesting and validation, however, knowledge of a few shortcomingsof the original DFT-D method accumulated, which will be alsoaddressed in the present work:1. Consistent atomic parameters (C6coefficients) are only availablefor elements H, C–Ne, but studies of supramolecular structuresor problems in material science require parameters for elementsfrom the whole periodic table.2. Test calculations for molecules with third-row elements showedsystematic errors.3. Adding the dispersion energy to the KS-DFT energy leads toinconsistencies for “normal” thermochemistry (e.g. atomizationenergies: the dispersion correction is zero for the free atom andalways nonzero (and large) for the molecule)
-
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.65\linewidth]{Chai}
@@ -727,7 +726,6 @@ The function decreases to 1 as $R_{ij}$ increases, but also diminishes quickly a
 is also compared \cite{Wu2002}.  From the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a}.} 
 \label{fig:damp}
 \end{figure}
-
 The \ac{wb97xd} functional incorporates 100\% long-range exchange, 22\% short-range exchange, a modified B97 short-range exchange and B97 correlation, with empirical dispersion corrections. When the constraint $\omega$ is reduced to 0, \ac{wb97xd} is equivalent to the B97 functional with the addition of the dispersion correction. 
 The performance of \ac{wb97xd} will be compared to that of \ac{B3LYP} with particular attention paid to the reaction energies.  
 %fig of the damping function from Chai's paper, if you can be bothered 
@@ -774,9 +772,9 @@ The expansion to the \ac{MO} therefore takes the form:
 \psi_{i}=\sum_{\mu} c_{\mu i} \Big (\sum_{p}d_{\mu p}g_{p}\Big)
 \end{equation}
 %Diagram
-In this study, Pople style basis sets will be employed. Split valence basis sets such as these, describe the core electrons using fewer basis functions than the interacting valence electrons; the valence electrons play a much more significant part in bonding and intermolecular interactions.  %REF % (Table 1. Examples of split valence basis sets.).40,41
-An example is 6-31+G*, where the core electrons are described using a single contracted gaussian consisting of six primitive functions. The valence orbital is split into two contracted gaussians, where one is described by 3 primitive gaussians, and the other, one primitive gaussian. 
-The + sign corresponds to diffuse functions, the extension of the basis function as it tails away from the nucleus. This particularly important when describing the behaviour of ions. The * indicates the addition of polarisation functions, in this case, d-functions to all non-H atoms. This mixing of orbitals facilitates a better description for the correct shape of the \ac{MO}. 
+In this study, Pople style basis sets will be employed, with general format \textbf{X-YZg} \cite{Ditchfield1971}. Split valence basis sets such as these, describe the core electrons using fewer basis functions than the interacting valence electrons; the valence electrons play a much more significant part in bonding and intermolecular interactions.  %REF % (Table 1. Examples of split valence basis sets.).40,41
+An example is \textbf{6-31+G*}, where the core electrons are described using a single contracted gaussian consisting of six primitive functions. The valence orbital is split into two contracted gaussians, where one is described by three primitive gaussians, and the other, one primitive gaussian. 
+The \textbf{+} sign corresponds to diffuse functions, the extension of the basis function as it tails away from the nucleus. This particularly important when describing the behaviour of ions. The \textbf{*} indicates the addition of polarisation functions, in this case, d-functions to all non-H atoms. Higher order modifications also add p-functions to H atoms, additional d-functions to non-H atoms, d-functions to H atoms, with increasing levels of polarisation. This mixing of orbitals facilitates a better description for the correct shape of the \ac{MO}. 
 Increasing the number of basis functions on each occupied orbital allows for expansion or contraction, increasing flexibility in response to the environment. 
 
 Basis set superposition error \acs{BSSE} is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at large separations, and the complex at short distances. This is particularly pertinent when considering reaction complexes, and performing \ac{PES} scans where bond breaking or formation is expected. 
@@ -796,7 +794,7 @@ The effect is particularly pronounced for smaller basis sets. Counterpoise corre
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \section{Implementation \& Analysis}
-The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09}. 
+The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09} \cite{Frisch2013}. 
 This section will provide an generic overview of the methods and techniques used to analyse the optimised geometry output from a \ac{QM} calculation. 
 Subsequent investigations into transition state structures, reaction coordinates and analysis of critical bonding points will be explained.  
 The details of individual calculation schemes are included in the methodology section at the the start of each chapter. This includes any details of the \ac{QM} methods and basis sets chosen, individual optimisation procedures, types of calculation or special keywords used, and any non-standard software or technical details of importance. 
@@ -814,14 +812,14 @@ In these cases, an energy maximum followed by a trough indicates a transition st
 Intrinsic reaction coordinate calculation also test the reactant and product along the reaction pathway, to ensure that they lie on the same \ac{PES}. 
 To explore the predicted degradation mechanisms of \ac{NC}, the scanning parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. In this way, multi-dimensional scans could be performed. Two-dimensional scans were used to probe simultaneous processes in the system, however, these proved computationally intensive due to the high number of coordinate points to be calculated. 
 Relaxed geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
-A rigid scan consisted of a single point energy calculation of the structure at each of step the scan, rather than full relaxation of the wider system, as in relaxed scans. 
+A rigid scan consisted of a single point energy calculation of the structure at each step, rather than full relaxation of the wider system, as in the relaxed scans. 
 %These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
 
 \subsection{Transition state searches}
 %[Maybe this goes into a smaller metholodogy section?] % critical mechanistic detail 
 Transition state searches are called through the Opt=TS, QST or QST3 keywords in \ac{G09}. The Opt=TS method attempts to optimise the input ``guess'' geometry to a maximum. The guess geometry can be obtained \textit{via} a \ac{PES} scan, from coordinates in the literature, or generated using the QST2 function. 
 A \ac{TS} can be identified by the single imaginary frequency corresponding to the vibration transitioning from product to reactant. 
-\ac{TS} searching is know to be difficult.
+\ac{TS} searching is known to be difficult.
 In many cases, a \ac{TS} calculation alone will not be able to optimise to the correct transition state and is usually used in conjunction the QST2 or QST3 methods. 
 The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method \cite{Govind2003}. %42 REF. 
 Here, the transition geometry is assumed to be around midway between a given reactant and product; the calculation interpolates between the starting and end point, probing the energy profile. Thus, the corresponding atom labels must match in both the reactants and products. QST3 performs a similar function, but also considers in input guess transition state structure. % (Figure 10). 
@@ -858,9 +856,9 @@ signify a stationary point. With respect to intermolecular interactions, these c
 interaction centres, and are deemed Critical Points (\acs{CP}). The matrix of partial second derivatives of the gradient is referred to as the \textit{Hessian}. 
 %http://www.chem.gla.ac.uk/~louis/xdworkshop/workshop/documentation/jyvaskla_4.pdf
 The Hessian is a (3$\times$3) symmetric matrix; diagonalisation sets the off-diagonal terms to zero and generates the principal axes of curvature. 
-The sum of the diagonal terms returns teh laplacian of the electron density ($\nabla^{2}(\rho)$); evaluation of $\nabla^{2}(\rho)$ identifies the characteristic of the \ac{CP}. 
+The sum of the diagonal terms returns the laplacian of the electron density ($\nabla^{2}(\rho)$); evaluation of $\nabla^{2}(\rho)$ identifies the characteristic of the \ac{CP}. 
 % the second derivative of the gradient (
-In the context of electron density, the \ac{CP} can be classified into four types based on the number of negative eigenvalues on the Hessian (table \ref{tab:cps}):
+In the context of electron density, the \ac{CP} can be classified into four types based on the number of negative eigenvalues of the Hessian (table \ref{tab:cps}):
 %CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
 %At this point you shoudl have already explained what the hessian matrix is
 %please explaint the (3,X) labelling
@@ -868,14 +866,14 @@ In the context of electron density, the \ac{CP} can be classified into four type
 \caption{Features of different types of critical point from \ac{QTAIM} topological analysis.}
 \begin{center}
 %\begin{tabular}{l c p{2cm} p{3cm} p{3cm}} 
-\begin{tabular}{l l p{3cm} l l} 
+\begin{tabular}{l l p{2cm} p{3cm} p{4cm}} 
 \toprule
 %derivation
 Critical Point & Label  & Negative eigenvalues & Attribute & Representation \\
 \midrule
 Nuclear (\acs{NCP}) & (3,-3)  & 3  & Local maximum & Atomic nuclei \\
 \hline
-Bonding (\acs{BCP}) & (3,-1) & 2 eigenvalues -ve & 2\textsuperscript{nd} order saddle point & Bonding site \\
+Bonding (\acs{BCP}) & (3,-1) & 2 & 2\textsuperscript{nd} order saddle point & Bonding site \\
 \hline
 Ring (\acs{RCP}) & (3,+1) & 1  & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
 \hline
@@ -886,19 +884,19 @@ Cage (\acs{CCP}) & (3,+3) & 0& Local minimum & Centre of cage system \\
 \end{center}
 \end{table}
 
-The \ac{NCP} is so called as they are generally located at atomic nuclei positions. All three eigenvalues of the Hessian matrix of the function are negative, corresponding to a local maximum on the electron density landscape. The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as in \ce{Li2} which has a greater number of \ac{NCP} than atoms, and for \ce{KrH+}, with a lower number. %Why???%, 
+Nuclear critical points (\acs{NCP}) are so called, as they are generally located at atomic nuclei positions. All three eigenvalues of the Hessian matrix of the function are negative, corresponding to a local maximum on the electron density landscape. The number of \acs{NCP} is usually equal to the number of atoms, though there are exceptions, such as in \ce{Li2} which has a greater number of \acs{NCP} than atoms, and for \ce{KrH+}, with a lower number. %Why???%, 
 %For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
 %
 %Btw real space.... just means space. As in actual 3D space. Not virtual space. 
 %In a electronic structure (specifically DFT) code, a "real space code" means using atom orbitals as basis functions rather than plane waves.
 % https://chemistry.stackexchange.com/questions/84098/what-are-the-differences-between-the-hilbert-space-and-real-space-representation
-When two eigenvalues of the Hessian matrix of a function are negative, a second-order saddle point is present. These sites are usually located between attractive atom pairs, and so are referred to as \ac{BCP}. %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
+When two eigenvalues of the Hessian matrix of a function are negative, a second-order saddle point is present. These sites are usually located between attractive atom pairs, and so are referred to as a \ac{BCP}. %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
 As the electron density at the \ac{BCP} is closely related to bond strength, the magnitude of $\nabla^{2}(\rho)$ will give an indication of the bonding type \cite{Matta2007}. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
 % potential energy density at \ac{BCP} has been shown to be highly correlated with hydrogen bond energies% (Chem. Phys. Lett., 285, 170)
 %; local information entropy at BCP is a good indicator of aromaticity.% (Phys. Chem. Chem. Phys., 12, 4742).
 If one eigenvalue of the Hessian is negative, there exists a first-order saddle point.  %transition state in potential energy surface). For electron density analysis, 
 This generally appears in the center of ring systems and highlights a local steric effect, hence it is known as a \ac{RCP}. 
-When none of the eigenvalues are negative, it corresponds to the local minimum. For electron density analysis, these points generally appear in the center of cage systems, such as in pyramidal structure. These are referred to as the \ac{CCP}. 
+When none of the eigenvalues are negative, it corresponds to the local minimum. For electron density analysis, these points generally appear in the center of cage systems, such as in pyramidal structure. These are referred to as a \ac{CCP}. 
 
 The positions of \ac{CP}s are searched by the Newton method, %REF?
 an initial guess point must be assigned; the minimisation will always converge to the CP that is closest to the guess point. 
@@ -910,7 +908,10 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 \end{equation}
 %If the relationship is unsatisfied, then some of CPs must be missing, you may need to try to search those CPs by different guesses. However even if the relationship is satisfied, it does not necessarily mean that all CPs have been found. Notice that the function spaces of ELF/LOL and Laplacian of XX are much more complex than XXX, it is very difficult to locate all CPs for these functions, especially for middle and large system, so, you can stop trying for searching CPs once all CPs that you are interested in have been found.
 
-The gradient path linking \ac{BCP} or two local maxima can be referred to as a ``bond path''. Presence of a bond path shows an atomic interaction path available for a variety of bonding interactions, such as intra molecular bonding or H-bonding. A network of bond paths is known as molecular graph. Scrutiny of the graph returns a reliable image of the geometry of the molecule. % . Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
+The gradient path linking \ac{BCP}, or two local maxima, can be referred to as a ``bond path''. Presence of a bond path indicates an atomic interaction path %avenue of interaction?
+available for a variety %any?
+bonding interactions; these will lie along covalent bonds, as well as non-covalent interactions such as intra molecular bonding or H-bonding. A network of bond paths is known as molecular graph. Scrutiny of the graph returns a reliable image of the geometry of the molecule. %And highlights non-bonding interaction centre in the molecule.
+% . Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
 %Let us see an example. In the complex shown below, the imidazole plane is vertical to magnesium porphyrin plane, the nitrogen in imidazole coordinated to magnesium. Magenta, orange and yellow spheres correspond to (3,-3), (3,-1) and (3,+1) critical points, brown lines denote bond paths.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\section{Spectroscopy}
@@ -937,7 +938,4 @@ The gradient path linking \ac{BCP} or two local maxima can be referred to as a `
 %Big clusters
 %
 %Solvent
-
-
-
-
+%Summary paragraph?

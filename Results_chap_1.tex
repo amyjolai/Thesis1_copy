@@ -230,7 +230,7 @@ When considering the system size, the \ac{ESP} and \ac{QTAIM} topology analyses 
 The \acs{B3LYP} functional was chosen for initial exploration of the electronic properties of the system. It is an efficient and extensively benchmarked method %for calculating electronic properties 
 for main group elements and appropriate for the current model system size, where the largest trimer extends to 76 atoms\cite{bento2005,Tirado-Rives2008}. 
 %\subsubsection{Geometry optimisation}
-All electronic structure calculations in this section, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p) with tight convergence criteria (table \ref{tab:convergence}). Minima were located using the Berny optimisation algorithm\cite{Schlegel1982}, implimented in the \ac{G09} quantum chemistry suite\cite{frisch2013}.
+All electronic structure calculations in this section, including geometry optimisation and thermodynamic calculations were performed in vacuum to the level of \acs{B3LYP}\/ 6-311+G(d,p) with tight convergence criteria (table \ref{tab:convergence}). Minima were located using the Berny optimisation algorithm\cite{Schlegel1982}, implimented in the \ac{G09} quantum chemistry suite\cite{Frisch2013}.
 
 \begin{table}[hbp]
 \begin{center}
@@ -295,7 +295,7 @@ Electrostatic potential (\acs{ESP}) surfaces were mapped to the electron density
 
 %- Variation in partial charges, with different capping groups
 %explain why you chose the dimers you did - it was based on Shukla's denitration sequence.
-Fully nitrated dimers (\acs{DOS}=3) were bi-capped with methoxy (\acs{CH3CH3}), methoxy-hydroxy (\acs{CH3OH}) or hydroxy-methoxy (\acs{OHCH3}) groups at C1 and C4 positions (figure \ref{fig:capping-groups-all}).
+Fully nitrated dimers (\acs{DOS}=3) were bi-capped with methoxy (\acs{CH3CH3}), methoxy-hydroxyl (\acs{CH3OH}) or hydroxy-methoxy (\acs{OHCH3}) groups at C1 and C4 positions (figure \ref{fig:capping-groups-all}).
 
 \begin{figure}[htp]
   \centering
@@ -460,7 +460,7 @@ Capping group & Nitrate-nitrate pair &  Distance / \si{\angstrom} \\
 \caption{Critical points identified by \ac{QTAIM} topology analysis of NC dimer nitrated at C2 position for \textbf{a)} \ac{CH3CH3} dimer, \textbf{b)} \acs{CH3OH} dimer and \textbf{c)} \acs{OHCH3} dimer.}
 \label{fig:2_0}
 \end{figure}
-
+%
 %wait for NC2_0 to be done.
 %Here I want to comment on the interaction with diff cappign groups - why do I continue with CH3?
 %Does this segway into something about the model size in the next section?
@@ -508,7 +508,7 @@ Dimer & Ring torsion angle \\
 %
 %On comparing surfaces - you need to compare ESPs directly, rather than visually (this is last resort) - you need a table. These aren't the same as partial charges. Can I get them from the cube files? 
 
-The \ac{ESP} maps % for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxy capped dimer (\acs{CH3OH}) and hydroxy-methoxy capped dimer (\acs{OHCH3}) 
+The \ac{ESP} maps % for the bi-capped methoxy dimer (\ac{CH3CH3}), methoxy-hydroxyl capped dimer (\acs{CH3OH}) and hydroxy-methoxy capped dimer (\acs{OHCH3}) 
 represent the charge density around the molecule (figure \ref{fig:ESP}). A more negative value (increasingly red) indicates an area of higher electron density, whilst a more positive value (increasingly blue) indicates an area of lower electron density. It can be seen that the areas with lowest electron density lie around the centre of the glucopyranose rings and at the C6 position of the side branches. This can be explained by the number of adjacent oxygens drawing the electron density away from the less electronegative %but electron-rich INDUCTIVE EFFECT: polarisation of a sigma bond due to differences in electronegativity - either electron donating or withdrawing. 
 alkyl groups. The most electron rich areas are the outermost oxygens of the nitrate groups (Ot positions). The terminal oxygens draw electron density from the nitrogen lone pairs and are resonance stabilised. %could be BS
 The presence of the hydroxyl capping group promotes a small decrease in the concentration of electron density around the adjacent ring. This is illustrated by the slight deepening of the blue shading around the ring directly bonded to the hydroxyl. The hydroxyl group itself presents the lowest concentration of electron density, suggesting that the terminating hydrogen may be %is susceptible 

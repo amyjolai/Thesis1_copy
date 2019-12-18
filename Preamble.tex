@@ -1,27 +1,33 @@
-% I may change the way this is done in a future version, 
-%  but given that some people needed it, if you need a different degree title 
-%  (e.g. Master of Science, Master in Science, Master of Arts, etc)
-%  uncomment the following 3 lines and set as appropriate (this *has* to be before \maketitle)
-% \makeatletter
-% \renewcommand {\@degree@string} {Master of Things}
-% \makeatother
+%% I may change the way this is done in a future version, 
+%%  but given that some people needed it, if you need a different degree title 
+%%  (e.g. Master of Science, Master in Science, Master of Arts, etc)
+%%  uncomment the following 3 lines and set as appropriate (this *has* to be before \maketitle)
+%% \makeatletter
+%% \renewcommand {\@degree@string} {Master of Things}
+%% \makeatother
 
-%\title{Computational Study of the Ageing Processes in Nitrocellulose}
-%\author{Amy J. Lai}
-%\department{Department of Chemistry}
-%
-%\maketitle
-%\makedeclaration
+\title{Computational Study of the Ageing Processes in Nitrocellulose}
+\author{Amy J. Lai}
+\department{Department of Chemistry}
 
-%%\cleardoublepage\phantomsection
-%\addcontentsline{toc}{chapter}{Abstract}
-%\begin{abstract} % 300 word limit
+\maketitle
+\makedeclaration
+
+%\cleardoublepage\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{abstract} % 300 word limit
 %My research is about stuff.
 %It begins with a study of some stuff, and then some other stuff and things.
-%The degradation of \ac{NC} was investigated by looking at the explored degradation routes in alternative nitrate esters, and tested for \ac{NC} a truncated model for the wider polymer
-%It was found that the most suitable model for study of the key degradation reactions was a \textbeta-glucopyranose monomer, bi-capped with methoxy groups. This was determined via analysis of the \ac{QTAIM} \ac{BCP} between the capping groups and the wider monomer, when changing from hydroxyl and methoxy homogeneous or mixed groups at the C1 and C4 sites on the ring. The model was nitrated at the C2 position, to mimic the first site of nitration or last site of denitration. %REF
-%There is a 300-word limit on your abstract.
-%\end{abstract}
+The dominant degradation pathways of \ac{NC} were investigated, using \ac{QM} methods to probe the primary denitration routes, followed by key secondary reactions.  %by looking at the explored degradation routes in alternative nitrate esters, and tested for \ac{NC} a truncated model for the wider polymer
+The polymer structure was truncated in order to facilitate \ac{DFT} studies into the mechanistic details of denitration at individuate nitrate sites. 
+Comparison of monomer, dimer and trimer units of the polymer using \ac{QTAIM} topology analysis of interaction sites, analysis of the \ac{ESP} and charges showed that the most suitable model for study of the decomposition reactions was \textbeta-glucopyranose monomer, bi-capped with methoxy groups. 
+%This was determined via analysis of the \ac{QTAIM} \ac{BCP} between the capping groups and the wider monomer, when changing from hydroxyl and methoxy homogeneous or mixed groups at the C1 and C4 sites on the ring. 
+The model was nitrated at the C2 position, to mimic the most stable nitration site \cite{Shukla2012a}.
+%first site of nitration or last site of denitration. %REF
+The primary thermolytic and hydrolytic denitration routes were explored using \ac{TS} searches and \ac{PES} scans. It was found that the thermolytic behaviour of the \ac{NC} denitration step matched the energy profile of other nitrate esters \cite{Tsyshevsky2013}. 
+Protonation at the bridging oxygen site of the nitrate was found to be the most likely to lead to denitration. It was not possible to isolate a \ac{TS} for the hydrolytic reaction, though a number of coordination schemes were tested. 
+Secondary processes following initial denitration were examined. Ethyl nitrate was used as a test system before extension to the monomer. Different reaction pathways for decomposition, with forward propagation of the evolved species to the reaction step, revealed that \ce{^{.}NO2} was the most likely cause for the the experimentally observed autocatalytic rate of degradation. 
+\end{abstract}
 
 %\addcontentsline{toc}{chapter}{Impact Statement}%%%%%%%%%%%%%%%%%%
 %\begin{impact}
@@ -123,15 +129,13 @@
 \setcounter{tocdepth}{3} 
 % Setting this higher means you get contents entries for more minor section headers.
 
-%%\tableofcontents
-	
-% Add chapter heading separations if time:
+%\tableofcontents
 
-%%\cleardoublepage\phantomsection
-%\addcontentsline{toc}{chapter}{List of Figures}
-%\listoffigures
-%
-%%\cleardoublepage\phantomsection
-%\addcontentsline{toc}{chapter}{List of Tables}
-%\listoftables
+%\cleardoublepage\phantomsection
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+%\cleardoublepage\phantomsection
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
 

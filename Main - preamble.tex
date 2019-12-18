@@ -1,0 +1,171 @@
+% UCL Thesis LaTeX Template
+%  (c) Ian Kirker, 2014
+% 
+% This is a template/skeleton for PhD/MPhil/MRes theses.
+%
+% It uses a rather split-up file structure because this tends to
+%  work well for large, complex documents.
+% We suggest using one file per chapter, but you may wish to use more
+%  or fewer separate files than that.
+% We've also separated out various bits of configuration into their
+%  own files, to keep everything neat.
+% Note that the \input command just streams in whatever file you give
+%  it, while the \include command adds a page break, and does some
+%  extra organisation to make compilation faster. Note that you can't
+%  use \include inside an \include-d file.
+% We suggest using \input for settings and configuration files that
+%  you always want to use, and \include for each section of content.
+% If you do that, it also means you can use the \includeonly statement
+%  to only compile up the section you're currently interested in.
+% You might also want to put figures into their own files to be \input.
+
+% For more information on \input and \include, see:
+%  http://tex.stackexchange.com/questions/246/when-should-i-use-input-vs-include
+
+
+% Formatting rules for theses are here: 
+%  http://www.ucl.ac.uk/current-students/research_degrees/thesis_formatting
+% Binding and submitting guidelines are here:
+%  http://www.ucl.ac.uk/current-students/research_degrees/thesis_binding_submission
+
+% This package goes first and foremost, because it checks all 
+%  your syntax for mistakes and some old-fashioned LaTeX commands.
+% Note that normally you should load your documentclass before 
+%  packages, because some packages change behaviour based on
+%  your document settings.
+% Also, for those confused by the RequirePackage here vs usepackage
+%  elsewhere, usepackage cannot be used before the documentclass
+%  command, while RequirePackage can. That's the only functional
+%  difference as far as I'm aware.
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+% ------ Main document class specification ------
+% The draft option here prevents images being inserted,
+%  and adds chunky black bars to boxes that are exceeding 
+%  the page width (to show that they are).
+% The oneside option can optionally be replaced by twoside if
+%  you intend to print double-sided. Note that this is
+%  *specifically permitted* by the UCL thesis formatting
+%  guidelines.
+%
+% Valid options in terms of type are:
+%  phd
+%  mres
+%  mphil
+%\documentclass[12pt,phd,draft,a4paper,oneside]{ucl_thesis}
+\documentclass[11pt,phd,a4paper,twoside]{ucl_thesis}
+
+
+% Package configuration:
+%  LaTeX uses "packages" to add extra commands and features.
+%  There are quite a few useful ones, so we've put them in a 
+%   separate file.
+\input{MainPackages}
+% Just for the TM trademark fix
+\let\OldTexttrademark\texttrademark
+\renewcommand{\texttrademark}{\OldTexttrademark\xspace}
+
+% Sets up links within your document, for e.g. contents page entries
+%  and references, and also PDF metadata.
+% You should edit this!
+\input{LinksAndMetadata}
+%\renewcommand{\textrightarrow}{$\rigtharrow$}
+
+% And then some settings in separate files.
+\input{FloatSettings} % For things like figures and tables
+\input{BibSettings}   % For bibliographies
+
+% These control how many number sections your subsections will take
+%    e.g. Section 2.3.1.5.6.3
+%  and how many of those will get put into the contents pages.
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+
+\newenvironment{block_indent}[1]%
+  {\begin{list}{}%
+          {\setlength{\leftmargin}{#1}}%
+          \item[]%
+  }
+  {\end{list}}
+
+\begin{document}
+
+\nobibliography*
+% ^-- This is a dumb trick that works with the bibentry package to let
+%  you put bibliography entries whereever you like.
+% I used this to put references to papers a chapter's work was 
+%  published in at the end of that chapter.
+% For more information, see: http://stefaanlippens.net/bibentry
+
+% If you haven't finished making your full BibTex file yet, you
+%  might find this useful -- it'll just replace all your
+%  citations with little superscript notes.
+% Uncomment to use.
+%Can't seem to use this with local compiler (Miktex) 
+%Make sure it's commented with local compile, otherwise will get error message and crash. 
+%\renewcommand{\cite}[1]{\emph{\textsuperscript{[#1]}}}
+
+% At last, content! Remember filenames are case-sensitive and 
+%  *must not* include spaces.
+%\include{List-of-all}
+\include{Preamble}
+\include{Abbreviations}
+%\include{Introduction}
+%\include{Theory}
+%\include{Results_chap_1}
+%%%\include{Results_chap_2}
+%\include{Results_chap_3}
+%\include{Results_chap_4}
+%\include{Conclusions}
+%\include{Appendices} 
+%\include{Quotes} 
+% You could separate these out into different files if you have
+%  particularly large appendices.
+
+% This line manually adds the Bibliography to the table of contents.
+% The fact that \include is the last thing before this ensures that it
+% is on a clear page, and adding it like this means that it doesn't
+% get a chapter or appendix number.
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Bibliography}
+
+% Actually generates your bibliography.
+\bibliography{Thesis_refs}
+%\bibliographystyle{rsc} %the RSC's .bst file
+
+% All done. \o/
+\end{document}
+
+% Labelling convention
+% Equation: 	mathematical equations
+%				 	text-only chemical equations
+%					any chemistry equations with drawn structures
+%
+% Figure: 		any sort of picture
+%				 	any sort of graph or graphic
+%	
+% Scheme: 		more than one equation of any kind [AVOID THESE for image based things. and replace with figure label] - may not appear in list of figs otherwise, and makes for unsightly repeated numbers
+
+%CONVERSION FACTORS:  (note, these are from wiki.... but reinforced by https://cccbdb.nist.gov/hartreex.asp)
+% H to kJ/mol: 			2625.4996
+% H to kCal/mol: 			627.5095
+% kJ/mol to kCal/mol:	4.183999764
+
+% Present all data as 2 dp
+% Exceptions may exist when presenting the raw hartree energies 
+			 	
+
+%Colour scheme:
+% RED #FC0000T
+% BLUEBONNET #1F1FFF
+% SPANISH GREY #9B9B9B
+% lighter grey #d9d7d7
+% WHITE #FFFFFF
+% CEIL #9B9ECE (like a dusty violet)
+% PICTON BLUE #30BCED
+% DARK TANGERINE #FAA916 
+% magenta #ff00f6
+% Dark sea green #8ACB88
+% green #47cb47
+% To generate more
+% https://coolors.co/fc0000-1f1fff-9b9b9b-ffffff-faa916

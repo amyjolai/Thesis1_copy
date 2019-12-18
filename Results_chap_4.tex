@@ -181,7 +181,7 @@ Chin \textit{et al.} proposed schemes for the propagation of secondary reactions
 \end{scheme}
 % 
 \begin{scheme}%[h!] 
-\textbf{Hydrolysis scheme for \ac{EN}}
+\textbf{Hydrolysis scheme for ethyl nitrate}
 %\begin{block_indent}{1cm}
 %\ce{CH3CH2ONO2 + H+ <=>[\text{fast}] CH3CH2ONO2H+} \\
 %\ce{CH3CH2ONO2H+ <=>[\text{slow}] CH3CH2H + NO2+} \\
@@ -218,7 +218,7 @@ Equations \ref{equ:chinH3} - \ref{equ:chinH6} describe a possible branched radic
 Aellig \textit{et al.} presented an alternative scheme for the decomposition of benzyl nitrate (R = \ce{PhCH2}), involving more interaction with the solvent  \cite{Aellig2011}:\\ %\ce{PhCH2ONO2}, 
 %{Aellig's equations}
 \begin{scheme}[h!]
-\noindent\textbf{\ce{HNO3} decomposition initiated}
+\noindent\textbf{\ce{HNO3} decomposition}% initiated}
 %\textit{Initiation}
 \begin{equation}
 \ce{4HNO3 <=> 4^{.}NO2 + 2H2O + O2}
@@ -281,10 +281,10 @@ Neutral and alkaline hydrolysis reactions follow a pseudo-first order process, h
 %Discuss the work of Camera, Aellig and Chin 2007
 Multiple studies have addressed the decomposition reactions of nitrate esters following the initial scission of the nitrate group \cite{Baker1952,Camera1982,Camera1983,Matveev2003,Hu2011} %ETC refine this list later
 %Kuklja made mention of some peroxy intermediates / transition states in the denitration of PETN.
-In their work looking into the atmospheric reactions of methynitrate and methylperoxy nitrate Arenas suggested it was possible for the homolytic denitration reaction of methynitrate to share a common peroxy intermediate with the peroxide. This could account for some of the lower order NO\textsubscript{x} generated. %(just \ce{^{.}NO}, tbh, or maybe perhaps how NO3 may get generated?).
+In their work looking into the atmospheric reactions of methynitrate and methylperoxy nitrate Arenas suggested it was possible for the homolytic denitration reaction of methynitrate to share a common peroxy intermediate with the peroxide \cite{Arenas2007}. This could account for some of the lower order NO\textsubscript{x} generated. %(just \ce{^{.}NO}, tbh, or maybe perhaps how NO3 may get generated?).
 %Baker1950
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this section, secondary and extended reaction schemes for the low temperature ageing of \ac{NC} are explored. Decompostition pathways defined by Chin, Camera and Aellig \textit{et al.} are probed to determine the reactions responsible for the experimentally observed degradation products. 
+In this section, secondary and extended reaction schemes for the low temperature ageing of \ac{NC} are explored. Decomposition pathways defined by Chin, Camera and Aellig \textit{et al.} are probed to determine the reactions responsible for the experimentally observed degradation products. 
 The reactions found to be energetically feasible from the proposed routes will be scrutinised to determine whether an autocatalytic pathway can be formed from the thermodynamically validated reaction schemes. 
 
 \section{Methodology}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -370,7 +370,7 @@ The protonation site of \ac{EN} was inspected to determine whether it matched th
 %Due to the availability of oxygen sites on the \ac{EN} molecule, the optimal site for protonation was determined for inclusion in the reaction scheme for the first stage of hydrolysis. 
 Table \ref{tab:reactions} shows the protonation energies for the three different oxygen sites on \ac{EN}. Despite the upper terminal oxygen possessing the most thermodynamically favourable energy of protonation, inspection of the reaction geometries shows that the bridging structure most resembles that expected for the liberation of the \ce{NO2+} group at the next step. Though appearing less thermodynamically favourable when compared to protonation at the terminal upper oxygen site, the higher energy of reaction likely arises from the instability of the protonated complex. The elongation of the \ce{O-NO2} bond allows stabilisation of the proton at the bridging site, faciliting the facile departure of \ce{NO2+}. Subsequent calculations involving the energy of the protonated \ac{EN} will employ the values associated with the protonated bridging site. 
 
-Table \ref{tab:post_energies} shows the energies for the reactions in all schemes, for both \ac{EN} and the \ac{NC} monomer. 
+Table \ref{tab:post_energies}shows the energies for the reactions in all schemes, for both \ac{EN} and the \ac{NC} monomer. 
 %\textcolor{red}{Still to mention:\\
 % - Describe the other two schemes\\
 % - Describe the energies in the table - what are the experimental energies for them, and how do my values compare?\\
@@ -399,6 +399,7 @@ Table \ref{tab:post_energies} shows the energies for the reactions in all scheme
 \arrow(@ee--hh)[-25,3.5]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
 %\arrow(hh--ii){0}[-90,0.2]\ce{HNO3 + HNO2 <=> N2O4 + H2O} 
 \arrow(@gg--jj)[-90,1.5]\ce{R-ONO -> R=O + HNO}
+%Feed into elimhono’s chain
 \arrow(jj--kk)[-90,1]\ce{2HNO -> HON=NOH}
 \arrow(kk--ll){0}[-90,0.2]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
 % The ^{.}NO can also then combine with the R-O^{.} of the first step too
@@ -437,7 +438,7 @@ Radical reactions \\
 Acid reactions\\%nuMBER THE<E
 \midrule
 \ce{HNO3 + HNO2 <=> N2O4 + H2O} 	&	-2.251620	&	-1.854090	&	-5.131350	&	-4.180050 \\
-\ce{4HNO3 <=> 4NO2 + 2H2O + O2}&53.35029&58.36446&42.60942&46.93563\\
+\ce{4HNO3 <=> 4^{.}NO2 + 2H2O + O2}&53.35029&58.36446&42.60942&46.93563\\
 \ce{2HNO -> HON=NOH}&-38.96928&-39.71583&-36.62757&-37.40814\\
 \ce{HON=NOH -> N2O + H2O}&-48.08286&-48.18429&-50.55309&-50.74902\\
 \toprule
