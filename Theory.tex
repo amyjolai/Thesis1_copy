@@ -28,7 +28,7 @@ Integration of $|\Psi^{2}|$ over a region of space returns the probability that 
 %In Born's statistical interpretation in non-relativistic quantum mechanics,[8][9][10] the squared modulus of the wave function, |ψ|2, is a real number interpreted as the probability density of measuring a particle's being detected at a given place – or having a given momentum – at a given time, and possibly having definite values for discrete degrees of freedom. The integral of this quantity, over all the system's degrees of freedom, must be 1 in accordance with the probability interpretation. This general requirement that a wave function must satisfy is called the normalization condition. Since the wave function is complex valued, only its relative phase and relative magnitude can be measured—its value does not, in isolation, tell anything about the magnitudes or directions of measurable observables; one has to apply quantum operators, whose eigenvalues correspond to sets of possible results of measurements, to the wave function ψ and calculate the statistical distributions for measurable quantities.
 %From Wikipedia: https://en.wikipedia.org/wiki/Wave_function
 %Read the page, it's pretty good. 
-Values of $\Psi$ are chosen to be othonormal; % that is, orthogonal and normalised, such that integration of ...
+Values of $\Psi$ are chosen to be orthonormal; % that is, orthogonal and normalised, such that integration of ...
 integrating $|\Psi^{2}|$ over all space gives the probability of 1:
 \begin{equation}
 \braket{\Psi_{i}|\Psi_{j}} = \delta_{ij}
@@ -286,7 +286,6 @@ As a result, for two equivalent electrons, the wave function of the system is an
 %\begin{equation}
 %\Phi(\mathbf{X}_{1},\mathbf{X}_{2}) = - Phi(\mathbf{X}_{2},\mathbf{X}_{1})
 %\end{equation} 
-
 %These antisymmetry 
 This requirement is fulfilled by expressing the wave function as a Slater determinant, which changes sign with permutation of the coordinates of two electrons. 
 %What is a determinant anyway
@@ -702,7 +701,6 @@ The general form of the DFT-D scheme  is used to calculate the total energy of t
 \begin{equation}
 E_{DFT-D}=E_{KS=DFT} + E_{disp}
 \end{equation}
-
 The \ac{wb97xd} dispersion corrected functional was presented by Chai \textit{et. al},  based on the $\omega$B97X, which is used to calculate the \ac{KS-DFT} energy, $E_{KS-DFT}$   \cite{Chai2008,Chai2008a}. %for the calculation of the \ac{KS-DFT} energy, $E_{KS-DFT}$ . %The $\omega$B97X followd Grimme's method for computing the 
 The approach is founded on Becke's B97-D GGA functional \cite{Becke1997,Grimme2006}. For the B97-D functional, expansion coefficients were added to the original B97 and optimised to reduce the density functional at small separations where lower electron correlation was expected. At medium-long ranges, the density functional description was dictated by the semi-empirical dispersion correction term. 
 %(B97D was obtained from the nonhybrid generalized gradient B97)
@@ -798,29 +796,37 @@ The effect is particularly pronounced for smaller basis sets. Counterpoise corre
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \section{Implementation \& Analysis}
-%Optimisations, energy calculations and 
+The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09}. 
+This section will provide an generic overview of the methods and techniques used to analyse the optimised geometry output from a \ac{QM} calculation. 
+Subsequent investigations into transition state structures, reaction coordinates and analysis of critical bonding points will be explained.  
+The details of individual calculation schemes are included in the methodology section at the the start of each chapter. This includes any details of the \ac{QM} methods and basis sets chosen, individual optimisation procedures, types of calculation or special keywords used, and any non-standard software or technical details of importance. 
+%
+%\subsecttion{Geometry optimisation, single point energy calculation and thermochemistry.}
+%All energy minimsations emplyed the Berny algorith, amd 
 %
 %Unless specified otherwies, all calcs run in G09 D.01 though perhaps make mention of materials studio, orca - no, Gview and Avogadro for quick cleanup. PyRed, what did I use to make the PBDs?
 %Visualisation done in avogadro, molden, Gview
 %
 \subsection{Potential Energy Surface scans}
 %[Maybe this goes into a smaller methodology section?]
-Geometry scans or \ac{PES} scans were used to probe the local energy landscape corresponding to specific change in geometry. During the course of a scan, a structural property - such as a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. At each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond. Each scan yields a \acs{PES} of the explored pathway. In the case of bond breaking or formation, the presented energy profile is a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
-In these cases, an energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the peak of the curve can be extracted and used for subsequent frequency calculations or transistion state search, to validate the mechanistic pathway. % using intrinsic reaction co-ordinate methods. 
-To explore the predicted degradation mechanisms of \ac{NC}, the scanning parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. 
-Geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
-
-A rigid scan consists of a single point energy calculation of the structure at each of step the scan. % change in coo-rdinates.
-A relaxed scans calls for a geometry optimisation at each of these points. 
-Two-dimensional scans may be used to probe simultaneous processes in the system. These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
+Geometry scans or \ac{PES} scans were used to probe the local energy landscape corresponding to a specific change in geometry. During the course of a scan, a structural property - such as a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. In the case of a relaxed scan, at each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a \acs{PES} of the explored pathway. In the case of bond breaking or formation, the presented energy profile is a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
+In these cases, an energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the peak of the curve can be extracted and used for subsequent frequency calculations or transition state search, to validate the mechanistic pathway. % using intrinsic reaction co-ordinate methods. 
+Intrinsic reaction coordinate calculation also test the reactant and product along the reaction pathway, to ensure that they lie on the same \ac{PES}. 
+To explore the predicted degradation mechanisms of \ac{NC}, the scanning parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. In this way, multi-dimensional scans could be performed. Two-dimensional scans were used to probe simultaneous processes in the system, however, these proved computationally intensive due to the high number of coordinate points to be calculated. 
+Relaxed geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
+A rigid scan consisted of a single point energy calculation of the structure at each of step the scan, rather than full relaxation of the wider system, as in relaxed scans. 
+%These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
 
 \subsection{Transition state searches}
-%[Maybe this goes into a smaller metholodogy section?]
-Transition state searches are called through the Opt=TS, QST or QST3 keywords. The Opt=TS method in \ac{G09} attempts to optimise the given ``guess'' geometry to a transition state. The guess structure can be obtained from a geometry scan, manually constructed or generated using the QST2 function. In many cases, a TS alone will not be able to isolate the suitable transition state and is usually used in conjunction the QST2 or QST3 methods, and combined with other techniques such as frequency calculations. 
-The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method. %42 REF. 
-Here the transition geometry is midway between a given reactant and product. The corresponding atoms labels must match in both the starting and end products.  QST3 performs similarly, but also considers a guess transition state. % (Figure 10). 
-It is widely acknowledged that transition state searching is challenging; in addition to the techniques above, the task requires perhaps a certain measure of chemical intuition.
-“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
+%[Maybe this goes into a smaller metholodogy section?] % critical mechanistic detail 
+Transition state searches are called through the Opt=TS, QST or QST3 keywords in \ac{G09}. The Opt=TS method attempts to optimise the input ``guess'' geometry to a maximum. The guess geometry can be obtained \textit{via} a \ac{PES} scan, from coordinates in the literature, or generated using the QST2 function. 
+A \ac{TS} can be identified by the single imaginary frequency corresponding to the vibration transitioning from product to reactant. 
+\ac{TS} searching is know to be difficult.
+In many cases, a \ac{TS} calculation alone will not be able to optimise to the correct transition state and is usually used in conjunction the QST2 or QST3 methods. 
+The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method \cite{Govind2003}. %42 REF. 
+Here, the transition geometry is assumed to be around midway between a given reactant and product; the calculation interpolates between the starting and end point, probing the energy profile. Thus, the corresponding atom labels must match in both the reactants and products. QST3 performs a similar function, but also considers in input guess transition state structure. % (Figure 10). 
+It is widely acknowledged that transition state searching is challenging. In addition to the techniques above, the task requires a certain measure of chemical intuition when constructing guess structures, as the calculation is sensitive to small changes in geometry.
+%“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
 
 %Imaginary frequencies and the Hessian
 %If the second derivative is positive at a point, the graph is concave up. If the second derivative is positive at a critical point, then the critical point is a local minimum.
@@ -836,69 +842,75 @@ It is widely acknowledged that transition state searching is challenging; in add
 %
 %%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\subsection{Topology analysis using \ac{QTAIM}}
+\subsection{Topology analysis using the quantum theory of atoms in molecules}
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wave function, ELF, LOL ...
-Topology analysis is a method of obtaining useful properties from the 3D representation of ...%the electron density derived during a quantum mechanical calculation. 
-Bader proposed a technique to analyse the electron density in the \ac{QTAIM} \cite{Bader1991}.
+Topology analysis is a method of obtaining useful properties from the 3D representation of the electron density obtained from a \ac{QM} calculation. 
+A quantitative way to obtain information on the topology of the electron density, is by taking the firstd derivative of the gradient ($\nabla(\rho)$). 
+In 1991, Bader proposed a technique to analyse the electron density using the \ac{QTAIM} \cite{Bader1991}.
  %, which also extended to other real space functions, such as the \ac{LOL} and \ac{ELF}. - Only include these if you can describe them, also. 
  % Real-space calculation...when all operators (T^,V^,J^,K^) are evaluated on a grid.
  %
 %The topology analysis technique proposed by Bader was firstly used for analysing electron density in "atoms in molecules" (AIM) theory, which is also known as "the quantum theory of atoms in molecules" (QTAIM), this technique has also been extended to other real space functions, e.g. the first topology analysis research of ELF for small molecules is given by Silvi and Savin.%, see Nature, 371, 683. 
-The points in the topological landscape at which the gradient norm is zero, excluding points at infinity, %does infinity happen?
+The points in the topological landscape at which $\nabla(\rho)$ is zero (excluding points at infinity) %does infinity happen? gradient norm 
 % wiki: a norm is a function that assigns a strictly positive length or size to each vector in a vector space—except for the zero vector, which is assigned a length of zero.
 % A bit like modulus but referers to specific scenarios: https://www.physicsforums.com/threads/what-is-the-difference-between-norm-and-modulus.181812/
-signify a stationary point. These are deemed Critical Points (\acs{CP}).  In the context of electron density, these point can be classified into four types:
-%In topology analysis language, the points at where gradient norm of function value is zero (except at infinity) are called as critical points (CPs), CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
-
+signify a stationary point. With respect to intermolecular interactions, these correspond to %areas of favourable 
+interaction centres, and are deemed Critical Points (\acs{CP}). The matrix of partial second derivatives of the gradient is referred to as the \textit{Hessian}. 
+%http://www.chem.gla.ac.uk/~louis/xdworkshop/workshop/documentation/jyvaskla_4.pdf
+The Hessian is a (3$\times$3) symmetric matrix; diagonalisation sets the off-diagonal terms to zero and generates the principal axes of curvature. 
+The sum of the diagonal terms returns teh laplacian of the electron density ($\nabla^{2}(\rho)$); evaluation of $\nabla^{2}(\rho)$ identifies the characteristic of the \ac{CP}. 
+% the second derivative of the gradient (
+In the context of electron density, the \ac{CP} can be classified into four types based on the number of negative eigenvalues on the Hessian (table \ref{tab:cps}):
+%CPs can be classified into four types according to how many eigenvalues of Hessian matrix of real space function are negative.
 %At this point you shoudl have already explained what the hessian matrix is
 %please explaint the (3,X) labelling
-\ac{NCP}: All three eigenvalues of Hessian matrix of the function are negative, also known as the local maximum. %For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
-As the position of (3,-3) are generally located at nuclear positions, these are referred to as Nuclear Critical Points (\acs{NCP}). The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as a greater number of \ac{NCP} for \ce{Li2} or a lower number for \ce{KrH+}. %Why???
-
-%Btw real space.... just means space. As in actual 3D space. Not virtual space. 
-%In a electronic structure (specifically DFT) code, a "real space code" means using atom orbitals as basis functions rather than plane waves.
-% https://chemistry.stackexchange.com/questions/84098/what-are-the-differences-between-the-hilbert-space-and-real-space-representation
-(3,-1): Two eigenvalues of Hessian matrix of function are negative, or a second-order saddle point. (3,-1) usually appears between attractive atom pairs and so are referred to as a Bonding Critical Points (\acs{BCP}). %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
-As the electron density af 
- \ac{BCP} is closely related to bonding strength and bonding type respectively in analogous bonding type. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
-\cite{Matta2007}
-The potential energy density at BCP has been shown to be highly correlated with hydrogen bond energies% (Chem. Phys. Lett., 285, 170)
-; local information entropy at BCP is a good indicator of aromaticity.% (Phys. Chem. Chem. Phys., 12, 4742).
-
-(3,+1): Only one eigenvalue of Hessian matrix of function is negative, namely first-order saddle point (like transition state in potential energy surface). For electron density analysis, (3,+1) generally appears in the center of ring system and displays steric effect, hence (3,+1) is often named as ring critical point (RCP).
-
-(3,+3): None of eigenvalues of Hessian matrix of function are negative, namely the local minimum. For electron density analysis, (3,+3) generally appears in the center of cage system (e.g. pyramid P4 molecule), hence is often referred to as cage critical point (CCP).
-%
-%(table \ref{tab:cps})
-
 \begin{table}[htp]
 \caption{Features of different types of critical point from \ac{QTAIM} topological analysis.}
 \begin{center}
-\begin{tabular}{l c p{4cm} p{3cm} p{3cm}} 
+%\begin{tabular}{l c p{2cm} p{3cm} p{3cm}} 
+\begin{tabular}{l l p{3cm} l l} 
 \toprule
-Critical Point & Label  & Derivation & Attribute & Representation \\
+%derivation
+Critical Point & Label  & Negative eigenvalues & Attribute & Representation \\
 \midrule
-Nuclear (\acs{NCP}) & (3,-3)  & 3 eigenvalues of Hessian matrix are -ve & Local maximum & Atomic nuclei \\
+Nuclear (\acs{NCP}) & (3,-3)  & 3  & Local maximum & Atomic nuclei \\
 \hline
-Bonding (\acs{BCP}) & (3,-1) & 2 eigenvalues of Hessian matrix are -ve & 2\textsuperscript{nd} order saddle point & Bonding site \\
+Bonding (\acs{BCP}) & (3,-1) & 2 eigenvalues -ve & 2\textsuperscript{nd} order saddle point & Bonding site \\
 \hline
-Ring (\acs{RCP}) & (3,+1) & 1 eigenvalue of Hessian matrix is -ve & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
+Ring (\acs{RCP}) & (3,+1) & 1  & 1\textsuperscript{st} order saddle point & Steric point or centre of ring system \\
 \hline
-Cage (\acs{CCP}) & (3,+3) & No negative eigenvalue of Hessian matrix& Local minimum & Centre of cage system \\
+Cage (\acs{CCP}) & (3,+3) & 0& Local minimum & Centre of cage system \\
 \bottomrule
 \end{tabular}
 \label{tab:cps}
 \end{center}
 \end{table}
 
-The positions of CPs are searched by Newton method, one need to assign an initial guess point, then the Newton iteration always converge to the CP that is closest to the guess point. By assigning different guesses and doing iteration for each of them, all CPs could be found. Once searches of CPs are finished, one should use Poincaré-Hopf relationship to verify if all CPs may have been found, the relationship states that (for isolated system)
+The \ac{NCP} is so called as they are generally located at atomic nuclei positions. All three eigenvalues of the Hessian matrix of the function are negative, corresponding to a local maximum on the electron density landscape. The number of \ac{NCP} is usually equal to the number of atoms, though there are exceptions, such as in \ce{Li2} which has a greater number of \ac{NCP} than atoms, and for \ce{KrH+}, with a lower number. %Why???%, 
+%For electron density analysis and for heavy atoms, the position of (3,-3) are nearly identical to nuclear positions, hence (3,-3) is also called nuclear critical point (NCP). Generally the number of (3,-3) is equal to the number of atoms, only in rarely cases the former can be more than (e.g. Li2) or less than (e.g. KrH+) the latter.
+%
+%Btw real space.... just means space. As in actual 3D space. Not virtual space. 
+%In a electronic structure (specifically DFT) code, a "real space code" means using atom orbitals as basis functions rather than plane waves.
+% https://chemistry.stackexchange.com/questions/84098/what-are-the-differences-between-the-hilbert-space-and-real-space-representation
+When two eigenvalues of the Hessian matrix of a function are negative, a second-order saddle point is present. These sites are usually located between attractive atom pairs, and so are referred to as \ac{BCP}. %The value of real space functions at BCP have great significance. %, for example the value of XXX and 
+As the electron density at the \ac{BCP} is closely related to bond strength, the magnitude of $\nabla^{2}(\rho)$ will give an indication of the bonding type \cite{Matta2007}. % (The Quantum Theory of Atoms in Molecules-From Solid State to DNA and Drug Design, p11); 
+% potential energy density at \ac{BCP} has been shown to be highly correlated with hydrogen bond energies% (Chem. Phys. Lett., 285, 170)
+%; local information entropy at BCP is a good indicator of aromaticity.% (Phys. Chem. Chem. Phys., 12, 4742).
+If one eigenvalue of the Hessian is negative, there exists a first-order saddle point.  %transition state in potential energy surface). For electron density analysis, 
+This generally appears in the center of ring systems and highlights a local steric effect, hence it is known as a \ac{RCP}. 
+When none of the eigenvalues are negative, it corresponds to the local minimum. For electron density analysis, these points generally appear in the center of cage systems, such as in pyramidal structure. These are referred to as the \ac{CCP}. 
+
+The positions of \ac{CP}s are searched by the Newton method, %REF?
+an initial guess point must be assigned; the minimisation will always converge to the CP that is closest to the guess point. 
+By assigning different guesses and iterating over each of them, all \ac{CP}s can eventually be found. 
+Once searches of \ac{CP}s are finished, the Poincaré-Hopf relationship \cite{Balanarayan2003} can be used to verify that the obtained topology is self-consistent, and that all \ac{CP}s are found. For an isolated system, the relationship states that:
 \begin{equation}
 \centering
 n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 \end{equation}
 %If the relationship is unsatisfied, then some of CPs must be missing, you may need to try to search those CPs by different guesses. However even if the relationship is satisfied, it does not necessarily mean that all CPs have been found. Notice that the function spaces of ELF/LOL and Laplacian of XX are much more complex than XXX, it is very difficult to locate all CPs for these functions, especially for middle and large system, so, you can stop trying for searching CPs once all CPs that you are interested in have been found.
 
- The maximal gradient path linking BCP and associated two local maxima of density is termed as “bond path”, which reveals atomic interaction path for all kinds of bonding. The collection of bond paths is known as molecular graph, which provides an unambiguous definition of molecular structure. Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
+The gradient path linking \ac{BCP} or two local maxima can be referred to as a ``bond path''. Presence of a bond path shows an atomic interaction path available for a variety of bonding interactions, such as intra molecular bonding or H-bonding. A network of bond paths is known as molecular graph. Scrutiny of the graph returns a reliable image of the geometry of the molecule. % . Bond path can be straight line or curve, obviously for the latter case the length of bond path is longer than the sum of the distances between BCP and associated two (3,-3) CPs.
 %Let us see an example. In the complex shown below, the imidazole plane is vertical to magnesium porphyrin plane, the nitrogen in imidazole coordinated to magnesium. Magenta, orange and yellow spheres correspond to (3,-3), (3,-1) and (3,+1) critical points, brown lines denote bond paths.
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\section{Spectroscopy}
@@ -914,17 +926,18 @@ n(3,-3) – n(3,-1) + n(3,+1) – n(3,+3) = 1
 % Already covered in the thermochemistry section? Maybe just refer to that, but the include the scaling factors in here
 %\subsection{Nuclear Magnetic Resonance spectra}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-s% Partial charges (?)
-
+% Partial charges (?)
+%
 % \subsubsection{Solvent models}
 % \subsection{Optimisation algorithms}
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\subsubsection{Computational implementation}
 %Caveats and scaling factors. 
 % Computational chemistry now forms a fundamental part of chemical research either in conjunction with laboratory experimentation or independently. 
-
-
-
+%Big clusters
+%
 %Solvent
+
+
 
 
