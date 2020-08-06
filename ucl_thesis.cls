@@ -443,7 +443,9 @@
     \end{center}%
     \vspace{2em}%
     \begin{center}%
-    \@date%
+%    \@date\\%
+    \textbf{December 18, 2019}\\%
+    \textbf{UK Ministry of Defence ${\copyright}$ Crown Owned Copyright 2020/AWE}
     \end{center}%
     \if@twoside %
       \newpage%
@@ -460,7 +462,7 @@
          \clearpage%
             \chapter*{Declaration}%
 %         I, \@author , confirm that the work presented in this thesis is my own.
-         I, Amy Lai , confirm that the work presented in this thesis is my own.
+         I, Amy Lai, confirm that the work presented in this thesis is my own.
          Where information has been derived from other sources, I confirm that this has been indicated in the work.
          \gdef \@author{}%
          \clearpage%

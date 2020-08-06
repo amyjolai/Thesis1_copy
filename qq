@@ -1,0 +1,2098 @@
+warning: LF will be replaced by CRLF in MainPackages.tex.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Results_chap_1.tex.
+The file will have its original line endings in your working directory
+[1mdiff --git a/Main.pdf b/Main.pdf[m
+[1mindex fed10be..ded8a7f 100644[m
+[1m--- a/Main.pdf[m
+[1m+++ b/Main.pdf[m
+[36m@@ -1,18 +1,21 @@[m
+[31m-Computational Study of the Ageing[m
+[31m-     Processes in Nitrocellulose[m
+[32m+[m[32mDetermining the dominant degradation[m
+[32m+[m[32m      mechanisms in Nitrocellulose[m
+ [m
+[31m-                          Amy J. Lai[m
+[32m+[m[32m                              Amy J. Lai[m
+ [m
+[31m-                   A thesis submitted in partial fulﬁlment[m
+[31m-                     of the requirements for the degree of[m
+[32m+[m[32m                        A thesis submitted in partial fulﬁlment[m
+[32m+[m[32m                         of the requirements for the degree of[m
+ [m
+[31m-                             Doctor of Philosophy[m
+[31m-                                          of[m
+[32m+[m[32m                                  Doctor of Philosophy[m
+[32m+[m[32m                                              of[m
+ [m
+[31m-                         University College London.[m
+[31m-                           Department of Chemistry[m
+[31m-                          University College London[m
+[31m-                               December 18, 2019[m
+[32m+[m[32m                              University College London.[m
+[32m+[m
+[32m+[m[32m                                Department of Chemistry[m
+[32m+[m[32m                               University College London[m
+[32m+[m
+[32m+[m[32m                                     January 31, 2020[m
+[32m+[m[32m       UK Ministry of Defence © Crown Owned Copyright 2020/AWE[m
+ 2[m
+ Declaration[m
+ [m
+[36m@@ -38,288 +41,326 @@[m [mtion, though a number of coordination schemes were tested. Secondary processes f[m
+ initial denitration were examined. Ethyl nitrate was used as a test system before extension[m
+ to the monomer. Different reaction pathways for decomposition, with forward propagation[m
+ of the evolved species to the reaction step, revealed that ·NO2 was the most likely cause for[m
+[31m-the the experimentally observed autocatalytic rate of degradation.[m
+[31m-Contents[m
+[32m+[m[32mthe experimentally observed autocatalytic rate of degradation.[m
+[32m+[m[32mImpact Statement[m
+[32m+[m
+[32m+[m[32mThis study examines the degradation properties of NC, shedding light on the mechanistic[m
+[32m+[m[32mdetails of decomposition that are yet currently either unknown, or are unclear in existing[m
+[32m+[m[32mliterature. NC is used in an extensive variety of products, with utilisation in household,[m
+[32m+[m[32mindustrial, military and medicinal applications. Improved understanding of the fundamental[m
+[32m+[m[32mchemistry in the degradation of NC could beneﬁt the following key impact areas:[m
+[32m+[m
+[32m+[m[32mKnowledge & collective beneﬁt[m
+[32m+[m[32m    • Broaden understanding and depth of knowledge in the area of NC degradation, with[m
+[32m+[m[32m       the view to validate or deconﬂict competing schemes in literature.[m
+[32m+[m[32m    • Improve conservation practices for existing and legacy NC products of cultural value,[m
+[32m+[m[32m       such as cinematographic ﬁlm, artworks and historical munitions with better informa-[m
+[32m+[m[32m       tion on environmental conditions most impacting the decomposition pathways.[m
+[32m+[m
+[32m+[m[32mEnvironmental[m
+[32m+[m[32m    • Inform improved NC disposal methods, avoiding existing harsh chemical and incin-[m
+[32m+[m[32m       eration treatments, with opportunity to feed back into other manufacture streams such[m
+[32m+[m[32m       as the production of fertiliser.[m
+[32m+[m[32m    • Facilitate the design of next generation NC products with lower environmental im-[m
+[32m+[m[32m       pact, in terms of durability and recycle-ability, with cleaner industrial processes.[m
+[32m+[m
+[32m+[m[32mSafety[m
+[32m+[m[32m    • Reﬁne guidelines on safety and usage, based on detailed knowledge of the degrada-[m
+[32m+[m[32m       tion mechanisms, improving upon current practices based on aggregate experimental[m
+[32m+[m[32m       observations.[m
+[32m+[m[32m8                        Impact Statement[m
+[32m+[m[32mIndustrial & commercial[m
+[32m+[m
+[32m+[m[32m• Improve versatility and adaptability in NC production and its product formulations,[m
+[32m+[m[32m  in view of varying cellulose feedstock sources due to supply chain ﬂuctuation.[m
+[32m+[m
+[32m+[m[32m• Streamline industrial processes to speciﬁc reactivity requirements, based on detailed[m
+[32m+[m[32m  mechanistic considerations regarding shelf life and interaction with other compo-[m
+[32m+[m[32m  nents, leading to cost saving and better performance of ﬁnal product.[m
+[32m+[m
+[32m+[m[32mInnovation[m
+[32m+[m
+[32m+[m[32m• Allow the design of new NC products, not limited by crude understanding about the[m
+[32m+[m[32m  material shelf life and reactivity, leading to novel applications.[m
+[32m+[m[32mContents[m
+ [m
+ Abstract                     4[m
+ [m
+[31m-List of Figures              9[m
+[31m-[m
+[31m-List of Tables               13[m
+[31m-[m
+[31m-Abbreviations                17[m
+[31m-[m
+[31m-1 Introduction               21[m
+[32m+[m[32mImpact Statement             5[m
+ [m
+[31m-1.1 A brief history of Nitrocellulose . . . . . . . . . . . . . . . . . . . . . . . 21[m
+[32m+[m[32mList of Figures              11[m
+ [m
+[31m-          1.1.1 Applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23[m
+[32m+[m[32mList of Tables               15[m
+ [m
+[31m-1.2 Synthesis and structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24[m
+[32m+[m[32mAbbreviations                19[m
+ [m
+[31m-1.3 Nitrocellulose degradation . . . . . . . . . . . . . . . . . . . . . . . . . . 27[m
+[32m+[m[32m1 Introduction               23[m
+ [m
+[31m-          1.3.1 Hydrolysis degradation methods . . . . . . . . . . . . . . . . . . . 27[m
+[32m+[m[32m1.1 A brief history of Nitrocellulose . . . . . . . . . . . . . . . . . . . . . . . 23[m
+ [m
+[31m-          1.3.2 Biological degradation methods . . . . . . . . . . . . . . . . . . . 29[m
+[32m+[m[32m          1.1.1 Applications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 25[m
+ [m
+[31m-          1.3.3 Computational Studies . . . . . . . . . . . . . . . . . . . . . . . . 30[m
+[32m+[m[32m1.2 Synthesis and structure . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26[m
+ [m
+[31m-1.4 Environmental impact of NC waste products . . . . . . . . . . . . . . . . . 31[m
+[32m+[m[32m1.3 Nitrocellulose degradation . . . . . . . . . . . . . . . . . . . . . . . . . . 29[m
+ [m
+[31m-1.5 Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 32[m
+[32m+[m[32m          1.3.1 Hydrolysis degradation methods . . . . . . . . . . . . . . . . . . . 30[m
+ [m
+[31m-1.6 Research objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 33[m
+[32m+[m[32m          1.3.2 Biological degradation methods . . . . . . . . . . . . . . . . . . . 31[m
+ [m
+[31m-2 Theory and Implementation  35[m
+[32m+[m[32m          1.3.3 Computational Studies . . . . . . . . . . . . . . . . . . . . . . . . 32[m
+ [m
+[31m-2.1 Electronic structure methods . . . . . . . . . . . . . . . . . . . . . . . . . 35[m
+[32m+[m[32m1.4 Environmental impact of NC waste products . . . . . . . . . . . . . . . . . 33[m
+ [m
+[31m-          2.1.1 Born-Oppenheimer approximation . . . . . . . . . . . . . . . . . . 37[m
+[32m+[m[32m1.5 Motivation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 34[m
+ [m
+[31m-          2.1.2 Slater determinants . . . . . . . . . . . . . . . . . . . . . . . . . . 38[m
+[32m+[m[32m1.6 Research objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 35[m
+ [m
+[31m-          2.1.3 Variational principle . . . . . . . . . . . . . . . . . . . . . . . . . 39[m
+[32m+[m[32m2 Theory and Implementation  37[m
+ [m
+[31m-          2.1.4 Hartree-Fock self-consistent ﬁeld method . . . . . . . . . . . . . . 39[m
+[32m+[m[32m2.1 Electronic structure methods . . . . . . . . . . . . . . . . . . . . . . . . . 37[m
+ [m
+[31m-          2.1.5 Open shell systems . . . . . . . . . . . . . . . . . . . . . . . . . . 41[m
+[31m-8                                Contents[m
+[32m+[m[32m          2.1.1 Born-Oppenheimer approximation . . . . . . . . . . . . . . . . . . 39[m
+ [m
+[31m-         2.1.6 Electron correlation . . . . . . . . . . . . . . . . . . . . . . . . . . 42[m
+[31m-   2.2 Density functional theory . . . . . . . . . . . . . . . . . . . . . . . . . . . 43[m
+[32m+[m[32m          2.1.2 Slater determinants . . . . . . . . . . . . . . . . . . . . . . . . . . 40[m
+ [m
+[31m-         2.2.1 Hohenberg-Kohn formalism . . . . . . . . . . . . . . . . . . . . . 43[m
+[31m-         2.2.2 Kohn-Sham DFT . . . . . . . . . . . . . . . . . . . . . . . . . . . 44[m
+[32m+[m[32m          2.1.3 Variational principle . . . . . . . . . . . . . . . . . . . . . . . . . 41[m
+[32m+[m[32m10                               Contents[m
+ [m
+[31m-                   2.2.2.1 Exchange-correlation functionals . . . . . . . . . . . . . 45[m
+[31m-         2.2.3 Hybrid functionals . . . . . . . . . . . . . . . . . . . . . . . . . . 46[m
+[31m-         2.2.4 Basis set approximation . . . . . . . . . . . . . . . . . . . . . . . 49[m
+[31m-   2.3 Implementation & Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . 51[m
+[31m-         2.3.1 Potential Energy Surface scans . . . . . . . . . . . . . . . . . . . . 51[m
+[31m-         2.3.2 Transition state searches . . . . . . . . . . . . . . . . . . . . . . . 52[m
+[31m-         2.3.3 Topology analysis using the quantum theory of atoms in molecules 52[m
+[32m+[m[32m          2.1.4 Hartree-Fock self-consistent ﬁeld method . . . . . . . . . . . . . . 41[m
+[32m+[m[32m          2.1.5 Open shell systems . . . . . . . . . . . . . . . . . . . . . . . . . . 43[m
+[32m+[m[32m          2.1.6 Electron correlation . . . . . . . . . . . . . . . . . . . . . . . . . . 44[m
+[32m+[m[32m    2.2 Density functional theory . . . . . . . . . . . . . . . . . . . . . . . . . . . 45[m
+[32m+[m[32m          2.2.1 Hohenberg-Kohn formalism . . . . . . . . . . . . . . . . . . . . . 45[m
+[32m+[m[32m          2.2.2 Kohn-Sham DFT . . . . . . . . . . . . . . . . . . . . . . . . . . . 46[m
+ [m
+[31m-3 Model building and validation                       55[m
+[32m+[m[32m                    2.2.2.1 Exchange-correlation functionals . . . . . . . . . . . . . 47[m
+[32m+[m[32m          2.2.3 Hybrid functionals . . . . . . . . . . . . . . . . . . . . . . . . . . 48[m
+[32m+[m[32m          2.2.4 Basis set approximation . . . . . . . . . . . . . . . . . . . . . . . 51[m
+[32m+[m[32m    2.3 Implementation & Analysis . . . . . . . . . . . . . . . . . . . . . . . . . . 53[m
+[32m+[m[32m          2.3.1 Potential Energy Surface scans . . . . . . . . . . . . . . . . . . . . 53[m
+[32m+[m[32m          2.3.2 Transition state searches . . . . . . . . . . . . . . . . . . . . . . . 54[m
+[32m+[m[32m          2.3.3 Topology analysis using the quantum theory of atoms in molecules 54[m
+ [m
+[31m-   3.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55[m
+[32m+[m[32m3 Model building and validation                       57[m
+ [m
+[31m-   3.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59[m
+[32m+[m[32m    3.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57[m
+ [m
+[31m-   3.2.1 Geometry optimisation . . . . . . . . . . . . . . . . . . . . . . . . 59[m
+[32m+[m[32m    3.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61[m
+ [m
+[31m-   3.2.2 Labelling system . . . . . . . . . . . . . . . . . . . . . . . . . . . 60[m
+[32m+[m[32m    3.2.1 Geometry optimisation . . . . . . . . . . . . . . . . . . . . . . . . 61[m
+ [m
+[31m-   3.2.3 System size and chain ends . . . . . . . . . . . . . . . . . . . . . . 60[m
+[32m+[m[32m    3.2.2 Labelling system . . . . . . . . . . . . . . . . . . . . . . . . . . . 62[m
+ [m
+[31m-   3.2.4 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 61[m
+[32m+[m[32m    3.2.3 System size and chain ends . . . . . . . . . . . . . . . . . . . . . . 62[m
+ [m
+[31m-   3.3 Truncating the polymer . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62[m
+[32m+[m[32m    3.2.4 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 63[m
+ [m
+[31m-   3.3.1 Comparison of capping groups . . . . . . . . . . . . . . . . . . . . 62[m
+[32m+[m[32m    3.3 Truncating the polymer . . . . . . . . . . . . . . . . . . . . . . . . . . . . 64[m
+ [m
+[31m-   3.3.2 Model size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 70[m
+[32m+[m[32m    3.3.1 Comparison of capping groups . . . . . . . . . . . . . . . . . . . . 64[m
+ [m
+[31m-   3.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74[m
+[32m+[m[32m    3.3.2 Model size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72[m
+ [m
+[31m-4 Mechanisms of denitration under ambient conditions  75[m
+[32m+[m[32m    3.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 76[m
+ [m
+[31m-   4.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75[m
+[32m+[m[32m4 Mechanisms of denitration under ambient conditions  77[m
+ [m
+[31m-   4.1.1 Thermolytic reactions . . . . . . . . . . . . . . . . . . . . . . . . 75[m
+[32m+[m[32m    4.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 77[m
+ [m
+[31m-   4.1.2 Acid hydrolysis reactions . . . . . . . . . . . . . . . . . . . . . . . 77[m
+[32m+[m[32m    4.1.1 Thermolytic reactions . . . . . . . . . . . . . . . . . . . . . . . . 77[m
+ [m
+[31m-   4.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 79[m
+[32m+[m[32m    4.1.2 Acid hydrolysis reactions . . . . . . . . . . . . . . . . . . . . . . . 79[m
+ [m
+[31m-   4.2.1 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 81[m
+[32m+[m[32m    4.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 81[m
+ [m
+[31m-   4.3 Results and discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 82[m
+[32m+[m[32m    4.2.1 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 83[m
+ [m
+[31m-   4.3.1 Thermolytic decomposition mechanisms . . . . . . . . . . . . . . 82[m
+[32m+[m[32m    4.3 Results and discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 84[m
+[32m+[m[32m                              Contents  11[m
+ [m
+[31m-   4.3.2 Acid hydrolysis mechanism . . . . . . . . . . . . . . . . . . . . . 85[m
+[31m-                              Contents  9[m
+[32m+[m[32m      4.3.1 Thermolytic decomposition mechanisms . . . . . . . . . . . . . . 84[m
+[32m+[m[32m      4.3.2 Acid hydrolysis mechanism . . . . . . . . . . . . . . . . . . . . . 87[m
+ [m
+[31m-                4.3.2.1 Protonation site . . . . . . . . . . . . . . . . . . . . . . 85[m
+[31m-                4.3.2.2 Denitration by hydrolysis . . . . . . . . . . . . . . . . . 88[m
+[31m-4.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91[m
+[32m+[m[32m                4.3.2.1 Protonation site . . . . . . . . . . . . . . . . . . . . . . 87[m
+[32m+[m[32m                4.3.2.2 Denitration by hydrolysis . . . . . . . . . . . . . . . . . 90[m
+[32m+[m[32m4.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93[m
+ [m
+[31m-5 Post-Denitration Reactions            95[m
+[32m+[m[32m5 Post-Denitration Reactions            97[m
+ [m
+[31m-5.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 95[m
+[32m+[m[32m5.1 Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 97[m
+ [m
+[31m-5.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 100[m
+[32m+[m[32m5.2 Methodology . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102[m
+ [m
+[31m-5.2.1 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 101[m
+[32m+[m[32m5.2.1 Computational details . . . . . . . . . . . . . . . . . . . . . . . . 102[m
+ [m
+[31m-5.3 Results and Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 101[m
+[32m+[m[32m5.3 Results and Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102[m
+ [m
+[31m-5.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 102[m
+[32m+[m[32m5.4 Summary . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 105[m
+ [m
+[31m-6 Conclusion and future work            107[m
+[32m+[m[32m6 Conclusion and future work            109[m
+ [m
+[31m-6.1 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 107[m
+[32m+[m[32m6.1 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109[m
+ [m
+[31m-6.2 Further Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 109[m
+[32m+[m[32m6.2 Further Work . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 111[m
+ [m
+[31m-Bibliography                            111[m
+[32m+[m[32mBibliography                            113[m
+ List of Figures[m
+ [m
+[31m-    1.1 The structure of Nitrocellulose. . . . . . . . . . . . . . . . . . . . . . . . . 21[m
+[32m+[m[32m    1.1 The structure of Nitrocellulose. . . . . . . . . . . . . . . . . . . . . . . . . 23[m
+     1.2 Comparison of degradation times for Natureﬂex™ bioplastic against con-[m
+ [m
+[31m-           ventional plastic packaging, from The Mindful Chef blog [3]. . . . . . . . . 22[m
+[31m-    1.3 Applications of NC at different percentage nitrogen by mass (%N). . . . . . 24[m
+[31m-    1.4 Cellulose is converted to NC by a mixture of nitric and sulfuric acids. . . . 25[m
+[31m-    1.5 Nitration of cellulose by the nitronium ion. . . . . . . . . . . . . . . . . . . 25[m
+[32m+[m[32m           ventional plastic packaging, from The Mindful Chef blog [3]. . . . . . . . . 24[m
+[32m+[m[32m    1.3 Applications of NC at different percentage nitrogen by mass (%N). . . . . . 26[m
+[32m+[m[32m    1.4 Cellulose is converted to NC by a mixture of nitric and sulfuric acids. . . . 27[m
+[32m+[m[32m    1.5 Nitration of cellulose by the nitronium ion. . . . . . . . . . . . . . . . . . . 27[m
+     1.6 The fate of waste NC powders discarded from military stocks. The majority[m
+ [m
+[31m-           undergoes a form of combustion. From the work of Ganev et al. [4]. . . . . 27[m
+[31m-    1.7 Schematic of an incinerator designed for the destruction of waste explosives 28[m
+[31m-    1.8 2,3,6-trinitro-beta-glucopyranose as a monomer for NC . . . . . . . . . . . 30[m
+[32m+[m[32m           undergoes a form of combustion. From the work of Ganev et al. [4]. . . . . 29[m
+[32m+[m[32m    1.7 Schematic of an incinerator designed for the destruction of waste explosives 30[m
+[32m+[m[32m    1.8 2,3,6-trinitro-beta-glucopyranose as a monomer for NC . . . . . . . . . . . 32[m
+ [m
+     2.1 Restricted Hartree-Fock (HF), restricted-open HF (ROHF) and unrestricted[m
+[31m-           HF (UHF) methods of calculation. . . . . . . . . . . . . . . . . . . . . . . 42[m
+[32m+[m[32m           HF (UHF) methods of calculation. . . . . . . . . . . . . . . . . . . . . . . 44[m
+ [m
+[31m-    2.2 Energy of Ne2 with damping function. . . . . . . . . . . . . . . . . . . . . 49[m
+[32m+[m[32m    2.2 Energy of Ne2 with damping function. . . . . . . . . . . . . . . . . . . . . 51[m
+ [m
+[31m-    3.1 A cartridge containing NC propellant. . . . . . . . . . . . . . . . . . . . . 55[m
+[31m-    3.2 The primary, secondary, tertiary and quaternary structure of cellulose ﬁbres[5]. 56[m
+[32m+[m[32m    3.1 A cartridge containing NC propellant. . . . . . . . . . . . . . . . . . . . . 57[m
+[32m+[m[32m    3.2 The primary, secondary, tertiary and quaternary structure of cellulose ﬁbres[5]. 58[m
+     3.3 scanning electron microscopy (SEM) images of a) Miscanthus cellulose and[m
+ [m
+            b) Miscanthus nitrocellulose, after nitration. From the work of Gismatulina[m
+[31m-           et al.[6]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57[m
+[32m+[m[32m           et al.[6]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 59[m
+     3.4 a) Numbering scheme of 2,3,6-trinitro-β -D-glucopyranose, as monomer of[m
+            NC. b) Transition state showing SN2 (opposite side) attack by OH- and c)[m
+            angular attack (same side) by OH- during the addition–elimination process[m
+            at the C2 site of NC from the work of Shukla et al. The solid arrow indicates[m
+[31m-           nucleophilic attack and the dashed arrow the leaving group. . . . . . . . . . 58[m
+[31m-12  List of Figures[m
+[32m+[m[32m           nucleophilic attack and the dashed arrow the leaving group. . . . . . . . . . 60[m
+[32m+[m[32m14  List of Figures[m
+ [m
+     3.5 Truncated NC units, whereby each additional glucpyranose ring is added[m
+           in the 1→4 position, as in the structure of cellulose. The trimer was con-[m
+[31m-          structed from the optimised dimer, with duplication of the ﬁrst ring. . . . . 58[m
+[32m+[m[32m          structed from the optimised dimer, with duplication of the ﬁrst ring. . . . . 60[m
+ [m
+     3.6 The numbering scheme for dimers used in this study. Ring 1 (R1) is the ﬁrst[m
+           ring, whereby oxygen (O1) is one bond separated from the glycosidic oxy-[m
+           gen linking the two rings. Ring 2 (R2) is where O1 is two bonds separated[m
+           from the glycosidic oxygen.[m
+           The nitrate oxygen on the terminating ends are referred to as (Ot), and the[m
+[31m-          nitrate oxygen connected to the glucopyranose ring is referred to as (Ox). . 60[m
+[32m+[m[32m          nitrate oxygen connected to the glucopyranose ring is referred to as (Ox). . 62[m
+ [m
+     3.7 Fully nitrated NC dimer with a) methoxy groups capping chain ends on[m
+           both ring 1 and ring 2 (CH3CH3), b) a methoxy capping group on ring 1[m
+           and hydroxyl on ring 2 (CH3OH), c) hydroxyl group on ring 1 and methoxy[m
+[31m-          capping group on ring 2 (OHCH3). . . . . . . . . . . . . . . . . . . . . . . 62[m
+[32m+[m[32m          capping group on ring 2 (OHCH3). . . . . . . . . . . . . . . . . . . . . . . 64[m
+ [m
+     3.9 α-hydrogen relative to the nitrate group, highlighted in red; the terminal[m
+[31m-          oxygen (Ot) - α-H interaction is highlighted in blue. . . . . . . . . . . . . 63[m
+[32m+[m[32m          oxygen (Ot) - α-H interaction is highlighted in blue. . . . . . . . . . . . . 65[m
+ [m
+     3.8 All critical points identiﬁed by QTAIM topology analysis. Nuclear criti-[m
+           cal points (NCP are located at atomic nuclear sites, bonding critical points[m
+           (bonding critical point (BCP)), (orange spots) lie on chemical bonds, or on[m
+           intramolecular bonding paths shown in orange; ring critical points (RCP)[m
+           denote centres of steric interaction (yellow points) and the cage critical point[m
+[31m-          (cage critical point (CCP)) (green spot) shows the centre of a cage-like system. 64[m
+[32m+[m[32m          (cage critical point (CCP)) (green spot) shows the centre of a cage-like system. 66[m
+ [m
+     3.10 Critical points identiﬁed by QTAIM topology analysis of NC dimer ni-[m
+           trated at C2 position for a) NC repeat unit with two −OCH3 capping[m
+[31m-          groups (CH3CH3) dimer, b) CH3OH dimer and c) OHCH3 dimer. . . . . . 67[m
+[32m+[m[32m          groups (CH3CH3) dimer, b) CH3OH dimer and c) OHCH3 dimer. . . . . . 69[m
+ [m
+[31m-    3.11 Electrostatic potential maps of a) CH3CH3, b) CH3OH, c) CH3OH. . . . . 69[m
+[32m+[m[32m    3.11 Electrostatic potential maps of a) CH3CH3, b) CH3OH, c) CH3OH. . . . . 71[m
+     3.12 a) Electrostatic potential map and b) critical point analysis of NC monomer[m
+ [m
+           nitrated at C2 position. c) Electrostatic potential map and d) critical point[m
+           analysis of NC dimer nitrated at R1C2 position. e) Electrostatic potential[m
+[31m-          map and f) critical point analysis of NC trimer nitrated at R1C2, R3C2 . . 71[m
+[32m+[m[32m          map and f) critical point analysis of NC trimer nitrated at R1C2, R3C2 . . 73[m
+     3.13 a) NC monomer nitrated at C2. b) Monomer a) shaded by Mulliken charges.[m
+           More negative atoms are shaded in red whilst more postitive atoms are[m
+[31m-          shaded in green. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72[m
+[31m-List of Figures  13[m
+[32m+[m[32m          shaded in green. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 74[m
+[32m+[m[32mList of Figures  15[m
+ [m
+[31m-4.1 Intramolecular thermolytic reactions in pentaerythritol tetranitrate (PETN). 76[m
+[32m+[m[32m4.1 Intramolecular thermolytic reactions in pentaerythritol tetranitrate (PETN). 78[m
+ 4.2 The O−NO2 bond was elongated during rigid and relaxed PES scan to sim-[m
+ [m
+[31m-      ulate homolytic ﬁssion for the NC monomer. . . . . . . . . . . . . . . . . . 83[m
+[31m-4.3 The change in O−N−O internal angle with homolytic ﬁssion. . . . . . . . 84[m
+[31m-4.4 TS for the elimination of HNO2 in 4.4a PETN and 4.4b NC. . . . . . . . . 84[m
+[32m+[m[32m      ulate homolytic ﬁssion for the NC monomer. . . . . . . . . . . . . . . . . . 85[m
+[32m+[m[32m4.3 The change in O−N−O internal angle with homolytic ﬁssion. . . . . . . . 86[m
+[32m+[m[32m4.4 TS for the elimination of HNO2 in 4.4a PETN and 4.4b NC. . . . . . . . . 86[m
+ 4.5 Protonation sites on the NC monomer for hydrolysis of the nitrate at the C2[m
+ [m
+[31m-      position. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 85[m
+[31m-4.6 Optimised protonated NC monomer structures. . . . . . . . . . . . . . . . 86[m
+[32m+[m[32m      position. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87[m
+[32m+[m[32m4.6 Optimised protonated NC monomer structures. . . . . . . . . . . . . . . . 88[m
+ 4.7 The attempted geometry of a single water molecule in coordination with the[m
+ [m
+[31m-      NC monomer. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 87[m
+[32m+[m[32m      NC monomer. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 89[m
+ 4.8 The scanned coordinates of a) proton approach, b) dissociation of NO2 and[m
+ [m
+[31m-      c) concerted protonation and NO2 dissociation. . . . . . . . . . . . . . . . 88[m
+[32m+[m[32m      c) concerted protonation and NO2 dissociation. . . . . . . . . . . . . . . . 90[m
+ 4.9 Geometries from steps 1, 7, 11 and 26 of the geometry scan of Ox proto-[m
+ [m
+[31m-      nated ethyl nitrate (EN) denitration. . . . . . . . . . . . . . . . . . . . . . 89[m
+[32m+[m[32m      nated ethyl nitrate (EN) denitration. . . . . . . . . . . . . . . . . . . . . . 91[m
+ 4.10 Proposed 4-member and 6-member ring transition states for the denitration[m
+ [m
+[31m-      of a nitrate ester. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 90[m
+[32m+[m[32m      of a nitrate ester. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 92[m
+ 4.11 Relaxed scan of NO2 departure, starting with the 4-membered ring struc-[m
+ [m
+[31m-      ture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 91[m
+[32m+[m[32m      ture. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 93[m
+ [m
+ 5.1 1,4-bis(ethylamino)-9,10-anthraquinone dye (SB59) used to probe the re-[m
+       lease of nitrates from NC using ultraviolet–visible spectroscopy (UVvis)[m
+[31m-      and 1H NMR spectroscopy . . . . . . . . . . . . . . . . . . . . . . . . . . 96[m
+[32m+[m[32m      and 1H NMR spectroscopy . . . . . . . . . . . . . . . . . . . . . . . . . . 98[m
+ [m
+[31m-5.2 UVvis spectra of aged NC-based ﬁlm . . . . . . . . . . . . . . . . . . . . 96[m
+[32m+[m[32m5.2 UVvis spectra of aged NC-based ﬁlm . . . . . . . . . . . . . . . . . . . . 98[m
+ 5.3 Proposed pathway for the reaction of SB59 dye with .NO released as a result[m
+ [m
+[31m-      of denitration of NC [7]. . . . . . . . . . . . . . . . . . . . . . . . . . . . 97[m
+[31m-5.4 Optimised geometries of the possible protonation sites on EN. . . . . . . . 102[m
+[32m+[m[32m      of denitration of NC [7]. . . . . . . . . . . . . . . . . . . . . . . . . . . . 99[m
+[32m+[m[32m5.4 Optimised geometries of the possible protonation sites on EN. . . . . . . . 103[m
+ [m
+ 6.1 The conversion of glucose to hydroxymethylfurfural (HMF) with 6.1a)[m
+       showing the proposed reaction scheme, and 6.1b) displaying a possible[m
+       mechanistic pathway, from the ab initio molecular dynamics (AIMD) study[m
+[31m-      by Qian [8]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 110[m
+[32m+[m[32m      by Qian [8]. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 112[m
+ List of Tables[m
+ [m
+     1.1 Degree of substitution (DOS) in NC and the corresponding percentage ni-[m
+[31m-           trogen by mass (%N). . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24[m
+[32m+[m[32m           trogen by mass (%N). . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26[m
+ [m
+[31m-    2.1 Features of different types of critical point from QTAIM topological analysis. 53[m
+[32m+[m[32m    2.1 Features of different types of critical point from QTAIM topological analysis. 55[m
+ [m
+     3.1 Convergence criteria used in Gaussian 09 revision D.01 (G09). Units in[m
+[31m-           Hartree/Bohr. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 61[m
+[32m+[m[32m           Hartree/Bohr. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 63[m
+ [m
+     3.2 Topology analysis of dimers with capping groups. * CH3CH3 and CH3OH[m
+            only; ** CH3CH3 only ; *** Intramolecular steric centres located between[m
+[31m-           rings, and between nitrate groups and nearest α-hydrogen on the ring. . . . 65[m
+[32m+[m[32m           rings, and between nitrate groups and nearest α-hydrogen on the ring. . . . 67[m
+ [m
+[31m-    3.3 Distances between terminal oxygen of nitrates and nearest α-hydrogen. . . 66[m
+[32m+[m[32m    3.3 Distances between terminal oxygen of nitrates and nearest α-hydrogen. . . 68[m
+     3.4 Distances between nitrate groups across different capping group combina-[m
+ [m
+[31m-           tions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 66[m
+[32m+[m[32m           tions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 68[m
+     3.5 Torsion angles between the two rings in the R1C2 nitrated dimer (DOS=1),[m
+ [m
+[31m-           when capping groups are modiﬁed. . . . . . . . . . . . . . . . . . . . . . . 68[m
+[32m+[m[32m           when capping groups are modiﬁed. . . . . . . . . . . . . . . . . . . . . . . 70[m
+     3.6 Comparison of Mulliken charges for the CH3CH3 monomer and the ﬁrst[m
+ [m
+            glucopyranose ring (R1) of the dimer and trimer, all nitrated in the C2 po-[m
+            sition. Charges are expressed in a.u.. For explanantion of labelling scheme,[m
+            see section 3.2.2. Shaded values indicate charge differences greater than[m
+[31m-           ±0.10 a.u. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 73[m
+[32m+[m[32m           ±0.10 a.u. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 75[m
+ [m
+     4.1 Comparison of rate constants of decomposition for various polynitrate es-[m
+[31m-           ters at 140°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 78[m
+[32m+[m[32m           ters at 140°C. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 80[m
+ [m
+     4.2 Calculated free energies of reaction for the intramolecular reactions of[m
+[31m-           PETN and the NC monomer. . . . . . . . . . . . . . . . . . . . . . . . . . 82[m
+[32m+[m[32m           PETN and the NC monomer. . . . . . . . . . . . . . . . . . . . . . . . . . 84[m
+ [m
+[31m-    4.3 Free energies of protonation for NC monomer. . . . . . . . . . . . . . . . . 87[m
+[31m-16  List of Tables[m
+[32m+[m[32m    4.3 Free energies of protonation for NC monomer. . . . . . . . . . . . . . . . . 89[m
+[32m+[m[32m18  List of Tables[m
+ [m
+[31m-    5.1 Free energies of protonation for each oxygen site on EN. . . . . . . . . . . 101[m
+[32m+[m[32m    5.1 Free energies of protonation for each oxygen site on EN. . . . . . . . . . . 103[m
+     5.2 Energies of nitrate ester decomposition reactions proposed by Camera [9],[m
+ [m
+           Chin [10] and Aellig [11]. R = CH3CH2 for EN, and R = (H3CO)2C6H9O3[m
+[31m-          (bi-methoxy capped glucopyraonse monomer unit). . . . . . . . . . . . . . 104[m
+[32m+[m[32m          (bi-methoxy capped glucopyraonse monomer unit). . . . . . . . . . . . . . 105[m
+ Abbreviations[m
+ [m
+ %N      percentage nitrogen by mass[m
+[36m@@ -340,7 +381,7 @@[m [mDFT-D   density functional theory with dispersion correction[m
+ DSC     differential scanning calorimetry[m
+ DOS     degree of substitution[m
+ DPA     diphenylamine[m
+[31m-18                               Abbreviations[m
+[32m+[m[32m20                               Abbreviations[m
+ EM[m
+ EN      energetic materials[m
+ ESP[m
+[36m@@ -387,7 +428,7 @@[m [mNC[m
+         natural bond orbital[m
+ [m
+         nitrocellulose[m
+[31m-                                Abbreviations                      19[m
+[32m+[m[32m                                Abbreviations                      21[m
+ [m
+ NCP     nuclear critical point[m
+ NG[m
+[36m@@ -433,7 +474,7 @@[m [mTG[m
+         Slater type orbitals[m
+ [m
+         thermogravitmetric analysis[m
+[31m-20                           Abbreviations[m
+[32m+[m[32m22                           Abbreviations[m
+ [m
+ TS     transition state[m
+ [m
+[36m@@ -472,7 +513,7 @@[m [mfood packing ﬁlms, 3D printing elements, wound dressings and ﬁlm-blown plast[m
+ ning almost the full range of current applications. Whilst the durability of cellulose-based[m
+ products may not yet meet that of their plastic counterparts, they come with the key advan-[m
+ tage of compostability. This facilitates their secondary use as an organic feedstock, such as[m
+[31m-22  Chapter 1. Introduction[m
+[32m+[m[32m24  Chapter 1. Introduction[m
+ [m
+ Figure 1.2: Comparison of degradation times for Natureﬂex™ bioplastic against conventional plas-[m
+                tic packaging, from The Mindful Chef blog [3].[m
+[36m@@ -487,7 +528,8 @@[m [mdiscovered that acid treated cotton wool burned violently, and was the ﬁrst to[m
+ product using a mixture of nitric and sulfuric acids [24]. He was granted a U.S. patent[m
+ the following year, and variations of his techique are currently still used in the commercial[m
+ manufacture of NC [25, 26].[m
+[31m-Subsequent progress in the synthesis of stable NC products followed this discovery:[m
+[32m+[m[32mSubsequent progress on the synthesis of stable NC products followed this discovery; key[m
+[32m+[m[32mmilestones are given in the timeline:[m
+ [m
+  1855 - George Audemars pulls a NC ﬁlament from solution of ether and alcohol [25].[m
+ [m
+[36m@@ -503,9 +545,9 @@[m [mSubsequent progress in the synthesis of stable NC products followed this discove[m
+ [m
+  1883 - Whilst working on an early version of the lightbulb, Joseph Swan develops a method[m
+        of extruding nitrocellulose into ﬁlaments [25].[m
+[32m+[m[32m1.1. A brief history of Nitrocellulose                                  25[m
+ [m
+[31m- 1884 - Paul Vielle invents the ﬁrst NC-based smokeless gunpowder [23].[m
+[31m-                    1.1. A brief history of Nitrocellulose  23[m
+[32m+[m[32m1884 - Paul Vielle invents the ﬁrst NC-based smokeless gunpowder [23].[m
+ [m
+ 1.1.1 Applications[m
+ [m
+[36m@@ -536,16 +578,13 @@[m [mof three, where each of the three free hydroxyl groups has been replaced by a ni[m
+ routinely achieved [41, 42], though higher, unstable levels of nitration have been obtained[m
+ at high temperatures [23].[m
+ [m
+[31m-Degree of substitution (DOS) = 3.6 × nitrogen content (%)   (1.1)[m
+[31m-                    31.13 − nitrogen content (%)[m
+[32m+[m[32m3.6 × nitrogen content (%)[m
+[32m+[m[32mDegree of substitution (DOS) = 31.13 − nitrogen content (%)             (1.1)[m
+ [m
+ DOS values do not directly correlate to the exact level of nitration at each monomeric site[m
+ due to the imprecision during the nitration reaction; the approximate %N corresponding to[m
+ each level of nitration is given in table 1.1. A non-integer value for DOS indicates non-[m
+[31m-uniform nitration on individual glucopyranose rings throughout the polymer structure.[m
+[31m-[m
+[31m-      When NC is the only energetic component in an explosive mixture, it is termed a[m
+[31m-24       Chapter 1. Introduction[m
+[32m+[m[32m26       Chapter 1. Introduction[m
+ [m
+ Table 1.1: Degree of substitution (DOS) in NC and the corresponding percentage nitrogen by mass[m
+              (%N).[m
+[36m@@ -556,6 +595,9 @@[m [mTable 1.1: Degree of substitution (DOS) in NC and the corresponding percentage n[m
+       3  14.14    Cellulose dinitrate[m
+                   Cellulose trinitrate[m
+ [m
+[32m+[m[32muniform nitration on individual glucopyranose rings throughout the polymer structure.[m
+[32m+[m[32m      When NC is the only energetic component in an explosive mixture, it is termed a[m
+[32m+[m
+ single-base propellant. NC mixtures with one or more energetic materials (EM) such as[m
+ nitroglycerine (NG), where NG also acts as a plasticiser, are classed as double or triple-base[m
+ propellants. Due to the degradation of NC over time, stabilisers are necessary to neutralise[m
+[36m@@ -575,10 +617,10 @@[m [mFigure 1.3: Left: The percentage nitrogen by mass (%N) of NC corresponding to ea[m
+ Nitrocellulose is derived from the nitration of cellulose. Biological variation in cellulose[m
+ has implications on the quality and properties of the NC produced. During synthesis, the[m
+ backbone of cellulose is largely preserved [43, 44]. Wood pulp and cotton linters are two[m
+[32m+[m[32m1.2. Synthesis and structure                                     27[m
+[32m+[m
+ major sources of starting material for NC production; though more expensive, cotton linters[m
+ are preferred for their uniformity. Cotton sources are usually reserved for the production[m
+[31m-1.2. Synthesis and structure                                     25[m
+[31m-[m
+ of military and industrial grade propellants, with pulps from softwoods used for manufac-[m
+ ture of explosives used in blasting and mining operations [45]. A polysaccharide cellulose[m
+ chain is comprised of glucose units linked via β-1,4-glycosidic bonds, resulting in the al-[m
+[36m@@ -600,13 +642,13 @@[m [ma nitrate ester (equation 1.3 and ﬁgure 1.5).[m
+                          R−OH + NO2+ + H2O −−→ R−ONO2 + H3O+     (1.3)[m
+ Where R = Cellulosic backbone[m
+ [m
+[31m-      Primary nitrates are those with one non-hydrogen moiety on the carbon, (additional to[m
+[31m-the nitrate linkage) with the remaining two bonds linked to hydrogens. Secondary nitrates[m
+[31m-are those where the nitrate carbon possess one bonded hydrogen atom, and two further non-[m
+[32m+[m[32mPrimary nitrates are those with one non-hydrogen moiety on the carbon, (additional to[m
+ [m
+ Figure 1.5: Nitration of cellulose by the nitronium ion.[m
+[31m-26  Chapter 1. Introduction[m
+[32m+[m[32m28  Chapter 1. Introduction[m
+ [m
+[32m+[m[32mthe nitrate linkage) with the remaining two bonds linked to hydrogens. Secondary nitrates[m
+[32m+[m[32mare those where the nitrate carbon possess one bonded hydrogen atom, and two further non-[m
+ hydrogen moieties. Carbon centres of tertiary nitrates possess no attached hydrogen, and are[m
+ usually sterically hindered but as a result strongly stabilise the formation of carbocations,[m
+ favouring mononucleic mechanistic pathways. When counting from the oxygen of the ring,[m
+[36m@@ -640,8 +682,9 @@[m [mfound to be more easily ignited, possibly due to the less compact preparation le[m
+ increased surface exposure to oxygen, higher porosity to reactants and easier penetration of[m
+ the environmental effects, such as increased rate of heating due to lower density. This em-[m
+ phasises the holistic perspective that must be taken when evaluating the spectrum of factors[m
+[32m+[m[32m1.3. Nitrocellulose degradation                                                        29[m
+[32m+[m
+ and properties responsible for the decomposition behaviour of any given sample of NC.[m
+[31m-1.3. Nitrocellulose degradation  27[m
+ [m
+ 1.3 Nitrocellulose degradation[m
+ [m
+[36m@@ -668,17 +711,16 @@[m [mremoval.[m
+ [m
+ Figure 1.6: The fate of waste NC powders discarded from military stocks. The majority undergoes[m
+                a form of combustion. From the work of Ganev et al. [4].[m
+[32m+[m[32m30  Chapter 1. Introduction[m
+[32m+[m
+[32m+[m[32mFigure 1.7: Schematic of an incinerator designed for the destruction of waste explosives, patented[m
+[32m+[m[32m               by Bolejack et al. [53].[m
+ [m
+ 1.3.1 Hydrolysis degradation methods[m
+ [m
+ The alkaline hydrolysis reactions of NC have undergone thorough study due to their central[m
+ role in large-scale NC disposal from manufacturing waste streams. It was realised early on[m
+ by Kenyon and Gray that the action of alkalis on NC did not just yield cellulose and the cor-[m
+[31m-28  Chapter 1. Introduction[m
+[31m-[m
+[31m-Figure 1.7: Schematic of an incinerator designed for the destruction of waste explosives, patented[m
+[31m-               by Bolejack et al. [53].[m
+[31m-[m
+ responding metal nitrate salt, but a whole mixture of highly variable organic and inorganic[m
+ products [54]. Miles observed that whilst acid and alkaline hydrolysis both produced sim-[m
+ ilar products, the rate of the latter reaction was much greater [55]. Baker and Easty stated[m
+[36m@@ -691,13 +733,12 @@[m [msolution of 3 % by weight at 95°C was able to effectively degrade NC of 12.6-13[m
+ completion, in only 30 minutes. Su and Christodoulatos observe a similar rate, with 90 %[m
+ of digestion occurring within 35 minutes, in 2 % sodium hydroxide at 70°C for NC of 12.2[m
+ %N [58].[m
+[32m+[m[32m1.3. Nitrocellulose degradation  31[m
+ [m
+       Though less studied than alkaline hydrolysis and deemed a slower process, the acid[m
+ hydrolysis mechanism is extremely important for the understanding of decomposition and[m
+ ageing processes of NC. “Spent” or residual acids always remain in the system from in-[m
+ complete washing following synthesis. Products liberated via other breakdown routes also[m
+[31m-1.3. Nitrocellulose degradation  29[m
+[31m-[m
+ go on to form acidic species within the local environment, and contribute to more extensive[m
+ decomposition via secondary reactions and autocatalysis [59]. Assary stated that acid catal-[m
+ ysed decomposition of sugars in aqueous medium were initiated by protonation at hydroxyl[m
+[36m@@ -729,28 +770,28 @@[m [mwere resistant to direct biodegradation and require pre-treatment. Work on the e[m
+ hydrolysis of cellulose revealed that increasing the crystallinity of the substrate reduced[m
+ its digestibility [65, 66, 67, 68]. This is reinforced in the study by Mittal et al. involv-[m
+ ing alkaline and liquid-ammonia treatments on crystalline cellulose [69]. Substitution of[m
+[31m-hydroxyl groups to increase solubility of cellulose derivatives lead to increased enzymatic[m
+[31m-hydrolysis, up to complete solubilisation. After this point, susceptibility to biodegradation[m
+[31m-slowly decreased. As solubility was no longer the limiting property, further increase in sub-[m
+[31m-stitution began to inhibit enzymatic digestion. It may be that as the levels of substitution[m
+[31m-30  Chapter 1. Introduction[m
+[32m+[m[32m32  Chapter 1. Introduction[m
+ [m
+ Figure 1.8: The work of Shukla et al. employed 2,3,6-trinitro-beta-glucopyranose as a monomer[m
+                for NC [70, 1, 71].[m
+ [m
+[32m+[m[32mhydroxyl groups to increase solubility of cellulose derivatives lead to increased enzymatic[m
+[32m+[m[32mhydrolysis, up to complete solubilisation. After this point, susceptibility to biodegradation[m
+[32m+[m[32mslowly decreased. As solubility was no longer the limiting property, further increase in sub-[m
+[32m+[m[32mstitution began to inhibit enzymatic digestion. It may be that as the levels of substitution[m
+ increase, polymer geometries become less suited to the active sites of enzymes involved in[m
+ degradation.[m
+ [m
+ 1.3.3 Computational Studies[m
+ [m
+[31m-A review of published works yields very few NC mechanistic degradation studies involv-[m
+[31m-ing computational methods. Due to the nature of the topic, many of the referenced works[m
+[31m-above are linked with private or military organisations. Thus, their release may be restricted[m
+[31m-until declassiﬁed many years later, or completely withheld. The timeline of much of the[m
+[31m-material reviewed here ranges from mid to late 1900s, before the widespread use of com-[m
+[31m-putational methods in conjunction with experimental chemical research. Consequently, it is[m
+[31m-to be expected that more NC computational studies will appear in the near future. Shukla et[m
+[31m-al. performed a series of mechanistic studies on 2,3,6-trinitro-β -glucopyranose (ﬁgure 1.8),[m
+[32m+[m[32mA review of published works yields very few NC mechanistic degradation studies utilising[m
+[32m+[m[32mcomputational methods. Due to the nature of the topic, many of the referenced works above[m
+[32m+[m[32mare linked with private or military organisations. Thus, their release may be restricted until[m
+[32m+[m[32mdeclassiﬁed many years later, or completely withheld. The timeline of much of the material[m
+[32m+[m[32mreviewed here ranges from mid to late 1900s, before the widespread use of computational[m
+[32m+[m[32mmethods in conjunction with experimental chemical research. Consequently, it is to be ex-[m
+[32m+[m[32mpected that more NC computational studies will appear in the near future. Shukla et al.[m
+[32m+[m[32mperformed a series of mechanistic studies on 2,3,6-trinitro-β -glucopyranose (ﬁgure 1.8),[m
+ exploring its validity as a monomer model for the NC polymer during alkaline hydrolysis[m
+ via the saponiﬁcation route, whereby the nitrate ester was cleaved to restore the hydroxyl[m
+ group and the nitrate salt [70, 1, 71]. If the hydrolysis reaction were to proceed via the[m
+[36m@@ -763,12 +804,12 @@[m [mrupture of the ring could instead precede denitration. It was reported that nitr[m
+ would undergo an bi-molecular nucleophilic substitution reaction (SN2) substitution reac-[m
+ tion whereby each nitrate ester group is replaced by the incoming hydroxide nucleophile,[m
+ liberating a nitrate ion. Calculated enthalpies and free energies indicated a C3 → C2 →[m
+[32m+[m[32m1.4. Environmental impact of NC waste products  33[m
+[32m+[m
+ C6 sequence of denitration for the monomeric unit. Their later work involving the dimer[m
+ and trimer models suggests a signiﬁcant change in behaviour when scaling up from the[m
+ monomer. Dimer and trimer activation energies proved comparable, but showed an incon-[m
+ sistency with the monomer, instead exhibiting a C3 → C6 → C2 sequence. There is the[m
+[31m-1.4. Environmental impact of NC waste products  31[m
+[31m-[m
+ problem that the latter sequence for the dimer and trimer was extrapolated only from the en-[m
+ ergies required to remove the ﬁrst nitrate group. In contrast, the monomeric sequence was[m
+ derived from energies calculated at each of the three stages of nitrate removal; the reaction[m
+[36m@@ -800,12 +841,12 @@[m [mbut that all methods give good agreement for the energies of reaction.[m
+ NC is extremely ﬂammable when dry and so is usually kept in solvent to prevent detona-[m
+ tion when under storage [74, 75]. Mixed with at least 25 % of water or alcohol, NC is[m
+ completely stabilised [62]. This has facilitated the use of aqueous solvents as dispersion[m
+[32m+[m[32m34  Chapter 1. Introduction[m
+[32m+[m
+ and transport mediums in manufacturing processes, leading to small NC ﬁbres, or “ﬁnes”,[m
+ in output streams [76]. Demilitarisation activities have resulted in large volumes of NC[m
+ waste which regulatory action now prevents the disposal of via incineration [50, 77, 78, 79].[m
+ A high level of side group substitution relative to cellulose, in addition to its insolubility,[m
+[31m-32  Chapter 1. Introduction[m
+[31m-[m
+ contributes to resistance to microbial degradation [80, 81]. As a result, NC exhibits poor[m
+ mobility and a long lifetime in the environment.[m
+ [m
+[36m@@ -839,12 +880,13 @@[m [mcidents and explosions worldwide. Insufﬁcient understanding of the internal pr[m
+ lead to unintended explosions during storage and at nitration industrial plants, and in the[m
+ most severe cases, casualties [14, 49, 88, 89, 90, 91] . It is therefore imperative that we seek[m
+ to clarify the understanding of the ageing mechanisms to inform the reduction of associated[m
+[31m-risks, whilst more effectively preserving existing NC stock.[m
+[32m+[m[32m1.6. Research objectives  35[m
+ [m
+[32m+[m[32mrisks, whilst more effectively preserving existing NC stock.[m
+       NC disintegration is also of relevance in the preservation of historical artefacts and[m
+[32m+[m
+ cinematographic ﬁlm, where knowledge of the decomposition processes are crucial to the[m
+ maintenance of items of historical value [31, 92].[m
+[31m-1.6. Research objectives  33[m
+ [m
+       Changing policy on the use of genetically modiﬁed (GM) crops may impact the NC[m
+ supply chain. Cotton linters provide the highest grade cellulose for military and indus-[m
+[36m@@ -856,10 +898,11 @@[m [mare as yet unvalidated. Identifying a clear map of the possible reactions that o[m
+ ageing will promote adaptability against a variable cellulose feedstock, and facilitate better[m
+ understanding of the possible changes in chemical properties for different batch lines [45].[m
+ [m
+[31m-      In this study we will elucidate the dominant degradation schemes in NC with scrutiny[m
+[31m-of previously proposed decomposition pathways, and present new mechanistic considera-[m
+[31m-tions. This will be achieved via the application of computational techniques to give insight[m
+[31m-where it has been restricted by the limitations of laboratory experimentation in the past.[m
+[32m+[m[32m      In this study we will elucidate the dominant degradation schemes in NC, with scrutiny[m
+[32m+[m[32mof previously proposed decomposition pathways and presentation of new mechanistic con-[m
+[32m+[m[32msiderations. This will be achieved via the application of computational techniques to give[m
+[32m+[m[32minsight where it has been restricted by the limitations of laboratory experimentation in the[m
+[32m+[m[32mpast.[m
+ [m
+ 1.6 Research objectives[m
+ [m
+[36m@@ -868,7 +911,7 @@[m [mobjectives of this study are as follows:[m
+ [m
+ 1. Determine a representative system for modelling the degradation chemistry of NC.[m
+ [m
+[31m-2. Apply the model in the investigation of primary degradation reactions that occurr in[m
+[32m+[m[32m2. Apply the model in the investigation of primary degradation reactions that occur in[m
+    the slow ageing of NC.[m
+ [m
+ 3. Map the secondary reactions that occur in NC and shed light on the processes respon-[m
+[36m@@ -916,7 +959,7 @@[m [mwhere all states are represented by i and j, and:[m
+ [m
+ Operators acting on Ψ yield the observable properties of the system. The operator returning[m
+ the energy of the system is called the the Hamiltonian operator (H). Erwin Schro¨dinger[m
+[31m-36                              Chapter 2. Theory and Implementation[m
+[32m+[m[32m38                              Chapter 2. Theory and Implementation[m
+ [m
+ proposed his equation in 1926, describing a quantum system using its wave function [93].[m
+ Schro¨dinger’s time-independent equation is:[m
+[36m@@ -970,7 +1013,7 @@[m [menergy operator (T):[m
+ [m
+                                                    T  =   −  h¯ 2  ∇2                                             (2.6)[m
+                                                              2m[m
+[31m-                          2.1. Electronic structure methods                     37[m
+[32m+[m[32m                          2.1. Electronic structure methods                     39[m
+ [m
+ The total, non-relativistic Hamiltonian can therefore be written in terms of the kinetic energy[m
+ and potential energy operators:[m
+[36m@@ -1021,7 +1064,7 @@[m [mand the electronic terms can be collected into one term, to simplify notation:[m
+ The Schro¨dinger’s equation can now be written in terms of only the electronic coordinates:[m
+ [m
+                           (Hel + VN−N )Ψel(qi; qk) = Eel(qi; qk)                (2.10)[m
+[31m-38  Chapter 2. Theory and Implementation[m
+[32m+[m[32m40  Chapter 2. Theory and Implementation[m
+ [m
+ where the electronic coordinates are given by qi, the stationary nuclear positions by qk[m
+ and Eel is the electronic energy of the system. The values of qi are independent variables,[m
+[36m@@ -1059,7 +1102,7 @@[m [mantisymmetric with respect to the exchange of their coordinates:[m
+ [m
+       This requirement is fulﬁlled by expressing the wave function as a Slater determinant,[m
+ which changes sign with permutation of the coordinates of two electrons. In the case of a[m
+[31m-                    2.1. Electronic structure methods         39[m
+[32m+[m[32m                    2.1. Electronic structure methods         41[m
+ [m
+ multi-electronic system, the generalised Slater determinant for N total electrons is as fol-[m
+ [m
+[36m@@ -1109,7 +1152,7 @@[m [mtions, the solution with the lowest energy is the one closest to the exact value[m
+ [m
+ In practice, equation 2.10 can only be solved exactly in very few circumstances; no exact[m
+ solutions can be found for problems involving three or more interacting particles, such as[m
+[31m-40  Chapter 2. Theory and Implementation[m
+[32m+[m[32m42  Chapter 2. Theory and Implementation[m
+ [m
+ in the case of a helium atom possessing two electrons and one proton. For systems of[m
+ complexity greater than one electron, further approximations must be made.[m
+[36m@@ -1149,7 +1192,7 @@[m [mwhere dτi indicates the integration is over the spatial and spin coordinates of[m
+ r12 is the distance between the two electrons.[m
+ [m
+       The exchange operator K j , is only non-zero for electrons with the same spin, arising[m
+[31m-                          2.1. Electronic structure methods        41[m
+[32m+[m[32m                          2.1. Electronic structure methods        43[m
+ [m
+ due to the antisymmetry of the wavefunction:[m
+ [m
+[36m@@ -1198,7 +1241,7 @@[m [mspecies with unpaired electron spin such as in transition metal complexes or rad[m
+ alternative model allowing singly occupied orbitals must be adopted. The restricted-open[m
+ scheme maintains electron pairing within orbitals except in the case of the highest occu-[m
+ pied molecular orbital (HOMO), which is singly occupied. An alternative model is the[m
+[31m-42                           Chapter 2. Theory and Implementation[m
+[32m+[m[32m44                           Chapter 2. Theory and Implementation[m
+ [m
+ unrestricted scheme, where all electrons are unpaired and reside in their own orbitals. A[m
+ caveat of the unrestricted model is its susceptibility to spin contamination, which has con-[m
+[36m@@ -1229,7 +1272,7 @@[m [mexpensive with increasing numbers of electrons, such that the system size is lim[m
+ molecules for calculations of high accuracy. The high computational demand associated[m
+ with handling a many-electron wave function is circumvented in DFT, by expression of the[m
+ total energy in terms of electron density.[m
+[31m-2.2. Density functional theory      43[m
+[32m+[m[32m2.2. Density functional theory      45[m
+ [m
+ 2.2 Density functional theory[m
+ [m
+[36m@@ -1267,7 +1310,7 @@[m [mand electron-electron repulsion. It is not possible to explicitly express F[ρ(r[m
+       The second theorem states that the ground state energy can be obtained via minimisa-[m
+ tion of E[ρ(r)]. Since equation 2.21 gives the exact energy of the original Hamiltonian, by[m
+ applying the variational principle, the lowest possible value of E[ρ(r)] gives the real solu-[m
+[31m-44         Chapter 2. Theory and Implementation[m
+[32m+[m[32m46         Chapter 2. Theory and Implementation[m
+ [m
+ tion for the ground state energy, and therefore ρ(r). It is not possible to verify that the found[m
+ ρ(r) giving the lowest value of E[ρ(r)] corresponds to a wave function obeying the Pauli[m
+[36m@@ -1315,7 +1358,7 @@[m [mthen νXC(r) can be computed from the following equation:[m
+                                                    δρ[m
+ [m
+     The kinetic energy term in equation 2.22 can be expressed in terms of the one-electron[m
+[31m-                             2.2. Density functional theory           45[m
+[32m+[m[32m                             2.2. Density functional theory           47[m
+ [m
+ wave function:[m
+ [m
+[36m@@ -1365,7 +1408,7 @@[m [mGeneralised gradient approximation[m
+ To account for inhomogenous electron density present in real systems, the local gradient[m
+ of the density ∇ρ(r) can be taken into account at each coordinate, on top of the existing[m
+ dependency on the density ρ(r). This gradient corrected approach is called the generalised[m
+[31m-46  Chapter 2. Theory and Implementation[m
+[32m+[m[32m48  Chapter 2. Theory and Implementation[m
+ [m
+ gradient approximation (GGA):[m
+ [m
+[36m@@ -1405,7 +1448,7 @@[m [mthe existing results are promising [110, 111, 112].[m
+ [m
+ In DFT, the inﬂuence of the exchange contribution to EXC is signiﬁcantly larger than that[m
+ of correlation, which only adds minor corrections [113]. In hybrid DFT, a portion of ex-[m
+[31m-                                  2.2. Density functional theory                                       47[m
+[32m+[m[32m                                  2.2. Density functional theory                                       49[m
+ [m
+ act exchange is introduced into the DFT exchange energy via linear combinations of HF[m
+ and GGA exchange. This assists to counteract the self-interaction problem, a signiﬁcant[m
+[36m@@ -1444,7 +1487,7 @@[m [mcompare results.[m
+ [m
+       Stefan Grimme proposed an empirical DFT method with dispersion correction to in-[m
+ clude van der Waals interactions, described as density functional theory with dispersion[m
+[31m-48           Chapter 2. Theory and Implementation[m
+[32m+[m[32m50           Chapter 2. Theory and Implementation[m
+ [m
+ correction (DFT-D) [122, 123]. The general form of the DFT-D scheme is used to calculate[m
+ [m
+[36m@@ -1504,7 +1547,7 @@[m [mto the B97 functional with the addition of the dispersion correction. The perfor[m
+ ωB97X-D will be compared to that of B3LYP with particular attention paid to the reaction[m
+ [m
+ energies.[m
+[31m-                  2.2. Density functional theory                                                   49[m
+[32m+[m[32m                  2.2. Density functional theory                                                   51[m
+ [m
+ Figure 2.2: Dispersion energy of Ne2 with and without the damping function (equation 2.35). The[m
+                                                              dR[m
+[36m@@ -1536,7 +1579,7 @@[m [mexpression to the real atomic orbital, however, mathematically challenging to im[m
+ molecular orbital calculations. Gaussian type orbitals (GTO) of dependence Ae−αr2, offer[m
+ a more practically viable approximation. Linear combinations of primitive gaussians are[m
+ used to form the actual basis functions. The constructed basis functions are then called[m
+[31m-50  Chapter 2. Theory and Implementation[m
+[32m+[m[32m52  Chapter 2. Theory and Implementation[m
+ [m
+ contracted gaussians, and have the form:[m
+ [m
+[36m@@ -1575,7 +1618,7 @@[m [mtion is expected. The effect is particularly pronounced for smaller basis sets.[m
+ correction can be used to circumvent basis set superposition error (BSSE), at the expense[m
+ of higher computational cost. Preliminary investigations into the species examined in this[m
+ study showed that the use of counterpoise correction offered minimal improvements to the[m
+[31m-2.3. Implementation & Analysis  51[m
+[32m+[m[32m2.3. Implementation & Analysis  53[m
+ [m
+ energy, and the additional CPU time was not proportionate to the marginal improvements.[m
+ Calculations were performed at sufﬁciently high basis that the effects of BSSE were in-[m
+[36m@@ -1612,7 +1655,7 @@[m [mning parameters were assigned to the bonds undergoing the most signiﬁcant tran[m
+ during a particular step of the mechanism. In the case that more than one signiﬁcant bond[m
+ was altered, multiple scans with different bond speciﬁcations were compared. In this way,[m
+ multi-dimensional scans could be performed. Two-dimensional scans were used to probe[m
+[31m-52  Chapter 2. Theory and Implementation[m
+[32m+[m[32m54  Chapter 2. Theory and Implementation[m
+ [m
+ simultaneous processes in the system, however, these proved computationally intensive due[m
+ to the high number of coordinate points to be calculated. Relaxed geometry scans were[m
+[36m@@ -1650,7 +1693,7 @@[m [mpoints at inﬁnity) signify a stationary point. With respect to intermolecular[m
+ these correspond to interaction centres, and are deemed Critical Points (CP). The matrix[m
+ of partial second derivatives of the gradient is referred to as the Hessian. The Hessian is[m
+ a (3×3) symmetric matrix; diagonalisation sets the off-diagonal terms to zero and gener-[m
+[31m-                      2.3. Implementation & Analysis                                       53[m
+[32m+[m[32m                      2.3. Implementation & Analysis                                       55[m
+ [m
+ ates the principal axes of curvature. The sum of the diagonal terms returns the laplacian of[m
+ the electron density (∇2(ρ)); evaluation of ∇2(ρ) identiﬁes the characteristic of the critical[m
+[36m@@ -1689,7 +1732,7 @@[m [massigned; the minimisation will always converge to the CP that is closest to the[m
+ By assigning different guesses and iterating over each of them, all CPs can eventually be[m
+ found. Once searches of CPs are ﬁnished, the Poincare´-Hopf relationship [133] can be used[m
+ to verify that the obtained topology is self-consistent, and that all CPs are found. For an[m
+[31m-54  Chapter 2. Theory and Implementation[m
+[32m+[m[32m56  Chapter 2. Theory and Implementation[m
+ [m
+ isolated system, the relationship states that:[m
+ [m
+[36m@@ -1722,7 +1765,7 @@[m [mFigure 3.1: Markings on the side of a charge bag, with a cartridge containing NC[m
+                shelf-life of the product can be calculated from its manufacture date, with consideration[m
+                of storage conditions. Image from a pamphlet issued at the end of the Second World[m
+                War, to enable safe identiﬁcation of German ammunition [134].[m
+[31m-56  Chapter 3. Model building and validation[m
+[32m+[m[32m58  Chapter 3. Model building and validation[m
+ [m
+       Storage conditions such as the choice of wetting solvent, temperature, pressure, hu-[m
+ midity, as well as ﬂuctuations in these conditions over time, also contribute to the spectrum[m
+[36m@@ -1746,7 +1789,7 @@[m [mcellulose following nitration show a bloating of the cellulose ﬁbres, with alm[m
+ tention of the ﬁbre structure integrity (ﬁgure 3.3 ). Hydrogen bonding networks determine[m
+ the supramoleular arrangement of the cellulose polysaccharide chains, and variation leads[m
+ to a mixture of crystalline and amorphous regions[137, 138]. Regions of crystallinity are[m
+[31m-3.1. Introduction  57[m
+[32m+[m[32m3.1. Introduction  59[m
+ [m
+ more difﬁcult to penetrate by solvent, thus are more resistant to hydrolytic decomposition[m
+ methods; amorphous regions are more porous, exhibit less hydrogen bonding, and are more[m
+[36m@@ -1777,7 +1820,7 @@[m [morder to accurately describe the denitration behaviour of the polymer. This can[m
+ [m
+ Figure 3.3: SEM images of a) Miscanthus cellulose and b) Miscanthus nitrocellulose, after nitra-[m
+                tion. From the work of Gismatulina et al.[6].[m
+[31m-58  Chapter 3. Model building and validation[m
+[32m+[m[32m60  Chapter 3. Model building and validation[m
+ [m
+ to the 1→4 glycosidic linkage between each of the β -D-glucopyranose rings. The angle[m
+ of the glycosidic oxygen leads to an alternating, non-planar orientation for each additional[m
+[36m@@ -1803,7 +1846,7 @@[m [mFigure 3.4: a) Numbering scheme of 2,3,6-trinitro-β -D-glucopyranose, as monome[m
+ Figure 3.5: Truncated NC units, whereby each additional glucpyranose ring is added in the 1→4[m
+                position, as in the structure of cellulose. The trimer was constructed from the optimised[m
+                dimer, with duplication of the ﬁrst ring.[m
+[31m-3.2. Methodology  59[m
+[32m+[m[32m3.2. Methodology  61[m
+ [m
+ was determined with consideration for accurate representation of the chemistry of the full[m
+ system, alongside conservation of computational effort. Hydroxyl (-OH) and methoxy (-[m
+[36m@@ -1841,7 +1884,7 @@[m [minput geometry derived from an already-optimised dimer structure, with duplicati[m
+ more stable optimisation procedure. Thus, rather than construction of a new trimer geome-[m
+ try “from scratch”, the trimer structures used in the study were constructed from extension[m
+ of the fully optimised dimer structures.[m
+[31m-60  Chapter 3. Model building and validation[m
+[32m+[m[32m62  Chapter 3. Model building and validation[m
+ [m
+                           oxygen nitrogen carbon hydrogen[m
+ Figure 3.6: The numbering scheme for dimers used in this study. Ring 1 (R1) is the ﬁrst ring,[m
+[36m@@ -1871,7 +1914,7 @@[m [mIn order to investigate the inﬂuence of different capping groups, the fully ni[m
+ structure was used as a reference, following the minimum complete structure approximation[m
+ established by Shukla et al.. Chain ends were capped with methoxy groups, or a combina-[m
+ tion of a methoxy and a hydroxyl groups (ﬁgure 3.7). The differences in charge distribution[m
+[31m-3.2. Methodology                                                     61[m
+[32m+[m[32m3.2. Methodology                                                     63[m
+ [m
+ and the nature of intra-molecular interactions were probed using QTAIM and inspection[m
+ of the ESP around the molecule. When considering the system size, the ESP and QTAIM[m
+[36m@@ -1907,7 +1950,7 @@[m [mwere mapped to the electron density, extracted from G09 formatted checkpoint ﬁ[m
+ lowing optimisation. ESP maps were visualised using GView, using the CubeGen utility.[m
+ Density and ESP cubes were generated with 803 point grids. QTAIM topological analyses[m
+ including CP analysis on the optimised structures were performed using MultiWFN 3.6.[m
+[31m-62       Chapter 3. Model building and validation[m
+[32m+[m[32m64       Chapter 3. Model building and validation[m
+ [m
+ 3.3 Truncating the polymer[m
+ [m
+[36m@@ -1926,7 +1969,7 @@[m [mFigure 3.7: Fully nitrated NC dimer with a) methoxy groups capping chain ends on[m
+ [m
+                and ring 2 (CH3CH3), b) a methoxy capping group on ring 1 and hydroxyl on ring 2[m
+                (CH3OH), c) hydroxyl group on ring 1 and methoxy capping group on ring 2 (OHCH3).[m
+[31m-3.3. Truncating the polymer  63[m
+[32m+[m[32m3.3. Truncating the polymer  65[m
+ [m
+       The properties of all capping group combinations and the effect on the dimer molecule[m
+ was compared. Though the hydroxyl capping group has demonstrated wider usage in liter-[m
+[36m@@ -1960,7 +2003,7 @@[m [mFigure 3.9: α-hydrogen relative to the nitrate group, highlighted in red; the t[m
+ [m
+       Inter-ring H-bonding occurred between C6 hydrogens and the terminal oxygens of the[m
+ nearest nitrate on the other ring (at the C3 position), in addition to N - O interactions and[m
+[31m-64  Chapter 3. Model building and validation[m
+[32m+[m[32m66  Chapter 3. Model building and validation[m
+ [m
+     (a) Critical points idenitiﬁed for the CH3CH3 dimer.[m
+ [m
+[36m@@ -1973,7 +2016,7 @@[m [mFigure 3.8: All critical points identiﬁed by QTAIM topology analysis. Nuclear[m
+                on chemical bonds, or on intramolecular bonding paths shown in orange; ring critical[m
+                points (RCP) denote centres of steric interaction (yellow points) and the cage critical[m
+                point (CCP) (green spot) shows the centre of a cage-like system.[m
+[31m-                 3.3. Truncating the polymer                              65[m
+[32m+[m[32m                 3.3. Truncating the polymer                              67[m
+ [m
+ Table 3.2: Topology analysis of dimers with capping groups. * CH3CH3 and CH3OH only; **[m
+              CH3CH3 only ; *** Intramolecular steric centres located between rings, and between[m
+[36m@@ -2032,7 +2075,7 @@[m [mOHCH3    RCP        14                            R2C3H - R2N2Ot[m
+                                                   R2C6H - R1N1Ot[m
+                                                   -[m
+                                                   -[m
+[31m-66                  Chapter 3. Model building and validation[m
+[32m+[m[32m68                  Chapter 3. Model building and validation[m
+ [m
+     Table 3.3: Distances between terminal oxygen of nitrates and nearest α-hydrogen.[m
+ [m
+[36m@@ -2075,7 +2118,7 @@[m [maction between unsubstituted hydroxyl side chains with the capping group on ring[m
+                       R1N1 - R2N3                  4.8208[m
+                       R1N3 - R2N2                  5.2868[m
+                       R2N2 - R2N1                  4.1297[m
+[31m-     3.3. Truncating the polymer  67[m
+[32m+[m[32m     3.3. Truncating the polymer  69[m
+ [m
+ (a)[m
+ [m
+[36m@@ -2085,7 +2128,7 @@[m [maction between unsubstituted hydroxyl side chains with the capping group on ring[m
+ [m
+ Figure 3.10: Critical points identiﬁed by QTAIM topology analysis of NC dimer nitrated at C2[m
+                 position for a) CH3CH3 dimer, b) CH3OH dimer and c) OHCH3 dimer.[m
+[31m-68  Chapter 3. Model building and validation[m
+[32m+[m[32m70  Chapter 3. Model building and validation[m
+ [m
+ Table 3.5: Torsion angles between the two rings in the R1C2 nitrated dimer (DOS=1), when capping[m
+              groups are modiﬁed.[m
+[36m@@ -2121,7 +2164,7 @@[m [mcapping groups exhibit a lower concentration of electron density than that of th[m
+ oxygen between the two rings. This deﬁciency is particularly pronounced in the case of the[m
+ hydroxyl capping group, suggesting that the methoxy group provides a more representative[m
+ approximation for the extended polymer with respect to charge density.[m
+[31m-          3.3. Truncating the polymer                                        69[m
+[32m+[m[32m          3.3. Truncating the polymer                                        71[m
+ [m
+      (a)[m
+ [m
+[36m@@ -2129,7 +2172,7 @@[m [mapproximation for the extended polymer with respect to charge density.[m
+ [m
+            (c)[m
+ Figure 3.11: Electrostatic potential maps of a) CH3CH3, b) CH3OH, c) CH3OH.[m
+[31m-70                Chapter 3. Model building and validation[m
+[32m+[m[32m72                Chapter 3. Model building and validation[m
+ [m
+ 3.3.2 Model size[m
+ [m
+[36m@@ -2140,7 +2183,7 @@[m [mand trimer were compared in order to explore the limitations of each truncation.[m
+ [m
+         (c)[m
+      (d)[m
+[31m-          3.3. Truncating the polymer  71[m
+[32m+[m[32m          3.3. Truncating the polymer  73[m
+ [m
+      (e)[m
+ [m
+[36m@@ -2163,7 +2206,7 @@[m [minteractions observed in the larger units, omitting only the between-ring intera[m
+       Though Mulliken charges are highly variable with basis set and the inclusion of diffuse[m
+ functions, they may offer a general overview of the relative partial charge distribution in the[m
+ molecule. Figure 3.13 and table 3.6 display the Mulliken charges of each of the different[m
+[31m-72  Chapter 3. Model building and validation[m
+[32m+[m[32m74  Chapter 3. Model building and validation[m
+ [m
+     (a) NC monomer nitrated at C2  (b) Shaded by Mulliken charge[m
+ [m
+[36m@@ -2173,7 +2216,7 @@[m [mmolecule. Figure 3.13 and table 3.6 display the Mulliken charges of each of the[m
+ [m
+ Figure 3.13: a) NC monomer nitrated at C2. b) Monomer a) shaded by Mulliken charges. More[m
+                 negative atoms are shaded in red whilst more postitive atoms are shaded in green.[m
+[31m-                   3.3. Truncating the polymer                   73[m
+[32m+[m[32m                   3.3. Truncating the polymer                   75[m
+ [m
+ Table 3.6: Comparison of Mulliken charges for the CH3CH3 monomer and the ﬁrst glucopyranose[m
+              ring (R1) of the dimer and trimer, all nitrated in the C2 position. Charges are expressed[m
+[36m@@ -2228,7 +2271,7 @@[m [mMulliken charges are therefore extremely sensitive to ﬁne alterations in the g[m
+ should not be taken as a reliable measure for the charge distribution.[m
+ [m
+       Whilst the monomer lacks the essential interactions between rings and side chains[m
+[31m-74  Chapter 3. Model building and validation[m
+[32m+[m[32m76  Chapter 3. Model building and validation[m
+ [m
+ present in the polymer, when exploring the chemistry of a localised group of atoms - such[m
+ as in the case of the denitration reaction - it is a suitable approximation for a primary inves-[m
+[36m@@ -2291,7 +2334,7 @@[m [mRH−ONO2 −−→ R−O + HNO2                   (4.2)[m
+       The degradation of nitrate esters at temperatures over 100°C is primarily via ther-[m
+ molytic processes, whilst under 100°C, decomposition is largely thought to be the result of[m
+ hydrolysis [7]. Tsyshevsky et al. studied the intramolecular reactions leading to denitration[m
+[31m-76  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m78  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+      1. ·NO2 loss[m
+      2. HNO2 loss[m
+[36m@@ -2326,7 +2369,7 @@[m [mserved for later-stage decomposition of nitrate esters [153, 154, 155], though s[m
+ solely attribute it to the presence of acids [31, 23, 56, 156]. Other studies also implicate[m
+ the action of ·NO and HNO3, in addition to ·NO2 and HNO2 [157, 158]. Inspection of[m
+ these products generated from initial processes, with observation of the species permeating[m
+[31m-4.1. Introduction                                                                           77[m
+[32m+[m[32m4.1. Introduction                                                                           79[m
+ [m
+ through to later stages, will shed light on the most likely contributors to autocatalysis.[m
+ [m
+[36m@@ -2362,7 +2405,7 @@[m [mcarbocation intermediate is involved in the hydrolysis mechanism, this may expla[m
+ [m
+ Scheme 4.2: Hydrolysis of a tertiary nitrate derived from the reaction of isoprene in the aerosol[m
+                 phase, from the work of Hu et al. [159].[m
+[31m-78  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m80  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ Table 4.1: Comparison of rate constants of decomposition for various polynitrate esters at 140°C.[m
+              ∆T is the decomposition temperature range, E is the experimental activation barrier for[m
+[36m@@ -2411,7 +2454,7 @@[m [mthe presence of nitrate groups at neighbouring positions. Matveev et al. demonst[m
+ that for poly-nitroesters the rate of liquid-phase decomposition did not increase linearly[m
+ with number of nitrate reaction centres. It was found to mainly dependend on individual[m
+ structures (table 5.1) [160]. The trend in reactivity could be partially explained by the[m
+[31m-4.2. Methodology  79[m
+[32m+[m[32m4.2. Methodology  81[m
+ [m
+ inductive effect of the nitro groups [150]. The inductive effect arises when a difference[m
+ in the electronegativity between atoms connected by a σ bond leads to a polarisation, or[m
+[36m@@ -2449,7 +2492,7 @@[m [mcording to equations 4.1 and 4.2 to reproduce the work of Tsyshevsky et al.; the[m
+ geometries of PETN and its derivatives were obtained from the authors. Whilst only the[m
+ denitrated radical product geometry was provided in the case of the homolysis reaction, the[m
+ product of HNO2 elimination was given as a complex of the HNO2 leaving group and the[m
+[31m-80  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m82  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ newly formed aldehyde. A single point energy and frequency calculation were performed[m
+ on each of the species to determine the reaction energies; no geometry optimisation was per-[m
+[36m@@ -2474,14 +2517,14 @@[m [mScheme 4.3: The proposed intramolecular reactions for the initial denitration st[m
+ at each of the different oxygen sites surrounding the nitrate group. The structures were then[m
+ geometry optimised and energies of protonation were compared. H3O+ was modelled as[m
+ the donating species; as NC is usually stored wetted in water, the hydronium ion is the most[m
+[31m-likely source of protons (equation 5.11).[m
+[32m+[m[32mlikely source of protons (equation 4.5).[m
+ [m
+     RONO2 + H3O+ −−→ RONO2H+ + H2O                                 (4.5)[m
+ [m
+       It is also possible that the proton is donated by other acidic species in the system,[m
+ particularly HNO2 or HNO3. This is more likely at later stages of degradation when a higher[m
+ concentration of acid has been generated by secondary reactions. For investigations into[m
+[31m-4.2. Methodology                                                     81[m
+[32m+[m[32m4.2. Methodology                                                     83[m
+ [m
+ the hydrolytic methods of nitrate removal following protonation, or a concerted mechanism[m
+ involving a proton donor, an ethyl nitrate molecule was used as a truncation of the monomer.[m
+[36m@@ -2517,7 +2560,7 @@[m [mScans were performed with step size of 0.1 A˚ . The number of steps varied with[m
+ erty investigated, though the majority of the phenomena were observed within 20 steps (2[m
+ A˚ ). Scans were attempted in vacuum, and for the protonation cases, implicit solvent using[m
+ polarisable continuum model (PCM) [161].[m
+[31m-82  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m84  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ 4.3 Results and discussion[m
+ [m
+[36m@@ -2567,7 +2610,7 @@[m [ma values from the work of Tsyshevsky et al. [2].[m
+ b values for the activation energy and total energy of reaction are the same for bond disso-[m
+ [m
+ ciation via homolytic ﬁssion.[m
+[31m-4.3. Results and discussion  83[m
+[32m+[m[32m4.3. Results and discussion  85[m
+ [m
+ Figure 4.2: The O−NO2 bond was elongated during rigid and relaxed PES scan to simulate ho-[m
+                molytic ﬁssion for the NC monomer.[m
+[36m@@ -2601,7 +2644,7 @@[m [mexpected for those derived using the same method, basis and structure.[m
+       In the case of the NC monomer, both rigid and relaxed scans failed to capture the TS[m
+ for cleavage of the nitrate group via interaction with the α-hydrogen. A guess transition[m
+ state was constructed based on the TS of the analogous reaction for PETN (ﬁgure 4.4b),[m
+[31m-84       Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m86       Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ Figure 4.3: The relaxation of the O−N−O internal angle as the NO2 group is pulled away from the[m
+                NC monomer during a rigid geometry scan of homolytic ﬁssion.[m
+[36m@@ -2620,7 +2663,7 @@[m [mtion.[m
+ Figure 4.4: TS for the elimination of HNO2 by removal of the α-hydrogen by the NO2 leaving group[m
+                in a) PETN and b) NC. Orange dashed lines indicate bonds breaking and blue dashed[m
+                lines indicate bonds forming.[m
+[31m-                          4.3. Results and discussion               85[m
+[32m+[m[32m                          4.3. Results and discussion               87[m
+ [m
+ 4.3.2 Acid hydrolysis mechanism[m
+ [m
+[36m@@ -2654,7 +2697,7 @@[m [mbetween the gaseous and implicit solvent values are explained by the instability[m
+ vacuum, where it prefers to lose the proton and exist as water. Ionic species exhibit much[m
+ greater reactivity in the gaseous phase compared with their neutral counterparts [165, 166,[m
+ 167]. When in solution, the positive charge is solvent stabilised; the proton is less readily[m
+[31m-86  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m88  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+     (a) Bridging          (b) Bridging [solvated][m
+ [m
+[36m@@ -2668,7 +2711,7 @@[m [mFigure 4.6: Protonated NC monomer structures after geometry optimisation to the[m
+                ωB97X-D/6-31+G(2df,p). Left column: In vacuum. Right column: In PCM implicit[m
+                solvent. The interacting parts of the molecule are highlighted in 3D, in the structures[m
+                optimised in gas phase.[m
+[31m-          4.3. Results and discussion              87[m
+[32m+[m[32m          4.3. Results and discussion              89[m
+ [m
+ Table 4.3: Free energies of protonation, for each of the oxygen sites of interest on the CH3CH3[m
+              monomer of NC, nitrated at the C2 site.[m
+[36m@@ -2707,7 +2750,7 @@[m [mFigure 4.7: The attempted geometry of a single water molecule in coordination wi[m
+       Water as the protonating species was also attempted (ﬁgure 4.7), by optimisation of[m
+ one, two and three water molecules in coordination with the nitrate site in the NC monomer,[m
+ however no stable complex could be isolated. It is anticipated that a much larger network of[m
+[31m-88   Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m90   Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ waters around both the regions surrounding the nitrate moiety and the wider molecule, are[m
+ be required to achieve a stable water coordination structure. This would be of interest for[m
+[36m@@ -2743,7 +2786,7 @@[m [mgroup distance increased, its internal angle increased to 180°, conﬁrming the[m
+ NO2+. It is anticipated that the departing NO2+ will further react with water in the system[m
+ to produce acids conducive to further hydrolysis. As the scan proceeded, the molecule ro-[m
+ tated and the NO2+ leaving group aligned with the hydroxyl in an orientation suitable for[m
+[31m-     4.3. Results and discussion  89[m
+[32m+[m[32m     4.3. Results and discussion  91[m
+ [m
+ peroxy group formation (ﬁgure 4.9d). This mechanism was previously considered in the[m
+ degradation reactions of PETN; it was found that the energy of this process was higher than[m
+[36m@@ -2773,7 +2816,7 @@[m [mof the bulk molecule with relaxation only around the nitrate and coordinating sp[m
+ relaxation of the wider molecule with ﬁxed coordinates around the nitrate allowed sequen-[m
+ tial optimisation of different moieties, increasing chances of global energy minimisation. It[m
+ was possible to optimise the 4-membered ring bridging TS on the NC monomer with frozen[m
+[31m-90  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m92  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+     (a)  (b)[m
+ [m
+[36m@@ -2797,7 +2840,7 @@[m [mThe scan eventually showed the NO2 leaving group reclaiming the proton from the[m
+ group oxygen, leading to ring ﬁssion. The activation and kinetic barrier involved in ring[m
+ ﬁssion is much higher than that of denitration; a study on the acid hydrolysis of glucose and[m
+ xylose demonstrated that ring-opening intermediates were either extremely short lived, or[m
+[31m-4.4. Summary                                                                                           91[m
+[32m+[m[32m4.4. Summary                                                                                           93[m
+ [m
+ not observed at all [8]. The open-chain product of the scan is likely due to the geometric[m
+ constraints placed on the geometry of the departing NO2 group, rather than a likely physi-[m
+[36m@@ -2830,7 +2873,7 @@[m [mscans of homolysis conﬁrmed the loss of ·NO2 for the NC monomer.[m
+ pared with homolysis, the energy of reaction and activation energy values gave better agree-[m
+ ment with literature in the case of PETN. Calculated NC values were also within anticipated[m
+ ranges, based on the reaction for PETN. PES scans were unable to locate a TS for the NC[m
+[31m-92  Chapter 4. Mechanisms of denitration under ambient conditions[m
+[32m+[m[32m94  Chapter 4. Mechanisms of denitration under ambient conditions[m
+ [m
+ monomer, however, a successful guess geometry was generated based on the analogous[m
+ structure in the reaction for the PETN. Enthalpies of reaction energies show that this pro-[m
+[36m@@ -2866,7 +2909,7 @@[m [mthe hydroxyl group located at C2 formed a ketone, losing the proton to the depar[m
+ to form HNO2 in later stages of the scan. Eventually ring ﬁssion occurred, as the HNO2[m
+ move sufﬁcient distance away, and the formation of the ketone forced the adjacent C−C[m
+ bond in the ring to stretch, and then break. It is known that the energy required for this pro-[m
+[31m-4.4. Summary  93[m
+[32m+[m[32m4.4. Summary  95[m
+ [m
+ cess is much higher than that of denitration, so is unlikely to contribute to the initial stages[m
+ of ambient ageing.[m
+[36m@@ -2896,10 +2939,10 @@[m [mas diphenylamine (DPA) and 2-Nitrodiphenylamine (2-NDPA) commonly used in NC for[m
+ mulations. The secondary amine groups of the dye consume any nitrates in the system,[m
+ eliminating the possibility of successive reactions generating acidic species. Un-aged NC[m
+ thin ﬁlms, and ﬁlms aged at 40°C, 50°C, 60°C and 70°C for timescales of up to 2000hrs[m
+[31m-for 40°C, were compared. UV absorbances at 600 nm and 650 nm were characteristic[m
+[31m-of the SB59 dye used to indicate the presence of NOx, released by the denitration of NC[m
+[31m-(ﬁgure 5.2). The isosbestic point identiﬁed at 552 nm showed a proportional relationship[m
+[31m-96  Chapter 5. Post-Denitration Reactions[m
+[32m+[m[32mfor 40°C, were compared. UV absorbances at 600 nm and 650 nm were characteristic of[m
+[32m+[m[32mthe SB59 dye used to indicate the presence of NOx, released by the denitration of NC (ﬁg-[m
+[32m+[m[32mure 5.2). The isosbestic point identiﬁed at 552 nm showed a proportional relationship be-[m
+[32m+[m[32m98  Chapter 5. Post-Denitration Reactions[m
+ [m
+ Figure 5.1: 1,4-bis(ethylamino)-9,10-anthraquinone dye (SB59) used to probe the release of nitrates[m
+                from NC using UVvis and 1H NMR spectroscopy [7]. The action of nitrate absorption[m
+[36m@@ -2917,105 +2960,86 @@[m [mFigure 5.2: UVvis spectra of aged NC-based ﬁlm, from the work of Moniruzzaman[m
+                dye (SB59). Spectral lines with highest absorbance peaks in this region correspond to[m
+                the sample prior to heat treatment. Peaks below 400 nm indicate the formation of SB59[m
+                derivatives due to secondary reactions.[m
+[31m-5.1. Introduction  97[m
+[32m+[m[32m5.1. Introduction  99[m
+ [m
+ Figure 5.3: Proposed pathway for the reaction of SB59 dye with .NO released as a result of denitra-[m
+                tion of NC [7].[m
+ [m
+[31m-between the concentration of SB59 as it decreased, with the concentration of the [SB59[m
+[31m-+ NC] product as it increased. Samples exposed to higher ageing temperatures presented[m
+[31m-spectra dominated by products formed via secondary reactions. For samples aged at tem-[m
+[31m-peratures >40°C, the isosbestic point demonstrated a downwards shift with increasing dye[m
+[31m-consumption. In the case of the 70°C treated run, the ﬁnal measurement (indicated by[m
+[31m-the royal-blue line in bold in ﬁgure 5.2d)) deviated from the isosbestic point entirely, with[m
+[31m-more than 81% consumption of the original dye concentration. The drift from the isosbestic[m
+[31m-point, in addition to the appearance of new absorbance peaks below 400 nm, allude to the[m
+[31m-presence of new species in the reaction mixture not generated by the primary reaction of[m
+[31m-SB59 and NC. It is likely that these arise from the continued reaction of SB59 derivatives[m
+[31m-with NC degradation products, or further derivatives thereof, as suggested in ﬁgure 5.3.[m
+[31m-Following cleavage of the nitrate ester via homolytic ﬁssion, elimination of nitrous acid, or[m
+[31m-hydrolysis, the resulting residues available for further reaction with the polymer or other[m
+[31m-free molecules in the system. In the study of PETN ageing at high temperatures (115°C[m
+[31m-- 135°C) in vacuum, and low temperatures (20°C - 65°C) in acetonitrile solution, Shep-[m
+[31m-odd et al. commented that thermolysis produced a more complex and varied mixture, due[m
+[31m-to deeper degradation and recombination of radicals [152]. By contrast, the low tempera-[m
+[31m-98                      Chapter 5. Post-Denitration Reactions[m
+[31m-[m
+[31m-Thermolytic initiation  R−ONO2 −−→ R−O· + ·NO2                                (5.1)[m
+[32m+[m[32mtween the concentration of SB59 as it decreased, with the concentration of the [SB59 + NC][m
+[32m+[m[32mproduct as it increased. Samples exposed to higher ageing temperatures presented spectra[m
+[32m+[m[32mdominated by products formed via secondary reactions. For samples aged at temperatures[m
+[32m+[m[32m>40°C, the isosbestic point demonstrated a downwards shift with increasing dye consump-[m
+[32m+[m[32mtion. In the case of the 70°C treated run, the ﬁnal measurement (indicated by the royal-blue[m
+[32m+[m[32mline in bold in ﬁgure 5.2d)) deviated from the isosbestic point entirely, with more than 81%[m
+[32m+[m[32mconsumption of the original dye concentration. The drift from the isosbestic point, in ad-[m
+[32m+[m[32mdition to the appearance of new absorbance peaks below 400 nm, allude to the presence of[m
+[32m+[m[32mnew species in the reaction mixture not generated by the primary reaction of SB59 and NC.[m
+[32m+[m[32mIt is likely that these arise from the continued reaction of SB59 derivatives with NC degrada-[m
+[32m+[m[32mtion products, or further derivatives thereof, as suggested in ﬁgure 5.3. Following cleavage[m
+[32m+[m[32mof the nitrate ester via homolytic ﬁssion, elimination of nitrous acid, or hydrolysis, the re-[m
+[32m+[m[32msulting residues available for further reaction with the polymer or other free molecules in[m
+[32m+[m[32mthe system. In the study of PETN ageing at high temperatures (115°C - 135°C) in vacuum,[m
+[32m+[m[32mand low temperatures (20°C - 65°C) in acetonitrile solution, Shepodd et al. commented[m
+[32m+[m[32mthat thermolysis produced a more complex and varied mixture, due to deeper degradation[m
+[32m+[m[32mand recombination of radicals [152]. By contrast, the low temperature hydrolytic process[m
+[32m+[m[32m100                     Chapter 5. Post-Denitration Reactions[m
+[32m+[m
+[32m+[m[32mThermolytic initiation  R−ONO2 −−→ R−O· + ·NO2                       (5.1)[m
+ Propagation[m
+[31m-                                                                              (5.2)[m
+[31m-             R−O· + ·NO2 −R−−−O−N−O→2 R−ONO2 + ·NO + ·NO2 + N2O4[m
+[31m-                                          + H2O + N2O + CO2 + CO              (5.3)[m
+[31m-                                          + C2H2O + other organic fragments   (5.4)[m
+[31m-[m
+[31m-                                  2 ·NO + O2 −−→ 2 ·NO2                       (5.5)[m
+[31m-                                      2 ·NO2 −−−− N2O4                        (5.6)[m
+[31m-                                                                              (5.7)[m
+[31m-Hydrolytic initiation                                                         (5.8)[m
+[31m-                                                                              (5.9)[m
+[31m-Propagation              R−ONO2 + H2O −−→ R−OH + HNO3                        (5.10)[m
+[31m-                       R−OH + HNO3 −−→ R−O + HNO2 + H2O[m
+[31m-[m
+[31m-                            HNO3 + HNO2 −−−− N2O4 + H2O[m
+[31m-                                      N2O4 −−−− 2 ·NO2[m
+[31m-[m
+[31m-                          R−OH + ·NO2 −−→ ·R−OH + HNO2[m
+[31m-                       ·R−OH + HNO3 −−→ R−O + H2O + ·NO2[m
+[31m-[m
+[31m-ture hydrolytic process emphasised formation of PETRIN followed by side reactions with[m
+[31m-reduced likelihood of radical recombination in solution compared to in a solid , as ·NO2[m
+[31m-would be more likely to diffuse and react elsewhere. Chin et al. proposed schemes for[m
+[31m-the propagation of secondary reactions initated by both the thermolysis (scheme ??) and[m
+[31m-hydrolysis of nitrate esters (scheme ??) [10].[m
+[31m- Termination reactions were not emphasised in either of the schemes for these cases. The[m
+[32m+[m[32m                                                                     (5.2)[m
+[32m+[m[32m     R−O· + ·NO2 −R−−−O−N−O→2 R−ONO2 + ·NO + ·NO2 + N2O4             (5.3)[m
+[32m+[m[32m                                  + H2O + N2O + CO2 + CO             (5.4)[m
+[32m+[m[32m                                  + C2H2O + other organic fragments[m
+[32m+[m
+[32m+[m[32m                          2 ·NO + O2 −−→ 2 ·NO2[m
+[32m+[m[32m                              2 ·NO2 −−−− N2O4[m
+[32m+[m
+[32m+[m[32memphasised formation of PETRIN followed by side reactions with reduced likelihood of[m
+[32m+[m[32mradical recombination in solution compared to in a solid , as ·NO2 would be more likely to[m
+[32m+[m[32mdiffuse and react elsewhere. Chin et al. proposed schemes for the propagation of secondary[m
+[32m+[m[32mreactions initated by both the thermolysis and hydrolysis of nitrate esters [10].[m
+[32m+[m[32mTermination reactions were not emphasised in either of the schemes for these cases. The[m
+ hydrolysis scheme was adapted from an earlier work by Camera et al. involving the nitrate[m
+ ester decomposition and subsequent reactions of EN (where R = CH3CH2 for the scheme[m
+[32m+[m[32mabove) [9]. The original study included an expansion of the hydrolysis step (equation 4.5),[m
+[32m+[m[32mwhere the involvement of NO2+ was illustrated.[m
+ [m
+[31m-Hydrolysis scheme for ethyl nitrate                                          (5.11)[m
+[31m-                           CH3CH2ONO2 + H+ −f−a−s−t CH3CH2ONO2H+             (5.12)[m
+[31m-                           CH3CH2ONO2H+ −s−l−ow− CH3CH2OH + NO2+             (5.13)[m
+[31m-                                 NO2+ + 2 H2O −f−a−s−t HNO3 + H3O+[m
+[31m-                    5.1. Introduction                  99[m
+[31m-[m
+[31m-above) [9]. The original study included an expansion of the hydrolysis step (equation 5.11),[m
+[31m-where the involvement of NO2+ was illustrated (scheme ??).[m
+[31m-[m
+[31m-      It was highlighted by Camera, that the oxidation of alcohol by nitric acid (equation 5.6)[m
+[32m+[m[32m      It was highlighted by Camera, that the oxidation of alcohol by nitric acid (equation ??)[m
+ is slow and thus rate-limiting. The mechanism is likely to occur via a series of intermediate[m
+ reactions of which the details are not known. Following the generation of nitrous acid, sub-[m
+ sequent oxidations occur rapidly. According to Rigas et al., alcohols are more susceptible[m
+ to wet oxidation than esters [170]. A higher concentration of unsubstituted hydroxyl groups[m
+ in the system, and therefore a fewer nitrate ester groups (or a lower DOS value), decreases[m
+[31m-overall stabililty.[m
+[32m+[m[32moverall stability.[m
+ [m
+[31m-      Equations 5.7 - 5.10 describe a possible branched radical chain mechanism, fed by[m
+[31m-the nitrous and nitric acids produced during the hydrolysis and alchohol oxidation reactions[m
+[32m+[m[32m      Equations ?? - ?? describe a possible branched radical chain mechanism, fed by the[m
+[32m+[m[32mnitrous and nitric acids produced during the hydrolysis and alchohol oxidation reactions[m
+ during the initiation stage. By contrast, the propagation reactions in the branched radical[m
+ chain mechanism for thermolysis are poorly characterised (equation 5.2), deﬁned only by[m
+ the observable products. This is likely due to their rapid and varied nature, rendering it[m
+ difﬁcult to follow spectroscopically.[m
+ [m
+       Aellig et al. presented an alternative scheme for the decomposition of benzyl nitrate[m
+[32m+[m[32m                    5.1. Introduction                  101[m
+[32m+[m
+ (R = PhCH2), involving more interaction with the solvent [11]:[m
+  Both the Camera/Chin and Aellig schemes above produce ﬁnal end products observed in[m
+ [m
+[31m-HNO3 decomposition    4 HNO3 −−−− 4 ·NO2 + 2 H2O + O2  (5.14)[m
+[31m-Propagation            2 ·NO2 + H2O −−−− N2O4 + H2O    (5.15)[m
+[31m-Termination           N2O4 + H2O −−→ HNO3 + HNO2       (5.16)[m
+[32m+[m[32mHNO3 decomposition    4 HNO3 −−−− 4 ·NO2 + 2 H2O + O2   (5.5)[m
+[32m+[m[32mPropagation            2 ·NO2 + H2O −−−− N2O4 + H2O     (5.6)[m
+[32m+[m[32mTermination           N2O4 + H2O −−→ HNO3 + HNO2        (5.7)[m
+ [m
+[31m-                    R−OH + HNO2 −−−− R−ONO + H2O       (5.17)[m
+[31m-                          R−ONO −−→ R−O + HNO          (5.18)[m
+[31m-                                                       (5.19)[m
+[31m-                       ·NO2 + HNO −−→ HNO2 + ·NO       (5.20)[m
+[32m+[m[32m                    R−OH + HNO2 −−−− R−ONO + H2O        (5.8)[m
+[32m+[m[32m                          R−ONO −−→ R−O + HNO           (5.9)[m
+[32m+[m[32m                                                       (5.10)[m
+[32m+[m[32m                       ·NO2 + HNO −−→ HNO2 + ·NO       (5.11)[m
+                              2·NO + O2 −−→ 2·NO2[m
+[31m-                                                       (5.21)[m
+[31m-                           2 HNO −−→ HON−NOH           (5.22)[m
+[32m+[m[32m                                                       (5.12)[m
+[32m+[m[32m                           2 HNO −−→ HON−NOH           (5.13)[m
+                         HON−NOH −−→ N2O + H2O[m
+ [m
+ the decomposition of NC. In particular, Aellig’s scheme accounts for the production of[m
+ N2O, which forms a signiﬁcant part of the decomposition eluent [171]. Whilst the schemes[m
+[31m-100  Chapter 5. Post-Denitration Reactions[m
+[31m-[m
+ do not a propose an exhaustive description of the full spectrum of reactions that take place in[m
+ the NC matrix during its slow ageing, the early stage reactions of the key species responsible[m
+ for decomposition are encapsulated.[m
+[36m@@ -3034,6 +3058,8 @@[m [mwork looking into the atmospheric reactions of methynitrate and methylperoxy nit[m
+ nas suggested it was possible for the homolytic denitration reaction of methynitrate to share[m
+ a common peroxy intermediate with the peroxide [174]. This could account for some of the[m
+ lower order NOx generated. In this section, secondary and extended reaction schemes for[m
+[32m+[m[32m102  Chapter 5. Post-Denitration Reactions[m
+[32m+[m
+ the low temperature ageing of NC are explored. Decomposition pathways deﬁned by Chin,[m
+ Camera and Aellig et al. are probed to determine the reactions responsible for the exper-[m
+ imentally observed degradation products. The reactions found to be energetically feasible[m
+[36m@@ -3052,7 +3078,6 @@[m [mUnsubsitutued alcohol moieties (R-OH) were also presumed available, due to incom[m
+ nitration during the synthesis of NC [75], and re-generation following denitration via hy-[m
+ drolysis. The schemes were modelled with EN, then expanded to the NC monomer. Free[m
+ energies of reaction (∆ G) were used to determine the feasibility of each reaction.[m
+[31m-                  5.3. Results and Discussion                                 101[m
+ [m
+ 5.2.1 Computational details[m
+ [m
+[36m@@ -3072,6 +3097,8 @@[m [mSimpliﬁed schemes for the possible ageing reactions of nitrate esters beginnin[m
+ molytic ﬁssion, elimination of HNO2 or acid hydrolysis are illustrated in schemes 5.1 - 5.3.[m
+ When starting with the products of homolytic ﬁssion, a branched radical chain mechanism[m
+ dominates. ·NO2 and HNO2 were consumed and regenerated, supporting the theory that[m
+[32m+[m[32m                           5.3. Results and Discussion                            103[m
+[32m+[m
+ these may be species contributing to the observed autocatalytic rate of decomposition, fol-[m
+ lowing a ﬁrst-order rate induction period [153, 154, 155]. For all schemes, R−O and N2O[m
+ were terminating species. Whilst N2Ois released into the environment, R−O remains in the[m
+[36m@@ -3079,55 +3106,35 @@[m [msystem may go on to participate in further decomposition reactions leading to ri[m
+ ing. The protonation site of EN was inspected to determine whether it matched that of the[m
+ hydrolytic denitration of NC, therefore following the same extended hydrolysis scheme.[m
+ [m
+[31m-Table 5.1: Free energies of protonation for each oxygen site on EN.[m
+[32m+[m[32m                   Table 5.1: Free energies of protonation for each oxygen site on EN.[m
+[32m+[m
+[32m+[m[32mProtonated site                              ω B97X-D   ∆Gr /kcal mol-1    PCM[m
+[32m+[m[32m                  CH3CH3ONO2H+ −12.28                    PCM B3LYP[m
+[32m+[m[32mTerminal (upper)  CH3CH3ONO2H+ −9.48                                       5.63[m
+[32m+[m[32mTerminal (lower)  CH3CH3O(H+)NO2 −9.32                   8.82 −13.78       5.65[m
+[32m+[m[32mBridging                                                 9.46 −11.13       6.67[m
+[32m+[m[32m                                                         9.06 −15.31[m
+[32m+[m
+[32m+[m[32m(a) Upper terminal oxgen.  (b) Lower terminal oxgen.    (c) Bridging oxgen.[m
+[32m+[m[32m    Bond(O–NO2): 1.28 A˚       Bond(O–NO2): 1.28 A˚         Bond(O–NO2): 1.98 A˚[m
+ [m
+[31m-Protonated site                              ω B97X-D  ∆Gr /kcal mol-1  PCM[m
+[31m-                  CH3CH3ONO2H+ −12.28                   PCM B3LYP[m
+[31m-Terminal (upper)  CH3CH3ONO2H+ −9.48                                    5.63[m
+[31m-Terminal (lower)  CH3CH3O(H+)NO2 −9.32                  8.82 −13.78     5.65[m
+[31m-Bridging                                                9.46 −11.13     6.67[m
+[31m-                                                        9.06 −15.31[m
+[32m+[m[32mFigure 5.4: Optimised geometries of the possible protonation sites on EN.[m
+ [m
+       Table 5.1 shows the protonation energies for the three different oxygen sites on EN.[m
+ Despite the upper terminal oxygen possessing the most thermodynamically favourable en-[m
+ ergy of protonation, inspection of the reaction geometries shows that the bridging structure[m
+ most resembles that expected for the liberation of the NO2+ group at the next step. Though[m
+[31m-102                             Chapter 5. Post-Denitration Reactions[m
+[31m-[m
+[31m-     (a) Upper terminal oxgen.  (b) Lower terminal oxgen.  (c) Bridging oxgen.[m
+[31m-         Bond(O–NO2): 1.28 A˚       Bond(O–NO2): 1.28 A˚       Bond(O–NO2): 1.98 A˚[m
+[31m-[m
+[31m-     Figure 5.4: Optimised geometries of the possible protonation sites on EN.[m
+[31m-[m
+ appearing less thermodynamically favourable when compared to protonation at the termi-[m
+ nal upper oxygen site, the higher energy of reaction likely arises from the instability of the[m
+ protonated complex. The elongation of the O−NO2 bond allows stabilisation of the proton[m
+ at the bridging site, faciliting the facile departure of NO2+. Subsequent calculations involv-[m
+ ing the energy of the protonated EN will employ the values associated with the protonated[m
+[31m-bridging site.[m
+[31m-[m
+[31m-      Table ??shows the energies for the reactions in all schemes, for both EN and the NC[m
+[31m-monomer.[m
+[31m-[m
+[31m-      The ωB97X-D values obtained for the formation of N2O4 from 2·NO2 are in good[m
+[31m-agreement with the experimentally recorded value of -1.4 kcal mol−1 [176, 177]. It is[m
+[31m-noted that the B3LYP result does not perform so well for this reaction. This may arise from[m
+[31m-a number of factors, including the limitation to short-range interactions in B3LYP, or the[m
+[31m-geometry optimisation procedure, whereby a small variation or imperfect minimisation in[m
+[31m-the obtained optimised structures for the reaction species is ampliﬁed in the calculation of[m
+[31m-reation energies. Comparison of reaction energies for EN and the monomer shows that most[m
+[31m-processes are more thermodynamically favourable in the case of NC.[m
+[31m-[m
+[31m-5.4 Summary[m
+[31m-[m
+[31m-A number of proposed reactions following the denitration of NC were validated by calculat-[m
+[31m-ing energies of reaction with the ωB97X-D and B3LYP methods.It as found that except in[m
+[31m-the case nitric acid decomposition, 4 HNO3 −−−− 4 NO2 + 2 H2O + O2, most reactions were[m
+[31m-feasible at atmospheric conditions. The reactions were used to create rough schemes of the[m
+[31m-possible routes degradation routes, with increasing number of the NC decay. It can be seen[m
+[31m-that it is the NO2 species driving oxidation in all three schemes, and plays a central role in[m
+[31m-the extended degradation scheme of NC.[m
+[31m-                   5.4. Summary                             103[m
+[32m+[m[32mbridging site. Table ?? shows the energies for the reactions in all schemes, for both EN[m
+[32m+[m[32mand the NC monomer. The ωB97X-D values obtained for the formation of N2O4 from[m
+[32m+[m[32m2·NO2 are in good agreement with the experimentally recorded value of -1.4 kcal mol−1[m
+[32m+[m[32m[176, 177]. It is noted that the B3LYP result does not perform so well for this reaction. This[m
+[32m+[m[32mmay arise from a number of factors, including the limitation to short-range interactions in[m
+[32m+[m[32m104                Chapter 5. Post-Denitration Reactions[m
+ [m
+ R−ONO2  homolysis  R − O· + ·NO2[m
+ [m
+[36m@@ -3150,57 +3157,76 @@[m [mR−ONO2  homolysis  R − O· + ·NO2[m
+ [m
+ Scheme 5.1: Proposed degradation pathway starting from the homolytic ﬁssion of the nitrate ester,[m
+                 derived from the schemes presented by Camera [9] and Aellig[11].[m
+[31m-104       Chapter 5. Post-Denitration Reactions[m
+[32m+[m[32m                            5.4. Summary                           105[m
+ [m
+ Table 5.2: Energies of nitrate ester decomposition reactions proposed by Camera [9], Chin [10][m
+ [m
+              and Aellig [11]. R = CH3CH2 for EN, and R = (H3CO)2C6H9O3 (bi-methoxy capped[m
+              glucopyraonse monomer unit).[m
+ [m
+[31m-Reaction                                           ∆Gr /kcal mol-1  PCM[m
+[31m-                                   ωB97X-D PCM B3LYP[m
+[32m+[m[32mReaction                                          ∆Gr /kcal mol-1  PCM[m
+[32m+[m[32m                                  ωB97X-D PCM B3LYP[m
+ [m
+[31m-N2O4 + H2O −−→ HNO3 + HNO2         2.25     1.85 5.13 4.18[m
+[32m+[m[32mN2O4 + H2O −−→ HNO3 + HNO2        2.25     1.85 5.13 4.18[m
+ N2O4 −−−− 2 ·NO2[m
+[31m-                                   0.12     1.46 −0.54 −0.16[m
+[32m+[m[32m                                  0.12     1.46 −0.54 −0.16[m
+ Radical reactions[m
+ [m
+[31m-·NO2 + HNO −−→ HNO2 + ·NO          −28.22 −28.67 −27.33 −27.63[m
+[31m-2 ·NO + O2 −−→ 2 ·NO2              −20.77 −21.97 −21.16 −22.16[m
+[32m+[m[32m·NO2 + HNO −−→ HNO2 + ·NO         −28.22 −28.67 −27.33 −27.63[m
+[32m+[m[32m2 ·NO + O2 −−→ 2 ·NO2             −20.77 −21.97 −21.16 −22.16[m
+ [m
+ Acid reactions[m
+ [m
+[31m-HNO3 + HNO2 −−−− N2O4 + H2O         −2.25    −1.85    −5.13          −4.18[m
+[31m-4 HNO3 −−−− 4 ·NO2 + 2 H2O + O2      53.35    58.36    42.61          46.94[m
+[31m-2 HNO −−→ HON−NOH                  −38.97   −39.72   −36.63         −37.41[m
+[31m-HON−NOH −−→ N2O + H2O              −48.08   −48.18   −50.55         −50.75[m
+[32m+[m[32mHNO3 + HNO2 −−−− N2O4 + H2O        −2.25    −1.85    −5.13          −4.18[m
+[32m+[m[32m4 HNO3 −−−− 4 ·NO2 + 2 H2O + O2     53.35    58.36    42.61          46.94[m
+[32m+[m[32m2 HNO −−→ HON−NOH                 −38.97   −39.72   −36.63         −37.41[m
+[32m+[m[32m                                  −48.08   −48.18   −50.55         −50.75[m
+[32m+[m[32mHON−NOH −−→ N2O + H2O[m
+ [m
+ Ionic reactions[m
+ [m
+[31m-NO2+ + 2 H2O −−−− HNO3 + H3O+      −0.90    −1.34 1.77 2.46[m
+[31m-[m
+[31m-EN ( R = CH3CH2 )                     4.56     5.24     4.00           4.86[m
+[31m-                                   −34.06   −38.43   −37.59         −41.77[m
+[31m-R−ONO2 + H2O −−→ R−OH + HNO3[m
+[31m-R−OH + HNO3 −−→ R−O + HNO2 + H2O     16.38    13.92    15.89          13.70[m
+[31m-R−OH + ·NO2 −−→ ·R−OH + HNO2       −50.44   −52.35   −53.48         −55.47[m
+[31m-·R−OH + HNO3 −−→ R−O + H2O + ·NO2   −3.21                            −2.95[m
+[31m-R−OH + HNO2 −−−− R−ONO + H2O        −1.50    −3.28    −2.64          −8.50[m
+[31m-                                             −5.82    −4.37[m
+[31m-R−ONO −−→ R−O + HNO[m
+[31m-[m
+[31m-NC monomer ( R = (H3CO)2C6H9O3 )      0.68     5.63     0.61         −0.70[m
+[31m-                                   −36.73   −38.34   −41.71         −41.70[m
+[31m-R−ONO2 + H2O −−→ R−OH + HNO3[m
+[31m-R−OH + HNO3 −−→ R−O + HNO2 + H2O     14.71    11.15    13.03          23.21[m
+[31m-R−OH + ·NO2 −−→ ·R−OH + HNO2       −51.44   −49.49   −54.75         −56.37[m
+[31m-·R−OH + HNO3 −−→ R−O + H2O + ·NO2   −4.43                            −0.18[m
+[31m-R−OH + HNO2 −−−− R−ONO + H2O        −2.93    −7.30    −4.31         −11.21[m
+[31m-                                             −1.71    −6.82[m
+[31m-R−ONO −−→ R−O + HNO[m
+[31m-5.4. Summary  105[m
+[31m-[m
+[31m-                               R−ONO2 Elimination R−O + HNO2[m
+[32m+[m[32mNO2+ + 2 H2O −−−− HNO3 + H3O+     −0.90    −1.34 1.77 2.46[m
+[32m+[m
+[32m+[m[32mEN ( R = CH3CH2 )[m
+[32m+[m
+[32m+[m[32mR−ONO2 + H2O −−→ R−OH + HNO3      4.56        5.24     4.00           4.86[m
+[32m+[m[32m                                           −38.43   −37.59         −41.77[m
+[32m+[m[32mR−OH + HNO3 −−→ R−O + HNO2 + H2O −34.06[m
+[32m+[m[32m                                             13.92    15.89          13.70[m
+[32m+[m[32mR−OH + ·NO2 −−→ ·R−OH + HNO2      16.38    −52.35   −53.48         −55.47[m
+[32m+[m[32m                                            −3.28    −2.64          −2.95[m
+[32m+[m[32m·R−OH + HNO3 −−→ R−O + H2O + ·NO2 −50.44    −5.82    −4.37          −8.50[m
+[32m+[m
+[32m+[m[32mR−OH + HNO2 −−−− R−ONO + H2O      −3.21[m
+[32m+[m
+[32m+[m[32mR−ONO −−→ R−O + HNO               −1.50[m
+[32m+[m
+[32m+[m[32mNC monomer ( R = (H3CO)2C6H9O3 )[m
+[32m+[m
+[32m+[m[32mR−ONO2 + H2O −−→ R−OH + HNO3      0.68        5.63     0.61         −0.70[m
+[32m+[m[32m                                           −38.34   −41.71         −41.70[m
+[32m+[m[32mR−OH + HNO3 −−→ R−O + HNO2 + H2O −36.73[m
+[32m+[m[32m                                             11.15    13.03          23.21[m
+[32m+[m[32mR−OH + ·NO2 −−→ ·R−OH + HNO2      14.71    −49.49   −54.75         −56.37[m
+[32m+[m[32m                                            −7.30    −4.31          −0.18[m
+[32m+[m[32m·R−OH + HNO3 −−→ R−O + H2O + ·NO2 −51.44    −1.71    −6.82         −11.21[m
+[32m+[m
+[32m+[m[32mR−OH + HNO2 −−−− R−ONO + H2O      −4.43[m
+[32m+[m
+[32m+[m[32mR−ONO −−→ R−O + HNO               −2.93[m
+[32m+[m
+[32m+[m[32mB3LYP, or the geometry optimisation procedure, whereby a small variation or imperfect[m
+[32m+[m[32mminimisation in the obtained optimised structures for the reaction species is ampliﬁed in the[m
+[32m+[m[32mcalculation of reation energies. Comparison of reaction energies for EN and the monomer[m
+[32m+[m[32mshows that most processes are more thermodynamically favourable in the case of NC.[m
+[32m+[m
+[32m+[m[32m5.4 Summary[m
+[32m+[m
+[32m+[m[32mA number of proposed reactions following the denitration of NC were validated by calculat-[m
+[32m+[m[32ming energies of reaction with the ωB97X-D and B3LYP methods.It as found that except in[m
+[32m+[m[32m106  Chapter 5. Post-Denitration Reactions[m
+[32m+[m
+[32m+[m[32m     R−ONO2 Elimination R−O + HNO2[m
+ [m
+                          HNO2 + R−OH −−−− R−ONO + H2O[m
+ [m
+[36m@@ -3212,27 +3238,32 @@[m [mR−ONO −−→ R−O + HNO[m
+ Scheme 5.2: Proposed degradation pathway starting from the elimination of HNO2 from a nitrate[m
+ [m
+                 ester, derived from the schemes presented by Camera [9] and Aellig[11].[m
+[31m-106          Chapter 5. Post-Denitration Reactions[m
+[32m+[m[32mthe case nitric acid decomposition, 4 HNO3 −−−− 4 NO2 + 2 H2O + O2, most reactions were[m
+[32m+[m[32mfeasible at atmospheric conditions. The reactions were used to create rough schemes of the[m
+[32m+[m[32mpossible routes degradation routes, with increasing number of the NC decay. It can be seen[m
+[32m+[m[32mthat it is the NO2 species driving oxidation in all three schemes, and plays a central role in[m
+[32m+[m[32mthe extended degradation scheme of NC.[m
+[32m+[m[32m                   5.4. Summary                      107[m
+ [m
+[31m-             R−ONO2 + H+ Hydrolysis R−OH + NO2+[m
+[32m+[m[32m        R−ONO2 + H+ Hydrolysis R−OH + NO2+[m
+ [m
+[31m-             NO2+ + 2 H2O −−−− HNO3 + H3O+[m
+[32m+[m[32m        NO2+ + 2 H2O −−−− HNO3 + H3O+[m
+ [m
+[31m-                        HNO3 + R−OH −−→ R−O + HNO2 + H2O[m
+[32m+[m[32m                   HNO3 + R−OH −−→ R−O + HNO2 + H2O[m
+ [m
+[31m-     N2O4 −−−− 2 ·NO2     HNO2 + HNO3 −−−− N2O4 + H2O[m
+[31m-                        HNO2 + R−OH −−−− R−ONO + H2O[m
+[32m+[m[32mN2O4 −−−− 2 ·NO2     HNO2 + HNO3 −−−− N2O4 + H2O[m
+[32m+[m[32m                   HNO2 + R−OH −−−− R−ONO + H2O[m
+ [m
+[31m-                        R−ONO −−→ R−O + HNO[m
+[32m+[m[32m                   R−ONO −−→ R−O + HNO[m
+ [m
+[31m-     2 ·NO2  2·NO + O2  HNO + ·NO2 −−→ HNO2 + ·NO[m
+[31m-                            2 HNO −−→ HON−NOH[m
+[32m+[m[32m2 ·NO2  2·NO + O2  HNO + ·NO2 −−→ HNO2 + ·NO[m
+[32m+[m[32m                       2 HNO −−→ HON−NOH[m
+ [m
+                                                        HON−NOH −−→ N2O + H2O[m
+ [m
+ Scheme 5.3: Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, de-[m
+                 rived from the schemes presented by Camera [9] and Aellig[11].[m
+[31m-Chapter 6[m
+[32m+[m[32mChapter 6[m
+ [m
+ Conclusion and future work[m
+ [m
+[36m@@ -3262,7 +3293,7 @@[m [mter 4. Thermolytic denitration reactions were investigated; homolytic ﬁssion o[m
+ O−NO2 bond, and elimination of HNO2 were tested for both the PETN test case, and the[m
+ NC monomer model. Good agreement with literature values was found for the reaction en-[m
+ ergies and activation energies, in case of HNO2 elimination in both PETN and NC. The loss[m
+[31m-108  Chapter 6. Conclusion and future work[m
+[32m+[m[32m110  Chapter 6. Conclusion and future work[m
+ [m
+ of ·NO2 via homolysis was conﬁrmed. For the acid hydrolysis pathway , possible protona-[m
+ tion sites in the monomer were analysed. It was found that the proton site most amenable to[m
+[36m@@ -3298,21 +3329,21 @@[m [mapplicable for further study in the topic. Key competing reactions for the denit[m
+ the identity of nitrogen species released and their role in the longer-range decomposition[m
+ process has been presented. The conclusion of this project sets the scope for subsequent[m
+ investigations into the later-stage reaction processes that lead to deeper degradation of the[m
+[31m-              6.2. Further Work  109[m
+[32m+[m[32m              6.2. Further Work  111[m
+ [m
+ NC backbone.[m
+ [m
+ 6.2 Further Work[m
+ [m
+[31m-For the reﬁnement the existing NC model, a more rigorous examination of the partial[m
+[31m-charges and the subtle variation in geometry, may be conducted. This includes explicit[m
+[31m-calculation of charges, perhaps using NBO methods [178, 179] or RESP charges [?, 180],[m
+[31m-as has been applied to other saccharide and hetercyclic organic compounds. Conforma-[m
+[31m-tional scans, in particular for the C6 chain, and for the orientation of the units within the[m
+[31m-trimer, would be beneﬁcial for identiﬁcation of other low energy structures likely to be[m
+[31m-present in the natural polymer. Here, only the denitration schemes for the singly nitrated[m
+[31m-NC monomer were documented. The differing stabilities of NC at varying levels of nitra-[m
+[31m-tion will undoubtedly affect the reactivity at each site. Propagation of different nitration[m
+[32m+[m[32mFor the reﬁnement the existing NC model, a more rigorous examination of the par-[m
+[32m+[m[32mtial charges and the subtle variation in geometry, may be conducted. This includes ex-[m
+[32m+[m[32mplicit calculation of charges, perhaps using NBO methods [178, 179] or RESP charges[m
+[32m+[m[32m[180, 181, 182], as has been applied to other saccharide and hetercyclic organic compounds.[m
+[32m+[m[32mConformational scans, in particular for the C6 chain, and for the orientation of the units[m
+[32m+[m[32mwithin the trimer, would be beneﬁcial for identiﬁcation of other low energy structures likely[m
+[32m+[m[32mto be present in the natural polymer. Here, only the denitration schemes for the singly ni-[m
+[32m+[m[32mtrated NC monomer were documented. The differing stabilities of NC at varying levels of[m
+[32m+[m[32mnitration will undoubtedly affect the reactivity at each site. Propagation of different nitration[m
+ level and conformational structures through the denitration and secondary decomposition[m
+ schemes may reveal alternative reactions, or alter the balance of products obtained.[m
+ [m
+[36m@@ -3320,7 +3351,7 @@[m [mschemes may reveal alternative reactions, or alter the balance of products obtai[m
+ the diffusion of the released products, and their interaction with the wider polymer. Studies[m
+ involving the interaction of NC with plasticisers has effectively probed the diffusion rates[m
+ of plasticiser migration, which is of key interest in the preservation of stable NC product[m
+[31m-formulations [181].[m
+[32m+[m[32mformulations [183].[m
+ [m
+       Another avenue of interest is in the exploration of other transition structures for the[m
+ denitration stage, and for further degradation following formation of the ketone. The in-[m
+[36m@@ -3328,15 +3359,15 @@[m [mclusion of additional explicit water molecules or water clusters may stabilise T[m
+ previously not viable, starting with reproduction of those for [119]. AIMD techniques may[m
+ be effective for the elucidation of water and acid interactions with NC, probing protonation[m
+ behaviour and water clustering around monomer, dimer and trimer structures at different[m
+[31m-DOS [182].[m
+[32m+[m[32mDOS [184].[m
+ [m
+       A natural extension to the study of the secondary reactions driving decomposition, is[m
+ the expansion to a wider range of possible reaction pathways. These may include the widely[m
+[31m-documented mechanisms studied for glucose (ﬁgure 6.1) [183, 184, 8]. This is in addition to[m
+[32m+[m[32mdocumented mechanisms studied for glucose (ﬁgure 6.1) [185, 186, 8]. This is in addition to[m
+ further studies of possible ring opening mechanisms and chain scission reactions, in order[m
+ to fully account for the broad spectrum of experimentally observed degradation products in[m
+[31m-infra-red spectroscopy (IR) and NMR measurements [6, 185, 186, 172, 187, 188].[m
+[31m-110  Chapter 6. Conclusion and future work[m
+[32m+[m[32minfra-red spectroscopy (IR) and NMR measurements [6, 187, 188, 172, 189, 190].[m
+[32m+[m[32m112  Chapter 6. Conclusion and future work[m
+ [m
+      (a) Conversion of glucose A to HMF C via a furan aldehyde intermediate B.[m
+ [m
+[36m@@ -3378,7 +3409,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+      energies for the decomposition of nitrate ester groups at the anhydroglucopyranose[m
+      ring positions C2, C3 and C6 of nitrocellulose using the nitration of a dye as probe.[m
+      Polymer Degradation and Stability, 102:49–58, apr 2014.[m
+[31m-112  Bibliography[m
+[32m+[m[32m114  Bibliography[m
+ [m
+ [8] Xianghong Qian. Mechanisms and energetics for acid catalyzed β -D-glucose conver-[m
+      sion to 5-hydroxymethylfurfurl. Journal of Physical Chemistry A, 115(42):11740–[m
+[36m@@ -3417,7 +3448,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+       plastic packaging - MaterialDistrict.[m
+ [m
+ [18] BioMass Packaging. NatureFlex Clear Bag (5.75x7.75).[m
+[31m-Bibliography                                                                113[m
+[32m+[m[32mBibliography                                                                115[m
+ [m
+ [19] A. J. Morfa, T. Ro¨dlmeier, N. Ju¨rgensen, S. Stolz, and G. Hernandez-Sosa. Com-[m
+       parison of biodegradable substrates for printed organic electronic devices. Cellulose,[m
+[36m@@ -3458,7 +3489,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [31] M. Edge, N.S. Allen, M. Hayes, P.N.K. Riley, C.V. Horie, and J. Luc-Gardette. Mech-[m
+       anisms of deterioration in cellulose nitrate base archival cinematograph ﬁlm. Euro-[m
+       pean Polymer Journal, 26(6):623–630, jan 1990.[m
+[31m-114  Bibliography[m
+[32m+[m[32m116  Bibliography[m
+ [m
+ [32] Kodak. Storage and Handing of Processed Nitrate Film — Motion Picture Film,[m
+       2019.[m
+[36m@@ -3496,7 +3527,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [m
+ [41] Dow Wolff Cellulosics. Walsroder® Nitrocellulose Essential for an Extra-Special[m
+       Finish. Technical report, Dow Wolff Cellulosics, 1998.[m
+[31m-Bibliography  115[m
+[32m+[m[32mBibliography  117[m
+ [m
+ [42] Elodie Alinat, Nathalie Delaunay, Christine Costanza, Xavier Archer, and Pierre[m
+       Gareil. Determination of the nitrogen content of nitrocellulose by capillary elec-[m
+[36m@@ -3536,7 +3567,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [51] Frank H. Bissett and Leonard A. Levasseur. Chemical Conversion of Nitrocellulose[m
+       for Fertilizer. Technical report, United States Army Natick Research and Develop-[m
+       ment Command, 1976.[m
+[31m-116  Bibliography[m
+[32m+[m[32m118  Bibliography[m
+ [m
+ [52] Morbidity and mortality weekly MMWR. Recommended guidelines for dispos-[m
+       ing of nitrocellulose membranes. MMWR. Morbidity and mortality weekly report,[m
+[36m@@ -3575,7 +3606,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [61] Shuting Feng, Christina Bagia, and Giannis Mpourmpakis. Determination of pro-[m
+       ton afﬁnities and acidity constants of sugars. Journal of Physical Chemistry A,[m
+       117(24):5211–5219, jun 2013.[m
+[31m-Bibliography  117[m
+[32m+[m[32mBibliography  119[m
+ [m
+ [62] Byung J. Kim, Hsin-Neng Hsieh, and Fong-Jung Tai. Anaerobic Digestion and Acid[m
+       Hydrolysis of Nitrocellulose. Technical report, US Army Corps of Engineers, 1999.[m
+[36m@@ -3615,7 +3646,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+       -Glucopyranose Be More Easily Hydrolyzed in Alkaline Environment than the β -[m
+       Anomer ? A Detailed Theoretical Analysis. The Journal of Physical Chemistry A,[m
+       pages 4909–4921, 2012.[m
+[31m-118  Bibliography[m
+[32m+[m[32m120  Bibliography[m
+ [m
+ [72] Louis J Ignarro. After 130 years, the molecular mechanism of action of nitroglycerin[m
+       is revealed. Proceedings of the National Academy of Sciences of the United States of[m
+[36m@@ -3654,7 +3685,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [m
+ [82] Michael G Ryon. Water Quality Criteria for Nitrocellulose. Technical report, Oak[m
+       Ridge National Lab TN, Oak Ridge, 1986.[m
+[31m-Bibliography  119[m
+[32m+[m[32mBibliography  121[m
+ [m
+ [83] Elvira E. Ziganshina, Emil M. Ibragimov, Olga N. Ilinskaya, and Ayrat M. Zigan-[m
+       shin. Bacterial communities inhabiting toxic industrial wastewater generated during[m
+[36m@@ -3693,7 +3724,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [91] Kai Wang, Dabin Liu, Sen Xu, and Gaowen Cai. Research on the thermal history’s[m
+       inﬂuence on the thermal stability of EHN and NC. Thermochimica Acta, 610:23–28,[m
+       jun 2015.[m
+[31m-120            Bibliography[m
+[32m+[m[32m122            Bibliography[m
+ [m
+ [92] Julie A. Reilly. Celluloid objects: Their chemistry and preservation. Journal of the[m
+       American Institute for Conservation, 30(2):145–162, jan 1991.[m
+[36m@@ -3736,7 +3767,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [m
+ [104] A. D. Becke. Density-functional exchange-energy approximation with correct[m
+         asymptotic behavior. Physical Review A, 38(6):3098–3100, 1988.[m
+[31m-Bibliography  121[m
+[32m+[m[32mBibliography  123[m
+ [m
+ [105] Chengteh Lee, Weitao Yang, and Robert G. Parr. Development of the Colle-Salvetti[m
+         correlation-energy formula into a functional of the electron density. Physical Review[m
+[36m@@ -3773,7 +3804,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [113] Ju¨rgen Gra¨fenstein and Dieter Cremer. The self-interaction error and the descrip-[m
+         tion of non-dynamic electron correlation in density functional theory. Theoretical[m
+         Chemistry Accounts, 123(3-4):171–182, jun 2009.[m
+[31m-122  Bibliography[m
+[32m+[m[32m124  Bibliography[m
+ [m
+ [114] Junwei Lucas Bao, Laura Gagliardi, and Donald G. Truhlar. Self-Interaction Error[m
+         in Density Functional Theory: An Appraisal. The Journal of Physical Chemistry[m
+[36m@@ -3812,7 +3843,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [123] Stefan Grimme. Semiempirical GGA-type density functional constructed with[m
+         a long-range dispersion correction. Journal of Computational Chemistry,[m
+         27(15):1787–1799, nov 2006.[m
+[31m-Bibliography  123[m
+[32m+[m[32mBibliography  125[m
+ [m
+ [124] Jeng-Da Chai and Head-Gordon. Long-range corrected hybrid density function-[m
+         als with damped atom atom dispersion corrections. Physical Chemistry Chemical[m
+[36m@@ -3850,7 +3881,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [133] P. Balanarayan and Shridhar R. Gadre. Topography of molecular scalar ﬁelds. I.[m
+         Algorithm and Poincare´-Hopf relation. Journal of Chemical Physics, 119(10):5037–[m
+         5043, sep 2003.[m
+[31m-124  Bibliography[m
+[32m+[m[32m126  Bibliography[m
+ [m
+ [134] War Ofﬁce 24 May 1945. Handbook of Enemy Ammunition: War Ofﬁce Pamphlet[m
+         No. 15; German Ammunition Markings and Nomenclature. Naval & Military Press,[m
+[36m@@ -3888,7 +3919,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [142] A. Patr´ıcia Bento, Miquel Sola, and F. Matthias Bickelhaupt. E2 and S2 reactions[m
+         of X + CHCHX (X = F, Cl); an ab initio and DFT benchmark study. Journal of[m
+         Chemical Theory and Computation, 4(6):929–940, jun 2008.[m
+[31m-Bibliography  125[m
+[32m+[m[32mBibliography  127[m
+ [m
+ [143] R. S. Cahn, Christopher Ingold, and V. Prelog. Speciﬁcation of Molecular Chirality.[m
+         Angewandte Chemie International Edition in English, 5(4):385–415, apr 1966.[m
+[36m@@ -3929,7 +3960,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [m
+ [154] Torbjo´rn Lindblom. Reactions in stabilizer and between stabilizer and nitrocellulose[m
+         in propellants. Propellants, Explosives, Pyrotechnics, 27(4):197–208, sep 2002.[m
+[31m-126  Bibliography[m
+[32m+[m[32m128  Bibliography[m
+ [m
+ [155] Hermann N. Volltrauer and Arthur Fontijn. Low-temperature pyrolysis studies by[m
+         chemiluminescence techniques real-time nitrocellulose and PBX 9404 decomposi-[m
+[36m@@ -3967,7 +3998,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [163] Kimberly A. Jebber, Kui Zhang, Carolyn J. Cassady, and Alice Chung-Phillips. Ab[m
+         initio and experimental studies on the protonation of glucose in the gas phase. Journal[m
+         of the American Chemical Society, 118(43):10515–10524, 1996.[m
+[31m-Bibliography  127[m
+[32m+[m[32mBibliography  129[m
+ [m
+ [164] Dajiang Liu, Mark R. Nimlos, David K. Johnson, Michael E. Himmel, and Xi-[m
+         anghong Qian. Free energy landscape for glucose condensation reactions. Journal[m
+[36m@@ -4005,7 +4036,7 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+ [m
+ [172] L. Dauerman and Y. A. Tajima. Thermal decomposition and combustion of nitrocel-[m
+         lulose. AIAA Journal, 6(8):1468–1473, aug 1968.[m
+[31m-128  Bibliography[m
+[32m+[m[32m130  Bibliography[m
+ [m
+ [173] E. Camera, G. Modena, and B. Zotti. On the behaviour of nitrate esters in acid[m
+         solution. III. Oxidation of ethanol by nitric acid in sulphuric acid. Propellants, Ex-[m
+[36m@@ -4039,38 +4070,50 @@[m [mhttps://www.onlinetextileacademy.com/chemical-structure-of-cotton-ﬁbre/, 2016.[m
+         DFT methods. In Journal of Molecular Modeling, volume 19, pages 4591–4601.[m
+         Springer Berlin Heidelberg, oct 2013.[m
+ [m
+[31m-[180] R.J Woods and R Chappelle. Restrained electrostatic potential atomic partial charges[m
+[32m+[m[32m[180] Junmei Wang, Piotr Cieplak, and Peter A. Kollman. How well does a restrained[m
+[32m+[m[32m        electrostatic potential (RESP) model perform in calculating conformational ener-[m
+[32m+[m[32m        gies of organic and biological molecules? Journal of Computational Chemistry,[m
+[32m+[m[32m        21(12):1049–1074, sep 2000.[m
+[32m+[m[32mBibliography  131[m
+[32m+[m
+[32m+[m[32m[181] R.J Woods and R Chappelle. Restrained electrostatic potential atomic partial charges[m
+         for condensed-phase simulations of carbohydrates. Journal of Molecular Structure:[m
+         THEOCHEM, 527(1-3):149–156, aug 2000.[m
+[31m-Bibliography  129[m
+ [m
+[31m-[181] Lisa A. Richards, Anthony Nash, Maximillian Joshua Sebastian Phipps, and Nora H.[m
+[32m+[m[32m[182] Franc¸ois-Yves Dupradeau, Adrien Pigache, Thomas Zaffran, Corentin Savineau,[m
+[32m+[m[32m        Rodolphe Lelong, Nicolas Grivel, Dimitri Lelong, Wilfried Rosanski, and Piotr[m
+[32m+[m[32m        Cieplak. The R.E.D. tools: advances in RESP and ESP charge derivation and force[m
+[32m+[m[32m        ﬁeld library building. Physical chemistry chemical physics : PCCP, 12(28):7821–39,[m
+[32m+[m[32m        jul 2010.[m
+[32m+[m
+[32m+[m[32m[183] Lisa A. Richards, Anthony Nash, Maximillian Joshua Sebastian Phipps, and Nora H.[m
+         De Leeuw. A molecular dynamics study of plasticiser migration in nitrocellulose[m
+         binders. New Journal of Chemistry, 42(21):17420–17428, oct 2018.[m
+ [m
+[31m-[182] Diego Ardura and D. J. Donaldson. Where does acid hydrolysis take place? Phys.[m
+[32m+[m[32m[184] Diego Ardura and D. J. Donaldson. Where does acid hydrolysis take place? Phys.[m
+         Chem. Chem. Phys., 11(5):857–863, feb 2009.[m
+ [m
+[31m-[183] Xianghong Qian, Mark R. Nimlos, David K. Johnson, and Michael E. Himmel.[m
+[32m+[m[32m[185] Xianghong Qian, Mark R. Nimlos, David K. Johnson, and Michael E. Himmel.[m
+         Acidic Sugar Degradation Pathways. In Twenty-Sixth Symposium on Biotechnology[m
+         for Fuels and Chemicals, pages 989–997. Humana Press, mar 2009.[m
+ [m
+[31m-[184] Xianghong Qian, David K. Johnson, Michael E. Himmel, and Mark R. Nimlos. The[m
+[32m+[m[32m[186] Xianghong Qian, David K. Johnson, Michael E. Himmel, and Mark R. Nimlos. The[m
+         role of hydrogen-bonding interactions in acidic sugar reaction pathways. Carbohy-[m
+         drate Research, 345(13):1945–1951, sep 2010.[m
+ [m
+[31m-[185] V. I. Kovalenko, R. M. Mukhamadeeva, L. N. Maklakova, and N. G. Gustova. Inter-[m
+[32m+[m[32m[187] V. I. Kovalenko, R. M. Mukhamadeeva, L. N. Maklakova, and N. G. Gustova. Inter-[m
+         pretation of the IR spectrum and structure of cellulose nitrate. Journal of Structural[m
+         Chemistry, 34(4):540–547, 1994.[m
+ [m
+[31m-[186] Liu Huwei and Fu Ruonong. Studies on thermal decomposition of nitrocellulose by[m
+[32m+[m[32m[188] Liu Huwei and Fu Ruonong. Studies on thermal decomposition of nitrocellulose by[m
+         pyrolysis-gas chromatography. Journal of Analytical and Applied Pyrolysis, 14(2-[m
+         3):163–169, dec 1988.[m
+ [m
+[31m-[187] D.T. Clark and P.J. Stephenson. A 13C n.m.r. and X-ray study of the relationship[m
+[32m+[m[32m[189] D.T. Clark and P.J. Stephenson. A 13C n.m.r. and X-ray study of the relationship[m
+         between the distribution of nitrate ester groups and interchain d(110) spacings in a[m
+         series of cellulose nitrates. Polymer, 23(9):1295–1299, aug 1982.[m
+[32m+[m[32m132  Bibliography[m
+ [m
+[31m-[188] Ting Kai Wu. Carbon-13 and Proton Nuclear Magnetic Resonance Studies of Cellu-[m
+[32m+[m[32m[190] Ting Kai Wu. Carbon-13 and Proton Nuclear Magnetic Resonance Studies of Cellu-[m
+         lose Nitrates. Macromolecules, 13(1):74–79, jan 1980.[m
+ [m
+\ No newline at end of file[m
+[1mdiff --git a/MainPackages.tex b/MainPackages.tex[m
+[1mindex 89392a7..41a6111 100644[m
+[1m--- a/MainPackages.tex[m
+[1m+++ b/MainPackages.tex[m
+[36m@@ -37,6 +37,8 @@[m
+   name = Scheme[m
+ ]{scheme}[m
+ [m
+[32m+[m[32m%\usepackage[varioref=false]{chemstyle}[m
+[32m+[m
+ % The amsmath package enhances the various ways of including[m
+ %  maths, including adding the align environment for aligned[m
+ %  equations.[m
+[1mdiff --git a/Results_chap_1.tex b/Results_chap_1.tex[m
+[1mindex 2f968e8..1b17aaf 100644[m
+[1m--- a/Results_chap_1.tex[m
+[1m+++ b/Results_chap_1.tex[m
+[36m@@ -545,8 +545,9 @@[m [mThe electrostatic potential and topology analysis of the partially nitrated mono[m
+ 	    \includegraphics[width=\linewidth]{C2_dislin_3_crop}[m
+     \end{subfigure}[m
+ \par\bigskip[m
+[32m+[m[32m%\label{fig:monomer_top}[m
+ %    \caption{\textbf{a)} Electrostatic potential map and \textbf{b)} critical point analysis of NC monomer nitrated at C2 position.}[m
+[31m-%  \label{fig:monomer_top}[m
+[32m+[m[32m%\label{fig:monomer_top}[m
+ %\end{figure}[m
+ %\begin{figure}[h!][m
+ %\centering[m
+[36m@@ -560,8 +561,10 @@[m [mThe electrostatic potential and topology analysis of the partially nitrated mono[m
+ 	    \includegraphics[width=\linewidth]{NC2_0-dislin_crop}[m
+     \end{subfigure}[m
+ %    \caption{\textbf{c)} Electrostatic potential map and \textbf{d)} critical point analysis of NC dimer nitrated at R1C2 position }[m
+[31m-%  \label{fig:dimer_top}[m
+[32m+[m[32m%\label{fig:monomer_top}[m
+[32m+[m[32m%\label{fig:dimer_top}[m
+ \end{figure}[m
+[32m+[m[32m%[m
+ \begin{figure}[htp]\ContinuedFloat[m
+ \centering [m
+ %%	\includegraphics[width=0.8\linewidth]{scale_bar} [m
+[36m@@ -578,7 +581,7 @@[m [mThe electrostatic potential and topology analysis of the partially nitrated mono[m
+ \textbf{e)} Electrostatic potential map and \textbf{f)} critical point analysis of NC trimer nitrated at R1C2, R3C2 }[m
+ %\caption{Cont.}[m
+  %   \caption{\textbf{e)} Electrostatic potential map and \textbf{f)} critical point analysis of NC trimer nitrated at R1C2, R3C2}[m
+[31m-  \label{fig:trimer_top}[m
+[32m+[m[32m\label{fig:trimer_top}[m
+ \end{figure}[m
+ [m
+ %%Repeat for solvent and vacuum, if there is time (there isn't)[m
+[36m@@ -630,7 +633,7 @@[m [mThe electrostatic potential and topology analysis of the partially nitrated mono[m
+ The monomer was nitrated at C2, the dimer at R1C2 and trimer model nitrated at R1C2 and R3C2 sites. [m
+ Analysis of the \acs{CP}s in the monomer revealed steric centres and a non-bonding interaction with the capping group. [m
+ %Analysis of the \acs{CP}s in the monomer revealed a steric centre in the ring and between the C3 hydroxyl in a non-bonding interaction with the capping group. [m
+[31m-The terminal oxygen - $\alpha$-hydrogen interaction at the C2 nitrate was observed, as was seen in the fully nitrated systems (figure \ref{fig:monomer_top}).[m
+[32m+[m[32mThe terminal oxygen - $\alpha$-hydrogen interaction at the C2 nitrate was observed, as was seen in the fully nitrated systems (figure \ref{fig:trimer_top} a)).[m
+ The trimer unit displayed a more extensive network of hydrogen bonding between rings, facilitated by the higher number of unsubstituted hydroxyl groups on the second ring (figure \ref{fig:trimer_top}).[m
+ Compared with the dimer and trimer models, the monomer presents all the intra-ring interactions observed in the larger units, omitting only the between-ring interactions,[m
+ %but does not possess inter-ring interactions, as would be expected due to the absence of additional glucopyranose rings.  [m
+[1mdiff --git a/Thesis_refs.bib b/Thesis_refs.bib[m
+[1mindex 32a8d93..4ee1608 100644[m
+[1m--- a/Thesis_refs.bib[m
+[1m+++ b/Thesis_refs.bib[m
+[36m@@ -4581,3 +4581,20 @@[m [murl = {https://pubs.acs.org/doi/10.1021/ja0336224},[m
+ volume = {126},[m
+ year = {2004}[m
+ }[m
+[32m+[m[32m@article{Dupradeau2010,[m
+[32m+[m[32mabstract = {Deriving atomic charges and building a force field library for a new molecule are key steps when developing a force field required for conducting structural and energy-based analysis using molecular mechanics. Derivation of popular RESP charges for a set of residues is a complex and error prone procedure because it depends on numerous input parameters. To overcome these problems, the R.E.D. Tools (RESP and ESP charge Derive, ) have been developed to perform charge derivation in an automatic and straightforward way. The R.E.D. program handles chemical elements up to bromine in the periodic table. It interfaces different quantum mechanical programs employed for geometry optimization and computing molecular electrostatic potential(s), and performs charge fitting using the RESP program. By defining tight optimization criteria and by controlling the molecular orientation of each optimized geometry, charge values are reproduced at any computer platform with an accuracy of 0.0001 e. The charges can be fitted using multiple conformations, making them suitable for molecular dynamics simulations. R.E.D. allows also for defining charge constraints during multiple molecule charge fitting, which are used to derive charges for molecular fragments. Finally, R.E.D. incorporates charges into a force field library, readily usable in molecular dynamics computer packages. For complex cases, such as a set of homologous molecules belonging to a common family, an entire force field topology database is generated. Currently, the atomic charges and force field libraries have been developed for more than fifty model systems and stored in the RESP ESP charge DDataBase. Selected results related to non-polarizable charge models are presented and discussed.},[m
+[32m+[m[32mauthor = {Dupradeau, Fran{\c{c}}ois-Yves and Pigache, Adrien and Zaffran, Thomas and Savineau, Corentin and Lelong, Rodolphe and Grivel, Nicolas and Lelong, Dimitri and Rosanski, Wilfried and Cieplak, Piotr},[m
+[32m+[m[32mdoi = {10.1039/c0cp00111b},[m
+[32m+[m[32mfile = {:C$\backslash$:/Users/amyjo/AppData/Local/Mendeley Ltd./Mendeley Desktop/Downloaded/Dupradeau et al. - 2010 - The R.E.D. tools advances in RESP and ESP charge derivation and force field library building.pdf:pdf},[m
+[32m+[m[32missn = {1463-9084},[m
+[32m+[m[32mjournal = {Physical chemistry chemical physics : PCCP},[m
+[32m+[m[32mkeywords = {Algorithms,Databases, Factual,Ethanol,Ethanol: chemistry,Molecular Dynamics Simulation,Quantum Theory,Software,Static Electricity,Thermodynamics},[m
+[32m+[m[32mmonth = {jul},[m
+[32m+[m[32mnumber = {28},[m
+[32m+[m[32mpages = {7821--39},[m
+[32m+[m[32mpmid = {20574571},[m
+[32m+[m[32mtitle = {{The R.E.D. tools: advances in RESP and ESP charge derivation and force field library building.}},[m
+[32m+[m[32murl = {http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2918240{\&}tool=pmcentrez{\&}rendertype=abstract},[m
+[32m+[m[32mvolume = {12},[m
+[32m+[m[32myear = {2010}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/ucl_thesis.cls b/ucl_thesis.cls[m
+[1mindex c089b3b..a170142 100644[m
+[1m--- a/ucl_thesis.cls[m
+[1m+++ b/ucl_thesis.cls[m
+[36m@@ -443,7 +443,9 @@[m
+     \end{center}%[m
+     \vspace{2em}%[m
+     \begin{center}%[m
+[31m-    \@date%[m
+[32m+[m[32m    \@date\\%[m[41m[m
+[32m+[m[32m%    \textbf{December 18, 2019}\\%[m[41m[m
+[32m+[m[32m    \textbf{UK Ministry of Defence ${\copyright}$ Crown Owned Copyright 2020/AWE}[m[41m[m
+     \end{center}%[m
+     \if@twoside %[m
+       \newpage%[m
