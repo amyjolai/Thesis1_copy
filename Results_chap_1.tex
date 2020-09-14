@@ -7,12 +7,12 @@
 %Why can't we model the whole polymer / why do we need to truncate?
 %What is contained in this chapter? What question is posed?
 
-A wide range of reaction products are experimentally observed during the low temperature decomposition and slow ageing of \ac{NC}. Small gaseous species such as \ce{CO2}, \ce{CO}, \ce{CH2O}, \ce{N2O}, \ce{NO2} are identified using IR spectroscopy, whilst the presence of larger species such as glycolic acid and oxalate are %alluded to ..spectra
-suggested by analysis of the complex reaction mixture \cite{Jin2015,Bluhm1977}.
+A wide range of reaction products are experimentally observed during the low temperature decomposition and slow ageing of \ac{NC}. Small gaseous species such as \ce{CO2}, \ce{CO}, \ce{CH2O}, \ce{N2O}, \ce{NO2} were identified using IR spectroscopy, whilst the presence of larger species such as glycolic acid and oxalate were revealed by analysis of the complex reaction mixture %alluded to ..spectra, suggested by 
+\cite{Jin2015,Bluhm1977}.
 % Jin's paper also stated that \ac{NC} of different macroscopic structures - aerogel vs fibres, decomposed differently. TG/FTIR showed that the \ac{NC} aerogel decomposed \textit{via} initial splitting of the urethane bond (where was that supposed to be? No C=O present?), followed by denitration. In the aerogel, chain scission begins at the  C-O-C in the ring, whereas in the fibres, the glycosisid bond breaks first. 
 % Ossa2012 gives high temp proof of these products by many techniques
 %Good table of degradation studies - pyrolysis, mechanochemical, biological etc FernandezdelaOssa2011
-The generation of these products can be attributed to the range of susceptible attack sites along the polysaccharide backbone and at side groups, as well as the multitude of possible secondary reactions following denitration. These include depolymerisation and ring-cleavage, and can involve contaminants or acids remaining in the \ac{NC} matrix following synthesis. These are left behind due to imperfect washing procedures, or produced as a result of low level ambient degradation \cite{Chin2007,Edge1990}. %(REF something about the deg products or many secondary reactions) \cite{gun'ko2014}
+Generation of these products is attributed to the numerous susceptible attack sites along the polysaccharide backbone and at side groups, as well as the multitude of possible secondary reactions following denitration. These include depolymerisation and ring-cleavage, and can involve contaminants or acids remaining in the \ac{NC} matrix following synthesis. These are left behind due to imperfect washing procedures, or produced as a result of low level ambient degradation \cite{Chin2007,Edge1990}. %(REF something about the deg products or many secondary reactions) \cite{gun'ko2014}
 
 %[Move this bit to the literature review if appropriate:%%%%%%%%%%%%%%%%%%%%%%%]
 \begin{figure}[b]
@@ -30,13 +30,14 @@ Understanding of the ageing reactions will shed light on the possible interactio
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{Cellulose}
-\caption{The primary, secondary, tertiary and quaternary structure of cellulose fibres\cite{onlinetextileacademy2016}.}
+\caption{\added{Bulk cellulose fibres are constructed from many linear strands of cellulose polymer, inter-linked by hydrogen bonds. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. } \cite{onlinetextileacademy2016}.}
 \label{fig:fibre}
 \end{figure}
 %number each level of struture
 
-In addition to environmental factors and contaminants, the degradation properties of \ac{NC} depend on the primary, secondary and tertiary polymer chain structure.
-These properties are largely defined by the cellulose feedstock (figure \ref{fig:fibre}). \acs{SEM} images of \textit{Miscanthus} cellulose following nitration show a bloating of the cellulose fibres, with almost full retention of the fibre structure integrity (figure \ref{fig:miscanthus} ).
+In addition to environmental factors and contaminants, the degradation properties of \ac{NC} depend on the \deleted{ primary, secondary and tertiary} polymer chain structure\replaced{,}{. These properties are} largely defined by the cellulose feedstock (figure \ref{fig:fibre}). 
+\added{Cellulose is formed from the sequence of individual monomer units that construct the polysaccharide chain. The side groups of the monomeric sugar units determine the local intermolecular interactions between polymer strands, in this case hydrogen bonding, that lead to the fibre structure. } 
+\acs{SEM} images of \textit{Miscanthus} cellulose following nitration show a bloating of the cellulose fibres, with almost full retention of the fibre structure integrity (figure \ref{fig:miscanthus} ).
 %More detail about the following in the literature review. 
 Hydrogen bonding networks determine the supramoleular arrangement of the cellulose polysaccharide chains, and variation leads to a mixture of crystalline and amorphous regions\cite{Nishiyama2002,Nishiyama2003}. 
 Regions of crystallinity are more difficult to penetrate by solvent, thus are more resistant to hydrolytic decomposition methods; amorphous regions are more porous, exhibit less hydrogen bonding, and are more prone to digestion by both microbes and chemicals\cite{chundawat2011}. %REF
@@ -168,10 +169,40 @@ In this chapter, the electronic properties of the monomer, dimer and trimer trun
 %NOTE%% ESP surface was calculated using the Gaussian charges, not AIM. I'm not sure whether AIM ones are better, or whether the ones I used from G09 were simply based off Mulliken. I don't think so , but Milliken is poor, esp with diffuse functions (I also don't know why this is). So this might all be rubbish.
 %
 \subsection{Geometry optimisation}
+
+%\begin{scheme}
+%\centering
+%\schemestart
+%\textbf{Draw polymer unit according to literature orientations}
+%\arrow(@aa--bb)[-90,dashed]{Dimer and trimer structure: MM optimisation}
+%\arrow(@aa--bb)[-90]{QM optimisation}
+%%\merge>(@aa--@bb)
+%%\arrow(@aa--cc)[-30,2]\ce{R-OH + HNO3 -> R=O + HNO2 + H2O}
+%\arrow(@bb--cc)[-30,2]\ce{HNO3 + R-OH -> R=O + HNO2 + H2O}
+%\arrow(@aa--@cc)[-90]
+%\arrow(@cc--dd)[-90]\ce{HNO2 + HNO3 <=> N2O4 + H2O} 
+%\arrow(@dd--ee){0}[-90,0.2]\ce{HNO2 + R-OH <=> R-ONO + H2O}
+%%\arrow(@dd--ff)[180]\ce{N2O4 + H2O -> HNO3 + HNO2}
+%%\arrow(ff--gg){0}[-90,0.2]\ce{N2O4 <=> 2^{.}NO2}
+%\arrow(@dd--gg)[180]\ce{N2O4 <=> 2^{.}NO2}
+%\arrow(@ee--hh)[-90]\ce{R-ONO -> R=O + HNO}
+%\arrow(hh--ii)[-90]\ce{HNO + ^{.}NO2 -> HNO2 + ^{.}NO}
+%\arrow(ii--kk){0}[-90,0.2]\ce{2HNO -> HON=NOH}
+%\arrow(@gg--ii)[-50,3.3]
+%\arrow(@kk--jj)[-90]\ce{HON=NOH -> N2O + H2O}
+%\arrow(@ii--ll)[180,1]\ce{2 ^{.}NO + O2}
+%\arrow(@ll--mm)[180,0.5]\ce{2^{.}NO2}
+%\schemestop 
+%\caption{Proposed degradation pathway starting from the acid hydrolysis of a nitrate ester, derived from the schemes presented by Camera \cite{Camera1982} and Aellig\cite{Aellig2011}.}
+%\label{sch:hydrolysis}
+%\end{scheme}
 %The monomer starting structure was constructed from the geometry used by Shukla \textit{et. al.} (REF). 
-Monomer, dimer and trimer structures were constructed with side chains as closely matching literature orientations as possible. %ref
-Units were capped with either methoxy or hydroxyl groups, followed by quantum mechanical %\ac{QM}
-quantum mechanical geometry optimisation. %Ref intro section of relevance?
+
+The monomer starting structure was constructed using the structure of  $\beta$-D-glucopyranose.
+
+\deletec{Monomer, dimer and trimer structures were constructed with side chains as closely matching literature orientations as possible.} %ref
+Units were capped with either methoxy or hydroxyl groups, followed by a quantum mechanical %\ac{QM}
+geometry optimisation. %Ref intro section of relevance?
 For dimer and trimer structures, individual glucopyranose rings were appended to the first ring in a 1$\rightarrow$4 position, with alternating planarity (figure \ref{fig:models}). 
 In some instances, it was found that the final optimised geometries varied according to the input starting geometry. In the cases of more than one possible converged geometry for the same species, the conformer with lowest absolute energy was chosen. 
 
