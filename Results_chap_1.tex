@@ -15,22 +15,22 @@ A wide range of reaction products are experimentally observed during the low tem
 Generation of these products is attributed to the numerous susceptible attack sites along the polysaccharide backbone and at side groups, as well as the multitude of possible secondary reactions following denitration. These include depolymerisation and ring-cleavage, and can involve contaminants or acids remaining in the \ac{NC} matrix following synthesis. These are left behind due to imperfect washing procedures, or produced as a result of low level ambient degradation \cite{Chin2007,Edge1990}. %(REF something about the deg products or many secondary reactions) \cite{gun'ko2014}
 
 %[Move this bit to the literature review if appropriate:%%%%%%%%%%%%%%%%%%%%%%%]
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.5\linewidth]{HBEA-P15-0021-crop}
-\caption[A cartridge containing $\acs{NC}$ propellant.]{Markings on the side of a charge bag, with a cartridge containing $\acs{NC}$ propellant. The shelf-life of the product can be calculated from its manufacture date, with consideration of storage conditions. Image from a pamphlet  issued at the end of the Second World War, to enable safe identification of German ammunition \cite{WarOffice24May19452015}. }
-\label{fig:cartridge}
-\end{figure}
+%\begin{figure}[b]
+%\centering
+%\includegraphics[width=0.5\linewidth]{HBEA-P15-0021-crop}
+%\caption[A cartridge containing $\acs{NC}$ propellant.]{Markings on the side of a charge bag, with a cartridge containing $\acs{NC}$ propellant. The shelf-life of the product can be calculated from its manufacture date, with consideration of storage conditions. Image from a pamphlet  issued at the end of the Second World War, to enable safe identification of German ammunition \cite{WarOffice24May19452015}. }
+%\label{fig:cartridge}
+%\end{figure}
 
 Storage conditions such as the choice of wetting solvent, temperature, pressure, humidity, as well as fluctuations in these conditions over time, also contribute to the spectrum of products evolved. This has implications for the shelf life of \ac{NC} products; a practical example is the propellant stored under a pilot's seat for emergency ejection from the cockpit \cite{MinistryofDefence2001,SBIR2013}. During the lifetime of the propellant, it will endure a great number of flights, each involving variable temperature and pressure cycles. The propellant device will include a mixture of \ac{EM}, plasticisers and stabilisers in ratios adhering to established industry safety standards. %REF
-This will incorporate a conservative estimation of the shelf-life and stability of the formulation under different environmental and storage conditions (figure \ref{fig:cartridge}). 
+This will incorporate a conservative estimation of the shelf-life and stability of the formulation under different environmental and storage conditions. % (figure \ref{fig:cartridge}). 
 Understanding of the ageing reactions will shed light on the possible interactions between the \ac{EM} and the stabilising mixture, informing better industrial practices, safety standards and products with improved estimates of service life. 
 
 %[*End*]%%%%%%%%%%%%%%%%%%%%%%%]
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{Cellulose}
-\caption{\added{Bulk cellulose fibres are constructed from many linear strands of cellulose polymer, inter-linked by hydrogen bonds. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. } \cite{onlinetextileacademy2016}.}
+\caption{\added{Bulk cellulose fibres are constructed from many linear strands of cellulose polymer, inter-linked by hydrogen bonds. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. } \cite{Dumanli2017}. \added{Reproduced with permission from the authors.}}
 \label{fig:fibre}
 \end{figure}
 %number each level of struture
@@ -312,7 +312,7 @@ Convergence criteria 	& Normal 		& Tight \\
 Structures were built using %z-matrix notation or 
 the \ac{GView} graphical user interface \cite{GV5}. Molden 5.0.2 \cite{Schaftenaar2000,Schaftenaar2017} and \ac{GView} packages were used for visualisation. %ref molden gview
 Avogadro molecular editor 1.1.1 \cite{hanwell2012} was used for \ac{MM} pre-optimisation. \acs{UFF} and {MMFF94} forcefields were applied with Steepest Descent algorithm \cite{Cauchy1847,Meza2010} with 500 steps \added{and convergence of less than 1$\times$10\textsuperscript{-7} kJmol\textsuperscript{-1} %change in energy.
-\delta E}
+$\delta$ E}
 Electrostatic potential (\acs{ESP}) surfaces were mapped to the electron density, extracted from \ac{G09} formatted checkpoint files following optimisation. Gaussian's CubeGen utility was used to generate the 3D point grids for mapping; density and \ac{ESP} cubes were generated with 80\textsuperscript{3} points \added{(default grid point density)}. \acs{ESP} maps were visualised using \ac{GView}. 
 \ac{QTAIM} topological analyses including %generation of Laplacian electron density maps and 
 \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6 \cite{Lu2012}.  %REF (also update your diagrams).
@@ -729,7 +729,7 @@ Compared with the dimer and trimer models, the monomer presents all the intra-ri
    		\caption{Mulliken charge-shaded NC trimer nitrated at R1C2 and R3C2}
 	    \includegraphics[width=\linewidth]{adj_NC2_0_2-CH3-CH3_mulliken_3}
     \end{subfigure}
-    \caption{\textbf{a)} \ac{NC} monomer nitrated at C2. \textbf{b)} Monomer a) shaded by Mulliken charges. More negative atoms are shaded in red whilst more postitive atoms are shaded in green.}
+    \caption{\textbf{a)} \ac{NC} monomer nitrated at C2. \textbf{b)} Monomer a) shaded by Mulliken charges. More negative atoms are shaded in red whilst more positive atoms are shaded in green.}
   \label{fig:mulliken}
 \end{figure}
 
@@ -739,7 +739,7 @@ Compared with the dimer and trimer models, the monomer presents all the intra-ri
 \caption{Comparison of Mulliken charges for the \acs{CH3/CH3} monomer and the first glucopyranose ring (R1) of the dimer and trimer, all nitrated in the C2 position. Charges are expressed in \acs{au}. For explanantion of labelling scheme, see section \ref{sect:labellingsystem}. Shaded values indicate charge differences greater than \num{+-0.1} a.u.}
 \begin{tabular}{ l S S S| S S} %{S[table-format=3.2]}
 \toprule
-{R1 Atom} & {Monomer} & {Dimer} & {Trimer} & {Trimer-Dimer} & {Trimer-Monomer} \\
+{R1 Atom} & {Monomer} & {Dimer} & {Trimer} & {$\Delta$Trimer-Dimer} & {$\Delta$Trimer-Monomer} \\
 \midrule
 %_adj
 %O1 & -0.08859 & -0.03121 & -0.01065 & 0.02056 & 0.07793 \\
@@ -767,25 +767,25 @@ Compared with the dimer and trimer models, the monomer presents all the intra-ri
 %C6O & -0.30631 & -0.25866 & -0.25610 & 0.00257 & 0.05022 \\
 %C6OH & 0.24562 & 0.26001 & 0.25645 & -0.00356 & 0.01083 \\
 O1 & -0.08859 & -0.03121 & -0.00662 & 0.02459 & 0.08197 \\
-C1 & 0.18272 & -0.30481 & 0.01734 & \color{purple} 0.32216 & \color{orange}-0.16538 \\
+C1 & 0.18272 & -0.30481 & 0.01734 & \color{purple} 0.32216 & \color{purple}-0.16538 \\
 C1H & 0.13625 & 0.13965 & 0.14343 & 0.00378 & 0.00718 \\
-C1 Ocap & -0.15073 & 0.15084 & 0.21080 & 0.05996 &\color{orange} 0.36153 \\
+C1 Ocap & -0.15073 & 0.15084 & 0.21080 & 0.05996 &\color{purple} 0.36153 \\
 C2 & -0.62807 & -0.32240 & -0.58425 & \color{purple} -0.26184 & 0.04382 \\
 C2H & 0.22606 & 0.23654 & 0.24326 & 0.00672 & 0.01720 \\
 N1Ox & 0.16183 & 0.28293 & 0.19402 & -0.08890 & 0.03219 \\
 N1 & -0.27555 & -0.38563 & -0.30347 & 0.08217 & -0.02792 \\
 N1Ot1 & 0.02659 & 0.05080 & 0.05392 & 0.00312 & 0.02733 \\
 N1Ot2 & 0.05490 & 0.08088 & 0.08682 & 0.00594 & 0.03191 \\
-C3 & -0.17080 & -0.22297 & -0.34537 & \color{purple} -0.12240 & \color{orange}-0.17457 \\
+C3 & -0.17080 & -0.22297 & -0.34537 & \color{purple} -0.12240 & \color{purple}-0.17457 \\
 C3H & 0.19218 & 0.19362 & 0.19384 & 0.00022 & 0.00166 \\
 C3O & -0.24529 & -0.19800 & -0.20316 & -0.00515 & 0.04214 \\
 C3OH & 0.25402 & 0.24757 & 0.24983 & 0.00226 & -0.00419 \\
-C4 & -0.09334 & -0.44991 & -0.29491 &  \color{purple}0.15499 &\color{orange} -0.20157 \\
+C4 & -0.09334 & -0.44991 & -0.29491 &  \color{purple}0.15499 &\color{purple} -0.20157 \\
 C4H & 0.15766 & 0.19473 & 0.19542 & 0.00069 & 0.03776 \\
 C4 Ocap & -0.09986 & -0.11619 & -0.07415 & 0.04204 & 0.02571 \\
-C5 & -0.29708 & 0.14055 & 0.03937 & \color{purple} -0.10118 & \color{orange}0.33644 \\
+C5 & -0.29708 & 0.14055 & 0.03937 & \color{purple} -0.10118 & \color{purple}0.33644 \\
 C5H & 0.17896 & 0.16438 & 0.16634 & 0.00197 & -0.01262 \\
-C6 & -0.23716 & -0.43021 & -0.36154 & 0.06868 &\color{orange} -0.12438 \\
+C6 & -0.23716 & -0.43021 & -0.36154 & 0.06868 &\color{purple} -0.12438 \\
 C6H1 & 0.15456 & 0.16628 & 0.17551 & 0.00923 & 0.02095 \\
 C6H2 & 0.16665 & 0.16315 & 0.15838 & -0.00476 & -0.00827 \\
 C6O & -0.30631 & -0.25866 & -0.25654 & 0.00212 & 0.04978 \\

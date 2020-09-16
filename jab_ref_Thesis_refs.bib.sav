@@ -298,4 +298,17 @@
   url       = {https://doi.org/10.1021/ct700248k},
 }
 
+@Article{Dumanli2017,
+  author   = {Ahu Gumrah Dumanli},
+  journal  = {Current Medicinal Chemistry},
+  title    = {Nanocellulose and its Composites for Biomedical Applications},
+  year     = {2017},
+  number   = {5},
+  pages    = {512 - 528},
+  volume   = {24},
+  abstract = {Cellulose is a natural linear biopolymer, which is constituted of an assembly of cellulose nanofibrils in a hierarchical order. Nanocelluloses in particular show great promise as a cost-effective advanced material for biomedical applications because of their biocompatibility, biodegradability, and low cytotoxicity. Moreover, with their chemical functionality they can be easily modified to yield useful products. While nature uses the hierarchical nanostructure of cellulose as the load-bearing constituent in plants, a significant amount of research has been directed toward the fabrication of advanced cellulosic materials with various nanostructures and functional properties. Such nanocelluloses are widely applied in medical implants, tissue engineering, drug delivery, wound healing, diagnostics, and other medical applications with real examples in this field. There are also emerging fields being developed to use nanocelluloses and their composites in more novel ways in biomedical applications such as 3D printing and magnetically responsive materials. In this mini-review, recent advances in the design and fabrication of nanocellulose-based materials and composites are presented with a special emphasis on their suitability for material requirements for biomedical applications as well as the new directions and challenges that the materials might face in the future.},
+  doi      = {10.2174/0929867323666161014124008},
+  url      = {https://doi.org/10.2174/0929867323666161014124008},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -1,14 +1,14 @@
 \ChangesListline {added}{Added}{Bulk cellulose fibres are constructed from many linear strands of cellulose polymer, inter-linked by hydrogen bonds. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. }{6}
 \ChangesListline {added}{Added}{,}{6}
-\ChangesListline {added}{Added}{Cellulose is formed from the sequence of individual monomer units that construct the polysaccharide chain. The side groups of the monomeric sugar units determine the local intermolecular interactions between polymer strands, in this case hydrogen bonding, that lead to the fibre structure.}{7}
+\ChangesListline {added}{Added}{Cellulose is formed from the sequence of individual monomer units that construct the polysaccharide chain. The side groups of the monomeric sugar units determine the local intermolecular interactions between polymer strands, in this case hydrogen bonding, that lead to the fibre structure.}{6}
 \ChangesListline {added}{Added}{Reproduced with permission from the authors.}{7}
+\ChangesListline {added}{Added}{The monomer starting structure was constructed using the geometry of $\beta $-D-glucopyranose obtained from literature \cite {NIST2020}, with the substitution of three nitrate groups at each of the carbon 2, 3 and 6 sites.}{8}
 \ChangesListline {added}{Added}{Reproduced with permission from the authors.}{8}
-\ChangesListline {added}{Added}{The monomer starting structure was constructed using the geometry of $\beta $-D-glucopyranose obtained from literature \cite {NIST2020}, with the substitution of three nitrate groups at each of the carbon 2, 3 and 6 sites.}{9}
 \ChangesListline {added}{Added}{\cite {Rappe1992}}{9}
 \ChangesListline {added}{Added}{\cite {Halgren1996I,Halgren1996II,Halgren19961III,Halgren1996IV,Halgren1996V}}{9}
+\ChangesListline {added}{Added}{This was to determine whether an initial 'rough' optimisation using a less expensive \acs {MM} method could lead to a reduction in the \acs {QM} optimisation time for the larger structures, or facilitate easier identification of global minimum structures. The \acs {UFF} forcefield was chosen as a general all-element model; \acs {MMFF94} was parameterised for organic compounds and includes hydrogen bonding.}{9}
+\ChangesListline {added}{Added}{due to the presence of many floppy bonds and high degrees of rotational freedom for hydrogen atoms and along side chains. This lead to a smooth, slow evolving potential energy surface that is difficult to explore using gradient optimisation methods}{9}
 \ChangesListline {added}{Added}{(shown with the blue arrow)}{9}
-\ChangesListline {added}{Added}{This was to determine whether an initial 'rough' optimisation using less expensive \acs {MM} methods could lead to a reduction in the \acs {QM} optimisation time for the larger structures, or facilitate easier identification of global minimum structures. The \acs {UFF} forcefield was chosen as a general all-element model; \acs {MMFF94} was parameterised for organic compounds and includes hydrogen bonding.}{10}
-\ChangesListline {added}{Added}{due to the presence of many floppy bonds and high degrees of rotational freedom for hydrogen atoms and along side chains. This lead to a smooth, slow evolving potential energy surface that is difficult to explore using gradient optimisation methods}{10}
 \ChangesListline {added}{Added}{To simplify optimisation of the trimer structure and to explore interactions at lower degrees of substitution, nitration was limited to the C2 site. The C2 position was found by Shukla \textit {et al.} to be the first to be nitrated, and last to be denitrated \cite {Shukla2012a}.}{11}
-\ChangesListline {added}{Added}{and convergence of less than 1$\times $10\textsuperscript {-7} kJmol\textsuperscript {-1} change in energy.}{12}
-\ChangesListline {added}{Added}{(default resolution)}{12}
+\ChangesListline {added}{Added}{and convergence of less than 1$\times $10\textsuperscript {-7} kJmol\textsuperscript {-1} $\delta $ E}{12}
+\ChangesListline {added}{Added}{(default grid point density)}{12}
