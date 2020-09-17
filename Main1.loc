@@ -1,14 +1,17 @@
-\ChangesListline {added}{Added}{Bulk cellulose fibres are constructed from many linear strands of cellulose polymer, inter-linked by hydrogen bonds. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. }{6}
-\ChangesListline {added}{Added}{,}{6}
-\ChangesListline {added}{Added}{Cellulose is formed from the sequence of individual monomer units that construct the polysaccharide chain. The side groups of the monomeric sugar units determine the local intermolecular interactions between polymer strands, in this case hydrogen bonding, that lead to the fibre structure.}{6}
-\ChangesListline {added}{Added}{Reproduced with permission from the authors.}{7}
-\ChangesListline {added}{Added}{The monomer starting structure was constructed using the geometry of $\beta $-D-glucopyranose obtained from literature \cite {NIST2020}, with the substitution of three nitrate groups at each of the carbon 2, 3 and 6 sites.}{8}
-\ChangesListline {added}{Added}{Reproduced with permission from the authors.}{8}
-\ChangesListline {added}{Added}{\cite {Rappe1992}}{9}
-\ChangesListline {added}{Added}{\cite {Halgren1996I,Halgren1996II,Halgren19961III,Halgren1996IV,Halgren1996V}}{9}
-\ChangesListline {added}{Added}{This was to determine whether an initial 'rough' optimisation using a less expensive \acs {MM} method could lead to a reduction in the \acs {QM} optimisation time for the larger structures, or facilitate easier identification of global minimum structures. The \acs {UFF} forcefield was chosen as a general all-element model; \acs {MMFF94} was parameterised for organic compounds and includes hydrogen bonding.}{9}
+\ChangesListline {added}{Added}{,}{5}
+\ChangesListline {added}{Added}{Cellulose fibres found in nature are formed of macrofibres, which in turn are formed of microfibrils ranging from 3 - 50 nm in diameter (figure \ref {fig:fibre}) \cite {Dumanli2012}. Each microfibril is assembled from stacked polysaccharide chains held together by Van der Waals and hydrogen bonding interactions. Each linear chain is formed by a sequence of individual monomer units, in this case $\beta $-D-glucopyranose.}{6}
+\ChangesListline {added}{Added}{Reprodu ced with permission.}{6}
+\ChangesListline {added}{Added}{In 2012, }{6}
+\ChangesListline {added}{Added}{Natural cellulose fibres are constructed from individual linear strands of cellulose polymer, inter-linked by hydrogen bonds to form microfibrils. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. Adapted from the work of Dumanli \cite {Dumanli2017} with permission.}{7}
+\ChangesListline {added}{Added}{\acs {B3LYP} }{7}
+\ChangesListline {added}{Added}{ giving rise to inter-ring interactions and steric effects that cannot be observed in the monomer. }{7}
+\ChangesListline {added}{Added}{The monomer starting structure was constructed using the geometry of $\beta $-D-glucopyranose obtained from literature \cite {NIST2020}, with the substitution of three nitrate groups at each of the carbon 2, 3 and 6 sites.}{7}
+\ChangesListline {added}{Added}{\cite {Rappe1992}}{8}
+\ChangesListline {added}{Added}{\cite {Halgren1996I,Halgren1996II,Halgren19961III,Halgren1996IV,Halgren1996V}}{8}
+\ChangesListline {added}{Added}{This was to determine whether an initial 'rough' optimisation using a less expensive \acs {MM} method could lead to a reduction in the \acs {QM} optimisation time for the larger structures, or facilitate easier identification of global minimum structures. The \acs {UFF} forcefield was chosen as a general all-element model; \acs {MMFF94} was parameterised for organic compounds and includes hydrogen bonding.}{8}
+\ChangesListline {added}{Added}{Reproduced with permission.}{8}
 \ChangesListline {added}{Added}{due to the presence of many floppy bonds and high degrees of rotational freedom for hydrogen atoms and along side chains. This lead to a smooth, slow evolving potential energy surface that is difficult to explore using gradient optimisation methods}{9}
 \ChangesListline {added}{Added}{(shown with the blue arrow)}{9}
-\ChangesListline {added}{Added}{To simplify optimisation of the trimer structure and to explore interactions at lower degrees of substitution, nitration was limited to the C2 site. The C2 position was found by Shukla \textit {et al.} to be the first to be nitrated, and last to be denitrated \cite {Shukla2012a}.}{11}
-\ChangesListline {added}{Added}{and convergence of less than 1$\times $10\textsuperscript {-7} kJmol\textsuperscript {-1} $\delta $ E}{12}
+\ChangesListline {added}{Added}{To simplify optimisation of the trimer structure and to explore interactions at lower degrees of substitution, nitration was limited to the C2 site. The C2 position was found by Shukla \textit {et al.} to be the first to be nitrated, and last to be denitrated \cite {Shukla2012a}.}{10}
+\ChangesListline {added}{Added}{and energy convergence of 1$\times $10\textsuperscript {-7} kJmol\textsuperscript {-1}. }{12}
 \ChangesListline {added}{Added}{(default grid point density)}{12}

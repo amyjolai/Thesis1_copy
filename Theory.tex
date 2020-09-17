@@ -113,7 +113,7 @@ where all electrons are represented by $i$ and $j$, and all nuclei by $k$ and $l
 %where electrons are labelled $i=1,2,3.....j$
 %$i \rightarrow j$ encompasses all electrons and $k \rightarrow l$ all nuclei. 
 $\hbar$ %= \frac{h}{2\pi}$
-is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^{-34}$), 
+is the reduced Planck's constant ($\hbar = \frac{h}{2\pi} = 1.055\times10^{-34}$ Js), 
 $m_e$ is the mass of an electron, %Numbers and ref for all these please
 $m_k$ is the mass of the nucleus $k$, 
 $e$ is the charge of an electron, 
@@ -244,7 +244,7 @@ Calculation of $E_{el}$ for all possible nuclear coordinates in a system of thre
 %with 
 on which the potential energy is defined by the nuclear geometry, called a \ac{PES}. % obtain transition structures for reaction involving a change in geometry, at the peak between two troughs.  
 %This last section may be a bit dodgy/ inaccurate/ CHECK
-Exploration of the \ac{PES} allows for discovery of global and local minimum energy structures, intermediate products on a reaction coordinate and transition states, through scrutiny of the %second derivatives of the gradient 
+Exploration of the \ac{PES} allows for discovery of global and local minimum energy structures, intermediate products and transition states on a reaction coordinate, through scrutiny of the energy %second derivatives of the gradient 
 %maxima and minima 
 at a particular set of nuclear coordinates. 
 %The matrix of second partial derivatives is referred to as the Hessian matrix. 
@@ -279,7 +279,8 @@ As a result, for two equivalent electrons, the wave function of the system is an
 %permutation of their coordinates. %is this an imprecise statement?
 %https://www.chem.tamu.edu/rgroup/hughbanks/courses/673/handouts/antisymmetry.pdf
 \begin{equation}
-\Psi(1,2..i,...j..N) = - \Psi(1,2..i,...j..N)
+%\Psi(1,2..i,...j..N) = - \Psi(1,2..i,...j..N)
+\Psi(1,2,...N) = - \Psi(1,2,..N)
 \end{equation}
 
 %or
@@ -347,7 +348,7 @@ Thus, when choosing between different trial wave functions, the solution with th
 %
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hartree-Fock self-consistent field method}
-In practice, equation \ref{equ:elec_schro} can only be solved \textit{exactly} in very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and one proton. %VIVA: Why? - the correlated interaction between the partices which cannot be calculated exactly. 
+In practice, equation \ref{equ:elec_schro} can only be solved \textit{exactly} in very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and \added{a nucleus}. %VIVA: Why? - the correlated interaction between the partices which cannot be calculated exactly. 
 For systems of complexity greater than one electron, further approximations must be made. %like what?
 
 The \ac{HF} approximation was the first practically applicable method for calculation of the ground-state energy of atoms with fixed nuclear positions.  
@@ -541,8 +542,8 @@ By contrast, \textit{semi-empirical} methods deal with parameters fitted to expe
 % MP2 scaling $O(N^{5})$ DFT scales between $O(N^{4})$ and $O(N)$
 %Linear scaling DFT can be used for millions of atoms (but with accuracy payoff, obvs)
 \ac{DFT} derives from the Thomas-Femi-Dirac model, whereby electron correlation is modelled via functionals of the electron density, $\rho(r)$. %38,39  REF What is this model
-Electron density has reduced dimensionality when compared with the wave function, %How 
-and can be obtained both \textit{via} theoretical methods as well as experimentally, such as through x-ray diffraction. %REF
+%\deleted{Electron density has reduced dimensionality when compared with the wave function, 
+%and can be obtained both \textit{via} theoretical methods as well as experimentally, such as through x-ray diffraction. %REF}
 %https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
 Currently, it forms the most widely used approach for \ac{QM} problems. %REF? family of protocols
 %, with the \acs{B3LYP} functional considered the gold-standard / lots of paramterised data bases etc.
@@ -667,10 +668,10 @@ The function of $\nabla\rho(r)$ is not uniquely defined and no true form is know
 \item B88: the exchange functional developed by Becke, and contains an empirical parameter $\beta$=0.0042 fitted to give the best agreement with the \ac{HF} energies of the noble gases \cite{Becke1988}. %($\beta$=0.0042). 
 \item LYP: the most widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
 Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988}. %REF
-\item PBE: the exchange-correlation functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as solids and surfaces \cite{Hammer1999,Perdew2008,Wu2006}. %ref PBE sol, RPBE , PBE WC
+\item PBE: the exchange-correlation functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as \added{small molecules, crystal structures and metal surface energies }\cite{Hammer1999,Perdew2008,Wu2006}. %ref PBE sol, RPBE , PBE WC
 \end{itemize}
-Meta-\ac{GGA} employs further parameterisation of the exchange-correlation functional; the laplacian (second derivative) of the electron density, $\nabla^{2}$, is included as an additional degree of freedom. %Or loacl kinetic energy density. 
-These have made improvements on \ac{LDA} and \ac{GGA} performance, but are still considered relatively new. Whilst they have not been as extensively benchmarked as hybrid \ac{DFT} functionals such as \ac{B3LYP}, the existing results are promising \cite{Zhao2005,Zhao2005a,Zhao2006}.
+%Meta-\ac{GGA} employs further parameterisation of the exchange-correlation functional; the laplacian (second derivative) of the electron density, $\nabla^{2}$, is included as an additional degree of freedom. %Or loacl kinetic energy density. 
+%These have made improvements on \ac{LDA} and \ac{GGA} performance, but are still considered relatively new. Whilst they have not been as extensively benchmarked as hybrid \ac{DFT} functionals such as \ac{B3LYP}, the existing results are promising \cite{Zhao2005,Zhao2005a,Zhao2006}.
 %seen as popular use as the efficient hybrid \ac{DFT} functionals
 %Make sure you know how the above functionals differ from the hybrids %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hybrid functionals} 
@@ -682,9 +683,9 @@ This assists to counteract the self-interaction problem, a significant source of
 
 Perhaps the most widely used functional of this category is \ac{B3LYP} \cite{Becke1993,Becke1993a}. It is employed in the current study to examine the degradation reactions of \ac{NC}. The formalism is as follows: 
 \begin{equation}
-_{XC}^{B3LYP}=E_{X}^{LDA}+a_{0}(E_{X}^{HF}-E_{X}^{LDA})+a_{X}(E_{X}^{B88}-E_{X}^{LDA})+E_{c}^{LDA}-a_{C}(E_{C}^{LYP}-E_{C}^{LDA})
+E_{XC}^{B3LYP}=E_{X}^{LDA}+a_{0}(E_{X}^{HF}-E_{X}^{LDA})+a_{X}(E_{X}^{B88}-E_{X}^{LDA})+E_{c}^{LDA}-a_{C}(E_{C}^{LYP}-E_{C}^{LDA})
 \end{equation}
-$a_{0}$,c$a_{X}$ and $a_{C}$ are parameters fitted to experimental atomisation energies, ionisation potentials, proton affinities and atomic energies. The semi-empirical coefficients have values of 0.20, 0.72 and 0.81, respectively, indicating that the \ac{B3LYP} hybrid functional contains 20\% \ac{HF} exchange, 72\% B88 exchange and 81\% electron correlation contribution from LYP. 
+$a_{0}$, c$a_{X}$ and $a_{C}$ are parameters fitted to experimental atomisation energies, ionisation potentials, proton affinities and atomic energies. The semi-empirical coefficients have values of 0.20, 0.72 and 0.81, respectively, indicating that the \ac{B3LYP} hybrid functional contains 20\% \ac{HF} exchange, 72\% B88 exchange and 81\% electron correlation contribution from LYP. 
 \ac{B3LYP} is of particular interest in the study of \ac{NC} as it has been applied in comparable computational investigations on glucose and its analogues, which forms the base structure of the \ac{NC} monomer \cite{Schnupf2007,Momany2005}. 
 
 There are documented cases where \ac{B3LYP} performs extremely poorly, such as in the description of $\pi\rightarrow\sigma$ structural transformations \cite{Pieniazek2008}, and medium-long range dispersion interactions \cite{Schreiner2007}. In the first case, no similar transitions are expected for the reactions studied in this work. When considering the medium-range electron correlation reactions that may occur for the investigated species, the distance at which the intermolecular interactions take place and at which \ac{B3LYP} performance suffers (1.5-3.5 $\AA$), is of relevance. 
@@ -699,7 +700,7 @@ Stefan Grimme proposed an empirical \ac{DFT} method with dispersion correction t
 The general form of the DFT-D scheme  is used to calculate the total energy of the system, with the addition of an empirical atomic-pairwise dispersion correction:
 %what is that
 \begin{equation}
-E_{DFT-D}=E_{KS=DFT} + E_{disp}
+E_{DFT-D}=E_{KS-DFT} + E_{disp}
 \end{equation}
 The \ac{wb97xd} dispersion corrected functional was presented by Chai \textit{et. al},  based on the $\omega$B97X, which is used to calculate the \ac{KS-DFT} energy, $E_{KS-DFT}$   \cite{Chai2008,Chai2008a}. %for the calculation of the \ac{KS-DFT} energy, $E_{KS-DFT}$ . %The $\omega$B97X followd Grimme's method for computing the 
 The approach is founded on Becke's B97-D GGA functional \cite{Becke1997,Grimme2006}. For the B97-D functional, expansion coefficients were added to the original B97 and optimised to reduce the density functional at small separations where lower electron correlation was expected. At medium-long ranges, the density functional description was dictated by the semi-empirical dispersion correction term. 
@@ -723,11 +724,11 @@ The function decreases to 1 as $R_{ij}$ increases, but also diminishes quickly a
 \centering
 \includegraphics[width=0.65\linewidth]{Chai}
 \caption[Energy of \ce{Ne2} with damping function.]{Dispersion energy of \ce{Ne2} with and without the damping function (equation \ref{equ:damp}). The function of Wu and Yang ($f_{damp}^{WY}(R)=1/(1+e^{-\frac{dR}{R_{r}-1}}))$ %, where $R_{r}$ is the sum of the \ac{vdw} radii, 
-is also compared \cite{Wu2002}.  From the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a}.} 
+is also compared \cite{Wu2002}.  \added{Reproduced from the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a} with permission from the PCCP Owner Societies.}} 
 \label{fig:damp}
 \end{figure}
 The \ac{wb97xd} functional incorporates 100\% long-range exchange, 22\% short-range exchange, a modified B97 short-range exchange and B97 correlation, with empirical dispersion corrections. When the constraint $\omega$ is reduced to 0, \ac{wb97xd} is equivalent to the B97 functional with the addition of the dispersion correction. 
-The performance of \ac{wb97xd} will be compared to that of \ac{B3LYP} with particular attention paid to the reaction energies.  
+The performance of \ac{wb97xd} will be compared to that of \ac{B3LYP} \added{in this work} with particular attention paid to the reaction energies.  
 %fig of the damping function from Chai's paper, if you can be bothered 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %\ac{B3LYP}
@@ -746,7 +747,7 @@ The performance of \ac{wb97xd} will be compared to that of \ac{B3LYP} with parti
 %Slater (difficult) -> Gaussian (easier) -> Combination (more accurate) -> Diffuse and polarisation
 %make sure you know the caveats - ins and outs of the bases you used in combination with the methods you used. 
 %You know pople's one's aren't as stable as the aug- ones. State why you chose them. Also, MP2 will react differently with these bases as opposed to the aug- ones. 
-A basis set is the collection of mathematical basis functions, used in linear combination, to construct the \ac{MO}. An individual \ac{MO} can be defined as: %The individual function are derived from the hydrogen atomic orbitals, as it is 
+A basis set is the collection of mathematical basis functions, used in linear combination, to construct the \acf{MO}. An individual \ac{MO} can be defined as: %The individual function are derived from the hydrogen atomic orbitals, as it is 
 \begin{equation}
 \psi_{i}=\sum^{N}_{\mu=1} c_{\mu i} \chi_{\mu}
 \end{equation}
@@ -774,27 +775,14 @@ The expansion to the \ac{MO} therefore takes the form:
 %Diagram
 In this study, Pople style basis sets will be employed, with general format \textbf{X-YZg} \cite{Ditchfield1971}. Split valence basis sets such as these, describe the core electrons using fewer basis functions than the interacting valence electrons; the valence electrons play a much more significant part in bonding and intermolecular interactions.  %REF % (Table 1. Examples of split valence basis sets.).40,41
 An example is \textbf{6-31+G*}, where the core electrons are described using a single contracted gaussian consisting of six primitive functions. The valence orbital is split into two contracted gaussians, where one is described by three primitive gaussians, and the other, one primitive gaussian. 
-The \textbf{+} sign corresponds to diffuse functions, the extension of the basis function as it tails away from the nucleus. This particularly important when describing the behaviour of ions. The \textbf{*} indicates the addition of polarisation functions, in this case, d-functions to all non-H atoms. Higher order modifications also add p-functions to H atoms, additional d-functions to non-H atoms, d-functions to H atoms, with increasing levels of polarisation. This mixing of orbitals facilitates a better description for the correct shape of the \ac{MO}. 
+The \textbf{+} sign corresponds to diffuse functions, the extension of the basis function as it tails away from the nucleus. This is particularly important when describing the behaviour of ions. The \textbf{*} indicates the addition of polarisation functions, in this case, d-functions to all non-H atoms. Higher order modifications also add p-functions to H atoms, additional d-functions to non-H atoms, d-functions to H atoms, with increasing levels of polarisation. This mixing of orbitals facilitates a better description for the correct shape of the \ac{MO}. 
 Increasing the number of basis functions on each occupied orbital allows for expansion or contraction, increasing flexibility in response to the environment. 
 
-Basis set superposition error \acs{BSSE} is a false lowering of the energy that can occur when two species in a system approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at large separations, and the complex at short distances. This is particularly pertinent when considering reaction complexes, and performing \ac{PES} scans where bond breaking or formation is expected. 
-The effect is particularly pronounced for smaller basis sets. Counterpoise correction can be used to circumvent \ac{BSSE}, at the expense of higher computational cost. Preliminary investigations into the species examined in this study showed that the use of counterpoise correction offered minimal improvements to the energy, and the additional CPU time was not proportionate to the marginal improvements. Calculations were performed at sufficiently high basis that the effects of \ac{BSSE} were insignificant, and counterpoise correction was not used for further investigations. 
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsection{Thermochemistry}
-%(And vibrational frequencies)
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsection{(Transition State Theory \& Free Energy Calculations)}
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%\subsection{Solvent models}
-%%Their effect on free energies - use a free energy cycle to justify the lack of inclusion of solvation energy - though this might be best discussed in Chap 1
-%%How they are modelled.
-%%PCM vs SMD, why is SMD better for free energies. Are they similar in terms of compuational demand
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
-%%\subsection{Optimisation algorithms}
-
+Basis set superposition error \acs{BSSE} is a false lowering of the energy that can occur when two species in a system with finite bases sets approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at large separations, and the complex at short distances. This is particularly pertinent when considering reaction complexes, and performing \ac{PES} scans where bond breaking or formation is expected. 
+The effect is particularly pronounced for smaller basis sets. Counterpoise correction can be used to circumvent \ac{BSSE}; \added{each calculation is performed twice, once using the mixed basis set of the complex and once with the separate bases of the two species, and this energy difference is subtracted from the uncorrected energies \cite{Duijneveldt1994,Mentel2014}.} However this comes at the expense of higher computational cost. Preliminary investigations into the species examined in this study showed that the use of counterpoise correction offered minimal improvements to the energy, and the additional CPU time was not proportionate to the marginal improvements. Calculations were performed at sufficiently high basis that the effects of \ac{BSSE} were insignificant, and counterpoise correction was not used for further investigations. 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 \section{Implementation \& Analysis}
-The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09} \cite{Frisch2013}. 
+The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09} \cite{G09}. 
 This section will provide an generic overview of the methods and techniques used to analyse the optimised geometry output from a \ac{QM} calculation. 
 Subsequent investigations into transition state structures, reaction coordinates and analysis of critical bonding points will be explained.  
 The details of individual calculation schemes are included in the methodology section at the the start of each chapter. This includes any details of the \ac{QM} methods and basis sets chosen, individual optimisation procedures, types of calculation or special keywords used, and any non-standard software or technical details of importance. 
@@ -806,23 +794,21 @@ The details of individual calculation schemes are included in the methodology se
 %Visualisation done in avogadro, molden, Gview
 %
 \subsection{Potential Energy Surface scans}
-%[Maybe this goes into a smaller methodology section?]
 Geometry scans or \ac{PES} scans were used to probe the local energy landscape corresponding to a specific change in geometry. During the course of a scan, a structural property - such as a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. In the case of a relaxed scan, at each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a \acs{PES} of the explored pathway. In the case of bond breaking or formation, the presented energy profile is a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
-In these cases, an energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the peak of the curve can be extracted and used for subsequent frequency calculations or transition state search, to validate the mechanistic pathway. % using intrinsic reaction co-ordinate methods. 
-Intrinsic reaction coordinate calculation also test the reactant and product along the reaction pathway, to ensure that they lie on the same \ac{PES}. 
-To explore the predicted degradation mechanisms of \ac{NC}, the scanning parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. In this way, multi-dimensional scans could be performed. Two-dimensional scans were used to probe simultaneous processes in the system, however, these proved computationally intensive due to the high number of coordinate points to be calculated. 
-Relaxed geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword.
+In these cases, an energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the peak of the curve can be extracted and used for subsequent frequency calculations or a transition state search, to validate the mechanistic pathway. % using intrinsic reaction co-ordinate methods. 
+Intrinsic reaction coordinate calculations also test the reactant and product along the reaction pathway, to ensure that they lie on the same \ac{PES}. 
+To explore the predicted degradation mechanisms of \ac{NC}, the scanned parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. In this way, multi-dimensional scans could be performed. Two-dimensional scans were used to probe simultaneous processes in the system, however, these proved computationally intensive due to the high number of coordinate points to be calculated. 
+Relaxed geometry scans were performed on the optimised reactant geometry using the Opt=ModRedundant keyword \added{to specify the scanned coordinate, the number of scan steps and the method for energy optimisation.} %, where a specific coordinate is chosen and incrementally adjusted at each scan step. The coordinate is then frozen whilst the remainder of the system undergoes an energy minimisation around the frozen coordinate. }% the chosen co-ordinate is frozen at each optimisation stage}.
 A rigid scan consisted of a single point energy calculation of the structure at each step, rather than full relaxation of the wider system, as in the relaxed scans. 
 %These are specified in \ac{G09} by selecting two internal coordinates to be scanned, and stating the number of steps.
 
-\subsection{Transition state searches}
-%[Maybe this goes into a smaller metholodogy section?] % critical mechanistic detail 
-Transition state searches are called through the Opt=TS, QST or QST3 keywords in \ac{G09}. The Opt=TS method attempts to optimise the input ``guess'' geometry to a maximum. The guess geometry can be obtained \textit{via} a \ac{PES} scan, from coordinates in the literature, or generated using the QST2 function. 
+\subsection{Transition state searches}	
+Transition state searches are called through the Opt=TS, QST2 or QST3 keywords in \ac{G09}. The Opt=TS method attempts to optimise an input ``guess'' geometry to a maximum. The guess geometry can be drawn by hand, obtained \textit{via} a \ac{PES} scan, from coordinates in literature or generated using the QST2 function. 
 A \ac{TS} can be identified by the single imaginary frequency corresponding to the vibration transitioning from product to reactant. 
-\ac{TS} searching is known to be difficult.
-In many cases, a \ac{TS} calculation alone will not be able to optimise to the correct transition state and is usually used in conjunction the QST2 or QST3 methods. 
+%\ac{TS} searching is known to be difficult.
+Often, a \ac{TS} calculation alone will not be able to isolate the correct transition state and is usually used in conjunction the QST2 or QST3 methods. 
 The QST2 option is able to generate a transition state geometry using the Synchronous Transit Quasi-Newton (STQN) method \cite{Govind2003}. %42 REF. 
-Here, the transition geometry is assumed to be around midway between a given reactant and product; the calculation interpolates between the starting and end point, probing the energy profile. Thus, the corresponding atom labels must match in both the reactants and products. QST3 performs a similar function, but also considers in input guess transition state structure. % (Figure 10). 
+Here, the transition geometry is assumed to be around midway between a given reactant and product; the calculation interpolates between the starting and end point, probing the energy profile. Thus, the corresponding atom labels must match in both the reactants and products. QST3 performs a similar function, but also considers an input guess transition state structure. % (Figure 10). 
 It is widely acknowledged that transition state searching is challenging. In addition to the techniques above, the task requires a certain measure of chemical intuition when constructing guess structures, as the calculation is sensitive to small changes in geometry.
 %“Scan” means that the reaction coordinates are changed gradually and “relaxed” means that the reaction coordinates are fixed, while other coordinates that are orthogonal to the reaction coordinates are relaxed during the energy minimisation \cite{Yao2018}.
 
@@ -843,7 +829,7 @@ It is widely acknowledged that transition state searching is challenging. In add
 \subsection{Topology analysis using the quantum theory of atoms in molecules}
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wave function, ELF, LOL ...
 Topology analysis is a method of obtaining useful properties from the 3D representation of the electron density obtained from a \ac{QM} calculation. 
-A quantitative way to obtain information on the topology of the electron density, is by taking the firstd derivative of the gradient ($\nabla(\rho)$). 
+A quantitative way to obtain information on the topology of the electron density, is by taking the first derivative of the gradient ($\nabla(\rho)$). 
 In 1991, Bader proposed a technique to analyse the electron density using the \ac{QTAIM} \cite{Bader1991}.
  %, which also extended to other real space functions, such as the \ac{LOL} and \ac{ELF}. - Only include these if you can describe them, also. 
  % Real-space calculation...when all operators (T^,V^,J^,K^) are evaluated on a grid.
