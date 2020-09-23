@@ -4,7 +4,8 @@
 %\usepackage[utf8]{inputenc}
 %\DeclareUnicodeCharacter{27f6}{\ensuremath{⟶}}
 \DeclareUnicodeCharacter{2212}{-}
-%\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{03B1}{α}
+\usepackage[utf8]{inputenc}
 
 % This package just gives you a quick way to dump in some sample text.
 % You can remove it -- it's just here for the examples.
@@ -65,8 +66,10 @@
 \usepackage{csquotes}
 
 % SI units - mostly angstrom
+\usepackage{siunitx}
+%\usepackage[round-mode=places]{siunitx}
 %\usepackage[round-mode=places,round-precision=4]{siunitx}
-\usepackage[round-mode=places,round-precision=2]{siunitx}
+%\usepackage[round-mode=places,round-precision=2]{siunitx}
 % Don't know whether the following actually works - adding calories to siunitx
 \DeclareSIUnit{\calorie}{cal}
 \DeclareSIUnit{\Calorie}{\kilo\calorie}
@@ -124,6 +127,8 @@
 % The mhchem package provides chemistry formula typesetting commands
 %  e.g. \ce{H2O}
 \usepackage[version=3]{mhchem}
+% For special radical dot
+\newcommand{\rad}{\raisebox{0.4ex}{\tiny$\bullet$}}
 
 % And the chemfig package gives a weird command for adding Lewis 
 %  diagrams, for e.g. organic molecules

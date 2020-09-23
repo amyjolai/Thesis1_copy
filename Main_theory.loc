@@ -1,0 +1,6 @@
+\ChangesListline {added}{Added}{a nucleus}{10}
+\ChangesListline {added}{Added}{small molecules, crystal structures and metal surface energies }{16}
+\ChangesListline {added}{Added}{Reproduced from the work of Chai \textit {et. al} \cite {Chai2008,Chai2008a} with permission from the PCCP Owner Societies.}{18}
+\ChangesListline {added}{Added}{in this work}{19}
+\ChangesListline {added}{Added}{each calculation is performed twice, once using the mixed basis set of the complex and once with the separate bases of the two species, and this energy difference is subtracted from the uncorrected energies \cite {Duijneveldt1994,Mentel2014}.}{20}
+\ChangesListline {added}{Added}{to specify the scanned coordinate, the number of scan steps and the method for energy optimisation.}{21}

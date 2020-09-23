@@ -666,7 +666,7 @@ E_{XC}^{GGA}=E_{X}^{GGA} + E_{C}^{GGA}
 The function of $\nabla\rho(r)$ is not uniquely defined and no true form is known; further developments saw the proposal of numerous gradient correction schemes, often fitting to experimental parameters. Functionals that have been well established in literature include:
 \begin{itemize}
 \item B88: the exchange functional developed by Becke, and contains an empirical parameter $\beta$=0.0042 fitted to give the best agreement with the \ac{HF} energies of the noble gases \cite{Becke1988}. %($\beta$=0.0042). 
-\item LYP: the most widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
+\item LYP: a widely used \ac{GGA} correlation functional, developed by Lee, Yang and Parr, with empirical fitting to the helium atom. %, only based on \textit{ab initio} calculations. 
 Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988}. %REF
 \item PBE: the exchange-correlation functional developed by Perdew, Burke and Ernzerhof derived purely from \textit{ab initio} calculations \cite{Perdew1996}. The PBE family of functionals have parameterisations optimised for different materials and interfaces, such as \added{small molecules, crystal structures and metal surface energies }\cite{Hammer1999,Perdew2008,Wu2006}. %ref PBE sol, RPBE , PBE WC
 \end{itemize}
@@ -696,7 +696,7 @@ The calculations falling within this range will therefore be performed with both
 %Grimme
 %Paragraph on wb97xd
 
-Stefan Grimme proposed an empirical \ac{DFT} method with dispersion correction to include van der Waals interactions, described as \ac{DFT-D} \cite{Grimme2004,Grimme2006}. 
+Grimme proposed an empirical \ac{DFT} method with dispersion correction to include van der Waals interactions, described as \ac{DFT-D} \cite{Grimme2004,Grimme2006}. 
 The general form of the DFT-D scheme  is used to calculate the total energy of the system, with the addition of an empirical atomic-pairwise dispersion correction:
 %what is that
 \begin{equation}
@@ -727,7 +727,7 @@ The function decreases to 1 as $R_{ij}$ increases, but also diminishes quickly a
 is also compared \cite{Wu2002}.  \added{Reproduced from the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a} with permission from the PCCP Owner Societies.}} 
 \label{fig:damp}
 \end{figure}
-The \ac{wb97xd} functional incorporates 100\% long-range exchange, 22\% short-range exchange, a modified B97 short-range exchange and B97 correlation, with empirical dispersion corrections. When the constraint $\omega$ is reduced to 0, \ac{wb97xd} is equivalent to the B97 functional with the addition of the dispersion correction. 
+The \ac{wb97xd} functional incorporates 100\% long-range exchange, 22\% short-range exchange, a modified B97 short-range exchange and B97 correlation, with empirical dispersion corrections. When the constraint $\omega$ is reduced to 0, \ac{wb97xd} is equivalent to the B97 functional with the addition of the dispersion correction. %\added{It has been successfully applied in calculations involving non-bonding interactions, and shown to outperform \acs{B3LYP} for systems involving hydrogen bonding networks \cite{Bachrach2013}.}
 The performance of \ac{wb97xd} will be compared to that of \ac{B3LYP} \added{in this work} with particular attention paid to the reaction energies.  
 %fig of the damping function from Chai's paper, if you can be bothered 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
