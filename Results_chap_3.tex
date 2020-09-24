@@ -48,7 +48,7 @@ Internal factors including impurities, residual solvent, and crystal growth with
 %{\textcolor{red}{\CIRCLE} oxygen \quad \textcolor{pink}{\CIRCLE} nitrogen \quad  \textcolor{yellow}{\CIRCLE} carbon \quad \textcolor{cyan}{\CIRCLE}hydrogen}
 {\textcolor{red}{\CIRCLE} oxygen \quad \textcolor{blue}{\CIRCLE} nitrogen \quad  \textcolor{gray}{\CIRCLE} carbon \quad $\bigcirc$ hydrogen}
 \end{center}
-\caption[Intramolecular thermolytic reactions in \ac{PETN}.]{Intramolecular thermolytic reactions in \ac{PETN}, adapted from the work of Tsyshevsky \textit{et al.} with permission \cite{Tsyshevsky2013}.}
+\caption[Intramolecular thermolytic reactions in \ac{PETN}.]{Intramolecular thermolytic reactions in \ac{PETN}, adapted from the work of Tsyshevsky \textit{et al.} with permission from the publisher \cite{Tsyshevsky2013}.}
 \label{fig:PETN_react}
 \end{figure}
 %
@@ -315,10 +315,10 @@ The energies of homolytic fission and intramolecular elimination of \ce{HNO2} fr
 %\par\bigskip
 \caption[Calculated free energies of reaction for the intramolecular reactions of PETN and the \ac{NC} monomer.]{Calculated free energies of reaction  at 298 K ($\Delta G_{r}$), reaction enthalpies ($\Delta H_{r}$), activation barriers ($E_{a}$)  with zero-point correction ($ZPE$) for the intramolecular reactions of PETN, and the \ac{NC} monomer calculated at \acs{wb97xd}/ 6-31+G(2df,p). Values expressed in kcal mol$^{-1}$. }
 
-\begin{tabular}{ l *{6}{S[table-format = 2.1]}} 
+\begin{tabular}{ l *{8}{S[table-format = 2.1]}} 
 %\begin{tabular}{ l l l l l l} 
 \toprule
-Reaction				& $\Delta G_{r}$	&$\Delta G_{r}^{ZPE}$ 	& $\Delta H_{r}$	& {\added{$\Delta H_{r}^{ZPE}$}}	&	${E_{a}}$	& ${{E_{a}}^{ZPE}}$ \\
+Reaction				& $\Delta G_{r}$	&$\Delta G_{r}^{ZPE}$ 	 & & $\Delta H_{r}$	& {\added{$\Delta H_{r}^{ZPE}$}}	& &	${E_{a}}$	& ${{E_{a}}^{ZPE}}$ \\
 \toprule
 PETN					& \multicolumn{5}{l}{}\\
 \midrule
@@ -339,18 +339,18 @@ PETN					& \multicolumn{5}{l}{}\\
 %\rule{0pt}{4ex}   
 %\ce{HNO2} loss		& -36.04986 		& -39.42322		&-22.85892 	& 40.69863 	& 37.32527  \\
 % Orig: %21.50946; 16.55804 [all plus 4]
-\rad\ce{NO2} loss	&{\added{26.4}}	&	{\added{21.4}}&	{\added{40.4}}& {\added{35.5}}		&{{$\added{40.4}^{b}$}}	& 	{\added{35.5}}	\\
-						&						&	 					&	 					& ${  (35.8)}^{a}$ 	& 	${(41.2)}$ 					& 	${(35.8)}$ 		\\
+\rad\ce{NO2} loss	&{\added{26.4}}	&	{\added{21.4}}& &	{\added{40.4}}& {\added{35.5}}		& &{{$\added{40.4}^{b}$}}	& 	{\added{35.5}}	\\
+						&						&	 					& &	 					& ${  (35.8)}^{a}$ 	& & 	${(41.2)}$ 					& 	${(35.8)}$ 		\\
 \rule{0pt}{4ex}   
-\ce{HNO2} loss		&  -23.5 				&	-21.0				&  	-20.3				& {\added{-17.7}		&	46.5							&	 41.5 				 \\
-						& 						&						&						&${(-18.6)}$			&	${(47.3)}$					& ${(42.7)}$			 \\
+\ce{HNO2} loss		&  -23.5 				&	-21.0				& &  	-20.3				& {\added{-17.7}}		& &	46.5							&	 41.5 				 \\
+						& 						&						& &						&${(-18.6)}$			& &	${(47.3)}$					& ${(42.7)}$			 \\
 %\rule{0pt}{4ex}   
 \toprule
 \ac{NC} monomer	& \multicolumn{5}{l}{} \\
 \midrule
-\rad\ce{NO2} loss	&  {\added{27.7}}& {\added{23.1}}	& {\added{40.7}} & {\added{36.1}}		&{\added{40.7}}				& {\added{36.1}}	\\
+\rad\ce{NO2} loss	&  {\added{27.7}}& {\added{23.1}}	& & {\added{40.7}} & {\added{36.1}}		& &{\added{40.7}}				& {\added{36.1}}	\\
 \rule{0pt}{4ex}   
-\ce{HNO2} loss		& -32.4				& -35.8				&-19.3 				&{\added{-22.7}}		& 43.5  							& 39.5  				\\
+\ce{HNO2} loss		& -32.4				& -35.8				& &-19.3 				&{\added{-22.7}}		& & 43.5  							& 39.5  				\\
 \bottomrule
 \end{tabular}
 \label{tab:intramolec}
@@ -360,16 +360,14 @@ $^b$ values for the activation energy and total energy of reaction are the same 
 %when treating homolytic fission as a barrierless process. 
 \end{table}
 \acs{PETN} reactant, \acs{TS} and product geometries were supplied by the authors (R. Tsyshevsky, personal communication, 19 April 2017) except in the case of the \rad\ce{NO2} homolysis product, which was not provided. 
-The \rad\ce{NO2} leaving group used in the homolysis reaction calculation was independently geometry optimised, with its energy contributing additively to the products %energies 
-of the reaction. 
+The \rad\ce{NO2} leaving group used in the homolysis reaction calculation was independently geometry optimised, with its energy contributing additively to the products of the reaction. 
 The same method and basis (\acs{wb97xd}/ 6-31+G(2df,p)) were used in order to recreate the published reaction energies as a test of method, however, the calculated values fall below the literature values by  0.3 - 1.2 kcal mol$^{-1}$. 
 A possible explanation may be that the geometries provided do not exactly match those used in they study, particularly in the case of \rad\ce{NO2}.
 A contribution may also arise from variation in calculation setup and the use of a different version and compilation of the \ac{G09} program, leading to fluctuations in the exact values obtained. 
 These differences would be amplified %when deriving
 when combining individual energies for the calculation of reaction energy values. Cumulatively these changes may explain the discrepancy between the observed values and those in the publsihed study. %Tsyshevsky \textit{et al.}.  
-Nevertheless, the calculated value for the activation energy of homolytic fission of \acs{PETN} is comparable to the experimentally value of XX, measured using \ac{DSC}, and % quote whatever kulja did but also want ti to be around 35 - 36 kcal mol. Anything for HNO2 loss?
-$\Delta H _{r}$ falls within 7 kcal mol$^{-1}$ of the literature value for \ce{O-NO2} homolysis of alkanes (%35.62 kcal mol$^{-1}$ to
-42$\pm$0.3 kcal mol$^{-1}$) \cite{Luo2002}. %give a range for diff sizes of alkenes%%%%%%%%
+Nevertheless, the calculated value for the activation energy of homolytic fission of \acs{PETN} is comparable to the experimentally value of XX, measured using \ac{DSC}, and $\Delta H _{r}$ falls within 7 kcal mol$^{-1}$ of the literature value for \ce{O-NO2} homolysis of alkanes (35.62 kcal mol$^{-1}$ to 42$\pm$0.3 kcal mol$^{-1}$) \cite{Luo2002}. 
+%give a range for diff sizes of alkenes%%%%%%%%
 %scaling factor for wb97xd CHECK
 %How does inclusion of zero point energy affect the enthalpy values?
 

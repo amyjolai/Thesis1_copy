@@ -6,20 +6,35 @@
 \ChangesListline {added}{Added}{(max. force $4.5 \times 10^{-4}$ H/Bohr, \acs {RMS} force $3 \times 10^{-4}$ H/Bohr, max. displacement $1.8 \times 10^{-4}$ H/Bohr and \acs {RMS} displacement $1.2 \times 10^{-4}$ H/Bohr)}{11}
 \ChangesListline {added}{Added}{Whereby the \ac {ZPE} was obtained from the \acs {QM} frequency calculation by evaluation of the energy of the lowest vibrational level over all molecular vibrations: }{11}
 \ChangesListline {added}{Added}{E_{ZPE} = E + \sum _{i}^{modes}\frac {1}{2}h\omega _{i}}{11}
-\ChangesListline {added}{Added}{Where $E$ is the energy of the molecule at the minimum (for geometry optimisations) or maximum (for transition state optimisations), $modes$ refers to the vibrational modes, $h$ is Planck's constant and $\omega $ is the vibrational frequency. }{12}
-\ChangesListline {added}{Added}{High accuracy energy values for structures generated during \acs {PES} scans were not required; calculations were performed at a lower level to conserve computational effort. }{12}
+\ChangesListline {added}{Added}{Where $E$ is the energy of the molecule at the minimum (for geometry optimisations) or maximum (for transition state optimisations), $modes$ refers to the vibrational modes, $h$ is Planck's constant and $\omega $ is the vibrational frequency. For reaction energy calculations, the \acs {ZPE} energies were scaled by the empirically derived factor of 0.9756 for \acs {wb97xd}/6-31G(2df,p) \cite {Kesharwani2015}. This was to correct for deviation arising from an incomplete description of electron correlation and neglect of anharmonicity during the calculation of vibrational frequencies \cite {Sinha2004,Cramer2004}. }{12}
+\ChangesListline {added}{Added}{As high accuracy energy values for structures generated during \acs {PES} scans were not required, calculations were performed at a lower level to conserve time and computational effort. }{12}
 \ChangesListline {added}{Added}{with water ($\epsilon $=78.4) }{12}
+\ChangesListline {added}{Added}{$\Delta H_{r}^{ZPE}$}{13}
+\ChangesListline {added}{Added}{26.4}{13}
+\ChangesListline {added}{Added}{21.4}{13}
+\ChangesListline {added}{Added}{40.4}{13}
+\ChangesListline {added}{Added}{35.5}{13}
+\ChangesListline {added}{Added}{40.4}{13}
+\ChangesListline {added}{Added}{35.5}{13}
+\ChangesListline {added}{Added}{-17.7}{13}
+\ChangesListline {added}{Added}{27.7}{13}
+\ChangesListline {added}{Added}{23.1}{13}
+\ChangesListline {added}{Added}{40.7}{13}
+\ChangesListline {added}{Added}{36.1}{13}
+\ChangesListline {added}{Added}{40.7}{13}
+\ChangesListline {added}{Added}{36.1}{13}
+\ChangesListline {added}{Added}{-22.7}{13}
 \ChangesListline {added}{Added}{change}{14}
+\ChangesListline {added}{Added}{(water)}{16}
+\ChangesListline {added}{Added}{(water)}{16}
+\ChangesListline {added}{Added}{(syn)}{16}
+\ChangesListline {added}{Added}{(anti)}{16}
 \ChangesListline {added}{Added}{slightly}{16}
-\ChangesListline {added}{Added}{This is likely due to the known underestimation of reaction energies by \acs {B3LYP}, particularly in systems involving multiple C-C bonds \cite {Check2005} and with weak, non-covalent interactions \cite {Bachrach2008,Grimme2010}. These issues are attenuated in \acs {wb97xd} with the inclusion of medium and long term dispersion, and has been shown to improve the accuracy of modelled C-C bond lengths \cite {Fokin2012} and outperform \acs {B3LYP} in calculations involving hydrogen bonding networks \cite {Bachrach2013}. }{16}
+\ChangesListline {added}{Added}{This is likely due to the known underestimation of reaction energies by \acs {B3LYP}, particularly in systems involving multiple C-C bonds \cite {Check2005} and with weak, non-covalent interactions \cite {Bachrach2008,Grimme2010}. These issues are treated in \acs {wb97xd} with the inclusion of medium and long term dispersion, and has been shown to improve the accuracy of modelled C-C bond lengths \cite {Fokin2012} and outperform \acs {B3LYP} in calculations involving hydrogen bonding networks \cite {Bachrach2013}. }{16}
 \ChangesListline {added}{Added}{(syn)}{17}
 \ChangesListline {added}{Added}{(syn)}{17}
 \ChangesListline {added}{Added}{(anti)}{17}
 \ChangesListline {added}{Added}{(anti)}{17}
 \ChangesListline {added}{Added}{(\acs {PCM} = water).}{17}
-\ChangesListline {added}{Added}{(water)}{18}
-\ChangesListline {added}{Added}{(water)}{18}
-\ChangesListline {added}{Added}{(syn)}{18}
-\ChangesListline {added}{Added}{(anti)}{18}
 \ChangesListline {added}{Added}{Green arrows indicate bond formation, red arrows indicate dissociation. }{19}
 \ChangesListline {added}{Added}{In summary, this section explored the degradation reactions responsible for denitration, the primary step leading to more extensive decomposition. With respect to thermolytic mechanisms, It was found that homolysis and \ce {HNO2} elimination were both feasible initial denitration routes. \ce {HNO2} elimination was more energetically favourable and likely to dominate in ambient, purely thermodynamic conditions. Investigation into acid hydrolys pathways found that protonation at the \acs {NC} bridging site was most likely, and whilst a \acs {TS} could not be obtained for the reaction, it was confirmed that hydrolytic denitration occurred with the release of \ce {NO2+}. This work should be extended with further exploration of water complexation around the \acs {NC} monomer through the use of explicit solvent. \par In the next chapter the reactions of the species generated as a result of the primary denitration steps will be studied to elucidate the formation pathways of the final experimentally observed degradation products. }{24}
