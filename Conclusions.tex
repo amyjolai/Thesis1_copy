@@ -4,7 +4,7 @@
 
 \section{Conclusion}
 \added{Since winning a medal at the World's Fair in London in 1862 as the first man-made plastic \cite{Rossell2002,Parkes1862}, \ac{NC} has become a central component in the manufacturing of everyday items across a whole spectrum of critical applications, from kitchenware to rocket fuel \cite{Greenberg1925}. 
-As has been demonstrated by this study and the extensive years of research since its first discovery, the degradation behaviour of \ac{NC} is multi-staged and subject to high variation. The interplay of thermal triggers, hydrolytic initiation, as well as other factors not discussed here such as \ac{UV} \cite{Berthumeyrie2014,Khryachkov2017} and physical shock \cite{Taylor1971}, are all subject to the unique composition of each sample; variation owed to its biological origins and preparation method. Adding to this, the ageing reactions that occur are at the mercy of the precise environmental conditions under which the \ac{NC} is stored. The final result is that the true, exhaustive reaction scheme for full decomposition has remained elusive. }% and efficacy of washing procedures.
+As has been demonstrated by this study and the extensive years of research since its first discovery, the degradation behaviour of \ac{NC} is multi-staged and subject to high variation. The interplay of thermal triggers, hydrolytic initiation, as well as other factors not discussed here such as \ac{UV} initiation \cite{Berthumeyrie2014,Khryachkov2017} and physical shock \cite{Taylor1971}, are all subject to the unique composition of each sample; variation owed to its biological origins and preparation method. Adding to this, the ageing reactions that occur are at the mercy of the precise environmental conditions under which the \ac{NC} is stored. The final result is that the true, exhaustive reaction scheme for full decomposition has remained elusive. }% and efficacy of washing procedures.
 
 In this thesis, the degradation processes in \ac{NC} were explored using computational methods to elucidate the dominant processes and key reactants involved in ambient ageing. 
 In the first section, the polymeric structure of \ac{NC} was introduced. Different sized truncations and capping group approximations for polymer chain endings were tested as models for the polysaccharide. 
@@ -46,7 +46,7 @@ The fate of the released nitrogen species was in the accumulation of \ce{N2O} or
 \ce{HNO2} routes lead to the formation of \ce{N2O} without self-regeneration and \ce{HNO3} routes lead primarily to formation of \rad\ce{NO2}. This indicates that \ce{HNO2} was unlikely to be a direct contributor to catalysis, and that \ce{HNO3} was the precursor to the \rad\ce{NO2} catalytic species, acknowledging experimental observations that \ce{HNO3} appeared to facilitate autocatalysis \cite{Baker1952}. 
 
 \added{Following the successful application of the monomer model in the investigation of denitration and protonation reactions of \ac{NC}, further studies repeating the mechanisms explored here using the dimer (and trimer models, where feasible) would be extremely valuable. Possible synergistic effects of neighbouring nitrate groups on adjacent rings, in addition to increased steric factors, are likely to change the energetics and favourability of attack and protonation sites, thus altering the likelihood of denitration at each ring position. 
-Inter-chain hydrogen bonding, largely dependent on unsubstituted hydroxyl groups, is also likely to alter the contribution to hydrolysis in particular. Porosity to solvents is influenced by local crystallinity and packing \cite{French1978}, and is sensitive to the spatial arrangements of individual hydroxyl groups \cite{Zhbankov1992,Akerholm2004,Nishiyama2002}. Molecular packing will determine the ease at which liberated degradation products can diffuse through and escape the \ac{NC} matrix. It can be surmised that there exists certain decomposition pathways with corresponding reactions that are solely structure dependent. }
+Inter-chain hydrogen bonding, largely dependent on unsubstituted hydroxyl groups, is also likely to alter the contribution to hydrolysis in particular. Porosity to solvents is influenced by local crystallinity and packing \cite{French1978,Clark1982}, and is sensitive to the spatial arrangements of individual hydroxyl groups \cite{Zhbankov1992,Akerholm2004,Nishiyama2002}. Molecular packing will determine the ease at which liberated degradation products can diffuse through and escape the \ac{NC} matrix. It can be surmised that there exists certain decomposition pathways with corresponding reactions that are solely structure dependent. }
 %Things I haven't mentioned:
 % Modelling the protonation step and rates (Lure1991), and its contribution to rate of hydrolysis
 % The resulting interplay of reaction rates of homofiss, hydro and elimhono, and under diff concs of water / acid / temps
@@ -78,6 +78,22 @@ Propagation of different nitration level and conformational structures through t
 %prescribed
 denitration and secondary decomposition schemes may reveal alternative reactions, or alter the balance of products obtained. 
 
+Classical \ac{MD} techniques would also provide further insight into the diffusion of the released products, and their interaction with the wider polymer. Studies involving the interaction of \ac{NC} with plasticisers has effectively probed the diffusion rates of plasticiser migration, which is of key interest in the preservation of stable \ac{NC} product formulations \cite{Richards2018}. 
+%but I didn't look at the ratio. I mean product interactions?
+
+Another avenue of interest is in the exploration of other transition structures for the denitration stage, and for further degradation following formation of the ketone. 
+The inclusion of additional explicit water molecules or water clusters is likely required to stabilise \ac{TS} that were previously \added{not viable (chapter \ref{chapterlabel5} figure \ref{fig:all_da_TS}), highlighting the need for further understanding of \ac{NC}-solvent interactions. A starting reference work would be the modelling of pentahydrate complexes around glucose by Momany \textit{et al.} \cite{Momany2004}, with extension to a hybrid quantum mechanics/molecular mechanics (\acs{QM}/\acs{MM}) approach to treatment of solvation shells. }
+% starting with reproduction of the primary solvent shell  \cite{Momany2005}. %cite water cluster glucose work 
+Ab-initio molecular dynamics (\acs{AIMD}) techniques may be effective for investigation into the interactions of both water and acids with \ac{NC}, offering possible insight into the effect of increasing acid concentration on the protonation behaviour and water clustering around monomer, dimer and trimer structures at different \ac{DOS} \cite{Ardura2009}. 
+%A cyclic transition state involving the proton located on the capping group should be probed in the possibility that it leads to a facile route to the peeling off individual glucopyraonse units, perhaps even preserving the nitrate group. 
+%
+%- Rates of each reaction (homolysis, vs hno2 vs acid)
+%- explore the effect of water coordination around NC
+%- explore mechanism of OH retardation of hydrolysis (?) rate, for teritary nitrates. And why this doesn't happen for primary / secondary (does the ph need to really be that low for reactions?)
+
+
+A natural extension to the study of the secondary reactions driving decomposition is the expansion to a wider range of possible reaction pathways. These may include the widely documented mechanisms studied for glucose, \added{such as the conversion to hydroxymethyfurfural (\acs{HMF}), whereby the 6-membered ring is converted to a 5-membered ring} (figure \ref{fig:glucose_hmf}) \cite{Qian2005a,Qian2005,Qian2010}\added{; furan and other aromatic species have been observed in \ac{NC} degradation residues \cite{Jensen2014}}.  
+This is in addition to further studies of possible ring opening mechanisms and chain scission reactions, in order to fully account for the broad spectrum of experimentally observed degradation products in \ac{IR} and \ac{NMR} measurements \cite{Huwei1988,Clark1981,Dauerman1968,Kovalenko1994,Wu1980}.  
 \begin{figure}[htb!]
 \centering
 \caption{The conversion of glucose to \ac{HMF} with a) showing the proposed reaction  scheme, and b) displaying a possible mechanistic pathway, from the \ac{AIMD} study by Qian \textit{et al.} \cite{Qian2011}. }
@@ -103,20 +119,3 @@ denitration and secondary decomposition schemes may reveal alternative reactions
 \label{fig:glucose_hmf}
 \end{figure}
 %
-
-Classical \ac{MD} techniques would also provide further insight into the diffusion of the released products, and their interaction with the wider polymer. Studies involving the interaction of \ac{NC} with plasticisers has effectively probed the diffusion rates of plasticiser migration, which is of key interest in the preservation of stable \ac{NC} product formulations \cite{Richards2018}. 
-%but I didn't look at the ratio. I mean product interactions?
-
-Another avenue of interest is in the exploration of other transition structures for the denitration stage, and for further degradation following formation of the ketone. 
-The inclusion of additional explicit water molecules or water clusters is likely required to stabilise \ac{TS} that were previously \added{not viable (chapter \ref{chapterlabel5} figure \ref{fig:all_da_TS}), highlighting the need for further understanding of \ac{NC}-solvent interactions. A starting reference work would be the modelling of pentahydrate complexes around glucose by Momany \textit{et al.} \cite{Momany2005}. }
-% starting with reproduction of the primary solvent shell  \cite{Momany2005}. %cite water cluster glucose work 
-Ab-initio molecular dynamics (\acs{AIMD}) techniques may be effective for investigation into the interactions of both water and acids with \ac{NC}, offering possible insight into the effect of increasing acid concentration on the protonation behaviour and water clustering around monomer, dimer and trimer structures at different \ac{DOS} \cite{Ardura2009}. 
-%A cyclic transition state involving the proton located on the capping group should be probed in the possibility that it leads to a facile route to the peeling off individual glucopyraonse units, perhaps even preserving the nitrate group. 
-%
-%- Rates of each reaction (homolysis, vs hno2 vs acid)
-%- explore the effect of water coordination around NC
-%- explore mechanism of OH retardation of hydrolysis (?) rate, for teritary nitrates. And why this doesn't happen for primary / secondary (does the ph need to really be that low for reactions?)
-
-
-A natural extension to the study of the secondary reactions driving decomposition is the expansion to a wider range of possible reaction pathways. These may include the widely documented mechanisms studied for glucose, \added{such as the conversion to hydroxymethyfurfural (\acs{HMF}), whereby the 6-membered ring is converted to a 5-membered ring} (figure \ref{fig:glucose_hmf}) \cite{Qian2005a,Qian2005,Qian2010}\added{; furan and other aromatic species have been observed in \ac{NC} degradation residues \cite{Jensen2014}}.  
-This is in addition to further studies of possible ring opening mechanisms and chain scission reactions, in order to fully account for the broad spectrum of experimentally observed degradation products in \ac{IR} and \ac{NMR} measurements \cite{Huwei1988,Dauerman1968,Kovalenko1994,Clark1982,Wu1980}.  

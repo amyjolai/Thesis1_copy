@@ -1,0 +1,16 @@
+\ChangesListline {added}{Added}{Adapted with permission from the publisher. }{7}
+\ChangesListline {added}{Added}{Reproduced with permission from the publisher.}{8}
+\ChangesListline {added}{Added}{proposed by Chin \textit {et al.} \cite {Chin2007}}{9}
+\ChangesListline {added}{Added}{proposed by Chin \textit {et al.} \cite {Chin2007}}{9}
+\ChangesListline {added}{Added}{from the work of Camera \cite {Camera1982}}{9}
+\ChangesListline {added}{Added}{proposed by Aellig \textit {et al.} \cite {Aellig2011}.}{10}
+\ChangesListline {added}{Added}{The energies of each reaction in the schemes above were determined after optimisation of the individual reactant and product species. }{11}
+\ChangesListline {added}{Added}{\Delta G=\Delta G_{product}-\Delta G_{reactant}}{11}
+\ChangesListline {added}{Added}{Where computational or experimental literature values for molecular energies or for reactions energies were available, these were compared with the results generated here. For the cases where the $\Delta G$ was large and positive, the reaction was omitted from the constructed reaction schemes as it would be unlikely to occur spontaneously under ambient ageing conditions (even when considering the possibility of increased heating the system as degradation progressed.) }{11}
+\ChangesListline {added}{Added}{(max. force 1.5$\times 10^{-5}$ H/Bohr, \acs {RMS} force 1.0$\times 10^{-5}$, max. displacement 6.0$\times 10^{-5}$ H/Bohr and \acs {RMS} displacement 4.0$\times 10^{-5}$ H/Bohr}{12}
+\ChangesListline {added}{Added}{with water ($\epsilon $=78.4) }{12}
+\ChangesListline {added}{Added}{In most cases the energy calculated to the exact same level of theory was not available but a similar level could still be meaningfully referenced; for example instead of \acs {wb97xd} / 6-31+G(2df,p), \acs {wb97xd} / 6-31+G(d,p) was available for most of the common small molecules. Where database reaction energies were possible, these are detailed alongside the calculated energies in the text and included in table \ref {tab:post_energies}.}{12}
+\ChangesListline {added}{Added}{OF the energies }{12}
+\ChangesListline {added}{Added}{syn}{12}
+\ChangesListline {added}{Added}{anti}{12}
+\ChangesListline {added}{Added}{A limitation to this study is that the reaction energies were calculated from the molecules optimised in isolation. In practicality, there are energy barriers associated with complexation of reactant compounds and solvation energies, as newly liberated species depart from the \ac {NC} backbone to freely move in the solvent. To take these considerations into account, more detailed study into the individual reactions are required to determine the complexation energies, solvation energies and diffusion behaviour of individual reactant mixtures through the \ac {NC} bulk, both in vacuum and solvent.}{16}

@@ -49,7 +49,7 @@ Operators acting on $\Psi$ yield the observable properties of the system.
 % How, and why?
 The operator returning the energy of the system is called the the Hamiltonian operator ($\mathbf{H}$).
 Erwin Schr\"{o}dinger %first 
-proposed his equation in 1926, describing a quantum system using its wave function \cite{schrodinger1926}. %Check this is accurate. Does the equation use the wave function to describe the (energy of the) system, or does the equation just describe the wave function itself?
+proposed his equation in 1926, describing a quantum system using its wave function \cite{Schroedinger1926}. %Check this is accurate. Does the equation use the wave function to describe the (energy of the) system, or does the equation just describe the wave function itself?
 %The time-independent %Schr\"{o}dinger 
 Schr\"{o}dinger's time-independent equation is:
 %Unless you know the long form... given in short-form: %(equation \ref{equ:schrodinger}). NB MAKE
@@ -173,7 +173,7 @@ where the terms are as they were in equation \ref{equ:hamiltonian}. $\mathbf{T}_
 %
 %The Hamiltonian operator (Eq. 3) acting on the wave function produces the electronic energy of a many electron system, where each of the terms in the Hamiltonian correspond to kinetic energies of the electrons and nuclei, the attraction of the electrons to the nuclei, and the inter-electronic and inter-nuclear repulsions.7
 %
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Born-Oppenheimer approximation}
 %This maybe should be a paragraph rather than a whole multi-page section
 %Get the original reference - might be libo `s reference [27]
@@ -312,7 +312,8 @@ Rows are labelled by the coordinates of each electron: (1), (2) $\cdots$ ($N$), 
 %If the labels of $\textbf{x}_{1}$ and $\textbf{x}_{2}$ are exchanged, 
 If the labels of (1) and (2) are exchanged, 
 the rows of the determinant are exchanged; a general property of determinants is that the interchange of two rows leads to a change of sign. The expanded form of the determinant ($\psi_{SD}$) will have the opposite sign when a pair of electronic coordinates are switched, by switching rows within the determinant, thereby fulfilling the antisymmetry requirement. 
-In the dis-allowed case of two equivalent electrons occupying the same spin-orbital, two columns would be identical \cite{Dykstra1994}. The evaluation of the determinant would then be zero, indicating that the probability of two electrons with identical spin occupying the same orbital was zero. 
+In the dis-allowed case of two equivalent electrons occupying the same spin-orbital, two columns would be identical \cite{Jensen2007}. %\cite{Dykstra1994}
+The evaluation of the determinant would then be zero, indicating that the probability of two electrons with identical spin occupying the same orbital was zero. 
 %Application of the Slater determinant therefore fulfils the Pauli exclusion principle. 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Variational principle}
@@ -345,7 +346,6 @@ Thus, when choosing between different trial wave functions, the solution with th
 %E_{el} = \frac{\langle \psi | \mathbf{H} | \psi \rangle}{\langle \psi | \psi \rangle}
 %\end{equation}
 %For a normalized wave function the denominator is 1, and therefore $E_{el} = {\langle \psi | \mathbf{H} | \psi \rangle}$.
-%
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hartree-Fock self-consistent field method}
 In practice, equation \ref{equ:elec_schro} can only be solved \textit{exactly} in very few circumstances; no exact solutions can be found for problems involving three or more interacting particles, such as in the case of a helium atom possessing two electrons and \added{a nucleus}. %VIVA: Why? - the correlated interaction between the partices which cannot be calculated exactly. 
@@ -577,7 +577,7 @@ It is not possible to verify that the found $\rho(r)$ giving the lowest value of
 %It is more computationally demanding than just post HF style perturbation theory exchange (as in B3LYP, using MP2 exchange for example  - fact check that). And according to the paper by Najibi and Goerigk even the D3 correction isn't better than the perturbation theory style exchange, for a massive amount of datasets that they tested. SO why even use this in the first place? Look to the origianl paper where it was published and see how they tout this method. Use those reasons to justify having chosen it to use on some of my systems. 
 
 %remember to talk about the underestimation of the reaction barriers
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Kohn-Sham \ac{DFT}}
 %https://pdfs.semanticscholar.org/b0de/c00cd81492b681c897249672ee8f42c79d34.pdf
 The Kohn-Sham scheme establishes a system with $N$ non-interacting electrons, in a similar manner to \ac{HF} \cite{Kohn1965}. 
@@ -676,9 +676,10 @@ Combination with the B88 exchange functional gives the BLYP method \cite{Lee1988
 %Make sure you know how the above functionals differ from the hybrids %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Hybrid functionals} 
 %Self interaction error!
-In \ac{DFT}, the influence of the exchange contribution to $E_{XC}$ is significantly larger than that of correlation, which only adds minor corrections \cite{Grafenstein2009}. 
+In \ac{DFT}, the influence of the exchange contribution to $E_{XC}$ is significantly larger than that of correlation, which only adds minor corrections \cite{Graefenstein2009}. 
 In hybrid \ac{DFT}, a portion of exact exchange is introduced into the \ac{DFT} exchange energy \textit{via} linear combinations of \ac{HF} and \ac{GGA} exchange. 
-This assists to counteract the self-interaction problem, a significant source of error in most approximate exchange-correlation functionals used for \ac{KS-DFT} calculations. This spurious interaction of an electron with itself does not appear in \ac{HF} where the exchange is defined exactly, and a cancelling of the coulomb and exchange-correlation energies occurs \cite{Bao2018}. The description of the exchange-correlation is imperfect in \ac{DFT}; the exchange and coulomb energy terms do not completely cancel out, and an energy contribution is experienced even in a one electron system. An observable manifestation of this in larger systems is the underestimation of reaction barriers \cite{Zhang2010}. 
+This assists to counteract the self-interaction problem, a significant source of error in most approximate exchange-correlation functionals used for \ac{KS-DFT} calculations. This spurious interaction of an electron with itself does not appear in \ac{HF} where the exchange is defined exactly, and a cancelling of the coulomb and exchange-correlation energies occurs \cite{Bao2018}. 
+The description of the exchange-correlation is imperfect in \ac{DFT}; the exchange and coulomb energy terms do not completely cancel out, and an energy contribution is experienced even in a one electron system. An observable manifestation of this in larger systems is the underestimation of reaction barriers \cite{Zhang2010}. 
 %So does wb97xd circumvent this in any way?
 
 Perhaps the most widely used functional of this category is \ac{B3LYP} \cite{Becke1993,Becke1993a}. It is employed in the current study to examine the degradation reactions of \ac{NC}. The formalism is as follows: 
@@ -686,9 +687,10 @@ Perhaps the most widely used functional of this category is \ac{B3LYP} \cite{Bec
 E_{XC}^{B3LYP}=E_{X}^{LDA}+a_{0}(E_{X}^{HF}-E_{X}^{LDA})+a_{X}(E_{X}^{B88}-E_{X}^{LDA})+E_{c}^{LDA}-a_{C}(E_{C}^{LYP}-E_{C}^{LDA})
 \end{equation}
 $a_{0}$, c$a_{X}$ and $a_{C}$ are parameters fitted to experimental atomisation energies, ionisation potentials, proton affinities and atomic energies. The semi-empirical coefficients have values of 0.20, 0.72 and 0.81, respectively, indicating that the \ac{B3LYP} hybrid functional contains 20\% \ac{HF} exchange, 72\% B88 exchange and 81\% electron correlation contribution from LYP. 
-\ac{B3LYP} is of particular interest in the study of \ac{NC} as it has been applied in comparable computational investigations on glucose and its analogues, which forms the base structure of the \ac{NC} monomer \cite{Schnupf2007,Momany2005}. 
+\ac{B3LYP} is of particular interest in the study of \ac{NC} as it has been applied in comparable computational investigations on glucose and its analogues, which forms the base structure of the \ac{NC} monomer \cite{Schnupf2007,Momany2004}. 
 
-There are documented cases where \ac{B3LYP} performs extremely poorly, such as in the description of $\pi\rightarrow\sigma$ structural transformations \cite{Pieniazek2008}, and medium-long range dispersion interactions \cite{Schreiner2007}. In the first case, no similar transitions are expected for the reactions studied in this work. When considering the medium-range electron correlation reactions that may occur for the investigated species, the distance at which the intermolecular interactions take place and at which \ac{B3LYP} performance suffers (1.5-3.5 $\AA$), is of relevance. 
+There are documented cases where \ac{B3LYP} performs extremely poorly, such as in the description of $\pi\rightarrow\sigma$ structural transformations \cite{Pieniazek2008}, and medium-long range dispersion interactions \cite{Schreiner2007}. 
+In the first case, no similar transitions are expected for the reactions studied in this work. When considering the medium-range electron correlation reactions that may occur for the investigated species, the distance at which the intermolecular interactions take place and at which \ac{B3LYP} performance suffers (1.5-3.5 $\AA$), is of relevance. 
 The calculations falling within this range will therefore be performed with both \ac{B3LYP} and the \ac{wb97xd}, in order to validate and compare results. 
 %Self interaction error causes underestimation of reaction barrier heights
 %https://www.diva-portal.org/smash/get/diva2:548763/FULLTEXT01.pdf
@@ -724,7 +726,7 @@ The function decreases to 1 as $R_{ij}$ increases, but also diminishes quickly a
 \centering
 \includegraphics[width=0.65\linewidth]{Chai}
 \caption[Energy of \ce{Ne2} with damping function.]{Dispersion energy of \ce{Ne2} with and without the damping function (equation \ref{equ:damp}). The function of Wu and Yang ($f_{damp}^{WY}(R)=1/(1+e^{-\frac{dR}{R_{r}-1}}))$ %, where $R_{r}$ is the sum of the \ac{vdw} radii, 
-is also compared \cite{Wu2002}.  \added{Reproduced from the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a} with permission from the PCCP Owner Societies.}} 
+is also compared \cite{Wu2001}.  \added{Reproduced from the work of Chai \textit{et. al} \cite{Chai2008,Chai2008a} with permission from the PCCP Owner Societies.}} 
 \label{fig:damp}
 \end{figure}
 The \ac{wb97xd} functional incorporates 100\% long-range exchange, 22\% short-range exchange, a modified B97 short-range exchange and B97 correlation, with empirical dispersion corrections. When the constraint $\omega$ is reduced to 0, \ac{wb97xd} is equivalent to the B97 functional with the addition of the dispersion correction. %\added{It has been successfully applied in calculations involving non-bonding interactions, and shown to outperform \acs{B3LYP} for systems involving hydrogen bonding networks \cite{Bachrach2013}.}
@@ -778,12 +780,13 @@ An example is \textbf{6-31+G*}, where the core electrons are described using a s
 The \textbf{+} sign corresponds to diffuse functions, the extension of the basis function as it tails away from the nucleus. This is particularly important when describing the behaviour of ions. The \textbf{*} indicates the addition of polarisation functions, in this case, d-functions to all non-H atoms. Higher order modifications also add p-functions to H atoms, additional d-functions to non-H atoms, d-functions to H atoms, with increasing levels of polarisation. This mixing of orbitals facilitates a better description for the correct shape of the \ac{MO}. 
 Increasing the number of basis functions on each occupied orbital allows for expansion or contraction, increasing flexibility in response to the environment. 
 
-Basis set superposition error \acs{BSSE} is a false lowering of the energy that can occur when two species in a system with finite bases sets approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at large separations, and the complex at short distances. This is particularly pertinent when considering reaction complexes, and performing \ac{PES} scans where bond breaking or formation is expected. 
+Basis set superposition error \acs{BSSE} is a false lowering of the energy that can occur when two species in a system with finite bases sets approach one another to form a complex. Particle A borrows the extra basis functions belonging to particle B and an artificial stabilisation is observed. The error arises from the inconsistency in treatment between the individual particles at large separations, and the complex at short distances. This is particularly pertinent when performing \ac{PES} scans where bond breaking or formation is expected, and in the consideration of reaction energies. 
 The effect is particularly pronounced for smaller basis sets. Counterpoise correction can be used to circumvent \ac{BSSE}; \added{each calculation is performed twice, once using the mixed basis set of the complex and once with the separate bases of the two species, and this energy difference is subtracted from the uncorrected energies \cite{Duijneveldt1994,Mentel2014}.} However this comes at the expense of higher computational cost. Preliminary investigations into the species examined in this study showed that the use of counterpoise correction offered minimal improvements to the energy, and the additional CPU time was not proportionate to the marginal improvements. Calculations were performed at sufficiently high basis that the effects of \ac{BSSE} were insignificant, and counterpoise correction was not used for further investigations. 
-%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \section{Implementation \& Analysis}
 The \ac{QM} calculations employed in this study typically involved a geometry optimisation, followed by a frequency calculation conducted in \ac{G09} \cite{G09}. 
-This section will provide an generic overview of the methods and techniques used to analyse the optimised geometry output from a \ac{QM} calculation. 
+This section will provide an generic overview of the methods and techniques used to prepare input or analyse the optimised geometry output from a \ac{QM} calculation. 
 Subsequent investigations into transition state structures, reaction coordinates and analysis of critical bonding points will be explained.  
 The details of individual calculation schemes are included in the methodology section at the the start of each chapter. This includes any details of the \ac{QM} methods and basis sets chosen, individual optimisation procedures, types of calculation or special keywords used, and any non-standard software or technical details of importance. 
 %
@@ -792,9 +795,35 @@ The details of individual calculation schemes are included in the methodology se
 %
 %Unless specified otherwies, all calcs run in G09 D.01 though perhaps make mention of materials studio, orca - no, Gview and Avogadro for quick cleanup. PyRed, what did I use to make the PBDs?
 %Visualisation done in avogadro, molden, Gview
-%
+%%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Molecular mechanics geometry optimisation}
+\added{
+In the case of the larger models in this study (60 atoms and above), \ac{QM} geometry optimisation was a laborious and expensive process, particularly with the presence of numerous floppy \ce{O-H} bonds and small methyl group rotations. 
+In order to reduce the required time and computational cost, these structures were optimised using a low-level molecular mechanics geometry calculation to minimise large forces in the system, prior to the finer refinements made during the \ac{QM} optimisation.
+Molecular mechanics \acs{MM} uses classical Newtonian mechanics to model chemical structures and properties; the electrons are not explicitly handled, bypassing the Schr\"{o}dinger's equation \cite{Foresman1996,Jensen2007}. Molecules are instead treated as a "ball on a spring", %where Newton's second law applies, 
+where the strength of interaction is defined by the atom types and force constants. 
+
+Each \ac{MM} approach is defined by its force field, where the energy of the system is described by a parametric function, fitted to experimental or high level computational data. Different force fields are therefore fitted to different chemical systems. 
+
+The general functional form of a force field is:
+}
+\begin{equation}
+\added{
+E_{FF} = E_{str} + E_{bend} + E_{tors} + E_{vdw} + E_{el} +E_{cross}
+}
+\end{equation}
+\added{where  $E_{FF}$ is the energy of the system. The first three terms can be referred to as the 'bonding' terms: $E_{str}$ is the energy function for bond stretching between two atoms, $E_{bend}$ the energy required to bend a bond angle and $E_{tors}$ is the energy of rotation around a bond. The remainder are thus called 'non-bonding' terms: $E_{vdw}$ and $E_{el}$ refer to the energy of non-bonding van der Waals interactions and of electrostatic interactions, respectively. $E_{cross}$ defines the coupling of the first three terms. 
+
+In this study, the \ac{UFF} \cite{Rappe1992} and \ac{MMFF94} \cite{Halgren1996I,Halgren1996II,Halgren1996III,Halgren1996IV,Halgren1996V} force fields are tested on \ac{NC} dimer and trimer structures. 
+\ac{UFF} is an empirical, all-element model, in principle able to describe the whole periodic table. 
+It has been parameterised on individual elements, hybridization and connectivity; all the atom types in the \ac{NC} unit are included, and \ac{UFF} has successfully been applied in the study of cellulose dissolution \cite{Bazooyar2012}. 
+\ac{MMFF94} is a forcefield parameterised from high level \ac{QM} calculations for small molecules, organics and proteins. It has been used to sample different torsional conformers of cellulose \cite{Easton2018} and to study the dynamics of bio-active polysaccharides \cite{Imberty2000}. 
+}
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 \subsection{Potential Energy Surface scans}
-Geometry scans or \ac{PES} scans were used to probe the local energy landscape corresponding to a specific change in geometry. During the course of a scan, a structural property - such as a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. In the case of a relaxed scan, at each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond.  Each scan yields a \acs{PES} of the explored pathway. In the case of bond breaking or formation, the presented energy profile is a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
+Geometry scans or \ac{PES} scans were used to probe the local energy landscape corresponding to a specific change in geometry. During the course of a scan, a structural property - such as a selected bond length, angle or dihedral is adjusted in incremental steps, as specified by the given scan parameters. In the case of a relaxed scan, at each step, the adjusted parameter is frozen and a geometry optimisation is performed, allowing the rest of the system to relax around the modified bond. 
+Each scan yields a \acs{PES} of the explored pathway. In the case of bond breaking or formation, the presented energy profile is a reaction co-ordinate diagram. % (see Figure 17, section 2.4.1).
 In these cases, an energy maximum followed by a trough indicates a transition state and intermediate reaction product, respectively. The structural co-ordinates at the peak of the curve can be extracted and used for subsequent frequency calculations or a transition state search, to validate the mechanistic pathway. % using intrinsic reaction co-ordinate methods. 
 Intrinsic reaction coordinate calculations also test the reactant and product along the reaction pathway, to ensure that they lie on the same \ac{PES}. 
 To explore the predicted degradation mechanisms of \ac{NC}, the scanned parameters were assigned to the bonds undergoing the most significant transformation during a particular step of the mechanism. In the case that more than one significant bond was altered, multiple scans with different bond specifications were compared. In this way, multi-dimensional scans could be performed. Two-dimensional scans were used to probe simultaneous processes in the system, however, these proved computationally intensive due to the high number of coordinate points to be calculated. 
@@ -825,6 +854,35 @@ It is widely acknowledged that transition state searching is challenging. In add
 %IRC calculations are called via the IRC keyword, with specifications of whether the forward or backward reaction is to be scanned, step size and maximum number of steps allowed.
 %
 %%not sure whether to talk about the transistion state searching methods / algorithms here or elsewhere, or whether to go into detail at all.
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\subsection{Solvent model}
+\added{
+To account for solvent effects in the reactions of \ac{NC}, a \ac{SCRF} method was applied \cite{Tapia1975}. These methods treat the solvent as a uniform dielectric constant ($\epsilon$) in the background. 
+
+The solvated molecule is placed in a cavity within the \ac{SCRF}. The solute dipole induces a dipole in the solvent medium surrounding the cavity, which in return leads to an electric field within the cavity called the reaction field. 
+The shape of the cavity is dictated by the the specific \ac{SCRF} approach; in this study, the \ac{PCM} is used \cite{Miertus1981,Tomasi2005}. \ac{PCM} models the cavity as interlocking van der Waals radii around each atom. 
+The charges at the van der Waals surface are split into a series of small rectangles %defined by $\Delta\theta$ and $\Delta\phi$, 
+and the value of the point charge at that surface element is calculated by: }
+\begin{equation}
+\added{
+q_i = - \left[\frac{\epsilon - 1}{4\pi\epsilon} \right]E_{i}\Delta S 
+}
+\end{equation} 
+\added{
+where $\epsilon$ is the dielectric, $E_{i}$ the electric field gradient and $\Delta S$ the area of the surface element. The coulombic contribution of each surface element to the other charges are calculated and iteratively refined until self-consistent \cite{Leach2001}. 
+This calculated charge potential ($\phi_r$) is then added to the solute Hamiltonian: }
+\begin{equation}
+\added{
+\mathbf{H} = \mathbf{H}_{0}+\phi_{r}
+}
+\end{equation} 
+\added{ and the \ac{SCF} reaction continues as normal. New surface charges are calculated at each \ac{SCF} cycle until the overall surface charge is also self-consistent for the optimised system. 
+As this method only includes the electrostatic contribution, an obvious limitation to this technique is that any reactions involving direct interaction with solvent molecules, such as stablisation by solvation shells \textit{via} van der Waals or hydrogen bonding interactions, will be missed. In these cases the explicit solvent molecules should be added. 
+However, for models where explicit interaction with the solvent is not required but solvent dieletric properties strongly influence the reaction environment, these methods can be very effective. 
+This method has demonstrated successful application in the study of cellulose and glucose reactions in solvent \cite{Mayes2012,Li2018}. 
+For calculations in solvent, the SCRF=PCM keyword will therefore be included in \ac{G09} calculation specifications, with water ($\epsilon$=78.4) as the default solvent.
+}
+
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Topology analysis using the quantum theory of atoms in molecules}
 %Some real space functions in Multiwfn are available for topology analysis, such as electron density, its Laplacian, orbital wave function, ELF, LOL ...
