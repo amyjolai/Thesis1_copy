@@ -461,7 +461,7 @@
        \newcommand \makedeclaration {%
          \clearpage%
             \chapter*{Declaration}%
-%         I, \@author , confirm that the work presented in this thesis is my own.
+%         I, \@author, confirm that the work presented in this thesis is my own.
          I, Amy Lai, confirm that the work presented in this thesis is my own.
          Where information has been derived from other sources, I confirm that this has been indicated in the work.
          \gdef \@author{}%

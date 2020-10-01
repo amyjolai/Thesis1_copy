@@ -1,0 +1,17 @@
+\ChangesListline {added}{Added}{[CORRECTIONS]}{1}
+\ChangesListline {added}{Added}{Nitrocellulose \acs {NC} is the base component for many modern day propellants and explosives, as well as for everyday items such as printing inks, paint and lacquer coatings. Despite its early beginnings as the first man-made plastic, winning a medal at the third World's Fair in London in 1862, the decomposition pathways from the bulk material to the products observed from its ambient ageing are are still not fully understood. Knowledge of these processes are of critical importance when considering the conservation of \acs {NC} artefacts, refinement of product formulations, predictions of shelf life and safety improvements. }{3}
+\ChangesListline {added}{Added}{the mechanisms leading to the initial cleavage of nitrate groups from the cellulosic backbone.}{3}
+\ChangesListline {added}{Added}{The \acs {NC} structure was truncated from a polymer chain to individual monomer, dimer and trimer units,}{3}
+\ChangesListline {added}{Added}{New reaction pathways for decomposition were constructed using the reactions posed in the literature studies. The new schemes revealed that \raisebox {0.4ex}{\tiny $\bullet $}\ce {NO2} was the most likely cause for the experimentally observed autocatalytic rate of degradation. }{4}
+\ChangesListline {added}{Added}{used}{9}
+\ChangesListline {added}{Added}{(x-ray imaging)}{14}
+\ChangesListline {added}{Added}{in a safe manner, within a controlled environment}{15}
+\ChangesListline {added}{Added}{The water, air and fuel requirement, as well as waste ash, water and gas removal demonstrate the high energy demand and environmental cost.}{16}
+\ChangesListline {added}{Added}{In 2012}{18}
+\ChangesListline {added}{Added}{using \acs {B3LYP} / 6-311G(d,p)}{18}
+\ChangesListline {added}{Added}{in 2013}{19}
+\ChangesListline {added}{Added}{measured by photo-excitation}{19}
+\ChangesListline {added}{Added}{\cite {Ng1986,Chambers2002,Yu2011}}{19}
+\ChangesListline {added}{Added}{at the level of 6-31+G(2df,p)}{19}
+\ChangesListline {added}{Added}{5 kcal mol$^{-1}$}{19}
+\ChangesListline {added}{Added}{calculations on the ideal bulk crystals using PBE implemented using VASP \cite {Hafner2008}}{19}

@@ -74,7 +74,7 @@
 
 % And then some settings in separate files.
 \input{FloatSettings} % For things like figures and tables
-\input{BibSettings}   % For bibliographies
+%\input{BibSettings}   % For bibliographies
 
 % These control how many number sections your subsections will take
 %    e.g. Section 2.3.1.5.6.3
@@ -91,7 +91,7 @@
 
 \begin{document}
 
-\nobibliography*
+%\nobibliography*
 % ^-- This is a dumb trick that works with the bibentry package to let
 %  you put bibliography entries whereever you like.
 % I used this to put references to papers a chapter's work was 
@@ -130,8 +130,10 @@
 \cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{Bibliography}
 
 % Actually generates your bibliography.
-\bibliography{Thesis_refs}
+%\bibliography{Thesis_refs}
 %\bibliographystyle{rsc} %the RSC's .bst file
+		
+\printbibliography
 
 % All done. \o/
 \end{document}

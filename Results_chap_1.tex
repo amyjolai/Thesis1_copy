@@ -72,7 +72,7 @@ The interplay of reactions between small acid species, water and the polysacchar
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.9\linewidth]{Cellulose}
-\caption{\added{Natural cellulose fibres are constructed from individual linear strands of cellulose polymer, inter-linked by hydrogen bonds to form microfibrils. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. Adapted from the work of Dumanli \cite{Dumanli2017} with permission from the publisher.}}
+\caption[Natural cellulose fibres are constructed from individual linear strands of cellulose polymer.]{\added{Natural cellulose fibres are constructed from individual linear strands of cellulose polymer, inter-linked by hydrogen bonds to form microfibrils. The intermolecular bonding structure between multiple strands influence degradation properties by altering the crystallinity and solvent porosity of the bulk material. Adapted from the work of Dumanli \cite{Dumanli2017} with permission from the publisher.}}
 \label{fig:fibre}
 \end{figure}
 %
@@ -87,7 +87,7 @@ The interplay of reactions between small acid species, water and the polysacchar
 
 %Quantum mechanical methods are routinely used to ...
 %Wavefunction and 
-Density functional methods are routinely used to explore the energetics of small molecular reactions \cite{rezac2011,Parthiban2001,Bento2008}. %REF one of the S66 benchmark reaction papers, and another one for a slightly bigger system - maybe mine. And perhaps include one study on reactions of cellulose? 
+Density functional methods are routinely used to explore the energetics of small molecular reactions \cite{Rezac2011,Parthiban2001,Bento2008}. %REF one of the S66 benchmark reaction papers, and another one for a slightly bigger system - maybe mine. And perhaps include one study on reactions of cellulose? 
 %include a one liners to give exmaples / demonstrate the use in literature. 
 % Include a bit about why we are using DFT and QM for looking at reaction eneriges in the first place. What are other ways of doing it, and why are we doing it this way?
 When probing the details of individual chemical reactions using computational methods, the extended polymer structure becomes unwieldy due to the large number of atoms. It is therefore necessary to reduce the system to a representative model within a manageable scale.
@@ -113,7 +113,7 @@ can fully describe the denitration behaviour of the polymer. This can be attribu
 \includegraphics[width=0.9\linewidth]{Shukla_11224_2012_9977_Fig1_HTML}\quad
 
   {\textcolor{red}{\CIRCLE} oxygen \quad \textcolor{blue}{\CIRCLE} nitrogen \quad  \textcolor{gray}{\CIRCLE} carbon \quad $\bigcirc$ hydrogen}
-\caption{\textbf{a)} Numbering scheme of 2,3,6-trinitro-$\beta$-D-glucopyranose, as a monomer of \ac{NC}. 
+\caption[Numbering scheme of 2,3,6-trinitro-$\beta$-D-glucopyranose.]{\textbf{a)} Numbering scheme of 2,3,6-trinitro-$\beta$-D-glucopyranose, as a monomer of \ac{NC}. 
 			\textbf{b)} Transition state showing S\textsubscript{N}2 (opposite side) attack by OH\textsuperscript{-} and 
 			\textbf{c)} angular attack (same side) by OH\textsuperscript{-} during the addition–elimination process at the C2 site of \ac{NC} from the work of Shukla \textit{et al.} The solid arrow indicates nucleophilic attack and the dashed arrow the leaving group. 
 			\added{Reproduced with permission from the publisher.}}% from the authors.}}
@@ -160,7 +160,7 @@ can fully describe the denitration behaviour of the polymer. This can be attribu
     \includegraphics[scale=0.6]{NC_tri_H}
 %    \caption{Trimer}
   \end{subfigure} 
-    \caption{Truncated \acs{NC} %to \textbf{a)}  monomer, \textbf{b)} dimer and \textbf{c)} trimer 
+    \caption[Truncated \acs{NC} units]{Truncated \acs{NC} %to \textbf{a)}  monomer, \textbf{b)} dimer and \textbf{c)} trimer 
     units, whereby each additional glucopyranose ring is added in the 1$\rightarrow$4 position, as in the structure of cellulose. 
     The trimer was constructed from the optimised dimer, with duplication of the first ring \added{(shown with the blue arrow)}. The degree of substitution (\acs{DOS}) refers to the replacement of the cellulose hydroxyl side groups for nitrate groups.}
   \label{fig:models}
@@ -249,7 +249,7 @@ Labels are given from the largest structure to the smallest: [ring; substituent 
 
 % Change the colour from Magenta to green, or something?
 \begin{figure}[t]
-\caption{The numbering scheme for dimers used in this study. Ring 1 (R1) is the first ring, whereby oxygen (O1) is \textit{one bond} separated from the glycosidic oxygen linking the two rings. Ring 2 (R2) is where O1 is \textit{two bonds} separated from the glycosidic oxygen. 
+\caption[The numbering scheme for dimers.]{The numbering scheme for dimers used in this study. Ring 1 (R1) is the first ring, whereby oxygen (O1) is \textit{one bond} separated from the glycosidic oxygen linking the two rings. Ring 2 (R2) is where O1 is \textit{two bonds} separated from the glycosidic oxygen. 
 \newline
 	The nitrate oxygen on the terminating ends are referred to as (Ot), and the nitrate oxygen connected to the glucopyranose ring is referred to as (Ox). }
 	\centering
@@ -327,7 +327,7 @@ Convergence criteria 					& Normal 					& Tight \\
 % ACtually, I think this is an ok thing at this stage, because I'm not really looking at longer range interaction - more intramolecular ones. So missing out on some of the diffuse  / polarisation isn't a big as deal as when with looking at bimolecular+ reactions. 
  Structures were built using %z-matrix notation or 
 the \ac{GView} graphical user interface \cite{GV5}. Molden 5.0.2 \cite{Schaftenaar2000,Schaftenaar2017} and \ac{GView} packages were used for visualisation. %ref molden gview
-Avogadro molecular editor 1.1.1 \cite{hanwell2012} was used for \ac{MM} pre-optimisation. \acs{UFF} and {MMFF94} force fields were applied with Steepest Descent algorithm \cite{Cauchy1847,Meza2010} with 500 steps \added{and energy convergence of 1$\times$10\textsuperscript{-7} kJmol\textsuperscript{-1}. } %change in energy $\delta$E}
+Avogadro molecular editor 1.1.1 \cite{Hanwell2012} was used for \ac{MM} pre-optimisation. \acs{UFF} and {MMFF94} force fields were applied with Steepest Descent algorithm \cite{Cauchy1847,Meza2010} with 500 steps \added{and energy convergence of 1$\times$10\textsuperscript{-7} kJmol\textsuperscript{-1}. } %change in energy $\delta$E}
 Electrostatic potential (\acs{ESP}) surfaces were mapped to the electron density, extracted from \ac{G09} formatted checkpoint files following optimisation. Gaussian's CubeGen utility was used to generate the 3D point grids for mapping; density and \ac{ESP} cubes were generated with 80\textsuperscript{3} points \added{(default grid point density)}. \acs{ESP} maps were visualised using \ac{GView}. 
 \ac{QTAIM} topological analyses including %generation of Laplacian electron density maps and 
 \ac{CP} analysis on the optimised structures were performed using MultiWFN 3.6 \cite{Lu2012}.  %REF (also update your diagrams).
@@ -384,7 +384,7 @@ The effect of each capping group combination on the dimer geometry, electronic p
     \includegraphics[width=\linewidth]{OH_CH3_cap}
 %    \caption{Fully nitrated NC dimer with a hydroxyl capping group in the C1 and methoxy group in the C4 position.}
   \end{subfigure}
-    \caption{Fully nitrated \acs{NC} dimer with \textbf{a)} methoxy groups capping chain ends on both ring 1 and ring 2 (\acs{CH3/CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\acs{CH3/OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2 (\acs{OH/CH3}).}
+    \caption[Fully nitrated \acs{NC} dimer. ]{Fully nitrated \acs{NC} dimer with \textbf{a)} methoxy groups capping chain ends on both ring 1 and ring 2 (\acs{CH3/CH3}), \textbf{b)} a methoxy capping group on ring 1 and hydroxyl on ring 2 (\acs{CH3/OH}), \textbf{c)} hydroxyl group on ring 1 and methoxy capping group on ring 2 (\acs{OH/CH3}).}
   \label{fig:capping-groups-all}
 \end{figure}
 
@@ -430,7 +430,7 @@ cage critical point (\ac{CCP}) (\textcolor{green}{\CIRCLE} green spot) shows the
 %
 \begin{figure}[H]
 \ContinuedFloat
-\caption{Continued.}
+\caption[All critical points identified by \ac{QTAIM} topology analysis, continued.]{Continued.}
       \begin{subfigure}[b]{0.9\linewidth}
 	  \caption{Critical points for \acs{OH/CH3} dimer.}
     \includegraphics[width=\linewidth]{OH_CH3-dislin_crop}
@@ -558,7 +558,7 @@ Capping group & Nitrate-nitrate pair &  Distance / \si{\angstrom} \\
 \end{table}
 
 \begin{figure}[htp!]
-\caption{Critical points identified by \ac{QTAIM} topology analysis of NC dimer nitrated at C2 position for \textbf{a)} \acf{CH3/CH3} dimer, \textbf{b)} \acs{CH3/OH} dimer and \textbf{c)} \acs{OH/CH3} dimer. Nuclear critical points (\acs{NCP} are located at atomic nuclear sites, 
+\caption[Critical points identified by \ac{QTAIM} topology analysis of NC dimer nitrated at C2 position.]{Critical points identified by \ac{QTAIM} topology analysis of NC dimer nitrated at C2 position for \textbf{a)} \acf{CH3/CH3} dimer, \textbf{b)} \acs{CH3/OH} dimer and \textbf{c)} \acs{OH/CH3} dimer. Nuclear critical points (\acs{NCP} are located at atomic nuclear sites, 
 bonding critical points (\ac{BCP}), ( \textcolor{orange}{\CIRCLE} orange spots) lie on chemical bonds, 
 or on intramolecular bonding paths (\textcolor{orange}{\emph{\textbf{---}}} shown in orange); 
 ring critical points (\acs{RCP}) (\textcolor{yellow}{\CIRCLE} yellow spots) denote centres of steric interaction and the 
@@ -579,7 +579,7 @@ cage critical point (\ac{CCP}) (\textcolor{green}{\CIRCLE} green spot) shows the
 \caption{Continued.}
 \centering
  \begin{subfigure}[b]{0.9\linewidth}
- \caption{\acs{OH/CH3} dimer}
+ \caption[Critical points identified by \ac{QTAIM} topology analysis of NC dimer nitrated at C2 position, continued.]{\acs{OH/CH3} dimer}
  \label{fig:OHCH3_QTAIM}
     \includegraphics[width=\linewidth]{adj_NC2_0-OH_CH3_dislin_crop}
   \end{subfigure}
@@ -588,7 +588,7 @@ cage critical point (\ac{CCP}) (\textcolor{green}{\CIRCLE} green spot) shows the
 %
 \begin{table}[b]
 \begin{center}
-\caption{Torsion angles between the two rings in the R1C2 nitrated dimer (DOS=1), \added{when capping groups are modified shows that the \ac{OH/CH3} combination presents a greater twist between the rings.}}
+\caption{Torsion angles between the two rings in the R1C2 nitrated dimer (\acs{DOS}=1), \added{when capping groups are modified shows that the \ac{OH/CH3} combination presents a greater twist between the rings.}}
 \begin{tabular}{ l c } %{S[table-format=3.2]}
 \toprule
 Dimer & Ring torsion angle \\
@@ -626,11 +626,11 @@ show an interaction between unsubstituted hydroxyl side chains with the capping 
 	   	\caption{ }
 	    \includegraphics[width=\linewidth]{OH_CH3_NC3_3_ESP_surface_w-5-287e-2}
   \end{subfigure}
-    \caption{Electrostatic potential maps of \ac{NC} dimers fitted with different capping group combinations in order to inspect the change in charge distribution, \textbf{a)} \ac{CH3/CH3}, \textbf{b)} \acs{CH3/OH}, \textbf{c)} \acs{CH3/OH}.} % *UNITS?*
+    \caption[Electrostatic potential maps of \ac{NC} dimers]{Electrostatic potential maps of \ac{NC} dimers fitted with different capping group combinations in order to inspect the change in charge distribution, \textbf{a)} \ac{CH3/CH3}, \textbf{b)} \acs{CH3/OH}, \textbf{c)} \acs{CH3/OH}. Scale is in atomic units. } % *UNITS?*
   \label{fig:ESP}
 \end{figure}
 \added{As was observed in the fully nitrated dimer (fig \ref{fig:cp-all}), change of the capping group partially influences the change of geometry around the interacting sites, though not necessarily nitrate-nitrate distances (\ref{tab:geomety_cap}). Comparison of the torsion angle between the two rings when different end groups are attached to the dimer reveals that \ac{OH/CH3} combination leads to a small 0.6 $\degree$ increase in the relative rotation (table \ref{tab:torsion}). Though this may appear marginal, any alteration in the twisting configuration between rings will modify the strength of the R1N1 - R2C6 hydroxyl and the R1O1 - R2C3 hydroxyl interaction, offering increase stabilisation of the R1N1 nitrate group %R1-\ce{ONO2} - OH-R2 hydroxyl 
-(figure \ref{fig:OHCH3_QTAIM}). However in this case the magnitude of the change is unlikely to significantly induce a change in reactivity. } %, though the site of nitration is most crucial.
+(figure \ref{fig:OHCH3_QTAIM}) ). However in this case the magnitude of the change is unlikely to significantly induce a change in reactivity. } %, though the site of nitration is most crucial.
 %In the case of the R1C2 dimers, the change in orientation of the rings does not give any indication of angle or bonds. 
 %split into two columns and have the CPS on the right hand side. 
 %
@@ -680,7 +680,7 @@ This deficiency is particularly pronounced in the case of the hydroxyl capping g
 \end{figure}
 
 \begin{figure}[htp!]
-\caption{\added{Critical point analysis of NC monomer, dimer and trimer units. Bonding critical points (\ac{BCP}), (\textcolor{orange}{\CIRCLE} orange spots) lie on chemical bonds; intramolecular bonding paths (\textcolor{orange}{\emph{\textbf{---}}} shown in orange); 
+\caption[Critical point analysis of NC monomer, dimer and trimer units.]{\added{Critical point analysis of NC monomer, dimer and trimer units. Bonding critical points (\ac{BCP}), (\textcolor{orange}{\CIRCLE} orange spots) lie on chemical bonds; intramolecular bonding paths (\textcolor{orange}{\emph{\textbf{---}}} shown in orange); 
 ring critical points (\acs{RCP}) (\textcolor{yellow}{\CIRCLE} yellow spots) denote centres of steric interaction and the 
 cage critical point (\ac{CCP}) (\textcolor{green}{\CIRCLE} green spots) shows the centre of a cage-like system. 
 }}
@@ -707,7 +707,7 @@ cage critical point (\ac{CCP}) (\textcolor{green}{\CIRCLE} green spots) shows th
 The electrostatic potential and topology analysis of the partially nitrated monomer, dimer and trimer were compared in order to explore the limitations of each truncation. % and determine which model to proceed with further investigations.  % Work out DOS for each of these
 The monomer was nitrated at C2, the dimer at R1C2 and trimer model nitrated at R1C2 and R3C2 sites. 
 Analysis of the \acs{CP}s in the monomer revealed steric centres and a non-bonding interaction with the capping group. 
-The terminal oxygen - $\alpha$-hydrogen interaction at the C2 nitrate was observed, as was seen in the fully nitrated systems (figure \ref{fig:trimer_top})). 
+The terminal oxygen - $\alpha$-hydrogen interaction at the C2 nitrate was observed, as was seen in the fully nitrated systems (figure \ref{fig:trimer_top}) ). 
 The trimer unit displayed a more extensive network of hydrogen bonding between rings, facilitated by the higher number of unsubstituted hydroxyl groups on the second ring (figure \ref{fig:trimer_top}) ).
 Compared with the dimer and trimer models, the monomer presents all the intra-ring interactions observed in the larger units, omitting only the between-ring interactions. 
 %but does not possess inter-ring interactions, as would be expected due to the absence of additional glucopyranose rings.  
@@ -833,7 +833,7 @@ C6OH & 0.24562 & 0.26001 & 0.25692 & -0.00308 & 0.01131 \\
 \end{table}
 
 \begin{figure}[htp!]
-\caption{\textbf{a)} \ac{NC} monomer nitrated at C2. \textbf{b)} Monomer a) shaded by Mulliken charges. More negative atoms are shaded in red whilst more positive atoms are shaded in green. \added{Scale bar ranges between $\pm$0.5 \ac{au}.}}
+\caption[Mulliken charges of \acs{NC} structures.]{\textbf{a)} \ac{NC} monomer nitrated at C2. \textbf{b)} Monomer a) shaded by Mulliken charges. More negative atoms are shaded in red whilst more positive atoms are shaded in green. \added{Scale bar ranges between $\pm$0.5 \ac{au}.}}
 \centering 
 	\includegraphics[width=0.9\linewidth]{mulliken_scale_label} 
     \begin{subfigure}[b]{0.4\linewidth}

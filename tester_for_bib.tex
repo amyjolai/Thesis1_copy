@@ -1,0 +1,34 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[style=chem-biochem,backend=biber,sorting=none]{biblatex}
+\addbibresource{no_abs_jab_ref_Thesis_refs.bib}
+
+\title{Tester}
+
+\begin{document}
+
+\maketitle
+
+Refs:
+\\ Source one \cite{Fan1980}
+\\ Source two \parencite{Fan1981}
+\\ Source three \supercite{Fan1987}
+\\ Source four \cite{Hoon2005}
+
+
+Add .bib. \\
+Compile with Biber. \\
+Compile with pdfLatex.\\
+And one more patent just to check \cite{Revy1865}
+
+And a multi one - they need comma AND a space inbetween them! \cite{Bluhm1977, Wolf1997, Bissett1976}
+
+And a webpage \cite{Kodak2019} [Not such great handling...]
+
+goddamnit I need a book \cite{Cramer2004} and just to check that the Inbook class is trash and just use Book \cite{Leach2001, Jensen2007, Luo2002}
+
+conference \cite{Bohn2007}
+
+\printbibliography
+
+\end{document}
